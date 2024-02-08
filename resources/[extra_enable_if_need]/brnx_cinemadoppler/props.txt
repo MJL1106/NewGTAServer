@@ -1,0 +1,14 @@
+
+----------------------------------------------------------------------
+FOR SCREEN
+
+ModelName: v_ilev_cin_screen
+RenderTarget: cinscreen
+hash: 1358323305
+
+----------------------------------------------------------------------
+
+Entrance doors: 
+prop: ch_prop_casino_door_01e
+staff doors:
+prop: ch_prop_casino_door_01b
