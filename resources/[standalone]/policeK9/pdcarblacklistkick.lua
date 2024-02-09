@@ -11,24 +11,6 @@ Konfig.emergencyJobs = { -- Put here the job that you want to drive in the emerg
 Konfig.emergencyVehicles = { -- Put here the vehicles that you want only emergency services to be able to get in
     "police",
     "ambulance",
-    "chargfire",
-    "sprinter1",
-    "sprinter2",
-    "fd2020m",
-    "emsnspeedo",
-    "1200rtems",
-    "pd1",
-    "mach1rb",
-    "zr1RB",
-    "char",
-    "poldemonrb",
-    "explorer",
-    "valor9rb",
-    "valor14rb",
-    "mbu2rb",
-    "mbu1rb",
-    "rr70bosswidepd",
-    "v4sl",
 }
 RegisterNetEvent('QBCore:Client:OnPlayerLoaded')
 AddEventHandler('QBCore:Client:OnPlayerLoaded', function()
