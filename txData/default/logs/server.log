@@ -37,3 +37,14 @@
 [10:21:16 AM] txAdmin: Logger started
 [10:24:01 AM] [wrgj7#1] MJL: joined with identifiers [steam:1100001324fa523; license:ec6c328d6d02f816bf13e4a9d09768c02d6e3125; xbl:2535415531070562; live:1055522508602522; discord:213410953641852928; fivem:2586828]
 [10:27:13 AM] [wrgj7#1] MJL: disconnected (Exiting)
+
+================================================================
+======== txAdmin Starting - 2/9/2024, 10:29:04 AM               
+================================================================
+[10:30:29 AM] txAdmin: Logger started
+[10:33:57 AM] [Q3RJL#1] Le0va: joined with identifiers [steam:110000115ceb248; license:eb50d0f0e1234a21689c685afbb0031705183403; xbl:2535464818703766; live:985157324057631; discord:246676459643600897; fivem:8879279; license2:eb50d0f0e1234a21689c685afbb0031705183403]
+[10:34:06 AM] [Q3RJL#2] MJL: joined with identifiers [steam:1100001324fa523; license:ec6c328d6d02f816bf13e4a9d09768c02d6e3125; xbl:2535415531070562; live:1055522508602522; discord:213410953641852928; fivem:2586828]
+[10:34:28 AM] [Q3RJL#2] MJL: disconnected (Could not connect to session provider. This may happen when you recently updated, but other players )
+[10:35:19 AM] [Q3RJL#3] MJL: joined with identifiers [steam:1100001324fa523; license:ec6c328d6d02f816bf13e4a9d09768c02d6e3125; xbl:2535415531070562; live:1055522508602522; discord:213410953641852928; fivem:2586828]
+[10:35:44 AM] [Q3RJL#3] MJL: disconnected (Server->client connection timed out. Last seen 242 msec ago.)
+[10:38:26 AM] [Q3RJL#1] Le0va: disconnected (Server shutting down: SIGHUP received)
