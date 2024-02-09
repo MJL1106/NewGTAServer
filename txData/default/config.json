@@ -34,6 +34,9 @@
   "fxRunner": {
     "serverDataPath": "C:/Users/Administrator/Documents/Gtaserver/NewGTAServer/",
     "cfgPath": "C:/Users/Administrator/Documents/Gtaserver/NewGTAServer/server.cfg",
-    "autostart": true
+    "commandLine": "",
+    "onesync": "on",
+    "autostart": true,
+    "quiet": false
   }
 }
