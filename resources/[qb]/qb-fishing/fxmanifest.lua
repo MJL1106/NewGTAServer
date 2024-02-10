@@ -1,18 +1,29 @@
-fx_version 'cerulean'
-game 'gta5'
+name "mustache-fishing"
+author "mustache_dom"
+description "fishing by mustache dom"
+fx_version "cerulean"
+game "gta5"
 
-author 'OtakuSensei'
-description 'JCC Fishing'
+client_scripts {
+	'client/**.lua',
+	'@PolyZone/client.lua',
+   	 '@PolyZone/CircleZone.lua',
+}
+
+server_scripts {
+    'server/**.lua',
+	'@oxmysql/lib/MySQL.lua',
+	
+}
 
 shared_scripts {
-    '@PolyZone/client.lua',
-    '@PolyZone/ComboZone.lua',
-    '@PolyZone/CircleZone.lua',
-    'config.lua'
+    'config.lua',
+	 '@ox_lib/init.lua',
+	
+	
 }
-client_scripts {
-    'client/main.lua'
-}
-server_scripts {
-    'server/main.lua'
-}
+
+
+lua54 'yes'
+
+
