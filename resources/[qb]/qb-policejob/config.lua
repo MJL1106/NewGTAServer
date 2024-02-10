@@ -114,9 +114,7 @@ Config.AuthorizedVehicles = {
         ["valor14rb"] = "Police F150",
         ["mbu2rb"] = "Police Bike 1",
         ["mbu1rb"] = "Police Bike 2",
-        ["rr70bosswidepd"] = "Unmarked Mustang Boss"
-        ["polvstr"] = "Police Albany V-STR"
-        
+        ["rr70bosswidepd"] = "Unmarked Mustang Boss"  
 	},
 	-- Grade 1
 	[1] = {
@@ -131,7 +129,6 @@ Config.AuthorizedVehicles = {
         ["mbu2rb"] = "Police Bike 1",
         ["mbu1rb"] = "Police Bike 2",
         ["rr70bosswidepd"] = "Unmarked Mustang Boss"
-        ["polvstr"] = "Police Albany V-STR"
 	},
 	-- Grade 2
 	[2] = {
@@ -146,7 +143,6 @@ Config.AuthorizedVehicles = {
         ["mbu2rb"] = "Police Bike 1",
         ["mbu1rb"] = "Police Bike 2",
         ["rr70bosswidepd"] = "Unmarked Mustang Boss"
-        ["polvstr"] = "Police Albany V-STR"
 	},
 	-- Grade 3
 	[3] = {
@@ -161,7 +157,6 @@ Config.AuthorizedVehicles = {
         ["mbu2rb"] = "Police Bike 1",
         ["mbu1rb"] = "Police Bike 2",
         ["rr70bosswidepd"] = "Unmarked Mustang Boss"
-        ["polvstr"] = "Police Albany V-STR"
 	},
 	-- Grade 4
 	[4] = {
@@ -176,7 +171,6 @@ Config.AuthorizedVehicles = {
         ["mbu2rb"] = "Police Bike 1",
         ["mbu1rb"] = "Police Bike 2",
         ["rr70bosswidepd"] = "Unmarked Mustang Boss"
-        ["polvstr"] = "Police Albany V-STR"
 	},
     [5] = {
         ["pd1"] = "Crown Victoria",
@@ -190,7 +184,6 @@ Config.AuthorizedVehicles = {
         ["mbu2rb"] = "Police Bike 1",
         ["mbu1rb"] = "Police Bike 2",
         ["rr70bosswidepd"] = "Unmarked Mustang Boss"
-        ["polvstr"] = "Police Albany V-STR"
 	},
     [6] = {
         ["pd1"] = "Crown Victoria",
@@ -204,7 +197,6 @@ Config.AuthorizedVehicles = {
         ["mbu2rb"] = "Police Bike 1",
         ["mbu1rb"] = "Police Bike 2",
         ["rr70bosswidepd"] = "Unmarked Mustang Boss"
-        ["polvstr"] = "Police Albany V-STR"
 	},
     [7] = {
         ["pd1"] = "Crown Victoria",
@@ -218,7 +210,6 @@ Config.AuthorizedVehicles = {
         ["mbu2rb"] = "Police Bike 1",
         ["mbu1rb"] = "Police Bike 2",
         ["rr70bosswidepd"] = "Unmarked Mustang Boss"
-        ["polvstr"] = "Police Albany V-STR"
 	},
     [8] = {
         ["pd1"] = "Crown Victoria",
@@ -232,7 +223,6 @@ Config.AuthorizedVehicles = {
         ["mbu2rb"] = "Police Bike 1",
         ["mbu1rb"] = "Police Bike 2",
         ["rr70bosswidepd"] = "Unmarked Mustang Boss"
-        ["polvstr"] = "Police Albany V-STR"
 	},
     [9] = {
         ["pd1"] = "Crown Victoria",
@@ -246,7 +236,6 @@ Config.AuthorizedVehicles = {
         ["mbu2rb"] = "Police Bike 1",
         ["mbu1rb"] = "Police Bike 2",
         ["rr70bosswidepd"] = "Unmarked Mustang Boss"
-        ["polvstr"] = "Police Albany V-STR"
 	},
     [10] = {
         ["pd1"] = "Crown Victoria",
@@ -260,7 +249,6 @@ Config.AuthorizedVehicles = {
         ["mbu2rb"] = "Police Bike 1",
         ["mbu1rb"] = "Police Bike 2",
         ["rr70bosswidepd"] = "Unmarked Mustang Boss"
-        ["polvstr"] = "Police Albany V-STR"
 	},
     [11] = {
         ["pd1"] = "Crown Victoria",
@@ -274,7 +262,6 @@ Config.AuthorizedVehicles = {
         ["mbu2rb"] = "Police Bike 1",
         ["mbu1rb"] = "Police Bike 2",
         ["rr70bosswidepd"] = "Unmarked Mustang Boss"
-        ["polvstr"] = "Police Albany V-STR"
 	},
     [12] = {
         ["pd1"] = "Crown Victoria",
@@ -288,7 +275,6 @@ Config.AuthorizedVehicles = {
         ["mbu2rb"] = "Police Bike 1",
         ["mbu1rb"] = "Police Bike 2",
         ["rr70bosswidepd"] = "Unmarked Mustang Boss"
-        ["polvstr"] = "Police Albany V-STR"
 	},
     [13] = {
         ["pd1"] = "Crown Victoria",
@@ -302,7 +288,6 @@ Config.AuthorizedVehicles = {
         ["mbu2rb"] = "Police Bike 1",
         ["mbu1rb"] = "Police Bike 2",
         ["rr70bosswidepd"] = "Unmarked Mustang Boss"
-        ["polvstr"] = "Police Albany V-STR"
 	},
     [14] = {
         ["pd1"] = "Crown Victoria",
@@ -316,7 +301,6 @@ Config.AuthorizedVehicles = {
         ["mbu2rb"] = "Police Bike 1",
         ["mbu1rb"] = "Police Bike 2",
         ["rr70bosswidepd"] = "Unmarked Mustang Boss"
-        ["polvstr"] = "Police Albany V-STR"
 	},
 }
 
