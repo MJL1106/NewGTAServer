@@ -4719,10 +4719,68 @@ QBShared.Vehicles = {
         ['hash'] = `G63AMG6x6`,
         ['shop'] = 'luxury',
     },
-
+    ['dragekcivick'] = {
+        ['name'] = 'Drag Honda',
+        ['brand'] = 'Honda',
+        ['model'] = 'dragekcivick',
+        ['price'] = 1700000,
+        ['category'] = 'super',
+        ['categoryLabel'] = 'Super',
+        ['hash'] = `dragekcivick`,
+        ['shop'] = 'luxury',
+    },
+    ['m3g80'] = {
+        ['name'] = 'G80-M3',
+        ['brand'] = 'BMW',
+        ['model'] = 'm3g80',
+        ['price'] = 1700000,
+        ['category'] = 'super',
+        ['categoryLabel'] = 'Super',
+        ['hash'] = `m3g80`,
+        ['shop'] = 'luxury',
+    },
+    ['offbaseq50'] = {
+        ['name'] = 'Q50',
+        ['brand'] = 'Infiniti',
+        ['model'] = 'offbaseq50',
+        ['price'] = 1700000,
+        ['category'] = 'super',
+        ['categoryLabel'] = 'Super',
+        ['hash'] = `offbaseq50`,
+        ['shop'] = 'luxury',
+    },
+    ['subaruwrxsti08'] = {
+        ['name'] = 'WRX',
+        ['brand'] = 'subaruwrxsti08',
+        ['model'] = 'subaruwrxsti08',
+        ['price'] = 1700000,
+        ['category'] = 'super',
+        ['categoryLabel'] = 'Super',
+        ['hash'] = `subaruwrxsti08`,
+        ['shop'] = 'luxury',    
+    },
+    ['nisa31'] = {
+        ['name'] = 'nisa31',
+        ['brand'] = 'nisa31',
+        ['model'] = 'nisa31',
+        ['price'] = 1700000,
+        ['category'] = 'super',
+        ['categoryLabel'] = 'Super',
+        ['hash'] = `nisa31`,
+        ['shop'] = 'luxury',    
+    },
+    ['cla250'] = {
+        ['name'] = 'cla250',
+        ['brand'] = 'cla250',
+        ['model'] = 'cla250',
+        ['price'] = 1700000,
+        ['category'] = 'super',
+        ['categoryLabel'] = 'Super',
+        ['hash'] = `cla250`,
+        ['shop'] = 'luxury',    
+    },
+    } 
     
-}
-
 for _, v in pairs(QBShared.Vehicles) do
     QBShared.VehicleHashes[v.hash] = v
 end

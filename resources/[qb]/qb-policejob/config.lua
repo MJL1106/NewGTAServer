@@ -114,8 +114,7 @@ Config.AuthorizedVehicles = {
         ["valor14rb"] = "Police F150",
         ["mbu2rb"] = "Police Bike 1",
         ["mbu1rb"] = "Police Bike 2",
-        ["rr70bosswidepd"] = "Unmarked Mustang Boss"
-        
+        ["rr70bosswidepd"] = "Unmarked Mustang Boss"  
 	},
 	-- Grade 1
 	[1] = {
