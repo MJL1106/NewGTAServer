@@ -9,9 +9,9 @@ RegisterNetEvent('qb-storerobbery:server:takeMoney', function(register, isDone, 
 	local Player = QBCore.Functions.GetPlayer(src)
 	-- Add some stuff if you want, this here above the if statement will trigger every 2 seconds of the animation when robbing a cash register.
     if isDone then
-	    local bags = math.random(1000,1500)
+	    local bags = math.random(2500,3000)
 	    Player.Functions.AddMoney('cash', bags)
-        local chance = usingAdvanced and 65 or 20
+        local chance = usingAdvanced and 20 or 10
         if math.random(1, 100) <= chance then 
             Player.Functions.AddItem("safecracker", 1)
             TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items["safecracker"], 'add') 
@@ -20,18 +20,38 @@ RegisterNetEvent('qb-storerobbery:server:takeMoney', function(register, isDone, 
 end)
 
 RegisterNetEvent('qb-storerobbery:server:setRegisterStatus', function(register)
-    Config.Registers[register].robbed   = true
-    Config.Registers[register].time     = Config.resetTime
-    TriggerClientEvent('qb-storerobbery:client:setRegisterStatus', -1, register, Config.Registers[register])
+      -- Set all registers to robbed status and assign reset time
+    for regId, _ in pairs(Config.Registers) do
+        Config.Registers[regId].robbed = true
+        Config.Registers[regId].time = Config.resetTime
+        TriggerClientEvent('qb-storerobbery:client:setRegisterStatus', -1, regId, Config.Registers[regId])
+    end
+
+    -- Set a global timeout to reset the robbed status for all registers
+    Citizen.SetTimeout(Config.resetTime, function()
+        for regId, _ in pairs(Config.Registers) do
+            Config.Registers[regId].robbed = false
+            -- Optionally reset the time or handle it differently based on your logic
+            Config.Registers[regId].time = 0  -- Reset or adjust based on your needs
+            TriggerClientEvent('qb-storerobbery:client:setRegisterStatus', -1, regId, Config.Registers[regId])
+        end
+    end)
 end)
 
 RegisterNetEvent('qb-storerobbery:server:setSafeStatus', function(safe)
-    TriggerClientEvent('qb-storerobbery:client:setSafeStatus', -1, safe, true)
-    Config.Safes[safe].robbed = true
+    for safeId, _ in pairs(Config.Safes) do
+        TriggerClientEvent('qb-storerobbery:client:setSafeStatus', -1, safeId, true)
+        Config.Safes[safeId].robbed = true
+    end
 
-    SetTimeout(math.random(1800,1900), function()
-        TriggerClientEvent('qb-storerobbery:client:setSafeStatus', -1, safe, false)
-        Config.Safes[safe].robbed = false
+    -- Set a timeout to reset the robbed status for all safes
+    SetTimeout((60000)*30, function()
+        for safeId, _ in pairs(Config.Safes) do
+            TriggerClientEvent('qb-storerobbery:client:setSafeStatus', -1, safeId, false)
+            Config.Safes[safeId].robbed = false
+
+        end
+        TriggerClientEvent('qb-storerobbery:client:resetLootState', -1)
     end)
 end)
 
@@ -43,7 +63,7 @@ RegisterNetEvent('qb-storerobbery:server:SafeReward', function(safe)
     Player.Functions.AddItem('rolex', rolexAmount)
 	TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items['rolex'], "add")
         
-    if math.random(1, 100) <= 50 then
+    if math.random(1, 100) <= 10 then
     		Player.Functions.AddItem('laptop_green', 1)
 			TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items['laptop_green'], "add")
     end

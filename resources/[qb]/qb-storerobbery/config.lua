@@ -42,7 +42,7 @@ Config.Registers = {
 
 
 -- Time until safe opens up
-Config.SafeWait = (3000 * 1)
+Config.SafeWait = (60000 * 1) -- takes 1 minute for safe to open
 
 Config.Safes = {
     [1] = {
@@ -83,7 +83,7 @@ Config.Safes = {
     [19] = {vector3(168.95, 6644.74, 31.70), type = "keypad", robbed = false, camId = 30},
 }
 
-Config.resetTime = (60 * 1000) * 30
+Config.resetTime = (60000) * 15 -- 15 minute safe cooldown
 Config.tickInterval = 1000
 
 Config.MaleNoHandshoes = {

@@ -9,6 +9,7 @@ local onDuty = false
 local usingAdvanced = false
 local SafeCracked = false
 local Cracked = false
+local canLoot = true
 
 --// THREADS \\ --
 CreateThread(function()
@@ -34,25 +35,6 @@ CreateThread(function()
             distance = 2.0
         })
     end
-
-    -- Still developing my backend code for item uses, doesn't apply when using target, feel free to use this if you have no item uses attached to your lockpicks :)
-
---[[     for k, _ in pairs(Config.Registers) do
-        exports['qb-target']:AddCircleZone(Config.Registers[k], vector3(Config.Registers[k][1].xyz), 1.0, {
-            name = Config.Registers[k],
-            debugPoly = false,
-        }, {
-            options = {
-                {
-                    type = "client",
-                    event = "qb-storerobbery:client:checkregister",
-                    icon = "fas fa-lock",
-                    label = "Search Register",
-                },
-            },
-            distance = 2.0
-        })
-    end ]]
 end)
 
 CreateThread(function()
@@ -91,6 +73,7 @@ RegisterNetEvent('police:SetCopCount', function(amount)
     CurrentCops = amount
 end)
 
+
 RegisterNetEvent('lockpicks:UseLockpick', function(isAdvanced)
     for k, v in pairs(Config.Registers) do
         local ped = PlayerPedId()
@@ -111,7 +94,7 @@ RegisterNetEvent('lockpicks:UseLockpick', function(isAdvanced)
                     if success then
                         if currentRegister ~= 0 then
                             TriggerServerEvent('qb-storerobbery:server:setRegisterStatus', currentRegister)
-                            local lockpickTime = math.random(15000, 20000)
+                            local lockpickTime = math.random(150000, 20000) 
                             LockpickDoorAnim(lockpickTime, true)
                             QBCore.Functions.Progressbar("search_register", "Emptying register..", lockpickTime, false, true, {
                                 disableMovement = true,
@@ -227,7 +210,7 @@ RegisterNetEvent('qb-storerobbery:client:hacksafe', function()
         local dist = #(pos - Config.Safes[safe][1].xyz)
         if dist < 1.0 then
             if Config.Safes[safe].robbed then
-                QBCore.Functions.Notify("Look's empty!", "error")
+                QBCore.Functions.Notify("City wide lockdown!", "error")
             elseif Cracked then
                 QBCore.Functions.Notify("Security lock active!", "error")
             elseif not Config.Safes[safe].robbed then
@@ -548,6 +531,11 @@ function MemoryGame()
 end
 
 function CollectSafeMoney()
+    if not canLoot then
+        QBCore.Functions.Notify("You've already taken the loot!", "error")
+        return
+    end
+
     local pos = GetEntityCoords(PlayerPedId())
     for safe, _ in pairs(Config.Safes) do
         local dist = #(pos - Config.Safes[safe][1].xyz)
@@ -555,6 +543,7 @@ function CollectSafeMoney()
             if dist < 1.0 then
                 if SafeCracked then
                     if CurrentCops >= Config.MinimumStoreRobberyPolice then
+                        canLoot = false
                         currentSafe = safe
                         -- // FINGYPRINTS \\ --
                         if math.random(1, 100) <= 65 and not IsWearingHandshoes() then
@@ -562,7 +551,7 @@ function CollectSafeMoney()
                         end
                         -- // COLLECTION \\ --
                         if currentSafe ~= 0 then
-                            if SafeCracked then
+                            if SafeCracked then 
                                 TriggerServerEvent("qb-storerobbery:server:SafeReward", currentSafe)
                                 TriggerServerEvent("qb-storerobbery:server:setSafeStatus", currentSafe)
                                 currentSafe = 0
@@ -589,3 +578,7 @@ function CollectSafeMoney()
     end
 end
 --// FUNCTIONS \\ --
+RegisterNetEvent('qb-storerobbery:client:resetLootState', function()
+    canLoot = true
+end)
+
