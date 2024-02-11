@@ -111,8 +111,8 @@ RegisterNetEvent('lockpicks:UseLockpick', function(isAdvanced)
                     if success then
                         if currentRegister ~= 0 then
                             TriggerServerEvent('qb-storerobbery:server:setRegisterStatus', currentRegister)
-                            local lockpickTime = math.random(15000, 30000)
-                            LockpickDoorAnim(lockpickTime)
+                            local lockpickTime = math.random(15000, 20000)
+                            LockpickDoorAnim(lockpickTime, true)
                             QBCore.Functions.Progressbar("search_register", "Emptying register..", lockpickTime, false, true, {
                                 disableMovement = true,
                                 disableCarMovement = true,
@@ -125,7 +125,7 @@ RegisterNetEvent('lockpicks:UseLockpick', function(isAdvanced)
                             }, {}, {}, function() -- Done
                                 openingDoor = false
                                 ClearPedTasks(PlayerPedId())
-                                TriggerServerEvent('qb-storerobbery:server:takeMoney', currentRegister, true)            
+                                TriggerServerEvent('qb-storerobbery:server:takeMoney', currentRegister, true, usingAdvanced)  -- using advanced lockpick      
                                 currentRegister = 0
                             end, function() -- Cancel
                                 openingDoor = false
@@ -142,21 +142,6 @@ RegisterNetEvent('lockpicks:UseLockpick', function(isAdvanced)
                         end
                     else
                         QBCore.Functions.Notify("You failed to lockpick the till!")
-                        if usingAdvanced then
-                            if math.random(1, 100) < 5 then
-                                TriggerServerEvent("QBCore:Server:RemoveItem", "advancedlockpick", 1)
-                                TriggerEvent('inventory:client:ItemBox', QBCore.Shared.Items["advancedlockpick"], "remove")
-                                TriggerServerEvent('hud:Server:GainStress', math.random(1, 2))
-                                QBCore.Functions.Notify("The lockpick bent out of shape...", "error")
-                            end
-                        else
-                            if math.random(1, 100) < 25 then
-                                TriggerServerEvent("QBCore:Server:RemoveItem", "lockpick", 1)
-                                TriggerEvent('inventory:client:ItemBox', QBCore.Shared.Items["lockpick"], "remove")
-                                TriggerServerEvent('hud:Server:GainStress', math.random(2, 4))
-                                QBCore.Functions.Notify("The lockpick bent out of shape...", "error")
-                            end
-                        end
                         if (IsWearingHandshoes() and math.random(1, 100) <= 25) then
                             local pos = GetEntityCoords(PlayerPedId())
                             TriggerServerEvent("evidence:server:CreateFingerDrop", pos)
@@ -170,8 +155,8 @@ RegisterNetEvent('lockpicks:UseLockpick', function(isAdvanced)
                     if success then
                         if currentRegister ~= 0 then
                             TriggerServerEvent('qb-storerobbery:server:setRegisterStatus', currentRegister)
-                            local lockpickTime = math.random(30000, 45000)
-                            LockpickDoorAnim(lockpickTime)
+                            local lockpickTime = math.random(20000, 35000)
+                            LockpickDoorAnim(lockpickTime, false)
                             QBCore.Functions.Progressbar("search_register", "Emptying register..", lockpickTime, false, true, {
                                 disableMovement = true,
                                 disableCarMovement = true,
@@ -184,7 +169,8 @@ RegisterNetEvent('lockpicks:UseLockpick', function(isAdvanced)
                             }, {}, {}, function() -- Done
                                 openingDoor = false
                                 ClearPedTasks(PlayerPedId())
-                                TriggerServerEvent('qb-storerobbery:server:takeMoney', currentRegister, true)            
+                                TriggerServerEvent('qb-storerobbery:server:takeMoney', currentRegister, true, false)        -- using normal lockpick  
+
                                 currentRegister = 0
                             end, function() -- Cancel
                                 openingDoor = false
@@ -201,19 +187,6 @@ RegisterNetEvent('lockpicks:UseLockpick', function(isAdvanced)
                         end
                     else
                         QBCore.Functions.Notify("You failed to lockpick the till!")
-                        if usingAdvanced then
-                            if math.random(1, 100) < 5 then
-                                TriggerServerEvent("QBCore:Server:RemoveItem", "advancedlockpick", 1)
-                                TriggerEvent('inventory:client:ItemBox', QBCore.Shared.Items["advancedlockpick"], "remove")
-                                TriggerServerEvent('hud:Server:GainStress', math.random(1, 2))
-                            end
-                        else
-                            if math.random(1, 100) < 25 then
-                                TriggerServerEvent("QBCore:Server:RemoveItem", "lockpick", 1)
-                                TriggerEvent('inventory:client:ItemBox', QBCore.Shared.Items["lockpick"], "remove")
-                                TriggerServerEvent('hud:Server:GainStress', math.random(2, 4))
-                            end
-                        end
                         if (IsWearingHandshoes() and math.random(1, 100) <= 25) then
                             local pos = GetEntityCoords(PlayerPedId())
                             TriggerServerEvent("evidence:server:CreateFingerDrop", pos)
@@ -258,8 +231,6 @@ RegisterNetEvent('qb-storerobbery:client:hacksafe', function()
             elseif Cracked then
                 QBCore.Functions.Notify("Security lock active!", "error")
             elseif not Config.Safes[safe].robbed then
-                TriggerServerEvent("QBCore:Server:RemoveItem", "safecracker", 1)
-                TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["safecracker"], "remove")
                 MemoryGame()
             else
                 QBCore.Functions.Notify("HOW?! Contact a Staff Member", "error")
@@ -354,7 +325,7 @@ function lockpickTill()
                 if success then
                     if currentRegister ~= 0 then
                         TriggerServerEvent('qb-storerobbery:server:setRegisterStatus', currentRegister)
-                        local lockpickTime = math.random(10000, 20000)
+                        local lockpickTime = math.random(1000, 2000)
                         LockpickDoorAnim(lockpickTime)
                         QBCore.Functions.Progressbar("search_register", "Emptying register..", lockpickTime, false, true, {
                             disableMovement = true,
@@ -509,7 +480,7 @@ function MemoryGame()
                         end
                         
                         -- // MINI GAME \\ --
-                        exports["bb-memorygame"]:thermiteminigame(6, 3, 2, 20,
+                        exports["memorygame"]:thermiteminigame(6, 3, 2, 20,
                         function() -- Success
 
                             if math.random(1, 100) <= 35 then

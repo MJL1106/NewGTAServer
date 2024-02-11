@@ -3,7 +3,7 @@ Config = {}
 Config.minEarn = 500
 Config.maxEarn = 1500
 Config.RegisterEarnings = math.random(Config.minEarn, Config.maxEarn)
-Config.MinimumStoreRobberyPolice = 2
+Config.MinimumStoreRobberyPolice = 0
 
 Config.Registers = {
     [1] = {vector3(-47.24,-1757.65, 29.53), robbed = false, time = 0, safeKey = 1, camId = 4},
@@ -42,7 +42,7 @@ Config.Registers = {
 
 
 -- Time until safe opens up
-Config.SafeWait = (60000 * 1)
+Config.SafeWait = (3000 * 1)
 
 Config.Safes = {
     [1] = {

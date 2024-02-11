@@ -4,17 +4,17 @@ local cashB = 300				--<< how much maximum you can get from a robbery
 local ScashA = 5000 			--<<how much minimum you can get from a robbery
 local ScashB = 8500				--<< how much maximum you can get from a robbery
 
-RegisterNetEvent('qb-storerobbery:server:takeMoney', function(register, isDone)
+RegisterNetEvent('qb-storerobbery:server:takeMoney', function(register, isDone, usingAdvanced)
     local src = source
 	local Player = QBCore.Functions.GetPlayer(src)
 	-- Add some stuff if you want, this here above the if statement will trigger every 2 seconds of the animation when robbing a cash register.
     if isDone then
-	local bags = math.random(500,1500)
-	Player.Functions.AddMoney('cash', bags)
-        if math.random(1, 100) <= 10 then
-            -- Give Special Item (Safe Cracker)
+	    local bags = math.random(1000,1500)
+	    Player.Functions.AddMoney('cash', bags)
+        local chance = usingAdvanced and 65 or 20
+        if math.random(1, 100) <= chance then 
             Player.Functions.AddItem("safecracker", 1)
-            TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items["safecracker"], 'add')
+            TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items["safecracker"], 'add') 
         end
     end
 end)
@@ -38,26 +38,14 @@ end)
 RegisterNetEvent('qb-storerobbery:server:SafeReward', function(safe)
     local src = source
 	local Player = QBCore.Functions.GetPlayer(src)
-    local ammoBullets = math.random(1,3)
+    local rolexAmount = math.random(3,6)
         
-    Player.Functions.AddItem('pistol_ammo', ammoBullets)
-	TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items['pistol_ammo'], "add")
-        
-    Player.Functions.AddItem('rolex', ammoBullets)
+    Player.Functions.AddItem('rolex', rolexAmount)
 	TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items['rolex'], "add")
         
-    local luck = math.random(1, 100)
-    if luck <= 20 then
-    		Player.Functions.AddItem('weapon_snspistol', 1)
-			TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items['weapon_snspistol'], "add")
-    end
-    if luck <= 25 then
-            Player.Functions.AddItem('pistol_extendedclip', 1)
-			TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items['pistol_extendedclip'], "add")
-    end
-    if luck <= 5 then
-    		Player.Functions.AddItem('weapon_pistol', 1)
-			TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items['weapon_pistol'], "add")
+    if math.random(1, 100) <= 50 then
+    		Player.Functions.AddItem('laptop_green', 1)
+			TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items['laptop_green'], "add")
     end
    	
 end)
