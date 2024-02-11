@@ -12,7 +12,7 @@ Displays Callsign, Rank & Name Of The Officer!
 `["specialbadge"]                 = {["name"] = "specialbadge",                  ["label"] = "Police Badge",             ["weight"] = 1000,      ["type"] = "item",      ["image"] = "specialbadge.png",         ["unique"] = false,     ["useable"] = true,     ["shouldClose"] = true,    ["combinable"] = nil,   ["description"] = "Special Badge of Law Enforcements"},`
 - Drag & Drop The ro-policebadge To Your Resources Folder!
 - Boom!
-- Add this image on ps-inventory > html > images (Rename the image to "specialbadge.png")
+- Add this image on qb-inventory > html > images (Rename the image to "specialbadge.png")
 
 ![specialbadge](https://user-images.githubusercontent.com/73050572/218711638-f56a8876-3773-495c-9b6a-612d7d736f77.png)
 

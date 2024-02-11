@@ -5,7 +5,7 @@
   --{title="City Hall", colour=25, id=438, scale = 0.8, x = -541.94, y = -210.19, z = 37.64}, -- City Hall
  -- {title="Court", colour=37, id=89, scale = 0.8, x = 243.46, y = -1092.3, z = 29.29}, -- Court
   {title="Billiard Club", colour=9, id=490, scale = 0.6, x = -1596.9, y = -991.28, z = 13.08}, -- Park Ranger
-  {title="Medicine Delivery", colour=69, id=51, scale = 0.6, x = -893.77, y = -353.49, z = 34.68}, -- Park Ranger
+  {title="Medicine Delivery", colour=47, id=51, scale = 0.6, x = 68.68, y = -1569.61, z = 29.6}, -- Park Ranger
   --{title="Movie Theater", colour=2, id=790, scale = 1.0, x = 337.21, y = 185.17, z = 103.0}, -- Park Ranger
   --{title="Fish Sales", colour=3, id=304, scale = 0.7, x = -1847.46, y = -1191.5, z = 14.14}, -- Fish Sales
   --{title="Hunting Sales", colour=3, id=442, scale = 0.7, x = 569.32, y = 2796.66, z = 14.14}, -- Hunting Sales

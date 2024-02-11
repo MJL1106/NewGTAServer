@@ -19,5 +19,5 @@ shared_scripts {
 client_script 'client/main.lua'
 server_script 'server/main.lua'
 
-file 'json/shops-inventory.json'
+file 'json/shoqb-inventory.json'
 lua54 'yes'
