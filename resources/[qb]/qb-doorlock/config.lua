@@ -104,7 +104,7 @@ Config.DoorList = {
 		pickable = false,
 		distance = 1.5
 	},
-	-- First Pacific Door opened with lockpick
+	-- First Pacific Door opened with lockpick 
 	{
 		objName = 'hei_v_ilev_bk_gate_pris',
 		objCoords  = vec3(257.41, 220.25, 106.4),
