@@ -22,13 +22,26 @@ RegisterServerEvent('qb-overlord-laundering:load', function(machine)
 	local num_bags = 0
 	local total_worth = 0
 
+
 	for itemkey, item in pairs(Player.PlayerData.items) do
+		-- if item.name == 'markedbills' then
+		-- 	num_bags = num_bags + 1
+		-- 	if type(item.info) ~= 'string' and tonumber(item.info.worth) then
+		-- 		total_worth = total_worth + tonumber(item.info.worth)
+		-- 		Player.Functions.RemoveItem(item.name, 1) -- need to work out how to take this specific one...
+		-- 		TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[item.name], "remove")
+		-- 	end
+		-- end
 		if item.name == 'markedbills' then
-			num_bags = num_bags + 1
-			if type(item.info) ~= 'string' and tonumber(item.info.worth) then
+			local itemCount = item.amount -- Get the amount in the stack
+			-- Ensure worth is calculated correctly for the whole stack
+			if type(item.info) == 'table' and tonumber(item.info.worth) then
 				total_worth = total_worth + tonumber(item.info.worth)
-				Player.Functions.RemoveItem(item.name, 1) -- need to work out how to take this specific one...
+       		 	-- Remove the item after adding its worth
+				total_worth = total_worth * itemCount
+				Player.Functions.RemoveItem(item.name, itemCount, item.slot)  -- Assuming each stack is processed individually
 				TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[item.name], "remove")
+				num_bags = num_bags + itemCount -- Increment by the number of bags in the stack
 			end
 		end
 	end
@@ -48,10 +61,10 @@ RegisterServerEvent('qb-overlord-laundering:load', function(machine)
 	CONFIG['Machines'][machine]['player'] = src
 	CONFIG['Machines'][machine]['worth'] = math.floor(real_worth) -- floor it cause % be .000314010401!
 
-	TriggerClientEvent('QBCore:Notify', src, 'You loaded '..num_bags..'x '..QBCore.Shared.Items['markedbills'].label..' ($'..total_worth..')', 'success')
+	TriggerClientEvent('QBCore:Notify', src, 'You loaded $' .. total_worth .. ' worth of ' .. QBCore.Shared.Items['markedbills'].label, 'success')
 
 	--below formats the display message for telling the player how long the wash is
-	local time_in_minutes = (total_worth / 50000) * 6
+	local time_in_minutes = (total_worth / 50000) * CONFIG['BaseTime']
 
 	local minutes = math.floor(time_in_minutes)
 	local decimal_part = time_in_minutes - minutes
