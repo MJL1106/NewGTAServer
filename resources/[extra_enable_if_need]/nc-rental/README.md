@@ -28,9 +28,9 @@ ensure nc-rental
 
 - Add the rentalpapers.png to your - inventory -> html -> images
 
-# Adding the RentalPapers to qb-inventory
+# Adding the RentalPapers to ps-inventory
 
-* Go to qb-inventory -> html -> js -> app.js and between lines 500-600 add the following code
+* Go to ps-inventory -> html -> js -> app.js and between lines 500-600 add the following code
 
 ```lua
 
