@@ -756,4 +756,17 @@ QBShared.Items = {
 	['photo'] 				 		 = {['name'] = 'photo', 			  	  		['label'] = 'Saved Pic', 				['weight'] = 500, 		['type'] = 'item', 		['image'] = 'photo.png', 				['unique'] = true, 	['useable'] = true, 	['shouldClose'] = true,   ['combinable'] = nil,   ['description'] = 'Brand new picture saved!'},
 
 
+	 -- Bank Items
+	 ["encrypted_hdd"] 				 = {["name"] = "encrypted_hdd", 			  	["label"] = "Hard Drive", 	["weight"] = 100, 		["type"] = "item", 		["image"] = "encrypted_hdd.png", 		["unique"] = false, 	["useable"] = false, 	["shouldClose"] = false,   ["combinable"] = nil,   ["description"] = "A encrypted stoarage device, may contain passwords..."},
+	 ["laptop_green"] 		 	     	 = {["name"] = "laptop_green", 					["label"] = "Green Laptop", 			["weight"] = 15000, 	    ["type"] = "item", 		["image"] = "laptop_green.png", 		["unique"] = true, 		["useable"] = true, 	["shouldClose"] = true,	   ["combinable"] = nil,   ["description"] = "A security Laptop"},
+	 ["laptop_red"] 		 	     	 	 = {["name"] = "laptop_red", 					["label"] = "Red Laptop", 				["weight"] = 15000, 	    ["type"] = "item", 		["image"] = "laptop_red.png", 			["unique"] = true, 		["useable"] = true, 	["shouldClose"] = true,	   ["combinable"] = nil,   ["description"] = "A security Laptop"},
+	 ["laptop_blue"] 				 = {["name"] = "laptop_blue", 			  	  	["label"] = "Blue Laptop", 				["weight"] = 15000, 		["type"] = "item", 		["image"] = "laptop_blue.png", 			["unique"] = true, 		["useable"] = true, 	["shouldClose"] = true,	   ["combinable"] = nil,   ["description"] = "A security Laptop"},
+	 ["laptop_gold"] 			 	 = {["name"] = "laptop_gold", 			  		["label"] = "Gold Laptop", 				["weight"] = 15000, 		["type"] = "item", 		["image"] = "laptop_gold.png", 			["unique"] = true, 		["useable"] = true, 	["shouldClose"] = true,	   ["combinable"] = nil,   ["description"] = "A security Laptop"},
+	 -- Use these if you want tradeable laptops
+	 ["usb_green"] 		 	     	 = {["name"] = "usb_green", 					["label"] = "Green USB", 				["weight"] = 5000, 	    	["type"] = "item", 		["image"] = "fleeca_usb.png", 			["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,	   ["combinable"] = nil,   ["description"] = "A security USB"},
+	 ["usb_red"] 		 	     	 = {["name"] = "usb_red", 						["label"] = "Red USB", 					["weight"] = 5000, 	    	["type"] = "item", 		["image"] = "vault_usb.png", 			["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,	   ["combinable"] = nil,   ["description"] = "A security USB"},
+	 ["usb_blue"] 				 	 = {["name"] = "usb_blue", 			  	  		["label"] = "Blue USB", 				["weight"] = 5000, 			["type"] = "item", 		["image"] = "pacific_usb.png", 			["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,	   ["combinable"] = nil,   ["description"] = "A security USB"},
+	 ["usb_gold"] 			 	 	 = {["name"] = "usb_gold", 			  			["label"] = "Gold USB", 				["weight"] = 5000, 			["type"] = "item", 		["image"] = "paleto_usb.png", 			["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,	   ["combinable"] = nil,   ["description"] = "A security USB"},
+
+
 }

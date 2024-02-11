@@ -1,39 +1,38 @@
 fx_version 'cerulean'
 game 'gta5'
 
-description 'Bankrobbery for QB-Core'
-version '1.3.0'
+lua54 'yes'
 
-ui_page 'html/index.html'
-
-shared_scripts {
-    'sh_config.lua', -- Shared config
-    '@qb-core/shared/locale.lua',
-    'locales/en.lua',
-    'locales/*.lua'
+shared_script { 
+	'config.lua',
+	--'@qb-core/import.lua', -- If you use a old core then use this and set config to "old" in versions
 }
 
 client_scripts {
-    '@PolyZone/client.lua',
-    '@PolyZone/BoxZone.lua',
-    'cl_config.lua', -- Client config
-    'client/fleeca.lua',
-    'client/pacific.lua',
-    'client/powerstation.lua',
-    'client/doors.lua',
-    'client/paleto.lua'
+	'client/cl_fleeca.lua',
+	'client/cl_paleto.lua',
+	'client/cl_pacific.lua',
+	'client/cl_lowervault.lua',
+	'client/drilling.lua',
+	'client/doorlocks.lua',
+	'client/cl_target.lua',
+	'client/cl_powerplants.lua',
+	'client/open.lua',
+	'client/cl_paletosecond.lua'
 }
 
 server_scripts {
-    'sv_config.lua', -- Server config
-    'server/main.lua'
+	'@oxmysql/lib/MySQL.lua',
+    'server/main.lua',
+	'server/secret.lua',
+	'server/open.lua',
+} 
+
+escrow_ignore {
+	'config.lua',
+	'server/*.lua',
+	'client/*.lua'
 }
 
-files {
-    'html/*',
-}
 
-dependency 'PolyZone'
-
-lua54 'yes'
-use_fxv2_oal 'yes'
+dependency '/assetpacks'
