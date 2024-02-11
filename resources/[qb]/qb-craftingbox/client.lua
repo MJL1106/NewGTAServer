@@ -41,7 +41,7 @@ RegisterNetEvent('mt-crafting:client:AbrirMenuCraft', function()
     local items = GetCraftableItems()
     for k, v in pairs(items) do
         local item = {}
-        item.header = "<img src=nui://qb-inventory/html/images/"..QBCore.Shared.Items[v.itemName].image.." width=35px style='margin-right: 10px'> " .. v.label .. "<br> Required Points: " .. v.level
+        item.header = "<img src=nui://ps-inventory/html/images/"..QBCore.Shared.Items[v.itemName].image.." width=35px style='margin-right: 10px'> " .. v.label .. "<br> Required Points: " .. v.level
         local text = ""
         for k, v in pairs(v.items) do
             text = text .. "• " .. QBCore.Shared.Items[v.item].label .. ": " .. v.amount .. "x <br>"

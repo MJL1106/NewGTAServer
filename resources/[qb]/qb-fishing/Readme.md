@@ -19,7 +19,7 @@ Special shoutout to my beta testers! Your feedback has been invaluable.
 
 - [QBCore](https://github.com/qbcore-framework/qb-core)
 
-- [ps inventory](https://github.com/Project-Sloth/ps-inventory) **or** [qb inventory](https://github.com/qbcore-framework/qb-inventory) **or** [ox inventory](https://github.com/overextended/ox_inventory)
+- [ps inventory](https://github.com/Project-Sloth/ps-inventory) **or** [qb inventory](https://github.com/qbcore-framework/ps-inventory) **or** [ox inventory](https://github.com/overextended/ox_inventory)
    
 - [ps-ui](https://github.com/Project-Sloth/ps-ui)
   
@@ -502,7 +502,7 @@ OR if you use ox_inv **credits to Avenge**
 
 **step 3**
 
-- Add items images to `qb-inventory/html/images` **or** `ox_inventory/web/images`
+- Add items images to `ps-inventory/html/images` **or** `ox_inventory/web/images`
 
 **step 4**
 
