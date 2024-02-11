@@ -3,11 +3,8 @@ QBCore = exports['qb-core']:GetCoreObject() -- do not touch
 
 CONFIG = {} -- do not touch
 
-CONFIG['BaseTime'] = 1 -- time in minutes the washing machine always takes
+CONFIG['BaseTime'] = 6 -- time in minutes the washing machine always takes
 
---CONFIG['TimePerItem'] = 1 -- time in minutes each additional item of dirty money adds
-
--- CONFIG['PoliceIncrease'] = 0 -- percentage to increase per officer around
 
 CONFIG['Machines'] = {
 	{name="Washing Machine", cost="5", perc=1.0, vec=vector3(1136.28, -992.11, 46.11), available=true, finished=false, player=0, worth=0, lastsound=0},

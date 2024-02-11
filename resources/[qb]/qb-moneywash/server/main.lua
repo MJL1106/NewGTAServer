@@ -42,35 +42,33 @@ RegisterServerEvent('qb-overlord-laundering:load', function(machine)
 	end
 
 	local real_worth = total_worth * CONFIG['Machines'][machine].perc
-	local timer = CONFIG['BaseTime'] * 60000 --timer for waashing
 
-	-- if num_bags > 1 then
-	-- 	-- add multiplier
-	-- 	local plus = CONFIG['TimePerItem'] * 1000 -- time increased per bag
-	-- 	plus = plus * num_bags
-
-	-- 	timer = timer + plus
-	-- end
-
-	-- if CONFIG['PoliceIncrease'] then
-	-- 	local num_police = 0
-	-- 	for k, v in pairs(QBCore.Functions.GetPlayers()) do
-	-- 		local job = QBCore.Functions.GetPlayer(v).PlayerData.job
-	-- 		if job.name == 'police' and job.onduty then
-	-- 			num_police = num_police + 1
-	-- 		end
-	-- 	end
-
-	-- 	local plus = real_worth * CONFIG['PoliceIncrease']
-	-- 	plus = plus * num_police
-
-	-- 	real_worth = real_worth + plus
-	-- end
+	local timer = (total_worth / 50000) * CONFIG['BaseTime'] * 60000
 
 	CONFIG['Machines'][machine]['player'] = src
 	CONFIG['Machines'][machine]['worth'] = math.floor(real_worth) -- floor it cause % be .000314010401!
 
 	TriggerClientEvent('QBCore:Notify', src, 'You loaded '..num_bags..'x '..QBCore.Shared.Items['markedbills'].label..' ($'..total_worth..')', 'success')
+
+	--below formats the display message for telling the player how long the wash is
+	local time_in_minutes = (total_worth / 50000) * 6
+
+	local minutes = math.floor(time_in_minutes)
+	local decimal_part = time_in_minutes - minutes
+
+
+	local message
+	if minutes >= 1 then
+		-- If more than 1 minute, display only whole minutes
+		message = string.format("%d minutes", minutes)
+	else
+		-- If less than 1 minute, convert to seconds and display
+		local seconds = math.floor(time_in_minutes * 60)  -- Convert total to seconds if less than a minute
+		message = string.format("%d seconds", seconds)
+	end
+
+	TriggerClientEvent('QBCore:Notify', src, 'Laundering will take approximately ' .. message .. '.', 'primary')
+
 
 	Citizen.Wait(timer) -- probably a better way to do this but not too fussed about serverside performance
 
