@@ -342,7 +342,7 @@ end
 local function ToggleSelling()
     if not cornerselling then
         cornerselling = true
-        LocalPlayer.state:set("inv_busy", true, true)
+        LocalPlayer.state:set("inv_busy", false, false)
         QBCore.Functions.Notify(Lang:t("info.started_selling_drugs"))
         local startLocation = GetEntityCoords(PlayerPedId())
         CreateThread(function()

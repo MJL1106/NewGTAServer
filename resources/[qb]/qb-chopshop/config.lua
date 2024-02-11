@@ -3,7 +3,7 @@ Config = {}
 Config.ChopRadioItem = "chopradio"
 
 Config.Inventory = 'qb' -- 'oldqb' or 'qb'
-Config.InventoryName = 'ps-inventory' -- change this if you are using 'ps' or 'lj' or renamed you inventory folder
+Config.InventoryName = 'qb-inventory' -- change this if you are using 'ps' or 'lj' or renamed you inventory folder
 
 Config.ChopShopPed = false
 Config.ChopShopPeds = {

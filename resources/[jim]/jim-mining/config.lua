@@ -4,7 +4,7 @@ Loc = {}
 
 Config = {
 	Debug = false, -- enable debug mode
-	img = "ps-inventory/html/images/", --Set this to the image directory of your inventory script or "nil" if using newer qb-menu
+	img = "qb-inventory/html/images/", --Set this to the image directory of your inventory script or "nil" if using newer qb-menu
 
 	Lan = "en", -- Pick your language here
 

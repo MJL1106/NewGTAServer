@@ -101,55 +101,55 @@ Config = {
     },
 
     -- Selling Config
-    SuccessChance = 50,
-    ScamChance = 25,
-    RobberyChance = 25,
+    SuccessChance = 70,
+    ScamChance = 15,
+    RobberyChance = 15,
     MinimumDrugSalePolice = 0,
 
     DrugsPrice = {
         ["weed_white-widow"] = {
-            min = 35,
-            max = 40,
+            min = 20,
+            max = 70,
         },
         ["weed_og-kush"] = {
-            min = 35,
-            max = 40,
+            min = 20,
+            max = 70,
         },
         ["weed_amnesia"] = {
-            min = 35,
-            max = 40,
+            min = 20,
+            max = 70,
         },
         ["weed_purple-haze"] = {
-            min = 35,
-            max = 40,
+            min = 20,
+            max = 70,
         },
         ["weed_ak47"] = {
-            min = 35,
-            max = 40,
+            min = 20,
+            max = 70,
         },
         ["coke_brick"] = {
-            min = 65,
-            max = 75,
+            min = 190,
+            max = 250,
         },
         ["heroin"] = {
-            min = 40,
-            max = 50,
+            min = 130,
+            max = 180,
         },
         ["lsd"] = {
-            min = 50,
-            max = 55,
+            min = 100,
+            max = 150,
         },
         ["meth"] = {
-            min = 85,
-            max = 95,
+            min = 110,
+            max = 160,
         },
         ["weed_skunk"] = {
-            min = 48,
-            max = 58,
+            min = 20,
+            max = 70,
         },
         ["oxy"] = {
-            min = 30,
-            max = 35,
+            min = 15,
+            max = 48,
         },
     },
 

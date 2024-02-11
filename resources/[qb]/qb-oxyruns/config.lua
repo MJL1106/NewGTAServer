@@ -2,7 +2,7 @@ Config = Config or {}
 
 --- STARTER PED STUFF HERE
 Config.PedModel = `a_m_y_indian_01`
-Config.PedLocation = vector4(-893.77, -353.49, 34.68, 33.95)
+Config.PedLocation = vector4(69.02, -1570.03, 29.6, 55.24)
 --- END OF STARTER PED STUFF
 
 Config.Dispatch = 'ps-dispatch'  -- ps-dispatch / cd-dispatch  (type of dispatch you use)
@@ -38,7 +38,7 @@ Config.RareItemChance = 20 -- 10% chance to get rareitem
 --- BLIPS STUFF
 Config.OxySupplierBlip = 51 -- Blip that is shown where to pickup packages more blips can be found here if you want to change: https://docs.fivem.net/docs/game-references/blips/
 Config.OxySupplierBlipScale = 0.60 -- Scale of the blip
-Config.OxySupplierBlipRouteColor = 11 -- This is the color or the marking that shows from your location to the location
+Config.OxySupplierBlipRouteColor = 47 -- This is the color or the marking that shows from your location to the location
 Config.UseGpsRoute = true -- true/false to turn of the route markings and only show blips
 
 Config.OxyDropBlip = 103
