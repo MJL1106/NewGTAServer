@@ -1,8 +1,12 @@
 Config = {}
 
 ----- ** TIMER CONFIG ** ----
-Config.BlackoutTimer = 60 -- How many minutes are the city blackedout when powerplant is hit?
-Config.BankTimer = 5 -- How many minutes between each bank robbery?
+Config.BlackoutTimer = 15 -- How many minutes are the city blackedout when powerplant is hit?
+Config.BankTimer = {
+    fleeca = 1, -- Time in minutes for cooldown
+    paleto = 1, -- Time in minutes for cooldown
+    pacific = 1, -- Time in minutes for cooldown
+} 
 
 ---- ** BAG IDs ** ----
 Config.BagUseID = 93 -- Which ID is the bag that a player gets after doing an animation? (Should use a black one so it looks close to the animation)
@@ -40,15 +44,15 @@ Config.FleecaTrollyChance = 100 -- How many percent chance of getting a extra tr
 Config.FleecaGoldTrollyChance = 0 -- How many percent chance of that Fleeca Trolly to be gold
 
 Config.PaletoTrollyChance = 100 -- How many percent chance of getting a extra trolley with loot
-Config.PaletoGoldTrollyChance = 10 -- How many percent chance of that Fleeca Trolly to be gold
+Config.PaletoGoldTrollyChance = 0 -- How many percent chance of that Fleeca Trolly to be gold
 
 Config.PacificTrollyChance = 100 -- How many percent chance of getting a extra trolley with loot
-Config.PacificGoldTrollyChance = 10 -- How many percent chance of that Fleeca Trolly to be gold
+Config.PacificGoldTrollyChance = 0 -- How many percent chance of that Fleeca Trolly to be gold
 
-Config.FleecaGoldChance = 10 -- What percent chance of getting a gold table in a fleeca?
+Config.FleecaGoldChance = 100 -- What percent chance of getting a gold table in a fleeca?
 Config.PaletoGoldChance = 0 -- What percent chance of getting a gold table in a Paleto?
 Config.PacificGoldChance = 0 -- What percent chance of getting a gold table in a Pacific?
-Config.lowerVaultGoldChance = 100 -- What percent chance of getting a gold table in the lowerVault?
+Config.lowerVaultGoldChance = 0 -- What percent chance of getting a gold table in the lowerVault?
 
 ---- ** HARD DRIVE CONFIG ** ---- 
 -- only mess with this if you use lowervault
@@ -115,10 +119,10 @@ Config.MarkedBillsWorthMax = 37500 -- Maximum worth of a bag
 
 
 ---- ** FLEECA ** ----
-Config.FleecaBagsMin = 2 -- How many bags of Marked Bills can you MINIMUM get from a FLeeca Table?
-Config.FleecaBagsMax = 4 -- How many bags of Marked Bills can you MAXIMUM get from a FLeeca Table?
-Config.FleecaGoldMin = 2 -- Minimum gold bars from Fleecas
-Config.FleecaGoldMax = 4 -- Maximum gold bars from Fleecas
+Config.FleecaBagsMin = 1 -- How many bags of Marked Bills can you MINIMUM get from a FLeeca Table?
+Config.FleecaBagsMax = 1 -- How many bags of Marked Bills can you MAXIMUM get from a FLeeca Table?
+Config.FleecaGoldMin = 200 -- Minimum gold bars from Fleecas
+Config.FleecaGoldMax = 210 -- Maximum gold bars from Fleecas
 
 ---- ** PALETO ** ----
 Config.PaletoBagsMin = 3 -- How many bags of Marked Bills can you MINIMUM get from a Paleto Table?
@@ -152,21 +156,20 @@ Config.Lockers = {
         ---- NORMAL ITEMS ----
         ["items"] = {
             'rolex',
-            'phone',
-            'laptop_green',
         },
-        ["ItemAmount"] = math.random(1,5), -- Put minimum and Maximum amount of items inside the randomiser
+        ["ItemAmount"] = 17, -- sets total amount of items you get
         ---- RARE ITEMS ----
-        ["Chance"] = 10, -- CHANCE OF GETTING RARE OR CASH ITEM
+        ["Chance"] = 50, -- CHANCE OF GETTING USB
 
         ["Rare"] = {
-            'goldbar',
+            'usb_blue',
         },
-        ["RareAmount"] = math.random(1,5), -- Put minimum and Maximum amount of items inside the randomiser
+        ["RareAmount"] = 1, -- Set total number of usb
         ---- CASH ITEMS ----
 
-        ["Cash"] = 'markedbills',
-        ["CashAmount"] = math.random(1,5), -- Put minimum and Maximum amount of items inside the randomiser
+        ["Card"] = 20, -- CHANCE OF GETTING CARD
+        ["Cash"] = 'security_card_01',
+        ["CashAmount"] = 1, -- Put minimum and Maximum amount of items inside the randomiser
     },
     ["Paleto"] = {
         ---- NORMAL ITEMS ----
@@ -243,38 +246,38 @@ Config.LaptopUses = 3
 
 
 ---- LAPTOP LOCATIONS ----
-Config.LaptopLocations = {
-    ["Hunter"] = {
-        ["coords"] = vector4(347.78, -1255.41, 32.7, 326.1),
-        ["TradeItem"] = "usb_green",
-        ["laptop"] = "laptop_green",
-        ["price"] = 15000,
-    },
-    ["Fernando"] = {
-        ["coords"] = vector4(-458.22, -2266.08, 8.52, 290.63),
-        ["TradeItem"] = "usb_blue",
-        ["laptop"] = "laptop_blue",
-        ["price"] = 30000,
-    },
-    ["Rico"] = {
-        ["coords"] = vector4(1689.93, 3581.6, 35.62, 216.85),
-        ["TradeItem"] = "usb_red",
-        ["laptop"] = "laptop_red",
-        ["price"] = 45000,
-    },
-    ["Gustavo"] = {
-        ["coords"] = vector4(-1423.84, 6760.71, 5.88, 90.47),
-        ["TradeItem"] = "usb_gold",
-        ["laptop"] = "laptop_gold",
-        ["price"] = 60000,
-    },
-    ["Fisher"] = {
-        ["coords"] = vector4(1470.19, 6550.24, 14.9, 92.8),
-        ["TradeItem"] = "usb_pink",
-        ["laptop"] = "laptop_pink",
-        ["price"] = 60000,
-    },
-}
+-- Config.LaptopLocations = {
+--     ["Hunter"] = {
+--         ["coords"] = vector4(347.78, -1255.41, 32.7, 326.1),
+--         ["TradeItem"] = "usb_green",
+--         ["laptop"] = "laptop_green",
+--         ["price"] = 15000,
+--     },
+--     ["Fernando"] = {
+--         ["coords"] = vector4(-458.22, -2266.08, 8.52, 290.63),
+--         ["TradeItem"] = "usb_blue",
+--         ["laptop"] = "laptop_blue",
+--         ["price"] = 30000,
+--     },
+--     ["Rico"] = {
+--         ["coords"] = vector4(1689.93, 3581.6, 35.62, 216.85),
+--         ["TradeItem"] = "usb_red",
+--         ["laptop"] = "laptop_red",
+--         ["price"] = 45000,
+--     },
+--     ["Gustavo"] = {
+--         ["coords"] = vector4(-1423.84, 6760.71, 5.88, 90.47),
+--         ["TradeItem"] = "usb_gold",
+--         ["laptop"] = "laptop_gold",
+--         ["price"] = 60000,
+--     },
+--     ["Fisher"] = {
+--         ["coords"] = vector4(1470.19, 6550.24, 14.9, 92.8),
+--         ["TradeItem"] = "usb_pink",
+--         ["laptop"] = "laptop_pink",
+--         ["price"] = 60000,
+--     },
+-- }
 ---- NOTIFY SUPPORTING MULTIPLE LANGUAGES ----
 Config.Notify = { -- Don't change the ["Text"] only change the text on the RIGHT SIDE
     -- POLICE NOTIS
@@ -312,10 +315,10 @@ Config.Notify = { -- Don't change the ["Text"] only change the text on the RIGHT
 
     -- Item // server side notify
     ["Got"] = "You got ",
-    ["BagsOfInked"] = "bags of inked money...",
-    ["GoldBars"] = "Gold Bars",
-    ["Diamonds"] = "Diamonds",
-    ["found"] = "You found",
+    ["BagsOfInked"] = " bags of marked bills...",
+    ["GoldBars"] = " Gold Bars",
+    ["Diamonds"] = " Diamonds",
+    ["found"] = " You found",
 
     -- Drill Overheated
     ["DrillBroke"] = "The Drill overheated and broke!",
@@ -568,7 +571,7 @@ Config.PacificBank = {
         {coords = vector3(262.5378, 212.7852, 100.6833), heading = 340.0059, loot = false}, 
         {coords = vector3(263.7690, 216.3632, 100.6833), heading = 161.9024, loot = false},
     },
-    ["thermite"] = { -- trollys points
+    ["thermite"] = { -- Thermite points
         {coords = vector4(257.0483, 220.5190, 106.2852, 332.2341), anim = vector3(257.40, 220.20, 106.35), effect = vector3(257.39, 221.20, 106.29), isOpen = false}, 
         {coords = vector4(252.4627, 220.8329, 101.6832, 161.7461), anim = vector3(252.95, 220.70, 101.76), effect = vector3(252.985, 221.70, 101.72), isOpen = false},
         {coords = vector4(261.5854, 215.0085, 101.6834, 254.1465), anim = vector3(261.65, 215.60, 101.76), effect = vector3(261.68, 216.63, 101.75), isOpen = false},
