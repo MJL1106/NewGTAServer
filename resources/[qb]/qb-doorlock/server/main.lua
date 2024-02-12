@@ -170,7 +170,13 @@ RegisterNetEvent('qb-doorlock:server:updateState', function(doorID, locked, src,
 	end
 
 	Config.DoorList[doorID].locked = locked
-	if Config.DoorStates[doorID] == nil then Config.DoorStates[doorID] = locked elseif Config.DoorStates[doorID] ~= locked then Config.DoorStates[doorID] = nil end
+
+	if Config.DoorStates[doorID] == nil then 
+		Config.DoorStates[doorID] = locked 
+	elseif Config.DoorStates[doorID] ~= locked then 
+		Config.DoorStates[doorID] = nil 
+	end
+
 	TriggerClientEvent('qb-doorlock:client:setState', -1, playerId, doorID, locked, src or false, enableSounds, enableAnimation)
 
 	if not Config.DoorList[doorID].autoLock then return end

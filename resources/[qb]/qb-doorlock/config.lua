@@ -85,7 +85,7 @@ Config.DoorList = {
 	-- Paleto Door 1 opened with security card A
 	{
 		objName = 'v_ilev_cbankvaulgate01',
-		objCoords  = vec3(-105.77, 6472.59, 31.81),
+		objCoords  = vec3(-104.81, 6473.65, 31.95),
 		textCoords = vec3(-105.77, 6472.59, 31.81),
 		objYaw = 45.0,
 		authorizedJobs = { 'police' },

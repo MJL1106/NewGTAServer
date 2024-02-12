@@ -110,7 +110,7 @@ RegisterNetEvent('qb-bankrobbery:UsePacificCard', function()
                 exports['memorygame']:thermiteminigame(Config.CorrectBlocks, Config.IncorrectBlocks, Config.TimeToShow, Config.TimeToLose,
                 function() -- success 
                     if Config.Doorlocks == "qb" then 
-                        TriggerServerEvent('qb-doorlock:server:updateState', DoorlockID4, false, false, false, true, false, false)
+                        TriggerServerEvent('qb-doorlock:server:updateState', 1, false, false, false, true, false, false)
                     elseif Config.Doorlocks == "nui" or Config.Doorlocks == "NUI" then 
                         TriggerServerEvent('nui_doorlock:server:updateState', Config.DoorlockID4, false, false, false, true)
                     end

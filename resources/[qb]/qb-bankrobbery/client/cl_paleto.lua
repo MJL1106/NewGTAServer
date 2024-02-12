@@ -326,6 +326,7 @@ RegisterNetEvent('qb-bankrobbery:tablepaleto', function()
         bag = CreateObject(GetHashKey('hei_p_m_bag_var22_arm_s'), pedCo, 1, 1, 0)
         sceneObject = GetClosestObjectOfType(Config.PaletoBank['grab']['pos'], 2.0, stackModel, false, false, false)
 
+
         scene1 = NetworkCreateSynchronisedScene(GetEntityCoords(sceneObject), GetEntityRotation(sceneObject), 2, true, false, 1065353216, 0, 1.3)
         NetworkAddPedToSynchronisedScene(ped, scene1, animDict, 'enter', 4.0, -4.0, 1033, 0, 1000.0, 0)
         NetworkAddEntityToSynchronisedScene(bag, scene1, animDict,'enter_bag', 1.0, -1.0, 1148846080)
@@ -354,7 +355,7 @@ RegisterNetEvent('qb-bankrobbery:tablepaleto', function()
         DeleteObject(bag)
         
         LocalPlayer.state:set('inv_busy', false, true) -- Not Busy
-        TriggerServerEvent('qb-bankrobbery:server:FleecaTable', stackModel, 'paleto', pos)
+        TriggerServerEvent('qb-bankrobbery:server:FleecaTable', stackModel, 'paleto', pedCo)
     end
 end)
 
