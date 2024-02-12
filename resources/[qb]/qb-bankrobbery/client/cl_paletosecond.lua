@@ -220,7 +220,6 @@ RegisterNetEvent('qb-bankrobbery:Paleto2ndDrill', function()
     local pedCo = GetEntityCoords(ped)
     for k,v in pairs(Config.PaletoSecond['drills']) do
         local drillDist = #(pedCo - v['coords'])
-        print(drillDist)
         if drillDist <= 0.7 then
             if not v['loot'] then
                 QBCore.Functions.TriggerCallback('qb-Bankrobbery:server:GetItemsNeeded', function(hasItem)
@@ -465,7 +464,6 @@ end)
 
 
 RegisterNetEvent('qb-bankrobbery:UsePaletoCard2', function()
-    print(CurrentCops)
     local ped = PlayerPedId() 
     local pos = GetEntityCoords(ped)
     local dist = #(pos - vector3(-99.0, 6461.8, 31.63))

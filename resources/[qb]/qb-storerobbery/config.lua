@@ -1,11 +1,9 @@
 Config = {}
 
-Config.minEarn = 1250
-Config.maxEarn = 2000
+Config.minEarn = 500
+Config.maxEarn = 1500
 Config.RegisterEarnings = math.random(Config.minEarn, Config.maxEarn)
 Config.MinimumStoreRobberyPolice = 0
-Config.resetTime = (60 * 1000) * 30
-Config.tickInterval = 1000
 
 Config.Registers = {
     [1] = {vector3(-47.24,-1757.65, 29.53), robbed = false, time = 0, safeKey = 1, camId = 4},
@@ -42,10 +40,31 @@ Config.Registers = {
     [32] = {vector3(162.16, 6643.22, 31.6), robbed = false, time = 0, safeKey = 19, camId = 29},
 }
 
+
+-- Time until safe opens up
+Config.SafeWait = (60000 * 1) -- takes 1 minute for safe to open
+
 Config.Safes = {
-    [1] = {vector4(-43.43, -1748.3, 29.42,  52.5), type = "keypad", robbed = false, camId = 4},
-    [2] = {vector4(-1478.94, -375.5, 39.16,  229.5), type = "padlock", robbed = false, camId = 5},
-    [3] = {vector4(-1220.85, -916.05, 11.32,  229.5), type = "padlock", robbed = false, camId = 6},
+    [1] = {
+        coords = vector3(-1220.85, -916.05, 11.32),
+        vector4(-43.43, -1748.3, 29.42,  52.5),
+        type = "keypad",
+        robbed = false,
+        camId = 4
+    }, 
+    [2] = {
+        vector4(-1478.94, -375.5, 39.16,  229.5),
+        type = "padlock",
+        robbed = false,
+        camId = 5
+    },
+    [3] = {
+        coords = vector3(-1220.85, -916.05, 11.32),
+        vector4(-1220.85, -916.05, 11.32,  229.5),
+        type = "padlock",
+        robbed = false,
+        camId = 6
+    },
     [4] = {vector4(-709.74, -904.15, 19.21, 229.5), type = "keypad", robbed = false, camId = 7},
     [5] = {vector3(28.21, -1339.14, 29.49), type = "keypad", robbed = false, camId = 8},
     [6] = {vector3(1126.77, -980.1, 45.41), type = "padlock", robbed = false, camId = 9},
@@ -63,6 +82,9 @@ Config.Safes = {
     [18] = {vector3(-168.40, 6318.80, 30.58), type = "padlock", robbed = false, camId = 27},
     [19] = {vector3(168.95, 6644.74, 31.70), type = "keypad", robbed = false, camId = 30},
 }
+
+Config.resetTime = (60000) * 15 -- 15 minute safe cooldown
+Config.tickInterval = 1000
 
 Config.MaleNoHandshoes = {
     [0] = true, [1] = true, [2] = true, [3] = true, [4] = true, [5] = true, [6] = true, [7] = true, [8] = true, [9] = true, [10] = true, [11] = true, [12] = true, [13] = true, [14] = true, [15] = true, [18] = true, [26] = true, [52] = true, [53] = true, [54] = true, [55] = true, [56] = true, [57] = true, [58] = true, [59] = true, [60] = true, [61] = true, [62] = true, [112] = true, [113] = true, [114] = true, [118] = true, [125] = true, [132] = true,

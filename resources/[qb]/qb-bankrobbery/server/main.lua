@@ -50,14 +50,22 @@ RegisterServerEvent('qb-bankrobbery:server:setBankState', function(state, bank, 
     end
 end)
 
+local bankStatus = {
+    fleeca = { robberyBusy = false, timeOut = false },
+    paleto = { robberyBusy = false, timeOut = false },
+    pacific = { robberyBusy = false, timeOut = false },
+}
+
 RegisterNetEvent('qb-bankrobbery:server:setTimeout', function(type, closestBank)
     local src = source
-    if not robberyBusy then
-        if not timeOut then
-            robberyBusy = true
-                Wait(Config.BankTimer * (60 * 1000))  --(45 * (60 * 1000))
-                timeOut = false
-                robberyBusy = false
+    if not bankStatus[type].robberyBusy then
+        if not bankStatus[type].timeOut then
+            bankStatus[type].robberyBusy = true
+            Wait(Config.BankTimer[type] * (60 * 1000))  -- Use specific timer per bank type if needed
+
+            -- Reset the status for the specific bank type
+            bankStatus[type].timeOut = false
+            bankStatus[type].robberyBusy = false
             TriggerClientEvent('qb-bankrobbery:client:ResetCurrentBank', src, type, closestBank)
             if Config.Doorlocks == "qb" then
                 TriggerServerEvent('qb-doorlock:server:updateState', Config.DoorlockID1, true)
@@ -91,7 +99,7 @@ RegisterNetEvent('qb-bankrobbery:server:FleecaTable', function(Table, bank, pos,
     if bank == 'fleeca' then
         local FleecaDist = #(pos - vector3(Config.FleecaBanks[closestBank]['coords'].x, Config.FleecaBanks[closestBank]['coords'].y, Config.FleecaBanks[closestBank]['coords'].z ))
         if FleecaDist <= 15 then 
-            local MarkedBags = math.random(Config.FleecaBagsMin, Config.FleecaBagsMax) -- How many bags can you get per trolly in a Fleeca
+            --local MarkedBags = math.random(Config.FleecaBagsMin, Config.FleecaBagsMax) -- How many bags can you get per trolly in a Fleeca
             local GoldBars = math.random(Config.FleecaGoldMin, Config.FleecaGoldMax) -- How many gold bars can you get in a fleeca?
 
             if Table == -180074230 then 
@@ -103,7 +111,7 @@ RegisterNetEvent('qb-bankrobbery:server:FleecaTable', function(Table, bank, pos,
                 TriggerEvent('qb-log:server:CreateLog', 'bankrobbery', 'Bank Robbery', 'green', '**Goldbars**:\n'..GoldBars..'\n**Person**:\n'..GetPlayerName(src))
 
             else 
-                local item = Config.BillsItems
+                local item = Config.BillsItem
                 Player.Functions.AddItem(item, MarkedBags, false, info)
                 TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[item], 'add')
                 TriggerClientEvent('QBCore:Notify', src, Config.Notify["Got"] .. MarkedBags .. Config.Notify["BagsOfInked"])
@@ -271,16 +279,19 @@ RegisterNetEvent('qb-bankrobbery:server:drillLoot', function(bank, pos, closestB
             TriggerEvent('qb-log:server:CreateLog', 'bankrobbery', 'Bank Robbery', 'green', '**Goldbars**:\n'..item..'\n**Person**:\n'..GetPlayerName(src))
 
             Wait(2000)
-            local DoubleLoot = math.random(1,100)
-            if DoubleLoot <= Config.Lockers["Fleeca"]["Chance"] then
+            local UsbChance = math.random(1,100)
+            if UsbChance <= Config.Lockers["Fleeca"]["Chance"] then
                 amount = Config.Lockers["Fleeca"]["RareAmount"]
-                local Chance = math.random(1,2)
-                if Chance == 1 then 
-                    Player.Functions.AddItem(doubleitem, 1, false)
-                else
-                    Player.Functions.AddItem(cashitem, cashamount, false, info)
-                end
+                Player.Functions.AddItem(doubleitem, amount, false)
                 TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[doubleitem], 'add')
+                TriggerEvent('qb-log:server:CreateLog', 'bankrobbery', 'Bank Robbery', 'green', '**Goldbars**:\n'..doubleitem..'\n**Person**:\n'..GetPlayerName(src))
+            end
+            Wait(2000)
+            local CardChance = math.random(1,100)
+            if CardChance <= Config.Lockers["Fleeca"]["Card"] then
+                amount = Config.Lockers["Fleeca"]["CashAmount"]
+                Player.Functions.AddItem(doubleitem, amount, false)
+                TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[cashitem], 'add')
                 TriggerEvent('qb-log:server:CreateLog', 'bankrobbery', 'Bank Robbery', 'green', '**Goldbars**:\n'..doubleitem..'\n**Person**:\n'..GetPlayerName(src))
             end
         else 
@@ -774,7 +785,6 @@ RegisterNetEvent('qb-bankrobbery:server:IsComvination2Right', function(data)
                 Wait(1000)
                 TriggerClientEvent('qb-bankrobbery:client:SetUpLower', src)
                 if Code1Cracked == true and Code2Cracked == true then
-                    print("WORKS?")
                     TriggerEvent('qb-bankrobbery:server:setBankState', true, 'lowerVault')
                 else 
                     TriggerClientEvent('QBCore:Notify', src, Config.Notify["LWHackFail"])
