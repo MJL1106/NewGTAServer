@@ -57,6 +57,8 @@ local bankStatus = {
 }
 
 RegisterNetEvent('qb-bankrobbery:server:setTimeout', function(type, closestBank)
+    local playerId = sentSource or source
+    local Player = QBCore.Functions.GetPlayer(playerId)
     local src = source
     if not bankStatus[type].robberyBusy then
         if not bankStatus[type].timeOut then
@@ -67,25 +69,6 @@ RegisterNetEvent('qb-bankrobbery:server:setTimeout', function(type, closestBank)
             bankStatus[type].timeOut = false
             bankStatus[type].robberyBusy = false
             TriggerClientEvent('qb-bankrobbery:client:ResetCurrentBank', src, type, closestBank)
-            if Config.Doorlocks == "qb" then
-                TriggerServerEvent('qb-doorlock:server:updateState', Config.DoorlockID1, true)
-                TriggerServerEvent('qb-doorlock:server:updateState', Config.DoorlockID2, true)
-                TriggerServerEvent('qb-doorlock:server:updateState', Config.DoorlockID3, true)
-                TriggerServerEvent('qb-doorlock:server:updateState', Config.DoorlockID4, true)
-                TriggerServerEvent('qb-doorlock:server:updateState', Config.DoorlockID5, true)
-                TriggerServerEvent('qb-doorlock:server:updateState', Config.DoorlockID6, true)
-                TriggerServerEvent('qb-doorlock:server:updateState', Config.DoorlockID7, true)
-                TriggerServerEvent('qb-doorlock:server:updateState', Config.DoorlockID8, true)
-            elseif Config.Doorlocks == "nui" or Config.Doorlocks == "NUI" then 
-                TriggerServerEvent('nui_doorlock:server:updateState', Config.DoorlockID1, true, false, false, true)
-                TriggerServerEvent('nui_doorlock:server:updateState', Config.DoorlockID2, true, false, false, true)
-                TriggerServerEvent('nui_doorlock:server:updateState', Config.DoorlockID3, true, false, false, true)
-                TriggerServerEvent('nui_doorlock:server:updateState', Config.DoorlockID4, true, false, false, true)
-                TriggerServerEvent('nui_doorlock:server:updateState', Config.DoorlockID5, true, false, false, true)
-                TriggerServerEvent('nui_doorlock:server:updateState', Config.DoorlockID6, true, false, false, true)
-                TriggerServerEvent('nui_doorlock:server:updateState', Config.DoorlockID7, true, false, false, true)
-                TriggerServerEvent('nui_doorlock:server:updateState', Config.DoorlockID8, true, false, false, true)
-            end
         end
     end
 end)
@@ -290,7 +273,7 @@ RegisterNetEvent('qb-bankrobbery:server:drillLoot', function(bank, pos, closestB
             local CardChance = math.random(1,100)
             if CardChance <= Config.Lockers["Fleeca"]["Card"] then
                 amount = Config.Lockers["Fleeca"]["CashAmount"]
-                Player.Functions.AddItem(doubleitem, amount, false)
+                Player.Functions.AddItem(cashitem, amount, false)
                 TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[cashitem], 'add')
                 TriggerEvent('qb-log:server:CreateLog', 'bankrobbery', 'Bank Robbery', 'green', '**Goldbars**:\n'..doubleitem..'\n**Person**:\n'..GetPlayerName(src))
             end
@@ -341,16 +324,19 @@ RegisterNetEvent('qb-bankrobbery:server:drillLoot', function(bank, pos, closestB
             TriggerEvent('qb-log:server:CreateLog', 'bankrobbery', 'Bank Robbery', 'green', '**Goldbars**:\n'..item..'\n**Person**:\n'..GetPlayerName(src))
 
             Wait(2000)
-            local DoubleLoot = math.random(1,100)
-            if DoubleLoot <= Config.Lockers["Paleto"]["Chance"] then
+            local UsbChance = math.random(1,100)
+            if UsbChance <= Config.Lockers["Paleto"]["Chance"] then
                 amount = Config.Lockers["Paleto"]["RareAmount"]
-                local Chance = math.random(1,2)
-                if Chance == 1 then 
-                    Player.Functions.AddItem(doubleitem, 1, false)
-                else
-                    Player.Functions.AddItem(cashitem, cashamount, false, info)
-                end
+                Player.Functions.AddItem(doubleitem, amount, false)
                 TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[doubleitem], 'add')
+                TriggerEvent('qb-log:server:CreateLog', 'bankrobbery', 'Bank Robbery', 'green', '**Goldbars**:\n'..doubleitem..'\n**Person**:\n'..GetPlayerName(src))
+            end
+            Wait(2000)
+            local CardChance = math.random(1,100)
+            if CardChance <= Config.Lockers["Paleto"]["Card"] then
+                amount = Config.Lockers["Paleto"]["CashAmount"]
+                Player.Functions.AddItem(cashitem, amount, false)
+                TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[cashitem], 'add')
                 TriggerEvent('qb-log:server:CreateLog', 'bankrobbery', 'Bank Robbery', 'green', '**Goldbars**:\n'..doubleitem..'\n**Person**:\n'..GetPlayerName(src))
             end
         else 
@@ -650,6 +636,22 @@ RegisterNetEvent('qb-bankrobbery:server:RemovePaletoDoorItem', function()
     local src = source
 	local Player = QBCore.Functions.GetPlayer(src)
     local item = Config.PaletoPacificDoor
+    Player.Functions.RemoveItem(item, 1, false)
+    TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[item], 'remove')
+end)
+
+RegisterNetEvent('qb-bankrobbery:server:RemovePaletoDoorCard', function()
+    local src = source
+	local Player = QBCore.Functions.GetPlayer(src)
+    local item = Config.PaletoDoorCard
+    Player.Functions.RemoveItem(item, 1, false)
+    TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[item], 'remove')
+end)
+
+RegisterNetEvent('qb-bankrobbery:server:RemovePacificDoorCard', function()
+    local src = source
+	local Player = QBCore.Functions.GetPlayer(src)
+    local item = Config.PacificDoorCardDoorCard
     Player.Functions.RemoveItem(item, 1, false)
     TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[item], 'remove')
 end)

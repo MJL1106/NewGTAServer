@@ -138,7 +138,6 @@ local function ResetCurrentBank(type, closestBank)
             Config.PaletoBank['trollys'][k]['loot'] = false
         end
 
-
     -- Pacfic
     
     elseif type == 'pacific' then

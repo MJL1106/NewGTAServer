@@ -3,9 +3,9 @@ Config = {}
 ----- ** TIMER CONFIG ** ----
 Config.BlackoutTimer = 15 -- How many minutes are the city blackedout when powerplant is hit?
 Config.BankTimer = {
-    fleeca = 1, -- Time in minutes for cooldown
-    paleto = 1, -- Time in minutes for cooldown
-    pacific = 1, -- Time in minutes for cooldown
+    fleeca = 45, -- Time in minutes for cooldown
+    paleto = 60, -- Time in minutes for cooldown
+    pacific = 1.5, -- Time in minutes for cooldown
 } 
 
 ---- ** BAG IDs ** ----
@@ -50,8 +50,8 @@ Config.PacificTrollyChance = 100 -- How many percent chance of getting a extra t
 Config.PacificGoldTrollyChance = 0 -- How many percent chance of that Fleeca Trolly to be gold
 
 Config.FleecaGoldChance = 100 -- What percent chance of getting a gold table in a fleeca?
-Config.PaletoGoldChance = 0 -- What percent chance of getting a gold table in a Paleto?
-Config.PacificGoldChance = 0 -- What percent chance of getting a gold table in a Pacific?
+Config.PaletoGoldChance = 100 -- What percent chance of getting a gold table in a Paleto?
+Config.PacificGoldChance = 100 -- What percent chance of getting a gold table in a Pacific?
 Config.lowerVaultGoldChance = 0 -- What percent chance of getting a gold table in the lowerVault?
 
 ---- ** HARD DRIVE CONFIG ** ---- 
@@ -63,14 +63,21 @@ Config.HardDriveChance = 50 -- Chance of getting a hard drive from one of the se
 Config.Doorlocks = "qb" -- Put 'nui' if you use NUI doorlocks
 
 -- All the doorlock IDs you need to put in if you don't know how to find them just ask for help on Discord
-Config.DoorlockID1 = 5 -- whats your ID for this door? vector3(-105.87, 6475.57, 31.63)
-Config.DoorlockID2 = 4 -- whats your ID for this door? vector3(v)
+Config.DoorlockID1 = 5 -- whats your ID for this door? vector3(-105.87, 6475.57, 31.63) --thermite door paleto
+Config.DoorlockID2 = 4 -- whats your ID for this door? vector3(-104.81, 6473.65, 31.95) --security card door paleto
 Config.DoorlockID3 = 6 -- whats your ID for this door? vector3(257.22, 220.42, 106.29)
 Config.DoorlockID4 = 1 -- whats your ID for this door? vesctor3(261.97, 221.53, 106.29)
 Config.DoorlockID5 = 2 -- whats your ID for this door? vector3(252.69, 220.79, 101.68)
 Config.DoorlockID6 = 3 -- whats your ID for this door? vector3(261.09, 215.04, 101.68)
-Config.DoorlockID7 = 212 -- Whats your ID for this door? vector3(255.37, 229.54, 101.7)
-Config.DoorlockID8 = 213 -- Whats your ID for this door? vector3(262.98, 258.38, 101.71)
+Config.DoorlockID7 = 212 -- Whats your ID for this door? vector3(255.37, 229.54, 101.7) -- lower vault
+Config.DoorlockID8 = 213 -- Whats your ID for this door? vector3(262.98, 258.38, 101.71) -- lower
+
+Config.BankDoors = {
+    fleeca = {},
+    paleto = {5,4},
+    pacific = {6,1,2,3},
+}
+
 
 -- THIS IS ONLY FOR THOSE WHO USE PALETO EXTENDED BY k4mb1
 Config.DoorlockID9 = "Computer Room" -- Whats the doorID for this room?  vector3(-99.02, 6462.16, 31.63)
@@ -78,14 +85,14 @@ Config.DoorlockID10 = "lowervault 1" -- Whats the doorID for this room? vector3(
 Config.DoorlockID11 = "lowervault main vault" -- Whats the doorID for this room? vector3(-102.02, 6459.52, 31.63)
 
 ---- ** FLEECA HACK CONFIG ** ----
-Config.FleecaTime = 7 -- How much time do they have to enter the hack?
+Config.FleecaTime = 10 -- How much time do they have to enter the hack?
 Config.FleecaBlocks = 4 -- How many different blocks can the hack have?
-Config.FleecaRepeat = 1 -- How many times in a row do they need to hack the system?
+Config.FleecaRepeat = 2 -- How many times in a row do they need to hack the system?
 
 ---- ** PALETO HACK CONFIG ** ----
-Config.PaletoTime = 8 -- How much time do they have to enter the hack?
-Config.PaletoBlocks = 4 -- How many different blocks can the hack have?
-Config.PaletoRepeat = 1 -- How many times in a row do they need to hack the system?
+Config.PaletoTime = 12 -- How much time do they have to enter the hack?
+Config.PaletoBlocks = 5 -- How many different blocks can the hack have?
+Config.PaletoRepeat = 3 -- How many times in a row do they need to hack the system?
 
 ---- ** PACIFIC HACK CONFIG ** ----
 Config.PacificTime = 10 -- How much time do they have to enter the hack?
@@ -112,23 +119,23 @@ Config.TimeToLose = 30 -- timetoLose = maximum time after timetoshow expires for
 
 ---- ** BILLS ITEM ** ----
 Config.BillsItem = "markedbills"
-Config.MarkedBillsWorthMin = 25000 -- Minimum worth of a bag
-Config.MarkedBillsWorthMax = 37500 -- Maximum worth of a bag
+Config.MarkedBillsWorthMin = 23000 -- Minimum worth of a bag
+Config.MarkedBillsWorthMax = 27000 -- Maximum worth of a bag
 -- NOTES --
 -- Everywhere you give Config.BillsItem (Default markedbills) will give the same amount that means, trays, tables and lockers will give this amount
 
 
 ---- ** FLEECA ** ----
 Config.FleecaBagsMin = 1 -- How many bags of Marked Bills can you MINIMUM get from a FLeeca Table?
-Config.FleecaBagsMax = 1 -- How many bags of Marked Bills can you MAXIMUM get from a FLeeca Table?
+Config.FleecaBagsMax = 2 -- How many bags of Marked Bills can you MAXIMUM get from a FLeeca Table?
 Config.FleecaGoldMin = 200 -- Minimum gold bars from Fleecas
 Config.FleecaGoldMax = 210 -- Maximum gold bars from Fleecas
 
 ---- ** PALETO ** ----
-Config.PaletoBagsMin = 3 -- How many bags of Marked Bills can you MINIMUM get from a Paleto Table?
-Config.PaletoBagsMax = 6 -- How many bags of Marked Bills can you MAXIMUM get from a Paleto Table?
-Config.PaletoGoldMin = 5 -- Minimum gold bars from Paleto
-Config.PaletoGoldMax = 8 -- Maximum gold bars from Paleto
+Config.PaletoBagsMin = 1-- How many bags of Marked Bills can you MINIMUM get from a Paleto Table?
+Config.PaletoBagsMax = 2 -- How many bags of Marked Bills can you MAXIMUM get from a Paleto Table?
+Config.PaletoGoldMin = 390 -- Minimum gold bars from Paleto
+Config.PaletoGoldMax = 410 -- Maximum gold bars from Paleto
 
 ---- ** PALETO SECOND ** ----
 Config.PaletoSecondMinBags = 6 -- How many bags of Marked Bills can you MINIMUM get from a Paleto Second Table
@@ -157,7 +164,7 @@ Config.Lockers = {
         ["items"] = {
             'rolex',
         },
-        ["ItemAmount"] = 17, -- sets total amount of items you get
+        ["ItemAmount"] = math.random(13,19), -- sets total amount of items you get
         ---- RARE ITEMS ----
         ["Chance"] = 50, -- CHANCE OF GETTING USB
 
@@ -175,21 +182,20 @@ Config.Lockers = {
         ---- NORMAL ITEMS ----
         ["items"] = {
             'rolex',
-            'phone',
-            'laptop_green',
         },
-        ["ItemAmount"] = math.random(1,5), -- Put minimum and Maximum amount of items inside the randomiser
+        ["ItemAmount"] = math.random(30,34), -- Put minimum and Maximum amount of items inside the randomiser
         ---- RARE ITEMS ----
-        ["Chance"] = 10, -- CHANCE OF GETTING RARE OR CASH ITEM
+        ["Chance"] = 30, -- CHANCE OF GETTING GETTING USB
 
         ["Rare"] = {
-            'goldbar',
+            'usb_red',
         },
-        ["RareAmount"] = math.random(1,5), -- Put minimum and Maximum amount of items inside the randomiser
+        ["RareAmount"] = 1, -- Put minimum and Maximum amount of items inside the randomiser
         ---- CASH ITEMS ----
 
-        ["Cash"] = 'markedbills',
-        ["CashAmount"] = math.random(1,5), -- Put minimum and Maximum amount of items inside the randomiser
+        ["Card"] = 15, -- CHANCE OF GETTING CARD
+        ["Cash"] = 'security_card_02',
+        ["CashAmount"] = 1, -- Put minimum and Maximum amount of items inside the randomiser
     },
     ["PaletoVault"] = { -- This is Paleto SECOND vault
         ---- NORMAL ITEMS ----
@@ -234,6 +240,8 @@ Config.Lockers = {
 ---- ITEMS NEEDED ---- (Rename these if you use different language or use different items)
 Config.LockerRequired = 'drill' -- Which items do someone need to open a deposit box?
 Config.PaletoPacificDoor = 'thermite' -- Which explosive is used to open paleto/pacific doors
+Config.PaletoDoorCard = 'security_card_01' -- What is used to open the first paleto door
+Config.PacificDoorCard = 'security_card_02' -- What is used to open the first paleto door
 Config.PowerplantRequired = 'thermite' -- Which item do someone need to blow up the powerplant?
 Config.LowerVaultDoors = "weapon_pipebomb" -- Which item is required before they can plant explosives on lowervault doors?
 
@@ -318,11 +326,11 @@ Config.Notify = { -- Don't change the ["Text"] only change the text on the RIGHT
     ["BagsOfInked"] = " bags of marked bills...",
     ["GoldBars"] = " Gold Bars",
     ["Diamonds"] = " Diamonds",
-    ["found"] = " You found",
+    ["found"] = "You found ",
 
     -- Drill Overheated
     ["DrillBroke"] = "The Drill overheated and broke!",
-    ["LockBroke"] = "The Drill overheated! You Messed up the lock...",
+    ["LockBroke"] = "The Drill overheated!",
 
     -- Lower vault code
     ["FirstCode"] = "The first code is ",
@@ -503,7 +511,7 @@ Config.FleecaBanks = {
 }
 
 Config.PaletoBank = {
-    ["coords"] = vector4(-106.0602, 6472.4204, 31.00846, 43.4977),  -- Coordinates of the Banks
+    ["coords"] = vector4(-105.72, 6470.59, 31.63, 140.82),  -- Coordinates of the Banks
     ["isOpened"] = false,
     ["object"] = -1185205679,
     ["heading"] = {
@@ -524,11 +532,13 @@ Config.PaletoBank = {
     ["trollys"] = { -- trollys points
         {coords = vector3(-107.6612, 6475.3379, 30.6267), heading = 226.7980, loot = false}, 
         {coords = vector3(-107.15, 6473.53, 30.63), heading = 315.0013, loot = false},
+        {coords = vector3(-104.82, 6478.64, 30.61), heading = 132.99, loot = false}, -- new trolley
     },
     ["thermite"] = { -- trollys points
         {coords = vector4(-105.8219, 6475.5615, 31.6267, 316.8870), anim = vector3(-105.5515, 6475.1553, 31.6267), effect = vector3(-105.5154, 6476.2031, 31.6267), isOpen = false},
     },
 }
+
 
 Config.PaletoSecond = {
     ["coords"] = vector4(-103.18, 6459.52, 30.63, 238.89),
@@ -655,3 +665,16 @@ Config.PowerPlant = {
         {coords = vector4(2835.2323, 1505.6520, 24.7287, 165.2132), open = false},
     },
 }
+
+--function to lock the doors
+function Config.DoorlockAction(type, setLocked)
+    if type == 'paleto' then
+        TriggerServerEvent('qb-doorlock:server:updateState',4, setLocked, false, false, true, false, false)
+        TriggerServerEvent('qb-doorlock:server:updateState',5, setLocked, false, false, true, false, false)
+    elseif type == 'pacific' then
+        TriggerServerEvent('qb-doorlock:server:updateState',1, setLocked, false, false, true, false, false)
+        TriggerServerEvent('qb-doorlock:server:updateState',2, setLocked, false, false, true, false, false)
+        TriggerServerEvent('qb-doorlock:server:updateState',3, setLocked, false, false, true, false, false)
+        TriggerServerEvent('qb-doorlock:server:updateState',6, setLocked, false, false, true, false, false)
+    end
+end
