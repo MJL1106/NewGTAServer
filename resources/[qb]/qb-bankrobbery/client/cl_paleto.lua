@@ -1,5 +1,4 @@
 CurrentCops = 0
-
 local function LaptopAnimationPaleto()
     local loc = {x,y,z,h}
     loc.x = Config.PaletoBank['coords'].x
@@ -72,7 +71,7 @@ RegisterNetEvent('qb-bankrobbery:paleto:thermitedoor', function()
                 if hasItem then
                     SetEntityHeading(ped, Config.PaletoBank['thermite'][k]['coords'].w)
                     TriggerServerEvent('qb-bankrobbery:server:RemovePaletoDoorItem')
-                    exports['memorygame']:thermiteminigame(Config.CorrectBlocks, Config.IncorrectBlocks, Config.TimeToShow, Config.TimeToLose,
+                    exports['memorygame']:thermiteminigame(8, 3, 4, 15,
                     function() -- success
                         QBCore.Functions.Notify(Config.Notify["PlacingThermite"], 'success', 4500)
                         local loc = Config.PaletoBank['thermite'][k]['anim']
@@ -91,8 +90,6 @@ RegisterNetEvent('qb-bankrobbery:paleto:thermitedoor', function()
                         AttachEntityToEntity(thermal_charge, ped, GetPedBoneIndex(ped, 28422), 0, 0, 0, 0, 0, 200.0, true, true, false, true, 1, true)
                         Wait(4000)
 
-                        TriggerServerEvent('QBCore:Server:RemoveItem', 'thermite', 1)
-                        TriggerEvent('inventory:client:ItemBox', QBCore.Shared.Items['thermite'], 'remove')
                     
                         DetachEntity(thermal_charge, 1, 1)
                         FreezeEntityPosition(thermal_charge, true)
@@ -187,6 +184,7 @@ RegisterNetEvent('qb-bankrobbery:UseBankLaptop', function(colour, laptopData)
 end)
 
 RegisterNetEvent('qb-bankrobbery:UsePaletoCard', function()
+    print("Using Card")
     local ped = PlayerPedId() 
     local pos = GetEntityCoords(ped)
     local dist = #(pos - vector3(Config.PaletoBank['coords'].x, Config.PaletoBank['coords'].y, Config.PaletoBank['coords'].z))
@@ -205,7 +203,7 @@ RegisterNetEvent('qb-bankrobbery:UsePaletoCard', function()
             }, {}, {}, function() -- Done
                 StopAnimTask(PlayerPedId(), 'anim@gangops@facility@servers@', 'hotwire', 1.0)
                 -- check uses
-                exports['memorygame']:thermiteminigame(Config.CorrectBlocks, Config.IncorrectBlocks, Config.TimeToShow, Config.TimeToLose,
+                exports['memorygame']:thermiteminigame(5, 3, 4, 30,
                 function() -- success
                     if Config.Doorlocks == "qb" then 
                         TriggerServerEvent('qb-doorlock:server:updateState', 4, false, false, false, true, false, false)
@@ -214,8 +212,7 @@ RegisterNetEvent('qb-bankrobbery:UsePaletoCard', function()
                     end
 
                     if Config.RemoveCard then 
-                        TriggerServerEvent("QBCore:Server:RemoveItem", "security_card_01", 1)
-                        TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["security_card_01"], "remove")
+                        TriggerServerEvent('qb-bankrobbery:server:RemovePaletoDoorCard')
                     end
                 end)
             end, function() -- Cancel
@@ -241,12 +238,12 @@ function OnHackDonePaleto(success)
         Wait(time/2)
         TriggerServerEvent('qb-bankrobbery:server:setBankState', true, 'paleto', 0)
         TriggerServerEvent('qb-robbery:server:succesHeist', 25)
-        TriggerServerEvent('qb-bankrobbery:server:setTimeout', 'paleto')
 
-        if Config.RemoveLaptop then 
-            TriggerServerEvent("QBCore:Server:RemoveItem", "laptop_blue", 1)
-            TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["laptop_blue"], "remove")
-        end
+
+        TriggerServerEvent('qb-bankrobbery:server:setTimeout', 'paleto')
+        Wait(Config.BankTimer['paleto'] * (60 * 1000))
+        print("LOCKING DOORS")
+        Config.DoorlockAction('paleto', true)
     end
 end
 
@@ -416,9 +413,12 @@ RegisterNetEvent('qb-bankrobbery:PaletoTray', function()
                 SetEntityRotation(newTrolly, 0, 0, GetEntityHeading(sceneObject), 1, 0)
                 DeleteObject(sceneObject)
                 DeleteObject(bag)
-                LocalPlayer.state:set('inv_busy', false, true) -- Not Busy
+                SetPedComponentVariation(ped, 5, Config.BagUseID, 0, 1)
                 TriggerServerEvent('qb-bankrobbery:server:GetTrolleyLoot', grabModel, 'paleto', pedCo)
+                LocalPlayer.state:set('inv_busy', false, true) -- Not Busy
             end
+        else
+            QBCore.Functions.Notify(Config.Notify['TrayAlreadyLooted'], 'error', 4500) 
         end
     end
 end)

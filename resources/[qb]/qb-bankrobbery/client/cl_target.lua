@@ -452,6 +452,58 @@ CreateThread(function()
   end
 end)
 
+-- Paleto Security Card Doors
+CreateThread(function() 
+  exports['qb-target']:AddBoxZone('SecurityCardReader'..math.random(1,100), vector3(-106.0602, 6472.4204, 31.00846), 1, 1, {
+    name = 'SecurityCardReader'..math.random(1,100),
+    heading = 46.78,
+    debugPoly = Config.debugPoly,
+    minZ = 30.80846,
+    maxZ = 32.20846,
+    }, {
+    options = {
+        {
+            type = 'client',
+            event = 'qb-bankrobbery:UsePaletoCard',
+            icon = 'fas fa-credit-card',
+            label = 'Use Bank Card',
+            item = 'security_card_01', 
+            job = all,
+        },
+    },
+    distance = 2.5
+  })
+end)
+
+-- Paleto Laptop Use
+CreateThread(function() 
+  exports['qb-target']:AddBoxZone('LaptopUse'..math.random(1,100), vector3(-106.38,6470,31.43), 1, 1, {
+    name = 'LaptopUse'..math.random(1,100),
+    heading = 132.94,
+    debugPoly = Config.debugPoly,
+    minZ = 30.80846,
+    maxZ = 32.20846,
+    }, {
+    options = {
+        {
+          type = "client",
+          action = function()
+              TriggerEvent('qb-bankrobbery:UseBankLaptop', 'blue', nil)
+          end,
+          icon = "fas fa-laptop-code",
+          label = "Use Hacking Laptop",
+          item = "laptop_blue", -- Assuming you require the player to have a specific laptop item
+          canInteract = function(entity)
+              return not Config.PaletoBank['isOpened']
+          end,
+          job = all,
+        },
+    },
+    distance = 2.5
+  })
+end)
+
+
 
 -- Pacific Thermite Doors
 CreateThread(function() 

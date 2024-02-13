@@ -4,8 +4,8 @@ Config = {}
 Config.BlackoutTimer = 15 -- How many minutes are the city blackedout when powerplant is hit?
 Config.BankTimer = {
     fleeca = 45, -- Time in minutes for cooldown
-    paleto = 0.7, -- Time in minutes for cooldown
-    pacific = 1, -- Time in minutes for cooldown
+    paleto = 60, -- Time in minutes for cooldown
+    pacific = 1.5, -- Time in minutes for cooldown
 } 
 
 ---- ** BAG IDs ** ----
@@ -63,8 +63,8 @@ Config.HardDriveChance = 50 -- Chance of getting a hard drive from one of the se
 Config.Doorlocks = "qb" -- Put 'nui' if you use NUI doorlocks
 
 -- All the doorlock IDs you need to put in if you don't know how to find them just ask for help on Discord
-Config.DoorlockID1 = 5 -- whats your ID for this door? vector3(-105.87, 6475.57, 31.63)
-Config.DoorlockID2 = 4 -- whats your ID for this door? vector3(-104.81, 6473.65, 31.95)
+Config.DoorlockID1 = 5 -- whats your ID for this door? vector3(-105.87, 6475.57, 31.63) --thermite door paleto
+Config.DoorlockID2 = 4 -- whats your ID for this door? vector3(-104.81, 6473.65, 31.95) --security card door paleto
 Config.DoorlockID3 = 6 -- whats your ID for this door? vector3(257.22, 220.42, 106.29)
 Config.DoorlockID4 = 1 -- whats your ID for this door? vesctor3(261.97, 221.53, 106.29)
 Config.DoorlockID5 = 2 -- whats your ID for this door? vector3(252.69, 220.79, 101.68)
@@ -78,6 +78,7 @@ Config.BankDoors = {
     pacific = {6,1,2,3},
 }
 
+
 -- THIS IS ONLY FOR THOSE WHO USE PALETO EXTENDED BY k4mb1
 Config.DoorlockID9 = "Computer Room" -- Whats the doorID for this room?  vector3(-99.02, 6462.16, 31.63)
 Config.DoorlockID10 = "lowervault 1" -- Whats the doorID for this room? vector3(-103.88, 6464.14, 31.63)
@@ -89,9 +90,9 @@ Config.FleecaBlocks = 4 -- How many different blocks can the hack have?
 Config.FleecaRepeat = 2 -- How many times in a row do they need to hack the system?
 
 ---- ** PALETO HACK CONFIG ** ----
-Config.PaletoTime = 8 -- How much time do they have to enter the hack?
-Config.PaletoBlocks = 4 -- How many different blocks can the hack have?
-Config.PaletoRepeat = 1 -- How many times in a row do they need to hack the system?
+Config.PaletoTime = 12 -- How much time do they have to enter the hack?
+Config.PaletoBlocks = 5 -- How many different blocks can the hack have?
+Config.PaletoRepeat = 3 -- How many times in a row do they need to hack the system?
 
 ---- ** PACIFIC HACK CONFIG ** ----
 Config.PacificTime = 10 -- How much time do they have to enter the hack?
@@ -239,6 +240,8 @@ Config.Lockers = {
 ---- ITEMS NEEDED ---- (Rename these if you use different language or use different items)
 Config.LockerRequired = 'drill' -- Which items do someone need to open a deposit box?
 Config.PaletoPacificDoor = 'thermite' -- Which explosive is used to open paleto/pacific doors
+Config.PaletoDoorCard = 'security_card_01' -- What is used to open the first paleto door
+Config.PacificDoorCard = 'security_card_02' -- What is used to open the first paleto door
 Config.PowerplantRequired = 'thermite' -- Which item do someone need to blow up the powerplant?
 Config.LowerVaultDoors = "weapon_pipebomb" -- Which item is required before they can plant explosives on lowervault doors?
 
@@ -327,7 +330,7 @@ Config.Notify = { -- Don't change the ["Text"] only change the text on the RIGHT
 
     -- Drill Overheated
     ["DrillBroke"] = "The Drill overheated and broke!",
-    ["LockBroke"] = "The Drill overheated! You Messed up the lock...",
+    ["LockBroke"] = "The Drill overheated!",
 
     -- Lower vault code
     ["FirstCode"] = "The first code is ",
@@ -508,7 +511,7 @@ Config.FleecaBanks = {
 }
 
 Config.PaletoBank = {
-    ["coords"] = vector4(-106.0602, 6472.4204, 31.00846, 43.4977),  -- Coordinates of the Banks
+    ["coords"] = vector4(-105.72, 6470.59, 31.63, 140.82),  -- Coordinates of the Banks
     ["isOpened"] = false,
     ["object"] = -1185205679,
     ["heading"] = {
@@ -535,6 +538,7 @@ Config.PaletoBank = {
         {coords = vector4(-105.8219, 6475.5615, 31.6267, 316.8870), anim = vector3(-105.5515, 6475.1553, 31.6267), effect = vector3(-105.5154, 6476.2031, 31.6267), isOpen = false},
     },
 }
+
 
 Config.PaletoSecond = {
     ["coords"] = vector4(-103.18, 6459.52, 30.63, 238.89),
@@ -661,3 +665,16 @@ Config.PowerPlant = {
         {coords = vector4(2835.2323, 1505.6520, 24.7287, 165.2132), open = false},
     },
 }
+
+--function to lock the doors
+function Config.DoorlockAction(type, setLocked)
+    if type == 'paleto' then
+        TriggerServerEvent('qb-doorlock:server:updateState',4, setLocked, false, false, true, false, false)
+        TriggerServerEvent('qb-doorlock:server:updateState',5, setLocked, false, false, true, false, false)
+    elseif type == 'pacific' then
+        TriggerServerEvent('qb-doorlock:server:updateState',1, setLocked, false, false, true, false, false)
+        TriggerServerEvent('qb-doorlock:server:updateState',2, setLocked, false, false, true, false, false)
+        TriggerServerEvent('qb-doorlock:server:updateState',3, setLocked, false, false, true, false, false)
+        TriggerServerEvent('qb-doorlock:server:updateState',6, setLocked, false, false, true, false, false)
+    end
+end

@@ -69,19 +69,6 @@ RegisterNetEvent('qb-bankrobbery:server:setTimeout', function(type, closestBank)
             bankStatus[type].timeOut = false
             bankStatus[type].robberyBusy = false
             TriggerClientEvent('qb-bankrobbery:client:ResetCurrentBank', src, type, closestBank)
-            if Config.Doorlocks == "qb" then
-                TriggerClientEvent('qb-doorlock:client:setState', -1, playerId, 5, true, src or false, false, false)
-                TriggerClientEvent('qb-doorlock:client:setState', -1, playerId, 4, true, src or false, false, false)
-            elseif Config.Doorlocks == "nui" or Config.Doorlocks == "NUI" then 
-                TriggerServerEvent('nui_doorlock:server:updateState', Config.DoorlockID1, true, false, false, true)
-                TriggerServerEvent('nui_doorlock:server:updateState', Config.DoorlockID2, true, false, false, true)
-                TriggerServerEvent('nui_doorlock:server:updateState', Config.DoorlockID3, true, false, false, true)
-                TriggerServerEvent('nui_doorlock:server:updateState', Config.DoorlockID4, true, false, false, true)
-                TriggerServerEvent('nui_doorlock:server:updateState', Config.DoorlockID5, true, false, false, true)
-                TriggerServerEvent('nui_doorlock:server:updateState', Config.DoorlockID6, true, false, false, true)
-                TriggerServerEvent('nui_doorlock:server:updateState', Config.DoorlockID7, true, false, false, true)
-                TriggerServerEvent('nui_doorlock:server:updateState', Config.DoorlockID8, true, false, false, true)
-            end
         end
     end
 end)
@@ -649,6 +636,22 @@ RegisterNetEvent('qb-bankrobbery:server:RemovePaletoDoorItem', function()
     local src = source
 	local Player = QBCore.Functions.GetPlayer(src)
     local item = Config.PaletoPacificDoor
+    Player.Functions.RemoveItem(item, 1, false)
+    TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[item], 'remove')
+end)
+
+RegisterNetEvent('qb-bankrobbery:server:RemovePaletoDoorCard', function()
+    local src = source
+	local Player = QBCore.Functions.GetPlayer(src)
+    local item = Config.PaletoDoorCard
+    Player.Functions.RemoveItem(item, 1, false)
+    TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[item], 'remove')
+end)
+
+RegisterNetEvent('qb-bankrobbery:server:RemovePacificDoorCard', function()
+    local src = source
+	local Player = QBCore.Functions.GetPlayer(src)
+    local item = Config.PacificDoorCardDoorCard
     Player.Functions.RemoveItem(item, 1, false)
     TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[item], 'remove')
 end)
