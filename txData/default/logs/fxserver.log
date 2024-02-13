@@ -48,3 +48,698 @@
 [38;5;73m[ citizen-server-impl] server thread hitch warning: timer interval of 158 milliseconds
 [ citizen-server-impl] sync thread hitch warning: timer interval of 112 milliseconds
 [ citizen-server-main] -> Quitting: SIGHUP received
+
+================================================================
+======== FXServer Starting - 2/13/2024, 4:50:10 AM              
+================================================================
+[           resources] Scanning resources.
+[ citizen-server-impl] network thread hitch warning: timer interval of 172 milliseconds
+[ citizen-server-impl] network thread hitch warning: timer interval of 170 milliseconds
+[ citizen-server-impl] network thread hitch warning: timer interval of 233 milliseconds
+[resources:subaruwrxs] Warning: subaruwrxsti08 has an outdated manifest (__resource.lua instead of fxmanifest.lua)
+[           resources] Found 174 resources.
+[           resources] 1 warning was encountered.
+[          svadhesive] Authenticating server license key...
+[ citizen-server-impl] network thread hitch warning: timer interval of 236 milliseconds
+[38;5;66m[          svadhesive] Server license key authentication succeeded. Welcome!
+[    c-scripting-core] Creating script environments for sessionmanager
+[ citizen-server-impl] network thread hitch warning: timer interval of 169 milliseconds
+[38;5;83m[           resources] Started resource sessionmanager
+[    c-scripting-core] Creating script environments for monitor
+[      script:monitor] [txAdmin] Resource v6.0.2 threads and commands set up. All Ready.
+[           resources] Started resource monitor
+[    c-scripting-core] Creating script environments for mapmanager
+[           resources] Started resource mapmanager
+[    c-scripting-core] Creating script environments for PolyZone
+[           resources] [97mStarted resource PolyZone
+[    c-scripting-core] Creating script environments for chat
+[           resources] Started resource chat
+[           resources] Started resource spawnmanager
+[38;5;154m[   script:mapmanager] Started gametype Freeroam
+[           resources] Started resource basic-gamemode
+[    c-scripting-core] Creating script environments for hardcap
+[38;5;83m[           resources] Started resource hardcap
+[    c-scripting-core] Creating script environments for baseevents
+[           resources] Started resource baseevents
+[    c-scripting-core] Creating script environments for oxmysql
+[           resources] Started resource oxmysql
+[    c-scripting-core] Creating script environments for qb-core
+[           resources] [97mStarted resource qb-core
+[    c-scripting-core] Creating script environments for ox_lib
+[           resources] Started resource ox_lib
+[    c-scripting-core] Creating script environments for illenium-appearance
+[           resources] Started resource illenium-appearance
+[           resources] Started resource hacking
+[           resources] Started resource memorygame
+[    c-scripting-core] Creating script environments for osm-valet
+[           resources] Started resource osm-valet
+[    c-scripting-core] Creating script environments for ps-camera
+[           resources] Started resource ps-camera
+[    c-scripting-core] Creating script environments for ps-dispatch
+[           resources] Started resource ps-dispatch
+[    c-scripting-core] Creating script environments for ps-drugprocessing
+[           resources] Started resource ps-drugprocessing
+[    c-scripting-core] Creating script environments for ps-mdt
+[           resources] Started resource ps-mdt
+[           resources] Started resource ps-ui
+[    c-scripting-core] Creating script environments for qb-UwUCafe
+[           resources] Started resource qb-UwUCafe
+[38;5;83m[           resources] Started resource menuv
+[    c-scripting-core] Creating script environments for qb-adminmenu
+[           resources] Started resource qb-adminmenu
+[    c-scripting-core] Creating script environments for qb-ambulancejob
+[           resources] Started resource qb-ambulancejob
+[    c-scripting-core] Creating script environments for qb-anticheat
+[           resources] Started resource qb-anticheat
+[resources:qb-interio] Warning: could not find file `starter_shells_k4mb1.ytyp` (defined in fxmanifest.lua:14)
+[           resources] Started resource qb-interior (1 warning)
+[    c-scripting-core] Creating script environments for qb-weathersync
+[           resources] Started resource qb-weathersync
+[    c-scripting-core] Creating script environments for qb-apartments
+[38;5;45m[resources:qb-apartme] Warning: could not find client_script `client/gui.lua` (defined in fxmanifest.lua:19)
+[38;5;83m[           resources] Started resource qb-apartments (1 warning)
+[    c-scripting-core] Creating script environments for qb-atms
+[   resources:qb-atms] Warning: could not find file `nui/images/logo.png` (defined in fxmanifest.lua:18)
+[           resources] Started resource qb-atms (1 warning)
+[38;5;161m[    c-scripting-core] Creating script environments for qb-banking
+[38;5;83m[           resources] Started resource qb-banking
+[38;5;161m[    c-scripting-core] Creating script environments for qb-bankrobbery
+[           resources] Started resource qb-bankrobbery
+[           resources] Started resource qb-menu
+[    c-scripting-core] Creating script environments for ox_target
+[38;5;83m[           resources] Started resource ox_target
+[    c-scripting-core] Creating script environments for qb-blackmarket
+[38;5;83m[           resources] Started resource qb-blackmarket
+[38;5;161m[    c-scripting-core] Creating script environments for qb-busjob
+[38;5;83m[           resources] Started resource qb-busjob
+[    c-scripting-core] Creating script environments for qb-car-music
+[           resources] Started resource qb-car-music
+[    c-scripting-core] Creating script environments for qb-chopshop
+[           resources] [0mStarted resource qb-chopshop
+[    c-scripting-core] Creating script environments for qb-cityhall
+[           resources] Started resource qb-cityhall
+[    c-scripting-core] Creating script environments for qb-community-service
+[           resources] Started resource qb-community-service
+[    c-scripting-core] [0mCreating script environments for qb-craftingbox
+[           resources] Started resource qb-craftingbox
+[    c-scripting-core] Creating script environments for qb-customs
+[           resources] Started resource qb-customs
+[    c-scripting-core] Creating script environments for qb-diving
+[           resources] Started resource qb-diving
+[    c-scripting-core] Creating script environments for qb-doorlock
+[38;5;83m[           resources] Started resource qb-doorlock
+[    c-scripting-core] Creating script environments for qb-drugs
+[           resources] Started resource qb-drugs
+[    c-scripting-core] Creating script environments for qb-farmingsimulator
+[           resources] Started resource qb-farmingsimulator
+[    c-scripting-core] Creating script environments for qb-fishing
+[           resources] Started resource qb-fishing
+[    c-scripting-core] [0mCreating script environments for qb-fitbit
+[           resources] Started resource qb-fitbit
+[    c-scripting-core] Creating script environments for qb-garages
+[38;5;83m[           resources] Started resource qb-garages
+[    c-scripting-core] Creating script environments for qb-garbagejob
+[           resources] Started resource qb-garbagejob
+[           resources] Started resource qb-lockpick
+[resources:qb-skillba] Warning: could not find file `html/VerdanaBold.ttf` (defined in fxmanifest.lua:11)
+[           resources] Started resource qb-skillbar (1 warning)
+[    c-scripting-core] Creating script environments for qb-houserobbery
+[           resources] Started resource qb-houserobbery
+[    c-scripting-core] Creating script environments for qb-houses
+[           resources] Started resource qb-houses
+[    c-scripting-core] Creating script environments for qb-hud
+[           resources] Started resource qb-hud
+[    c-scripting-core] Creating script environments for qb-hunting
+[           resources] Started resource qb-hunting
+[           resources] Started resource qb-input
+[    c-scripting-core] Creating script environments for qb-weapons
+[resources:qb-weapons] Warning: could not find file `weaponsnspistol.meta` (defined in fxmanifest.lua:16)
+[           resources] Started resource qb-weapons (1 warning)
+[    c-scripting-core] Creating script environments for qb-inventory
+[ citizen-server-impl] network thread hitch warning: timer interval of 178 milliseconds
+[           resources] Started resource qb-inventory
+[    c-scripting-core] [0mCreating script environments for qb-jewelery
+[           resources] Started resource qb-jewelery
+[           resources] Started resource qb-keyminigame
+[    c-scripting-core] Creating script environments for qb-loading
+[38;5;83m[           resources] Started resource qb-loading
+[38;5;83m[           resources] Started resource qb-lock
+[    c-scripting-core] Creating script environments for qb-management
+[38;5;83m[           resources] Started resource qb-management
+[    c-scripting-core] Creating script environments for qb-mechanicjob
+[           resources] Started resource qb-mechanicjob
+[    c-scripting-core] Creating script environments for qb-moneywash
+[38;5;83m[           resources] Started resource qb-moneywash
+[    c-scripting-core] Creating script environments for qb-spawn
+[           resources] Started resource qb-spawn
+[    c-scripting-core] Creating script environments for qb-multicharacter
+[           resources] Started resource qb-multicharacter
+[    c-scripting-core] [0mCreating script environments for qb-newsjob
+[           resources] Started resource qb-newsjob
+[    c-scripting-core] Creating script environments for qb-oxyruns
+[           resources] Started resource qb-oxyruns
+[    c-scripting-core] Creating script environments for qb-pawnshop
+[38;5;83m[           resources] Started resource qb-pawnshop
+[    c-scripting-core] Creating script environments for qb-phone
+[38;5;172m[     script:qb-phone] cfx.reMonitor QB-Phone v1 - Script Made By- OtakuSensei
+[38;5;83m[           resources] Started resource qb-phone
+[38;5;161m[    c-scripting-core] Creating script environments for qb-policejob
+[           resources] Started resource qb-policejob
+[    c-scripting-core] Creating script environments for qb-prison
+[           resources] Started resource qb-prison
+[    c-scripting-core] Creating script environments for qb-radialmenu
+[           resources] Started resource qb-radialmenu
+[    c-scripting-core] Creating script environments for qb-scoreboard
+[           resources] Started resource qb-scoreboard
+[    c-scripting-core] Creating script environments for qb-shops
+[  resources:qb-shops] Warning: could not find file `json/shoqb-inventory.json` (defined in fxmanifest.lua:22)
+[           resources] Started resource qb-shops (1 warning)
+[    c-scripting-core] Creating script environments for qb-smallresources
+[resources:qb-smallre] Warning: could not find file `events.meta` (defined in fxmanifest.lua:23)
+[           resources] Started resource qb-smallresources (1 warning)
+[    c-scripting-core] Creating script environments for qb-storerobbery
+[38;5;83m[           resources] Started resource qb-storerobbery
+[    c-scripting-core] Creating script environments for qb-streetraces
+[           resources] Started resource qb-streetraces
+[    c-scripting-core] Creating script environments for qb-taxijob
+[           resources] [0mStarted resource qb-taxijob
+[    c-scripting-core] Creating script environments for qb-towjob
+[           resources] Started resource qb-towjob
+[    c-scripting-core] Creating script environments for qb-truckerjob
+[38;5;83m[           resources] Started resource qb-truckerjob
+[    c-scripting-core] Creating script environments for qb-truckrobbery
+[           resources] Started resource qb-truckrobbery
+[    c-scripting-core] Creating script environments for qb-tunerchip
+[           resources] Started resource qb-tunerchip
+[    c-scripting-core] Creating script environments for qb-vehiclefailure
+[38;5;83m[           resources] Started resource qb-vehiclefailure
+[    c-scripting-core] Creating script environments for qb-vehiclekeys
+[           resources] Started resource qb-vehiclekeys
+[    c-scripting-core] Creating script environments for qb-vehicleshop
+[           resources] Started resource qb-vehicleshop
+[    c-scripting-core] Creating script environments for LegacyFuel
+[           resources] Started resource LegacyFuel
+[   resources:MenuAPI] Warning: could not find file `html/css/img/*.png` (defined in fxmanifest.lua:11)
+[           resources] Started resource MenuAPI (1 warning)
+[38;5;83m[           resources] Started resource bob74_ipl
+[    c-scripting-core] Creating script environments for bowling
+[38;5;83m[           resources] Started resource bowling
+[    c-scripting-core] Creating script environments for connectqueue
+[ script:connectqueue] QUEUE:  [connectqueue] Disabling hardcap 
+[           resources] Stopping resource hardcap
+[38;5;83m[           resources] Started resource connectqueue
+[    c-scripting-core] Creating script environments for d3-arcade
+[ resources:d3-arcade] Warning: could not find client_script `client/threads.lua` (defined in fxmanifest.lua:9)
+[ resources:d3-arcade] Warning: could not find file `html/css/img/table.png` (defined in fxmanifest.lua:28)
+[           resources] Started resource d3-arcade (2 warnings)
+[    c-scripting-core] [0mCreating script environments for interact-sound
+[38;5;83m[           resources] Started resource interact-sound
+[           resources] Started resource mhacking
+[           resources] Started resource mystic-vehiclemenu
+[    c-scripting-core] Creating script environments for poledance
+[           resources] Started resource poledance
+[38;5;161m[    c-scripting-core] Creating script environments for policeK9
+[  resources:policeK9] Warning: could not find file `html/sounds/*.ogg` (defined in fxmanifest.lua:30)
+[           resources] Started resource policeK9 (1 warning)
+[    c-scripting-core] Creating script environments for policebadge
+[           resources] Started resource policebadge
+[38;5;83m[           resources] Started resource progressbar
+[    c-scripting-core] Creating script environments for ptelevision
+[38;5;83m[           resources] Started resource ptelevision
+[    c-scripting-core] Creating script environments for rcore_billards
+[resources:rcore_bill] [0mWarning: could not find server_script `server/code.lua` (defined in fxmanifest.lua:13)
+[           resources] Started resource rcore_billards (1 warning)
+[    c-scripting-core] Creating script environments for rpemotes
+[     script:rpemotes] RpEmotes by TayMcKenzieNZ, Mathu_lmn & MadsL loaded sucessfully.
+[     script:rpemotes] [0m[rp] Sql Keybinding is turned off, if you want to enable /emotebind, set SqlKeybinding = true in config.lua and uncomment oxmysql lines in fxmanifest.lua.
+[  resources:rpemotes] [0mWarning: could not find file `propsets.meta` (defined in fxmanifest.lua:26)
+[  resources:rpemotes] Warning: could not find file `conditionalanims.meta` (defined in fxmanifest.lua:26)
+[           resources] Started resource rpemotes (2 warnings)
+[38;5;83m[           resources] Started resource safecracker
+[    c-scripting-core] Creating script environments for yarn
+[           resources] Started resource yarn
+[    c-scripting-core] Creating script environments for webpack
+[           resources] Started resource webpack
+[    c-scripting-core] Creating script environments for screenshot-basic
+[ citizen-server-impl] sync thread hitch warning: timer interval of 114 milliseconds
+[           resources] [0mStarted resource screenshot-basic
+[           resources] [0mStarted resource warmenu
+[    c-scripting-core] Creating script environments for wk_wars2x
+[38;5;83m[           resources] Started resource wk_wars2x
+[38;5;161m[    c-scripting-core] Creating script environments for x-radiolist
+[           resources] Started resource x-radiolist
+[    c-scripting-core] Creating script environments for xsound
+[           resources] Started resource xsound
+[    c-scripting-core] Creating script environments for pma-voice
+[           resources] Started resource pma-voice
+[    c-scripting-core] Creating script environments for qb-radio
+[  resources:qb-radio] Warning: could not find client_script `animation.lua` (defined in fxmanifest.lua:9)
+[38;5;174m[  resources:qb-radio] Warning: could not find file `html/img/cursor.png` (defined in fxmanifest.lua:18)
+[           resources] Started resource qb-radio (2 warnings)
+[    c-scripting-core] Creating script environments for jim-djbooth
+[  script:jim-djbooth] Jim-DJBooth v1.3.2 by Jimathy
+[           resources] Started resource jim-djbooth
+[    c-scripting-core] [0mCreating script environments for jim-mechanic
+[ script:jim-mechanic] Jim-Mechanic v[94m2.9.8SpamFix - Mechanic Script by Jimathy
+[resources:jim-mechan] Warning: could not find file `stream/carcols_gen9.meta` (defined in fxmanifest.lua:14)
+[resources:jim-mechan] Warning: could not find file `stream/carmodcols_gen9.meta` (defined in fxmanifest.lua:14)
+[           resources] Started resource jim-mechanic (2 warnings)
+[38;5;161m[    c-scripting-core] Creating script environments for jim-mining
+[   script:jim-mining] Jim-Mining v2.4.2 - Mining Script by Jimathy
+[           resources] Started resource jim-mining
+[    c-scripting-core] Creating script environments for jim-recycle
+[  script:jim-recycle] Jim-Recycle v2.7.2 - Recycling Script by Jimathy
+[           resources] Started resource jim-recycle
+[resources:asset_map:] [0mAsset asset_map/denis3d_catcafe_txd.ytd uses 23.0 MiB of physical memory.
+[resources:asset_map:] Asset asset_map/desertos_prison.ytd uses 30.5 MiB of physical memory.
+[resources:asset_map:] Asset asset_map/divinity_statue.ydr uses 32.0 MiB of physical memory.
+[resources:asset_map:] Asset asset_map/gabz_pillbox_textures_01.ytd uses 22.5 MiB of physical memory.
+[resources:asset_map:] Asset asset_map/globalroads.ytd uses 24.9 MiB of physical memory.
+[resources:asset_map:] Asset asset_map/jud_txt_q.ytd uses 20.4 MiB of physical memory.
+[resources:asset_map:] Asset asset_map/patoche_billard_det17.ydr uses 18.0 MiB of physical memory.
+[resources:asset_map:] Asset asset_map/uniqx_burgershot_tex.ytd uses 22.0 MiB of physical memory.
+[resources:asset_map:] Asset asset_map/w_ar_assaultrifle+hi.ytd uses 19.0 MiB of physical memory.
+[resources:asset_map:] Asset asset_map/w_ar_assaultrifle.ytd uses 19.0 MiB of physical memory.
+[resources:asset_map:] Asset asset_map/w_ar_carbinerifle.ytd uses 21.0 MiB of physical memory.
+[resources:asset_map:] Asset asset_map/w_ar_carbinerifle_hi.ytd uses 21.0 MiB of physical memory.
+[resources:asset_map:] Asset asset_map/w_ar_carbineriflemk2.ydr uses 32.0 MiB of physical memory.
+[resources:asset_map:] Asset asset_map/w_ar_carbineriflemk2.ytd uses 32.0 MiB of physical memory.
+[resources:asset_map:] Asset asset_map/w_ar_carbineriflemk2_hi.ydr uses 32.0 MiB of physical memory.
+[resources:asset_map:] Asset asset_map/w_ar_carbineriflemk2_mag1.ydr uses 32.0 MiB of physical memory.
+[resources:asset_map:] Asset asset_map/w_ar_carbineriflemk2_mag1.ytd uses 32.0 MiB of physical memory.
+[resources:asset_map:] Asset asset_map/w_ar_carbineriflemk2_mag2.ydr uses 32.0 MiB of physical memory.
+[resources:asset_map:] Asset asset_map/w_ar_carbineriflemk2_mag2.ytd uses 32.0 MiB of physical memory.
+[resources:asset_map:] Asset asset_map/w_pi_pistolmk2.ytd uses 34.5 MiB of physical memory.
+[           resources] Started resource asset_map (20 warnings)
+[38;5;83m[           resources] Started resource laundry
+[  resources:Cadillac] Warning: could not find file `vehiclelayouts.meta` (defined in __resource.lua:3)
+[resources:Cadillac:s] Asset Cadillac/xlrv.ytd uses 17.5 MiB of physical memory.
+[           resources] Started resource Cadillac (2 warnings)
+[resources:Camaro%20H] Warning: could not find file `vehiclelayouts.meta` (defined in __resource.lua:3)
+[resources:Camaro%20H] Asset Camaro%20Henn/exor.ytd uses 69.5 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).
+[resources:Camaro%20H] Asset Camaro%20Henn/w_me_nightstick.ytd uses 32.0 MiB of physical memory.
+[           resources] Started resource Camaro%20Henn (3 warnings)
+[     resources:Demon] Warning: could not find client_script `vehicle_names.lua` (defined in __resource.lua:17)
+[     resources:Demon] Warning: could not find file `vehiclelayouts.meta` (defined in __resource.lua:3)
+[resources:Demon:stre] Asset Demon/demon.ytd uses 20.2 MiB of physical memory.
+[           resources] Started resource Demon (3 warnings)
+[        resources:M2] Warning: could not find file `vehiclelayouts.meta` (defined in __resource.lua:3)
+[ resources:M2:stream] Asset M2/m2.yft uses 18.8 MiB of virtual memory.
+[ resources:M2:stream] Asset M2/m2.ytd uses 130.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).
+[ resources:M2:stream] Asset M2/m2_hi.yft uses 18.8 MiB of virtual memory.
+[           resources] Started resource M2 (4 warnings)
+[38;5;162m[        resources:M3] Warning: could not find file `vehiclelayouts.meta` (defined in __resource.lua:3)
+[ resources:M3:stream] Asset M3/bmwm3e92.yft uses 32.1 MiB of virtual memory.
+[ resources:M3:stream] Asset M3/bmwm3e92.ytd uses 110.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).
+[ resources:M3:stream] Asset M3/m3e92gts.yft uses 30.5 MiB of virtual memory.
+[           resources] Started resource M3 (4 warnings)
+[     resources:M3f80] [93mWarning: could not find file `vehiclelayouts.meta` (defined in __resource.lua:3)
+[resources:M3f80:stre] Asset M3f80/m3f80.yft uses 31.8 MiB of virtual memory.
+[resources:M3f80:stre] Asset M3f80/m3f80.ytd uses 128.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).
+[resources:M3f80:stre] Asset M3f80/m3f80_hi.yft uses 31.8 MiB of virtual memory.
+[           resources] Started resource M3f80 (4 warnings)
+[   resources:Mustang] Warning: could not find file `vehiclelayouts.meta` (defined in __resource.lua:3)
+[resources:Mustang:st] Asset Mustang/mustang19.ytd uses 123.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).
+[resources:Mustang:st] Asset Mustang/wheel_m19_2.ydr uses 20.0 MiB of physical memory.
+[resources:Mustang:st] Asset Mustang/wheel_m19_3.ydr uses 20.0 MiB of physical memory.
+[resources:Mustang:st] Asset Mustang/wheel_m19_5.ydr uses 18.0 MiB of physical memory.
+[resources:Mustang:st] Asset Mustang/wheel_m19_6.ydr uses 18.0 MiB of physical memory.
+[           resources] Started resource Mustang (6 warnings)
+[resources:Nissan%201] Asset Nissan%20180SX/180sx.yft uses 27.2 MiB of virtual memory.
+[resources:Nissan%201] Asset Nissan%20180SX/180sx.ytd uses 95.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).
+[resources:Nissan%201] Asset Nissan%20180SX/180sx_hi.yft uses 27.2 MiB of virtual memory.
+[           resources] Started resource Nissan%20180SX (3 warnings)
+[           resources] Started resource Pd2
+[resources:Wraith:str] Asset Wraith/wraith.yft uses 17.8 MiB of virtual memory.
+[resources:Wraith:str] Asset Wraith/wraith.ytd uses 59.2 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).
+[resources:Wraith:str] Asset Wraith/wraith_hi.yft uses 17.8 MiB of virtual memory.
+[           resources] Started resource Wraith (3 warnings)
+[resources:c300:strea] [0mAsset c300/300srt8.ytd uses 32.0 MiB of physical memory.
+[           resources] Started resource c300 (1 warning)
+[ citizen-server-impl] sync thread hitch warning: timer interval of 107 milliseconds
+[   resources:carpack] Warning: could not find file `cars/**/contentunlocks.meta` (defined in fxmanifest.lua:4)
+[   resources:carpack] Warning: could not find file `cars/**/clips_sets.xml` (defined in fxmanifest.lua:4)
+[   resources:carpack] Warning: could not find file `cars/**/shop_vehicle.meta` (defined in fxmanifest.lua:4)
+[resources:carpack:st] Asset carpack/1200rtems.yft uses 19.5 MiB of virtual memory.
+[resources:carpack:st] Asset carpack/1200rtems.ytd uses 37.0 MiB of physical memory.
+[resources:carpack:st] Asset carpack/18performante.yft uses 22.5 MiB of virtual memory.
+[resources:carpack:st] Asset carpack/18performante.ytd uses 70.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).
+[resources:carpack:st] Asset carpack/Char.yft uses 25.2 MiB of virtual memory.
+[resources:carpack:st] Asset carpack/Char.ytd uses 222.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).
+[resources:carpack:st] Asset carpack/Char_hi.yft uses 25.2 MiB of virtual memory.
+[resources:carpack:st] Asset carpack/Explorer.yft uses 17.1 MiB of virtual memory.
+[resources:carpack:st] Asset carpack/Explorer.ytd uses 98.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).
+[resources:carpack:st] Asset carpack/Explorer_hi.yft uses 17.1 MiB of virtual memory.
+[resources:carpack:st] Asset carpack/HBLS1000RR.yft uses 29.8 MiB of virtual memory.
+[resources:carpack:st] Asset carpack/HBLS1000RR.ytd uses 104.5 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).
+[resources:carpack:st] Asset carpack/HBLS1000RR_hi.yft uses 29.8 MiB of virtual memory.
+[resources:carpack:st] Asset carpack/HBLV4SL.yft uses 31.7 MiB of virtual memory.
+[resources:carpack:st] Asset carpack/HBLV4SL.ytd uses 44.5 MiB of physical memory.
+[resources:carpack:st] Asset carpack/HBLV4SL_hi.yft uses 31.7 MiB of virtual memory.
+[resources:carpack:st] Asset carpack/chargfire.yft uses 17.8 MiB of virtual memory.
+[resources:carpack:st] Asset carpack/chargfire.ytd uses 109.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).
+[resources:carpack:st] Asset carpack/chargfire_hi.yft uses 17.8 MiB of virtual memory.
+[resources:carpack:st] Asset carpack/chr.ytd uses 40.0 MiB of physical memory.
+[resources:carpack:st] Asset carpack/emsnspeedo.ytd uses 32.0 MiB of physical memory.
+[resources:carpack:st] Asset carpack/fd2020m.ytd uses 180.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).
+[resources:carpack:st] Asset carpack/g500.ytd uses 20.0 MiB of physical memory.
+[resources:carpack:st] Asset carpack/g63amg6x6.yft uses 22.0 MiB of virtual memory.
+[resources:carpack:st] Asset carpack/g63amg6x6.ytd uses 40.5 MiB of physical memory.
+[resources:carpack:st] Asset carpack/g63amg6x6_hi.yft uses 22.0 MiB of virtual memory.
+[resources:carpack:st] Asset carpack/gsxr.ytd uses 24.0 MiB of physical memory.
+[resources:carpack:st] Asset carpack/jes.ytd uses 154.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).
+[resources:carpack:st] Asset carpack/lwgtr.ytd uses 172.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).
+[resources:carpack:st] Asset carpack/mach1rb.yft uses 25.2 MiB of virtual memory.
+[resources:carpack:st] Asset carpack/mach1rb.ytd uses 30.0 MiB of physical memory.
+[resources:carpack:st] Asset carpack/mach1rb_hi.yft uses 25.2 MiB of virtual memory.
+[resources:carpack:st] Asset carpack/mbu1rb.ytd uses 92.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).
+[resources:carpack:st] Asset carpack/mbu2rb.yft uses 23.4 MiB of virtual memory.
+[resources:carpack:st] Asset carpack/mbu2rb.ytd uses 74.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).
+[resources:carpack:st] Asset carpack/p1gtr.ytd uses 72.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).
+[resources:carpack:st] Asset carpack/pd1.yft uses 29.5 MiB of virtual memory.
+[resources:carpack:st] Asset carpack/pd1.ytd uses 156.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).
+[resources:carpack:st] Asset carpack/poldemonrb.yft uses 19.2 MiB of virtual memory.
+[resources:carpack:st] Asset carpack/poldemonrb_hi.yft uses 19.2 MiB of virtual memory.
+[resources:carpack:st] Asset carpack/rmodgt63.yft uses 18.5 MiB of virtual memory.
+[resources:carpack:st] Asset carpack/rmodlp750.ytd uses 17.5 MiB of physical memory.
+[resources:carpack:st] Asset carpack/rmodskyline34.yft uses 19.8 MiB of virtual memory.
+[resources:carpack:st] Asset carpack/rmodskyline34.ytd uses 44.0 MiB of physical memory.
+[resources:carpack:st] Asset carpack/rmodskyline34_hi.yft uses 18.9 MiB of virtual memory.
+[resources:carpack:st] Asset carpack/rr70bosswidepd.yft uses 32.5 MiB of virtual memory.
+[resources:carpack:st] Asset carpack/rr70bosswidepd.ytd uses 20.5 MiB of physical memory.
+[resources:carpack:st] Asset carpack/rr70bosswidepd1.ytd uses 16.5 MiB of physical memory.
+[resources:carpack:st] Asset carpack/rr70bosswidepd2.ytd uses 18.0 MiB of physical memory.
+[resources:carpack:st] Asset carpack/rr70bosswidepd_hi.yft uses 32.5 MiB of virtual memory.
+[resources:carpack:st] Asset carpack/sprinter1+hi.ytd uses 72.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).
+[resources:carpack:st] Asset carpack/sprinter1.yft uses 20.5 MiB of virtual memory.
+[resources:carpack:st] Asset carpack/sprinter1.ytd uses 202.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).
+[resources:carpack:st] Asset carpack/sprinter1_hi.yft uses 20.5 MiB of virtual memory.
+[resources:carpack:st] Asset carpack/sprinter2.yft uses 18.5 MiB of virtual memory.
+[resources:carpack:st] Asset carpack/sprinter2.ytd uses 218.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).
+[resources:carpack:st] Asset carpack/sprinter2_hi.yft uses 18.5 MiB of virtual memory.
+[resources:carpack:st] Asset carpack/svr16.yft uses 29.9 MiB of virtual memory.
+[resources:carpack:st] Asset carpack/svr16.ytd uses 85.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).
+[resources:carpack:st] Asset carpack/svr16_hi.yft uses 27.8 MiB of virtual memory.
+[resources:carpack:st] Asset carpack/trhawk.ytd uses 18.5 MiB of physical memory.
+[resources:carpack:st] Asset carpack/urus.yft uses 17.5 MiB of virtual memory.
+[resources:carpack:st] Asset carpack/urus.ytd uses 86.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).
+[resources:carpack:st] Asset carpack/urus_hi.yft uses 17.5 MiB of virtual memory.
+[resources:carpack:st] Asset carpack/v4sl.ytd uses 35.5 MiB of physical memory.
+[resources:carpack:st] Asset carpack/v4sl_hi.yft uses 27.2 MiB of virtual memory.
+[resources:carpack:st] Asset carpack/v_19_stripclub.ytd uses 23.0 MiB of physical memory.
+[resources:carpack:st] Asset carpack/valor14rb.yft uses 24.5 MiB of virtual memory.
+[resources:carpack:st] Asset carpack/valor14rb.ytd uses 214.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).
+[resources:carpack:st] Asset carpack/valor14rb_hi.yft uses 19.8 MiB of virtual memory.
+[resources:carpack:st] Asset carpack/valor9rb.yft uses 19.0 MiB of virtual memory.
+[resources:carpack:st] Asset carpack/valor9rb.ytd uses 184.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).
+[resources:carpack:st] Asset carpack/valor9rb_hi.yft uses 18.8 MiB of virtual memory.
+[resources:carpack:st] Asset carpack/wheel_musc_15.ydr uses 24.0 MiB of physical memory.
+[resources:carpack:st] Asset carpack/wheel_urus4.ydr uses 48.0 MiB of physical memory.
+[resources:carpack:st] Asset carpack/z1000.ytd uses 25.0 MiB of physical memory.
+[resources:carpack:st] Asset carpack/zx10r.ytd uses 98.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).
+[           resources] Started resource carpack (80 warnings)
+[resources:cla250:str] [0mAsset cla250/cla250.yft uses 31.1 MiB of virtual memory.
+[resources:cla250:str] Asset cla250/cla250.ytd uses 25.5 MiB of physical memory.
+[resources:cla250:str] Asset cla250/cla250_chassis_01.yft uses 30.5 MiB of virtual memory.
+[resources:cla250:str] Asset cla250/cla250_hi.yft uses 31.1 MiB of virtual memory.
+[           resources] Started resource cla250 (4 warnings)
+[resources:corvette%2] [0mWarning: could not find file `vehiclelayouts.meta` (defined in __resource.lua:3)
+[resources:corvette%2] Asset corvette%20c7/c7.ytd uses 22.0 MiB of physical memory.
+[           resources] Started resource corvette%20c7 (2 warnings)
+[resources:dragekcivi] Asset dragekcivick/dragekcivick.yft uses 25.5 MiB of virtual memory.[0m
+[resources:dragekcivi] Asset dragekcivick/dragekcivick.ytd uses 22.5 MiB of physical memory.
+[resources:dragekcivi] Asset dragekcivick/dragekcivick_hi.yft uses 25.5 MiB of virtual memory.
+[           resources] Started resource dragekcivick (3 warnings)
+[resources:fer%20perf] Asset fer%20perf/ferporto.ytd uses 58.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).
+[           resources] Started resource fer%20perf (1 warning)
+[resources:ferrari%20] Warning: could not find file `vehiclelayouts.meta` (defined in __resource.lua:3)
+[resources:ferrari%20] Asset ferrari%20mans/fm488.ytd uses 24.5 MiB of physical memory.
+[           resources] Started resource ferrari%20mans (2 warnings)
+[38;5;52m[     resources:m3g80] Warning: could not find file `data/**/vehiclelayouts.meta` (defined in fxmanifest.lua:4)
+[resources:m3g80:stre] Asset m3g80/m3g80.yft uses 24.5 MiB of virtual memory.
+[resources:m3g80:stre] Asset m3g80/m3g80.ytd uses 114.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).
+[resources:m3g80:stre] Asset m3g80/m3g80_hi.yft uses 21.8 MiB of virtual memory.
+[           resources] Started resource m3g80 (4 warnings)
+[resources:nisa31:str] Asset nisa31/nisa31.yft uses 30.5 MiB of virtual memory.
+[resources:nisa31:str] Asset nisa31/nisa31.ytd uses 74.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).
+[resources:nisa31:str] Asset nisa31/nisa31_hi.yft uses 30.5 MiB of virtual memory.
+[resources:nisa31:str] Asset nisa31/nisa31_livery.ytd uses 34.0 MiB of physical memory.
+[resources:nisa31:str] Asset nisa31/nisa31_seats_bridelow_vertex.yft uses 32.0 MiB of physical memory.
+[resources:nisa31:str] Asset nisa31/nisa31_seats_bridelow_vertex2.yft uses 32.0 MiB of physical memory.
+[resources:nisa31:str] Asset nisa31/nisa31_seats_recaro_base.yft uses 32.0 MiB of physical memory.
+[resources:nisa31:str] Asset nisa31/nisa31_seats_recaro_hks.yft uses 32.0 MiB of physical memory.
+[resources:nisa31:str] Asset nisa31/nisa31_seats_recaro_pink.yft uses 32.0 MiB of physical memory.
+[resources:nisa31:str] Asset nisa31/nisa31_seats_thrash_black.yft uses 32.0 MiB of physical memory.
+[resources:nisa31:str] Asset nisa31/nisa31_seats_thrash_blue.yft uses 32.0 MiB of physical memory.
+[resources:nisa31:str] Asset nisa31/nisa31_seats_thrash_jaguar.yft uses 32.0 MiB of physical memory.
+[resources:nisa31:str] Asset nisa31/nisa31_seats_thrash_red.yft uses 32.0 MiB of physical memory.
+[resources:nisa31:str] Asset nisa31/nisa31_seats_thrash_yellow.yft uses 32.0 MiB of physical memory.
+[resources:nisa31:str] Asset nisa31/nisa31_seats_thrash_zebra.yft uses 32.0 MiB of physical memory.
+[resources:nisa31:str] Asset nisa31/nisa31_steer_moco_midship.yft uses 64.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).
+[resources:nisa31:str] Asset nisa31/nisa31_steer_tsubaki.yft uses 96.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).
+[resources:nisa31:str] Asset nisa31/nisa31_steer_vertex2.yft uses 64.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).
+[resources:nisa31:str] Asset nisa31/nisa31_steer_vertex3.yft uses 64.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).
+[resources:nisa31:str] Asset nisa31/nisa31_steer_vertex4.yft uses 64.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).
+[resources:nisa31:str] Asset nisa31/nisa31_steer_vertex5.yft uses 64.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).
+[resources:nisa31:str] Asset nisa31/nisa31_steer_vertex6.yft uses 64.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).
+[resources:nisa31:str] Asset nisa31/nisa31_steer_vertex7.yft uses 64.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).
+[resources:nisa31:str] Asset nisa31/nisa31_tuning.ytd uses 144.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).
+[           resources] Started resource nisa31 (24 warnings)
+[       resources:nsx] Warning: could not find file `carcols.meta` (defined in __resource.lua:3)
+[       resources:nsx] Warning: could not find file `vehiclelayouts.meta` (defined in __resource.lua:3)
+[resources:nsx:stream] Asset nsx/arsx.yft uses 21.3 MiB of virtual memory.
+[resources:nsx:stream] Asset nsx/arsx.ytd uses 37.0 MiB of physical memory.
+[resources:nsx:stream] Asset nsx/arsx_hi.yft uses 21.3 MiB of virtual memory.
+[           resources] Started resource nsx (5 warnings)
+[38;5;211m[resources:offbaseq50] Warning: could not find client_script `vehicle_names.lua` (defined in __resource.lua:15)
+[resources:offbaseq50] Warning: could not find file `carcols.meta` (defined in __resource.lua:3)
+[resources:offbaseq50] Asset offbaseq50/offbaseq50.ytd uses 49.5 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).
+[           resources] Started resource offbaseq50 (3 warnings)
+[38;5;228m[resources:subaruwrxs] Asset subaruwrxsti08/subaruwrxsti08.yft uses 19.9 MiB of virtual memory.
+[resources:subaruwrxs] Asset subaruwrxsti08/subaruwrxsti08.ytd uses 130.0 MiB of physical memory. Oversized assets can and WILL lead to streaming issues (such as models not loading/rendering).
+[resources:subaruwrxs] Asset subaruwrxsti08/subaruwrxsti08_hi.yft uses 19.9 MiB of virtual memory.
+[           resources] Started resource subaruwrxsti08 (3 warnings)
+[    c-scripting-core] [0mCreating script environments for Forced-First-Person-main
+[38;5;83m[           resources] Started resource Forced-First-Person-main
+[38;5;56m[     script:rpemotes] [rpemotes] Current Version: 1.3.8
+[     script:rpemotes] [rpemotes] Latest Version: 1.3.9
+[     script:rpemotes] [rpemotes] You are currently running an outdated version of RPEmotes, please update to version 1.3.9
+[  script:jim-djbooth] You are running the latest version.
+[38;5;154m[   script:mapmanager] Started map fivem-map-skater
+[           resources] Started resource fivem-map-skater
+[38;5;73m[ citizen-server-impl] server thread hitch warning: timer interval of 427 milliseconds
+[       script:ox_lib] An update is available for illenium-appearance (current version: 5.5.0)
+[       script:ox_lib] https://github.com/iLLeniumStudios/illenium-appearance/releases/tag/v5.6.1
+[       script:ox_lib] An update is available for ox_target (current version: 1.13.1)
+[       script:ox_lib] https://github.com/overextended/ox_target/releases/tag/v1.14.0
+[38;5;42m[      script:oxmysql] [10.4.32-MariaDB] Database server connection established!
+[38;5;73m[ citizen-server-impl] sync thread hitch warning: timer interval of 140 milliseconds
+[      script:oxmysql] An update is available for oxmysql (current version: 2.7.7)
+[      script:oxmysql] https://github.com/overextended/oxmysql/releases/tag/v2.8.0
+[38;5;73m[ citizen-server-impl]         fff                          
+[ citizen-server-impl]   cccc ff   xx  xx     rr rr    eee  
+[ citizen-server-impl] cc     ffff   xx       rrr  r ee   e 
+[ citizen-server-impl] cc     ff     xx   ... rr     eeeee  
+[ citizen-server-impl]  ccccc ff   xx  xx ... rr      eeeee 
+[ citizen-server-impl]                                      
+[ citizen-server-impl] Authenticated with cfx.re Nucleus: https://mjl1106-kdl3d7.users.cfx.re/
+[    script:wk_wars2x]  
+[    script:wk_wars2x]   //
+[    script:wk_wars2x]   ||       __      __        _ _   _        _   ___  ___   _____  __
+[    script:wk_wars2x] [0m  ||       \ \    / / _ __ _(_) |_| |_     /_\ | _ \/ __| |_  ) \/ /
+[    script:wk_wars2x]   ||        \ \/\/ / '_/ _` | |  _| ' \   / _ \|   /\__ \  / / >  < 
+[    script:wk_wars2x]   ||         \_/\_/|_| \__,_|_|\__|_||_| /_/ \_\_|_\|___/ /___/_/\_\
+[    script:wk_wars2x]   || 
+[    script:wk_wars2x]   ||                        Created by WolfKnight
+[    script:wk_wars2x]   ||
+[    script:wk_wars2x]   ||    Current version: 1.3.1
+[    script:wk_wars2x]   ||    Latest recommended version: 1.3.1
+[    script:wk_wars2x]   ||
+[    script:wk_wars2x]   ||    Wraith ARS 2X is up to date!
+[    script:wk_wars2x]   ||
+[    script:wk_wars2x]   \\
+[    script:wk_wars2x] 
+[  script:qb-chopshop] Vehicle: massacro | Coords: vec4(487.200012, -30.799999, 88.900002, 90.000000) | Plate: 45fzM368
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] [0mServer list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] [91mServer list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[  script:qb-chopshop] Vehicle: dukes | Coords: vec4(-1329.000000, -396.540009, 36.450001, 90.000000) | Plate: 76Llu975
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] sync thread hitch warning: timer interval of 106 milliseconds
+[38;5;73m[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[  script:qb-chopshop] Vehicle: faction | Coords: vec4(487.200012, -30.799999, 88.900002, 90.000000) | Plate: 12ROA940
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] server thread hitch warning: timer interval of 153 milliseconds
+[ citizen-server-impl] sync thread hitch warning: timer interval of 147 milliseconds
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] [91mServer list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[38;5;73m[ citizen-server-impl] server thread hitch warning: timer interval of 158 milliseconds
+[ citizen-server-impl] sync thread hitch warning: timer interval of 120 milliseconds
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[  script:qb-chopshop] [0mVehicle: serrano | Coords: vec4(61.599998, 19.350000, 69.349998, 90.000000) | Plate: 68PfL150
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] [91mServer list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[  script:qb-chopshop] Vehicle: infernus | Coords: vec4(-1067.500000, -2571.399902, 13.200000, 90.000000) | Plate: 61bHd674
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[  script:qb-chopshop] Vehicle: carbonizzare | Coords: vec4(-723.799988, -913.200012, 19.010000, 90.000000) | Plate: 65LpI568
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[38;5;73m[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[38;5;73m[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[  script:qb-chopshop] Vehicle: bison | Coords: vec4(-2723.399902, 13.200000, 15.100000, 90.000000) | Plate: 25HPe010
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[  script:qb-chopshop] Vehicle: blade | Coords: vec4(-723.799988, -913.200012, 19.010000, 90.000000) | Plate: 60EcR611
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[  script:qb-chopshop] [0mVehicle: buccaneer | Coords: vec4(-521.900024, -266.799988, 34.900002, 90.000000) | Plate: 09zhn162
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] sync thread hitch warning: timer interval of 108 milliseconds
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[38;5;73m[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[  script:qb-chopshop] Vehicle: gauntlet | Coords: vec4(-1067.500000, -2571.399902, 13.200000, 90.000000) | Plate: 29feF599
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] sync thread hitch warning: timer interval of 129 milliseconds
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[  script:qb-chopshop] Vehicle: xls | Coords: vec4(907.479980, -54.720001, 78.760002, 90.000000) | Plate: 73ZAa093
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[38;5;73m[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[38;5;73m[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[38;5;73m[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[  script:qb-chopshop] Vehicle: tampa | Coords: vec4(-314.299988, -698.200012, 32.500000, 90.000000) | Plate: 87hCL562
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] [0mServer list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[  script:qb-chopshop] Vehicle: baller | Coords: vec4(2411.719971, 4970.770020, 46.110001, 90.000000) | Plate: 56bVs275
+[ citizen-server-impl] sync thread hitch warning: timer interval of 101 milliseconds
+[ citizen-server-impl] [91mServer list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] sync thread hitch warning: timer interval of 101 milliseconds
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[  script:qb-chopshop] Vehicle: jester | Coords: vec4(2030.430054, 3166.860107, 45.240002, 90.000000) | Plate: 40Svk137
+[38;5;73m[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] [0mServer list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[  script:qb-chopshop] Vehicle: felon | Coords: vec4(1371.300049, -2549.500000, 47.599998, 90.000000) | Plate: 14Vjm583
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[38;5;73m[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[  script:qb-chopshop] Vehicle: oracle | Coords: vec4(-451.100006, -333.500000, 34.000000, 90.000000) | Plate: 62ccE411
+[ citizen-server-impl] sync thread hitch warning: timer interval of 123 milliseconds
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] [0mServer list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[38;5;73m[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[38;5;73m[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] sync thread hitch warning: timer interval of 116 milliseconds
+[  script:qb-chopshop] Vehicle: stalion | Coords: vec4(727.210022, -208.160004, 67.839996, 90.000000) | Plate: 29mup820
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] sync thread hitch warning: timer interval of 110 milliseconds
+[ citizen-server-impl] sync thread hitch warning: timer interval of 107 milliseconds
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] sync thread hitch warning: timer interval of 101 milliseconds
+[38;5;73m[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] server thread hitch warning: timer interval of 177 milliseconds
+[ citizen-server-impl] sync thread hitch warning: timer interval of 130 milliseconds
+[ citizen-server-impl] sync thread hitch warning: timer interval of 105 milliseconds
+[ citizen-server-impl] sync thread hitch warning: timer interval of 118 milliseconds
+[ citizen-server-impl] sync thread hitch warning: timer interval of 128 milliseconds
+[ citizen-server-impl] server thread hitch warning: timer interval of 152 milliseconds
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] server thread hitch warning: timer interval of 163 milliseconds
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[  script:qb-chopshop] Vehicle: voodoo | Coords: vec4(727.210022, -208.160004, 67.839996, 90.000000) | Plate: 63FmQ453
+[ citizen-server-impl] sync thread hitch warning: timer interval of 105 milliseconds
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] sync thread hitch warning: timer interval of 116 milliseconds
+[38;5;73m[ citizen-server-impl] server thread hitch warning: timer interval of 279 milliseconds
+[ citizen-server-impl] sync thread hitch warning: timer interval of 306 milliseconds
+[ citizen-server-impl] network thread hitch warning: timer interval of 306 milliseconds
+[ citizen-server-impl] server thread hitch warning: timer interval of 172 milliseconds
+[ citizen-server-impl] sync thread hitch warning: timer interval of 248 milliseconds
+[ citizen-server-impl] network thread hitch warning: timer interval of 248 milliseconds
+[ citizen-server-impl] server thread hitch warning: timer interval of 280 milliseconds
+[ citizen-server-impl] sync thread hitch warning: timer interval of 164 milliseconds
+[ citizen-server-impl] network thread hitch warning: timer interval of 167 milliseconds
+[ citizen-server-impl] server thread hitch warning: timer interval of 169 milliseconds
+[ citizen-server-impl] sync thread hitch warning: timer interval of 101 milliseconds
+[ citizen-server-impl] sync thread hitch warning: timer interval of 116 milliseconds
+[ citizen-server-impl] server thread hitch warning: timer interval of 301 milliseconds
+[ citizen-server-impl] sync thread hitch warning: timer interval of 259 milliseconds
+[38;5;73m[ citizen-server-impl] network thread hitch warning: timer interval of 259 milliseconds
+[ citizen-server-impl] server thread hitch warning: timer interval of 176 milliseconds
+[ citizen-server-impl] sync thread hitch warning: timer interval of 178 milliseconds
+[ citizen-server-impl] network thread hitch warning: timer interval of 179 milliseconds
+[ citizen-server-impl] sync thread hitch warning: timer interval of 344 milliseconds
+[ citizen-server-impl] network thread hitch warning: timer interval of 345 milliseconds
+[ citizen-server-impl] server thread hitch warning: timer interval of 379 milliseconds
+[ citizen-server-impl] sync thread hitch warning: timer interval of 105 milliseconds
+[ citizen-server-impl] sync thread hitch warning: timer interval of 116 milliseconds
+[ citizen-server-main] -> Quitting: SIGHUP received
