@@ -10,7 +10,11 @@ RegisterNetEvent('qb-bankrobbery:pacific:thermitedoor', function()
                 if hasItem then
                     SetEntityHeading(ped, Config.PacificBank['thermite'][k]['coords'].w)
                     TriggerServerEvent('qb-bankrobbery:server:RemovePaletoDoorItem')
-                    exports['memorygame']:thermiteminigame(Config.CorrectBlocks, Config.IncorrectBlocks, Config.TimeToShow, Config.TimeToLose,
+                    local gameSettings = v.memorygame
+                    exports['memorygame']:thermiteminigame(gameSettings.correctBlocks, 
+                    gameSettings.incorrectBlocks, 
+                    gameSettings.timeToShow, 
+                    gameSettings.timeToLose,
                     function() -- success
                         QBCore.Functions.Notify(Config.Notify["PlacingThermite"], 'success', 4500)
                         local loc = Config.PacificBank['thermite'][k]['anim']
@@ -28,9 +32,6 @@ RegisterNetEvent('qb-bankrobbery:pacific:thermitedoor', function()
                         SetEntityCollision(thermal_charge, false, true)
                         AttachEntityToEntity(thermal_charge, ped, GetPedBoneIndex(ped, 28422), 0, 0, 0, 0, 0, 200.0, true, true, false, true, 1, true)
                         Wait(4000)
-
-                        TriggerServerEvent('QBCore:Server:RemoveItem', 'thermite', 1)
-                        TriggerEvent('inventory:client:ItemBox', QBCore.Shared.Items['thermite'], 'remove')
                     
                         DetachEntity(thermal_charge, 1, 1)
                         FreezeEntityPosition(thermal_charge, true)
@@ -75,6 +76,27 @@ RegisterNetEvent('qb-bankrobbery:UnlockDoorPacific', function()
     elseif dist > 3 and dist <= 8 then
         if Config.Doorlocks == "qb" then 
             TriggerServerEvent('qb-doorlock:server:updateState', 6, false, false, false, true, false, false)
+            Citizen.CreateThread(function() 
+                exports['qb-target']:AddBoxZone('SecurityCardReader'..math.random(1,100), vector3(262.22, 223.05, 106.58), 1, 1, {
+                  name = 'SecurityCardReader'..math.random(1,100),
+                  heading = 46.78,
+                  debugPoly = Config.debugPoly,
+                  minZ = 106.4,
+                  maxZ = 106.7,
+                  }, {
+                  options = {
+                      {
+                          type = 'client',
+                          event = 'qb-bankrobbery:UsePacificCard',
+                          icon = 'fas fa-credit-card',
+                          label = 'Use Bank Card',
+                          item = 'security_card_02', --this makes it so the third eye only displays if you have the correct card
+                          job = all,
+                      },
+                  },
+                  distance = 2.5
+                })
+            end)
         elseif Config.Doorlocks == "nui" or Config.Doorlocks == "NUI" then 
             TriggerServerEvent('nui_doorlock:server:updateState', Config.DoorlockID3, false, false, false, true)
         end
@@ -107,12 +129,15 @@ RegisterNetEvent('qb-bankrobbery:UsePacificCard', function()
             }, {}, {}, function() -- Done
                 StopAnimTask(PlayerPedId(), 'anim@gangops@facility@servers@', 'hotwire', 1.0)
                 -- check uses
-                exports['memorygame']:thermiteminigame(Config.CorrectBlocks, Config.IncorrectBlocks, Config.TimeToShow, Config.TimeToLose,
+                exports['memorygame']:thermiteminigame(5, 3, 4, 20,
                 function() -- success 
                     if Config.Doorlocks == "qb" then 
                         TriggerServerEvent('qb-doorlock:server:updateState', 1, false, false, false, true, false, false)
                     elseif Config.Doorlocks == "nui" or Config.Doorlocks == "NUI" then 
                         TriggerServerEvent('nui_doorlock:server:updateState', Config.DoorlockID4, false, false, false, true)
+                    end
+                    if Config.RemoveCard then 
+                        TriggerServerEvent('qb-bankrobbery:server:RemovePacificDoorCard')
                     end
                 end)
             end, function() -- Cancel
@@ -651,14 +676,7 @@ function OnHackDonePacific(success)
         TriggerServerEvent('qb-robbery:server:succesHeist', 35)
         TriggerServerEvent('qb-bankrobbery:server:setTimeout', 'pacific')
 
-        if Config.RemoveLaptop then 
-            TriggerServerEvent("QBCore:Server:RemoveItem", "laptop_red", 1)
-            TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["laptop_red"], "remove")
-        end
-
-        if Config.RemoveCard then 
-            TriggerServerEvent("QBCore:Server:RemoveItem", "security_card_02", 1)
-            TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["security_card_02"], "remove")
-        end
+        Wait(Config.BankTimer['pacific'] * (60 * 1000))
+        Config.DoorlockAction('pacific', true)
     end
 end

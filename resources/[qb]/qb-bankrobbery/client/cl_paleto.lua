@@ -167,7 +167,7 @@ RegisterNetEvent('qb-bankrobbery:UseBankLaptop', function(colour, laptopData)
                                     Citizen.CreateThread(function() 
                                         exports['qb-target']:AddBoxZone('SecurityCardReader'..math.random(1,100), vector3(-106.0602, 6472.4204, 31.00846), 1, 1, {
                                           name = 'SecurityCardReader'..math.random(1,100),
-                                          heading = 46.78,
+                                          heading = 253.97,
                                           debugPoly = Config.debugPoly,
                                           minZ = 30.80846,
                                           maxZ = 32.20846,

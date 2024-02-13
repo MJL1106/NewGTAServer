@@ -198,6 +198,36 @@ CreateThread(function()
   end
 end)
 
+--fleeca laptop targets
+CreateThread(function()
+  for bankId, bankData in pairs(Config.FleecaBanks) do
+      exports['qb-target']:AddBoxZone('FleecaPanel' .. bankId, bankData["panelCoords"], 1, 1, {
+          name = 'FleecaPanel' .. bankId,
+          heading = bankData["coords"].w,  -- Assuming panel heading is the same as door heading
+          debugPoly = Config.debugPoly,  -- Set to false once positions are verified
+          minZ = bankData["panelCoords"].z - 1,  -- Adjust based on panel height
+          maxZ = bankData["panelCoords"].z + 1,  -- Adjust based on panel height
+      }, {
+          options = {
+              {
+                  type = "client",
+                  action = function()
+                      -- Trigger the event when the panel is used
+                      TriggerEvent('qb-bankrobbery:UseBankLaptop', 'green', nil, bankId)
+                  end,
+                  icon = "fas fa-laptop-code",
+                  label = "Hack Panel",
+                  item = "laptop_green",  -- This makes it only display if you have the laptop
+                  canInteract = function()
+                    return not Config.FleecaBanks[bankId]['isOpened']
+                  end,
+              },
+          },
+          distance = 2.5
+      })
+  end
+end)
+
 -- table Paleto
 CreateThread(function() 
   if Config.TargetOption == 'bt' then
@@ -451,29 +481,6 @@ CreateThread(function()
     end
   end
 end)
-
--- Paleto Security Card Doors
--- CreateThread(function() 
---   exports['qb-target']:AddBoxZone('SecurityCardReader'..math.random(1,100), vector3(-106.0602, 6472.4204, 31.00846), 1, 1, {
---     name = 'SecurityCardReader'..math.random(1,100),
---     heading = 46.78,
---     debugPoly = Config.debugPoly,
---     minZ = 30.80846,
---     maxZ = 32.20846,
---     }, {
---     options = {
---         {
---             type = 'client',
---             event = 'qb-bankrobbery:UsePaletoCard',
---             icon = 'fas fa-credit-card',
---             label = 'Use Bank Card',
---             item = 'security_card_01', 
---             job = all,
---         },
---     },
---     distance = 2.5
---   })
--- end)
 
 -- Paleto Laptop Use
 CreateThread(function() 
@@ -759,6 +766,33 @@ for k,v in pairs(Config.PacificBank['drills']) do
   end
 end)
 
+-- Pacific Laptop Use
+CreateThread(function() 
+  exports['qb-target']:AddBoxZone('LaptopUse'..math.random(1,100), vector3(252.91,228.53,101.09), 1, 1, {
+    name = 'LaptopUse'..math.random(1,100),
+    heading = 78.44,
+    debugPoly = Config.debugPoly,
+    minZ = 100.80846,
+    maxZ = 102.30846,
+    }, {
+    options = {
+        {
+          type = "client",
+          action = function()
+              TriggerEvent('qb-bankrobbery:UseBankLaptop', 'red', nil)
+          end,
+          icon = "fas fa-laptop-code",
+          label = "Use Hacking Laptop",
+          item = "laptop_red", -- Makes it only display if you have the laptop
+          canInteract = function(entity)
+              return not Config.PacificBank['isOpened']
+          end,
+          job = all,
+        },
+    },
+    distance = 2.5
+  })
+end)
 
 -- lowerVault Servers
 CreateThread(function()

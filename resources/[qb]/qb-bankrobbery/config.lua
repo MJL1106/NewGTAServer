@@ -5,7 +5,7 @@ Config.BlackoutTimer = 15 -- How many minutes are the city blackedout when power
 Config.BankTimer = {
     fleeca = 45, -- Time in minutes for cooldown
     paleto = 60, -- Time in minutes for cooldown
-    pacific = 1.5, -- Time in minutes for cooldown
+    pacific = 480, -- Time in minutes for cooldown
 } 
 
 ---- ** BAG IDs ** ----
@@ -65,7 +65,7 @@ Config.Doorlocks = "qb" -- Put 'nui' if you use NUI doorlocks
 -- All the doorlock IDs you need to put in if you don't know how to find them just ask for help on Discord
 Config.DoorlockID1 = 5 -- whats your ID for this door? vector3(-105.87, 6475.57, 31.63) --thermite door paleto
 Config.DoorlockID2 = 4 -- whats your ID for this door? vector3(-104.81, 6473.65, 31.95) --security card door paleto
-Config.DoorlockID3 = 6 -- whats your ID for this door? vector3(257.22, 220.42, 106.29)
+Config.DoorlockID3 = 6 -- whats your ID for this door? vector3(257.22, 220.42, 106.29) --first thermite door pacific
 Config.DoorlockID4 = 1 -- whats your ID for this door? vesctor3(261.97, 221.53, 106.29)
 Config.DoorlockID5 = 2 -- whats your ID for this door? vector3(252.69, 220.79, 101.68)
 Config.DoorlockID6 = 3 -- whats your ID for this door? vector3(261.09, 215.04, 101.68)
@@ -89,15 +89,15 @@ Config.FleecaTime = 12 -- How much time do they have to enter the hack?
 Config.FleecaBlocks = 4 -- How many different blocks can the hack have?
 Config.FleecaRepeat = 2 -- How many times in a row do they need to hack the system?
 
----- ** PALETO HACK CONFIG ** ---- todo
+---- ** PALETO HACK CONFIG ** ---- 
 Config.PaletoTime = 10 -- How much time do they have to enter the hack?
 Config.PaletoBlocks = 5 -- How many different blocks can the hack have?
 Config.PaletoRepeat = 3 -- How many times in a row do they need to hack the system?
 
 ---- ** PACIFIC HACK CONFIG ** ----
-Config.PacificTime = 10 -- How much time do they have to enter the hack?
-Config.PacificBlocks = 4 -- How many different blocks can the hack have?
-Config.PacificRepeat = 1 -- How many times in a row do they need to hack the system?
+Config.PacificTime = 8 -- How much time do they have to enter the hack?
+Config.PacificBlocks = 6 -- How many different blocks can the hack have?
+Config.PacificRepeat = 3 -- How many times in a row do they need to hack the system?
 
 ---- ** LOWER VAULT HACK CONFIG ** ----
 Config.HDDTime = 10 -- How much time do they have to enter the hack?
@@ -144,10 +144,10 @@ Config.PaletoSecondGoldMin = 5 -- Minimum gold bars from Paleto Second
 Config.PaletoSecondGoldMax = 8 -- Maximum gold bars from Paleto Second
 
 ---- ** PACIFIC LOOT TABLES ** ----
-Config.PacificBagsMin = 4 -- How many bags of Marked Bills can you MINIMUM get from a pacific Table?
-Config.PacificBagsMax = 7 -- How many bags of Marked Bills can you MAXIMUM get from a pacific Table?
-Config.PacificGoldMin = 5 -- Minimum gold bars from pacific
-Config.PacificGoldMax = 10 -- Maximum gold bars from pacific
+Config.PacificBagsMin = 6 -- How many bags of Marked Bills can you MINIMUM get from a pacific Table?
+Config.PacificBagsMax = 8 -- How many bags of Marked Bills can you MAXIMUM get from a pacific Table?
+Config.PacificGoldMin = 800 -- Minimum gold bars from pacific
+Config.PacificGoldMax = 820 -- Maximum gold bars from pacific
 
 ---- ** LOWER VAULT LOOT TABLES ** ----
 Config.LowerVaultBagsMin = 6 -- How many bags of Marked Bills can you MINIMUM get from a lowervault Table?
@@ -166,7 +166,7 @@ Config.Lockers = {
         },
         ["ItemAmount"] = math.random(13,19), -- sets total amount of items you get
         ---- RARE ITEMS ----
-        ["Chance"] = 50, -- CHANCE OF GETTING USB
+        ["Chance"] = 10, -- CHANCE OF GETTING USB
 
         ["Rare"] = {
             'usb_blue',
@@ -174,7 +174,7 @@ Config.Lockers = {
         ["RareAmount"] = 1, -- Set total number of usb
         ---- CASH ITEMS ----
 
-        ["Card"] = 20, -- CHANCE OF GETTING CARD
+        ["Card"] = 5, -- CHANCE OF GETTING CARD
         ["Cash"] = 'security_card_01',
         ["CashAmount"] = 1, -- Put minimum and Maximum amount of items inside the randomiser
     },
@@ -185,7 +185,7 @@ Config.Lockers = {
         },
         ["ItemAmount"] = math.random(30,34), -- Put minimum and Maximum amount of items inside the randomiser
         ---- RARE ITEMS ----
-        ["Chance"] = 30, -- CHANCE OF GETTING GETTING USB
+        ["Chance"] = 7, -- CHANCE OF GETTING GETTING USB
 
         ["Rare"] = {
             'usb_red',
@@ -193,47 +193,47 @@ Config.Lockers = {
         ["RareAmount"] = 1, -- Put minimum and Maximum amount of items inside the randomiser
         ---- CASH ITEMS ----
 
-        ["Card"] = 15, -- CHANCE OF GETTING CARD
+        ["Card"] = 3, -- CHANCE OF GETTING CARD
         ["Cash"] = 'security_card_02',
         ["CashAmount"] = 1, -- Put minimum and Maximum amount of items inside the randomiser
     },
-    ["PaletoVault"] = { -- This is Paleto SECOND vault
-        ---- NORMAL ITEMS ----
-        ["items"] = {
-            'rolex',
-        },
-        ["ItemAmount"] = math.random(1,5), -- Put minimum and Maximum amount of items inside the randomiser
-        ---- RARE ITEMS ----
-        ["Chance"] = 10, -- CHANCE OF GETTING RARE OR CASH ITEM
+    -- ["PaletoVault"] = { -- This is Paleto SECOND vault
+    --     ---- NORMAL ITEMS ----
+    --     ["items"] = {
+    --         'rolex',
+    --     },
+    --     ["ItemAmount"] = math.random(60,68), -- Put minimum and Maximum amount of items inside the randomiser
+    --     ---- RARE ITEMS ----
+    --     ["Chance"] = 100, -- CHANCE OF GETTING RARE OR CASH ITEM
 
-        ["Rare"] = {
-            'goldbar',
-        },
-        ["RareAmount"] = math.random(1,5), -- Put minimum and Maximum amount of items inside the randomiser
-        ---- CASH ITEMS ----
+    --     ["Rare"] = {
+    --         'greenphone',
+    --     },
+    --     ["RareAmount"] = 1, -- Put minimum and Maximum amount of items inside the randomiser
+    --     ---- CASH ITEMS ----
 
-        ["Cash"] = 'markedbills',
-        ["CashAmount"] = math.random(1,5), -- Put minimum and Maximum amount of items inside the randomiser
-    },
+    --     ["Card"] = 100,
+    --     ["Cash"] = 'redphone',
+    --     ["CashAmount"] = 1, -- Put minimum and Maximum amount of items inside the randomiser
+    -- },
     ["Pacific"] = {
         ---- NORMAL ITEMS ----
         ["items"] = {
             'rolex',
-            'phone',
-            'laptop_green',
         },
-        ["ItemAmount"] = math.random(1,5), -- Put minimum and Maximum amount of items inside the randomiser
+        ["ItemAmount"] = math.random(60,68), -- Put minimum and Maximum amount of items inside the randomiser
         ---- RARE ITEMS ----
-        ["Chance"] = 10, -- CHANCE OF GETTING RARE OR CASH ITEM
+        ["Chance"] = 20, -- CHANCE OF GETTING RARE OR CASH ITEM
 
         ["Rare"] = {
-            'goldbar',
+            'greenphone',
         },
-        ["RareAmount"] = math.random(1,5), -- Put minimum and Maximum amount of items inside the randomiser
+        ["RareAmount"] = 1, -- Put minimum and Maximum amount of items inside the randomiser
         ---- CASH ITEMS ----
 
-        ["Cash"] = 'markedbills',
-        ["CashAmount"] = math.random(1,5), -- Put minimum and Maximum amount of items inside the randomiser
+        ["Card"] = 3,
+        ["Cash"] = 'redphone',
+        ["CashAmount"] = 1, -- Put minimum and Maximum amount of items inside the randomiser
     },
 }
 
@@ -360,6 +360,7 @@ Config.Notify = { -- Don't change the ["Text"] only change the text on the RIGHT
 Config.FleecaBanks = { 
     [1] = { -- Great Ocean Highway
         ["coords"] = vector4(-2956.564, 481.957, 15.297, 347.02),  -- Coordinates of the Banks
+        ["panelCoords"] = vector3(-2956.564, 481.957, 15.297),
         ["tablecoords"] = {[1] = vector3(-2954.2, 484.377, 15.525)},
         ["object"] = GetHashKey("hei_prop_heist_sec_door"),
         ["camId"] = 25,
@@ -385,6 +386,7 @@ Config.FleecaBanks = {
     },
     [2] = { -- Sandy Shores
         ["coords"] = vector4(1175.34, 2713.09, 39.35, 84.60),  -- Coordinates of the Banks   
+        ["panelCoords"] = vector3(1176.01, 2713.09, 37.94),
         ["tablecoords"] = {[1] = vector3(1173.45, 2715.08, 37.9162)},
         ["object"] = GetHashKey("v_ilev_gb_vauldr"),
         ["isOpened"] = false,
@@ -410,6 +412,7 @@ Config.FleecaBanks = {
     },
     [3] = { -- Del Perro Blvd
         ["coords"] = vector4(-1209.822, -336.4793, 37.381, 299.439),  -- Coordinates of the Banks   
+        ["panelCoords"] = vector3(-1210.67, -336.76, 37.63),
         ["tablecoords"] = {[1] = vector3(-1207.47, -336.63, 37.76)},
         ["object"] = GetHashKey("v_ilev_gb_vauldr"),
         ["isOpened"] = false,
@@ -435,6 +438,7 @@ Config.FleecaBanks = {
     },
     [4] = { -- Pink Cage Motel
         ["coords"] = vector4(311.57, -284.0903, 53.974, 259.00),  -- Coordinates of the Banks   
+        ["panelCoords"] = vector3(311.18, -284.5503, 53.974),
         ["tablecoords"] = {[1] = vector3(312.756, -287.41, 54.0)},
         ["object"] = GetHashKey("v_ilev_gb_vauldr"),
         ["isOpened"] = false,
@@ -460,6 +464,7 @@ Config.FleecaBanks = {
     },
     [5] = { -- Legion Square
         ["coords"] = vector4(vector3(147.52, -1046.69, 30.0008), 246.72924), -- Coordinates of the Banks   
+        ["panelCoords"] = vector3(146.72, -1046.23, 29.22),
         ["tablecoords"] = {[1] = vector3(148.431, -1049.1, 29.19)},
         ["object"] = GetHashKey("v_ilev_gb_vauldr"),
         ["isOpened"] = false,
@@ -485,6 +490,7 @@ Config.FleecaBanks = {
     },
     [6] = { -- Hawick Ave
         ["coords"] = vector4(-354.08, -55.27648, 49.8666, 257.45),  -- Coordinates of the Banks   
+        ["panelCoords"] = vector3(-353.99, -55.47, 48.8666),
         ["tablecoords"] = {[1] = vector3(-352.23, -58.215, 48.848)},
         ["object"] = GetHashKey("v_ilev_gb_vauldr"),
         ["isOpened"] = false,
@@ -580,12 +586,16 @@ Config.PacificBank = {
     ["trollys"] = { -- trollys points
         {coords = vector3(262.5378, 212.7852, 100.6833), heading = 340.0059, loot = false}, 
         {coords = vector3(263.7690, 216.3632, 100.6833), heading = 161.9024, loot = false},
+        {coords = vector3(259.67, 213.78, 100.6833), heading = 161.9024, loot = false},
     },
     ["thermite"] = { -- Thermite points
-        {coords = vector4(257.0483, 220.5190, 106.2852, 332.2341), anim = vector3(257.40, 220.20, 106.35), effect = vector3(257.39, 221.20, 106.29), isOpen = false}, 
-        {coords = vector4(252.4627, 220.8329, 101.6832, 161.7461), anim = vector3(252.95, 220.70, 101.76), effect = vector3(252.985, 221.70, 101.72), isOpen = false},
-        {coords = vector4(261.5854, 215.0085, 101.6834, 254.1465), anim = vector3(261.65, 215.60, 101.76), effect = vector3(261.68, 216.63, 101.75), isOpen = false},
-
+        {coords = vector4(257.0483, 220.5190, 106.2852, 332.2341), anim = vector3(257.40, 220.20, 106.35), effect = vector3(257.39, 221.20, 106.29), isOpen = false,
+        memorygame = {correctBlocks = 8, incorrectBlocks = 3, timeToShow = 4, timeToLose = 12}}, 
+        {coords = vector4(252.4627, 220.8329, 101.6832, 161.7461), anim = vector3(252.95, 220.70, 101.76), effect = vector3(252.985, 221.70, 101.72), isOpen = false,
+        memorygame = {correctBlocks = 10, incorrectBlocks = 3, timeToShow = 4, timeToLose = 10}},
+        {coords = vector4(261.5854, 215.0085, 101.6834, 254.1465), anim = vector3(261.65, 215.60, 101.76), effect = vector3(261.68, 216.63, 101.75), isOpen = false,
+        memorygame = {correctBlocks = 14, incorrectBlocks = 2, timeToShow = 4, timeToLose = 8}},
+        --memory game field controls the difficulty of each door in the bank
     },
 }
 
