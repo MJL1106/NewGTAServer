@@ -400,7 +400,7 @@ RegisterNetEvent('qb-bankrobbery:UseBankLaptop', function(colour, laptopData)
                                 }, {}, {}, function() -- Done
                                     StopAnimTask(PlayerPedId(), 'anim@gangops@facility@servers@', 'hotwire', 1.0)
                                     -- check uses
-                                    TriggerServerEvent('qb-bankrobbery:server:RemoveLaptopUse', laptopData)
+                                    TriggerServerEvent('qb-bankrobbery:server:RemoveLaptop', 'laptop_green')
                                     TriggerEvent('qb-bankrobbery:LaptopFleeca', closestBank)
                                     if not copsCalled then
                                         local s1, s2 = GetStreetNameAtCoord(pos.x, pos.y, pos.z)

@@ -632,6 +632,13 @@ RegisterNetEvent('qb-bankrobbery:server:drilldamaged', function()
     end
 end)
 
+RegisterNetEvent('qb-bankrobbery:server:RemoveLaptop', function(item)
+    local src = source
+	local Player = QBCore.Functions.GetPlayer(src)
+    Player.Functions.RemoveItem(item, 1, false)
+    TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[item], 'remove')
+end)
+
 RegisterNetEvent('qb-bankrobbery:server:RemovePaletoDoorItem', function()
     local src = source
 	local Player = QBCore.Functions.GetPlayer(src)
@@ -803,20 +810,20 @@ RegisterNetEvent('qb-bankrobbery:server:IsComvination2Right', function(data)
     end
 end)
 
-RegisterServerEvent('qb-bankrobbery:server:RemoveLaptopUse', function(itemData)
-    local Player = QBCore.Functions.GetPlayer(source)
+-- RegisterServerEvent('qb-bankrobbery:server:RemoveLaptopUse', function(itemData)
+--     local Player = QBCore.Functions.GetPlayer(source)
 
-    if Player.PlayerData.items[itemData.slot].info.uses == nil then
-        TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items[itemData.name], 'remove')
-        Player.Functions.RemoveItem(itemData.name, 1)
-    elseif Player.PlayerData.items[itemData.slot].info.uses - 1 == 0 then
-        TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items[itemData.name], 'remove')
-        Player.Functions.RemoveItem(itemData.name, 1)
-    else
-        Player.PlayerData.items[itemData.slot].info.uses = Player.PlayerData.items[itemData.slot].info.uses - 1
-        Player.Functions.SetInventory(Player.PlayerData.items)
-    end
-end)
+--     if Player.PlayerData.items[itemData.slot].info.uses == nil then
+--         TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items[itemData.name], 'remove')
+--         Player.Functions.RemoveItem(itemData, 1)
+--     elseif Player.PlayerData.items[itemData.slot].info.uses - 1 == 0 then
+--         TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items[itemData.name], 'remove')
+--         Player.Functions.RemoveItem(itemData, 1)
+--     else
+--         Player.PlayerData.items[itemData.slot].info.uses = Player.PlayerData.items[itemData.slot].info.uses - 1
+--         Player.Functions.SetInventory(Player.PlayerData.items)
+--     end
+-- end)
 
 -- Buying Laptops
 RegisterServerEvent('qb-bankrobbery:server:BuyLaptop', function(name)
@@ -873,13 +880,13 @@ QBCore.Functions.CreateCallback('qb-bankrobbery:server:IsServerBlackedout', func
     cb(BlackOutActive)
 end)
 
-
-QBCore.Functions.CreateUseableItem('security_card_01', function(source, item)
-    local Player = QBCore.Functions.GetPlayer(source)
-	if Player.Functions.GetItemByName('security_card_01') ~= nil then
-        TriggerClientEvent('qb-bankrobbery:UsePaletoCard', source)
-    end
-end)
+--Paleto security card disabled from being used in inventory
+-- QBCore.Functions.CreateUseableItem('security_card_01', function(source, item)
+--     local Player = QBCore.Functions.GetPlayer(source)
+-- 	if Player.Functions.GetItemByName('security_card_01') ~= nil then
+--         TriggerClientEvent('qb-bankrobbery:UsePaletoCard', source)
+--     end
+-- end)
 
 QBCore.Functions.CreateUseableItem('security_card_02', function(source, item)
     local Player = QBCore.Functions.GetPlayer(source)
@@ -918,13 +925,13 @@ QBCore.Functions.CreateUseableItem('laptop_red', function(source, item)
     end
 end)
 
--- Paleto
-QBCore.Functions.CreateUseableItem('laptop_blue', function(source, item)
-    local Player = QBCore.Functions.GetPlayer(source)
-	if Player.Functions.GetItemByName('laptop_blue') ~= nil then
-        TriggerClientEvent('qb-bankrobbery:UseBankLaptop', source, 'blue', item)
-    end
-end)
+-- Paleto laptop disabled from being used in inventory
+-- QBCore.Functions.CreateUseableItem('laptop_blue', function(source, item)
+--     local Player = QBCore.Functions.GetPlayer(source)
+-- 	if Player.Functions.GetItemByName('laptop_blue') ~= nil then
+--         TriggerClientEvent('qb-bankrobbery:UseBankLaptop', source, 'blue', item)
+--     end
+-- end)
 
 -- Paleto Second
 QBCore.Functions.CreateUseableItem('laptop_pink', function(source, item)

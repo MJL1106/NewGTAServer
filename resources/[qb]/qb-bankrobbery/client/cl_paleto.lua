@@ -151,7 +151,7 @@ RegisterNetEvent('qb-bankrobbery:UseBankLaptop', function(colour, laptopData)
                             }, {}, {}, function() -- Done
                                 StopAnimTask(PlayerPedId(), 'anim@gangops@facility@servers@', 'hotwire', 1.0)
                                 -- check uses
-                                TriggerServerEvent('qb-bankrobbery:server:RemoveLaptopUse', laptopData)
+                                TriggerServerEvent('qb-bankrobbery:server:RemoveLaptop', 'laptop_blue')
                             
                                 if not copsCalled then
                                     local s1, s2 = GetStreetNameAtCoord(pos.x, pos.y, pos.z)
@@ -163,6 +163,29 @@ RegisterNetEvent('qb-bankrobbery:UseBankLaptop', function(colour, laptopData)
                                     end
                                     TriggerServerEvent('qb-bankrobbery:server:callCops', 'paleto', 0, streetLabel, pos)
                                     copsCalled = true
+                                    --Displays Third Eye for card
+                                    Citizen.CreateThread(function() 
+                                        exports['qb-target']:AddBoxZone('SecurityCardReader'..math.random(1,100), vector3(-106.0602, 6472.4204, 31.00846), 1, 1, {
+                                          name = 'SecurityCardReader'..math.random(1,100),
+                                          heading = 46.78,
+                                          debugPoly = Config.debugPoly,
+                                          minZ = 30.80846,
+                                          maxZ = 32.20846,
+                                          }, {
+                                          options = {
+                                              {
+                                                  type = 'client',
+                                                  event = 'qb-bankrobbery:UsePaletoCard',
+                                                  icon = 'fas fa-credit-card',
+                                                  label = 'Use Bank Card',
+                                                  item = 'security_card_01', --this makes it so the third eye only displays if you have the correct card
+                                                  job = all,
+                                              },
+                                          },
+                                          distance = 2.5
+                                        })
+                                      end)
+
                                 end
                                 LaptopAnimationPaleto()
                             end, function() -- Cancel
@@ -184,7 +207,6 @@ RegisterNetEvent('qb-bankrobbery:UseBankLaptop', function(colour, laptopData)
 end)
 
 RegisterNetEvent('qb-bankrobbery:UsePaletoCard', function()
-    print("Using Card")
     local ped = PlayerPedId() 
     local pos = GetEntityCoords(ped)
     local dist = #(pos - vector3(Config.PaletoBank['coords'].x, Config.PaletoBank['coords'].y, Config.PaletoBank['coords'].z))
@@ -242,7 +264,6 @@ function OnHackDonePaleto(success)
 
         TriggerServerEvent('qb-bankrobbery:server:setTimeout', 'paleto')
         Wait(Config.BankTimer['paleto'] * (60 * 1000))
-        print("LOCKING DOORS")
         Config.DoorlockAction('paleto', true)
     end
 end

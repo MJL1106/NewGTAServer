@@ -85,12 +85,12 @@ Config.DoorlockID10 = "lowervault 1" -- Whats the doorID for this room? vector3(
 Config.DoorlockID11 = "lowervault main vault" -- Whats the doorID for this room? vector3(-102.02, 6459.52, 31.63)
 
 ---- ** FLEECA HACK CONFIG ** ----
-Config.FleecaTime = 10 -- How much time do they have to enter the hack?
+Config.FleecaTime = 12 -- How much time do they have to enter the hack?
 Config.FleecaBlocks = 4 -- How many different blocks can the hack have?
 Config.FleecaRepeat = 2 -- How many times in a row do they need to hack the system?
 
----- ** PALETO HACK CONFIG ** ----
-Config.PaletoTime = 12 -- How much time do they have to enter the hack?
+---- ** PALETO HACK CONFIG ** ---- todo
+Config.PaletoTime = 10 -- How much time do they have to enter the hack?
 Config.PaletoBlocks = 5 -- How many different blocks can the hack have?
 Config.PaletoRepeat = 3 -- How many times in a row do they need to hack the system?
 

@@ -453,27 +453,27 @@ CreateThread(function()
 end)
 
 -- Paleto Security Card Doors
-CreateThread(function() 
-  exports['qb-target']:AddBoxZone('SecurityCardReader'..math.random(1,100), vector3(-106.0602, 6472.4204, 31.00846), 1, 1, {
-    name = 'SecurityCardReader'..math.random(1,100),
-    heading = 46.78,
-    debugPoly = Config.debugPoly,
-    minZ = 30.80846,
-    maxZ = 32.20846,
-    }, {
-    options = {
-        {
-            type = 'client',
-            event = 'qb-bankrobbery:UsePaletoCard',
-            icon = 'fas fa-credit-card',
-            label = 'Use Bank Card',
-            item = 'security_card_01', 
-            job = all,
-        },
-    },
-    distance = 2.5
-  })
-end)
+-- CreateThread(function() 
+--   exports['qb-target']:AddBoxZone('SecurityCardReader'..math.random(1,100), vector3(-106.0602, 6472.4204, 31.00846), 1, 1, {
+--     name = 'SecurityCardReader'..math.random(1,100),
+--     heading = 46.78,
+--     debugPoly = Config.debugPoly,
+--     minZ = 30.80846,
+--     maxZ = 32.20846,
+--     }, {
+--     options = {
+--         {
+--             type = 'client',
+--             event = 'qb-bankrobbery:UsePaletoCard',
+--             icon = 'fas fa-credit-card',
+--             label = 'Use Bank Card',
+--             item = 'security_card_01', 
+--             job = all,
+--         },
+--     },
+--     distance = 2.5
+--   })
+-- end)
 
 -- Paleto Laptop Use
 CreateThread(function() 
@@ -492,7 +492,7 @@ CreateThread(function()
           end,
           icon = "fas fa-laptop-code",
           label = "Use Hacking Laptop",
-          item = "laptop_blue", -- Assuming you require the player to have a specific laptop item
+          item = "laptop_blue", -- Makes it only display if you have the laptop
           canInteract = function(entity)
               return not Config.PaletoBank['isOpened']
           end,
