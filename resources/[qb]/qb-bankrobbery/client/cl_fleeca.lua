@@ -77,13 +77,13 @@ local function OnHackDone(success)
         Wait(time/2)
         TriggerServerEvent('qb-bankrobbery:server:setBankState', true, 'fleeca', closestBank)
         TriggerServerEvent('qb-robbery:server:succesHeist', 15)
-        TriggerServerEvent('qb-bankrobbery:server:setTimeout', 'fleeca', closestBank)
+        TriggerServerEvent('qb-bankrobbery:server:setTimeout', 'fleeca')
         SetupVault(closestBank)
 
-        if Config.RemoveLaptop then 
-            TriggerServerEvent("QBCore:Server:RemoveItem", "laptop_green", 1)
-            TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["laptop_green"], "remove")
-        end
+        Wait(Config.BankTimer['fleeca'] * (60 * 1000))
+        Config.DoorlockAction('fleeca', true)
+
+
     end
 end
 
@@ -116,14 +116,17 @@ end
 local function ResetCurrentBank(type, closestBank)
     -- Fleecas
     if type == 'fleeca' then
-        Config.FleecaBanks[closestBank]['isOpened'] = false
-        Config.FleecaBanks[closestBank]['grab']['loot'] = false
-        
-        for k,_ in pairs(Config.FleecaBanks[closestBank]['drills']) do
-            Config.FleecaBanks[closestBank]['drills'][k]['loot'] = false
-        end
-        for k,_ in pairs(Config.FleecaBanks[closestBank]['trollys']) do
-            Config.FleecaBanks[closestBank]['trollys']['loot'] = false
+        for bankId, bankData in pairs(Config.FleecaBanks) do
+            bankData['isOpened'] = false
+            bankData['grab']['loot'] = false
+    
+            for k, _ in pairs(bankData['drills']) do
+                bankData['drills'][k]['loot'] = false
+            end
+    
+            for k, _ in pairs(bankData['trollys']) do
+                bankData['trollys'][k]['loot'] = false
+            end
         end
 
     -- Paletos
@@ -400,7 +403,7 @@ RegisterNetEvent('qb-bankrobbery:UseBankLaptop', function(colour, laptopData)
                                 }, {}, {}, function() -- Done
                                     StopAnimTask(PlayerPedId(), 'anim@gangops@facility@servers@', 'hotwire', 1.0)
                                     -- check uses
-                                    TriggerServerEvent('qb-bankrobbery:server:RemoveLaptopUse', laptopData)
+                                    TriggerServerEvent('qb-bankrobbery:server:RemoveLaptop', 'laptop_green')
                                     TriggerEvent('qb-bankrobbery:LaptopFleeca', closestBank)
                                     if not copsCalled then
                                         local s1, s2 = GetStreetNameAtCoord(pos.x, pos.y, pos.z)
@@ -740,8 +743,8 @@ RegisterNetEvent('qb-bankrobbery:DepositBox', function()
                         end
                     end, Config.LockerRequired)
                 end
-            else
-                QBCore.Functions.Notify(Config.Notify['AlreadyDrilled'], 'error')
+            --else
+               -- QBCore.Functions.Notify(Config.Notify['AlreadyDrilled'], 'error')
             end
         else
             QBCore.Functions.Notify(Config.Notify['BankOpen'], 'error', 4500)
@@ -770,6 +773,9 @@ RegisterNetEvent('qb-bankrobbery:client:setBankState', function(bankId, state)
         Config.FleecaBanks[bankId]['isOpened'] = state
         if state then
             OpenBankDoor(bankId)
+        end
+        for bankIDD, _ in pairs(Config.FleecaBanks) do
+            Config.FleecaBanks[bankIDD]['isOpened'] = true
         end
     end
 end)
