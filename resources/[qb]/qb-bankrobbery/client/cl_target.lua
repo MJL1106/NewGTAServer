@@ -484,7 +484,7 @@ end)
 
 -- Paleto Laptop Use
 CreateThread(function() 
-  exports['qb-target']:AddBoxZone('LaptopUse'..math.random(1,100), vector3(-106.38,6470,31.43), 1, 1, {
+  exports['qb-target']:AddBoxZone('LaptopUse'..math.random(1,100), vector3(-102.63, 6464.34, 31.63), 1, 1, {
     name = 'LaptopUse'..math.random(1,100),
     heading = 132.94,
     debugPoly = Config.debugPoly,
@@ -1663,216 +1663,216 @@ CreateThread(function()
     end
 end)
 
---  Trays Paleto 2nd vault
-CreateThread(function() 
-    for k,v in pairs(Config.PaletoSecond ['trollys']) do
-          if Config.TargetOption == 'bt' then 
-              exports['bt-target']:AddBoxZone('LootTray'..math.random(1,100), vector3(Config.PaletoSecond ['trollys'][k]['coords'].x, Config.PaletoSecond ['trollys'][k]['coords'].y, Config.PaletoSecond ['trollys'][k]['coords'].z), 0.8, 1.0, {
-                  name = 'LootTray'..math.random(1,100), 
-                  heading = Config.PaletoSecond ['trollys'][k]['heading'],
-                  debugPoly = Config.debugPoly,
-                  minZ = Config.PaletoSecond ['trollys'][k]['coords'].z-1,
-                  maxZ = Config.PaletoSecond ['trollys'][k]['coords'].z+1,
-                  }, {
-                  options = { 
-                    { 
-                      type = 'client',
-                      event = 'qb-bankrobbery:client:PaletoSecond',
-                      icon = 'fas fa-hand-paper',
-                      label = 'Grab Loot',
-                      job = {'all'},
-                    }
-                  },
-                  distance = 2.0,
-              })
-          elseif Config.TargetOption == 'qb' then
-              exports['qb-target']:AddBoxZone('LootTray'..math.random(1,100), vector3(Config.PaletoSecond ['trollys'][k]['coords'].x, Config.PaletoSecond ['trollys'][k]['coords'].y, Config.PaletoSecond ['trollys'][k]['coords'].z), 0.8, 1.0, {
-                  name = 'LootTray'..math.random(1,100), 
-                  heading = Config.PaletoSecond ['trollys'][k]['heading'],
-                  debugPoly = Config.debugPoly, 
-                  minZ = Config.PaletoSecond ['trollys'][k]['coords'].z-1,
-                  maxZ = Config.PaletoSecond ['trollys'][k]['coords'].z+1,
-                  }, {
-                  options = { 
-                    { 
-                      type = 'client',
-                      event = 'qb-bankrobbery:client:PaletoSecond',
-                      icon = 'fas fa-hand-paper',
-                      label = 'Grab Loot',
-                      job = all,
-                    }
-                  },
-                  distance = 2.0,
-            })
-          elseif Config.TargetOption == 'berkie' then
-            exports['berkie-target']:AddBoxZone('LootTray'..math.random(1,100), vector3(Config.PaletoSecond ['trollys'][k]['coords'].x, Config.PaletoSecond ['trollys'][k]['coords'].y, Config.PaletoSecond ['trollys'][k]['coords'].z), 0.8, 1.0, {
-                name = 'LootTray'..math.random(1,100), 
-                heading = Config.PaletoSecond ['trollys'][k]['heading'],
-                debugPoly = Config.debugPoly,
-                minZ = Config.PaletoSecond ['trollys'][k]['coords'].z-1,
-                maxZ = Config.PaletoSecond ['trollys'][k]['coords'].z+1,
-                }, {
-                options = { 
-                  { 
-                    type = 'client',
-                    event = 'qb-bankrobbery:client:PaletoSecond',
-                    icon = 'fas fa-hand-paper',
-                    label = 'Grab Loot',
-                    job = all,
-                  }
-                },
-                distance = 2.0,
-          })
-          end
-        end
-  end)
+-- --  Trays Paleto 2nd vault
+-- CreateThread(function() 
+--     for k,v in pairs(Config.PaletoSecond ['trollys']) do
+--           if Config.TargetOption == 'bt' then 
+--               exports['bt-target']:AddBoxZone('LootTray'..math.random(1,100), vector3(Config.PaletoSecond ['trollys'][k]['coords'].x, Config.PaletoSecond ['trollys'][k]['coords'].y, Config.PaletoSecond ['trollys'][k]['coords'].z), 0.8, 1.0, {
+--                   name = 'LootTray'..math.random(1,100), 
+--                   heading = Config.PaletoSecond ['trollys'][k]['heading'],
+--                   debugPoly = Config.debugPoly,
+--                   minZ = Config.PaletoSecond ['trollys'][k]['coords'].z-1,
+--                   maxZ = Config.PaletoSecond ['trollys'][k]['coords'].z+1,
+--                   }, {
+--                   options = { 
+--                     { 
+--                       type = 'client',
+--                       event = 'qb-bankrobbery:client:PaletoSecond',
+--                       icon = 'fas fa-hand-paper',
+--                       label = 'Grab Loot',
+--                       job = {'all'},
+--                     }
+--                   },
+--                   distance = 2.0,
+--               })
+--           elseif Config.TargetOption == 'qb' then
+--               exports['qb-target']:AddBoxZone('LootTray'..math.random(1,100), vector3(Config.PaletoSecond ['trollys'][k]['coords'].x, Config.PaletoSecond ['trollys'][k]['coords'].y, Config.PaletoSecond ['trollys'][k]['coords'].z), 0.8, 1.0, {
+--                   name = 'LootTray'..math.random(1,100), 
+--                   heading = Config.PaletoSecond ['trollys'][k]['heading'],
+--                   debugPoly = Config.debugPoly, 
+--                   minZ = Config.PaletoSecond ['trollys'][k]['coords'].z-1,
+--                   maxZ = Config.PaletoSecond ['trollys'][k]['coords'].z+1,
+--                   }, {
+--                   options = { 
+--                     { 
+--                       type = 'client',
+--                       event = 'qb-bankrobbery:client:PaletoSecond',
+--                       icon = 'fas fa-hand-paper',
+--                       label = 'Grab Loot',
+--                       job = all,
+--                     }
+--                   },
+--                   distance = 2.0,
+--             })
+--           elseif Config.TargetOption == 'berkie' then
+--             exports['berkie-target']:AddBoxZone('LootTray'..math.random(1,100), vector3(Config.PaletoSecond ['trollys'][k]['coords'].x, Config.PaletoSecond ['trollys'][k]['coords'].y, Config.PaletoSecond ['trollys'][k]['coords'].z), 0.8, 1.0, {
+--                 name = 'LootTray'..math.random(1,100), 
+--                 heading = Config.PaletoSecond ['trollys'][k]['heading'],
+--                 debugPoly = Config.debugPoly,
+--                 minZ = Config.PaletoSecond ['trollys'][k]['coords'].z-1,
+--                 maxZ = Config.PaletoSecond ['trollys'][k]['coords'].z+1,
+--                 }, {
+--                 options = { 
+--                   { 
+--                     type = 'client',
+--                     event = 'qb-bankrobbery:client:PaletoSecond',
+--                     icon = 'fas fa-hand-paper',
+--                     label = 'Grab Loot',
+--                     job = all,
+--                   }
+--                 },
+--                 distance = 2.0,
+--           })
+--           end
+--         end
+--   end)
   
-  -- Drills Paleto 2nd vault
-  CreateThread(function() 
-    for k,v in pairs(Config.PaletoSecond ['drills']) do
-          if Config.TargetOption == 'bt' then 
-              exports['bt-target']:AddBoxZone('PaletoDrill'..math.random(1,100), vector3(Config.PaletoSecond ['drills'][k]['coords'].x, Config.PaletoSecond ['drills'][k]['coords'].y, Config.PaletoSecond ['drills'][k]['coords'].z), 1.0, 0.8, { 
-                  name = 'PaletoDrill'..math.random(1,100), 
-                  heading = Config.PaletoSecond ['drills'][k]['rotation'].z,
-                  debugPoly = Config.debugPoly,
-                  minZ = Config.PaletoSecond ['drills'][k]['coords'].z-1,
-                  maxZ = Config.PaletoSecond ['drills'][k]['coords'].z+1,
-                  }, {
-                  options = { 
-                    { 
-                      type = 'client',
-                      event = 'qb-bankrobbery:Paleto2ndDrill',
-                      icon = 'fas fa-cookie',
-                      label = 'Drill Saftey Box',
-                      job = {'all'},
-                    }
-                  },
-                  distance = 1.3,
-              })
-          elseif Config.TargetOption == 'qb' then
-              exports['qb-target']:AddBoxZone('PaletoDrill'..math.random(1,100), vector3(Config.PaletoSecond ['drills'][k]['coords'].x, Config.PaletoSecond ['drills'][k]['coords'].y, Config.PaletoSecond ['drills'][k]['coords'].z), 1.0, 0.8, { 
-                  name = 'PaletoDrill'..math.random(1,100), 
-                  heading = Config.PaletoSecond ['drills'][k]['rotation'].z,
-                  debugPoly = Config.debugPoly,
-                  minZ = Config.PaletoSecond ['drills'][k]['coords'].z-1,
-                  maxZ = Config.PaletoSecond ['drills'][k]['coords'].z+1,
-                  }, {
-                  options = { 
-                    { 
-                      type = 'client',
-                      event = 'qb-bankrobbery:Paleto2ndDrill',
-                      icon = 'fas fa-cookie',
-                      label = 'Drill Saftey Box',
-                      job = all,
-                    }
-                  },
-                  distance = 1.3,
-            })
-          elseif Config.TargetOption == 'berkie' then
-            exports['berkie-target']:AddBoxZone('PaletoDrill'..math.random(1,100), vector3(Config.PaletoSecond ['drills'][k]['coords'].x, Config.PaletoSecond ['drills'][k]['coords'].y, Config.PaletoSecond ['drills'][k]['coords'].z), 1.0, 0.8, { 
-              name = 'PaletoDrill'..math.random(1,100), 
-                heading = Config.PaletoSecond ['drills'][k]['rotation'].z,
-                debugPoly = Config.debugPoly,
-                minZ = Config.PaletoSecond ['drills'][k]['coords'].z-1,
-                maxZ = Config.PaletoSecond ['drills'][k]['coords'].z+1,
-                }, {
-                options = { 
-                  { 
-                    type = 'client',
-                    event = 'qb-bankrobbery:Paleto2ndDrill',
-                    icon = 'fas fa-cookie',
-                    label = 'Drill Saftey Box',
-                    job = all,
-                  }
-                },
-                distance = 1.3,
-          })
-          end
-      end
-  end)
+--   -- Drills Paleto 2nd vault
+--   CreateThread(function() 
+--     for k,v in pairs(Config.PaletoSecond ['drills']) do
+--           if Config.TargetOption == 'bt' then 
+--               exports['bt-target']:AddBoxZone('PaletoDrill'..math.random(1,100), vector3(Config.PaletoSecond ['drills'][k]['coords'].x, Config.PaletoSecond ['drills'][k]['coords'].y, Config.PaletoSecond ['drills'][k]['coords'].z), 1.0, 0.8, { 
+--                   name = 'PaletoDrill'..math.random(1,100), 
+--                   heading = Config.PaletoSecond ['drills'][k]['rotation'].z,
+--                   debugPoly = Config.debugPoly,
+--                   minZ = Config.PaletoSecond ['drills'][k]['coords'].z-1,
+--                   maxZ = Config.PaletoSecond ['drills'][k]['coords'].z+1,
+--                   }, {
+--                   options = { 
+--                     { 
+--                       type = 'client',
+--                       event = 'qb-bankrobbery:Paleto2ndDrill',
+--                       icon = 'fas fa-cookie',
+--                       label = 'Drill Saftey Box',
+--                       job = {'all'},
+--                     }
+--                   },
+--                   distance = 1.3,
+--               })
+--           elseif Config.TargetOption == 'qb' then
+--               exports['qb-target']:AddBoxZone('PaletoDrill'..math.random(1,100), vector3(Config.PaletoSecond ['drills'][k]['coords'].x, Config.PaletoSecond ['drills'][k]['coords'].y, Config.PaletoSecond ['drills'][k]['coords'].z), 1.0, 0.8, { 
+--                   name = 'PaletoDrill'..math.random(1,100), 
+--                   heading = Config.PaletoSecond ['drills'][k]['rotation'].z,
+--                   debugPoly = Config.debugPoly,
+--                   minZ = Config.PaletoSecond ['drills'][k]['coords'].z-1,
+--                   maxZ = Config.PaletoSecond ['drills'][k]['coords'].z+1,
+--                   }, {
+--                   options = { 
+--                     { 
+--                       type = 'client',
+--                       event = 'qb-bankrobbery:Paleto2ndDrill',
+--                       icon = 'fas fa-cookie',
+--                       label = 'Drill Saftey Box',
+--                       job = all,
+--                     }
+--                   },
+--                   distance = 1.3,
+--             })
+--           elseif Config.TargetOption == 'berkie' then
+--             exports['berkie-target']:AddBoxZone('PaletoDrill'..math.random(1,100), vector3(Config.PaletoSecond ['drills'][k]['coords'].x, Config.PaletoSecond ['drills'][k]['coords'].y, Config.PaletoSecond ['drills'][k]['coords'].z), 1.0, 0.8, { 
+--               name = 'PaletoDrill'..math.random(1,100), 
+--                 heading = Config.PaletoSecond ['drills'][k]['rotation'].z,
+--                 debugPoly = Config.debugPoly,
+--                 minZ = Config.PaletoSecond ['drills'][k]['coords'].z-1,
+--                 maxZ = Config.PaletoSecond ['drills'][k]['coords'].z+1,
+--                 }, {
+--                 options = { 
+--                   { 
+--                     type = 'client',
+--                     event = 'qb-bankrobbery:Paleto2ndDrill',
+--                     icon = 'fas fa-cookie',
+--                     label = 'Drill Saftey Box',
+--                     job = all,
+--                   }
+--                 },
+--                 distance = 1.3,
+--           })
+--           end
+--       end
+--   end)
   
-  -- Thermite Doors Paleto 2nd vault
-  CreateThread(function() 
-    for k,v in pairs(Config.PaletoSecond ['thermite']) do
-      if Config.TargetOption == 'bt' then 
-        exports['bt-target']:AddBoxZone('LootTray'..math.random(1,100), vector3(Config.PaletoSecond ['thermite'][k]['coords'].x, Config.PaletoSecond ['thermite'][k]['coords'].y, Config.PaletoSecond ['thermite'][k]['coords'].z), 0.6, 1.2, {
-            name = 'LootTray'..math.random(1,100), 
-            heading = Config.PaletoSecond ['thermite'][k]['coords'].w,
-            debugPoly = Config.debugPoly,
-            minZ = Config.PaletoSecond ['thermite'][k]['coords'].z-1,
-            maxZ = Config.PaletoSecond ['thermite'][k]['coords'].z+1,
-            }, {
-            options = { 
-              { 
-                type = 'client',
-                event = 'qb-bankrobbery:paleto:thermitedoor',
-                icon = 'fas fa-bomb',
-                label = 'Open Door',
-                job = {'all'},
-              }
-            },
-            distance = 1.2,
-        })
-      elseif Config.TargetOption == 'qb' then
-        exports['qb-target']:AddBoxZone('OpenDoor'..math.random(1,100), vector3(Config.PaletoSecond ['thermite'][k]['coords'].x, Config.PaletoSecond ['thermite'][k]['coords'].y, Config.PaletoSecond ['thermite'][k]['coords'].z), 0.6, 1.2, {
-            name = 'OpenDoor'..math.random(1,100), 
-            heading = Config.PaletoSecond ['thermite'][k]['coords'].w,
-            debugPoly = Config.debugPoly, 
-            minZ = Config.PaletoSecond ['thermite'][k]['coords'].z-1,
-            maxZ = Config.PaletoSecond ['thermite'][k]['coords'].z+1,
-            }, {
-            options = { 
-              { 
-                type = 'client',
-                event = 'qb-bankrobbery:paleto:thermitedoor',
-                icon = 'fas fa-bomb',
-                label = 'Open Door',
-                job = all,
-              }
-            },
-            distance = 1.2,
-      })
-      elseif Config.TargetOption == 'berkie' then
-        exports['berkie-target']:AddBoxZone('OpenDoor'..math.random(1,100), vector3(Config.PaletoSecond ['thermite'][k]['coords'].x, Config.PaletoSecond ['thermite'][k]['coords'].y, Config.PaletoSecond ['thermite'][k]['coords'].z), 0.6, 1.2, {
-          name = 'OpenDoor'..math.random(1,100), 
-          heading = Config.PaletoSecond ['thermite'][k]['coords'].w,
-          debugPoly = Config.debugPoly,
-          minZ = Config.PaletoSecond ['thermite'][k]['coords'].z-1,
-          maxZ = Config.PaletoSecond ['thermite'][k]['coords'].z+1,
-          }, {
-          options = { 
-            { 
-              type = 'client',
-              event = 'qb-bankrobbery:paleto:thermitedoor',
-              icon = 'fas fa-bomb',
-              label = 'Open Door',
-              job = all,
-            }
-          },
-          distance = 1.2,
-        })
-      end
-    end
+--   -- Thermite Doors Paleto 2nd vault
+--   CreateThread(function() 
+--     for k,v in pairs(Config.PaletoSecond ['thermite']) do
+--       if Config.TargetOption == 'bt' then 
+--         exports['bt-target']:AddBoxZone('LootTray'..math.random(1,100), vector3(Config.PaletoSecond ['thermite'][k]['coords'].x, Config.PaletoSecond ['thermite'][k]['coords'].y, Config.PaletoSecond ['thermite'][k]['coords'].z), 0.6, 1.2, {
+--             name = 'LootTray'..math.random(1,100), 
+--             heading = Config.PaletoSecond ['thermite'][k]['coords'].w,
+--             debugPoly = Config.debugPoly,
+--             minZ = Config.PaletoSecond ['thermite'][k]['coords'].z-1,
+--             maxZ = Config.PaletoSecond ['thermite'][k]['coords'].z+1,
+--             }, {
+--             options = { 
+--               { 
+--                 type = 'client',
+--                 event = 'qb-bankrobbery:paleto:thermitedoor',
+--                 icon = 'fas fa-bomb',
+--                 label = 'Open Door',
+--                 job = {'all'},
+--               }
+--             },
+--             distance = 1.2,
+--         })
+--       elseif Config.TargetOption == 'qb' then
+--         exports['qb-target']:AddBoxZone('OpenDoor'..math.random(1,100), vector3(Config.PaletoSecond ['thermite'][k]['coords'].x, Config.PaletoSecond ['thermite'][k]['coords'].y, Config.PaletoSecond ['thermite'][k]['coords'].z), 0.6, 1.2, {
+--             name = 'OpenDoor'..math.random(1,100), 
+--             heading = Config.PaletoSecond ['thermite'][k]['coords'].w,
+--             debugPoly = Config.debugPoly, 
+--             minZ = Config.PaletoSecond ['thermite'][k]['coords'].z-1,
+--             maxZ = Config.PaletoSecond ['thermite'][k]['coords'].z+1,
+--             }, {
+--             options = { 
+--               { 
+--                 type = 'client',
+--                 event = 'qb-bankrobbery:paleto:thermitedoor',
+--                 icon = 'fas fa-bomb',
+--                 label = 'Open Door',
+--                 job = all,
+--               }
+--             },
+--             distance = 1.2,
+--       })
+--       elseif Config.TargetOption == 'berkie' then
+--         exports['berkie-target']:AddBoxZone('OpenDoor'..math.random(1,100), vector3(Config.PaletoSecond ['thermite'][k]['coords'].x, Config.PaletoSecond ['thermite'][k]['coords'].y, Config.PaletoSecond ['thermite'][k]['coords'].z), 0.6, 1.2, {
+--           name = 'OpenDoor'..math.random(1,100), 
+--           heading = Config.PaletoSecond ['thermite'][k]['coords'].w,
+--           debugPoly = Config.debugPoly,
+--           minZ = Config.PaletoSecond ['thermite'][k]['coords'].z-1,
+--           maxZ = Config.PaletoSecond ['thermite'][k]['coords'].z+1,
+--           }, {
+--           options = { 
+--             { 
+--               type = 'client',
+--               event = 'qb-bankrobbery:paleto:thermitedoor',
+--               icon = 'fas fa-bomb',
+--               label = 'Open Door',
+--               job = all,
+--             }
+--           },
+--           distance = 1.2,
+--         })
+--       end
+--     end
   
-    exports['qb-target']:AddBoxZone('Paleto2ndPCHAck', vector3(-97.833, 6466.48, 31.63), 1, 1.5, {
-      name = 'Paleto2ndPCHAck', 
-      heading = 134,
-      debugPoly = Config.debugPoly, 
-      minZ = 31.63-1,
-      maxZ = 31.63+1,
-      }, {
-      options = { 
-        { 
-          type = 'client',
-          event = 'qb-bankrobbery:PaletoHackIntiate',
-          icon = 'fas fa-laptop',
-          label = 'Hack Computer',
-          job = all,
-        }
-      },
-      distance = 1.2,
-    })
-end)
+--     exports['qb-target']:AddBoxZone('Paleto2ndPCHAck', vector3(-97.833, 6466.48, 31.63), 1, 1.5, {
+--       name = 'Paleto2ndPCHAck', 
+--       heading = 134,
+--       debugPoly = Config.debugPoly, 
+--       minZ = 31.63-1,
+--       maxZ = 31.63+1,
+--       }, {
+--       options = { 
+--         { 
+--           type = 'client',
+--           event = 'qb-bankrobbery:PaletoHackIntiate',
+--           icon = 'fas fa-laptop',
+--           label = 'Hack Computer',
+--           job = all,
+--         }
+--       },
+--       distance = 1.2,
+--     })
+-- end)
 
 -- Handler for Ped Trading
 RegisterNetEvent('qb-bankrobbery:PedTrading:Hunter', function()

@@ -921,7 +921,7 @@ QBCore.Functions.CreateUseableItem('laptop_red', function(source, item)
     end
 end)
 
--- Paleto laptop disabled from being used in inventory
+--Paleto laptop disabled from being used in inventory
 -- QBCore.Functions.CreateUseableItem('laptop_blue', function(source, item)
 --     local Player = QBCore.Functions.GetPlayer(source)
 -- 	if Player.Functions.GetItemByName('laptop_blue') ~= nil then

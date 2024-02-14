@@ -87,12 +87,12 @@ Config.DoorlockID11 = "lowervault main vault" -- Whats the doorID for this room?
 ---- ** FLEECA HACK CONFIG ** ----
 Config.FleecaTime = 12 -- How much time do they have to enter the hack?
 Config.FleecaBlocks = 4 -- How many different blocks can the hack have?
-Config.FleecaRepeat = 1 -- How many times in a row do they need to hack the system?
+Config.FleecaRepeat = 2 -- How many times in a row do they need to hack the system?
 
 ---- ** PALETO HACK CONFIG ** ---- 
 Config.PaletoTime = 10 -- How much time do they have to enter the hack?
-Config.PaletoBlocks = 5 -- How many different blocks can the hack have?
-Config.PaletoRepeat = 3 -- How many times in a row do they need to hack the system?
+Config.PaletoBlocks = 4 -- How many different blocks can the hack have?
+Config.PaletoRepeat = 1 -- How many times in a row do they need to hack the system?
 
 ---- ** PACIFIC HACK CONFIG ** ----
 Config.PacificTime = 8 -- How much time do they have to enter the hack?
@@ -515,7 +515,7 @@ Config.FleecaBanks = {
 }
 
 Config.PaletoBank = {
-    ["coords"] = vector4(-105.72, 6470.59, 31.63, 140.82),  -- Coordinates of the Banks
+    ["coords"] = vector4(-102.63, 6464.34, 31.63, 137.98),  -- Coordinates of the Banks
     ["isOpened"] = false,
     ["object"] = -1185205679,
     ["heading"] = {
@@ -529,14 +529,14 @@ Config.PaletoBank = {
         loot = false
     },
     ["drills"] = { -- drill points
-        {coords = vector3(-102.9603, 6475.5752, 31.9267), rotation = vector3(0.0, 0.0, 219.2149), loot = false},
-        {coords = vector3(-103.2137, 6478.2339, 31.9267), rotation = vector3(0.0, 0.0, 316.5404), loot = false},
-        {coords = vector3(-105.9050, 6478.5010, 31.9283), rotation = vector3(0.0, 0.0, 50.1688), loot = false},
+        {coords = vector3(-100.60, 6460.8, 31.9267), rotation = vector3(0.0, 0.0, 141.71), loot = false},
+        {coords = vector3(-100.09, 6459.7, 31.9267), rotation = vector3(0.0, 0.0, 141.71), loot = false},
+        {coords = vector3(-96.5, 6463.11, 31.9267), rotation = vector3(0.0, 0.0, 322.23), loot = false},
     },
     ["trollys"] = { -- trollys points
-        {coords = vector3(-107.6612, 6475.3379, 30.6267), heading = 226.7980, loot = false}, 
-        {coords = vector3(-107.15, 6473.53, 30.63), heading = 315.0013, loot = false},
-        {coords = vector3(-104.82, 6478.64, 30.61), heading = 132.99, loot = false}, -- new trolley
+        {coords = vector3(-95.95, 6460.78, 30.65), heading = 38.39, loot = false}, 
+        {coords = vector3(-97.1, 6459.80, 30.65), heading = 42.68, loot = false},
+        {coords = vector3(-98.92, 6461.79, 30.65), heading = 132.99, loot = false}
     },
     ["thermite"] = { -- trollys points
         {coords = vector4(-105.8219, 6475.5615, 31.6267, 316.8870), anim = vector3(-105.5515, 6475.1553, 31.6267), effect = vector3(-105.5154, 6476.2031, 31.6267), isOpen = false},
@@ -544,23 +544,23 @@ Config.PaletoBank = {
 }
 
 
-Config.PaletoSecond = {
-    ["coords"] = vector4(-103.18, 6459.52, 30.63, 238.89),
-    ["drills"] = { 
-        {coords = vector3(-103.4, 6456.39, 31.9267), rotation = vector3(0.0, 0.0, 137.2149), loot = false},
-        {coords = vector3(-101.72, 6456.25, 31.9267), rotation = vector3(0.0, 0.0, 200.5404), loot = false},
-        {coords = vector3(-100.35, 6457.67, 31.9267), rotation = vector3(0.0, 0.0, 249.1688), loot = false},
-        {coords = vector3(-100.43, 6459.7, 31.9267), rotation = vector3(0.0, 0.0, 310.0), loot = false},
-    },
-    ["trollys"] = { -- trollys points
-        {coords = vector3(-105.13, 6457.68, 30.63), heading = 50.29, loot = false}, 
-        {coords = vector3(-107.37, 6458.61, 30.63), heading = 315.0013, loot = false},
-        {coords = vector3(-108.0, 6460.7, 30.63), heading = 225.93, loot = false},
-    },
-    ["thermite"] = { -- trollys points
-        {coords = vector4(-105.39, 6460.81, 31.63, 135.31), anim = vector4(-105.94, 6461.04, 31.63, 137.83), effect = vector3(-105.0, 6461.04, 31.63), isOpen = false},
-    },
-}
+-- Config.PaletoSecond = {
+--     ["coords"] = vector4(-103.18, 6459.52, 30.63, 238.89),
+--     ["drills"] = { 
+--         {coords = vector3(-103.4, 6456.39, 31.9267), rotation = vector3(0.0, 0.0, 137.2149), loot = false},
+--         {coords = vector3(-101.72, 6456.25, 31.9267), rotation = vector3(0.0, 0.0, 200.5404), loot = false},
+--         {coords = vector3(-100.35, 6457.67, 31.9267), rotation = vector3(0.0, 0.0, 249.1688), loot = false},
+--         {coords = vector3(-100.43, 6459.7, 31.9267), rotation = vector3(0.0, 0.0, 310.0), loot = false},
+--     },
+--     ["trollys"] = { -- trollys points
+--         {coords = vector3(-105.13, 6457.68, 30.63), heading = 50.29, loot = false}, 
+--         {coords = vector3(-107.37, 6458.61, 30.63), heading = 315.0013, loot = false},
+--         {coords = vector3(-108.0, 6460.7, 30.63), heading = 225.93, loot = false},
+--     },
+--     ["thermite"] = { -- trollys points
+--         {coords = vector4(-105.39, 6460.81, 31.63, 135.31), anim = vector4(-105.94, 6461.04, 31.63, 137.83), effect = vector3(-105.0, 6461.04, 31.63), isOpen = false},
+--     },
+-- }
 
 Config.PacificBank = {
     ["coords"] = vector4(253.21, 228.3, 100.72, 73.16),  -- Coordinates of the Banks
