@@ -49,9 +49,9 @@ Config.PaletoGoldTrollyChance = 0 -- How many percent chance of that Fleeca Trol
 Config.PacificTrollyChance = 100 -- How many percent chance of getting a extra trolley with loot
 Config.PacificGoldTrollyChance = 0 -- How many percent chance of that Fleeca Trolly to be gold
 
-Config.FleecaGoldChance = 100 -- What percent chance of getting a gold table in a fleeca?
-Config.PaletoGoldChance = 100 -- What percent chance of getting a gold table in a Paleto?
-Config.PacificGoldChance = 100 -- What percent chance of getting a gold table in a Pacific?
+Config.FleecaGoldChance = 0 -- What percent chance of getting a gold table in a fleeca?
+Config.PaletoGoldChance = 0 -- What percent chance of getting a gold table in a Paleto?
+Config.PacificGoldChance = 0 -- What percent chance of getting a gold table in a Pacific?
 Config.lowerVaultGoldChance = 0 -- What percent chance of getting a gold table in the lowerVault?
 
 ---- ** HARD DRIVE CONFIG ** ---- 
@@ -87,7 +87,7 @@ Config.DoorlockID11 = "lowervault main vault" -- Whats the doorID for this room?
 ---- ** FLEECA HACK CONFIG ** ----
 Config.FleecaTime = 12 -- How much time do they have to enter the hack?
 Config.FleecaBlocks = 4 -- How many different blocks can the hack have?
-Config.FleecaRepeat = 2 -- How many times in a row do they need to hack the system?
+Config.FleecaRepeat = 1 -- How many times in a row do they need to hack the system?
 
 ---- ** PALETO HACK CONFIG ** ---- 
 Config.PaletoTime = 10 -- How much time do they have to enter the hack?
@@ -164,7 +164,10 @@ Config.Lockers = {
         ["items"] = {
             'rolex',
         },
-        ["ItemAmount"] = math.random(13,19), -- sets total amount of items you get
+        ["ItemAmount"] = math.random(24,28), -- sets total amount of items you get
+
+        ["gold"] = 'goldbar',
+        ["GoldAmount"] = math.random(90,100), -- sets total gold bars you get
         ---- RARE ITEMS ----
         ["Chance"] = 10, -- CHANCE OF GETTING USB
 
@@ -358,36 +361,36 @@ Config.Notify = { -- Don't change the ["Text"] only change the text on the RIGHT
 
 -- ** DO NOT CHANGE THIS ** --
 Config.FleecaBanks = { 
-    [1] = { -- Great Ocean Highway
-        ["coords"] = vector4(-2956.564, 481.957, 15.297, 347.02),  -- Coordinates of the Banks
-        ["panelCoords"] = vector3(-2956.564, 481.957, 15.297),
-        ["tablecoords"] = {[1] = vector3(-2954.2, 484.377, 15.525)},
-        ["object"] = GetHashKey("hei_prop_heist_sec_door"),
-        ["camId"] = 25,
-        ["isOpened"] = false,
-        ["heading"] = {
-            closed = 357.542,
-            open = 267.542,
-        },
-        ["grab"] = { -- middle main grab point
-            pos = vector3(-2954.2, 484.377, 15.525),
-            heading = 270.0,
-            loot = false
-        },
-        ["drills"] = { -- drill points
-            {coords = vector3(-2952.2, 484.135, 15.9253), rotation = vector3(0.0, 0.0, 265.0), loot = false},
-            {coords = vector3(-2954.0, 486.676, 15.9253), rotation = vector3(0.0, 0.0, 355.0), loot = false},
-            {coords = vector3(-2954.2, 482.120, 15.9253), rotation = vector3(0.0, 0.0, 185.0), loot = false},
-        },
-        ["trollys"] = { -- trollys points
-            {coords = vector3(-2957.3, 485.690, 14.6753), heading = 178.0, loot = false},
-            {coords = vector3(-2958.4, 484.099, 14.6753), heading = 268.0, loot = false},
-        },
-    },
-    [2] = { -- Sandy Shores
-        ["coords"] = vector4(1175.34, 2713.09, 39.35, 84.60),  -- Coordinates of the Banks   
+    -- [1] = { -- Great Ocean Highway
+    --     ["coords"] = vector4(-2956.564, 481.957, 15.297, 347.02),  -- Coordinates of the Banks
+    --     ["panelCoords"] = vector3(-2956.564, 481.957, 15.297),
+    --     ["tablecoords"] = {[1] = vector3(-2954.2, 484.377, 15.525)},
+    --     ["object"] = GetHashKey("hei_prop_heist_sec_door"),
+    --     ["camId"] = 25,
+    --     ["isOpened"] = false,
+    --     ["heading"] = {
+    --         closed = 357.542,
+    --         open = 267.542,
+    --     },
+    --     ["grab"] = { -- middle main grab point
+    --         pos = vector3(-2954.2, 484.377, 15.525),
+    --         heading = 270.0,
+    --         loot = false
+    --     },
+    --     ["drills"] = { -- drill points
+    --         {coords = vector3(-2952.2, 484.135, 15.9253), rotation = vector3(0.0, 0.0, 265.0), loot = false},
+    --         {coords = vector3(-2954.0, 486.676, 15.9253), rotation = vector3(0.0, 0.0, 355.0), loot = false},
+    --         {coords = vector3(-2954.2, 482.120, 15.9253), rotation = vector3(0.0, 0.0, 185.0), loot = false},
+    --     },
+    --     ["trollys"] = { -- trollys points
+    --         {coords = vector3(-2957.3, 485.690, 14.6753), heading = 178.0, loot = false},
+    --         {coords = vector3(-2958.4, 484.099, 14.6753), heading = 268.0, loot = false},
+    --     },
+    -- },
+    [1] = { -- Sandy Shores
+        ["coords"] = vector4(1176.01, 2713.09, 39.35, 356.44),  -- Coordinates of the Banks   
         ["panelCoords"] = vector3(1176.01, 2713.09, 37.94),
-        ["tablecoords"] = {[1] = vector3(1173.45, 2715.08, 37.9162)},
+       -- ["tablecoords"] = {[1] = vector3(1173.45, 2715.08, 37.9162)},
         ["object"] = GetHashKey("v_ilev_gb_vauldr"),
         ["isOpened"] = false,
         ["camId"] = 22,
@@ -403,17 +406,16 @@ Config.FleecaBanks = {
         ["drills"] = { -- drill points
             {coords = vector3(1173.34, 2717.16, 38.3363), rotation = vector3(0.0, 0.0, 0.0), loot = false},
             {coords = vector3(1175.52, 2715.16, 38.3363), rotation = vector3(0.0, 0.0, 275.0), loot = false},
-            {coords = vector3(1170.95, 2715.26, 38.3363), rotation = vector3(0.0, 0.0, 90.0), loot = false},
         },
         ["trollys"] = { -- trollys points
             {coords = vector3(1172.02, 2712.01, 37.0662), heading = 270.0, loot = false},
             {coords = vector3(1173.69, 2710.93, 37.0662), heading = 0.0, loot = false},
         },
     },
-    [3] = { -- Del Perro Blvd
-        ["coords"] = vector4(-1209.822, -336.4793, 37.381, 299.439),  -- Coordinates of the Banks   
+    [2] = { -- Del Perro Blvd
+        ["coords"] = vector4(-1210.67, -336.4793, 37.381, 195.27),  -- Coordinates of the Banks   
         ["panelCoords"] = vector3(-1210.67, -336.76, 37.63),
-        ["tablecoords"] = {[1] = vector3(-1207.47, -336.63, 37.76)},
+       --["tablecoords"] = {[1] = vector3(-1207.47, -336.63, 37.76)},
         ["object"] = GetHashKey("v_ilev_gb_vauldr"),
         ["isOpened"] = false,
         ["camId"] = 24,
@@ -427,19 +429,18 @@ Config.FleecaBanks = {
             loot = false
         },
         ["drills"] = { -- drill points
-            {coords = vector3(-1205.1, -336.54, 37.9593), rotation = vector3(0.0, 0.0, -60.0), loot = false},
             {coords = vector3(-1206.4, -339.10, 37.9593), rotation = vector3(0.0, 0.0, 200.0), loot = false},
-            {coords = vector3(-1209.1, -338.87, 37.9593), rotation = vector3(0.0, 0.0, 120.0), loot = false},
+            {coords = vector3(-1209.44, -337.24, 37.9593), rotation = vector3(0.0, 0.0, 120.0), loot = false},
         },
         ["trollys"] = { -- trollys points
             {coords = vector3(-1207.6, -333.89, 36.7592), heading = 118.0, loot = false},
             {coords = vector3(-1209.9039, -334.0858, 36.7592), heading = 208.0, loot = false},
         },
     },
-    [4] = { -- Pink Cage Motel
-        ["coords"] = vector4(311.57, -284.0903, 53.974, 259.00),  -- Coordinates of the Banks   
+    [3] = { -- Pink Cage Motel
+        ["coords"] = vector4(311.25, -284.0903, 53.974, 167.26),  -- Coordinates of the Banks   
         ["panelCoords"] = vector3(311.18, -284.5503, 53.974),
-        ["tablecoords"] = {[1] = vector3(312.756, -287.41, 54.0)},
+       -- ["tablecoords"] = {[1] = vector3(312.756, -287.41, 54.0)},
         ["object"] = GetHashKey("v_ilev_gb_vauldr"),
         ["isOpened"] = false,
         ["camId"] = 24,
@@ -455,17 +456,16 @@ Config.FleecaBanks = {
         ["drills"] = { -- drill points
             {coords = vector3(310.867, -286.82, 54.4430), rotation = vector3(0.0, 0.0, 75.0), loot = false},
             {coords = vector3(312.411, -289.41, 54.4430), rotation = vector3(0.0, 0.0, 160.0), loot = false},
-            {coords = vector3(315.230, -288.20, 54.4430), rotation = vector3(0.0, 0.0, 260.0), loot = false},
         },
         ["trollys"] = { -- trollys points
             {coords = vector3(315.230, -284.93, 53.1430), heading = 70.0, loot = false},
             {coords = vector3(313.4798, -283.2532, 53.1430), heading = 160.0, loot = false},
         },
     },
-    [5] = { -- Legion Square
-        ["coords"] = vector4(vector3(147.52, -1046.69, 30.0008), 246.72924), -- Coordinates of the Banks   
+    [4] = { -- Legion Square
+        ["coords"] = vector4(vector3(147.5, -1046.69, 30.0008), 160.76), -- Coordinates of the Banks   
         ["panelCoords"] = vector3(146.72, -1046.23, 29.22),
-        ["tablecoords"] = {[1] = vector3(148.431, -1049.1, 29.19)},
+       -- ["tablecoords"] = {[1] = vector3(148.431, -1049.1, 29.19)},
         ["object"] = GetHashKey("v_ilev_gb_vauldr"),
         ["isOpened"] = false,
         ["camId"] = 24,
@@ -479,19 +479,18 @@ Config.FleecaBanks = {
             loot = false
         },
         ["drills"] = { -- drill points
-            {coords = vector3(146.459, -1048.4, 29.6162), rotation = vector3(0.0, 0.0, 70.0), loot = false},
+            {coords = vector3(147.24, -1047.65, 29.6162), rotation = vector3(0.0, 0.0, 70.0), loot = false},
             {coords = vector3(148.095, -1051.1, 29.6162), rotation = vector3(0.0, 0.0, 170.0), loot = false},
-            {coords = vector3(150.969, -1049.8, 29.6162), rotation = vector3(0.0, 0.0, 250.0), loot = false},
         },
         ["trollys"] = { -- trollys points
             {coords = vector3(151.036, -1046.6, 28.3462), heading = 70.0, loot = false},
             {coords = vector3(149.3168, -1045.0193, 28.3463), heading = 160.0, loot = false},
         },
     },
-    [6] = { -- Hawick Ave
-        ["coords"] = vector4(-354.08, -55.27648, 49.8666, 257.45),  -- Coordinates of the Banks   
+    [5] = { -- Hawick Ave
+        ["coords"] = vector4(-354.8, -55.27648, 49.8666, 160.84),  -- Coordinates of the Banks   
         ["panelCoords"] = vector3(-353.99, -55.47, 48.8666),
-        ["tablecoords"] = {[1] = vector3(-352.23, -58.215, 48.848)},
+       -- ["tablecoords"] = {[1] = vector3(-352.23, -58.215, 48.848)},
         ["object"] = GetHashKey("v_ilev_gb_vauldr"),
         ["isOpened"] = false,
         ["camId"] = 24,
@@ -505,9 +504,8 @@ Config.FleecaBanks = {
             loot = false
         },
         ["drills"] = { -- drill points
-            {coords = vector3(-354.15, -57.592, 49.3147), rotation = vector3(0.0, 0.0, 75.0), loot = false},
+            {coords = vector3(-353.53, -56.832, 49.3147), rotation = vector3(0.0, 0.0, 75.0), loot = false},
             {coords = vector3(-352.81, -60.155, 49.3147), rotation = vector3(0.0, 0.0, 160.0), loot = false},
-            {coords = vector3(-349.70, -59.020, 49.3147), rotation = vector3(0.0, 0.0, 260.0), loot = false},
         },
         ["trollys"] = { -- trollys points
             {coords = vector3(-349.86, -55.756, 48.0148), heading = 70.0, loot = false},

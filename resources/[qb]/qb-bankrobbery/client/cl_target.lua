@@ -1,69 +1,69 @@
 -- Table Fleeca
-CreateThread(function() 
-  for bank, _ in pairs(Config.FleecaBanks) do
-    local position = Config.FleecaBanks[bank]['tablecoords']
-      for _, loc in pairs(position) do
-        if Config.TargetOption == 'bt' then 
-          exports['bt-target']:AddBoxZone('qb-bank:CashGrab1'..math.random(1,100), vector3(loc['x'], loc['y'], loc['z']), 1.8, 1.8, { 
-              name = 'qb-bank:CashGrab1'..math.random(1,100), 
-              heading = 1,
-              debugPoly = Config.debugPoly,
-              minZ = loc['z'] - 1,
-              maxZ = loc['z'] + 1,
-            }, {
-              options = { 
-                { 
-                  type = 'client',
-                  event = 'qb-bankrobbery:grabcash',
-                  icon = 'fas fa-hand-paper',
-                  label = 'Grab Loot',
-                  job = {'all'},
-                }
-              },
-              distance = 1.0,
-            })
-        elseif Config.TargetOption == 'qb' then 
-          exports['qb-target']:AddBoxZone('qb-bank:CashGrab1'..math.random(1,100), vector3(loc['x'], loc['y'], loc['z']), 1.8, 1.8, { 
-            name = 'qb-bank:CashGrab1'..math.random(1,100), 
-            heading = 1,
-            debugPoly = Config.debugPoly,
-            minZ = loc['z'] - 1,
-            maxZ = loc['z'] + 1,
-          }, {
-            options = { 
-              { 
-                type = 'client',
-                event = 'qb-bankrobbery:grabcash',
-                icon = 'fas fa-hand-paper',
-                label = 'Grab Loot',
-                job = all,
-              }
-            },
-            distance = 1.0,
-          })
-        elseif Config.TargetOption == 'berkie' then
-          exports['berkie-target']:AddBoxZone('qb-bank:CashGrab1'..math.random(1,100), vector3(loc['x'], loc['y'], loc['z']), 1.8, 1.8, { 
-            name = 'qb-bank:CashGrab1'..math.random(1,100), 
-            heading = 1,
-            debugPoly = Config.debugPoly,
-            minZ = loc['z'] - 1,
-            maxZ = loc['z'] + 1,
-          }, {
-            options = { 
-              { 
-                type = 'client',
-                event = 'qb-bankrobbery:grabcash',
-                icon = 'fas fa-hand-paper',
-                label = 'Grab Loot',
-                job = all,
-              }
-            },
-            distance = 1.0,
-          })
-        end
-    end
-  end
-end)
+-- CreateThread(function() 
+--   for bank, _ in pairs(Config.FleecaBanks) do
+--     local position = Config.FleecaBanks[bank]['tablecoords']
+--       for _, loc in pairs(position) do
+--         if Config.TargetOption == 'bt' then 
+--           exports['bt-target']:AddBoxZone('qb-bank:CashGrab1'..math.random(1,100), vector3(loc['x'], loc['y'], loc['z']), 1.8, 1.8, { 
+--               name = 'qb-bank:CashGrab1'..math.random(1,100), 
+--               heading = 1,
+--               debugPoly = Config.debugPoly,
+--               minZ = loc['z'] - 1,
+--               maxZ = loc['z'] + 1,
+--             }, {
+--               options = { 
+--                 { 
+--                   type = 'client',
+--                   event = 'qb-bankrobbery:grabcash',
+--                   icon = 'fas fa-hand-paper',
+--                   label = 'Grab Loot',
+--                   job = {'all'},
+--                 }
+--               },
+--               distance = 1.0,
+--             })
+--         elseif Config.TargetOption == 'qb' then 
+--           exports['qb-target']:AddBoxZone('qb-bank:CashGrab1'..math.random(1,100), vector3(loc['x'], loc['y'], loc['z']), 1.8, 1.8, { 
+--             name = 'qb-bank:CashGrab1'..math.random(1,100), 
+--             heading = 1,
+--             debugPoly = Config.debugPoly,
+--             minZ = loc['z'] - 1,
+--             maxZ = loc['z'] + 1,
+--           }, {
+--             options = { 
+--               { 
+--                 type = 'client',
+--                 event = 'qb-bankrobbery:grabcash',
+--                 icon = 'fas fa-hand-paper',
+--                 label = 'Grab Loot',
+--                 job = all,
+--               }
+--             },
+--             distance = 1.0,
+--           })
+--         elseif Config.TargetOption == 'berkie' then
+--           exports['berkie-target']:AddBoxZone('qb-bank:CashGrab1'..math.random(1,100), vector3(loc['x'], loc['y'], loc['z']), 1.8, 1.8, { 
+--             name = 'qb-bank:CashGrab1'..math.random(1,100), 
+--             heading = 1,
+--             debugPoly = Config.debugPoly,
+--             minZ = loc['z'] - 1,
+--             maxZ = loc['z'] + 1,
+--           }, {
+--             options = { 
+--               { 
+--                 type = 'client',
+--                 event = 'qb-bankrobbery:grabcash',
+--                 icon = 'fas fa-hand-paper',
+--                 label = 'Grab Loot',
+--                 job = all,
+--               }
+--             },
+--             distance = 1.0,
+--           })
+--         end
+--     end
+--   end
+-- end)
 
 
 -- Drills Fleeca

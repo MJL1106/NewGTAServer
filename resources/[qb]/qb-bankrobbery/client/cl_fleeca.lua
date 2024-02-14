@@ -33,13 +33,13 @@ local function SetupVault(closestBank)
         randomStack = 'gold'
     end
 
-    if randomStack == 'gold' then
-        cash = CreateObject(GetHashKey('h4_prop_h4_gold_stack_01a'), Config.FleecaBanks[closestBank]['grab']['pos'], 1, 1, 0)
-        TriggerServerEvent('qb-bankrobbery:server:grabSync', closestBank, GetHashKey('h4_prop_h4_gold_stack_01a'))
-    else
-        cash = CreateObject(GetHashKey('h4_prop_h4_cash_stack_01a'), Config.FleecaBanks[closestBank]['grab']['pos'], 1, 1, 0)
-        TriggerServerEvent('qb-bankrobbery:server:grabSync', closestBank, GetHashKey('h4_prop_h4_cash_stack_01a'))
-    end
+    -- if randomStack == 'gold' then
+    --     cash = CreateObject(GetHashKey('h4_prop_h4_gold_stack_01a'), Config.FleecaBanks[closestBank]['grab']['pos'], 1, 1, 0)
+    --     TriggerServerEvent('qb-bankrobbery:server:grabSync', closestBank, GetHashKey('h4_prop_h4_gold_stack_01a'))
+    -- else
+    --     cash = CreateObject(GetHashKey('h4_prop_h4_cash_stack_01a'), Config.FleecaBanks[closestBank]['grab']['pos'], 1, 1, 0)
+    --     TriggerServerEvent('qb-bankrobbery:server:grabSync', closestBank, GetHashKey('h4_prop_h4_cash_stack_01a'))
+    -- end
     SetEntityHeading(cash, Config.FleecaBanks[closestBank]['grab']['heading'])
     for k,v in pairs(Config.FleecaBanks[closestBank]['trollys']) do
         local TrollyChance = math.random(1,100)

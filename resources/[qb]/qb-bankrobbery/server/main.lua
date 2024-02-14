@@ -250,15 +250,21 @@ RegisterNetEvent('qb-bankrobbery:server:drillLoot', function(bank, pos, closestB
 
     if bank == 'fleeca' then
         local item = Config.Lockers["Fleeca"]["items"][math.random(1, #Config.Lockers["Fleeca"]["items"])]
+        local goldBars = Config.Lockers["Fleeca"]["gold"]
         local doubleitem = Config.Lockers["Fleeca"]["Rare"][math.random(1, #Config.Lockers["Fleeca"]["Rare"])]
         local cashitem = Config.Lockers["Fleeca"]["Cash"]
         local cashamount = Config.Lockers["Fleeca"]["CashAmount"]
         local FleecaDist = #(pos - vector3(Config.FleecaBanks[closestBank]['coords'].x, Config.FleecaBanks[closestBank]['coords'].y, Config.FleecaBanks[closestBank]['coords'].z ))
         if FleecaDist <= 15 then 
             local amount = Config.Lockers["Fleeca"]["ItemAmount"]
+            local amountBars = Config.Lockers["Fleeca"]["GoldAmount"]
             Player.Functions.AddItem(item, amount, false)
+            Player.Functions.AddItem(goldBars, amountBars, false)
             TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[item], 'add')
+            TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[goldBars], 'add')
             TriggerClientEvent('QBCore:Notify', src, Config.Notify["found"] .. amount .. ' '..item)
+            TriggerEvent('qb-log:server:CreateLog', 'bankrobbery', 'Bank Robbery', 'green', '**Goldbars**:\n'..item..'\n**Person**:\n'..GetPlayerName(src))
+            TriggerClientEvent('QBCore:Notify', src, Config.Notify["found"] .. amountBars .. ' '..goldBars)
             TriggerEvent('qb-log:server:CreateLog', 'bankrobbery', 'Bank Robbery', 'green', '**Goldbars**:\n'..item..'\n**Person**:\n'..GetPlayerName(src))
 
             Wait(2000)
