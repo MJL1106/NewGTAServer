@@ -74,8 +74,19 @@ Config.DoorlockID8 = 213 -- Whats your ID for this door? vector3(262.98, 258.38,
 
 Config.BankDoors = {
     fleeca = {},
-    paleto = {5,4},
-    pacific = {6,1,2,3},
+    paleto = {
+        'PaletoFD',
+        'PaletoOutDoor1',
+        'PaletoOutDoor2',
+        'PaletoAdmin',
+        'PaletoVault',
+    },
+    pacific = {
+        6,
+        1,
+        2,
+        3
+    },
 }
 
 
@@ -90,9 +101,9 @@ Config.FleecaBlocks = 4 -- How many different blocks can the hack have?
 Config.FleecaRepeat = 2 -- How many times in a row do they need to hack the system?
 
 ---- ** PALETO HACK CONFIG ** ---- 
-Config.PaletoTime = 10 -- How much time do they have to enter the hack?
-Config.PaletoBlocks = 4 -- How many different blocks can the hack have?
-Config.PaletoRepeat = 1 -- How many times in a row do they need to hack the system?
+Config.PaletoTime = 7 -- How much time do they have to enter the hack?
+Config.PaletoBlocks = 5 -- How many different blocks can the hack have?
+Config.PaletoRepeat = 3 -- How many times in a row do they need to hack the system?
 
 ---- ** PACIFIC HACK CONFIG ** ----
 Config.PacificTime = 8 -- How much time do they have to enter the hack?
@@ -234,7 +245,7 @@ Config.Lockers = {
         ["RareAmount"] = 1, -- Put minimum and Maximum amount of items inside the randomiser
         ---- CASH ITEMS ----
 
-        ["Card"] = 3,
+        ["Card"] = 3, -- chance of getting redphone
         ["Cash"] = 'redphone',
         ["CashAmount"] = 1, -- Put minimum and Maximum amount of items inside the randomiser
     },
@@ -515,9 +526,10 @@ Config.FleecaBanks = {
 }
 
 Config.PaletoBank = {
-    ["coords"] = vector4(-102.63, 6464.34, 31.63, 137.98),  -- Coordinates of the Banks
+    ["coords"] = vector4(-105.28, 6480.04, 31.15, 229.64),  -- Coordinates of the Banks
     ["isOpened"] = false,
     ["object"] = -1185205679,
+    ["SecurityCardReader"] = true,
     ["heading"] = {
         closed = 45.45,
         open = 130.45
@@ -539,28 +551,16 @@ Config.PaletoBank = {
         {coords = vector3(-98.92, 6461.79, 30.65), heading = 132.99, loot = false}
     },
     ["thermite"] = { -- trollys points
-        {coords = vector4(-105.8219, 6475.5615, 31.6267, 316.8870), anim = vector3(-105.5515, 6475.1553, 31.6267), effect = vector3(-105.5154, 6476.2031, 31.6267), isOpen = false},
+        {coords = vector4(-109.38, 6483.51, 31.47, 226.54), anim = vector3(-109.45, 6483.3, 31.47), effect = vector3(-109.5, 6484.3, 31.47), isOpen = false, doorId = 'PaletoOutDoor1'},
+        {coords = vector4(-118.1, 6470.33, 31.1, 140.49), anim = vector3(-118.1, 6470.35, 31.63), effect = vector3(-118.05, 6471.35, 31.63), isOpen = false, doorId = 'PaletoFD'},
+        {coords = vector4(-97.25, 6475.18, 31.44, 136.06), anim = vector3(-97.25, 6475.02, 31.44), effect = vector3(-97.25, 6476, 31.44), isOpen = false, doorId = 'PaletoOutDoor2'},
+    },
+    ["varhacks"] = {
+        {coords = vector4(-91.75, 6464.89, 31, 230.37), completed = false},
+        {coords = vector4(-92.75, 6463.7, 31, 230.37), completed = false},
     },
 }
 
-
--- Config.PaletoSecond = {
---     ["coords"] = vector4(-103.18, 6459.52, 30.63, 238.89),
---     ["drills"] = { 
---         {coords = vector3(-103.4, 6456.39, 31.9267), rotation = vector3(0.0, 0.0, 137.2149), loot = false},
---         {coords = vector3(-101.72, 6456.25, 31.9267), rotation = vector3(0.0, 0.0, 200.5404), loot = false},
---         {coords = vector3(-100.35, 6457.67, 31.9267), rotation = vector3(0.0, 0.0, 249.1688), loot = false},
---         {coords = vector3(-100.43, 6459.7, 31.9267), rotation = vector3(0.0, 0.0, 310.0), loot = false},
---     },
---     ["trollys"] = { -- trollys points
---         {coords = vector3(-105.13, 6457.68, 30.63), heading = 50.29, loot = false}, 
---         {coords = vector3(-107.37, 6458.61, 30.63), heading = 315.0013, loot = false},
---         {coords = vector3(-108.0, 6460.7, 30.63), heading = 225.93, loot = false},
---     },
---     ["thermite"] = { -- trollys points
---         {coords = vector4(-105.39, 6460.81, 31.63, 135.31), anim = vector4(-105.94, 6461.04, 31.63, 137.83), effect = vector3(-105.0, 6461.04, 31.63), isOpen = false},
---     },
--- }
 
 Config.PacificBank = {
     ["coords"] = vector4(253.21, 228.3, 100.72, 73.16),  -- Coordinates of the Banks
@@ -677,8 +677,13 @@ Config.PowerPlant = {
 --function to lock the doors
 function Config.DoorlockAction(type, setLocked)
     if type == 'paleto' then
-        TriggerServerEvent('qb-doorlock:server:updateState',4, setLocked, false, false, true, false, false)
-        TriggerServerEvent('qb-doorlock:server:updateState',5, setLocked, false, false, true, false, false)
+        TriggerServerEvent('qb-doorlock:server:updateState','PaletoFD', setLocked, false, false, true, false, false)
+        TriggerServerEvent('qb-doorlock:server:updateState','PaletoOutDoor1', setLocked, false, false, true, false, false)
+        TriggerServerEvent('qb-doorlock:server:updateState','PaletoOutDoor2', setLocked, false, false, true, false, false)
+        TriggerServerEvent('qb-doorlock:server:updateState','PaletoAdmin', setLocked, false, false, true, false, false)
+        TriggerServerEvent('qb-doorlock:server:updateState','PaletoVault', setLocked, false, false, true, false, false)
+        Config.PaletoBank['varhacks'][1].completed = false
+        Config.PaletoBank['varhacks'][2].completed = false
     elseif type == 'pacific' then
         TriggerServerEvent('qb-doorlock:server:updateState',1, setLocked, false, false, true, false, false)
         TriggerServerEvent('qb-doorlock:server:updateState',2, setLocked, false, false, true, false, false)
@@ -686,3 +691,20 @@ function Config.DoorlockAction(type, setLocked)
         TriggerServerEvent('qb-doorlock:server:updateState',6, setLocked, false, false, true, false, false)
     end
 end
+
+-- --Config.BankDoors = {
+--     fleeca = {},
+--     paleto = {
+--         'PaletoFD',
+--         'PaletoOutDoor1',
+--         'PaletoOutDoor2',
+--         'PaletoAdmin',
+--         'PaletoVault',
+--     },
+--     pacific = {
+--         6,
+--         1,
+--         2,
+--         3
+--     },
+-- }

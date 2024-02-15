@@ -228,67 +228,6 @@ CreateThread(function()
   end
 end)
 
--- table Paleto
-CreateThread(function() 
-  if Config.TargetOption == 'bt' then
-      exports['bt-target']:AddBoxZone('qb-banklaptop:tablepaleto'..math.random(1,100), vector3(Config.PaletoBank['grab']['pos'].x, Config.PaletoBank['grab']['pos'].y, Config.PaletoBank['grab']['pos'].z), 1.3, 1.3, { 
-          name = 'qb-banklaptop:tablepaleto'..math.random(1,100), 
-          heading = Config.PaletoBank['grab']['heading'],
-          debugPoly = Config.debugPoly, 
-          minZ = Config.PaletoBank['grab']['pos'].z-1,
-          maxZ = Config.PaletoBank['grab']['pos'].z+1,
-      }, {
-      options = { 
-          { 
-              type = 'client',
-              event = 'qb-bankrobbery:tablepaleto',
-              icon = 'fas fa-hand-paper',
-              label = 'Grab Loot',
-              job = {'all'},
-          }
-      },
-          distance = 1.0,
-      })
-    elseif Config.TargetOption == 'qb' then 
-      exports['qb-target']:AddBoxZone('qb-banklaptop:tablepaleto'..math.random(1,100), vector3(Config.PaletoBank['grab']['pos'].x, Config.PaletoBank['grab']['pos'].y, Config.PaletoBank['grab']['pos'].z), 1.3, 1.3, { 
-        name = 'qb-banklaptop:tablepaleto'..math.random(1,100), 
-        heading = Config.PaletoBank['grab']['heading'],
-        debugPoly = Config.debugPoly, 
-        minZ = Config.PaletoBank['grab']['pos'].z-1,
-        maxZ = Config.PaletoBank['grab']['pos'].z+1,
-    }, {
-    options = { 
-        { 
-            type = 'client',
-            event = 'qb-bankrobbery:tablepaleto',
-            icon = 'fas fa-hand-paper',
-            label = 'Grab Loot',
-            job = all,
-        }
-    },
-        distance = 1.0,
-    })
-    elseif Config.TargetOption == 'berkie' then 
-      exports['berkie-target']:AddBoxZone('qb-banklaptop:tablepaleto'..math.random(1,100), vector3(Config.PaletoBank['grab']['pos'].x, Config.PaletoBank['grab']['pos'].y, Config.PaletoBank['grab']['pos'].z), 1.3, 1.3, { 
-        name = 'qb-banklaptop:tablepaleto'..math.random(1,100), 
-        heading = Config.PaletoBank['grab']['heading'],
-        debugPoly = Config.debugPoly, 
-        minZ = Config.PaletoBank['grab']['pos'].z-1,
-        maxZ = Config.PaletoBank['grab']['pos'].z+1,
-    }, {
-    options = { 
-        { 
-            type = 'client',
-            event = 'qb-bankrobbery:tablepaleto',
-            icon = 'fas fa-hand-paper',
-            label = 'Grab Loot',
-            job = all,
-        }
-    },
-        distance = 1.0,
-    })
-    end
-end)
 
 --  Trays Paleto
 CreateThread(function() 
@@ -482,9 +421,34 @@ CreateThread(function()
   end
 end)
 
+--Paleto VAR hacks
+CreateThread(function()
+    for k,v in pairs(Config.PaletoBank['varhacks']) do
+        local hackId = 'HackSystem' ..k
+        exports['qb-target']:AddBoxZone(hackId, vector3(Config.PaletoBank['varhacks'][k]['coords'].x, Config.PaletoBank['varhacks'][k]['coords'].y, Config.PaletoBank['varhacks'][k]['coords'].z), 0.4, 1.2, {
+            name = hackId, 
+            heading = Config.PaletoBank['varhacks'][k]['coords'].w,
+            debugPoly = Config.debugPoly, 
+            minZ = Config.PaletoBank['varhacks'][k]['coords'].z-1,
+            maxZ = Config.PaletoBank['varhacks'][k]['coords'].z+1,
+            }, {
+            options = { 
+            { 
+                type = 'client',
+                event = 'qb-bankrobbery:paleto:varhack',
+                icon = 'fas fa-laptop-code',
+                label = 'Hack Computer System',
+                job = all,
+            }
+            },
+            distance = 1.2,
+        })
+    end
+end)
+
 -- Paleto Laptop Use
 CreateThread(function() 
-  exports['qb-target']:AddBoxZone('LaptopUse'..math.random(1,100), vector3(-102.63, 6464.34, 31.63), 1, 1, {
+  exports['qb-target']:AddBoxZone('LaptopUse'..math.random(1,100), vector3(-104.78, 6479.34, 31.3), 1, 1, {
     name = 'LaptopUse'..math.random(1,100),
     heading = 132.94,
     debugPoly = Config.debugPoly,

@@ -94,16 +94,16 @@ Config.DoorList = {
 	-- 	distance = 2.0
 	-- },
 	-- Paleto Door 2 opened with thermite
-	{
-		objName = 'v_ilev_cbankvaulgate02',
-		objCoords  = vec3(-106.26, 6476.01, 31.98),
-		textCoords = vec3(-105.5, 6475.08, 31.99),
-		objYaw = -45.0,
-		authorizedJobs = { 'police' },
-		locked = true,
-		pickable = false,
-		distance = 1.5
-	},
+	-- {
+	-- 	objName = 'v_ilev_cbankvaulgate02',
+	-- 	objCoords  = vec3(-106.26, 6476.01, 31.98),
+	-- 	textCoords = vec3(-105.5, 6475.08, 31.99),
+	-- 	objYaw = -45.0,
+	-- 	authorizedJobs = { 'police' },
+	-- 	locked = true,
+	-- 	pickable = false,
+	-- 	distance = 1.5
+	-- },
 	-- First Pacific Door opened with lockpick 
 	{
 		objName = 'hei_v_ilev_bk_gate_pris',
