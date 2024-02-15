@@ -6,7 +6,6 @@ RegisterNetEvent('qb-bankrobbery:client:robberyCall', function(type, key, street
             cameraId = Config.FleecaBanks[key]['camId']
             bank = 'Fleeca'
             PlaySound(-1, 'Lose_1st', 'GTAO_FM_Events_Soundset', 0, 0, 1)
-            print("About to create a visual alert")
             exports['ps-dispatch']:FleecaBankRobbery(cameraId)
         elseif type == 'paleto' then
             cameraId = Config.PaletoBank['camId']

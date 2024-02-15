@@ -526,13 +526,14 @@ Config.FleecaBanks = {
 }
 
 Config.PaletoBank = {
-    ["coords"] = vector4(-105.28, 6480.04, 31.15, 229.64),  -- Coordinates of the Banks
+    ["coords"] = vector4(-105.28, 6480.04, 31.15, 229.64),  -- Coordinates of the Laptop Hack
+    -- ["doorLocation"] = vector4(-101.99, 6463.28, 31.63, 221.02), -- coordinates of the card hack
     ["isOpened"] = false,
-    ["object"] = -1185205679,
+    ["object"] = -2050208642,
     ["SecurityCardReader"] = true,
     ["heading"] = {
-        closed = 45.45,
-        open = 130.45
+        closed = 225,
+        open = 147,
     },
     ["camId"] = 26,
     ["grab"] = { -- middle main grab point

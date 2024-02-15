@@ -122,7 +122,6 @@ RegisterNetEvent('qb-bankrobbery:paleto:thermitedoor', function()
                         DeleteObject(thermal_charge)
 
                         if not copsCalled then
-                            print("Cops not yet called")
                             local s1, s2 = GetStreetNameAtCoord(coords.x, coords.y, coords.z)
                             local street1 = GetStreetNameFromHashKey(s1)
                             local street2 = GetStreetNameFromHashKey(s2)
@@ -130,7 +129,6 @@ RegisterNetEvent('qb-bankrobbery:paleto:thermitedoor', function()
                             if street2 ~= nil then
                                 streetLabel = streetLabel .. ' ' .. street2
                             end
-                            print("Trying to call cops")
                             TriggerServerEvent('qb-bankrobbery:server:callCops', 'paleto', 0, streetLabel, coords)
                             copsCalled = true
                         end
@@ -169,10 +167,8 @@ RegisterNetEvent('qb-bankrobbery:paleto:varhack', function()
                 if success then
                     if Config.PaletoBank['varhacks'][k].completed == false then
                         Config.PaletoBank['varhacks'][k].completed = true
-                        print("Hack successful")
                         exports['qb-target']:RemoveZone(hackId)
                         totalCompleted = totalCompleted + 1
-                        print(totalCompleted)
 
                         if totalCompleted == 2 then
                             TriggerServerEvent('qb-doorlock:server:updateState', 'PaletoAdmin', false, false, false, true, false, false)
@@ -252,10 +248,11 @@ RegisterNetEvent('qb-bankrobbery:UsePaletoCard', function()
                     -- check uses
                     exports['memorygame']:thermiteminigame(5, 3, 4, 30,
                     function() -- success
+                        SetUpPaleto()
                         TriggerServerEvent('qb-bankrobbery:server:RemovePaletoDoorCard')
+                        
                         TriggerServerEvent('qb-bankrobbery:server:setBankState', true, 'paleto', 0)
                         TriggerServerEvent('qb-robbery:server:succesHeist', 25)
-                        SetUpPaleto()
                         QBCore.Functions.Notify(Config.Notify['HackerSuccess'], 'success')
                         local time = (Config.DoorCD*(60*1000))
                         local minutes = math.ceil(time/1000)
@@ -266,7 +263,6 @@ RegisterNetEvent('qb-bankrobbery:UsePaletoCard', function()
                         Wait(time/2)
 
                         TriggerServerEvent('qb-doorlock:server:updateState', 'PaletoVault', false, false, false, true, false, false)
-
 
                         TriggerServerEvent('qb-bankrobbery:server:setTimeout', 'paleto')
                         Wait(Config.BankTimer['paleto'] * (60 * 1000))

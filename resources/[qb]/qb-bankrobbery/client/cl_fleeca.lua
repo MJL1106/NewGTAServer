@@ -205,16 +205,16 @@ local function OpenPacificDoor()
     end
 end
 
--- Paletos
-local function OpenPaletoDoor()
-    local object = GetClosestObjectOfType(Config.PaletoBank['coords'].x, Config.PaletoBank['coords'].y, Config.PaletoBank['coords'].z, 5.0, Config.PaletoBank['object'], false, false, false)
-    local timeOut = 10
-    local entHeading = Config.PaletoBank['heading'].closed
+-- -- Paletos
+-- local function OpenPaletoDoor()
+--     local object = GetClosestObjectOfType(Config.PaletoBank['doorLocation'].x, Config.PaletoBank['doorLocation'].y, Config.PaletoBank['doorLocation'].z, 5.0, Config.PaletoBank['object'], false, false, false)
+--     local timeOut = 10
+--     local entHeading = Config.PaletoBank['heading'].closed
 
-    if object ~= 0 then
-        SetEntityHeading(object, Config.PaletoBank['heading'].open)
-    end
-end
+--     if object ~= 0 then
+--         SetEntityHeading(object, Config.PaletoBank['heading'].open)
+--     end
+-- end
 
 -- Fleecas
 local function OpenBankDoor(closestBank)

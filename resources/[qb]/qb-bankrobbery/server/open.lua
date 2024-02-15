@@ -7,7 +7,6 @@ RegisterNetEvent('qb-bankrobbery:server:callCops', function(type, bank, streetLa
         bankLabel = 'Fleeca'
         msg = 'The Alarm has been activated at '..bankLabel.. ' ' ..streetLabel..' (CAMERA ID: '..cameraId..')'
     elseif type == 'paleto' then
-        print("Inside paleto type")
         cameraId = 26
         bankLabel = 'Blaine County Savings'
         msg = 'The Alarm has been activated at '..bankLabel.. ' Paleto Bay (CAMERA ID: '..cameraId..')'
@@ -21,7 +20,6 @@ RegisterNetEvent('qb-bankrobbery:server:callCops', function(type, bank, streetLa
         coords = {x = coords.x, y = coords.y, z = coords.z},
         description = msg,
     }
-    print("About to make the call")
     TriggerClientEvent('qb-bankrobbery:client:robberyCall', -1, type, bank, streetLabel, coords)
     TriggerClientEvent('qb-phone:client:addPoliceAlert', -1, alertData)
 end)
