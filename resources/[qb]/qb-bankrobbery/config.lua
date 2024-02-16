@@ -19,7 +19,7 @@ Config.TargetOption = "qb" -- use either "bt", "qb" or "berkie" depending on whi
 Config.Wrapper = "ox" -- Use ox or ghmatti, THIS IS FOR THE BAN TRIGGER nothing else leave this as whatever if you don't use Config.BanModders
 Config.lowerVaultEnabled = "false" -- Extra step of pacific hiest that uses "name here" pacific bank MLO ("link here")
 
-Config.debugPoly = false -- Show polyzones for targets
+Config.debugPoly = true -- Show polyzones for targets
 Config.EnableTrades = false -- Accept trading for Laptops?
 
 ---- ** POLICE CONFIG ** ----
@@ -248,6 +248,8 @@ Config.Lockers = {
         ["Card"] = 3, -- chance of getting redphone
         ["Cash"] = 'redphone',
         ["CashAmount"] = 1, -- Put minimum and Maximum amount of items inside the randomiser
+
+        ["OfficeItem"] = 'encrypted_hdd',
     },
 }
 
@@ -583,6 +585,12 @@ Config.PacificBank = {
         {coords = vector3(259.4137, 218.0399, 101.8832), rotation = vector3(0.0, 0.0, 338.5553), loot = false},
         {coords = vector3(258.2209, 214.2284, 101.8832), rotation = vector3(0.0, 0.0, 159.3905), loot = false},
         {coords = vector3(266.0605, 213.6284, 101.8832), rotation = vector3(0.0, 0.0, 244.9056), loot = false},
+    },
+    ["officedrill"] = {
+        {coords = vector3(278.88, 217.42, 110.27), rotation = vector3(0.0, 0.0, 340), loot = false},
+    },
+    ["officehack"] = {
+        {coords = vector3(278.67, 213.05, 110.05), rotation = vector3(0.0, 0.0, 100), loot = false},
     },
     ["trollys"] = { -- trollys points
         {coords = vector3(262.5378, 212.7852, 100.6833), heading = 340.0059, loot = false}, 

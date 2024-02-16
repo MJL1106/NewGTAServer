@@ -465,6 +465,19 @@ RegisterNetEvent('qb-bankrobbery:server:drillLoot', function(bank, pos, closestB
     end
 end)
 
+RegisterNetEvent('qb-bankrobbery:server:officeDrillLoot', function()
+    local src = source
+	local Player = QBCore.Functions.GetPlayer(src)
+    local item = Config.Lockers["Pacific"]["OfficeItem"]
+    local amount = 1
+
+    Player.Functions.AddItem(item, amount, false)
+    TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[item], 'add')
+    TriggerClientEvent('QBCore:Notify', src, Config.Notify["found"] .. amount .. ' '..item)
+    TriggerEvent('qb-log:server:CreateLog', 'bankrobbery', 'Bank Robbery', 'green', '**Goldbars**:\n'..item..'\n**Person**:\n'..GetPlayerName(src))
+end)
+
+
 RegisterNetEvent('qb-bankrobbery:server:GetTrolleyLoot', function(Trolley, bank, pos, closestBank)
 	local src = source
 	local Player = QBCore.Functions.GetPlayer(src)

@@ -89,6 +89,7 @@ RegisterNetEvent('qb-bankrobbery:pacific:thermitedoor', function()
     end)
 end)
 
+--controls the hacks to unlock the office
 local totalCompleted = 0
 RegisterNetEvent('qb-bankrobbery:pacific:hacktype', function()
     local ped = PlayerPedId()
@@ -97,7 +98,6 @@ RegisterNetEvent('qb-bankrobbery:pacific:hacktype', function()
         local dist = #(coords - vector3(v.coords.x, v.coords.y, v.coords.z))
         if dist <= 1.5 and not v.completed then  -- Check if hack has not been completed
             SetEntityHeading(ped, v.coords.w)
-            print(v.hack)
             if v.hack == 'var' then
                 exports['varhack']:OpenHackingGame(function(success)
                     if success then
@@ -136,6 +136,23 @@ RegisterNetEvent('qb-bankrobbery:pacific:hacktype', function()
                     end
                 end, 20)  -- Keep these parameters as they are essential for the function to operate correctly
                 break  -- Exit the loop if a hack is initiated to prevent multiple hacks at once
+            end
+        end
+    end
+end)
+
+RegisterNetEvent('qb-bankrobbery:pacific:PacificOfficeHack', function()
+    local ped = PlayerPedId()
+    local coords = GetEntityCoords(ped)
+    for k, v in pairs(Config.PacificBank['officehack']) do
+        local dist = #(coords - vector3(v.coords.x, v.coords.y, v.coords.z))
+        if dist <= 1.5 and not v.completed then  -- Check if hack has not been completed
+            local result = exports['numbers']:StartNumbersGame(5, 10, 10)
+
+            if result then -- Success
+                print("Wow! You did it!")
+            else -- Failed
+                print("You failed, unlucky.")
             end
         end
     end
@@ -548,6 +565,126 @@ RegisterNetEvent('qb-bankrobbery:PacificDrill', function()
                                 DeleteObject(laserDrill)
                                 LocalPlayer.state:set('inv_busy', false, true) -- Not Busy
                                 TriggerServerEvent('qb-bankrobbery:server:drillLoot', 'pacific')
+                            else
+                                StopSound(soundId)
+                                NetworkStartSynchronisedScene(scene4)
+                                PlayCamAnim(cam, 'drill_straight_fail_cam', animDict, vaultPos, vaultRot, 0, 2)
+                                Wait(GetAnimDuration(animDict, 'drill_straight_fail') * 1000 - 1500)
+                                RenderScriptCams(false, false, 0, 1, 0)
+                                DestroyCam(cam, false)
+                                ClearPedTasks(ped)
+                                DeleteObject(bag)
+                                DeleteObject(laserDrill)
+                                TriggerServerEvent('qb-bankrobbery:server:pacific:lootSync', 'drills', k)
+                                grabNow = false
+                                LocalPlayer.state:set('inv_busy', false, true) -- Not Busy
+                                TriggerServerEvent('qb-bankrobbery:server:drilldamaged')
+                            end
+                        end)
+                    else
+                        QBCore.Functions.Notify(Config.Notify['MissingDrill'], 'error', 4500)
+                    end
+                end, Config.LockerRequired)
+            else
+                QBCore.Functions.Notify(Config.Notify["AlreadyDrilled"], 'error')
+            end
+        end
+    end
+end)
+
+RegisterNetEvent('qb-bankrobbery:PacificOfficeDrill', function()
+    local ped = PlayerPedId()
+    local pedCo = GetEntityCoords(ped)
+    for k,v in pairs(Config.PacificBank['officedrill']) do
+        local drillDist = #(pedCo - v['coords'])
+        if drillDist <= 1.5 then
+            if not Config.PacificBank['officedrill'][k]['loot'] then
+                QBCore.Functions.TriggerCallback('qb-Bankrobbery:server:GetItemsNeeded', function(hasItem)
+                    if hasItem then
+                        LocalPlayer.state:set('inv_busy', true, true) -- Busy
+                        TriggerServerEvent('qb-bankrobbery:server:pacific:lootSync', 'drills', k)
+                        local ped = PlayerPedId()
+                        local coords, pedRotation = GetEntityCoords(ped), GetEntityRotation(ped)
+                        local animDict = 'anim_heist@hs3f@ig9_vault_drill@laser_drill@'
+                        loadAnimDict(animDict)
+                        local bagModel = 'hei_p_m_bag_var22_arm_s'
+                        loadModel(bagModel)
+                        local laserDrillModel = 'hei_prop_heist_drill'
+                        loadModel(laserDrillModel)
+
+                        RequestAmbientAudioBank('DLC_HEIST_FLEECA_SOUNDSET', 0)
+                        RequestAmbientAudioBank('DLC_MPHEIST\\HEIST_FLEECA_DRILL', 0)
+                        RequestAmbientAudioBank('DLC_MPHEIST\\HEIST_FLEECA_DRILL_2', 0)
+
+                        soundId = GetSoundId()
+
+                        cam = CreateCam('DEFAULT_ANIMATED_CAMERA', true)
+                        SetCamActive(cam, true)
+                        RenderScriptCams(true, 0, 3000, 1, 0)
+
+                        bag = CreateObject(GetHashKey(bagModel), coords, 1, 0, 0)
+                        laserDrill = CreateObject(GetHashKey(laserDrillModel), coords, 1, 0, 0)
+                        
+                        vaultPos = Config.PacificBank['officedrill'][k]['coords']
+                        vaultRot = Config.PacificBank['officedrill'][k]['rotation']
+
+                        scene1 = NetworkCreateSynchronisedScene(vaultPos, vaultRot, 2, true, false, 1065353216, 0, 1.3)
+                        NetworkAddPedToSynchronisedScene(ped, scene1, animDict, 'intro', 4.0, -4.0, 1033, 0, 1000.0, 0)
+                        NetworkAddEntityToSynchronisedScene(bag, scene1, animDict, 'bag_intro', 1.0, -1.0, 1148846080)
+                        NetworkAddEntityToSynchronisedScene(laserDrill, scene1, animDict, 'intro_drill_bit', 1.0, -1.0, 1148846080)
+
+                        scene2 = NetworkCreateSynchronisedScene(vaultPos, vaultRot, 2, true, false, 1065353216, 0, 1.3)
+                        NetworkAddPedToSynchronisedScene(ped, scene2, animDict, 'drill_straight_start', 4.0, -4.0, 1033, 0, 1000.0, 0)
+                        NetworkAddEntityToSynchronisedScene(bag, scene2, animDict, 'bag_drill_straight_start', 1.0, -1.0, 1148846080)
+                        NetworkAddEntityToSynchronisedScene(laserDrill, scene2, animDict, 'drill_straight_start_drill_bit', 1.0, -1.0, 1148846080)
+
+                        scene3 = NetworkCreateSynchronisedScene(vaultPos, vaultRot, 2, true, false, 1065353216, 0, 1.3)
+                        NetworkAddPedToSynchronisedScene(ped, scene3, animDict, 'drill_straight_end_idle', 4.0, -4.0, 1033, 0, 1000.0, 0)
+                        NetworkAddEntityToSynchronisedScene(bag, scene3, animDict, 'bag_drill_straight_end_idle', 1.0, -1.0, 1148846080)
+                        NetworkAddEntityToSynchronisedScene(laserDrill, scene3, animDict, 'drill_straight_end_idle_drill_bit', 1.0, -1.0, 1148846080)
+
+                        scene4 = NetworkCreateSynchronisedScene(vaultPos, vaultRot, 2, true, false, 1065353216, 0, 1.3)
+                        NetworkAddPedToSynchronisedScene(ped, scene4, animDict, 'drill_straight_fail', 4.0, -4.0, 1033, 0, 1000.0, 0)
+                        NetworkAddEntityToSynchronisedScene(bag, scene4, animDict, 'bag_drill_straight_fail', 1.0, -1.0, 1148846080)
+                        NetworkAddEntityToSynchronisedScene(laserDrill, scene4, animDict, 'drill_straight_fail_drill_bit', 1.0, -1.0, 1148846080)
+
+                        scene5 = NetworkCreateSynchronisedScene(vaultPos, vaultRot, 2, true, false, 1065353216, 0, 1.3)
+                        NetworkAddPedToSynchronisedScene(ped, scene5, animDict, 'drill_straight_end', 4.0, -4.0, 1033, 0, 1000.0, 0)
+                        NetworkAddEntityToSynchronisedScene(bag, scene5, animDict, 'bag_drill_straight_end', 1.0, -1.0, 1148846080)
+                        NetworkAddEntityToSynchronisedScene(laserDrill, scene5, animDict, 'drill_straight_end_drill_bit', 1.0, -1.0, 1148846080)
+
+                        scene6 = NetworkCreateSynchronisedScene(vaultPos, vaultRot, 2, true, false, 1065353216, 0, 1.3)
+                        NetworkAddPedToSynchronisedScene(ped, scene6, animDict, 'exit', 4.0, -4.0, 1033, 0, 1000.0, 0)
+                        NetworkAddEntityToSynchronisedScene(bag, scene6, animDict, 'bag_exit', 1.0, -1.0, 1148846080)
+                        NetworkAddEntityToSynchronisedScene(laserDrill, scene6, animDict, 'exit_drill_bit', 1.0, -1.0, 1148846080)
+
+                        NetworkStartSynchronisedScene(scene1)
+                        PlayCamAnim(cam, 'intro_cam', animDict, vaultPos, vaultRot, 0, 2)
+                        Wait(GetAnimDuration(animDict, 'intro') * 1000)
+                        
+                        NetworkStartSynchronisedScene(scene2)
+                        PlayCamAnim(cam, 'drill_straight_start_cam', animDict, vaultPos, vaultRot, 0, 2)
+                        
+                        NetworkStartSynchronisedScene(scene3)
+                        PlayCamAnim(cam, 'drill_straight_idle_cam', animDict, vaultPos, vaultRot, 0, 2)
+                        PlaySoundFromEntity(soundId, 'Drill', laserDrill, 'DLC_HEIST_FLEECA_SOUNDSET', 1, 0)
+                        TriggerEvent('Drilling:Start',function(success)
+                            if success then
+                                StopSound(soundId)
+                                NetworkStartSynchronisedScene(scene5)
+                                PlayCamAnim(cam, 'drill_straight_end_cam', animDict, vaultPos, vaultRot, 0, 2)
+                                Wait(GetAnimDuration(animDict, 'drill_straight_end') * 1000)
+                                NetworkStartSynchronisedScene(scene6)
+                                PlayCamAnim(cam, 'exit_cam', animDict, vaultPos, vaultRot, 0, 2)
+                                Wait(GetAnimDuration(animDict, 'exit') * 1000)
+                                RenderScriptCams(false, false, 0, 1, 0)
+                                DestroyCam(cam, false)
+                                ClearPedTasks(ped)
+                                DeleteObject(bag)
+                                DeleteObject(laserDrill)
+                                LocalPlayer.state:set('inv_busy', false, true) -- Not Busy
+                                Config.PacificBank['officedrill'][k]['loot'] = true
+                                TriggerServerEvent('qb-bankrobbery:server:officeDrillLoot')
                             else
                                 StopSound(soundId)
                                 NetworkStartSynchronisedScene(scene4)

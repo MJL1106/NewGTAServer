@@ -716,6 +716,56 @@ for k,v in pairs(Config.PacificBank['drills']) do
   end
 end)
 
+--office drill Pacific
+CreateThread(function() 
+    for k,v in pairs(Config.PacificBank['officedrill']) do
+        local drillId = 'Drill'..k
+        exports['qb-target']:AddBoxZone(drillId, vector3(Config.PacificBank['officedrill'][k]['coords'].x, Config.PacificBank['officedrill'][k]['coords'].y, Config.PacificBank['officedrill'][k]['coords'].z), 1.0, 0.8, { 
+            name = drillId, 
+            heading = Config.PacificBank['officedrill'][k]['rotation'].z,
+            debugPoly = Config.debugPoly,
+            minZ = Config.PacificBank['officedrill'][k]['coords'].z-1,
+            maxZ = Config.PacificBank['officedrill'][k]['coords'].z+1,
+            }, {
+            options = { 
+              { 
+                type = 'client',
+                event = 'qb-bankrobbery:PacificOfficeDrill',
+                icon = 'fas fa-cookie',
+                label = 'Drill Saftey Box',
+                job = all,
+              }
+            },
+            distance = 2.0,
+      })
+    end
+end)
+
+--office hack Pacific
+CreateThread(function() 
+    for k,v in pairs(Config.PacificBank['officehack']) do
+        local hackId = 'Drill'..k
+        exports['qb-target']:AddBoxZone(hackId, vector3(Config.PacificBank['officehack'][k]['coords'].x, Config.PacificBank['officehack'][k]['coords'].y, Config.PacificBank['officehack'][k]['coords'].z), 1.0, 0.8, { 
+            name = hackId, 
+            heading = Config.PacificBank['officehack'][k]['rotation'].z,
+            debugPoly = Config.debugPoly,
+            minZ = Config.PacificBank['officehack'][k]['coords'].z-1,
+            maxZ = Config.PacificBank['officehack'][k]['coords'].z+1,
+            }, {
+            options = { 
+              { 
+                type = 'client',
+                event = 'qb-bankrobbery:pacific:PacificOfficeHack',
+                icon = 'fas fa-laptop-code',
+                label = 'Hack Computer System',
+                job = all,
+              }
+            },
+            distance = 2.0,
+      })
+    end
+end)
+
 -- Pacific Laptop Use
 CreateThread(function() 
   exports['qb-target']:AddBoxZone('LaptopUse'..math.random(1,100), vector3(252.91,228.53,101.09), 1, 1, {
