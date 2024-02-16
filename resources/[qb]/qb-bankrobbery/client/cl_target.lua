@@ -479,28 +479,9 @@ end)
 -- Pacific Thermite Doors
 CreateThread(function() 
     for k,v in pairs(Config.PacificBank['thermite']) do
-      if Config.TargetOption == 'bt' then 
-        exports['bt-target']:AddBoxZone('ThermtieDoor'..math.random(1,100), vector3(Config.PacificBank['thermite'][k]['coords'].x, Config.PacificBank['thermite'][k]['coords'].y, Config.PacificBank['thermite'][k]['coords'].z), 0.4, 1.2, {
-            name = 'ThermtieDoor'..math.random(1,100), 
-            heading = Config.PacificBank['thermite'][k]['coords'].w,
-            debugPoly = Config.debugPoly,
-            minZ = Config.PacificBank['thermite'][k]['coords'].z-1,
-            maxZ = Config.PacificBank['thermite'][k]['coords'].z+1,
-            }, {
-            options = { 
-              { 
-                type = 'client',
-                event = 'qb-bankrobbery:pacific:thermitedoor',
-                icon = 'fas fa-bomb',
-                label = 'Open Door',
-                job = {'all'},
-              }
-            },
-            distance = 1.2,
-        })
-      elseif Config.TargetOption == 'qb' then
-        exports['qb-target']:AddBoxZone('ThermtieDoor'..math.random(1,100), vector3(Config.PacificBank['thermite'][k]['coords'].x, Config.PacificBank['thermite'][k]['coords'].y, Config.PacificBank['thermite'][k]['coords'].z), 0.4, 1.2, {
-            name = 'ThermtieDoor'..math.random(1,100), 
+        local hackId = 'HackSystem' ..k
+        exports['qb-target']:AddBoxZone(hackId, vector3(Config.PacificBank['thermite'][k]['coords'].x, Config.PacificBank['thermite'][k]['coords'].y, Config.PacificBank['thermite'][k]['coords'].z), 0.4, 1.2, {
+            name = hackId, 
             heading = Config.PacificBank['thermite'][k]['coords'].w,
             debugPoly = Config.debugPoly, 
             minZ = Config.PacificBank['thermite'][k]['coords'].z-1,
@@ -517,28 +498,33 @@ CreateThread(function()
             },
             distance = 1.2,
       })
-      elseif Config.TargetOption == 'berkie' then
-        exports['berkie-target']:AddBoxZone('ThermtieDoor'..math.random(1,100), vector3(Config.PacificBank['thermite'][k]['coords'].x, Config.PacificBank['thermite'][k]['coords'].y, Config.PacificBank['thermite'][k]['coords'].z), 0.3, 1.4, {
-          name = 'ThermtieDoor'..math.random(1,100), 
-          heading = Config.PacificBank['thermite'][k]['coords'].w,
-          debugPoly = Config.debugPoly,
-          minZ = Config.PacificBank['thermite'][k]['coords'].z-1,
-          maxZ = Config.PacificBank['thermite'][k]['coords'].z+1,
-          }, {
-          options = { 
-            { 
-              type = 'client',
-              event = 'qb-bankrobbery:pacific:thermitedoor',
-              icon = 'fas fa-bomb',
-              label = 'Open Door',
-              job = all,
-            }
-          },
-          distance = 1.2,
-      })
-      end
     end
-  end)
+end)
+
+--Pacific hacktype
+CreateThread(function()
+    for k,v in pairs(Config.PacificBank['hacktype']) do
+        local hackId = 'HackSystem' ..k
+        exports['qb-target']:AddBoxZone(hackId, vector3(Config.PacificBank['hacktype'][k]['coords'].x, Config.PacificBank['hacktype'][k]['coords'].y, Config.PacificBank['hacktype'][k]['coords'].z), 0.4, 1.2, {
+            name = hackId, 
+            heading = Config.PacificBank['hacktype'][k]['coords'].w,
+            debugPoly = Config.debugPoly, 
+            minZ = Config.PacificBank['hacktype'][k]['coords'].z-1,
+            maxZ = Config.PacificBank['hacktype'][k]['coords'].z+1,
+            }, {
+            options = { 
+            { 
+                type = 'client',
+                event = 'qb-bankrobbery:pacific:hacktype',
+                icon = 'fas fa-laptop-code',
+                label = 'Hack Computer System',
+                job = all,
+            }
+            },
+            distance = 1.2,
+        })
+    end
+end)
 
 -- table Pacific
 CreateThread(function() 
@@ -1316,29 +1302,7 @@ end)
 -- PowerPlant Place Bomb
 CreateThread(function()
   for k,v in pairs(Config.PowerPlant['locations']) do
-      if Config.lowerVaultEnabled == 'true' then
-          if Config.TargetOption == 'bt' then 
-              exports['bt-target']:AddBoxZone('placeExplosive'..math.random(1,100), vector3(Config.PowerPlant['locations'][k]['coords'].x, Config.PowerPlant['locations'][k]['coords'].y, Config.PowerPlant['locations'][k]['coords'].z), 0.6, 1.5, {
-                  name = 'placeExplosive'..math.random(1,100), 
-                  heading = Config.PowerPlant['locations'][k]['coords'].w,
-                  debugPoly = Config.debugPoly,
-                  minZ = Config.PowerPlant['locations'][k]['coords'].z-0.3,
-                  maxZ = Config.PowerPlant['locations'][k]['coords'].z+1, 
-              }, {
-                  options = {
-                      {
-                          type = 'client',
-                          event = 'qb-bankrobbery:powerplant:PlaceBomb',
-                          icon = 'fas fa-bomb',
-                          label = 'Place Explosive',
-                          job = {'all'},
-                      }
-                  },
-                  distance = 1.5,
-
-              })
-          elseif Config.TargetOption == 'qb' then
-              exports['qb-target']:AddBoxZone('placeExplosive'..math.random(1,100), vector3(Config.PowerPlant['locations'][k]['coords'].x, Config.PowerPlant['locations'][k]['coords'].y, Config.PowerPlant['locations'][k]['coords'].z), 0.6, 1.5, {
+            exports['qb-target']:AddBoxZone('placeExplosive'..math.random(1,100), vector3(Config.PowerPlant['locations'][k]['coords'].x, Config.PowerPlant['locations'][k]['coords'].y, Config.PowerPlant['locations'][k]['coords'].z), 0.6, 1.5, {
                   name = 'placeExplosive'..math.random(1,100), 
                   heading = Config.PowerPlant['locations'][k]['coords'].w,
                   debugPoly = Config.debugPoly,
@@ -1357,28 +1321,6 @@ CreateThread(function()
                   distance = 1.5,
 
               })
-          elseif Config.TargetOption == 'berkie' then
-              exports['berkie-target']:AddBoxZone('placeExplosive'..math.random(1,100), vector3(Config.PowerPlant['locations'][k]['coords'].x, Config.PowerPlant['locations'][k]['coords'].y, Config.PowerPlant['locations'][k]['coords'].z), 0.6, 1.5, {
-                  name = 'placeExplosive'..math.random(1,100), 
-                  heading = Config.PowerPlant['locations'][k]['coords'].w,
-                  debugPoly = Config.debugPoly,
-                  minZ = Config.PowerPlant['locations'][k]['coords'].z-0.3,
-                  maxZ = Config.PowerPlant['locations'][k]['coords'].z+1, 
-              }, {
-                  options = {
-                      {
-                          type = 'client',
-                          event = 'qb-bankrobbery:powerplant:PlaceBomb',
-                          icon = 'fas fa-bomb',
-                          label = 'Place Explosive',
-                          job = all,
-                      }
-                  },
-                  distance = 1.7,
-
-              })
-            end
-        end
     end
 end)
 

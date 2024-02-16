@@ -61,7 +61,7 @@ function bombAnimation(k)
     NetworkStopSynchronisedScene(scene1)
     ClearPedTasks(ped)
     QBCore.Functions.Notify(Config.Notify["BombExplodes"], 'primary') 
-    Wait(30 * 1000)
+    Wait(3 * 1000)
     DeleteObject(bombObj)
     TriggerServerEvent('qb-bankrobbery:server:ExplodePowerPlant', k)
 end

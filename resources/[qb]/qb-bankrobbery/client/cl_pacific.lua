@@ -1,64 +1,142 @@
 CurrentCops = 0
+local totalThermiteCompleted = 0
+local copsCalled = false
 
 RegisterNetEvent('qb-bankrobbery:pacific:thermitedoor', function()
     local ped = PlayerPedId()
     local coords = GetEntityCoords(ped)
-    for k,v in pairs(Config.PacificBank['thermite']) do
-        local Dist = #(coords - vector3(v['coords'].x, v['coords'].y, v['coords'].z))
-        if Dist <= 1.5 then
-            QBCore.Functions.TriggerCallback('qb-Bankrobbery:server:GetItemsNeeded', function(hasItem)
-                if hasItem then
-                    SetEntityHeading(ped, Config.PacificBank['thermite'][k]['coords'].w)
-                    TriggerServerEvent('qb-bankrobbery:server:RemovePaletoDoorItem')
-                    local gameSettings = v.memorygame
-                    exports['memorygame']:thermiteminigame(gameSettings.correctBlocks, 
-                    gameSettings.incorrectBlocks, 
-                    gameSettings.timeToShow, 
-                    gameSettings.timeToLose,
-                    function() -- success
-                        QBCore.Functions.Notify(Config.Notify["PlacingThermite"], 'success', 4500)
-                        local loc = Config.PacificBank['thermite'][k]['anim']
-                        local rotx, roty, rotz = table.unpack(vec3(GetEntityRotation(ped)))
-                        local bagscene = NetworkCreateSynchronisedScene(loc.x, loc.y, loc.z, rotx, roty, rotz, 2, false, false, 1065353216, 0, 1.3)
-                        local bag = CreateObject(GetHashKey('hei_p_m_bag_var22_arm_s'), loc.x, loc.y, loc.z,  true,  true, false)
-                        SetEntityCollision(bag, false, true)
-                        NetworkAddPedToSynchronisedScene(ped, bagscene, 'anim@heists@ornate_bank@thermal_charge', 'thermal_charge', 1.5, -4.0, 1, 16, 1148846080, 0)
-                        NetworkAddEntityToSynchronisedScene(bag, bagscene, 'anim@heists@ornate_bank@thermal_charge', 'bag_thermal_charge', 4.0, -8.0, 1)
-                        NetworkStartSynchronisedScene(bagscene)
-                        Wait(1500)
-                        local x, y, z = table.unpack(GetEntityCoords(ped))
-                        local thermal_charge = CreateObject(GetHashKey('hei_prop_heist_thermite'), x, y, z + 0.2,  true,  true, true)
-                    
-                        SetEntityCollision(thermal_charge, false, true)
-                        AttachEntityToEntity(thermal_charge, ped, GetPedBoneIndex(ped, 28422), 0, 0, 0, 0, 0, 200.0, true, true, false, true, 1, true)
-                        Wait(4000)
-                    
-                        DetachEntity(thermal_charge, 1, 1)
-                        FreezeEntityPosition(thermal_charge, true)
-                        Wait(100)
-                        DeleteObject(bag)
-                        ClearPedTasks(ped)
-                    
-                        Wait(100)
-                        RequestNamedPtfxAsset('scr_ornate_heist')
-                        while not HasNamedPtfxAssetLoaded('scr_ornate_heist') do
-                            Wait(1)
+    QBCore.Functions.TriggerCallback('qb-bankrobbery:server:IsServerBlackedout', function(isBlackout)
+        if isBlackout then
+            for k,v in pairs(Config.PacificBank['thermite']) do
+                local Dist = #(coords - vector3(v['coords'].x, v['coords'].y, v['coords'].z))
+                if Dist <= 1.5 then
+                    QBCore.Functions.TriggerCallback('qb-Bankrobbery:server:GetItemsNeeded', function(hasItem)
+                        if hasItem then
+                            SetEntityHeading(ped, Config.PacificBank['thermite'][k]['coords'].w)
+                            TriggerServerEvent('qb-bankrobbery:server:RemovePaletoDoorItem')
+                            local gameSettings = v.memorygame
+                            exports['memorygame']:thermiteminigame(gameSettings.correctBlocks, 
+                            gameSettings.incorrectBlocks, 
+                            gameSettings.timeToShow, 
+                            gameSettings.timeToLose,
+                            function() -- success
+                                Config.PacificBank['thermite'][k].completed = true
+                                exports['qb-target']:RemoveZone(hackId)
+                                totalThermiteCompleted = totalThermiteCompleted + 1
+                                QBCore.Functions.Notify(Config.Notify["PlacingThermite"], 'success', 4500)
+                                local loc = Config.PacificBank['thermite'][k]['anim']
+                                local rotx, roty, rotz = table.unpack(vec3(GetEntityRotation(ped)))
+                                local bagscene = NetworkCreateSynchronisedScene(loc.x, loc.y, loc.z, rotx, roty, rotz, 2, false, false, 1065353216, 0, 1.3)
+                                local bag = CreateObject(GetHashKey('hei_p_m_bag_var22_arm_s'), loc.x, loc.y, loc.z,  true,  true, false)
+                                SetEntityCollision(bag, false, true)
+                                NetworkAddPedToSynchronisedScene(ped, bagscene, 'anim@heists@ornate_bank@thermal_charge', 'thermal_charge', 1.5, -4.0, 1, 16, 1148846080, 0)
+                                NetworkAddEntityToSynchronisedScene(bag, bagscene, 'anim@heists@ornate_bank@thermal_charge', 'bag_thermal_charge', 4.0, -8.0, 1)
+                                NetworkStartSynchronisedScene(bagscene)
+                                Wait(1500)
+                                local x, y, z = table.unpack(GetEntityCoords(ped))
+                                local thermal_charge = CreateObject(GetHashKey('hei_prop_heist_thermite'), x, y, z + 0.2,  true,  true, true)
+                            
+                                SetEntityCollision(thermal_charge, false, true)
+                                AttachEntityToEntity(thermal_charge, ped, GetPedBoneIndex(ped, 28422), 0, 0, 0, 0, 0, 200.0, true, true, false, true, 1, true)
+                                Wait(4000)
+                            
+                                DetachEntity(thermal_charge, 1, 1)
+                                FreezeEntityPosition(thermal_charge, true)
+                                Wait(100)
+                                DeleteObject(bag)
+                                ClearPedTasks(ped)
+                            
+                                Wait(100)
+                                RequestNamedPtfxAsset('scr_ornate_heist')
+                                while not HasNamedPtfxAssetLoaded('scr_ornate_heist') do
+                                    Wait(1)
+                                end
+                                ptfx = vector3(Config.PacificBank['thermite'][k]['effect'].x, Config.PacificBank['thermite'][k]['effect'].y, Config.PacificBank['thermite'][k]['effect'].z)
+                                SetPtfxAssetNextCall('scr_ornate_heist')
+                                local effect = StartParticleFxLoopedAtCoord('scr_heist_ornate_thermal_burn', ptfx, 0, 0, 0, 0x3F800000, 0, 0, 0, 0)
+                                Wait(3000)
+                                StopParticleFxLooped(effect, 0)
+                                DeleteObject(thermal_charge)
+                                if totalThermiteCompleted == 3 then
+                                    TriggerServerEvent('qb-doorlock:server:updateState', 'PacifcTopEntrance', false, false, false, true, false, false)
+                                    QBCore.Functions.Notify(Config.Notify["DoorSeemsUnlocked"], 'error', 4500)
+
+                                    if not copsCalled then
+                                        local s1, s2 = GetStreetNameAtCoord(coords.x, coords.y, coords.z)
+                                        local street1 = GetStreetNameFromHashKey(s1)
+                                        local street2 = GetStreetNameFromHashKey(s2)
+                                        local streetLabel = street1
+                                        if street2 ~= nil then
+                                            streetLabel = streetLabel .. ' ' .. street2
+                                        end
+                                        TriggerServerEvent('qb-bankrobbery:server:callCops', 'pacific', 0, streetLabel, coords)
+                                        copsCalled = true
+                                    end
+                                end
+                            end,
+                            function() -- failure
+                                QBCore.Functions.Notify(Config.Notify["FleecaHackFail"], 'error', 4500)
+                            end)
+                        else
+                            QBCore.Functions.Notify(Config.Notify["MissingThermite"], 'error')
                         end
-                        ptfx = vector3(Config.PacificBank['thermite'][k]['effect'].x, Config.PacificBank['thermite'][k]['effect'].y, Config.PacificBank['thermite'][k]['effect'].z)
-                        SetPtfxAssetNextCall('scr_ornate_heist')
-                        local effect = StartParticleFxLoopedAtCoord('scr_heist_ornate_thermal_burn', ptfx, 0, 0, 0, 0x3F800000, 0, 0, 0, 0)
-                        Wait(3000)
-                        StopParticleFxLooped(effect, 0)
-                        DeleteObject(thermal_charge)
-                        TriggerEvent('qb-bankrobbery:UnlockDoorPacific')
-                    end,
-                    function() -- failure
-                        QBCore.Functions.Notify(Config.Notify["FleecaHackFail"], 'error', 4500)
-                    end)
-                else
-                    QBCore.Functions.Notify(Config.Notify["MissingThermite"], 'error')
+                    end, Config.PaletoPacificDoor)
                 end
-            end, Config.PaletoPacificDoor)
+            end
+        else
+            QBCore.Functions.Notify(Config.Notify['PowerStillOn'], 'error')
+        end
+    end)
+end)
+
+local totalCompleted = 0
+RegisterNetEvent('qb-bankrobbery:pacific:hacktype', function()
+    local ped = PlayerPedId()
+    local coords = GetEntityCoords(ped)
+    for k, v in pairs(Config.PacificBank['hacktype']) do
+        local dist = #(coords - vector3(v.coords.x, v.coords.y, v.coords.z))
+        if dist <= 1.5 and not v.completed then  -- Check if hack has not been completed
+            SetEntityHeading(ped, v.coords.w)
+            print(v.hack)
+            if v.hack == 'var' then
+                exports['varhack']:OpenHackingGame(function(success)
+                    if success then
+                        if Config.PacificBank['hacktype'][k].completed == false then
+                            Config.PacificBank['hacktype'][k].completed = true
+                            exports['qb-target']:RemoveZone(hackId)
+                            totalCompleted = totalCompleted + 1
+                            if totalCompleted == 4 then
+                                TriggerServerEvent('qb-doorlock:server:updateState', 'PacificAdminOffice', false, false, false, true, false, false)
+                                TriggerServerEvent('qb-doorlock:server:updateState', 'PacificMainEntrance', false, false, false, true, false, false)
+                                
+                                QBCore.Functions.Notify(Config.Notify["HackerSuccess"], 'error', 4500)
+                            end
+                        end
+                    else
+                        QBCore.Functions.Notify(Config.Notify["FleecaHackFail"], 'error', 4500)
+                    end
+                end, 1,3)  -- Keep these parameters as they are essential for the function to operate correctly
+                break  -- Exit the loop if a hack is initiated to prevent multiple hacks at once
+            elseif v.hack == 'counting' then
+                exports['casinohack-main']:OpenHackingGame(function(success)
+                    if success then
+                        if Config.PacificBank['hacktype'][k].completed == false then
+                            Config.PacificBank['hacktype'][k].completed = true
+                            exports['qb-target']:RemoveZone(hackId)
+                            totalCompleted = totalCompleted + 1
+                            
+                            if totalCompleted == 4 then
+                                TriggerServerEvent('qb-doorlock:server:updateState', 'PacificAdminOffice', false, false, false, true, false, false)
+                                TriggerServerEvent('qb-doorlock:server:updateState', 'PacificMainEntrance', false, false, false, true, false, false)
+                                QBCore.Functions.Notify(Config.Notify["HackerSuccess"], 'error', 4500)
+                            end
+                        end
+                    else
+                        QBCore.Functions.Notify(Config.Notify["FleecaHackFail"], 'error', 4500)
+                    end
+                end, 20)  -- Keep these parameters as they are essential for the function to operate correctly
+                break  -- Exit the loop if a hack is initiated to prevent multiple hacks at once
+            end
         end
     end
 end)
@@ -176,17 +254,6 @@ RegisterNetEvent('qb-bankrobbery:UseBankLaptop', function(colour, laptopData)
                                 -- check uses
                                 TriggerServerEvent('qb-bankrobbery:server:RemoveLaptop', 'laptop_red')
                             
-                                if not copsCalled then
-                                    local s1, s2 = GetStreetNameAtCoord(pos.x, pos.y, pos.z)
-                                    local street1 = GetStreetNameFromHashKey(s1)
-                                    local street2 = GetStreetNameFromHashKey(s2)
-                                    local streetLabel = street1
-                                    if street2 ~= nil then
-                                        streetLabel = streetLabel .. ' ' .. street2
-                                    end
-                                    TriggerServerEvent('qb-bankrobbery:server:callCops', 'pacific', 0, streetLabel, pos)
-                                    copsCalled = true
-                                end
                                 TriggerEvent('qb-bankrobbery:LaptopPacific')
                             end, function() -- Cancel
                                 StopAnimTask(PlayerPedId(), 'anim@gangops@facility@servers@', 'hotwire', 1.0)

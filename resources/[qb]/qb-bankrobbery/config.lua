@@ -19,7 +19,7 @@ Config.TargetOption = "qb" -- use either "bt", "qb" or "berkie" depending on whi
 Config.Wrapper = "ox" -- Use ox or ghmatti, THIS IS FOR THE BAN TRIGGER nothing else leave this as whatever if you don't use Config.BanModders
 Config.lowerVaultEnabled = "false" -- Extra step of pacific hiest that uses "name here" pacific bank MLO ("link here")
 
-Config.debugPoly = false  -- Show polyzones for targets
+Config.debugPoly = false -- Show polyzones for targets
 Config.EnableTrades = false -- Accept trading for Laptops?
 
 ---- ** POLICE CONFIG ** ----
@@ -318,6 +318,7 @@ Config.Notify = { -- Don't change the ["Text"] only change the text on the RIGHT
     ["BankDoorOpen"] = "It seems the bank is already open..",
     ["BankCoolDown"] = "The security lock is active, opening the door is currently not possible..",
     ["HackerSuccess"] = "You cracked the security system...",
+    ["DoorSeemsUnlocked"] = "The thermite has disabled a lock",
     ["DoorMinutes"] = "Bank Door opens in ",
     ["DoorSecondHalf"] = " Seconds",
     ["MissingDrill"] = "You don't have anything to open this with...",
@@ -334,6 +335,7 @@ Config.Notify = { -- Don't change the ["Text"] only change the text on the RIGHT
     ["PlacingThermite"] = "Placing Thermite...",
     ["MissingThermite"] = "This dosn't seem right...",
     ["AlreadyExploded"] = "This dosn't seem right...",
+    ["PowerStillOn"] = "Electricity still running...",
 
     -- Item // server side notify
     ["Got"] = "You got ",
@@ -588,13 +590,19 @@ Config.PacificBank = {
         {coords = vector3(259.67, 213.78, 100.6833), heading = 161.9024, loot = false},
     },
     ["thermite"] = { -- Thermite points
-        {coords = vector4(257.0483, 220.5190, 106.2852, 332.2341), anim = vector3(257.40, 220.20, 106.35), effect = vector3(257.39, 221.20, 106.29), isOpen = false,
-        memorygame = {correctBlocks = 8, incorrectBlocks = 3, timeToShow = 4, timeToLose = 12}}, 
-        {coords = vector4(252.4627, 220.8329, 101.6832, 161.7461), anim = vector3(252.95, 220.70, 101.76), effect = vector3(252.985, 221.70, 101.72), isOpen = false,
-        memorygame = {correctBlocks = 10, incorrectBlocks = 3, timeToShow = 4, timeToLose = 10}},
-        {coords = vector4(261.5854, 215.0085, 101.6834, 254.1465), anim = vector3(261.65, 215.60, 101.76), effect = vector3(261.68, 216.63, 101.75), isOpen = false,
-        memorygame = {correctBlocks = 14, incorrectBlocks = 2, timeToShow = 4, timeToLose = 8}},
+        {coords = vector4(258.07, 274.6, 104.63, 160.37), anim = vector3(258.07, 274.7, 105.66), effect = vector3(258.07, 275.7, 105.66), isOpen = false,
+        memorygame = {correctBlocks = 1, incorrectBlocks = 3, timeToShow = 4, timeToLose = 12}, completed = false}, 
+        {coords = vector4(285.45, 264.5, 104.63, 160.38), anim = vector3(285.45, 264.7, 105.66), effect = vector3(285.45, 265.73, 105.66), isOpen = false,
+        memorygame = {correctBlocks = 1, incorrectBlocks = 3, timeToShow = 4, timeToLose = 10}, completed = false},
+        {coords = vector4(293.85, 267.2, 104.63, 340), anim = vector3(293.85, 267.15, 105.66), effect = vector3(293.85, 268.15, 105.66), isOpen = false,
+        memorygame = {correctBlocks = 1, incorrectBlocks = 2, timeToShow = 4, timeToLose = 8}, completed = false},
         --memory game field controls the difficulty of each door in the bank
+    },
+    ["hacktype"] = {
+        {coords = vector4(270.37, 231.65, 110.09, 170), completed = false, hack = 'var'},
+        {coords = vector4(261.7, 234.82, 110.09, 170), completed = false, hack = 'var'},
+        {coords = vector4(251.85, 208.63, 110.09, 350), completed = false, hack = 'var'},
+        {coords = vector4(260.52, 205.45, 110.09, 350), completed = false, hack = 'counting'},
     },
 }
 
@@ -662,16 +670,17 @@ Config.lowerVault = {
 
 -- This can be customized to however you'd like!
 
-Config.PowerPlantLocations = 6 -- Change this if you change the powerplant locations amount
+Config.PowerPlantLocations = 1 -- Change this if you change the powerplant locations amount
 
 Config.PowerPlant = {
     ["locations"] = {
-        {coords = vector4(2831.17, 1489.19, 24.73, 165.19), open = false},
-        {coords = vector4(2825.2422, 1490.5781, 24.7287, 164.2826), open = false},
-        {coords = vector4(2817.6945, 1499.2111, 24.7288, 344.5275), open = false},
-        {coords = vector4(2811.8256, 1500.7874, 24.7288, 346.8244), open = false},
-        {coords = vector4(2829.3327, 1507.0774, 24.7287, 167.7297), open = false},
-        {coords = vector4(2835.2323, 1505.6520, 24.7287, 165.2132), open = false},
+        -- {coords = vector4(2831.17, 1489.19, 24.73, 165.19), open = false},
+        -- {coords = vector4(2825.2422, 1490.5781, 24.7287, 164.2826), open = false},
+        -- {coords = vector4(2817.6945, 1499.2111, 24.7288, 344.5275), open = false},
+        -- {coords = vector4(2811.8256, 1500.7874, 24.7288, 346.8244), open = false},
+        -- {coords = vector4(2829.3327, 1507.0774, 24.7287, 167.7297), open = false},
+        -- {coords = vector4(2835.2323, 1505.6520, 24.7287, 165.2132), open = false},
+        {coords = vector4(253.21, 284.47, 105.53, 256.25), open = false},
     },
 }
 

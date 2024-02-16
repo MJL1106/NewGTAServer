@@ -1,7 +1,8 @@
 
 
 -- 1109357065 created by MJL
-Config.DoorList['PacificMainOffice'] = {
+Config.DoorList['PacificAdminOffice'] = {
+    doorRate = 1.0,
     locked = true,
     doors = {
         {objName = 1109357065, objYaw = 70.000213623047, objCoords = vec3(273.183899, 216.862823, 110.280518)},
@@ -10,5 +11,4 @@ Config.DoorList['PacificMainOffice'] = {
     distance = 2,
     authorizedJobs = { ['police'] = 0 },
     doorType = 'double',
-    doorRate = 1.0,
 }

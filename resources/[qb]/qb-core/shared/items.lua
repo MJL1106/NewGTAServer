@@ -768,6 +768,7 @@ QBShared.Items = {
 	 ["usb_red"] 		 	     	 = {["name"] = "usb_red", 						["label"] = "Red USB", 					["weight"] = 5000, 	    	["type"] = "item", 		["image"] = "usb_red.png", 			["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,	   ["combinable"] = nil,   ["description"] = "A security USB"},
 	 ["usb_blue"] 				 	 = {["name"] = "usb_blue", 			  	  		["label"] = "Blue USB", 				["weight"] = 5000, 			["type"] = "item", 		["image"] = "usb_blue.png", 			["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,	   ["combinable"] = nil,   ["description"] = "A security USB"},
 	 ["usb_gold"] 			 	 	 = {["name"] = "usb_gold", 			  			["label"] = "Gold USB", 				["weight"] = 5000, 			["type"] = "item", 		["image"] = "usb_gold.png", 			["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,	   ["combinable"] = nil,   ["description"] = "A security USB"},
+	 ['nightvision'] 				 = {['name'] = 'nightvision', 					['label'] = 'Nightvision', 				['weight'] = 1200, 		['type'] = 'item', 		['image'] = 'nightvision.png', 			['unique'] = false, 	['useable'] = true, 	['shouldClose'] = false,   ['combinable'] = nil,   ['description'] = 'Realy nice for when its dark.'},
 
 
 }
