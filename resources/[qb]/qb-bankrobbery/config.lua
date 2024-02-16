@@ -107,8 +107,8 @@ Config.PaletoRepeat = 3 -- How many times in a row do they need to hack the syst
 
 ---- ** PACIFIC HACK CONFIG ** ----
 Config.PacificTime = 8 -- How much time do they have to enter the hack?
-Config.PacificBlocks = 6 -- How many different blocks can the hack have?
-Config.PacificRepeat = 3 -- How many times in a row do they need to hack the system?
+Config.PacificBlocks = 4 -- How many different blocks can the hack have?
+Config.PacificRepeat = 1 -- How many times in a row do they need to hack the system?
 
 ---- ** LOWER VAULT HACK CONFIG ** ----
 Config.HDDTime = 10 -- How much time do they have to enter the hack?
@@ -568,7 +568,7 @@ Config.PaletoBank = {
 
 
 Config.PacificBank = {
-    ["coords"] = vector4(253.21, 228.3, 100.72, 73.16),  -- Coordinates of the Banks
+    ["coords"] = vector4(242.14, 219.21, 97.12, 166.89),  -- Coordinates of the Banks
     ["isOpened"] = false,
     ["object"] = 961976194,
     ["camId"] = 25,
@@ -577,8 +577,8 @@ Config.PacificBank = {
         open = 5.00001
     },
     ["grab"] = { -- middle main grab point
-        pos = vector3(264.2917, 213.7544, 101.5277),
-        heading = 257.1971,
+        pos = vector3(242.91, 210.64, 96.98),
+        heading = 17.41,
         loot = false
     },
     ["drills"] = { -- drill points
@@ -593,8 +593,8 @@ Config.PacificBank = {
         {coords = vector3(278.67, 213.05, 110.05), rotation = vector3(0.0, 0.0, 100), loot = false},
     },
     ["trollys"] = { -- trollys points
-        {coords = vector3(262.5378, 212.7852, 100.6833), heading = 340.0059, loot = false}, 
-        {coords = vector3(263.7690, 216.3632, 100.6833), heading = 161.9024, loot = false},
+        {coords = vector3(244.84, 214.13, 96.12), heading = 64.71, loot = false}, 
+        {coords = vector3(241.18, 215.6, 96.12), heading = 253.16, loot = false},
         {coords = vector3(259.67, 213.78, 100.6833), heading = 161.9024, loot = false},
     },
     ["thermite"] = { -- Thermite points
@@ -609,7 +609,7 @@ Config.PacificBank = {
     ["hacktype"] = {
         {coords = vector4(270.37, 231.65, 110.09, 170), completed = false, hack = 'var'},
         {coords = vector4(261.7, 234.82, 110.09, 170), completed = false, hack = 'var'},
-        {coords = vector4(251.85, 208.63, 110.09, 350), completed = false, hack = 'var'},
+        {coords = vector4(251.85, 208.63, 110.09, 350), completed = false, hack = 'counting'},
         {coords = vector4(260.52, 205.45, 110.09, 350), completed = false, hack = 'counting'},
     },
 }

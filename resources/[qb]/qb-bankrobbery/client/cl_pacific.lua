@@ -150,68 +150,88 @@ RegisterNetEvent('qb-bankrobbery:pacific:PacificOfficeHack', function()
             local result = exports['numbers']:StartNumbersGame(5, 10, 10)
 
             if result then -- Success
-                print("Wow! You did it!")
+                QBCore.Functions.Notify(Config.Notify["HackerSuccess"], 'error', 4500)
+                Citizen.CreateThread(function() 
+                    exports['qb-target']:AddBoxZone('SecurityCardReader', vector3(267.5, 213.22, 97), 1, 1, {
+                      name = 'SecurityCardReader',
+                      heading = 70,
+                      debugPoly = Config.debugPoly,
+                      minZ = 96,
+                      maxZ = 97.5,
+                      }, {
+                      options = {
+                          {
+                              type = 'client',
+                              event = 'qb-bankrobbery:UsePacificCard',
+                              icon = 'fas fa-credit-card',
+                              label = 'Use Bank Card',
+                              item = 'security_card_02', --this makes it so the third eye only displays if you have the correct card
+                              job = all,
+                          },
+                      },
+                      distance = 2.5
+                    })
+                end)
             else -- Failed
-                print("You failed, unlucky.")
+                QBCore.Functions.Notify(Config.Notify["FleecaHackFail"], 'error', 4500)
             end
         end
     end
 end)
 
-RegisterNetEvent('qb-bankrobbery:UnlockDoorPacific', function() 
-    local ped = PlayerPedId()
-    local pos = GetEntityCoords(ped)
-    local dist = #(pos - vector3(252.5, 221.16, 101.68))
-    if dist <= 3 then
-        if Config.Doorlocks == "qb" then 
-            TriggerServerEvent('qb-doorlock:server:updateState', 2, false, false, false, true, false, false)
-        elseif Config.Doorlocks == "nui" or Config.Doorlocks == "NUI" then 
-            TriggerServerEvent('nui_doorlock:server:updateState', Config.DoorlockID5, false, false, false, true)
-        end
-    elseif dist > 3 and dist <= 8 then
-        if Config.Doorlocks == "qb" then 
-            TriggerServerEvent('qb-doorlock:server:updateState', 6, false, false, false, true, false, false)
-            Citizen.CreateThread(function() 
-                exports['qb-target']:AddBoxZone('SecurityCardReader'..math.random(1,100), vector3(262.22, 223.05, 106.58), 1, 1, {
-                  name = 'SecurityCardReader'..math.random(1,100),
-                  heading = 46.78,
-                  debugPoly = Config.debugPoly,
-                  minZ = 106.4,
-                  maxZ = 106.7,
-                  }, {
-                  options = {
-                      {
-                          type = 'client',
-                          event = 'qb-bankrobbery:UsePacificCard',
-                          icon = 'fas fa-credit-card',
-                          label = 'Use Bank Card',
-                          item = 'security_card_02', --this makes it so the third eye only displays if you have the correct card
-                          job = all,
-                      },
-                  },
-                  distance = 2.5
-                })
-            end)
-        elseif Config.Doorlocks == "nui" or Config.Doorlocks == "NUI" then 
-            TriggerServerEvent('nui_doorlock:server:updateState', Config.DoorlockID3, false, false, false, true)
-        end
-    else
-        if Config.Doorlocks == "qb" then 
-            TriggerServerEvent('qb-doorlock:server:updateState', 3, false, false, false, true, false, false)
-        elseif Config.Doorlocks == "nui" or Config.Doorlocks == "NUI" then 
-            TriggerServerEvent('nui_doorlock:server:updateState', Config.DoorlockID6, false, false, false, true)
-        end
-    end
-end)
+-- RegisterNetEvent('qb-bankrobbery:UnlockDoorPacific', function() 
+--     local ped = PlayerPedId()
+--     local pos = GetEntityCoords(ped)
+--     local dist = #(pos - vector3(252.5, 221.16, 101.68))
+--     if dist <= 3 then
+--         if Config.Doorlocks == "qb" then 
+--             TriggerServerEvent('qb-doorlock:server:updateState', 2, false, false, false, true, false, false)
+--         elseif Config.Doorlocks == "nui" or Config.Doorlocks == "NUI" then 
+--             TriggerServerEvent('nui_doorlock:server:updateState', Config.DoorlockID5, false, false, false, true)
+--         end
+--     elseif dist > 3 and dist <= 8 then
+--         if Config.Doorlocks == "qb" then 
+--             TriggerServerEvent('qb-doorlock:server:updateState', 6, false, false, false, true, false, false)
+--             -- Citizen.CreateThread(function() 
+--             --     local cardId = 'SecurityCardReader'..1
+--             --     exports['qb-target']:AddBoxZone(cardId, vector3(267.65, 213.22, 97.54), 1, 1, {
+--             --       name = cardId,
+--             --       heading = 46.78,
+--             --       debugPoly = Config.debugPoly,
+--             --       minZ = 106.4,
+--             --       maxZ = 106.7,
+--             --       }, {
+--             --       options = {
+--             --           {
+--             --               type = 'client',
+--             --               event = 'qb-bankrobbery:UsePacificCard',
+--             --               icon = 'fas fa-credit-card',
+--             --               label = 'Use Bank Card',
+--             --               item = 'security_card_02', --this makes it so the third eye only displays if you have the correct card
+--             --               job = all,
+--             --           },
+--             --       },
+--             --       distance = 2.5
+--             --     })
+--             -- end)
+--         elseif Config.Doorlocks == "nui" or Config.Doorlocks == "NUI" then 
+--             TriggerServerEvent('nui_doorlock:server:updateState', Config.DoorlockID3, false, false, false, true)
+--         end
+--     else
+--         if Config.Doorlocks == "qb" then 
+--             TriggerServerEvent('qb-doorlock:server:updateState', 3, false, false, false, true, false, false)
+--         elseif Config.Doorlocks == "nui" or Config.Doorlocks == "NUI" then 
+--             TriggerServerEvent('nui_doorlock:server:updateState', Config.DoorlockID6, false, false, false, true)
+--         end
+--     end
+-- end)
 
 RegisterNetEvent('qb-bankrobbery:UsePacificCard', function()
     local ped = PlayerPedId() 
     local pos = GetEntityCoords(ped)
-    local dist = #(pos - vector3(261.7, 221.99, 106.28))
+    local dist = #(pos - vector3(267.5, 213.22, 97)) --261.7, 221.99, 106.28
     if dist < 2.5 then
         if CurrentCops >= Config.MinimumFleecaPolice then
-            SetEntityCoords(ped, 261.99, 223.19, 105.28)
-            SetEntityHeading(ped, 243.76)
             QBCore.Functions.Progressbar('BankCard_Ting', 'Using BankCard', math.random(5000, 10000), false, true, {
                 disableMovement = true,
                 disableCarMovement = true,
@@ -226,11 +246,10 @@ RegisterNetEvent('qb-bankrobbery:UsePacificCard', function()
                 -- check uses
                 exports['memorygame']:thermiteminigame(5, 3, 4, 20,
                 function() -- success 
-                    if Config.Doorlocks == "qb" then 
-                        TriggerServerEvent('qb-doorlock:server:updateState', 1, false, false, false, true, false, false)
-                    elseif Config.Doorlocks == "nui" or Config.Doorlocks == "NUI" then 
-                        TriggerServerEvent('nui_doorlock:server:updateState', Config.DoorlockID4, false, false, false, true)
-                    end
+                    exports['qb-target']:RemoveZone('SecurityCardReader')
+                    TriggerServerEvent('qb-doorlock:server:updateState', 'PacificGate1', false, false, false, true, false, false)
+                    TriggerServerEvent('qb-doorlock:server:updateState', 'PacificGate2', false, false, false, true, false, false)
+
                     if Config.RemoveCard then 
                         TriggerServerEvent('qb-bankrobbery:server:RemovePacificDoorCard')
                     end

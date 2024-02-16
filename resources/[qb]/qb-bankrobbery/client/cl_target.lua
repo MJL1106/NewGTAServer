@@ -652,7 +652,7 @@ for k,v in pairs(Config.PacificBank['trollys']) do
     end
 end)
 
--- Drills Pacific
+-- Vault Drills Pacific
 CreateThread(function() 
 for k,v in pairs(Config.PacificBank['drills']) do
       if Config.TargetOption == 'bt' then 
@@ -768,12 +768,12 @@ end)
 
 -- Pacific Laptop Use
 CreateThread(function() 
-  exports['qb-target']:AddBoxZone('LaptopUse'..math.random(1,100), vector3(252.91,228.53,101.09), 1, 1, {
+  exports['qb-target']:AddBoxZone('LaptopUse'..math.random(1,100), vector3(241.88, 218.64, 97), 1, 1, {
     name = 'LaptopUse'..math.random(1,100),
-    heading = 78.44,
+    heading = 160,
     debugPoly = Config.debugPoly,
-    minZ = 100.80846,
-    maxZ = 102.30846,
+    minZ = 96,
+    maxZ = 97.5,
     }, {
     options = {
         {
