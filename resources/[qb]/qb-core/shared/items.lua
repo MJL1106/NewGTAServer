@@ -769,5 +769,7 @@ QBShared.Items = {
 	 ["usb_blue"] 				 	 = {["name"] = "usb_blue", 			  	  		["label"] = "Blue USB", 				["weight"] = 5000, 			["type"] = "item", 		["image"] = "usb_blue.png", 			["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,	   ["combinable"] = nil,   ["description"] = "A security USB"},
 	 ["usb_gold"] 			 	 	 = {["name"] = "usb_gold", 			  			["label"] = "Gold USB", 				["weight"] = 5000, 			["type"] = "item", 		["image"] = "usb_gold.png", 			["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,	   ["combinable"] = nil,   ["description"] = "A security USB"},
 
+	 -- Prospecting
+	 ['detector']                   = {['name'] = 'detector',          ['label'] = 'Detector',          ['weight'] = 100,       ['type'] = 'item',    ['image'] = 'detector.png',        ['unique'] = false, ['useable'] = true, ['shouldClose'] = true, ['combinable'] = nil, ['description']  = 'Go find some things'},
 
 }
