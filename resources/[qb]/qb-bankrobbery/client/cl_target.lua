@@ -528,26 +528,6 @@ end)
 
 -- table Pacific
 CreateThread(function() 
-if Config.TargetOption == 'bt' then
-    exports['bt-target']:AddBoxZone('qb-banklaptop:tablepacific'..math.random(1,100), vector3(Config.PacificBank['grab']['pos'].x, Config.PacificBank['grab']['pos'].y, Config.PacificBank['grab']['pos'].z), 1.3, 1.3, { 
-        name = 'qb-banklaptop:tablepacific'..math.random(1,100), 
-        heading = Config.PacificBank['grab']['heading'],
-        debugPoly = Config.debugPoly, 
-        minZ = Config.PacificBank['grab']['pos'].z-1,
-        maxZ = Config.PacificBank['grab']['pos'].z+1,
-    }, {
-    options = { 
-        { 
-            type = 'client',
-            event = 'qb-bankrobbery:tablepacific',
-            icon = 'fas fa-hand-paper',
-            label = 'Grab Loot',
-            job = {'all'},
-        }
-    },
-        distance = 1.0,
-    })
-  elseif Config.TargetOption == 'qb' then 
     exports['qb-target']:AddBoxZone('qb-banklaptop:tablepacific'..math.random(1,100), vector3(Config.PacificBank['grab']['pos'].x, Config.PacificBank['grab']['pos'].y, Config.PacificBank['grab']['pos'].z), 1.3, 1.3, { 
       name = 'qb-banklaptop:tablepacific'..math.random(1,100), 
       heading = Config.PacificBank['grab']['heading'],
@@ -566,26 +546,6 @@ if Config.TargetOption == 'bt' then
   },
       distance = 1.0,
   })
-  elseif Config.TargetOption == 'berkie' then 
-    exports['berkie-target']:AddBoxZone('qb-banklaptop:tablepacific'..math.random(1,100), vector3(Config.PacificBank['grab']['pos'].x, Config.PacificBank['grab']['pos'].y, Config.PacificBank['grab']['pos'].z), 1.3, 1.3, { 
-      name = 'qb-banklaptop:tablepacific'..math.random(1,100), 
-      heading = Config.PacificBank['grab']['heading'],
-      debugPoly = Config.debugPoly, 
-      minZ = Config.PacificBank['grab']['pos'].z-1,
-      maxZ = Config.PacificBank['grab']['pos'].z+1,
-  }, {
-  options = { 
-      { 
-          type = 'client',
-          event = 'qb-bankrobbery:tablepacific',
-          icon = 'fas fa-hand-paper',
-          label = 'Grab Loot',
-          job = all,
-      }
-  },
-      distance = 1.0,
-  })
-  end
 end)
 
 --  Trays Pacific
@@ -792,6 +752,56 @@ CreateThread(function()
     },
     distance = 2.5
   })
+end)
+
+-- Pacific harddrive Use
+CreateThread(function() 
+    exports['qb-target']:AddBoxZone('HddUse'..math.random(1,100), vector3(247.19, 233.34, 97.12), 1, 1, {
+      name = 'HddUse'..math.random(1,100),
+      heading = 342.18,
+      debugPoly = Config.debugPoly,
+      minZ = 96,
+      maxZ = 97.5,
+      }, {
+      options = {
+          {
+            type = "client",
+            action = function()
+                TriggerEvent('qb-bankrobbery:UseEncryptedHdd')
+            end,
+            icon = "fas fa-laptop-code",
+            label = "Use Encrypted Harddrive",
+            item = "encrypted_hdd", -- Makes it only display if you have the laptop
+            job = all,
+          },
+      },
+      distance = 2.5
+    })
+  end)
+
+--testomg vault fdoor
+CreateThread(function() 
+    exports['qb-target']:AddBoxZone('HddUse'..math.random(1,100), vector3(236.72, 231.53, 97.12), 1, 1, {
+      name = 'HddUse'..math.random(1,100),
+      heading = 64.24,
+      debugPoly = Config.debugPoly,
+      minZ = 96,
+      maxZ = 97.5,
+      }, {
+      options = {
+          {
+            type = "client",
+            action = function()
+                TriggerEvent('qb-bankrobbery:testingvaultdoor')
+            end,
+            icon = "fas fa-laptop-code",
+            label = "Use Encrypted Harddrive",
+            item = "encrypted_hdd", -- Makes it only display if you have the laptop
+            job = all,
+          },
+      },
+      distance = 2.5
+    })
 end)
 
 -- lowerVault Servers

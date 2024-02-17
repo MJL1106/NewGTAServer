@@ -19,7 +19,7 @@ Config.TargetOption = "qb" -- use either "bt", "qb" or "berkie" depending on whi
 Config.Wrapper = "ox" -- Use ox or ghmatti, THIS IS FOR THE BAN TRIGGER nothing else leave this as whatever if you don't use Config.BanModders
 Config.lowerVaultEnabled = "false" -- Extra step of pacific hiest that uses "name here" pacific bank MLO ("link here")
 
-Config.debugPoly = true -- Show polyzones for targets
+Config.debugPoly =false -- Show polyzones for targets
 Config.EnableTrades = false -- Accept trading for Laptops?
 
 ---- ** POLICE CONFIG ** ----
@@ -103,12 +103,12 @@ Config.FleecaRepeat = 2 -- How many times in a row do they need to hack the syst
 ---- ** PALETO HACK CONFIG ** ---- 
 Config.PaletoTime = 7 -- How much time do they have to enter the hack?
 Config.PaletoBlocks = 5 -- How many different blocks can the hack have?
-Config.PaletoRepeat = 3 -- How many times in a row do they need to hack the system?
+Config.PaletoRepeat = 2 -- How many times in a row do they need to hack the system?
 
 ---- ** PACIFIC HACK CONFIG ** ----
-Config.PacificTime = 8 -- How much time do they have to enter the hack?
-Config.PacificBlocks = 4 -- How many different blocks can the hack have?
-Config.PacificRepeat = 1 -- How many times in a row do they need to hack the system?
+Config.PacificTime = 6 -- How much time do they have to enter the hack?
+Config.PacificBlocks = 6 -- How many different blocks can the hack have?
+Config.PacificRepeat = 3 -- How many times in a row do they need to hack the system?
 
 ---- ** LOWER VAULT HACK CONFIG ** ----
 Config.HDDTime = 10 -- How much time do they have to enter the hack?
@@ -235,9 +235,9 @@ Config.Lockers = {
         ["items"] = {
             'rolex',
         },
-        ["ItemAmount"] = math.random(60,68), -- Put minimum and Maximum amount of items inside the randomiser
+        ["ItemAmount"] = math.random(120,140), -- Put minimum and Maximum amount of items inside the randomiser
         ---- RARE ITEMS ----
-        ["Chance"] = 20, -- CHANCE OF GETTING RARE OR CASH ITEM
+        ["Chance"] = 50, -- CHANCE OF GETTING RARE OR CASH ITEM
 
         ["Rare"] = {
             'greenphone',
@@ -568,23 +568,29 @@ Config.PaletoBank = {
 
 
 Config.PacificBank = {
-    ["coords"] = vector4(242.14, 219.21, 97.12, 166.89),  -- Coordinates of the Banks
+    ["coords"] = vector4(242.14, 219.21, 96.45, 166.89),  -- Coordinates of the Banks
+    ["harddrivehack"] = vector4(247.19, 233.34, 97.12, 342.18),
     ["isOpened"] = false,
-    ["object"] = 961976194,
+    ["object"] = GetHashKey("v_ilev_bk_vaultdoor"),
     ["camId"] = 25,
     ["heading"] = {
-        closed = 160.00001,
+        closed = 70.00001,
         open = 5.00001
     },
     ["grab"] = { -- middle main grab point
         pos = vector3(242.91, 210.64, 96.98),
         heading = 17.41,
         loot = false
+
     },
     ["drills"] = { -- drill points
-        {coords = vector3(259.4137, 218.0399, 101.8832), rotation = vector3(0.0, 0.0, 338.5553), loot = false},
-        {coords = vector3(258.2209, 214.2284, 101.8832), rotation = vector3(0.0, 0.0, 159.3905), loot = false},
-        {coords = vector3(266.0605, 213.6284, 101.8832), rotation = vector3(0.0, 0.0, 244.9056), loot = false},
+        {coords = vector3(244.37, 212.25, 97.12), rotation = vector3(0.0, 0.0, 252.69), loot = false},
+        {coords = vector3(241.56, 210.08, 97.12), rotation = vector3(0.0, 0.0, 163.96), loot = false},
+        {coords = vector3(240.22, 212.98, 97.12), rotation = vector3(0.0, 0.0, 77.49), loot = false},
+        {coords = vector3(253.1, 236.46, 97.12), rotation = vector3(0.0, 0.0, 248.6), loot = false},
+        --{coords = vector3(252.54, 240.42, 97.12), rotation = vector3(0.0, 0.0, 157.64), loot = false},
+        {coords = vector3(248.81, 236.58, 97.12), rotation = vector3(0.0, 0.0, 75.59), loot = false},
+        
     },
     ["officedrill"] = {
         {coords = vector3(278.88, 217.42, 110.27), rotation = vector3(0.0, 0.0, 340), loot = false},
@@ -595,7 +601,10 @@ Config.PacificBank = {
     ["trollys"] = { -- trollys points
         {coords = vector3(244.84, 214.13, 96.12), heading = 64.71, loot = false}, 
         {coords = vector3(241.18, 215.6, 96.12), heading = 253.16, loot = false},
-        {coords = vector3(259.67, 213.78, 100.6833), heading = 161.9024, loot = false},
+        {coords = vector3(249.59, 238.71, 96.12), heading = 251.85, loot = false},
+        {coords = vector3(253.85, 238.32, 96.12), heading = 70.38, loot = false},
+        {coords = vector3(252.5, 240.54, 96.12), heading = 157.24, loot = false},
+        
     },
     ["thermite"] = { -- Thermite points
         {coords = vector4(258.07, 274.6, 104.63, 160.37), anim = vector3(258.07, 274.7, 105.66), effect = vector3(258.07, 275.7, 105.66), isOpen = false,
@@ -700,13 +709,26 @@ function Config.DoorlockAction(type, setLocked)
         TriggerServerEvent('qb-doorlock:server:updateState','PaletoOutDoor2', setLocked, false, false, true, false, false)
         TriggerServerEvent('qb-doorlock:server:updateState','PaletoAdmin', setLocked, false, false, true, false, false)
         TriggerServerEvent('qb-doorlock:server:updateState','PaletoVault', setLocked, false, false, true, false, false)
+
         Config.PaletoBank['varhacks'][1].completed = false
         Config.PaletoBank['varhacks'][2].completed = false
     elseif type == 'pacific' then
-        TriggerServerEvent('qb-doorlock:server:updateState',1, setLocked, false, false, true, false, false)
-        TriggerServerEvent('qb-doorlock:server:updateState',2, setLocked, false, false, true, false, false)
-        TriggerServerEvent('qb-doorlock:server:updateState',3, setLocked, false, false, true, false, false)
-        TriggerServerEvent('qb-doorlock:server:updateState',6, setLocked, false, false, true, false, false)
+        TriggerServerEvent('qb-doorlock:server:updateState','PacificGate1', setLocked, false, false, true, false, false)
+        TriggerServerEvent('qb-doorlock:server:updateState','PacificGate2', setLocked, false, false, true, false, false)
+        TriggerServerEvent('qb-doorlock:server:updateState','PacificGate3', setLocked, false, false, true, false, false)
+        TriggerServerEvent('qb-doorlock:server:updateState','PacificGate4', setLocked, false, false, true, false, false)
+        TriggerServerEvent('qb-doorlock:server:updateState','PacificMainEntrance', setLocked, false, false, true, false, false)
+        TriggerServerEvent('qb-doorlock:server:updateState','PacifcTopEntrance', setLocked, false, false, true, false, false)
+        TriggerServerEvent('qb-doorlock:server:updateState','PacificAdminOffice', setLocked, false, false, true, false, false)
+
+        Config.PaletoBank['hacktype'][1].completed = false
+        Config.PaletoBank['hacktype'][2].completed = false
+        Config.PaletoBank['hacktype'][3].completed = false
+        Config.PaletoBank['hacktype'][4].completed = false
+
+        Config.PaletoBank['thermite'][1].completed = false
+        Config.PaletoBank['thermite'][2].completed = false
+        Config.PaletoBank['thermite'][3].completed = false
     end
 end
 

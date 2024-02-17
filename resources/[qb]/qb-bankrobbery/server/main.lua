@@ -664,6 +664,8 @@ RegisterNetEvent('qb-bankrobbery:server:RemoveLaptop', function(item)
     TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[item], 'remove')
 end)
 
+
+
 RegisterNetEvent('qb-bankrobbery:server:RemovePaletoDoorItem', function()
     local src = source
 	local Player = QBCore.Functions.GetPlayer(src)

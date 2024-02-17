@@ -115,7 +115,7 @@ RegisterNetEvent('qb-bankrobbery:pacific:hacktype', function()
                     else
                         QBCore.Functions.Notify(Config.Notify["FleecaHackFail"], 'error', 4500)
                     end
-                end, 1,3)  -- Keep these parameters as they are essential for the function to operate correctly
+                end, 7,5)  -- Keep these parameters as they are essential for the function to operate correctly
                 break  -- Exit the loop if a hack is initiated to prevent multiple hacks at once
             elseif v.hack == 'counting' then
                 exports['casinohack-main']:OpenHackingGame(function(success)
@@ -147,7 +147,7 @@ RegisterNetEvent('qb-bankrobbery:pacific:PacificOfficeHack', function()
     for k, v in pairs(Config.PacificBank['officehack']) do
         local dist = #(coords - vector3(v.coords.x, v.coords.y, v.coords.z))
         if dist <= 1.5 and not v.completed then  -- Check if hack has not been completed
-            local result = exports['numbers']:StartNumbersGame(5, 10, 10)
+            local result = exports['numbers']:StartNumbersGame(8, 4, 4)
 
             if result then -- Success
                 QBCore.Functions.Notify(Config.Notify["HackerSuccess"], 'error', 4500)
@@ -246,6 +246,7 @@ RegisterNetEvent('qb-bankrobbery:UsePacificCard', function()
                 -- check uses
                 exports['memorygame']:thermiteminigame(5, 3, 4, 20,
                 function() -- success 
+                    TriggerEvent('qb-bankrobbery:client:setupPacific')
                     exports['qb-target']:RemoveZone('SecurityCardReader')
                     TriggerServerEvent('qb-doorlock:server:updateState', 'PacificGate1', false, false, false, true, false, false)
                     TriggerServerEvent('qb-doorlock:server:updateState', 'PacificGate2', false, false, false, true, false, false)
@@ -307,6 +308,47 @@ RegisterNetEvent('qb-bankrobbery:UseBankLaptop', function(colour, laptopData)
             end
         end)
     end
+end)
+
+RegisterNetEvent('qb-bankrobbery:UseEncryptedHdd', function()
+    local ped = PlayerPedId() 
+    local pos = GetEntityCoords(ped)
+    local dist = #(pos - vector3(Config.PacificBank['harddrivehack'].x, Config.PacificBank['harddrivehack'].y, Config.PacificBank['harddrivehack'].z))
+    if dist < 1.5 then
+        SetEntityCoords(ped, Config.PacificBank['harddrivehack'])
+        SetEntityHeading(ped, Config.PacificBank['harddrivehack'].w)
+        QBCore.Functions.Progressbar('hack_gate', 'Connecting the Harddrive..', math.random(5000, 10000), false, true, {
+            disableMovement = true,
+            disableCarMovement = true,
+            disableMouse = false,
+            disableCombat = true,
+        }, {
+            animDict = 'anim@gangops@facility@servers@',
+            anim = 'hotwire',
+            flags = 16,
+        }, {}, {}, function() -- Done
+            StopAnimTask(PlayerPedId(), 'anim@gangops@facility@servers@', 'hotwire', 1.0)
+            -- check uses
+
+            exports['varhack']:OpenHackingGame(function(success)
+                if success then
+                    TriggerServerEvent('qb-bankrobbery:server:RemoveLaptop', 'encrypted_hdd')
+                    TriggerServerEvent('qb-doorlock:server:updateState', 'PacificGate3', false, false, false, true, false, false)   
+                else
+                    QBCore.Functions.Notify(Config.Notify["FleecaHackFail"], 'error', 4500)
+                end
+            end, 9, 7)  -- Keep these parameters as they are essential for the function to operate correctly
+            
+        end, function() -- Cancel
+            StopAnimTask(PlayerPedId(), 'anim@gangops@facility@servers@', 'hotwire', 1.0)
+            QBCore.Functions.Notify(Config.Notify['FleecaHackCancel'], 'error')
+        end)
+    end
+end)
+
+RegisterNetEvent('qb-bankrobbery:testingvaultdoor', function()
+    TriggerServerEvent('qb-bankrobbery:server:setBankState', true, 'lowerVault')
+    TriggerServerEvent('qb-robbery:server:succesHeist', 35)
 end)
 
 RegisterNetEvent('qb-bankrobbery:client:pacific:lootSync', function(type, k)
@@ -895,7 +937,7 @@ function OnHackDonePacific(success)
         QBCore.Functions.Notify(Config.Notify['DoorMinutes']..halftime..Config.Notify['DoorSecondHalf'], 'success', 5500)
         Wait(time/2)
         TriggerServerEvent('qb-bankrobbery:server:setBankState', true, 'pacific')
-        TriggerEvent('qb-bankrobbery:client:setupPacific')
+        -- TriggerEvent('qb-bankrobbery:client:setupPacific')
         TriggerServerEvent('qb-robbery:server:succesHeist', 35)
         TriggerServerEvent('qb-bankrobbery:server:setTimeout', 'pacific')
 

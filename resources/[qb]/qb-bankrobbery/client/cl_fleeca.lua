@@ -184,37 +184,28 @@ end
 
 -- Pacific
 local function OpenPacificDoor()
-    local object = GetClosestObjectOfType(Config.PacificBank['coords'].x, Config.PacificBank['coords'].y, Config.PacificBank['coords'].z, 20.0, Config.PacificBank['object'], false, false, false)
-    local timeOut = 10
-    local entHeading = Config.PacificBank['heading'].closed
+    -- local object = GetClosestObjectOfType(Config.PacificBank['coords'].x, Config.PacificBank['coords'].y, Config.PacificBank['coords'].z, 20.0, Config.PacificBank['object'], false, false, false)
+    -- local timeOut = 10
+    -- local entHeading = Config.PacificBank['heading'].closed
 
-    if object ~= 0 then
-        CreateThread(function()
-            while true do
+    -- if object ~= 0 then
+    --     CreateThread(function()
+    --         while true do
 
-                if entHeading > Config.PacificBank['heading'].open then
-                    SetEntityHeading(object, entHeading - 10)
-                    entHeading = entHeading - 1.0
-                else
-                    break
-                end
+    --             if entHeading > Config.PacificBank['heading'].open then
+    --                 SetEntityHeading(object, entHeading - 10)
+    --                 entHeading = entHeading - 1.0
+    --             else
+    --                 break
+    --             end
 
-                Wait(10)
-            end
-        end)
-    end
+    --             Wait(10)
+    --         end
+    --     end)
+    -- end
+    TriggerServerEvent('qb-doorlock:server:updateState', 'PacificGate4', false, false, false, true, false, false)
 end
 
--- -- Paletos
--- local function OpenPaletoDoor()
---     local object = GetClosestObjectOfType(Config.PaletoBank['doorLocation'].x, Config.PaletoBank['doorLocation'].y, Config.PaletoBank['doorLocation'].z, 5.0, Config.PaletoBank['object'], false, false, false)
---     local timeOut = 10
---     local entHeading = Config.PaletoBank['heading'].closed
-
---     if object ~= 0 then
---         SetEntityHeading(object, Config.PaletoBank['heading'].open)
---     end
--- end
 
 -- Fleecas
 local function OpenBankDoor(closestBank)
@@ -238,18 +229,20 @@ local function OpenBankDoor(closestBank)
     end
 end
 
+
 -- Open Lower Vault
 local function openlowerVault()
-    local object = GetClosestObjectOfType(Config.lowerVault['coords'].x, Config.lowerVault['coords'].y, Config.lowerVault['coords'].z, 5.0, Config.lowerVault['object'], false, false, false)
+    local object = GetClosestObjectOfType(234.99, 228.07, 97.72, 20.0, Config.PacificBank['object'], false, false, false)
     local timeOut = 10
-    local entHeading = Config.lowerVault['heading'].closed
+    local entHeading = Config.PacificBank['heading'].closed
+    print(object)
+
     if object ~= 0 then
         CreateThread(function()
             while true do
-
-                if entHeading < Config.lowerVault['heading'].open then
-                    SetEntityHeading(object, entHeading + 10)
-                    entHeading = entHeading + 0.5
+                if entHeading > Config.PacificBank['heading'].open then
+                    SetEntityHeading(object, entHeading - 10)
+                    entHeading = entHeading - 1.0
                 else
                     break
                 end
