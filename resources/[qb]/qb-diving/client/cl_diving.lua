@@ -28,10 +28,13 @@ local rare = {
     [3] = {item = 'thermite'},
     [4] = {item = 'electronickit'},
     [5] = {item = 'trojan_usb'},
-    [6] = {item = 'redphone'},
-    [7] = {item = 'smg_ammo'},
-    [8] = {item = 'rifle_ammo'},
-    [9] = {item = 'mesa_craft'},
+    [6] = {item = 'smg_ammo'},
+    [7] = {item = 'rifle_ammo'},
+}
+
+local ultrarare = {
+    [1] = {item = 'greenphone'},
+    [2] = {item = 'mesa_craft'},
 }
 
 local pickup = math.random(1, #locations)
@@ -56,10 +59,12 @@ Citizen.CreateThread(function()
                 lastpick = pickup      
                 pickup = math.random(1, #locations)
                 local random = math.random(1, 100)                                                
-                if random > 0 and random < 60 then
+                if random > 0 and random <= 60 then
                     TriggerServerEvent("cad-diving:collected", "normal", normal[math.random(1,#normal)].item, math.random(1, 4))                
-                elseif random > 95 and random < 100 then
+                elseif random >= 61 and random <= 81 then
                     TriggerServerEvent("cad-diving:collected", "rare", rare[math.random(1,#rare)].item, 1)
+                elseif random >=90 and random <=100 then
+                    TriggerServerEvent("cad-diving:collected", "ultrarare", ultrarare[math.random(1,#ultrarare)].item, 1)
                 else
                     TriggerServerEvent("cad-diving:collected", "none", nil)
                 end

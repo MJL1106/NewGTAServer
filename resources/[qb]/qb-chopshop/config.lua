@@ -132,7 +132,7 @@ Config.TargetIcon = 'fab fa-dropbox'
 Config.TargetLabel = 'Open Crate'
 
 -- Police Config
-Config.RequiredCops = 2 -- How many cops are required to drop a gun?
+Config.RequiredCops = 3 -- How many cops are required to drop a gun?
 Config.PoliceJobs = {"police"} -- All types of police job in server.
 
 -- Other Config
@@ -159,15 +159,13 @@ Config.ItemDrops = {
     },
     ["redphone"] = {
         [1] = {name = "WEAPON_MICROSMG", amount = 1},  
-        [2] = {name = "WEAPON_MINISMG", amount = 1},  
-        [3] = {name = "WEAPON_COMBATPDW", amount = 1},
-        [4] = {name = "WEAPON_MACHINEPISTOL", amount = 1},
+        [2] = {name = "WEAPON_COMBATPDW", amount = 1},
+        [3] = {name = "WEAPON_MACHINEPISTOL", amount = 1},
     },
     ["greenphone"] = {
         [1] = {name = "WEAPON_PISTOL50", amount = 1},
-        [2] = {name = "WEAPON_APPISTOL", amount = 1},
-        [3] = {name = "WEAPON_COMBATPISTOL", amount = 1},
-        [4] = {name = "WEAPON_SNSPISTOL", amount = 1},
+        [2] = {name = "WEAPON_COMBATPISTOL", amount = 1},
+        [3] = {name = "WEAPON_SNSPISTOL", amount = 1},
     },
 }
 
@@ -175,7 +173,7 @@ Config.ItemDrops = {
 Config.Lang = { 
     ["contacted_mafia"] = "You Have Contacted With Russian Mafia",
     ["pilot_contact"] = "After few minutes pilot will contact you",
-    ["no_cops"] = "Not enough cops",
+    ["no_cops"] = "Not Enough Cops idiot",
     ["pilot_dropping_soon"] = "Pilot: We are preparing the crate with the plane and will be dropping it soon",
     ["pilot_crashed"] = "The plane has crashed delivery failed",
     ["crate_dropping"] = "Pilot: keep the eye on sky the crate is droping",
