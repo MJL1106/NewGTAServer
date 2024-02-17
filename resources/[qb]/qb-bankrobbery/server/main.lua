@@ -39,13 +39,22 @@ RegisterServerEvent('qb-bankrobbery:server:setBankState', function(state, bank, 
         end
     elseif bank == 'pacific' then
         if not robberyBusy then
-            Config.PacificBank['isOpened'] = state
+            Config.PacificBank['isVaultOpened'] = state
             TriggerClientEvent('qb-bankrobbery:client:setBankState', -1, 'pacific', state)
         end
     elseif bank == 'fleeca' then
         if not robberyBusy then
             Config.FleecaBanks[bankId]['isOpened'] = state
             TriggerClientEvent('qb-bankrobbery:client:setBankState', -1, bankId, state)
+        end
+    end
+end)
+
+RegisterServerEvent('qb-bankrobbery:server:setRedLaptopUsed', function(state, bank, bankId)
+    if bank == 'pacific' then
+        if not robberyBusy then
+            Config.PacificBank['isOpened'] = state
+            TriggerClientEvent('qb-bankrobbery:client:setRedLaptopUsed', -1, 'pacific', state)
         end
     end
 end)

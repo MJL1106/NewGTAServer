@@ -550,111 +550,32 @@ end)
 
 --  Trays Pacific
 CreateThread(function() 
-for k,v in pairs(Config.PacificBank['trollys']) do
-      if Config.TargetOption == 'bt' then 
-          exports['bt-target']:AddBoxZone('trayPacific'..math.random(1,100), vector3(Config.PacificBank['trollys'][k]['coords'].x, Config.PacificBank['trollys'][k]['coords'].y, Config.PacificBank['trollys'][k]['coords'].z), 0.8, 1.0, {
-              name = 'trayPacific'..math.random(1,100), 
-              heading = Config.PacificBank['trollys'][k]['heading'],
-              debugPoly = Config.debugPoly,
-              minZ = Config.PacificBank['trollys'][k]['coords'].z-1,
-              maxZ = Config.PacificBank['trollys'][k]['coords'].z+1,
-              }, {
-              options = { 
-                { 
-                  type = 'client',
-                  event = 'qb-bankrobbery:PacificTray',
-                  icon = 'fas fa-hand-paper',
-                  label = 'Grab Loot',
-                  job = {'all'},
-                }
-              },
-              distance = 2.0,
-          })
-      elseif Config.TargetOption == 'qb' then
-          exports['qb-target']:AddBoxZone('trayPacific'..math.random(1,100), vector3(Config.PacificBank['trollys'][k]['coords'].x, Config.PacificBank['trollys'][k]['coords'].y, Config.PacificBank['trollys'][k]['coords'].z), 0.8, 1.0, {
-              name = 'trayPacific'..math.random(1,100), 
-              heading = Config.PacificBank['trollys'][k]['heading'],
-              debugPoly = Config.debugPoly, 
-              minZ = Config.PacificBank['trollys'][k]['coords'].z-1,
-              maxZ = Config.PacificBank['trollys'][k]['coords'].z+1,
-              }, {
-              options = { 
-                { 
-                  type = 'client',
-                  event = 'qb-bankrobbery:PacificTray',
-                  icon = 'fas fa-hand-paper',
-                  label = 'Grab Loot',
-                  job = all,
-                }
-              },
-              distance = 2.0,
-        })
-      elseif Config.TargetOption == 'berkie' then
-        exports['berkie-target']:AddBoxZone('trayPacific'..math.random(1,100), vector3(Config.PacificBank['trollys'][k]['coords'].x, Config.PacificBank['trollys'][k]['coords'].y, Config.PacificBank['trollys'][k]['coords'].z), 0.8, 1.0, {
+    for k,v in pairs(Config.PacificBank['trollys']) do
+        exports['qb-target']:AddBoxZone('trayPacific'..math.random(1,100), vector3(Config.PacificBank['trollys'][k]['coords'].x, Config.PacificBank['trollys'][k]['coords'].y, Config.PacificBank['trollys'][k]['coords'].z), 0.8, 1.0, {
             name = 'trayPacific'..math.random(1,100), 
             heading = Config.PacificBank['trollys'][k]['heading'],
-            debugPoly = Config.debugPoly,
+            debugPoly = Config.debugPoly, 
             minZ = Config.PacificBank['trollys'][k]['coords'].z-1,
             maxZ = Config.PacificBank['trollys'][k]['coords'].z+1,
             }, {
             options = { 
-              { 
+            { 
                 type = 'client',
                 event = 'qb-bankrobbery:PacificTray',
                 icon = 'fas fa-hand-paper',
                 label = 'Grab Loot',
                 job = all,
-              }
+            }
             },
             distance = 2.0,
-      })
-      end
+    })
     end
 end)
 
 -- Vault Drills Pacific
 CreateThread(function() 
-for k,v in pairs(Config.PacificBank['drills']) do
-      if Config.TargetOption == 'bt' then 
-          exports['bt-target']:AddBoxZone('PacificDrill'..math.random(1,100), vector3(Config.PacificBank['drills'][k]['coords'].x, Config.PacificBank['drills'][k]['coords'].y, Config.PacificBank['drills'][k]['coords'].z), 1.0, 0.8, { 
-              name = 'PacificDrill'..math.random(1,100), 
-              heading = Config.PacificBank['drills'][k]['rotation'].z,
-              debugPoly = Config.debugPoly,
-              minZ = Config.PacificBank['drills'][k]['coords'].z-1,
-              maxZ = Config.PacificBank['drills'][k]['coords'].z+1,
-              }, {
-              options = { 
-                { 
-                  type = 'client',
-                  event = 'qb-bankrobbery:PacificDrill',
-                  icon = 'fas fa-cookie',
-                  label = 'Drill Saftey Box',
-                  job = {'all'},
-                }
-              },
-              distance = 1.3,
-          })
-      elseif Config.TargetOption == 'qb' then
-          exports['qb-target']:AddBoxZone('PacificDrill'..math.random(1,100), vector3(Config.PacificBank['drills'][k]['coords'].x, Config.PacificBank['drills'][k]['coords'].y, Config.PacificBank['drills'][k]['coords'].z), 1.0, 0.8, { 
-              name = 'PacificDrill'..math.random(1,100), 
-              heading = Config.PacificBank['drills'][k]['rotation'].z,
-              debugPoly = Config.debugPoly,
-              minZ = Config.PacificBank['drills'][k]['coords'].z-1,
-              maxZ = Config.PacificBank['drills'][k]['coords'].z+1,
-              }, {
-              options = { 
-                { 
-                  type = 'client',
-                  event = 'qb-bankrobbery:PacificDrill',
-                  icon = 'fas fa-cookie',
-                  label = 'Drill Saftey Box',
-                  job = all,
-                }
-              },
-              distance = 1.3,
-        })
-      elseif Config.TargetOption == 'berkie' then
-        exports['berkie-target']:AddBoxZone('PacificDrill'..math.random(1,100), vector3(Config.PacificBank['drills'][k]['coords'].x, Config.PacificBank['drills'][k]['coords'].y, Config.PacificBank['drills'][k]['coords'].z), 1.0, 0.8, { 
+    for k,v in pairs(Config.PacificBank['drills']) do
+        exports['qb-target']:AddBoxZone('PacificDrill'..math.random(1,100), vector3(Config.PacificBank['drills'][k]['coords'].x, Config.PacificBank['drills'][k]['coords'].y, Config.PacificBank['drills'][k]['coords'].z), 1.0, 0.8, { 
             name = 'PacificDrill'..math.random(1,100), 
             heading = Config.PacificBank['drills'][k]['rotation'].z,
             debugPoly = Config.debugPoly,
@@ -662,18 +583,17 @@ for k,v in pairs(Config.PacificBank['drills']) do
             maxZ = Config.PacificBank['drills'][k]['coords'].z+1,
             }, {
             options = { 
-              { 
+            { 
                 type = 'client',
                 event = 'qb-bankrobbery:PacificDrill',
                 icon = 'fas fa-cookie',
                 label = 'Drill Saftey Box',
                 job = all,
-              }
+            }
             },
             distance = 1.3,
-      })
-      end
-  end
+        })
+    end
 end)
 
 --office drill Pacific
@@ -779,10 +699,10 @@ CreateThread(function()
     })
   end)
 
---testomg vault fdoor
+--Vault Door Opener
 CreateThread(function() 
-    exports['qb-target']:AddBoxZone('HddUse'..math.random(1,100), vector3(236.72, 231.53, 97.12), 1, 1, {
-      name = 'HddUse'..math.random(1,100),
+    exports['qb-target']:AddBoxZone('vaultdoor1', vector3(236.72, 231.53, 97.12), 1, 1, {
+      name = 'vaultdoor1',
       heading = 64.24,
       debugPoly = Config.debugPoly,
       minZ = 96,

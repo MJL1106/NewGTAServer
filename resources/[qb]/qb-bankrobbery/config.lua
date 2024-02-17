@@ -5,7 +5,7 @@ Config.BlackoutTimer = 15 -- How many minutes are the city blackedout when power
 Config.BankTimer = {
     fleeca = 45, -- Time in minutes for cooldown
     paleto = 60, -- Time in minutes for cooldown
-    pacific = 480, -- Time in minutes for cooldown
+    pacific = 1, -- Time in minutes for cooldown
 } 
 
 ---- ** BAG IDs ** ----
@@ -107,8 +107,8 @@ Config.PaletoRepeat = 2 -- How many times in a row do they need to hack the syst
 
 ---- ** PACIFIC HACK CONFIG ** ----
 Config.PacificTime = 6 -- How much time do they have to enter the hack?
-Config.PacificBlocks = 6 -- How many different blocks can the hack have?
-Config.PacificRepeat = 3 -- How many times in a row do they need to hack the system?
+Config.PacificBlocks = 4 -- How many different blocks can the hack have?
+Config.PacificRepeat = 1 -- How many times in a row do they need to hack the system?
 
 ---- ** LOWER VAULT HACK CONFIG ** ----
 Config.HDDTime = 10 -- How much time do they have to enter the hack?
@@ -568,10 +568,11 @@ Config.PaletoBank = {
 
 
 Config.PacificBank = {
-    ["coords"] = vector4(242.14, 219.21, 96.45, 166.89),  -- Coordinates of the Banks
+    ["coords"] = vector4(236.82, 231.73, 97.12, 75.63),  -- Coordinates of the Banks
     ["harddrivehack"] = vector4(247.19, 233.34, 97.12, 342.18),
     ["isOpened"] = false,
-    ["object"] = GetHashKey("v_ilev_bk_vaultdoor"),
+    ["isVaultOpened"] = false,
+    ["object"] = 961976194,
     ["camId"] = 25,
     ["heading"] = {
         closed = 70.00001,
@@ -588,7 +589,6 @@ Config.PacificBank = {
         {coords = vector3(241.56, 210.08, 97.12), rotation = vector3(0.0, 0.0, 163.96), loot = false},
         {coords = vector3(240.22, 212.98, 97.12), rotation = vector3(0.0, 0.0, 77.49), loot = false},
         {coords = vector3(253.1, 236.46, 97.12), rotation = vector3(0.0, 0.0, 248.6), loot = false},
-        --{coords = vector3(252.54, 240.42, 97.12), rotation = vector3(0.0, 0.0, 157.64), loot = false},
         {coords = vector3(248.81, 236.58, 97.12), rotation = vector3(0.0, 0.0, 75.59), loot = false},
         
     },
@@ -604,6 +604,8 @@ Config.PacificBank = {
         {coords = vector3(249.59, 238.71, 96.12), heading = 251.85, loot = false},
         {coords = vector3(253.85, 238.32, 96.12), heading = 70.38, loot = false},
         {coords = vector3(252.5, 240.54, 96.12), heading = 157.24, loot = false},
+        {coords = vector3(227.57, 234.95, 96.12), heading = 252.52, loot = false}, 
+        {coords = vector3(232.2, 233.24, 96.12), heading = 65.77, loot = false},
         
     },
     ["thermite"] = { -- Thermite points
@@ -721,14 +723,14 @@ function Config.DoorlockAction(type, setLocked)
         TriggerServerEvent('qb-doorlock:server:updateState','PacifcTopEntrance', setLocked, false, false, true, false, false)
         TriggerServerEvent('qb-doorlock:server:updateState','PacificAdminOffice', setLocked, false, false, true, false, false)
 
-        Config.PaletoBank['hacktype'][1].completed = false
-        Config.PaletoBank['hacktype'][2].completed = false
-        Config.PaletoBank['hacktype'][3].completed = false
-        Config.PaletoBank['hacktype'][4].completed = false
+        Config.PacificBank['hacktype'][1].completed = false
+        Config.PacificBank['hacktype'][2].completed = false
+        Config.PacificBank['hacktype'][3].completed = false
+        Config.PacificBank['hacktype'][4].completed = false
 
-        Config.PaletoBank['thermite'][1].completed = false
-        Config.PaletoBank['thermite'][2].completed = false
-        Config.PaletoBank['thermite'][3].completed = false
+        Config.PacificBank['thermite'][1].completed = false
+        Config.PacificBank['thermite'][2].completed = false
+        Config.PacificBank['thermite'][3].completed = false
     end
 end
 

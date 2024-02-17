@@ -27,7 +27,7 @@ CreateThread(function()
         -- Pacific Check
         if PacificDist <= 30 then
             inRange = true
-            if Config.PacificBank['isOpened'] then
+            if Config.PacificBank['isVaultOpened'] then
                 local object = GetClosestObjectOfType(Config.PacificBank['coords']['x'], Config.PacificBank['coords']['y'], Config.PacificBank['coords']['z'], 20.0, Config.PacificBank['object'], false, false, false)
                 if object ~= 0 then
                     SetEntityHeading(object, Config.PacificBank['heading'].open)
@@ -86,5 +86,6 @@ RegisterNetEvent('qb-bankrobbery:client:ClearTimeoutDoors', function()
 
     Config.PaletoBank['isOpened'] = false
     Config.PacificBank['isOpened'] = false
+    Config.PacificBank['isVaultOpened'] = false
     Config.lowerVault['isOpened'] = false
 end)

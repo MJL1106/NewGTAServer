@@ -145,6 +145,7 @@ local function ResetCurrentBank(type, closestBank)
     
     elseif type == 'pacific' then
         Config.PacificBank['isOpened'] = false
+        Config.PacificBank['isVaultOpened'] = false
         Config.PacificBank['grab']['loot'] = false
         for k,_ in pairs(Config.PacificBank['drills']) do
             Config.PacificBank['drills'][k]['loot'] = false
@@ -184,26 +185,26 @@ end
 
 -- Pacific
 local function OpenPacificDoor()
-    -- local object = GetClosestObjectOfType(Config.PacificBank['coords'].x, Config.PacificBank['coords'].y, Config.PacificBank['coords'].z, 20.0, Config.PacificBank['object'], false, false, false)
-    -- local timeOut = 10
-    -- local entHeading = Config.PacificBank['heading'].closed
+    local object = GetClosestObjectOfType(Config.PacificBank['coords'].x, Config.PacificBank['coords'].y, Config.PacificBank['coords'].z, 20.0, Config.PacificBank['object'], false, false, false)
+    local timeOut = 10
+    local entHeading = Config.PacificBank['heading'].closed
 
-    -- if object ~= 0 then
-    --     CreateThread(function()
-    --         while true do
+    if object ~= 0 then
+        CreateThread(function()
+            while true do
 
-    --             if entHeading > Config.PacificBank['heading'].open then
-    --                 SetEntityHeading(object, entHeading - 10)
-    --                 entHeading = entHeading - 1.0
-    --             else
-    --                 break
-    --             end
+                if entHeading > Config.PacificBank['heading'].open then
+                    SetEntityHeading(object, entHeading - 10)
+                    entHeading = entHeading - 1.0
+                else
+                    break
+                end
 
-    --             Wait(10)
-    --         end
-    --     end)
-    -- end
-    TriggerServerEvent('qb-doorlock:server:updateState', 'PacificGate4', false, false, false, true, false, false)
+                Wait(10)
+            end
+        end)
+    end
+    --TriggerServerEvent('qb-doorlock:server:updateState', 'PacificGate4', false, false, false, true, false, false)
 end
 
 
@@ -230,28 +231,6 @@ local function OpenBankDoor(closestBank)
 end
 
 
--- Open Lower Vault
-local function openlowerVault()
-    local object = GetClosestObjectOfType(234.99, 228.07, 97.72, 20.0, Config.PacificBank['object'], false, false, false)
-    local timeOut = 10
-    local entHeading = Config.PacificBank['heading'].closed
-    print(object)
-
-    if object ~= 0 then
-        CreateThread(function()
-            while true do
-                if entHeading > Config.PacificBank['heading'].open then
-                    SetEntityHeading(object, entHeading - 10)
-                    entHeading = entHeading - 1.0
-                else
-                    break
-                end
-
-                Wait(10)
-            end
-        end)
-    end
-end
 
 ---- GLOBAL FUNCTIONS ----
 function CashAppear(grabModel)
@@ -753,8 +732,9 @@ RegisterNetEvent('qb-bankrobbery:client:setBankState', function(bankId, state)
             OpenPaletoDoor()
         end
     elseif bankId == 'pacific' then
-        Config.PacificBank['isOpened'] = state
+        Config.PacificBank['isVaultOpened'] = state
         if state then
+            print("Opening vault door")
             OpenPacificDoor()
         end
     elseif bankId == 'lowerVault' then
@@ -770,6 +750,17 @@ RegisterNetEvent('qb-bankrobbery:client:setBankState', function(bankId, state)
         for bankIDD, _ in pairs(Config.FleecaBanks) do
             Config.FleecaBanks[bankIDD]['isOpened'] = true
         end
+    end
+end)
+
+RegisterNetEvent('qb-bankrobbery:client:setRedLaptopUsed', function(bankId, state)
+    if bankId == 'pacific' then
+        Config.PacificBank['isOpened'] = state
+        if state then
+            print("Unlocking the pacific gate")
+            TriggerServerEvent('qb-doorlock:server:updateState', 'PacificGate4', false, false, false, true, false, false)
+        end
+        
     end
 end)
 

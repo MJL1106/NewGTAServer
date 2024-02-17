@@ -347,8 +347,10 @@ RegisterNetEvent('qb-bankrobbery:UseEncryptedHdd', function()
 end)
 
 RegisterNetEvent('qb-bankrobbery:testingvaultdoor', function()
-    TriggerServerEvent('qb-bankrobbery:server:setBankState', true, 'lowerVault')
+    TriggerServerEvent('qb-bankrobbery:server:setBankState', true, 'pacific')
     TriggerServerEvent('qb-robbery:server:succesHeist', 35)
+    exports['qb-target']:RemoveZone('vaultdoor1')
+    TriggerEvent('qb-bankrobbery:client:setupPacific')
 end)
 
 RegisterNetEvent('qb-bankrobbery:client:pacific:lootSync', function(type, k)
@@ -533,6 +535,72 @@ RegisterNetEvent('qb-bankrobbery:PacificTray', function()
         end
     end
 end)
+
+-- RegisterNetEvent('qb-bankrobbery:PacificVaultTray', function()
+--     local ped = PlayerPedId()
+--     local pedCo = GetEntityCoords(ped)
+--     for k,v in pairs(Config.PacificBank['vaulttrollys']) do
+--         local TrayDist = #(pedCo - v['coords'])
+--         if TrayDist <= 1.5 then
+--             if not Config.PacificBank['vaulttrollys'][k]['loot'] then
+--                 LocalPlayer.state:set('inv_busy', true, true) -- Busy
+--                 TriggerServerEvent('qb-bankrobbery:server:pacific:lootSync', 'vaulttrollys', k)
+--                 local ped = PlayerPedId()
+--                 local pedCo, pedRotation = GetEntityCoords(ped), vector3(0.0, 0.0, 0.0)
+--                 local trollyModel = Config.PacificBank['vaulttrollys'][k]['model']
+--                 local animDict = 'anim@heists@ornate_bank@grab_cash'
+--                 if trollyModel == 881130828 then
+--                     grabModel = 'ch_prop_vault_dimaondbox_01a'
+--                 elseif trollyModel == 2007413986 then
+--                     grabModel = 'ch_prop_gold_bar_01a'
+--                 else
+--                     grabModel = 'hei_prop_heist_cash_pile'
+--                 end
+--                 loadAnimDict(animDict)
+--                 loadModel('hei_p_m_bag_var22_arm_s')
+
+--                 sceneObject = GetClosestObjectOfType(Config.PacificBank['vaulttrollys'][k]['coords'], 2.0, trollyModel, 0, 0, 0)
+--                 bag = CreateObject(GetHashKey('hei_p_m_bag_var22_arm_s'), pedCo, true, false, false)
+
+--                 while not NetworkHasControlOfEntity(sceneObject) do
+--                     Wait(1)
+--                     NetworkRequestControlOfEntity(sceneObject)
+--                 end
+
+--                 scene1 = NetworkCreateSynchronisedScene(GetEntityCoords(sceneObject), GetEntityRotation(sceneObject), 2, true, false, 1065353216, 0, 1.3)
+--                 NetworkAddPedToSynchronisedScene(ped, scene1, animDict, 'intro', 1.5, -4.0, 1, 16, 1148846080, 0)
+--                 NetworkAddEntityToSynchronisedScene(bag, scene1, animDict, 'bag_intro', 4.0, -8.0, 1)
+
+--                 scene2 =  NetworkCreateSynchronisedScene(GetEntityCoords(sceneObject), GetEntityRotation(sceneObject), 2, true, false, 1065353216, 0, 1.3)
+--                 NetworkAddPedToSynchronisedScene(ped, scene2, animDict, 'grab', 1.5, -4.0, 1, 16, 1148846080, 0)
+--                 NetworkAddEntityToSynchronisedScene(bag, scene2, animDict, 'bag_grab', 4.0, -8.0, 1)
+--                 NetworkAddEntityToSynchronisedScene(sceneObject, scene2, animDict, 'cart_cash_dissapear', 4.0, -8.0, 1)
+
+--                 scene3 =  NetworkCreateSynchronisedScene(GetEntityCoords(sceneObject), GetEntityRotation(sceneObject), 2, true, false, 1065353216, 0, 1.3)
+--                 NetworkAddPedToSynchronisedScene(ped, scene3, animDict, 'exit', 1.5, -4.0, 1, 16, 1148846080, 0)
+--                 NetworkAddEntityToSynchronisedScene(bag, scene3, animDict, 'bag_exit', 4.0, -8.0, 1)
+
+--                 NetworkStartSynchronisedScene(scene1)
+--                 Wait(1750)
+--                 CashAppear(grabModel)
+--                 NetworkStartSynchronisedScene(scene2)
+--                 Wait(37000)
+--                 NetworkStartSynchronisedScene(scene3)
+--                 Wait(2000)
+
+--                 local emptyobj = 769923921
+--                 newTrolly = CreateObject(emptyobj, Config.PacificBank['vaulttrollys'][k]['coords'], true, false, false)
+--                 SetEntityRotation(newTrolly, 0, 0, GetEntityHeading(sceneObject), 1, 0)
+--                 DeleteObject(sceneObject)
+--                 DeleteObject(bag)
+--                 LocalPlayer.state:set('inv_busy', false, true) -- Not Busy
+--                 TriggerServerEvent('qb-bankrobbery:server:GetTrolleyLoot', grabModel, 'pacific')
+--             else
+--                 QBCore.Functions.Notify(Config.Notify["TrayAlreadyLooted"], 'error')
+--             end
+--         end
+--     end
+-- end)
 
 RegisterNetEvent('qb-bankrobbery:PacificDrill', function()
     local ped = PlayerPedId()
@@ -936,7 +1004,7 @@ function OnHackDonePacific(success)
         Wait(time/2)
         QBCore.Functions.Notify(Config.Notify['DoorMinutes']..halftime..Config.Notify['DoorSecondHalf'], 'success', 5500)
         Wait(time/2)
-        TriggerServerEvent('qb-bankrobbery:server:setBankState', true, 'pacific')
+        TriggerServerEvent('qb-bankrobbery:server:setRedLaptopUsed', true, 'pacific')
         -- TriggerEvent('qb-bankrobbery:client:setupPacific')
         TriggerServerEvent('qb-robbery:server:succesHeist', 35)
         TriggerServerEvent('qb-bankrobbery:server:setTimeout', 'pacific')
