@@ -398,14 +398,13 @@ Config.Items = {
             authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14}
         },
         [4] = {
-            name = "weapon_carbinerifle",
+            name = "weapon_carbinerifle_mk2",
             price = 0,
             amount = 1,
             info = {
                 serie = "",
                 attachments = {
                     {component = "COMPONENT_AT_AR_FLSH", label = "Flashlight"},
-                    {component = "COMPONENT_AT_SCOPE_MEDIUM", label = "3x Scope"},
                 }
             },
             type = "weapon",
@@ -554,6 +553,15 @@ Config.Items = {
             info = {},
             type = "item",
             slot = 20,
+            authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14}
+        },
+        [21] = {
+            name = "weapon_revolver",
+            price = 500,
+            amount = 50,
+            info = {},
+            type = "item",
+            slot = 21,
             authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14}
         },
     }
