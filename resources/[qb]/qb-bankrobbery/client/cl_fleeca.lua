@@ -42,7 +42,6 @@ RegisterNetEvent('QBCore:Client:OnPlayerLoaded', function()
         Config = config
     end)
     onDuty = true
-    ResetBankDoors()
 end)
 
 RegisterNetEvent('QBCore:Client:SetDuty', function(duty)
@@ -738,7 +737,6 @@ RegisterNetEvent('qb-bankrobbery:client:setBankState', function(bankId, state)
     elseif bankId == 'pacific' then
         Config.PacificBank['isVaultOpened'] = state
         if state then
-            print("Opening vault door")
             OpenPacificDoor()
         end
     elseif bankId == 'lowerVault' then
@@ -761,7 +759,6 @@ RegisterNetEvent('qb-bankrobbery:client:setRedLaptopUsed', function(bankId, stat
     if bankId == 'pacific' then
         Config.PacificBank['isOpened'] = state
         if state then
-            print("Unlocking the pacific gate")
             TriggerServerEvent('qb-doorlock:server:updateState', 'PacificGate4', false, false, false, true, false, false)
         end
         

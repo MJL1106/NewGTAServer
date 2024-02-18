@@ -342,7 +342,8 @@ RegisterNetEvent('qb-bankrobbery:server:drillLoot', function(bank, pos, closestB
         local cashitem = Config.Lockers["Paleto"]["Cash"]
         local cashamount = Config.Lockers["Paleto"]["CashAmount"]
         local PaletoDist = #(pos - vector3(Config.PaletoBank['coords'].x, Config.PaletoBank['coords'].y, Config.PaletoBank['coords'].z ))
-        if PaletoDist <= 15 then
+
+        if PaletoDist <= 30 then
             local amount = Config.Lockers["Paleto"]["ItemAmount"]
             Player.Functions.AddItem(item, amount, false)
             TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[item], 'add')

@@ -1602,7 +1602,6 @@ RegisterNetEvent('qb-bankrobbery:PedTrading:Hunter', function()
         disableCombat = true,
     }, {}, {}, {}, function()
         ClearPedTasks(ped)
-        print("trying to buy laptop")
         TriggerServerEvent('qb-bankrobbery:server:BuyLaptop', 'Hunter')
     end)
 end)

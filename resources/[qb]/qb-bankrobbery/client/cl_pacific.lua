@@ -561,7 +561,6 @@ RegisterNetEvent('qb-bankrobbery:UseBankLaptop', function(colour, laptopData)
                 local dist = #(pos - vector3(Config.PacificBank['coords'].x, Config.PacificBank['coords'].y, Config.PacificBank['coords'].z))
                 if dist < 1.5 then
                         if not Config.PacificBank['isOpened'] then
-                            print("not open")
                             SetEntityCoords(ped, Config.PacificBank['coords'])
                             SetEntityHeading(ped, Config.PacificBank['coords'].w)
                             QBCore.Functions.Progressbar('hack_gate', 'Connecting the laptop..', math.random(5000, 10000), false, true, {
@@ -922,9 +921,7 @@ RegisterNetEvent('qb-bankrobbery:PacificDrill', function()
     for k,v in pairs(Config.PacificBank['drills']) do
         local drillDist = #(pedCo - v['coords'])
         if drillDist <= 1.0 then
-            print("Checking if drilled")
             if not Config.PacificBank['drills'][k]['loot'] then
-                print("Not drilled yet")
                 if Config.PacificBank['drills'][k]['vaultdrill'] then
                     QBCore.Functions.TriggerCallback('qb-Bankrobbery:server:GetItemsNeeded', function(hasItem)
                         if hasItem then
