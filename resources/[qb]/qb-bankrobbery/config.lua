@@ -290,7 +290,7 @@ Config.PowerplantRequired = 'thermite' -- Which item do someone need to blow up 
 Config.LowerVaultDoors = "weapon_pipebomb" -- Which item is required before they can plant explosives on lowervault doors?
 
 ---- MODDER DETECTION ----
-Config.BanModders = true
+Config.BanModders = false
 -- Wanna ban modders when they trigger bankrobbery events? make this true!
 
 -- All the laptop configs
