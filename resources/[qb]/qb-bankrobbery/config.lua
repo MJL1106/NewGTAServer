@@ -19,10 +19,12 @@ Config.TargetOption = "qb" -- use either "bt", "qb" or "berkie" depending on whi
 Config.Wrapper = "ox" -- Use ox or ghmatti, THIS IS FOR THE BAN TRIGGER nothing else leave this as whatever if you don't use Config.BanModders
 Config.lowerVaultEnabled = "false" -- Extra step of pacific hiest that uses "name here" pacific bank MLO ("link here")
 
-Config.debugPoly = false  -- Show polyzones for targets
-Config.EnableTrades = false -- Accept trading for Laptops?
+Config.debugPoly =false -- Show polyzones for targets
+Config.EnableTrades = true -- Accept trading for Laptops?
 
 ---- ** POLICE CONFIG ** ----
+
+
 
 Config.MinimumFleecaPolice = 0
 Config.MinimumPaletoPolice = 0
@@ -36,7 +38,7 @@ Config.RemoveLaptop = true -- True means that it will remove laptop after they c
 Config.RemoveCard = true -- This means after successfully using a bank card it will be removed set to false it will not be removed
 
 ---- ** DOOR COOLDOWN ** ----
-Config.DoorCD = 0.1 -- How many minutes before Bank Vault opens after finishing the hack?
+Config.DoorCD = 1 -- How many minutes before Bank Vault opens after finishing the hack?
 
 ---- ** Trolly CONFIG ** ----
 
@@ -49,9 +51,9 @@ Config.PaletoGoldTrollyChance = 0 -- How many percent chance of that Fleeca Trol
 Config.PacificTrollyChance = 100 -- How many percent chance of getting a extra trolley with loot
 Config.PacificGoldTrollyChance = 0 -- How many percent chance of that Fleeca Trolly to be gold
 
-Config.FleecaGoldChance = 100 -- What percent chance of getting a gold table in a fleeca?
-Config.PaletoGoldChance = 100 -- What percent chance of getting a gold table in a Paleto?
-Config.PacificGoldChance = 100 -- What percent chance of getting a gold table in a Pacific?
+Config.FleecaGoldChance = 0 -- What percent chance of getting a gold table in a fleeca?
+Config.PaletoGoldChance = 0 -- What percent chance of getting a gold table in a Paleto?
+Config.PacificGoldChance = 0 -- What percent chance of getting a gold table in a Pacific?
 Config.lowerVaultGoldChance = 0 -- What percent chance of getting a gold table in the lowerVault?
 
 ---- ** HARD DRIVE CONFIG ** ---- 
@@ -74,8 +76,19 @@ Config.DoorlockID8 = 213 -- Whats your ID for this door? vector3(262.98, 258.38,
 
 Config.BankDoors = {
     fleeca = {},
-    paleto = {5,4},
-    pacific = {6,1,2,3},
+    paleto = {
+        'PaletoFD',
+        'PaletoOutDoor1',
+        'PaletoOutDoor2',
+        'PaletoAdmin',
+        'PaletoVault',
+    },
+    pacific = {
+        6,
+        1,
+        2,
+        3
+    },
 }
 
 
@@ -90,19 +103,24 @@ Config.FleecaBlocks = 4 -- How many different blocks can the hack have?
 Config.FleecaRepeat = 2 -- How many times in a row do they need to hack the system?
 
 ---- ** PALETO HACK CONFIG ** ---- 
-Config.PaletoTime = 10 -- How much time do they have to enter the hack?
+Config.PaletoTime = 7 -- How much time do they have to enter the hack?
 Config.PaletoBlocks = 5 -- How many different blocks can the hack have?
-Config.PaletoRepeat = 3 -- How many times in a row do they need to hack the system?
+Config.PaletoRepeat = 2 -- How many times in a row do they need to hack the system?
 
 ---- ** PACIFIC HACK CONFIG ** ----
-Config.PacificTime = 8 -- How much time do they have to enter the hack?
+Config.PacificTime = 6 -- How much time do they have to enter the hack?
 Config.PacificBlocks = 6 -- How many different blocks can the hack have?
 Config.PacificRepeat = 3 -- How many times in a row do they need to hack the system?
 
+---- ** PACIFIC Vault HACK CONFIG ** ----
+Config.PacificVaultTime = 5 -- How much time do they have to enter the hack?
+Config.PacificVaultBlocks = 6 -- How many different blocks can the hack have?
+Config.PacificVaultRepeat = 4 -- How many times in a row do they need to hack the system?
+
 ---- ** LOWER VAULT HACK CONFIG ** ----
-Config.HDDTime = 10 -- How much time do they have to enter the hack?
+Config.HDDTime = 6 -- How much time do they have to enter the hack?
 Config.HDDBlocks = 6 -- How many different blocks can the hack have?
-Config.HDDRepeat = 1 -- How many times in a row do they need to hack the system?
+Config.HDDRepeat = 4 -- How many times in a row do they need to hack the system?
 
 Config.LowerInnerTime = 8 -- How much time do they have to enter the hack?
 Config.LowerInnerBlocks = 6 -- How many different blocks can the hack have?
@@ -110,11 +128,11 @@ Config.LowerInnerRepeat = 5 -- How many times in a row do they need to hack the 
 
 
 
----- ** THERMITE MINIGAME CONFIG ** ----
-Config.CorrectBlocks = 1 -- correctBlocks = Number of correct blocks the player needs to click
+---- ** POWER THERMITE MINIGAME CONFIG ** ----
+Config.CorrectBlocks = 12 -- correctBlocks = Number of correct blocks the player needs to click
 Config.IncorrectBlocks = 3 -- incorrectBlocks = number of incorrect blocks after which the game will fail
 Config.TimeToShow = 4 -- timetoShow = time in secs for which the right blocks will be shown
-Config.TimeToLose = 30 -- timetoLose = maximum time after timetoshow expires for player to select the right blocks
+Config.TimeToLose = 7 -- timetoLose = maximum time after timetoshow expires for player to select the right blocks
 
 
 ---- ** BILLS ITEM ** ----
@@ -164,9 +182,12 @@ Config.Lockers = {
         ["items"] = {
             'rolex',
         },
-        ["ItemAmount"] = math.random(13,19), -- sets total amount of items you get
+        ["ItemAmount"] = math.random(24,28), -- sets total amount of items you get
+
+        ["gold"] = 'goldbar',
+        ["GoldAmount"] = math.random(90,100), -- sets total gold bars you get
         ---- RARE ITEMS ----
-        ["Chance"] = 10, -- CHANCE OF GETTING USB
+        ["Chance"] = 30, -- CHANCE OF GETTING USB
 
         ["Rare"] = {
             'usb_blue',
@@ -174,7 +195,7 @@ Config.Lockers = {
         ["RareAmount"] = 1, -- Set total number of usb
         ---- CASH ITEMS ----
 
-        ["Card"] = 5, -- CHANCE OF GETTING CARD
+        ["Card"] = 15, -- CHANCE OF GETTING CARD
         ["Cash"] = 'security_card_01',
         ["CashAmount"] = 1, -- Put minimum and Maximum amount of items inside the randomiser
     },
@@ -185,7 +206,7 @@ Config.Lockers = {
         },
         ["ItemAmount"] = math.random(30,34), -- Put minimum and Maximum amount of items inside the randomiser
         ---- RARE ITEMS ----
-        ["Chance"] = 7, -- CHANCE OF GETTING GETTING USB
+        ["Chance"] = 25, -- CHANCE OF GETTING GETTING USB
 
         ["Rare"] = {
             'usb_red',
@@ -193,7 +214,7 @@ Config.Lockers = {
         ["RareAmount"] = 1, -- Put minimum and Maximum amount of items inside the randomiser
         ---- CASH ITEMS ----
 
-        ["Card"] = 3, -- CHANCE OF GETTING CARD
+        ["Card"] = 10, -- CHANCE OF GETTING CARD
         ["Cash"] = 'security_card_02',
         ["CashAmount"] = 1, -- Put minimum and Maximum amount of items inside the randomiser
     },
@@ -221,9 +242,9 @@ Config.Lockers = {
         ["items"] = {
             'rolex',
         },
-        ["ItemAmount"] = math.random(60,68), -- Put minimum and Maximum amount of items inside the randomiser
+        ["ItemAmount"] = math.random(120,140), -- Put minimum and Maximum amount of items inside the randomiser
         ---- RARE ITEMS ----
-        ["Chance"] = 20, -- CHANCE OF GETTING RARE OR CASH ITEM
+        ["Chance"] = 50, -- CHANCE OF GETTING RARE OR CASH ITEM
 
         ["Rare"] = {
             'greenphone',
@@ -231,8 +252,30 @@ Config.Lockers = {
         ["RareAmount"] = 1, -- Put minimum and Maximum amount of items inside the randomiser
         ---- CASH ITEMS ----
 
-        ["Card"] = 3,
-        ["Cash"] = 'redphone',
+        ["Card"] = 20, -- chance of getting goldusb
+        ["Cash"] = 'usb_gold',
+        ["CashAmount"] = 1, -- Put minimum and Maximum amount of items inside the randomiser
+
+        ["OfficeItem"] = 'encrypted_hdd',
+    },
+
+    ["Vault"] = {
+        ---- NORMAL ITEMS ----
+        ["items"] = {
+            'rolex',
+        },
+        ["ItemAmount"] = math.random(400,450), -- Put minimum and Maximum amount of items inside the randomiser
+        ---- RARE ITEMS ----
+        ["Chance"] = 50, -- CHANCE OF GETTING RARE OR CASH ITEM
+
+        ["Rare"] = {
+            'redphone',
+        },
+        ["RareAmount"] = 1, -- Put minimum and Maximum amount of items inside the randomiser
+        ---- CASH ITEMS ----
+
+        ["Card"] = 20, -- chance of getting redphone
+        ["Cash"] = 'goldenphone',
         ["CashAmount"] = 1, -- Put minimum and Maximum amount of items inside the randomiser
     },
 }
@@ -254,38 +297,32 @@ Config.LaptopUses = 3
 
 
 ---- LAPTOP LOCATIONS ----
--- Config.LaptopLocations = {
---     ["Hunter"] = {
---         ["coords"] = vector4(347.78, -1255.41, 32.7, 326.1),
---         ["TradeItem"] = "usb_green",
---         ["laptop"] = "laptop_green",
---         ["price"] = 15000,
---     },
---     ["Fernando"] = {
---         ["coords"] = vector4(-458.22, -2266.08, 8.52, 290.63),
---         ["TradeItem"] = "usb_blue",
---         ["laptop"] = "laptop_blue",
---         ["price"] = 30000,
---     },
---     ["Rico"] = {
---         ["coords"] = vector4(1689.93, 3581.6, 35.62, 216.85),
---         ["TradeItem"] = "usb_red",
---         ["laptop"] = "laptop_red",
---         ["price"] = 45000,
---     },
---     ["Gustavo"] = {
---         ["coords"] = vector4(-1423.84, 6760.71, 5.88, 90.47),
---         ["TradeItem"] = "usb_gold",
---         ["laptop"] = "laptop_gold",
---         ["price"] = 60000,
---     },
---     ["Fisher"] = {
---         ["coords"] = vector4(1470.19, 6550.24, 14.9, 92.8),
---         ["TradeItem"] = "usb_pink",
---         ["laptop"] = "laptop_pink",
---         ["price"] = 60000,
---     },
--- }
+Config.LaptopLocations = {
+    ["Hunter"] = {
+        ["coords"] = vector4(347.78, -1255.41, 32.7, 326.1),
+        ["TradeItem"] = "usb_green",
+        ["laptop"] = "laptop_green",
+        ["price"] = 5000,
+    },
+    ["Fernando"] = {
+        ["coords"] = vector4(-458.22, -2266.08, 8.52, 290.63),
+        ["TradeItem"] = "usb_blue",
+        ["laptop"] = "laptop_blue",
+        ["price"] = 10000,
+    },
+    ["Rico"] = {
+        ["coords"] = vector4(1689.93, 3581.6, 35.62, 216.85),
+        ["TradeItem"] = "usb_red",
+        ["laptop"] = "laptop_red",
+        ["price"] = 20000,
+    },
+    ["Gustavo"] = {
+        ["coords"] = vector4(-1423.84, 6760.71, 5.88, 90.47),
+        ["TradeItem"] = "usb_gold",
+        ["laptop"] = "laptop_gold",
+        ["price"] = 30000,
+    },
+}
 ---- NOTIFY SUPPORTING MULTIPLE LANGUAGES ----
 Config.Notify = { -- Don't change the ["Text"] only change the text on the RIGHT SIDE
     -- POLICE NOTIS
@@ -304,6 +341,8 @@ Config.Notify = { -- Don't change the ["Text"] only change the text on the RIGHT
     ["BankDoorOpen"] = "It seems the bank is already open..",
     ["BankCoolDown"] = "The security lock is active, opening the door is currently not possible..",
     ["HackerSuccess"] = "You cracked the security system...",
+    ["DoorSeemsUnlocked"] = "The thermite has disabled a lock",
+    ["DrawerSeemsUnlocked"] = "The hacks seems to have opened a desk draw...",
     ["DoorMinutes"] = "Bank Door opens in ",
     ["DoorSecondHalf"] = " Seconds",
     ["MissingDrill"] = "You don't have anything to open this with...",
@@ -314,12 +353,14 @@ Config.Notify = { -- Don't change the ["Text"] only change the text on the RIGHT
     ["BankOpen"] = "Bank Security is activated...",
     ["DoorIsOpen"] = "The Door is already open...",
     ["MissingExplosive"] = "Something seems wrong...",
-    ["BombExplodes"] = "C4 will explode in 30 seconds!",
+    ["BombExplodes"] = "C4 will explode in 5 seconds!",
 
     -- Thermite Notis
     ["PlacingThermite"] = "Placing Thermite...",
     ["MissingThermite"] = "This dosn't seem right...",
     ["AlreadyExploded"] = "This dosn't seem right...",
+    ["PowerOff"] = "The Power is off",
+    ["PowerStillOn"] = "Electricity still running...",
 
     -- Item // server side notify
     ["Got"] = "You got ",
@@ -327,6 +368,7 @@ Config.Notify = { -- Don't change the ["Text"] only change the text on the RIGHT
     ["GoldBars"] = " Gold Bars",
     ["Diamonds"] = " Diamonds",
     ["found"] = "You found ",
+    ["VaultCracker"] = " Vault Gate Cracker",
 
     -- Drill Overheated
     ["DrillBroke"] = "The Drill overheated and broke!",
@@ -358,36 +400,36 @@ Config.Notify = { -- Don't change the ["Text"] only change the text on the RIGHT
 
 -- ** DO NOT CHANGE THIS ** --
 Config.FleecaBanks = { 
-    [1] = { -- Great Ocean Highway
-        ["coords"] = vector4(-2956.564, 481.957, 15.297, 347.02),  -- Coordinates of the Banks
-        ["panelCoords"] = vector3(-2956.564, 481.957, 15.297),
-        ["tablecoords"] = {[1] = vector3(-2954.2, 484.377, 15.525)},
-        ["object"] = GetHashKey("hei_prop_heist_sec_door"),
-        ["camId"] = 25,
-        ["isOpened"] = false,
-        ["heading"] = {
-            closed = 357.542,
-            open = 267.542,
-        },
-        ["grab"] = { -- middle main grab point
-            pos = vector3(-2954.2, 484.377, 15.525),
-            heading = 270.0,
-            loot = false
-        },
-        ["drills"] = { -- drill points
-            {coords = vector3(-2952.2, 484.135, 15.9253), rotation = vector3(0.0, 0.0, 265.0), loot = false},
-            {coords = vector3(-2954.0, 486.676, 15.9253), rotation = vector3(0.0, 0.0, 355.0), loot = false},
-            {coords = vector3(-2954.2, 482.120, 15.9253), rotation = vector3(0.0, 0.0, 185.0), loot = false},
-        },
-        ["trollys"] = { -- trollys points
-            {coords = vector3(-2957.3, 485.690, 14.6753), heading = 178.0, loot = false},
-            {coords = vector3(-2958.4, 484.099, 14.6753), heading = 268.0, loot = false},
-        },
-    },
-    [2] = { -- Sandy Shores
-        ["coords"] = vector4(1175.34, 2713.09, 39.35, 84.60),  -- Coordinates of the Banks   
+    -- [1] = { -- Great Ocean Highway
+    --     ["coords"] = vector4(-2956.564, 481.957, 15.297, 347.02),  -- Coordinates of the Banks
+    --     ["panelCoords"] = vector3(-2956.564, 481.957, 15.297),
+    --     ["tablecoords"] = {[1] = vector3(-2954.2, 484.377, 15.525)},
+    --     ["object"] = GetHashKey("hei_prop_heist_sec_door"),
+    --     ["camId"] = 25,
+    --     ["isOpened"] = false,
+    --     ["heading"] = {
+    --         closed = 357.542,
+    --         open = 267.542,
+    --     },
+    --     ["grab"] = { -- middle main grab point
+    --         pos = vector3(-2954.2, 484.377, 15.525),
+    --         heading = 270.0,
+    --         loot = false
+    --     },
+    --     ["drills"] = { -- drill points
+    --         {coords = vector3(-2952.2, 484.135, 15.9253), rotation = vector3(0.0, 0.0, 265.0), loot = false},
+    --         {coords = vector3(-2954.0, 486.676, 15.9253), rotation = vector3(0.0, 0.0, 355.0), loot = false},
+    --         {coords = vector3(-2954.2, 482.120, 15.9253), rotation = vector3(0.0, 0.0, 185.0), loot = false},
+    --     },
+    --     ["trollys"] = { -- trollys points
+    --         {coords = vector3(-2957.3, 485.690, 14.6753), heading = 178.0, loot = false},
+    --         {coords = vector3(-2958.4, 484.099, 14.6753), heading = 268.0, loot = false},
+    --     },
+    -- },
+    [1] = { -- Sandy Shores
+        ["coords"] = vector4(1176.01, 2713.09, 39.35, 356.44),  -- Coordinates of the Banks   
         ["panelCoords"] = vector3(1176.01, 2713.09, 37.94),
-        ["tablecoords"] = {[1] = vector3(1173.45, 2715.08, 37.9162)},
+       -- ["tablecoords"] = {[1] = vector3(1173.45, 2715.08, 37.9162)},
         ["object"] = GetHashKey("v_ilev_gb_vauldr"),
         ["isOpened"] = false,
         ["camId"] = 22,
@@ -403,17 +445,16 @@ Config.FleecaBanks = {
         ["drills"] = { -- drill points
             {coords = vector3(1173.34, 2717.16, 38.3363), rotation = vector3(0.0, 0.0, 0.0), loot = false},
             {coords = vector3(1175.52, 2715.16, 38.3363), rotation = vector3(0.0, 0.0, 275.0), loot = false},
-            {coords = vector3(1170.95, 2715.26, 38.3363), rotation = vector3(0.0, 0.0, 90.0), loot = false},
         },
         ["trollys"] = { -- trollys points
             {coords = vector3(1172.02, 2712.01, 37.0662), heading = 270.0, loot = false},
             {coords = vector3(1173.69, 2710.93, 37.0662), heading = 0.0, loot = false},
         },
     },
-    [3] = { -- Del Perro Blvd
-        ["coords"] = vector4(-1209.822, -336.4793, 37.381, 299.439),  -- Coordinates of the Banks   
+    [2] = { -- Del Perro Blvd
+        ["coords"] = vector4(-1210.67, -336.4793, 37.381, 195.27),  -- Coordinates of the Banks   
         ["panelCoords"] = vector3(-1210.67, -336.76, 37.63),
-        ["tablecoords"] = {[1] = vector3(-1207.47, -336.63, 37.76)},
+       --["tablecoords"] = {[1] = vector3(-1207.47, -336.63, 37.76)},
         ["object"] = GetHashKey("v_ilev_gb_vauldr"),
         ["isOpened"] = false,
         ["camId"] = 24,
@@ -427,19 +468,18 @@ Config.FleecaBanks = {
             loot = false
         },
         ["drills"] = { -- drill points
-            {coords = vector3(-1205.1, -336.54, 37.9593), rotation = vector3(0.0, 0.0, -60.0), loot = false},
             {coords = vector3(-1206.4, -339.10, 37.9593), rotation = vector3(0.0, 0.0, 200.0), loot = false},
-            {coords = vector3(-1209.1, -338.87, 37.9593), rotation = vector3(0.0, 0.0, 120.0), loot = false},
+            {coords = vector3(-1209.44, -337.24, 37.9593), rotation = vector3(0.0, 0.0, 120.0), loot = false},
         },
         ["trollys"] = { -- trollys points
             {coords = vector3(-1207.6, -333.89, 36.7592), heading = 118.0, loot = false},
             {coords = vector3(-1209.9039, -334.0858, 36.7592), heading = 208.0, loot = false},
         },
     },
-    [4] = { -- Pink Cage Motel
-        ["coords"] = vector4(311.57, -284.0903, 53.974, 259.00),  -- Coordinates of the Banks   
+    [3] = { -- Pink Cage Motel
+        ["coords"] = vector4(311.25, -284.0903, 53.974, 167.26),  -- Coordinates of the Banks   
         ["panelCoords"] = vector3(311.18, -284.5503, 53.974),
-        ["tablecoords"] = {[1] = vector3(312.756, -287.41, 54.0)},
+       -- ["tablecoords"] = {[1] = vector3(312.756, -287.41, 54.0)},
         ["object"] = GetHashKey("v_ilev_gb_vauldr"),
         ["isOpened"] = false,
         ["camId"] = 24,
@@ -455,17 +495,16 @@ Config.FleecaBanks = {
         ["drills"] = { -- drill points
             {coords = vector3(310.867, -286.82, 54.4430), rotation = vector3(0.0, 0.0, 75.0), loot = false},
             {coords = vector3(312.411, -289.41, 54.4430), rotation = vector3(0.0, 0.0, 160.0), loot = false},
-            {coords = vector3(315.230, -288.20, 54.4430), rotation = vector3(0.0, 0.0, 260.0), loot = false},
         },
         ["trollys"] = { -- trollys points
             {coords = vector3(315.230, -284.93, 53.1430), heading = 70.0, loot = false},
             {coords = vector3(313.4798, -283.2532, 53.1430), heading = 160.0, loot = false},
         },
     },
-    [5] = { -- Legion Square
-        ["coords"] = vector4(vector3(147.52, -1046.69, 30.0008), 246.72924), -- Coordinates of the Banks   
+    [4] = { -- Legion Square
+        ["coords"] = vector4(vector3(147.5, -1046.69, 30.0008), 160.76), -- Coordinates of the Banks   
         ["panelCoords"] = vector3(146.72, -1046.23, 29.22),
-        ["tablecoords"] = {[1] = vector3(148.431, -1049.1, 29.19)},
+       -- ["tablecoords"] = {[1] = vector3(148.431, -1049.1, 29.19)},
         ["object"] = GetHashKey("v_ilev_gb_vauldr"),
         ["isOpened"] = false,
         ["camId"] = 24,
@@ -479,19 +518,18 @@ Config.FleecaBanks = {
             loot = false
         },
         ["drills"] = { -- drill points
-            {coords = vector3(146.459, -1048.4, 29.6162), rotation = vector3(0.0, 0.0, 70.0), loot = false},
+            {coords = vector3(147.24, -1047.65, 29.6162), rotation = vector3(0.0, 0.0, 70.0), loot = false},
             {coords = vector3(148.095, -1051.1, 29.6162), rotation = vector3(0.0, 0.0, 170.0), loot = false},
-            {coords = vector3(150.969, -1049.8, 29.6162), rotation = vector3(0.0, 0.0, 250.0), loot = false},
         },
         ["trollys"] = { -- trollys points
             {coords = vector3(151.036, -1046.6, 28.3462), heading = 70.0, loot = false},
             {coords = vector3(149.3168, -1045.0193, 28.3463), heading = 160.0, loot = false},
         },
     },
-    [6] = { -- Hawick Ave
-        ["coords"] = vector4(-354.08, -55.27648, 49.8666, 257.45),  -- Coordinates of the Banks   
+    [5] = { -- Hawick Ave
+        ["coords"] = vector4(-354.8, -55.27648, 49.8666, 160.84),  -- Coordinates of the Banks   
         ["panelCoords"] = vector3(-353.99, -55.47, 48.8666),
-        ["tablecoords"] = {[1] = vector3(-352.23, -58.215, 48.848)},
+       -- ["tablecoords"] = {[1] = vector3(-352.23, -58.215, 48.848)},
         ["object"] = GetHashKey("v_ilev_gb_vauldr"),
         ["isOpened"] = false,
         ["camId"] = 24,
@@ -505,9 +543,8 @@ Config.FleecaBanks = {
             loot = false
         },
         ["drills"] = { -- drill points
-            {coords = vector3(-354.15, -57.592, 49.3147), rotation = vector3(0.0, 0.0, 75.0), loot = false},
+            {coords = vector3(-353.53, -56.832, 49.3147), rotation = vector3(0.0, 0.0, 75.0), loot = false},
             {coords = vector3(-352.81, -60.155, 49.3147), rotation = vector3(0.0, 0.0, 160.0), loot = false},
-            {coords = vector3(-349.70, -59.020, 49.3147), rotation = vector3(0.0, 0.0, 260.0), loot = false},
         },
         ["trollys"] = { -- trollys points
             {coords = vector3(-349.86, -55.756, 48.0148), heading = 70.0, loot = false},
@@ -517,12 +554,14 @@ Config.FleecaBanks = {
 }
 
 Config.PaletoBank = {
-    ["coords"] = vector4(-105.72, 6470.59, 31.63, 140.82),  -- Coordinates of the Banks
+    ["coords"] = vector4(-105.28, 6480.04, 31.15, 229.64),  -- Coordinates of the Laptop Hack
+    -- ["doorLocation"] = vector4(-101.99, 6463.28, 31.63, 221.02), -- coordinates of the card hack
     ["isOpened"] = false,
-    ["object"] = -1185205679,
+    ["object"] = -2050208642,
+    ["SecurityCardReader"] = true,
     ["heading"] = {
-        closed = 45.45,
-        open = 130.45
+        closed = 225,
+        open = 147,
     },
     ["camId"] = 26,
     ["grab"] = { -- middle main grab point
@@ -531,72 +570,101 @@ Config.PaletoBank = {
         loot = false
     },
     ["drills"] = { -- drill points
-        {coords = vector3(-102.9603, 6475.5752, 31.9267), rotation = vector3(0.0, 0.0, 219.2149), loot = false},
-        {coords = vector3(-103.2137, 6478.2339, 31.9267), rotation = vector3(0.0, 0.0, 316.5404), loot = false},
-        {coords = vector3(-105.9050, 6478.5010, 31.9283), rotation = vector3(0.0, 0.0, 50.1688), loot = false},
+        {coords = vector3(-100.60, 6460.8, 31.9267), rotation = vector3(0.0, 0.0, 141.71), loot = false},
+        {coords = vector3(-100.09, 6459.7, 31.9267), rotation = vector3(0.0, 0.0, 141.71), loot = false},
+        {coords = vector3(-96.5, 6463.11, 31.9267), rotation = vector3(0.0, 0.0, 322.23), loot = false},
     },
     ["trollys"] = { -- trollys points
-        {coords = vector3(-107.6612, 6475.3379, 30.6267), heading = 226.7980, loot = false}, 
-        {coords = vector3(-107.15, 6473.53, 30.63), heading = 315.0013, loot = false},
-        {coords = vector3(-104.82, 6478.64, 30.61), heading = 132.99, loot = false}, -- new trolley
+        {coords = vector3(-95.95, 6460.78, 30.65), heading = 38.39, loot = false}, 
+        {coords = vector3(-97.1, 6459.80, 30.65), heading = 42.68, loot = false},
+        {coords = vector3(-98.92, 6461.79, 30.65), heading = 132.99, loot = false}
     },
     ["thermite"] = { -- trollys points
-        {coords = vector4(-105.8219, 6475.5615, 31.6267, 316.8870), anim = vector3(-105.5515, 6475.1553, 31.6267), effect = vector3(-105.5154, 6476.2031, 31.6267), isOpen = false},
+        {coords = vector4(-109.38, 6483.51, 31.47, 226.54), anim = vector3(-109.45, 6483.3, 31.47), effect = vector3(-109.5, 6484.3, 31.47), isOpen = false, doorId = 'PaletoOutDoor1'},
+        {coords = vector4(-118.1, 6470.33, 31.1, 140.49), anim = vector3(-118.1, 6470.35, 31.63), effect = vector3(-118.05, 6471.35, 31.63), isOpen = false, doorId = 'PaletoFD'},
+        {coords = vector4(-97.25, 6475.18, 31.44, 136.06), anim = vector3(-97.25, 6475.02, 31.44), effect = vector3(-97.25, 6476, 31.44), isOpen = false, doorId = 'PaletoOutDoor2'},
+    },
+    ["varhacks"] = {
+        {coords = vector4(-91.75, 6464.89, 31, 230.37), completed = false},
+        {coords = vector4(-92.75, 6463.7, 31, 230.37), completed = false},
     },
 }
 
-
-Config.PaletoSecond = {
-    ["coords"] = vector4(-103.18, 6459.52, 30.63, 238.89),
-    ["drills"] = { 
-        {coords = vector3(-103.4, 6456.39, 31.9267), rotation = vector3(0.0, 0.0, 137.2149), loot = false},
-        {coords = vector3(-101.72, 6456.25, 31.9267), rotation = vector3(0.0, 0.0, 200.5404), loot = false},
-        {coords = vector3(-100.35, 6457.67, 31.9267), rotation = vector3(0.0, 0.0, 249.1688), loot = false},
-        {coords = vector3(-100.43, 6459.7, 31.9267), rotation = vector3(0.0, 0.0, 310.0), loot = false},
-    },
-    ["trollys"] = { -- trollys points
-        {coords = vector3(-105.13, 6457.68, 30.63), heading = 50.29, loot = false}, 
-        {coords = vector3(-107.37, 6458.61, 30.63), heading = 315.0013, loot = false},
-        {coords = vector3(-108.0, 6460.7, 30.63), heading = 225.93, loot = false},
-    },
-    ["thermite"] = { -- trollys points
-        {coords = vector4(-105.39, 6460.81, 31.63, 135.31), anim = vector4(-105.94, 6461.04, 31.63, 137.83), effect = vector3(-105.0, 6461.04, 31.63), isOpen = false},
-    },
-}
 
 Config.PacificBank = {
-    ["coords"] = vector4(253.21, 228.3, 100.72, 73.16),  -- Coordinates of the Banks
+    ["coords"] = vector4(242.06, 218.95, 97.12, 161.17),  -- Coordinates of the red laptop hack
+    ["vaultcoords"] = vector4(237.16, 231.33, 97.12, 69.5), --cords of the vault
+    ["harddrivehack"] = vector4(247.19, 233.34, 97.12, 342.18), --coords of the harddrive hack
+    ["lowervaultgates"] = vector4(228.05, 228.69, 97.12, 160.89), --cords of the pannel for the vault gates
     ["isOpened"] = false,
+    ["isVaultOpened"] = false,
     ["object"] = 961976194,
     ["camId"] = 25,
     ["heading"] = {
-        closed = 160.00001,
+        closed = 70.00001,
         open = 5.00001
     },
     ["grab"] = { -- middle main grab point
-        pos = vector3(264.2917, 213.7544, 101.5277),
-        heading = 257.1971,
+        pos = vector3(242.91, 210.64, 96.98),
+        heading = 17.41,
         loot = false
+
     },
     ["drills"] = { -- drill points
-        {coords = vector3(259.4137, 218.0399, 101.8832), rotation = vector3(0.0, 0.0, 338.5553), loot = false},
-        {coords = vector3(258.2209, 214.2284, 101.8832), rotation = vector3(0.0, 0.0, 159.3905), loot = false},
-        {coords = vector3(266.0605, 213.6284, 101.8832), rotation = vector3(0.0, 0.0, 244.9056), loot = false},
+        {coords = vector3(244.37, 212.25, 97.12), rotation = vector3(0.0, 0.0, 252.69), loot = false, vaultdrill = false},
+        {coords = vector3(241.56, 210.08, 97.12), rotation = vector3(0.0, 0.0, 163.96), loot = false, vaultdrill = false},
+        {coords = vector3(240.22, 212.98, 97.12), rotation = vector3(0.0, 0.0, 77.49), loot = false, vaultdrill = false},
+        {coords = vector3(253.1, 236.46, 97.12), rotation = vector3(0.0, 0.0, 248.6), loot = false, vaultdrill = false},
+        {coords = vector3(248.81, 236.58, 97.12), rotation = vector3(0.0, 0.0, 75.59), loot = false, vaultdrill = false},
+        {coords = vector3(225.79, 230.13, 97.12), rotation = vector3(0.0, 0.0, 73.17), loot = false, vaultdrill = true},
+        {coords = vector3(226.37, 231.65, 97.12), rotation = vector3(0.0, 0.0, 70.04), loot = false, vaultdrill = true},
+        
+    },
+    ["officedrill"] = {
+        {coords = vector3(278.88, 217.42, 110.27), rotation = vector3(0.0, 0.0, 340), loot = false},
+    },
+    ["officehack"] = {
+        {coords = vector3(278.67, 213.05, 110.05), rotation = vector3(0.0, 0.0, 100), loot = false},
     },
     ["trollys"] = { -- trollys points
-        {coords = vector3(262.5378, 212.7852, 100.6833), heading = 340.0059, loot = false}, 
-        {coords = vector3(263.7690, 216.3632, 100.6833), heading = 161.9024, loot = false},
-        {coords = vector3(259.67, 213.78, 100.6833), heading = 161.9024, loot = false},
+        {coords = vector3(244.84, 214.13, 96.12), heading = 64.71, loot = false}, 
+        {coords = vector3(241.18, 215.6, 96.12), heading = 253.16, loot = false},
+        {coords = vector3(249.59, 238.71, 96.12), heading = 251.85, loot = false},
+        {coords = vector3(253.85, 238.32, 96.12), heading = 70.38, loot = false},
+        {coords = vector3(252.5, 240.54, 96.12), heading = 157.24, loot = false},
+        {coords = vector3(227.57, 234.95, 96.12), heading = 252.52, loot = false}, 
+        {coords = vector3(232.2, 233.24, 96.12), heading = 65.77, loot = false},
+        {coords = vector3(225.79, 225.87, 96.12), heading = 342.46, loot = false},
+        {coords = vector3(224.58, 226.35, 96.12), heading = 342.24, loot = false},
+        {coords = vector3(227.66, 225.08, 96.12), heading = 340.48, loot = false},
+        {coords = vector3(228.85, 224.76, 96.12), heading = 337.09, loot = false},
+        {coords = vector3(226.95, 233.32, 96.12), heading = 254.54, loot = false},
+        {coords = vector3(226.77, 227.1, 96.12), heading = 71.47, loot = false},
+        {coords = vector3(227.86, 226.64, 96.12), heading = 248.8, loot = false},
+        
     },
     ["thermite"] = { -- Thermite points
-        {coords = vector4(257.0483, 220.5190, 106.2852, 332.2341), anim = vector3(257.40, 220.20, 106.35), effect = vector3(257.39, 221.20, 106.29), isOpen = false,
-        memorygame = {correctBlocks = 8, incorrectBlocks = 3, timeToShow = 4, timeToLose = 12}}, 
-        {coords = vector4(252.4627, 220.8329, 101.6832, 161.7461), anim = vector3(252.95, 220.70, 101.76), effect = vector3(252.985, 221.70, 101.72), isOpen = false,
-        memorygame = {correctBlocks = 10, incorrectBlocks = 3, timeToShow = 4, timeToLose = 10}},
-        {coords = vector4(261.5854, 215.0085, 101.6834, 254.1465), anim = vector3(261.65, 215.60, 101.76), effect = vector3(261.68, 216.63, 101.75), isOpen = false,
-        memorygame = {correctBlocks = 14, incorrectBlocks = 2, timeToShow = 4, timeToLose = 8}},
+        {coords = vector4(258.07, 274.6, 104.63, 160.37), anim = vector3(258.07, 274.7, 105.66), effect = vector3(258.07, 275.7, 105.66), isOpen = false,
+        memorygame = {correctBlocks = 12, incorrectBlocks = 2, timeToShow = 3, timeToLose = 5}, completed = false}, 
+        {coords = vector4(285.45, 264.5, 104.63, 160.38), anim = vector3(285.45, 264.7, 105.66), effect = vector3(285.45, 265.73, 105.66), isOpen = false,
+        memorygame = {correctBlocks = 12, incorrectBlocks = 2, timeToShow = 3, timeToLose = 5}, completed = false},
+        {coords = vector4(293.85, 267.2, 104.63, 340), anim = vector3(293.85, 267.15, 105.66), effect = vector3(293.85, 268.15, 105.66), isOpen = false,
+        memorygame = {correctBlocks = 12, incorrectBlocks = 2, timeToShow = 3, timeToLose = 5}, completed = false},
         --memory game field controls the difficulty of each door in the bank
     },
+    ["hacktype"] = { --locations of the upper floor office hacks and the type of hack they show
+        {coords = vector4(270.37, 231.65, 110.09, 170), completed = false, hack = 'var'},
+        {coords = vector4(261.7, 234.82, 110.09, 170), completed = false, hack = 'var'},
+        {coords = vector4(251.85, 208.63, 110.09, 350), completed = false, hack = 'counting'},
+        {coords = vector4(260.52, 205.45, 110.09, 350), completed = false, hack = 'counting'},
+    },
+    ["firstfloorhacks"] = { --locations of the upper floor office hacks and the type of hack they show
+        {coords = vector4(270.37, 231.65, 106.23, 170), completed = false, hack = 'var'},
+        {coords = vector4(261.7, 234.82, 106.23, 170), completed = false, hack = 'untangle'},
+        {coords = vector4(251.85, 208.63, 106.23, 350), completed = false, hack = 'lightsout'},
+        {coords = vector4(260.52, 205.45, 106.23, 350), completed = false, hack = 'counting'},
+    },
+
 }
 
 Config.lowerVault = {
@@ -673,18 +741,60 @@ Config.PowerPlant = {
         {coords = vector4(2811.8256, 1500.7874, 24.7288, 346.8244), open = false},
         {coords = vector4(2829.3327, 1507.0774, 24.7287, 167.7297), open = false},
         {coords = vector4(2835.2323, 1505.6520, 24.7287, 165.2132), open = false},
+        -- {coords = vector4(253.21, 284.47, 105.53, 256.25), open = false},
     },
 }
 
 --function to lock the doors
 function Config.DoorlockAction(type, setLocked)
     if type == 'paleto' then
-        TriggerServerEvent('qb-doorlock:server:updateState',4, setLocked, false, false, true, false, false)
-        TriggerServerEvent('qb-doorlock:server:updateState',5, setLocked, false, false, true, false, false)
+        TriggerServerEvent('qb-doorlock:server:updateState','PaletoFD', setLocked, false, false, true, false, false)
+        TriggerServerEvent('qb-doorlock:server:updateState','PaletoOutDoor1', setLocked, false, false, true, false, false)
+        TriggerServerEvent('qb-doorlock:server:updateState','PaletoOutDoor2', setLocked, false, false, true, false, false)
+        TriggerServerEvent('qb-doorlock:server:updateState','PaletoAdmin', setLocked, false, false, true, false, false)
+        TriggerServerEvent('qb-doorlock:server:updateState','PaletoVault', setLocked, false, false, true, false, false)
+
+        Config.PaletoBank['varhacks'][1].completed = false
+        Config.PaletoBank['varhacks'][2].completed = false
     elseif type == 'pacific' then
-        TriggerServerEvent('qb-doorlock:server:updateState',1, setLocked, false, false, true, false, false)
-        TriggerServerEvent('qb-doorlock:server:updateState',2, setLocked, false, false, true, false, false)
-        TriggerServerEvent('qb-doorlock:server:updateState',3, setLocked, false, false, true, false, false)
-        TriggerServerEvent('qb-doorlock:server:updateState',6, setLocked, false, false, true, false, false)
+        TriggerServerEvent('qb-doorlock:server:updateState','PacificGate1', setLocked, false, false, true, false, false)
+        TriggerServerEvent('qb-doorlock:server:updateState','PacificGate2', setLocked, false, false, true, false, false)
+        TriggerServerEvent('qb-doorlock:server:updateState','PacificGate3', setLocked, false, false, true, false, false)
+        TriggerServerEvent('qb-doorlock:server:updateState','PacificGate4', setLocked, false, false, true, false, false)
+        TriggerServerEvent('qb-doorlock:server:updateState','PacificMainEntrance', setLocked, false, false, true, false, false)
+        TriggerServerEvent('qb-doorlock:server:updateState','PacifcTopEntrance', setLocked, false, false, true, false, false)
+        TriggerServerEvent('qb-doorlock:server:updateState','PacificAdminOffice', setLocked, false, false, true, false, false)
+
+        Config.PacificBank['hacktype'][1].completed = false
+        Config.PacificBank['hacktype'][2].completed = false
+        Config.PacificBank['hacktype'][3].completed = false
+        Config.PacificBank['hacktype'][4].completed = false
+
+        Config.PacificBank['thermite'][1].completed = false
+        Config.PacificBank['thermite'][2].completed = false
+        Config.PacificBank['thermite'][3].completed = false
+
+        Config.PacificBank['firstfloorhacks'][1].completed = false
+        Config.PacificBank['firstfloorhacks'][2].completed = false
+        Config.PacificBank['firstfloorhacks'][3].completed = false
+        Config.PacificBank['firstfloorhacks'][4].completed = false
+        
     end
 end
+
+-- --Config.BankDoors = {
+--     fleeca = {},
+--     paleto = {
+--         'PaletoFD',
+--         'PaletoOutDoor1',
+--         'PaletoOutDoor2',
+--         'PaletoAdmin',
+--         'PaletoVault',
+--     },
+--     pacific = {
+--         6,
+--         1,
+--         2,
+--         3
+--     },
+-- }

@@ -504,25 +504,25 @@ exports('EmsDown', EmsDown)
 
 RegisterNetEvent("ps-dispatch:client:emsdown", function() EmsDown() end)
 
-local function Explosion()
-    local coords = GetEntityCoords(cache.ped)
+-- local function Explosion()
+--     local coords = GetEntityCoords(cache.ped)
 
-    local dispatchData = {
-        message = locale('explosion'),
-        codeName = 'explosion',
-        code = '10-80',
-        icon = 'fas fa-fire',
-        priority = 2,
-        coords = coords,
-        gender = GetPlayerGender(),
-        street = GetStreetAndZone(coords),
-        alertTime = Config.AlertTime,
-        jobs = { 'leo' }
-    }
+--     local dispatchData = {
+--         message = locale('explosion'),
+--         codeName = 'explosion',
+--         code = '10-80',
+--         icon = 'fas fa-fire',
+--         priority = 2,
+--         coords = coords,
+--         gender = GetPlayerGender(),
+--         street = GetStreetAndZone(coords),
+--         alertTime = Config.AlertTime,
+--         jobs = { 'leo' }
+--     }
 
-    TriggerServerEvent('ps-dispatch:server:notify', dispatchData)
-end
-exports('Explosion', Explosion)
+--     TriggerServerEvent('ps-dispatch:server:notify', dispatchData)
+-- end
+-- exports('Explosion', Explosion)
 
 local function CustomAlert(data)
     local coords = data.coords or vec3(0.0, 0.0, 0.0)

@@ -6,30 +6,7 @@ RegisterNetEvent('qb-bankrobbery:client:robberyCall', function(type, key, street
             cameraId = Config.FleecaBanks[key]['camId']
             bank = 'Fleeca'
             PlaySound(-1, 'Lose_1st', 'GTAO_FM_Events_Soundset', 0, 0, 1)
-            TriggerEvent('qb-policealerts:client:AddPoliceAlert', {
-                timeOut = 10000,
-                alertTitle = 'Fleeca bank robbery attempt',
-                coords = {
-                    x = coords.x,
-                    y = coords.y,
-                    z = coords.z,
-                },
-                details = {
-                    [1] = {
-                        icon = '<i class="fas fa-university"></i>',
-                        detail = bank,
-                    },
-                    [2] = {
-                        icon = '<i class="fas fa-video"></i>',
-                        detail = cameraId,
-                    },
-                    [3] = {
-                        icon = '<i class="fas fa-globe-europe"></i>',
-                        detail = streetLabel,
-                    },
-                },
-                callSign = QBCore.Functions.GetPlayerData().metadata['callsign'],
-            })
+            exports['ps-dispatch']:FleecaBankRobbery(cameraId)
         elseif type == 'paleto' then
             cameraId = Config.PaletoBank['camId']
             bank = 'Blaine County Savings'
@@ -40,26 +17,7 @@ RegisterNetEvent('qb-bankrobbery:client:robberyCall', function(type, key, street
             PlaySound(-1, 'Lose_1st', 'GTAO_FM_Events_Soundset', 0, 0, 1)
             Wait(100)
             PlaySoundFrontend( -1, 'Beep_Red', 'DLC_HEIST_HACKING_SNAKE_SOUNDS', 1 )
-            TriggerEvent('qb-policealerts:client:AddPoliceAlert', {
-                timeOut = 10000,
-                alertTitle = 'Blain County Savings bank robbery attempt',
-                coords = {
-                    x = coords.x,
-                    y = coords.y,
-                    z = coords.z,
-                },
-                details = {
-                    [1] = {
-                        icon = '<i class="fas fa-university"></i>',
-                        detail = bank,
-                    },
-                    [2] = {
-                        icon = '<i class="fas fa-video"></i>',
-                        detail = cameraId,
-                    },
-                },
-                callSign = QBCore.Functions.GetPlayerData().metadata['callsign'],
-            })
+            exports['ps-dispatch']:PaletoBankRobbery(camId)
         elseif type == 'pacific' then
             cameraId = Config.PacificBank['camId']
             bank = 'Pacific Standard Bank'
@@ -70,30 +28,7 @@ RegisterNetEvent('qb-bankrobbery:client:robberyCall', function(type, key, street
             PlaySound(-1, 'Lose_1st', 'GTAO_FM_Events_Soundset', 0, 0, 1)
             Wait(100)
             PlaySoundFrontend( -1, 'Beep_Red', 'DLC_HEIST_HACKING_SNAKE_SOUNDS', 1 )
-            TriggerEvent('qb-policealerts:client:AddPoliceAlert', {
-                timeOut = 10000,
-                alertTitle = 'Pacific Standard Bank robbery attempt',
-                coords = {
-                    x = coords.x,
-                    y = coords.y,
-                    z = coords.z,
-                },
-                details = {
-                    [1] = {
-                        icon = '<i class="fas fa-university"></i>',
-                        detail = bank,
-                    },
-                    [2] = {
-                        icon = '<i class="fas fa-video"></i>',
-                        detail = '1 | 2 | 3',
-                    },
-                    [3] = {
-                        icon = '<i class="fas fa-globe-europe"></i>',
-                        detail = 'Alta St',
-                    },
-                },
-                callSign = QBCore.Functions.GetPlayerData().metadata['callsign'],
-            })
+            exports['ps-dispatch']:PacificBankRobbery(camId)
         end
         local transG = 250
         local blip = AddBlipForCoord(coords.x, coords.y, coords.z)

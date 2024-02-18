@@ -1,3 +1,4 @@
+local copsCalled = false
 CurrentCops = 0
 local function LaptopAnimationPaleto()
     local loc = {x,y,z,h}
@@ -61,68 +62,128 @@ local function LaptopAnimationPaleto()
     end)
 end
 
+CreateThread(function()
+    while true do
+        Wait(1000 * 60 * 5)
+        if copsCalled then
+            copsCalled = false
+        end
+    end
+end)
+
+
 RegisterNetEvent('qb-bankrobbery:paleto:thermitedoor', function()
     local ped = PlayerPedId()
     local coords = GetEntityCoords(ped)
     for k,v in pairs(Config.PaletoBank['thermite']) do
         local Dist = #(coords - vector3(v['coords'].x, v['coords'].y, v['coords'].z))
         if Dist <= 1.5 then
-            QBCore.Functions.TriggerCallback('qb-Bankrobbery:server:GetItemsNeeded', function(hasItem)
-                if hasItem then
-                    SetEntityHeading(ped, Config.PaletoBank['thermite'][k]['coords'].w)
-                    TriggerServerEvent('qb-bankrobbery:server:RemovePaletoDoorItem')
-                    exports['memorygame']:thermiteminigame(8, 3, 4, 15,
-                    function() -- success
-                        QBCore.Functions.Notify(Config.Notify["PlacingThermite"], 'success', 4500)
-                        local loc = Config.PaletoBank['thermite'][k]['anim']
-                        local rotx, roty, rotz = table.unpack(vec3(GetEntityRotation(ped)))
-                        local bagscene = NetworkCreateSynchronisedScene(loc.x, loc.y, loc.z, rotx, roty, rotz, 2, false, false, 1065353216, 0, 1.3)
-                        local bag = CreateObject(GetHashKey('hei_p_m_bag_var22_arm_s'), loc.x, loc.y, loc.z,  true,  true, false)
-                        SetEntityCollision(bag, false, true)
-                        NetworkAddPedToSynchronisedScene(ped, bagscene, 'anim@heists@ornate_bank@thermal_charge', 'thermal_charge', 1.5, -4.0, 1, 16, 1148846080, 0)
-                        NetworkAddEntityToSynchronisedScene(bag, bagscene, 'anim@heists@ornate_bank@thermal_charge', 'bag_thermal_charge', 4.0, -8.0, 1)
-                        NetworkStartSynchronisedScene(bagscene)
-                        Wait(1500)
-                        local x, y, z = table.unpack(GetEntityCoords(ped))
-                        local thermal_charge = CreateObject(GetHashKey('hei_prop_heist_thermite'), x, y, z + 0.2,  true,  true, true)
-                    
-                        SetEntityCollision(thermal_charge, false, true)
-                        AttachEntityToEntity(thermal_charge, ped, GetPedBoneIndex(ped, 28422), 0, 0, 0, 0, 0, 200.0, true, true, false, true, 1, true)
-                        Wait(4000)
+            if CurrentCops >= Config.MinimumFleecaPolice then
+                QBCore.Functions.TriggerCallback('qb-Bankrobbery:server:GetItemsNeeded', function(hasItem)
+                    if hasItem then
+                        SetEntityHeading(ped, Config.PaletoBank['thermite'][k]['coords'].w)
+                        TriggerServerEvent('qb-bankrobbery:server:RemovePaletoDoorItem')
+                        exports['memorygame']:thermiteminigame(12, 3, 4, 7,
+                        function() -- success
+                            QBCore.Functions.Notify(Config.Notify["PlacingThermite"], 'success', 4500)
+                            local loc = Config.PaletoBank['thermite'][k]['anim']
+                            local rotx, roty, rotz = table.unpack(vec3(GetEntityRotation(ped)))
+                            local bagscene = NetworkCreateSynchronisedScene(loc.x, loc.y, loc.z, rotx, roty, rotz, 2, false, false, 1065353216, 0, 1.3)
+                            local bag = CreateObject(GetHashKey('hei_p_m_bag_var22_arm_s'), loc.x, loc.y, loc.z,  true,  true, false)
+                            SetEntityCollision(bag, false, true)
+                            NetworkAddPedToSynchronisedScene(ped, bagscene, 'anim@heists@ornate_bank@thermal_charge', 'thermal_charge', 1.5, -4.0, 1, 16, 1148846080, 0)
+                            NetworkAddEntityToSynchronisedScene(bag, bagscene, 'anim@heists@ornate_bank@thermal_charge', 'bag_thermal_charge', 4.0, -8.0, 1)
+                            NetworkStartSynchronisedScene(bagscene)
+                            Wait(1500)
+                            local x, y, z = table.unpack(GetEntityCoords(ped))
+                            local thermal_charge = CreateObject(GetHashKey('hei_prop_heist_thermite'), x, y, z + 0.2,  true,  true, true)
+                        
+                            SetEntityCollision(thermal_charge, false, true)
+                            AttachEntityToEntity(thermal_charge, ped, GetPedBoneIndex(ped, 28422), 0, 0, 0, 0, 0, 200.0, true, true, false, true, 1, true)
+                            Wait(4000)
 
-                    
-                        DetachEntity(thermal_charge, 1, 1)
-                        FreezeEntityPosition(thermal_charge, true)
-                        Wait(100)
-                        DeleteObject(bag)
-                        ClearPedTasks(ped)
-                    
-                        Wait(100)
-                        RequestNamedPtfxAsset('scr_ornate_heist')
-                        while not HasNamedPtfxAssetLoaded('scr_ornate_heist') do
-                            Wait(1)
+                        
+                            DetachEntity(thermal_charge, 1, 1)
+                            FreezeEntityPosition(thermal_charge, true)
+                            Wait(100)
+                            DeleteObject(bag)
+                            ClearPedTasks(ped)
+                        
+                            Wait(100)
+                            RequestNamedPtfxAsset('scr_ornate_heist')
+                            while not HasNamedPtfxAssetLoaded('scr_ornate_heist') do
+                                Wait(1)
+                            end
+
+                            ptfx = vector3(Config.PaletoBank['thermite'][k]['effect'].x, Config.PaletoBank['thermite'][k]['effect'].y, Config.PaletoBank['thermite'][k]['effect'].z)
+                            SetPtfxAssetNextCall('scr_ornate_heist')
+                            local effect = StartParticleFxLoopedAtCoord('scr_heist_ornate_thermal_burn', ptfx, 0.0, 0.0, 0.0, 1.0, false, false, false, false)
+                            Wait(3000)
+                            StopParticleFxLooped(effect, 0)
+                            DeleteObject(thermal_charge)
+
+                            if not copsCalled then
+                                local s1, s2 = GetStreetNameAtCoord(coords.x, coords.y, coords.z)
+                                local street1 = GetStreetNameFromHashKey(s1)
+                                local street2 = GetStreetNameFromHashKey(s2)
+                                local streetLabel = street1
+                                if street2 ~= nil then
+                                    streetLabel = streetLabel .. ' ' .. street2
+                                end
+                                TriggerServerEvent('qb-bankrobbery:server:callCops', 'paleto', 0, streetLabel, coords)
+                                copsCalled = true
+                            end
+
+                            if v.doorId == 'PaletoOutDoor1' then
+                                TriggerServerEvent('qb-doorlock:server:updateState', v.doorId, false, false, false, true, false, false)
+                            elseif v.doorId == 'PaletoFD' then
+                                TriggerServerEvent('qb-doorlock:server:updateState', v.doorId, false, false, false, true, false, false)
+                            elseif v.doorId == 'PaletoOutDoor2' then
+                                TriggerServerEvent('qb-doorlock:server:updateState', v.doorId, false, false, false, true, false, false)
+                            end
+                                
+                        end,
+                        function() -- failure
+                            QBCore.Functions.Notify(Config.Notify["FleecaHackFail"], 'error', 4500)
+
+                        end)
+                    else
+                        QBCore.Functions.Notify(Config.Notify["MissingThermite"], 'error')
+                    end
+                end, Config.PaletoPacificDoor)
+            else
+                QBCore.Functions.Notify(Config.Notify['NotEnoughPD'], 'error')
+            end
+        end
+    end
+end)
+
+local totalCompleted = 0
+RegisterNetEvent('qb-bankrobbery:paleto:varhack', function()
+    local ped = PlayerPedId()
+    local coords = GetEntityCoords(ped)
+
+    for k, v in pairs(Config.PaletoBank['varhacks']) do
+        local dist = #(coords - vector3(v.coords.x, v.coords.y, v.coords.z))
+        if dist <= 1.5 and not v.completed then  -- Check if hack has not been completed
+            SetEntityHeading(ped, v.coords.w)
+            exports['varhack']:OpenHackingGame(function(success)
+                if success then
+                    if Config.PaletoBank['varhacks'][k].completed == false then
+                        Config.PaletoBank['varhacks'][k].completed = true
+                        exports['qb-target']:RemoveZone(hackId)
+                        totalCompleted = totalCompleted + 1
+
+                        if totalCompleted == 2 then
+                            TriggerServerEvent('qb-doorlock:server:updateState', 'PaletoAdmin', false, false, false, true, false, false)
+                            QBCore.Functions.Notify(Config.Notify["HackerSuccess"], 'error', 4500)
                         end
-
-                        ptfx = vector3(Config.PaletoBank['thermite'][k]['effect'].x, Config.PaletoBank['thermite'][k]['effect'].y, Config.PaletoBank['thermite'][k]['effect'].z)
-                        SetPtfxAssetNextCall('scr_ornate_heist')
-                        local effect = StartParticleFxLoopedAtCoord('scr_heist_ornate_thermal_burn', ptfx, 0.0, 0.0, 0.0, 1.0, false, false, false, false)
-                        Wait(3000)
-                        StopParticleFxLooped(effect, 0)
-                        DeleteObject(thermal_charge)
-                        if Config.Doorlocks == "qb" then 
-                            TriggerServerEvent('qb-doorlock:server:updateState', 5, false, false, false, true, false, false)
-                        elseif Config.Doorlocks == "nui" or Config.Doorlocks == "NUI" then 
-                            TriggerServerEvent('nui_doorlock:server:updateState', Config.DoorlockID1, false, false, false, true)
-                        end
-                    end,
-                    function() -- failure
-                        QBCore.Functions.Notify(Config.Notify["FleecaHackFail"], 'error', 4500)
-
-                    end)
+                    end
                 else
-                    QBCore.Functions.Notify(Config.Notify["MissingThermite"], 'error')
+                    QBCore.Functions.Notify(Config.Notify["FleecaHackFail"], 'error', 4500)
                 end
-            end, Config.PaletoPacificDoor)
+            end, 6, 5)  -- Keep these parameters as they are essential for the function to operate correctly
+            break  -- Exit the loop if a hack is initiated to prevent multiple hacks at once
         end
     end
 end)
@@ -135,7 +196,6 @@ RegisterNetEvent('qb-bankrobbery:UseBankLaptop', function(colour, laptopData)
             if not isBusy then
                 local dist = #(pos - vector3(Config.PaletoBank['coords'].x, Config.PaletoBank['coords'].y, Config.PaletoBank['coords'].z))
                 if dist < 2.5 then
-                    if CurrentCops >= Config.MinimumFleecaPolice then
                         if not Config.PaletoBank['isOpened'] then
                             --SetEntityCoords(ped, Config.PaletoBank['coords'])
                             SetEntityHeading(ped, Config.PaletoBank['coords'].w)
@@ -152,52 +212,13 @@ RegisterNetEvent('qb-bankrobbery:UseBankLaptop', function(colour, laptopData)
                                 StopAnimTask(PlayerPedId(), 'anim@gangops@facility@servers@', 'hotwire', 1.0)
                                 -- check uses
                                 TriggerServerEvent('qb-bankrobbery:server:RemoveLaptop', 'laptop_blue')
-                            
-                                if not copsCalled then
-                                    local s1, s2 = GetStreetNameAtCoord(pos.x, pos.y, pos.z)
-                                    local street1 = GetStreetNameFromHashKey(s1)
-                                    local street2 = GetStreetNameFromHashKey(s2)
-                                    local streetLabel = street1
-                                    if street2 ~= nil then
-                                        streetLabel = streetLabel .. ' ' .. street2
-                                    end
-                                    TriggerServerEvent('qb-bankrobbery:server:callCops', 'paleto', 0, streetLabel, pos)
-                                    copsCalled = true
-                                    --Displays Third Eye for card
-                                    Citizen.CreateThread(function() 
-                                        exports['qb-target']:AddBoxZone('SecurityCardReader'..math.random(1,100), vector3(-106.0602, 6472.4204, 31.00846), 1, 1, {
-                                          name = 'SecurityCardReader'..math.random(1,100),
-                                          heading = 253.97,
-                                          debugPoly = Config.debugPoly,
-                                          minZ = 30.80846,
-                                          maxZ = 32.20846,
-                                          }, {
-                                          options = {
-                                              {
-                                                  type = 'client',
-                                                  event = 'qb-bankrobbery:UsePaletoCard',
-                                                  icon = 'fas fa-credit-card',
-                                                  label = 'Use Bank Card',
-                                                  item = 'security_card_01', --this makes it so the third eye only displays if you have the correct card
-                                                  job = all,
-                                              },
-                                          },
-                                          distance = 2.5
-                                        })
-                                      end)
-
-                                end
+                        
                                 LaptopAnimationPaleto()
                             end, function() -- Cancel
                                 StopAnimTask(PlayerPedId(), 'anim@gangops@facility@servers@', 'hotwire', 1.0)
                                 QBCore.Functions.Notify(Config.Notify['FleecaHackCancel'], 'error')
                             end)
-                        else
-                            QBCore.Functions.Notify(Config.Notify['BankDoorOpen'], 'error')
                         end
-                    else
-                        QBCore.Functions.Notify(Config.Notify['NotEnoughPD'], 'error')
-                    end
                 end
             else
                 QBCore.Functions.Notify(Config.Notify['BankCoolDown'], 'error', 5500)
@@ -209,62 +230,82 @@ end)
 RegisterNetEvent('qb-bankrobbery:UsePaletoCard', function()
     local ped = PlayerPedId() 
     local pos = GetEntityCoords(ped)
-    local dist = #(pos - vector3(Config.PaletoBank['coords'].x, Config.PaletoBank['coords'].y, Config.PaletoBank['coords'].z))
+    local dist = #(pos - vector3(-102.2, 6463.03, 31.63))
     if dist < 2.5 then
-        if CurrentCops >= Config.MinimumFleecaPolice then
-            SetEntityHeading(ped, Config.PaletoBank['coords'].w)
-            QBCore.Functions.Progressbar('BankCard_Ting', 'Using BankCard', math.random(5000, 10000), false, true, {
-                disableMovement = true,
-                disableCarMovement = true,
-                disableMouse = false,
-                disableCombat = true,
-            }, {
-                animDict = 'anim@gangops@facility@servers@',
-                anim = 'hotwire',
-                flags = 16,
-            }, {}, {}, function() -- Done
-                StopAnimTask(PlayerPedId(), 'anim@gangops@facility@servers@', 'hotwire', 1.0)
-                -- check uses
-                exports['memorygame']:thermiteminigame(5, 3, 4, 30,
-                function() -- success
-                    if Config.Doorlocks == "qb" then 
-                        TriggerServerEvent('qb-doorlock:server:updateState', 4, false, false, false, true, false, false)
-                    elseif Config.Doorlocks == "nui" or Config.Doorlocks == "NUI" then 
-                        TriggerServerEvent('nui_doorlock:server:updateState', Config.DoorlockID2, false, false, false, true)
-                    end
-
-                    if Config.RemoveCard then 
+                SetEntityHeading(ped, Config.PaletoBank['coords'].w)
+                QBCore.Functions.Progressbar('BankCard_Ting', 'Using BankCard', math.random(5000, 10000), false, true, {
+                    disableMovement = true,
+                    disableCarMovement = true,
+                    disableMouse = false,
+                    disableCombat = true,
+                }, {
+                    animDict = 'anim@gangops@facility@servers@',
+                    anim = 'hotwire',
+                    flags = 16,
+                }, {}, {}, function() -- Done
+                    StopAnimTask(PlayerPedId(), 'anim@gangops@facility@servers@', 'hotwire', 1.0)
+                    -- check uses
+                    exports['memorygame']:thermiteminigame(5, 3, 4, 30,
+                    function() -- success
+                        SetUpPaleto()
                         TriggerServerEvent('qb-bankrobbery:server:RemovePaletoDoorCard')
-                    end
+                        
+                        TriggerServerEvent('qb-bankrobbery:server:setBankState', true, 'paleto', 0)
+                        TriggerServerEvent('qb-robbery:server:succesHeist', 25)
+                        QBCore.Functions.Notify(Config.Notify['HackerSuccess'], 'success')
+                        local time = (Config.DoorCD*(60*1000))
+                        local minutes = math.ceil(time/1000)
+                        local halftime = minutes/2
+                        QBCore.Functions.Notify(Config.Notify['DoorMinutes']..minutes..Config.Notify['DoorSecondHalf'], 'success', 5500)
+                        Wait(time/2)
+                        QBCore.Functions.Notify(Config.Notify['DoorMinutes']..halftime..Config.Notify['DoorSecondHalf'], 'success', 5500)
+                        Wait(time/2)
+
+                        TriggerServerEvent('qb-doorlock:server:updateState', 'PaletoVault', false, false, false, true, false, false)
+
+                        TriggerServerEvent('qb-bankrobbery:server:setTimeout', 'paleto')
+                        Wait(Config.BankTimer['paleto'] * (60 * 1000))
+                        Config.DoorlockAction('paleto', true)
+                    end)
+                end, function() -- Cancel
+                    StopAnimTask(PlayerPedId(), 'anim@gangops@facility@servers@', 'hotwire', 1.0)
+                    QBCore.Functions.Notify(Config.Notify['FleecaHackCancel'], 'error')
                 end)
-            end, function() -- Cancel
-                StopAnimTask(PlayerPedId(), 'anim@gangops@facility@servers@', 'hotwire', 1.0)
-                QBCore.Functions.Notify(Config.Notify['FleecaHackCancel'], 'error')
-            end)
-        else
-            QBCore.Functions.Notify(Config.Notify['NotEnoughPD'], 'error')
-        end
     end
 end)
 
 function OnHackDonePaleto(success)
     if success then
-        SetUpPaleto()
         QBCore.Functions.Notify(Config.Notify['HackerSuccess'], 'success')
         local time = (Config.DoorCD*(60*1000))
         local minutes = math.ceil(time/1000)
         local halftime = minutes/2
-        QBCore.Functions.Notify(Config.Notify['DoorMinutes']..minutes..Config.Notify['DoorSecondHalf'], 'success', 5500)
-        Wait(time/2)
-        QBCore.Functions.Notify(Config.Notify['DoorMinutes']..halftime..Config.Notify['DoorSecondHalf'], 'success', 5500)
-        Wait(time/2)
-        TriggerServerEvent('qb-bankrobbery:server:setBankState', true, 'paleto', 0)
-        TriggerServerEvent('qb-robbery:server:succesHeist', 25)
-
-
-        TriggerServerEvent('qb-bankrobbery:server:setTimeout', 'paleto')
-        Wait(Config.BankTimer['paleto'] * (60 * 1000))
-        Config.DoorlockAction('paleto', true)
+            Citizen.CreateThread(function() 
+                exports['qb-target']:AddBoxZone('SecurityCardReader'..math.random(1,100), vector3(-101.95, 6462.89, 32.12), 1, 1, {
+                name = 'SecurityCardReader'..math.random(1,100),
+                heading = 223.3,
+                debugPoly = Config.debugPoly,
+                minZ = 30.80846,
+                maxZ = 32.20846,
+                }, {
+                options = {
+                    {
+                        type = 'client',
+                        action = function()
+                            TriggerEvent('qb-bankrobbery:UsePaletoCard')
+                        end,
+                        icon = 'fas fa-credit-card',
+                        label = 'Use Bank Card',
+                        item = 'security_card_01', --this makes it so the third eye only displays if you have the correct card
+                        job = all,
+                        canInteract = function(entity)
+                            return not Config.PaletoBank['isOpened']
+                        end,
+                    },
+                },
+                distance = 2.5
+                })
+            end)
     end
 end
 
@@ -283,13 +324,6 @@ function SetUpPaleto()
         randomStack = 'gold'
     end
 
-    if randomStack == 'gold' then
-        cash = CreateObject(GetHashKey('h4_prop_h4_gold_stack_01a'), Config.PaletoBank['grab']['pos'], 1, 1, 0)
-        TriggerServerEvent('qb-bankrobbery:server:paleto:grabSync', GetHashKey('h4_prop_h4_gold_stack_01a'))
-    else
-        cash = CreateObject(GetHashKey('h4_prop_h4_cash_stack_01a'), Config.PaletoBank['grab']['pos'], 1, 1, 0)
-        TriggerServerEvent('qb-bankrobbery:server:paleto:grabSync', GetHashKey('h4_prop_h4_cash_stack_01a'))
-    end
     SetEntityHeading(cash, Config.PaletoBank['grab']['heading'])
     for k,v in pairs(Config.PaletoBank['trollys']) do
         local TrollyChance = math.random(1,100)

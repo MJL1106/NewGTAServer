@@ -25,6 +25,29 @@ currentExplosiveGate = 0
 
 CurrentCops = 0
 
+---- JOB CHECKS ----
+RegisterNetEvent('QBCore:Client:OnJobUpdate', function(JobInfo)
+    PlayerJob = JobInfo
+    onDuty = true
+end)
+
+RegisterNetEvent('police:SetCopCount', function(amount)
+    CurrentCops = amount
+end)
+
+RegisterNetEvent('QBCore:Client:OnPlayerLoaded', function()
+    PlayerJob = QBCore.Functions.GetPlayerData().job
+    QBCore.Functions.TriggerCallback('qb-bankrobbery:server:GetConfig', function(config)
+        Config = config
+    end)
+    onDuty = true
+    ResetBankDoors()
+end)
+
+RegisterNetEvent('QBCore:Client:SetDuty', function(duty)
+    onDuty = duty
+end)
+
 ---- FUNCTIONS ----
 
 local function SetupVault(closestBank)
@@ -33,13 +56,13 @@ local function SetupVault(closestBank)
         randomStack = 'gold'
     end
 
-    if randomStack == 'gold' then
-        cash = CreateObject(GetHashKey('h4_prop_h4_gold_stack_01a'), Config.FleecaBanks[closestBank]['grab']['pos'], 1, 1, 0)
-        TriggerServerEvent('qb-bankrobbery:server:grabSync', closestBank, GetHashKey('h4_prop_h4_gold_stack_01a'))
-    else
-        cash = CreateObject(GetHashKey('h4_prop_h4_cash_stack_01a'), Config.FleecaBanks[closestBank]['grab']['pos'], 1, 1, 0)
-        TriggerServerEvent('qb-bankrobbery:server:grabSync', closestBank, GetHashKey('h4_prop_h4_cash_stack_01a'))
-    end
+    -- if randomStack == 'gold' then
+    --     cash = CreateObject(GetHashKey('h4_prop_h4_gold_stack_01a'), Config.FleecaBanks[closestBank]['grab']['pos'], 1, 1, 0)
+    --     TriggerServerEvent('qb-bankrobbery:server:grabSync', closestBank, GetHashKey('h4_prop_h4_gold_stack_01a'))
+    -- else
+    --     cash = CreateObject(GetHashKey('h4_prop_h4_cash_stack_01a'), Config.FleecaBanks[closestBank]['grab']['pos'], 1, 1, 0)
+    --     TriggerServerEvent('qb-bankrobbery:server:grabSync', closestBank, GetHashKey('h4_prop_h4_cash_stack_01a'))
+    -- end
     SetEntityHeading(cash, Config.FleecaBanks[closestBank]['grab']['heading'])
     for k,v in pairs(Config.FleecaBanks[closestBank]['trollys']) do
         local TrollyChance = math.random(1,100)
@@ -145,6 +168,7 @@ local function ResetCurrentBank(type, closestBank)
     
     elseif type == 'pacific' then
         Config.PacificBank['isOpened'] = false
+        Config.PacificBank['isVaultOpened'] = false
         Config.PacificBank['grab']['loot'] = false
         for k,_ in pairs(Config.PacificBank['drills']) do
             Config.PacificBank['drills'][k]['loot'] = false
@@ -203,18 +227,9 @@ local function OpenPacificDoor()
             end
         end)
     end
+    --TriggerServerEvent('qb-doorlock:server:updateState', 'PacificGate4', false, false, false, true, false, false)
 end
 
--- Paletos
-local function OpenPaletoDoor()
-    local object = GetClosestObjectOfType(Config.PaletoBank['coords'].x, Config.PaletoBank['coords'].y, Config.PaletoBank['coords'].z, 5.0, Config.PaletoBank['object'], false, false, false)
-    local timeOut = 10
-    local entHeading = Config.PaletoBank['heading'].closed
-
-    if object ~= 0 then
-        SetEntityHeading(object, Config.PaletoBank['heading'].open)
-    end
-end
 
 -- Fleecas
 local function OpenBankDoor(closestBank)
@@ -238,27 +253,7 @@ local function OpenBankDoor(closestBank)
     end
 end
 
--- Open Lower Vault
-local function openlowerVault()
-    local object = GetClosestObjectOfType(Config.lowerVault['coords'].x, Config.lowerVault['coords'].y, Config.lowerVault['coords'].z, 5.0, Config.lowerVault['object'], false, false, false)
-    local timeOut = 10
-    local entHeading = Config.lowerVault['heading'].closed
-    if object ~= 0 then
-        CreateThread(function()
-            while true do
 
-                if entHeading < Config.lowerVault['heading'].open then
-                    SetEntityHeading(object, entHeading + 10)
-                    entHeading = entHeading + 0.5
-                else
-                    break
-                end
-
-                Wait(10)
-            end
-        end)
-    end
-end
 
 ---- GLOBAL FUNCTIONS ----
 function CashAppear(grabModel)
@@ -354,28 +349,6 @@ CreateThread(function()
     end
 end)
 
----- JOB CHECKS ----
-RegisterNetEvent('QBCore:Client:OnJobUpdate', function(JobInfo)
-    PlayerJob = JobInfo
-    onDuty = true
-end)
-
-RegisterNetEvent('police:SetCopCount', function(amount)
-    CurrentCops = amount
-end)
-
-RegisterNetEvent('QBCore:Client:OnPlayerLoaded', function()
-    PlayerJob = QBCore.Functions.GetPlayerData().job
-    QBCore.Functions.TriggerCallback('qb-bankrobbery:server:GetConfig', function(config)
-        Config = config
-    end)
-    onDuty = true
-    ResetBankDoors()
-end)
-
-RegisterNetEvent('QBCore:Client:SetDuty', function(duty)
-    onDuty = duty
-end)
 
 ---- FLEECA EVENTS ----
 -- All Events Client side
@@ -760,8 +733,9 @@ RegisterNetEvent('qb-bankrobbery:client:setBankState', function(bankId, state)
             OpenPaletoDoor()
         end
     elseif bankId == 'pacific' then
-        Config.PacificBank['isOpened'] = state
+        Config.PacificBank['isVaultOpened'] = state
         if state then
+            print("Opening vault door")
             OpenPacificDoor()
         end
     elseif bankId == 'lowerVault' then
@@ -777,6 +751,17 @@ RegisterNetEvent('qb-bankrobbery:client:setBankState', function(bankId, state)
         for bankIDD, _ in pairs(Config.FleecaBanks) do
             Config.FleecaBanks[bankIDD]['isOpened'] = true
         end
+    end
+end)
+
+RegisterNetEvent('qb-bankrobbery:client:setRedLaptopUsed', function(bankId, state)
+    if bankId == 'pacific' then
+        Config.PacificBank['isOpened'] = state
+        if state then
+            print("Unlocking the pacific gate")
+            TriggerServerEvent('qb-doorlock:server:updateState', 'PacificGate4', false, false, false, true, false, false)
+        end
+        
     end
 end)
 

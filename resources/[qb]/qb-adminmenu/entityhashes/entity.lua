@@ -53898,4 +53898,6 @@ Entities = {
 	[-347613984] = 'AGGRESSIVE_INVESTIGATE',
 	[-1337836896] = 'MEDIC',
 	[1157867945] = 'CAT',
+	[-147325430] = 'xm_prop_iaa_base_door_01',
+	[-2050208642] = 'ch_prop_ch_vault_d_door_01a',
 }
