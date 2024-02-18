@@ -50,13 +50,13 @@ local function IsWearingHandshoes()
 end
 
 local function smashVitrine(k)
-    if not firstAlarm then
-        TriggerServerEvent('police:server:policeAlert', 'Robbery in progress')
-        firstAlarm = true
-    end
-
     QBCore.Functions.TriggerCallback('qb-jewellery:server:getCops', function(cops)
         if cops >= Config.RequiredCops then
+            if not firstAlarm then
+                TriggerServerEvent('police:server:policeAlert', 'Robbery in progress')
+                firstAlarm = true
+            end
+        
             local animDict = "missheist_jewel"
             local animName = "smash_case"
             local ped = PlayerPedId()
