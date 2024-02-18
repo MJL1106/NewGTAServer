@@ -9,7 +9,10 @@ AddEventHandler("cad-diving:collected", function(type, item, count)
             TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items[item], "add")        
         elseif type == "rare" then
             xPlayer.Functions.AddItem(item, count)            
-            TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items[item], "add")        
+            TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items[item], "add")  
+        elseif type == "ultrarare" then
+            xPlayer.Functions.AddItem(item, count)            
+            TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items[item], "add")      
         else
             TriggerClientEvent("QBCore:Notify", source, "You got nothing")
         end
