@@ -5,46 +5,13 @@ Config = Config or {}
 Config.UseTarget = true
 
 Config.Timeout = 30 * (60 * 2000)
-Config.RequiredCops = 3
+Config.RequiredCops = 1
 Config.JewelleryLocation = {
     ["coords"] = vector3(-630.5, -237.13, 38.08),
 }
 
 Config.WhitelistedWeapons = {
-    [`weapon_assaultrifle`] = {
-        ["timeOut"] = 10000
-    },
-    [`weapon_carbinerifle`] = {
-        ["timeOut"] = 10000
-    },
-    [`weapon_pumpshotgun`] = {
-        ["timeOut"] = 10000
-    },
-    [`weapon_sawnoffshotgun`] = {
-        ["timeOut"] = 10000
-    },
-    [`weapon_compactrifle`] = {
-        ["timeOut"] = 10000
-    },
-    [`weapon_microsmg`] = {
-        ["timeOut"] = 10000
-    },
-    [`weapon_autoshotgun`] = {
-        ["timeOut"] = 10000
-    },
-    [`weapon_pistol`] = {
-        ["timeOut"] = 10000
-    },
-    [`weapon_pistol_mk2`] = {
-        ["timeOut"] = 10000
-    },
-    [`weapon_combatpistol`] = {
-        ["timeOut"] = 10000
-    },
-    [`weapon_appistol`] = {
-        ["timeOut"] = 10000
-    },
-    [`weapon_pistol50`] = {
+    [`weapon_crowbar`] = {
         ["timeOut"] = 10000
     },
 }
@@ -53,25 +20,34 @@ Config.VitrineRewards = {
     [1] = {
         ["item"] = "rolex",
         ["amount"] = {
-            ["min"] = 15,
-            ["max"] = 20
+            ["min"] = 40,
+            ["max"] = 60
         },
     },
     [2] = {
         ["item"] = "diamond_ring",
         ["amount"] = {
-            ["min"] = 15,
-            ["max"] = 20
+            ["min"] = 40,
+            ["max"] = 60
         },
     },
     [3] = {
         ["item"] = "goldchain",
         ["amount"] = {
-            ["min"] = 15,
-            ["max"] = 20
+            ["min"] = 40,
+            ["max"] = 60
         },
     },
 }
+
+Config.ThermiteLocations = {
+    ["thermite"] = {
+        {coords = vector4(-596, -283.84, 50.32, 302.53), anim = vector3(-596, -283.84, 50.32), effect = vector3(-596, -282.84, 50.32), completed = false}, 
+        {coords = vector4(-598.6, -260.83, 48.9, 116.6), anim = vector3(-598.56, -260.83, 49.9), effect = vector3(-598.6, -259.83, 49.9), completed = false},
+        {coords = vector4(-607.55, -246.1, 50, 119.92), anim = vector3(-607.45, -246.15, 50.15), effect = vector3(-607.45, -245.15, 50.15), completed = false},
+    },
+}
+
 
 Config.Locations = {
     [1] = {

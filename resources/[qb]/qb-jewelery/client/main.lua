@@ -51,7 +51,7 @@ end
 
 local function smashVitrine(k)
     if not firstAlarm then
-        TriggerServerEvent('police:server:policeAlert', 'Suspicious Activity')
+        TriggerServerEvent('police:server:policeAlert', 'Robbery in progress')
         firstAlarm = true
     end
 
@@ -77,7 +77,7 @@ local function smashVitrine(k)
             }, {}, {}, {}, function() -- Done
                 TriggerServerEvent('qb-jewellery:server:vitrineReward', k)
                 TriggerServerEvent('qb-jewellery:server:setTimeout')
-                TriggerServerEvent('police:server:policeAlert', 'Robbery in progress')
+
                 smashing = false
                 TaskPlayAnim(ped, animDict, "exit", 3.0, 3.0, -1, 2, 0, 0, 0, 0)
             end, function() -- Cancel
@@ -203,6 +203,94 @@ CreateThread(function()
                     listen = false
                     exports['qb-core']:HideText()
                 end
+            end)
+        end
+    end
+end)
+
+CreateThread(function()
+    for k,v in pairs(Config.ThermiteLocations['thermite']) do
+        exports['qb-target']:AddBoxZone('OpenDoor'..math.random(1,100), vector3(Config.ThermiteLocations['thermite'][k]['coords'].x, Config.ThermiteLocations['thermite'][k]['coords'].y, Config.ThermiteLocations['thermite'][k]['coords'].z), 0.4, 1.2, {
+            name = 'OpenDoor'..math.random(1,100), 
+            heading = Config.ThermiteLocations['thermite'][k]['coords'].w,
+            debugPoly = false, 
+            minZ = Config.ThermiteLocations['thermite'][k]['coords'].z-1,
+            maxZ = Config.ThermiteLocations['thermite'][k]['coords'].z+1,
+            }, {
+            options = { 
+            { 
+                type = 'client',
+                event = 'jewstore:thermitedoor',
+                icon = 'fas fa-bomb',
+                label = 'Blow Fuse',
+                job = all,
+            }
+            },
+            distance = 1.2,
+        })
+    end
+end)
+
+local totalCompleted = 0
+RegisterNetEvent('jewstore:thermitedoor', function()
+    local ped = PlayerPedId()
+    local coords = GetEntityCoords(ped)
+    for k,v in pairs(Config.ThermiteLocations['thermite']) do
+        local Dist = #(coords - vector3(v['coords'].x, v['coords'].y, v['coords'].z))
+        if Dist <= 1.5 then
+            SetEntityHeading(ped, Config.ThermiteLocations['thermite'][k]['coords'].w)
+            TriggerServerEvent('qb-bankrobbery:server:RemoveThermite')
+            exports['memorygame']:thermiteminigame(1, 3, 4, 7,
+            function() -- success
+                totalCompleted = totalCompleted + 1
+                QBCore.Functions.Notify("Thermite Placed", 'success', 4500)
+                local loc = Config.ThermiteLocations['thermite'][k]['anim']
+                local rotx, roty, rotz = table.unpack(vec3(GetEntityRotation(ped)))
+                local bagscene = NetworkCreateSynchronisedScene(loc.x, loc.y, loc.z, rotx, roty, rotz, 2, false, false, 1065353216, 0, 1.3)
+                local bag = CreateObject(GetHashKey('hei_p_m_bag_var22_arm_s'), loc.x, loc.y, loc.z,  true,  true, false)
+                SetEntityCollision(bag, false, true)
+                NetworkAddPedToSynchronisedScene(ped, bagscene, 'anim@heists@ornate_bank@thermal_charge', 'thermal_charge', 1.5, -4.0, 1, 16, 1148846080, 0)
+                NetworkAddEntityToSynchronisedScene(bag, bagscene, 'anim@heists@ornate_bank@thermal_charge', 'bag_thermal_charge', 4.0, -8.0, 1)
+                NetworkStartSynchronisedScene(bagscene)
+                Wait(1500)
+                local x, y, z = table.unpack(GetEntityCoords(ped))
+                local thermal_charge = CreateObject(GetHashKey('hei_prop_heist_thermite'), x, y, z + 0.2,  true,  true, true)
+            
+                SetEntityCollision(thermal_charge, false, true)
+                AttachEntityToEntity(thermal_charge, ped, GetPedBoneIndex(ped, 28422), 0, 0, 0, 0, 0, 200.0, true, true, false, true, 1, true)
+                Wait(4000)
+    
+            
+                DetachEntity(thermal_charge, 1, 1)
+                FreezeEntityPosition(thermal_charge, true)
+                Wait(100)
+                DeleteObject(bag)
+                ClearPedTasks(ped)
+            
+                Wait(100)
+                RequestNamedPtfxAsset('scr_ornate_heist')
+                while not HasNamedPtfxAssetLoaded('scr_ornate_heist') do
+                    Wait(1)
+                end
+    
+                ptfx = vector3(Config.ThermiteLocations['thermite'][k]['effect'].x, Config.ThermiteLocations['thermite'][k]['effect'].y, Config.ThermiteLocations['thermite'][k]['effect'].z)
+                SetPtfxAssetNextCall('scr_ornate_heist')
+                local effect = StartParticleFxLoopedAtCoord('scr_heist_ornate_thermal_burn', ptfx, 0.0, 0.0, 0.0, 1.0, false, false, false, false)
+                Wait(3000)
+                StopParticleFxLooped(effect, 0)
+                DeleteObject(thermal_charge)
+    
+
+                
+                if totalCompleted == 3 then
+                    TriggerServerEvent('police:server:policeAlert', 'Suspicious Activity: Electrical Fuse')
+                    TriggerServerEvent('qb-doorlock:server:updateState', 'JeweleryDoorMain', false, false, false, true, false, false)
+                    QBCore.Functions.Notify('Security System Cracked', 'error', 4500)
+                end
+            end,
+            function() -- failure
+                QBCore.Functions.Notify('Hack failed', 'error', 4500)
+    
             end)
         end
     end
