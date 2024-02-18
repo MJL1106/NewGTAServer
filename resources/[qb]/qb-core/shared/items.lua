@@ -771,7 +771,5 @@ QBShared.Items = {
 	 ['nightvision'] 				 = {['name'] = 'nightvision', 					['label'] = 'Nightvision', 				['weight'] = 1200, 		['type'] = 'item', 		['image'] = 'nightvision.png', 			['unique'] = false, 	['useable'] = true, 	['shouldClose'] = false,   ['combinable'] = nil,   ['description'] = 'Realy nice for when its dark.'},
 	 ['vault_gate_cracker'] 				 	 = {['name'] = 'vault_gate_cracker', 			  	  	['label'] = 'Vault Gate Cracker', 				['weight'] = 0, 		['type'] = 'item', 		['image'] = 'usb_device.png', 			['unique'] = false, 	['useable'] = false, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'Handy software to shut down some systems'},
 
-	 -- Prospecting
-	 ['detector']                   = {['name'] = 'detector',          ['label'] = 'Detector',          ['weight'] = 100,       ['type'] = 'item',    ['image'] = 'detector.png',        ['unique'] = false, ['useable'] = true, ['shouldClose'] = true, ['combinable'] = nil, ['description']  = 'Go find some things'},
 
 }
