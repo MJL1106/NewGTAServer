@@ -115,7 +115,7 @@ RegisterNetEvent('qb-bankrobbery:pacific:hacktype', function()
                     else
                         QBCore.Functions.Notify(Config.Notify["FleecaHackFail"], 'error', 4500)
                     end
-                end, 7,5)  -- Keep these parameters as they are essential for the function to operate correctly
+                end, 7,3)  -- Keep these parameters as they are essential for the function to operate correctly
                 break  -- Exit the loop if a hack is initiated to prevent multiple hacks at once
             elseif v.hack == 'counting' then
                 exports['casinohack-main']:OpenHackingGame(function(success)
@@ -134,7 +134,7 @@ RegisterNetEvent('qb-bankrobbery:pacific:hacktype', function()
                     else
                         QBCore.Functions.Notify(Config.Notify["FleecaHackFail"], 'error', 4500)
                     end
-                end, 20)  -- Keep these parameters as they are essential for the function to operate correctly
+                end, 10)  -- Keep these parameters as they are essential for the function to operate correctly
                 break  -- Exit the loop if a hack is initiated to prevent multiple hacks at once
             end
         end
@@ -208,7 +208,7 @@ RegisterNetEvent('qb-bankrobbery:pacific:firstFloorEnable', function()
                             end
                         end
                     end
-                end, 9,5)  -- Keep these parameters as they are essential for the function to operate correctly
+                end, 11,5)  -- Keep these parameters as they are essential for the function to operate correctly
                 break  -- Exit the loop if a hack is initiated to prevent multiple hacks at once
             elseif v.hack == 'counting' then
                 exports['casinohack-main']:OpenHackingGame(function(success)
@@ -268,7 +268,7 @@ RegisterNetEvent('qb-bankrobbery:pacific:firstFloorEnable', function()
                             end
                         end
                     end
-                end, 10)  -- Keep these parameters as they are essential for the function to operate correctly
+                end, 4)  -- Keep these parameters as they are essential for the function to operate correctly
                 break  -- Exit the loop if a hack is initiated to prevent multiple hacks at once
             elseif v.hack == 'untangle' then
                 exports['untangle-main']:hacking(function(success)

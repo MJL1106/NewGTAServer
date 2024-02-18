@@ -19,6 +19,9 @@ RegisterNetEvent('qb-bankrobbery:powerplant:PlaceBomb', function()
                                         counterSuccess = counterSuccess + 1
                                         bombAnimation(k)
                                         
+                                    end,
+                                    function() -- failure
+                                        QBCore.Functions.Notify(Config.Notify["FleecaHackFail"], 'error', 4500)
                                     end)
                                 else 
                                     QBCore.Functions.Notify(Config.Notify["AlreadyExploded"], 'error')
@@ -37,11 +40,6 @@ RegisterNetEvent('qb-bankrobbery:powerplant:PlaceBomb', function()
 end)
 
 function bombAnimation(k)
-    print(counterSuccess)
-    if counterSuccess == 6 then
-        Wait(20000)
-        QBCore.Functions.Notify(Config.Notify["PowerOff"], 'error')
-    end
     RequestAnimDict('anim@heists@ornate_bank@thermal_charge')
     RequestModel('hei_p_m_bag_var22_arm_s')
     RequestNamedPtfxAsset('scr_ornate_heist')
@@ -81,5 +79,6 @@ end
 
 
 RegisterNetEvent('qb-bankrobbery:client:PowerPlantgoBoom', function(k)
+    QBCore.Functions.Notify(Config.Notify["PowerOff"], 'error')
     AddExplosion(Config.PowerPlant['locations'][k]['coords'].x, Config.PowerPlant['locations'][k]['coords'].y, Config.PowerPlant['locations'][k]['coords'].z, 0, 1.0, true, false, 4.0)
 end)

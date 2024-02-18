@@ -24,30 +24,9 @@ Config.EnableTrades = true -- Accept trading for Laptops?
 
 ---- ** POLICE CONFIG ** ----
 
----- JOB CHECKS ----
-RegisterNetEvent('QBCore:Client:OnJobUpdate', function(JobInfo)
-    PlayerJob = JobInfo
-    onDuty = true
-end)
 
-RegisterNetEvent('police:SetCopCount', function(amount)
-    CurrentCops = amount
-end)
 
-RegisterNetEvent('QBCore:Client:OnPlayerLoaded', function()
-    PlayerJob = QBCore.Functions.GetPlayerData().job
-    QBCore.Functions.TriggerCallback('qb-bankrobbery:server:GetConfig', function(config)
-        Config = config
-    end)
-    onDuty = true
-    ResetBankDoors()
-end)
-
-RegisterNetEvent('QBCore:Client:SetDuty', function(duty)
-    onDuty = duty
-end)
-
-Config.MinimumFleecaPolice = 1
+Config.MinimumFleecaPolice = 0
 Config.MinimumPaletoPolice = 0
 Config.MinimumPAleto2 = 0
 Config.MinimumPacificPolice = 0
@@ -129,12 +108,12 @@ Config.PaletoBlocks = 5 -- How many different blocks can the hack have?
 Config.PaletoRepeat = 2 -- How many times in a row do they need to hack the system?
 
 ---- ** PACIFIC HACK CONFIG ** ----
-Config.PacificTime = 9 -- How much time do they have to enter the hack?
+Config.PacificTime = 6 -- How much time do they have to enter the hack?
 Config.PacificBlocks = 6 -- How many different blocks can the hack have?
 Config.PacificRepeat = 3 -- How many times in a row do they need to hack the system?
 
 ---- ** PACIFIC Vault HACK CONFIG ** ----
-Config.PacificVaultTime = 6 -- How much time do they have to enter the hack?
+Config.PacificVaultTime = 5 -- How much time do they have to enter the hack?
 Config.PacificVaultBlocks = 6 -- How many different blocks can the hack have?
 Config.PacificVaultRepeat = 4 -- How many times in a row do they need to hack the system?
 
@@ -149,11 +128,11 @@ Config.LowerInnerRepeat = 5 -- How many times in a row do they need to hack the 
 
 
 
----- ** THERMITE MINIGAME CONFIG ** ----
-Config.CorrectBlocks = 10 -- correctBlocks = Number of correct blocks the player needs to click
+---- ** POWER THERMITE MINIGAME CONFIG ** ----
+Config.CorrectBlocks = 12 -- correctBlocks = Number of correct blocks the player needs to click
 Config.IncorrectBlocks = 3 -- incorrectBlocks = number of incorrect blocks after which the game will fail
 Config.TimeToShow = 4 -- timetoShow = time in secs for which the right blocks will be shown
-Config.TimeToLose = 10 -- timetoLose = maximum time after timetoshow expires for player to select the right blocks
+Config.TimeToLose = 7 -- timetoLose = maximum time after timetoshow expires for player to select the right blocks
 
 
 ---- ** BILLS ITEM ** ----
@@ -666,11 +645,11 @@ Config.PacificBank = {
     },
     ["thermite"] = { -- Thermite points
         {coords = vector4(258.07, 274.6, 104.63, 160.37), anim = vector3(258.07, 274.7, 105.66), effect = vector3(258.07, 275.7, 105.66), isOpen = false,
-        memorygame = {correctBlocks = 1, incorrectBlocks = 3, timeToShow = 4, timeToLose = 12}, completed = false}, 
+        memorygame = {correctBlocks = 12, incorrectBlocks = 2, timeToShow = 3, timeToLose = 5}, completed = false}, 
         {coords = vector4(285.45, 264.5, 104.63, 160.38), anim = vector3(285.45, 264.7, 105.66), effect = vector3(285.45, 265.73, 105.66), isOpen = false,
-        memorygame = {correctBlocks = 1, incorrectBlocks = 3, timeToShow = 4, timeToLose = 10}, completed = false},
+        memorygame = {correctBlocks = 12, incorrectBlocks = 2, timeToShow = 3, timeToLose = 5}, completed = false},
         {coords = vector4(293.85, 267.2, 104.63, 340), anim = vector3(293.85, 267.15, 105.66), effect = vector3(293.85, 268.15, 105.66), isOpen = false,
-        memorygame = {correctBlocks = 1, incorrectBlocks = 2, timeToShow = 4, timeToLose = 8}, completed = false},
+        memorygame = {correctBlocks = 12, incorrectBlocks = 2, timeToShow = 3, timeToLose = 5}, completed = false},
         --memory game field controls the difficulty of each door in the bank
     },
     ["hacktype"] = { --locations of the upper floor office hacks and the type of hack they show
