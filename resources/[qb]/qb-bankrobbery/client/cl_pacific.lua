@@ -1,4 +1,3 @@
-CurrentCops = 0
 local totalThermiteCompleted = 0
 local copsCalled = false
 

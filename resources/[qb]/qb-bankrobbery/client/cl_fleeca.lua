@@ -23,6 +23,7 @@ local copsCalled = false
 currentThermiteGate = 0
 currentExplosiveGate = 0
 
+
 CurrentCops = 0
 
 ---- JOB CHECKS ----
@@ -361,44 +362,46 @@ RegisterNetEvent('qb-bankrobbery:UseBankLaptop', function(colour, laptopData)
                 if not isBusy then
                     local dist = #(pos - vector3(Config.FleecaBanks[closestBank]['coords'].x, Config.FleecaBanks[closestBank]['coords'].y, Config.FleecaBanks[closestBank]['coords'].z))
                     if dist < 1.5 then
-                        if CurrentCops >= Config.MinimumFleecaPolice then
-                            if not Config.FleecaBanks[closestBank]['isOpened'] then
-                                SetEntityHeading(ped, Config.FleecaBanks[closestBank]['coords'].w)
-                                QBCore.Functions.Progressbar('hack_gate', 'Connecting the laptop..', math.random(5000, 10000), false, true, {
-                                    disableMovement = true,
-                                    disableCarMovement = true,
-                                    disableMouse = false,
-                                    disableCombat = true,
-                                }, {
-                                    animDict = 'anim@gangops@facility@servers@',
-                                    anim = 'hotwire',
-                                    flags = 16,
-                                }, {}, {}, function() -- Done
-                                    StopAnimTask(PlayerPedId(), 'anim@gangops@facility@servers@', 'hotwire', 1.0)
-                                    -- check uses
-                                    TriggerServerEvent('qb-bankrobbery:server:RemoveLaptop', 'laptop_green')
-                                    TriggerEvent('qb-bankrobbery:LaptopFleeca', closestBank)
-                                    if not copsCalled then
-                                        local s1, s2 = GetStreetNameAtCoord(pos.x, pos.y, pos.z)
-                                        local street1 = GetStreetNameFromHashKey(s1)
-                                        local street2 = GetStreetNameFromHashKey(s2)
-                                        local streetLabel = street1
-                                        if street2 ~= nil then
-                                            streetLabel = streetLabel .. ' ' .. street2
+                        QBCore.Functions.TriggerCallback('qb-bankrobbery:server:getCops', function(CurrentCops)
+                            if CurrentCops >= Config.MinimumFleecaPolice then
+                                if not Config.FleecaBanks[closestBank]['isOpened'] then
+                                    SetEntityHeading(ped, Config.FleecaBanks[closestBank]['coords'].w)
+                                    QBCore.Functions.Progressbar('hack_gate', 'Connecting the laptop..', math.random(5000, 10000), false, true, {
+                                        disableMovement = true,
+                                        disableCarMovement = true,
+                                        disableMouse = false,
+                                        disableCombat = true,
+                                    }, {
+                                        animDict = 'anim@gangops@facility@servers@',
+                                        anim = 'hotwire',
+                                        flags = 16,
+                                    }, {}, {}, function() -- Done
+                                        StopAnimTask(PlayerPedId(), 'anim@gangops@facility@servers@', 'hotwire', 1.0)
+                                        -- check uses
+                                        TriggerServerEvent('qb-bankrobbery:server:RemoveLaptop', 'laptop_green')
+                                        TriggerEvent('qb-bankrobbery:LaptopFleeca', closestBank)
+                                        if not copsCalled then
+                                            local s1, s2 = GetStreetNameAtCoord(pos.x, pos.y, pos.z)
+                                            local street1 = GetStreetNameFromHashKey(s1)
+                                            local street2 = GetStreetNameFromHashKey(s2)
+                                            local streetLabel = street1
+                                            if street2 ~= nil then
+                                                streetLabel = streetLabel .. ' ' .. street2
+                                            end
+                                            TriggerServerEvent('qb-bankrobbery:server:callCops', 'small', closestBank, streetLabel, pos)
+                                            copsCalled = true
                                         end
-                                        TriggerServerEvent('qb-bankrobbery:server:callCops', 'small', closestBank, streetLabel, pos)
-                                        copsCalled = true
-                                    end
-                                end, function() -- Cancel
-                                    StopAnimTask(PlayerPedId(), 'anim@gangops@facility@servers@', 'hotwire', 1.0)
-                                    QBCore.Functions.Notify(Config.Notify['FleecaHackCancel'], 'error')
-                                end)
+                                    end, function() -- Cancel
+                                        StopAnimTask(PlayerPedId(), 'anim@gangops@facility@servers@', 'hotwire', 1.0)
+                                        QBCore.Functions.Notify(Config.Notify['FleecaHackCancel'], 'error')
+                                    end)
+                                else
+                                    QBCore.Functions.Notify(Config.Notify['BankDoorOpen'], 'error')
+                                end
                             else
-                                QBCore.Functions.Notify(Config.Notify['BankDoorOpen'], 'error')
+                                QBCore.Functions.Notify(Config.Notify['NotEnoughPD'], 'error')
                             end
-                        else
-                            QBCore.Functions.Notify(Config.Notify['NotEnoughPD'], 'error')
-                        end
+                        end)
                     end
                 else
                     QBCore.Functions.Notify(Config.Notify['BankCoolDown'], 'error', 5500)

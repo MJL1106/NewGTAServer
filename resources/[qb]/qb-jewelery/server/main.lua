@@ -129,6 +129,7 @@ RegisterNetEvent('qb-jewellery:server:setTimeout', function()
                 TriggerClientEvent('qb-jewellery:client:setAlertState', -1, false)
                 TriggerEvent('qb-scoreboard:server:SetActivityBusy', "jewellery", false)
             end
+            TriggerServerEvent('qb-doorlock:server:updateState', 'JeweleryDoorMain', true, false, false, true, false, false)
             timeOut = false
         end)
     end

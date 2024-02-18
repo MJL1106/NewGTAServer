@@ -1019,3 +1019,17 @@ end)
 RegisterNetEvent('qb-paleto:server:addexplosion', function(place) 
     TriggerClientEvent('qb-paleto:client:ExplodeSync', -1, place)
 end)
+
+local cachedPoliceAmount = {}
+QBCore.Functions.CreateCallback('qb-bankrobbery:server:getCops', function(source, cb)
+	local amount = 0
+    for _, v in pairs(QBCore.Functions.GetQBPlayers()) do
+        if v.PlayerData.job.name == "police" and v.PlayerData.job.onduty then
+            amount = amount + 1
+        end
+    end
+    cachedPoliceAmount[source] = amount
+    cb(amount)
+end)
+
+
