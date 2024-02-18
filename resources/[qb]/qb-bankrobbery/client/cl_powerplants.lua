@@ -1,42 +1,44 @@
 CurrentCops = 0
 local counterSuccess = 0
 RegisterNetEvent('qb-bankrobbery:powerplant:PlaceBomb', function()
-    if CurrentCops >= Config.MinimumFleecaPolice then
-        QBCore.Functions.TriggerCallback('qb-Bankrobbery:server:GetItemsNeeded', function(hasItem)
-            if hasItem then
-                QBCore.Functions.TriggerCallback('qb-bankrobbery:server:IsServerBlackedout', function(isBlackout)
-                    if not isBlackout then
-                        TriggerServerEvent('qb-bankrobbery:server:RemovePowerplantitem')
-                        local ped = PlayerPedId()
-                        local pos = GetEntityCoords(ped)
-                        for k,v in pairs(Config.PowerPlant['locations']) do
-                            local Dist = #(pos - vector3(v['coords'].x, v['coords'].y, v['coords'].z))
-                            if Dist <= 1.5 then
-                                if not v['open'] then
-                                    exports['memorygame']:thermiteminigame(Config.CorrectBlocks, Config.IncorrectBlocks, Config.TimeToShow, Config.TimeToLose,
-                                    function() -- success
-                                        TriggerServerEvent('qb-bankrobbery:server:lowerVault:doorSync', 'doors', k)
-                                        counterSuccess = counterSuccess + 1
-                                        bombAnimation(k)
-                                        
-                                    end,
-                                    function() -- failure
-                                        QBCore.Functions.Notify(Config.Notify["FleecaHackFail"], 'error', 4500)
-                                    end)
-                                else 
-                                    QBCore.Functions.Notify(Config.Notify["AlreadyExploded"], 'error')
+    QBCore.Functions.TriggerCallback('qb-bankrobbery:server:getCops', function(CurrentCops)
+        if CurrentCops >= Config.MinimumPowerPolice then
+            QBCore.Functions.TriggerCallback('qb-Bankrobbery:server:GetItemsNeeded', function(hasItem)
+                if hasItem then
+                    QBCore.Functions.TriggerCallback('qb-bankrobbery:server:IsServerBlackedout', function(isBlackout)
+                        if not isBlackout then
+                            TriggerServerEvent('qb-bankrobbery:server:RemovePowerplantitem')
+                            local ped = PlayerPedId()
+                            local pos = GetEntityCoords(ped)
+                            for k,v in pairs(Config.PowerPlant['locations']) do
+                                local Dist = #(pos - vector3(v['coords'].x, v['coords'].y, v['coords'].z))
+                                if Dist <= 1.5 then
+                                    if not v['open'] then
+                                        exports['memorygame']:thermiteminigame(Config.CorrectBlocks, Config.IncorrectBlocks, Config.TimeToShow, Config.TimeToLose,
+                                        function() -- success
+                                            TriggerServerEvent('qb-bankrobbery:server:lowerVault:doorSync', 'doors', k)
+                                            counterSuccess = counterSuccess + 1
+                                            bombAnimation(k)
+                                            
+                                        end,
+                                        function() -- failure
+                                            QBCore.Functions.Notify(Config.Notify["FleecaHackFail"], 'error', 4500)
+                                        end)
+                                    else 
+                                        QBCore.Functions.Notify(Config.Notify["AlreadyExploded"], 'error')
+                                    end
                                 end
                             end
                         end
-                    end
-                end)
-            else
-                QBCore.Functions.Notify(Config.Notify["MissingThermite"], 'error')
-            end 
-        end, Config.PowerplantRequired)
-    else
-        QBCore.Functions.Notify(Config.Notify['NotEnoughPD'], 'error')
-    end
+                    end)
+                else
+                    QBCore.Functions.Notify(Config.Notify["MissingThermite"], 'error')
+                end 
+            end, Config.PowerplantRequired)
+        else
+            QBCore.Functions.Notify(Config.Notify['NotEnoughPD'], 'error')
+        end
+    end)
 end)
 
 function bombAnimation(k)

@@ -86,7 +86,7 @@ RegisterNetEvent('qb-jewellery:server:vitrineReward', function(vitrineIndex)
                         TriggerClientEvent('QBCore:Notify', src, Lang:t('error.to_much'), 'error')
                     end
                 else
-                    local amount = math.random(2, 4)
+                    local amount = math.random(20, 40)
                     if Player.Functions.AddItem("10kgoldchain", amount) then
                         TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items["10kgoldchain"], 'add')
                     else
@@ -129,6 +129,7 @@ RegisterNetEvent('qb-jewellery:server:setTimeout', function()
                 TriggerClientEvent('qb-jewellery:client:setAlertState', -1, false)
                 TriggerEvent('qb-scoreboard:server:SetActivityBusy', "jewellery", false)
             end
+            TriggerServerEvent('qb-doorlock:server:updateState', 'JeweleryDoorMain', true, false, false, true, false, false)
             timeOut = false
         end)
     end
