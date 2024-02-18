@@ -212,8 +212,7 @@ CreateThread(function()
               {
                   type = "client",
                   action = function()
-                      -- Trigger the event when the panel is used
-                      TriggerEvent('qb-bankrobbery:UseBankLaptop', 'green', nil, bankId)
+                      TriggerEvent('qb-bankrobbery:UseBankLaptop', 'green', laptopData, bankId)
                   end,
                   icon = "fas fa-laptop-code",
                   label = "Hack Panel",
@@ -712,11 +711,11 @@ CreateThread(function()
           {
             type = "client",
             action = function()
-                TriggerEvent('qb-bankrobbery:testingvaultdoor')
+                TriggerEvent('qb-bankrobbery:UseGoldBankLaptop', 'gold', nil)
             end,
             icon = "fas fa-laptop-code",
-            label = "Use Encrypted Harddrive",
-            item = "encrypted_hdd", -- Makes it only display if you have the laptop
+            label = "Use Hacking Laptop",
+            item = "laptop_gold", -- Makes it only display if you have the laptop
             job = all,
           },
       },
@@ -1307,84 +1306,6 @@ end)
 -- Buy Laptops and shit
 CreateThread(function() 
     if Config.EnableTrades then 
-        if Config.TargetOption == 'bt' then
-            -- Hunter
-            exports['bt-target']:AddBoxZone('LaptopLocataion1', vector3(Config.LaptopLocations['Hunter']['coords'].x, Config.LaptopLocations['Hunter']['coords'].y, Config.LaptopLocations['Hunter']['coords'].z), 1.5, 1.5, {
-                name = 'LaptopLocataion1', 
-                heading = Config.LaptopLocations['Hunter']['coords'].w,
-                debugPoly = Config.debugPoly,
-                minZ = Config.LaptopLocations['Hunter']['coords'].z-0.3,
-                maxZ = Config.LaptopLocations['Hunter']['coords'].z+1, 
-            }, {
-                options = {
-                    {
-                        type = 'client',
-                        event = 'qb-bankrobbery:PedTrading:Hunter',
-                        icon = 'fas fa-cookie',
-                        label = 'Talk to Hunter',
-                        job = {'all'},
-                    }
-                },
-                distance = 1.5,
-
-            })
-            exports['bt-target']:AddBoxZone('LaptopLocataion2', vector3(Config.LaptopLocations['Fernando']['coords'].x, Config.LaptopLocations['Fernando']['coords'].y, Config.LaptopLocations['Fernando']['coords'].z), 1.5, 1.5, {
-                name = 'LaptopLocataion2', 
-                heading = Config.LaptopLocations['Fernando']['coords'].w,
-                debugPoly = Config.debugPoly,
-                minZ = Config.LaptopLocations['Fernando']['coords'].z-0.3,
-                maxZ = Config.LaptopLocations['Fernando']['coords'].z+1, 
-            }, {
-                options = {
-                    {
-                        type = 'client',
-                        event = 'qb-bankrobbery:PedTrading:Fernando',
-                        icon = 'fas fa-cookie',
-                        label = 'Talk to Fernando',
-                        job = {'all'},
-                    }
-                },
-                distance = 1.5,
-
-            })
-            exports['bt-target']:AddBoxZone('LaptopLocataion3', vector3(Config.LaptopLocations['Rico']['coords'].x, Config.LaptopLocations['Rico']['coords'].y, Config.LaptopLocations['Rico']['coords'].z), 1.5, 1.5, {
-                name = 'LaptopLocataion3', 
-                heading = Config.LaptopLocations['Rico']['coords'].w,
-                debugPoly = Config.debugPoly,
-                minZ = Config.LaptopLocations['Rico']['coords'].z-0.3,
-                maxZ = Config.LaptopLocations['Rico']['coords'].z+1, 
-            }, {
-                options = {
-                    {
-                        type = 'client',
-                        event = 'qb-bankrobbery:PedTrading:Rico',
-                        icon = 'fas fa-cookie',
-                        label = 'Talk to Rico',
-                        job = {'all'},
-                    }
-                },
-                distance = 1.5,
-
-            })
-            exports['bt-target']:AddBoxZone('LaptopLocataion4', vector3(Config.LaptopLocations['Gustavo']['coords'].x, Config.LaptopLocations['Gustavo']['coords'].y, Config.LaptopLocations['Gustavo']['coords'].z), 1.5, 1.5, {
-                name = 'LaptopLocataion4', 
-                heading = Config.LaptopLocations['Gustavo']['coords'].w,
-                debugPoly = Config.debugPoly,
-                minZ = Config.LaptopLocations['Gustavo']['coords'].z-0.3,
-                maxZ = Config.LaptopLocations['Gustavo']['coords'].z+1, 
-            }, {
-                options = {
-                    {
-                        type = 'client',
-                        event = 'qb-bankrobbery:PedTrading:Gustavo',
-                        icon = 'fas fa-cookie',
-                        label = 'Talk to Gustavo',
-                        job = {'all'},
-                    }
-                },
-                distance = 1.5,
-            })
-        elseif Config.TargetOption == 'qb' then
             exports['qb-target']:AddBoxZone('LaptopLocataion1', vector3(Config.LaptopLocations['Hunter']['coords'].x, Config.LaptopLocations['Hunter']['coords'].y, Config.LaptopLocations['Hunter']['coords'].z), 1.5, 1.5, {
                 name = 'LaptopLocataion1', 
                 heading = Config.LaptopLocations['Hunter']['coords'].w,
@@ -1456,96 +1377,6 @@ CreateThread(function()
                 },
                 distance = 1.5,
             })
-            exports['qb-target']:AddBoxZone('LaptopLocataion5', vector3(Config.LaptopLocations['Fisher']['coords'].x, Config.LaptopLocations['Fisher']['coords'].y, Config.LaptopLocations['Fisher']['coords'].z), 1.5, 1.5, {
-              name = 'LaptopLocataion5', 
-              heading = Config.LaptopLocations['Fisher']['coords'].w,
-              debugPoly = Config.debugPoly,
-              minZ = Config.LaptopLocations['Fisher']['coords'].z-0.3,
-              maxZ = Config.LaptopLocations['Fisher']['coords'].z+1, 
-          }, {
-              options = {
-                  {
-                      type = 'client',
-                      event = 'qb-bankrobbery:PedTrading:Fisher',
-                      icon = 'fas fa-cookie',
-                      label = 'Talk to Fisher',
-                  }
-              },
-              distance = 1.5,
-          })
-        elseif Config.TargetOption == 'berkie' then
-            exports['berkie-target']:AddBoxZone('LaptopLocataion1', vector3(Config.LaptopLocations['Hunter']['coords'].x, Config.LaptopLocations['Hunter']['coords'].y, Config.LaptopLocations['Hunter']['coords'].z), 1.5, 1.5, {
-                name = 'LaptopLocataion1', 
-                heading = Config.LaptopLocations['Hunter']['coords'].w,
-                debugPoly = Config.debugPoly,
-                minZ = Config.LaptopLocations['Hunter']['coords'].z-0.3,
-                maxZ = Config.LaptopLocations['Hunter']['coords'].z+1, 
-            }, {
-                options = {
-                    {
-                        type = 'client',
-                        event = 'qb-bankrobbery:PedTrading:Hunter',
-                        icon = 'fas fa-cookie',
-                        label = 'Talk to Hunter',
-                    }
-                },
-                distance = 1.5,
-
-            })
-            exports['berkie-target']:AddBoxZone('LaptopLocataion2', vector3(Config.LaptopLocations['Fernando']['coords'].x, Config.LaptopLocations['Fernando']['coords'].y, Config.LaptopLocations['Fernando']['coords'].z), 1.5, 1.5, {
-                name = 'LaptopLocataion2', 
-                heading = Config.LaptopLocations['Fernando']['coords'].w,
-                debugPoly = Config.debugPoly,
-                minZ = Config.LaptopLocations['Fernando']['coords'].z-0.3,
-                maxZ = Config.LaptopLocations['Fernando']['coords'].z+1, 
-            }, {
-                options = {
-                    {
-                        type = 'client',
-                        event = 'qb-bankrobbery:PedTrading:Fernando',
-                        icon = 'fas fa-cookie',
-                        label = 'Talk to Fernando',
-                    }
-                },
-                distance = 1.5,
-
-            })
-            exports['berkie-target']:AddBoxZone('LaptopLocataion3', vector3(Config.LaptopLocations['Rico']['coords'].x, Config.LaptopLocations['Rico']['coords'].y, Config.LaptopLocations['Rico']['coords'].z), 1.5, 1.5, {
-                name = 'LaptopLocataion3', 
-                heading = Config.LaptopLocations['Rico']['coords'].w,
-                debugPoly = Config.debugPoly,
-                minZ = Config.LaptopLocations['Rico']['coords'].z-0.3,
-                maxZ = Config.LaptopLocations['Rico']['coords'].z+1, 
-            }, {
-                options = {
-                    {
-                        type = 'client',
-                        event = 'qb-bankrobbery:PedTrading:Rico',
-                        icon = 'fas fa-cookie',
-                        label = 'Talk to Rico',
-                    }
-                },
-                distance = 1.5,
-
-            })
-            exports['berkie-target']:AddBoxZone('LaptopLocataion4', vector3(Config.LaptopLocations['Gustavo']['coords'].x, Config.LaptopLocations['Gustavo']['coords'].y, Config.LaptopLocations['Gustavo']['coords'].z), 1.5, 1.5, {
-                name = 'LaptopLocataion4', 
-                heading = Config.LaptopLocations['Gustavo']['coords'].w,
-                debugPoly = Config.debugPoly,
-                minZ = Config.LaptopLocations['Gustavo']['coords'].z-0.3,
-                maxZ = Config.LaptopLocations['Gustavo']['coords'].z+1, 
-            }, {
-                options = {
-                    {
-                        type = 'client',
-                        event = 'qb-bankrobbery:PedTrading:Gustavo',
-                        icon = 'fas fa-cookie',
-                        label = 'Talk to Gustavo',
-                    }
-                },
-                distance = 1.5,
-            })
-        end
     end
 end)
 
@@ -1771,6 +1602,7 @@ RegisterNetEvent('qb-bankrobbery:PedTrading:Hunter', function()
         disableCombat = true,
     }, {}, {}, {}, function()
         ClearPedTasks(ped)
+        print("trying to buy laptop")
         TriggerServerEvent('qb-bankrobbery:server:BuyLaptop', 'Hunter')
     end)
 end)
@@ -1815,18 +1647,4 @@ RegisterNetEvent('qb-bankrobbery:PedTrading:Gustavo', function()
         ClearPedTasks(ped)
         TriggerServerEvent('qb-bankrobbery:server:BuyLaptop', 'Gustavo')
     end)
-end)
-
-RegisterNetEvent('qb-bankrobbery:PedTrading:Fisher', function()
-  local ped = PlayerPedId()
-  TriggerEvent('animations:client:EmoteCommandStart', {'argue2'})
-  QBCore.Functions.Progressbar('qb-bankrobbery:Trade1', 'Fisher is looking at your stuff...', 4500, false, false, {
-      disableMovement = true,
-      disableCarMovement = false,
-      disableMouse = false,
-      disableCombat = true,
-  }, {}, {}, {}, function()
-      ClearPedTasks(ped)
-      TriggerServerEvent('qb-bankrobbery:server:BuyLaptop', 'Fisher')
-  end)
 end)

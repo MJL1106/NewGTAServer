@@ -82,6 +82,17 @@ RegisterNetEvent('qb-bankrobbery:server:setTimeout', function(type, closestBank)
     end
 end)
 
+RegisterNetEvent('qb-bankrobbery:server:giveVaultGateItem',function()
+    local item = 'vault_gate_cracker'
+    local src = source
+    local Player = QBCore.Functions.GetPlayer(source)
+
+    Player.Functions.AddItem(item, 1, false)
+    TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[item], 'add')
+    TriggerClientEvent('QBCore:Notify', src, Config.Notify["Got"] .. 1 .. Config.Notify["VaultCracker"])
+    TriggerEvent('qb-log:server:CreateLog', 'bankrobbery', 'Bank Robbery', 'green', '**Goldbars**:\n'..GoldBars..'\n**Person**:\n'..GetPlayerName(src))
+
+end)
 RegisterNetEvent('qb-bankrobbery:server:FleecaTable', function(Table, bank, pos, closestBank)
     local src = source
     local Player = QBCore.Functions.GetPlayer(source)
@@ -447,28 +458,32 @@ RegisterNetEvent('qb-bankrobbery:server:drillLoot', function(bank, pos, closestB
             TriggerEvent('qb-log:server:CreateLog', 'bankrobbery', 'Bank Robbery', 'green', '**Goldbars**:\n'..doubleitem..'\n**Person**:\n'..GetPlayerName(src))
         end
     elseif bank == 'lowerVault' then 
-        local amount = math.random(Config.LowerVaultLockerAmountMin, Config.LowerVaultLockerAmountMax)
+        local item = Config.Lockers["Vault"]["items"][math.random(1, #Config.Lockers["Vault"]["items"])]
+        local doubleitem = Config.Lockers["Vault"]["Rare"][math.random(1, #Config.Lockers["Vault"]["Rare"])]
+        local cashitem = Config.Lockers["Vault"]["Cash"]
+        local cashamount = Config.Lockers["Vault"]["CashAmount"]
 
-        if item == "markedbills" then
-            Player.Functions.AddItem(item, amount, false, info)
-        else
-            Player.Functions.AddItem(item, amount, false)
-        end
+        local amount = Config.Lockers["Vault"]["ItemAmount"]
+        Player.Functions.AddItem(item, amount, false)
         TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[item], 'add')
         TriggerClientEvent('QBCore:Notify', src, Config.Notify["found"] .. amount .. ' '..item)
         TriggerEvent('qb-log:server:CreateLog', 'bankrobbery', 'Bank Robbery', 'green', '**Goldbars**:\n'..item..'\n**Person**:\n'..GetPlayerName(src))
 
         Wait(2000)
-        local DoubleLoot = math.random(1,100)
-        if DoubleLoot <= Config.LowerVaultRarePercent then 
-            local DoubleLootAmount = math.random(Config.LowerVaultRareMin, Config.LowerVaultRareMax)
-            if item == "markedbills" then
-                Player.Functions.AddItem(doubleitem, DoubleLootAmount, false, info)
-            else
-                Player.Functions.AddItem(doubleitem, DoubleLootAmount, false)
-            end
+        Wait(2000)
+        local UsbChance = math.random(1,100)
+        if UsbChance <= Config.Lockers["Vault"]["Chance"] then
+            amount = Config.Lockers["Vault"]["RareAmount"]
+            Player.Functions.AddItem(doubleitem, amount, false)
             TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[doubleitem], 'add')
-            TriggerClientEvent('QBCore:Notify', src, Config.Notify["found"] .. amount .. ' '..doubleitem)
+            TriggerEvent('qb-log:server:CreateLog', 'bankrobbery', 'Bank Robbery', 'green', '**Goldbars**:\n'..doubleitem..'\n**Person**:\n'..GetPlayerName(src))
+        end
+        Wait(2000)
+        local CardChance = math.random(1,100)
+        if CardChance <= Config.Lockers["Vault"]["Card"] then
+            amount = Config.Lockers["Vault"]["CashAmount"]
+            Player.Functions.AddItem(cashitem, amount, false)
+            TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[cashitem], 'add')
             TriggerEvent('qb-log:server:CreateLog', 'bankrobbery', 'Bank Robbery', 'green', '**Goldbars**:\n'..doubleitem..'\n**Person**:\n'..GetPlayerName(src))
         end
     end
@@ -699,6 +714,14 @@ RegisterNetEvent('qb-bankrobbery:server:RemovePacificDoorCard', function()
     TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[item], 'remove')
 end)
 
+RegisterNetEvent('qb-bankrobbery:server:RemovePacificVaultCracker', function()
+    local src = source
+	local Player = QBCore.Functions.GetPlayer(src)
+    local item = 'vault_gate_cracker'
+    Player.Functions.RemoveItem(item, 1, false)
+    TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[item], 'remove')
+end)
+
 RegisterNetEvent('qb-bankrobbery:server:RemovePowerplantitem', function()
     local src = source
 	local Player = QBCore.Functions.GetPlayer(src)
@@ -830,20 +853,20 @@ RegisterNetEvent('qb-bankrobbery:server:IsComvination2Right', function(data)
     end
 end)
 
--- RegisterServerEvent('qb-bankrobbery:server:RemoveLaptopUse', function(itemData)
---     local Player = QBCore.Functions.GetPlayer(source)
+RegisterServerEvent('qb-bankrobbery:server:RemoveLaptopUse', function(itemData)
+    local Player = QBCore.Functions.GetPlayer(source)
 
---     if Player.PlayerData.items[itemData.slot].info.uses == nil then
---         TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items[itemData.name], 'remove')
---         Player.Functions.RemoveItem(itemData, 1)
---     elseif Player.PlayerData.items[itemData.slot].info.uses - 1 == 0 then
---         TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items[itemData.name], 'remove')
---         Player.Functions.RemoveItem(itemData, 1)
---     else
---         Player.PlayerData.items[itemData.slot].info.uses = Player.PlayerData.items[itemData.slot].info.uses - 1
---         Player.Functions.SetInventory(Player.PlayerData.items)
---     end
--- end)
+    if Player.PlayerData.items[itemData.slot].info.uses == nil then
+        TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items[itemData.name], 'remove')
+        Player.Functions.RemoveItem(itemData, 1)
+    elseif Player.PlayerData.items[itemData.slot].info.uses - 1 == 0 then
+        TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items[itemData.name], 'remove')
+        Player.Functions.RemoveItem(itemData, 1)
+    else
+        Player.PlayerData.items[itemData.slot].info.uses = Player.PlayerData.items[itemData.slot].info.uses - 1
+        Player.Functions.SetInventory(Player.PlayerData.items)
+    end
+end)
 
 -- Buying Laptops
 RegisterServerEvent('qb-bankrobbery:server:BuyLaptop', function(name)
@@ -851,17 +874,15 @@ RegisterServerEvent('qb-bankrobbery:server:BuyLaptop', function(name)
     local item = Config.LaptopLocations[name]['TradeItem']
     local laptop = Config.LaptopLocations[name]['laptop']
 
-    info = {
-        uses = Config.LaptopUses
+    info = {  
+        uses = Config.LaptopUses,
     }
-
     if Player.Functions.GetItemByName(item) ~= nil then
         if Player.PlayerData.money.cash >= Config.LaptopLocations[name]['price'] then
             Player.Functions.RemoveItem(item, 1)
             TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items[item], 'remove')
 
             Player.Functions.RemoveMoney('cash', Config.LaptopLocations[name]['price'])
-
             Player.Functions.AddItem(laptop, 1, false, info)
             TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items[laptop], 'add')
             TriggerClientEvent('QBCore:Notify', source, 'You purchased a laptop from '..laptop..' for $'..Config.LaptopLocations[name]['price']..' cash', 'success', 3000)
@@ -872,6 +893,8 @@ RegisterServerEvent('qb-bankrobbery:server:BuyLaptop', function(name)
         TriggerClientEvent('QBCore:Notify', source, "You don't have anything to offer", 'error', 3000)
     end
 end)
+
+
 
 RegisterServerEvent('qb-bankrobbery:server:ExplodePowerPlant', function(k)
     if not BlackOutActive then 

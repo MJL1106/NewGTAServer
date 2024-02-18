@@ -78,78 +78,82 @@ RegisterNetEvent('qb-bankrobbery:paleto:thermitedoor', function()
     for k,v in pairs(Config.PaletoBank['thermite']) do
         local Dist = #(coords - vector3(v['coords'].x, v['coords'].y, v['coords'].z))
         if Dist <= 1.5 then
-            QBCore.Functions.TriggerCallback('qb-Bankrobbery:server:GetItemsNeeded', function(hasItem)
-                if hasItem then
-                    SetEntityHeading(ped, Config.PaletoBank['thermite'][k]['coords'].w)
-                    TriggerServerEvent('qb-bankrobbery:server:RemovePaletoDoorItem')
-                    exports['memorygame']:thermiteminigame(12, 3, 4, 7,
-                    function() -- success
-                        QBCore.Functions.Notify(Config.Notify["PlacingThermite"], 'success', 4500)
-                        local loc = Config.PaletoBank['thermite'][k]['anim']
-                        local rotx, roty, rotz = table.unpack(vec3(GetEntityRotation(ped)))
-                        local bagscene = NetworkCreateSynchronisedScene(loc.x, loc.y, loc.z, rotx, roty, rotz, 2, false, false, 1065353216, 0, 1.3)
-                        local bag = CreateObject(GetHashKey('hei_p_m_bag_var22_arm_s'), loc.x, loc.y, loc.z,  true,  true, false)
-                        SetEntityCollision(bag, false, true)
-                        NetworkAddPedToSynchronisedScene(ped, bagscene, 'anim@heists@ornate_bank@thermal_charge', 'thermal_charge', 1.5, -4.0, 1, 16, 1148846080, 0)
-                        NetworkAddEntityToSynchronisedScene(bag, bagscene, 'anim@heists@ornate_bank@thermal_charge', 'bag_thermal_charge', 4.0, -8.0, 1)
-                        NetworkStartSynchronisedScene(bagscene)
-                        Wait(1500)
-                        local x, y, z = table.unpack(GetEntityCoords(ped))
-                        local thermal_charge = CreateObject(GetHashKey('hei_prop_heist_thermite'), x, y, z + 0.2,  true,  true, true)
-                    
-                        SetEntityCollision(thermal_charge, false, true)
-                        AttachEntityToEntity(thermal_charge, ped, GetPedBoneIndex(ped, 28422), 0, 0, 0, 0, 0, 200.0, true, true, false, true, 1, true)
-                        Wait(4000)
+            if CurrentCops >= Config.MinimumFleecaPolice then
+                QBCore.Functions.TriggerCallback('qb-Bankrobbery:server:GetItemsNeeded', function(hasItem)
+                    if hasItem then
+                        SetEntityHeading(ped, Config.PaletoBank['thermite'][k]['coords'].w)
+                        TriggerServerEvent('qb-bankrobbery:server:RemovePaletoDoorItem')
+                        exports['memorygame']:thermiteminigame(12, 3, 4, 7,
+                        function() -- success
+                            QBCore.Functions.Notify(Config.Notify["PlacingThermite"], 'success', 4500)
+                            local loc = Config.PaletoBank['thermite'][k]['anim']
+                            local rotx, roty, rotz = table.unpack(vec3(GetEntityRotation(ped)))
+                            local bagscene = NetworkCreateSynchronisedScene(loc.x, loc.y, loc.z, rotx, roty, rotz, 2, false, false, 1065353216, 0, 1.3)
+                            local bag = CreateObject(GetHashKey('hei_p_m_bag_var22_arm_s'), loc.x, loc.y, loc.z,  true,  true, false)
+                            SetEntityCollision(bag, false, true)
+                            NetworkAddPedToSynchronisedScene(ped, bagscene, 'anim@heists@ornate_bank@thermal_charge', 'thermal_charge', 1.5, -4.0, 1, 16, 1148846080, 0)
+                            NetworkAddEntityToSynchronisedScene(bag, bagscene, 'anim@heists@ornate_bank@thermal_charge', 'bag_thermal_charge', 4.0, -8.0, 1)
+                            NetworkStartSynchronisedScene(bagscene)
+                            Wait(1500)
+                            local x, y, z = table.unpack(GetEntityCoords(ped))
+                            local thermal_charge = CreateObject(GetHashKey('hei_prop_heist_thermite'), x, y, z + 0.2,  true,  true, true)
+                        
+                            SetEntityCollision(thermal_charge, false, true)
+                            AttachEntityToEntity(thermal_charge, ped, GetPedBoneIndex(ped, 28422), 0, 0, 0, 0, 0, 200.0, true, true, false, true, 1, true)
+                            Wait(4000)
 
-                    
-                        DetachEntity(thermal_charge, 1, 1)
-                        FreezeEntityPosition(thermal_charge, true)
-                        Wait(100)
-                        DeleteObject(bag)
-                        ClearPedTasks(ped)
-                    
-                        Wait(100)
-                        RequestNamedPtfxAsset('scr_ornate_heist')
-                        while not HasNamedPtfxAssetLoaded('scr_ornate_heist') do
-                            Wait(1)
-                        end
-
-                        ptfx = vector3(Config.PaletoBank['thermite'][k]['effect'].x, Config.PaletoBank['thermite'][k]['effect'].y, Config.PaletoBank['thermite'][k]['effect'].z)
-                        SetPtfxAssetNextCall('scr_ornate_heist')
-                        local effect = StartParticleFxLoopedAtCoord('scr_heist_ornate_thermal_burn', ptfx, 0.0, 0.0, 0.0, 1.0, false, false, false, false)
-                        Wait(3000)
-                        StopParticleFxLooped(effect, 0)
-                        DeleteObject(thermal_charge)
-
-                        if not copsCalled then
-                            local s1, s2 = GetStreetNameAtCoord(coords.x, coords.y, coords.z)
-                            local street1 = GetStreetNameFromHashKey(s1)
-                            local street2 = GetStreetNameFromHashKey(s2)
-                            local streetLabel = street1
-                            if street2 ~= nil then
-                                streetLabel = streetLabel .. ' ' .. street2
+                        
+                            DetachEntity(thermal_charge, 1, 1)
+                            FreezeEntityPosition(thermal_charge, true)
+                            Wait(100)
+                            DeleteObject(bag)
+                            ClearPedTasks(ped)
+                        
+                            Wait(100)
+                            RequestNamedPtfxAsset('scr_ornate_heist')
+                            while not HasNamedPtfxAssetLoaded('scr_ornate_heist') do
+                                Wait(1)
                             end
-                            TriggerServerEvent('qb-bankrobbery:server:callCops', 'paleto', 0, streetLabel, coords)
-                            copsCalled = true
-                        end
 
-                        if v.doorId == 'PaletoOutDoor1' then
-                            TriggerServerEvent('qb-doorlock:server:updateState', v.doorId, false, false, false, true, false, false)
-                        elseif v.doorId == 'PaletoFD' then
-                            TriggerServerEvent('qb-doorlock:server:updateState', v.doorId, false, false, false, true, false, false)
-                        elseif v.doorId == 'PaletoOutDoor2' then
-                            TriggerServerEvent('qb-doorlock:server:updateState', v.doorId, false, false, false, true, false, false)
-                        end
-                            
-                    end,
-                    function() -- failure
-                        QBCore.Functions.Notify(Config.Notify["FleecaHackFail"], 'error', 4500)
+                            ptfx = vector3(Config.PaletoBank['thermite'][k]['effect'].x, Config.PaletoBank['thermite'][k]['effect'].y, Config.PaletoBank['thermite'][k]['effect'].z)
+                            SetPtfxAssetNextCall('scr_ornate_heist')
+                            local effect = StartParticleFxLoopedAtCoord('scr_heist_ornate_thermal_burn', ptfx, 0.0, 0.0, 0.0, 1.0, false, false, false, false)
+                            Wait(3000)
+                            StopParticleFxLooped(effect, 0)
+                            DeleteObject(thermal_charge)
 
-                    end)
-                else
-                    QBCore.Functions.Notify(Config.Notify["MissingThermite"], 'error')
-                end
-            end, Config.PaletoPacificDoor)
+                            if not copsCalled then
+                                local s1, s2 = GetStreetNameAtCoord(coords.x, coords.y, coords.z)
+                                local street1 = GetStreetNameFromHashKey(s1)
+                                local street2 = GetStreetNameFromHashKey(s2)
+                                local streetLabel = street1
+                                if street2 ~= nil then
+                                    streetLabel = streetLabel .. ' ' .. street2
+                                end
+                                TriggerServerEvent('qb-bankrobbery:server:callCops', 'paleto', 0, streetLabel, coords)
+                                copsCalled = true
+                            end
+
+                            if v.doorId == 'PaletoOutDoor1' then
+                                TriggerServerEvent('qb-doorlock:server:updateState', v.doorId, false, false, false, true, false, false)
+                            elseif v.doorId == 'PaletoFD' then
+                                TriggerServerEvent('qb-doorlock:server:updateState', v.doorId, false, false, false, true, false, false)
+                            elseif v.doorId == 'PaletoOutDoor2' then
+                                TriggerServerEvent('qb-doorlock:server:updateState', v.doorId, false, false, false, true, false, false)
+                            end
+                                
+                        end,
+                        function() -- failure
+                            QBCore.Functions.Notify(Config.Notify["FleecaHackFail"], 'error', 4500)
+
+                        end)
+                    else
+                        QBCore.Functions.Notify(Config.Notify["MissingThermite"], 'error')
+                    end
+                end, Config.PaletoPacificDoor)
+            else
+                QBCore.Functions.Notify(Config.Notify['NotEnoughPD'], 'error')
+            end
         end
     end
 end)
@@ -192,7 +196,6 @@ RegisterNetEvent('qb-bankrobbery:UseBankLaptop', function(colour, laptopData)
             if not isBusy then
                 local dist = #(pos - vector3(Config.PaletoBank['coords'].x, Config.PaletoBank['coords'].y, Config.PaletoBank['coords'].z))
                 if dist < 2.5 then
-                    if CurrentCops >= Config.MinimumFleecaPolice then
                         if not Config.PaletoBank['isOpened'] then
                             --SetEntityCoords(ped, Config.PaletoBank['coords'])
                             SetEntityHeading(ped, Config.PaletoBank['coords'].w)
@@ -216,9 +219,6 @@ RegisterNetEvent('qb-bankrobbery:UseBankLaptop', function(colour, laptopData)
                                 QBCore.Functions.Notify(Config.Notify['FleecaHackCancel'], 'error')
                             end)
                         end
-                    else
-                        QBCore.Functions.Notify(Config.Notify['NotEnoughPD'], 'error')
-                    end
                 end
             else
                 QBCore.Functions.Notify(Config.Notify['BankCoolDown'], 'error', 5500)
@@ -232,7 +232,6 @@ RegisterNetEvent('qb-bankrobbery:UsePaletoCard', function()
     local pos = GetEntityCoords(ped)
     local dist = #(pos - vector3(-102.2, 6463.03, 31.63))
     if dist < 2.5 then
-            if CurrentCops >= Config.MinimumFleecaPolice then
                 SetEntityHeading(ped, Config.PaletoBank['coords'].w)
                 QBCore.Functions.Progressbar('BankCard_Ting', 'Using BankCard', math.random(5000, 10000), false, true, {
                     disableMovement = true,
@@ -272,9 +271,6 @@ RegisterNetEvent('qb-bankrobbery:UsePaletoCard', function()
                     StopAnimTask(PlayerPedId(), 'anim@gangops@facility@servers@', 'hotwire', 1.0)
                     QBCore.Functions.Notify(Config.Notify['FleecaHackCancel'], 'error')
                 end)
-            else
-                QBCore.Functions.Notify(Config.Notify['NotEnoughPD'], 'error')
-            end
     end
 end)
 

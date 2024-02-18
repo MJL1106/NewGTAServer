@@ -1,34 +1,47 @@
+CurrentCops = 0
+local counterSuccess = 0
 RegisterNetEvent('qb-bankrobbery:powerplant:PlaceBomb', function()
-    QBCore.Functions.TriggerCallback('qb-Bankrobbery:server:GetItemsNeeded', function(hasItem)
-        if hasItem then
-            QBCore.Functions.TriggerCallback('qb-bankrobbery:server:IsServerBlackedout', function(isBlackout)
-                if not isBlackout then
-                    TriggerServerEvent('qb-bankrobbery:server:RemovePowerplantitem')
-                    local ped = PlayerPedId()
-                    local pos = GetEntityCoords(ped)
-                    for k,v in pairs(Config.PowerPlant['locations']) do
-                        local Dist = #(pos - vector3(v['coords'].x, v['coords'].y, v['coords'].z))
-                        if Dist <= 1.5 then
-                            if not v['open'] then
-                                exports['memorygame']:thermiteminigame(Config.CorrectBlocks, Config.IncorrectBlocks, Config.TimeToShow, Config.TimeToLose,
-                                function() -- success
-                                    TriggerServerEvent('qb-bankrobbery:server:lowerVault:doorSync', 'doors', k)
-                                    bombAnimation(k)
-                                end)
-                            else 
-                                QBCore.Functions.Notify(Config.Notify["AlreadyExploded"], 'error')
+    if CurrentCops >= Config.MinimumFleecaPolice then
+        QBCore.Functions.TriggerCallback('qb-Bankrobbery:server:GetItemsNeeded', function(hasItem)
+            if hasItem then
+                QBCore.Functions.TriggerCallback('qb-bankrobbery:server:IsServerBlackedout', function(isBlackout)
+                    if not isBlackout then
+                        TriggerServerEvent('qb-bankrobbery:server:RemovePowerplantitem')
+                        local ped = PlayerPedId()
+                        local pos = GetEntityCoords(ped)
+                        for k,v in pairs(Config.PowerPlant['locations']) do
+                            local Dist = #(pos - vector3(v['coords'].x, v['coords'].y, v['coords'].z))
+                            if Dist <= 1.5 then
+                                if not v['open'] then
+                                    exports['memorygame']:thermiteminigame(Config.CorrectBlocks, Config.IncorrectBlocks, Config.TimeToShow, Config.TimeToLose,
+                                    function() -- success
+                                        TriggerServerEvent('qb-bankrobbery:server:lowerVault:doorSync', 'doors', k)
+                                        counterSuccess = counterSuccess + 1
+                                        bombAnimation(k)
+                                        
+                                    end)
+                                else 
+                                    QBCore.Functions.Notify(Config.Notify["AlreadyExploded"], 'error')
+                                end
                             end
                         end
                     end
-                end
-            end)
-        else
-            QBCore.Functions.Notify(Config.Notify["MissingThermite"], 'error')
-        end
-    end, Config.PowerplantRequired)
+                end)
+            else
+                QBCore.Functions.Notify(Config.Notify["MissingThermite"], 'error')
+            end 
+        end, Config.PowerplantRequired)
+    else
+        QBCore.Functions.Notify(Config.Notify['NotEnoughPD'], 'error')
+    end
 end)
 
 function bombAnimation(k)
+    print(counterSuccess)
+    if counterSuccess == 6 then
+        Wait(20000)
+        QBCore.Functions.Notify(Config.Notify["PowerOff"], 'error')
+    end
     RequestAnimDict('anim@heists@ornate_bank@thermal_charge')
     RequestModel('hei_p_m_bag_var22_arm_s')
     RequestNamedPtfxAsset('scr_ornate_heist')
@@ -61,7 +74,7 @@ function bombAnimation(k)
     NetworkStopSynchronisedScene(scene1)
     ClearPedTasks(ped)
     QBCore.Functions.Notify(Config.Notify["BombExplodes"], 'primary') 
-    Wait(3 * 1000)
+    Wait(5 * 1000)
     DeleteObject(bombObj)
     TriggerServerEvent('qb-bankrobbery:server:ExplodePowerPlant', k)
 end

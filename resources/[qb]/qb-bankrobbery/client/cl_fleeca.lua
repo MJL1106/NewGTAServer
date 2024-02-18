@@ -326,28 +326,6 @@ CreateThread(function()
     end
 end)
 
----- JOB CHECKS ----
-RegisterNetEvent('QBCore:Client:OnJobUpdate', function(JobInfo)
-    PlayerJob = JobInfo
-    onDuty = true
-end)
-
-RegisterNetEvent('police:SetCopCount', function(amount)
-    CurrentCops = amount
-end)
-
-RegisterNetEvent('QBCore:Client:OnPlayerLoaded', function()
-    PlayerJob = QBCore.Functions.GetPlayerData().job
-    QBCore.Functions.TriggerCallback('qb-bankrobbery:server:GetConfig', function(config)
-        Config = config
-    end)
-    onDuty = true
-    ResetBankDoors()
-end)
-
-RegisterNetEvent('QBCore:Client:SetDuty', function(duty)
-    onDuty = duty
-end)
 
 ---- FLEECA EVENTS ----
 -- All Events Client side

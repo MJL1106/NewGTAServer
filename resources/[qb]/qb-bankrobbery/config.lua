@@ -5,7 +5,7 @@ Config.BlackoutTimer = 15 -- How many minutes are the city blackedout when power
 Config.BankTimer = {
     fleeca = 45, -- Time in minutes for cooldown
     paleto = 60, -- Time in minutes for cooldown
-    pacific = 1, -- Time in minutes for cooldown
+    pacific = 480, -- Time in minutes for cooldown
 } 
 
 ---- ** BAG IDs ** ----
@@ -20,11 +20,34 @@ Config.Wrapper = "ox" -- Use ox or ghmatti, THIS IS FOR THE BAN TRIGGER nothing 
 Config.lowerVaultEnabled = "false" -- Extra step of pacific hiest that uses "name here" pacific bank MLO ("link here")
 
 Config.debugPoly =false -- Show polyzones for targets
-Config.EnableTrades = false -- Accept trading for Laptops?
+Config.EnableTrades = true -- Accept trading for Laptops?
 
 ---- ** POLICE CONFIG ** ----
 
-Config.MinimumFleecaPolice = 0
+---- JOB CHECKS ----
+RegisterNetEvent('QBCore:Client:OnJobUpdate', function(JobInfo)
+    PlayerJob = JobInfo
+    onDuty = true
+end)
+
+RegisterNetEvent('police:SetCopCount', function(amount)
+    CurrentCops = amount
+end)
+
+RegisterNetEvent('QBCore:Client:OnPlayerLoaded', function()
+    PlayerJob = QBCore.Functions.GetPlayerData().job
+    QBCore.Functions.TriggerCallback('qb-bankrobbery:server:GetConfig', function(config)
+        Config = config
+    end)
+    onDuty = true
+    ResetBankDoors()
+end)
+
+RegisterNetEvent('QBCore:Client:SetDuty', function(duty)
+    onDuty = duty
+end)
+
+Config.MinimumFleecaPolice = 1
 Config.MinimumPaletoPolice = 0
 Config.MinimumPAleto2 = 0
 Config.MinimumPacificPolice = 0
@@ -36,7 +59,7 @@ Config.RemoveLaptop = true -- True means that it will remove laptop after they c
 Config.RemoveCard = true -- This means after successfully using a bank card it will be removed set to false it will not be removed
 
 ---- ** DOOR COOLDOWN ** ----
-Config.DoorCD = 0.1 -- How many minutes before Bank Vault opens after finishing the hack?
+Config.DoorCD = 1 -- How many minutes before Bank Vault opens after finishing the hack?
 
 ---- ** Trolly CONFIG ** ----
 
@@ -106,14 +129,19 @@ Config.PaletoBlocks = 5 -- How many different blocks can the hack have?
 Config.PaletoRepeat = 2 -- How many times in a row do they need to hack the system?
 
 ---- ** PACIFIC HACK CONFIG ** ----
-Config.PacificTime = 6 -- How much time do they have to enter the hack?
-Config.PacificBlocks = 4 -- How many different blocks can the hack have?
-Config.PacificRepeat = 1 -- How many times in a row do they need to hack the system?
+Config.PacificTime = 9 -- How much time do they have to enter the hack?
+Config.PacificBlocks = 6 -- How many different blocks can the hack have?
+Config.PacificRepeat = 3 -- How many times in a row do they need to hack the system?
+
+---- ** PACIFIC Vault HACK CONFIG ** ----
+Config.PacificVaultTime = 6 -- How much time do they have to enter the hack?
+Config.PacificVaultBlocks = 6 -- How many different blocks can the hack have?
+Config.PacificVaultRepeat = 4 -- How many times in a row do they need to hack the system?
 
 ---- ** LOWER VAULT HACK CONFIG ** ----
-Config.HDDTime = 10 -- How much time do they have to enter the hack?
+Config.HDDTime = 6 -- How much time do they have to enter the hack?
 Config.HDDBlocks = 6 -- How many different blocks can the hack have?
-Config.HDDRepeat = 1 -- How many times in a row do they need to hack the system?
+Config.HDDRepeat = 4 -- How many times in a row do they need to hack the system?
 
 Config.LowerInnerTime = 8 -- How much time do they have to enter the hack?
 Config.LowerInnerBlocks = 6 -- How many different blocks can the hack have?
@@ -122,10 +150,10 @@ Config.LowerInnerRepeat = 5 -- How many times in a row do they need to hack the 
 
 
 ---- ** THERMITE MINIGAME CONFIG ** ----
-Config.CorrectBlocks = 1 -- correctBlocks = Number of correct blocks the player needs to click
+Config.CorrectBlocks = 10 -- correctBlocks = Number of correct blocks the player needs to click
 Config.IncorrectBlocks = 3 -- incorrectBlocks = number of incorrect blocks after which the game will fail
 Config.TimeToShow = 4 -- timetoShow = time in secs for which the right blocks will be shown
-Config.TimeToLose = 30 -- timetoLose = maximum time after timetoshow expires for player to select the right blocks
+Config.TimeToLose = 10 -- timetoLose = maximum time after timetoshow expires for player to select the right blocks
 
 
 ---- ** BILLS ITEM ** ----
@@ -180,7 +208,7 @@ Config.Lockers = {
         ["gold"] = 'goldbar',
         ["GoldAmount"] = math.random(90,100), -- sets total gold bars you get
         ---- RARE ITEMS ----
-        ["Chance"] = 10, -- CHANCE OF GETTING USB
+        ["Chance"] = 30, -- CHANCE OF GETTING USB
 
         ["Rare"] = {
             'usb_blue',
@@ -188,7 +216,7 @@ Config.Lockers = {
         ["RareAmount"] = 1, -- Set total number of usb
         ---- CASH ITEMS ----
 
-        ["Card"] = 5, -- CHANCE OF GETTING CARD
+        ["Card"] = 15, -- CHANCE OF GETTING CARD
         ["Cash"] = 'security_card_01',
         ["CashAmount"] = 1, -- Put minimum and Maximum amount of items inside the randomiser
     },
@@ -199,7 +227,7 @@ Config.Lockers = {
         },
         ["ItemAmount"] = math.random(30,34), -- Put minimum and Maximum amount of items inside the randomiser
         ---- RARE ITEMS ----
-        ["Chance"] = 7, -- CHANCE OF GETTING GETTING USB
+        ["Chance"] = 25, -- CHANCE OF GETTING GETTING USB
 
         ["Rare"] = {
             'usb_red',
@@ -207,7 +235,7 @@ Config.Lockers = {
         ["RareAmount"] = 1, -- Put minimum and Maximum amount of items inside the randomiser
         ---- CASH ITEMS ----
 
-        ["Card"] = 3, -- CHANCE OF GETTING CARD
+        ["Card"] = 10, -- CHANCE OF GETTING CARD
         ["Cash"] = 'security_card_02',
         ["CashAmount"] = 1, -- Put minimum and Maximum amount of items inside the randomiser
     },
@@ -245,11 +273,31 @@ Config.Lockers = {
         ["RareAmount"] = 1, -- Put minimum and Maximum amount of items inside the randomiser
         ---- CASH ITEMS ----
 
-        ["Card"] = 3, -- chance of getting redphone
-        ["Cash"] = 'redphone',
+        ["Card"] = 20, -- chance of getting goldusb
+        ["Cash"] = 'usb_gold',
         ["CashAmount"] = 1, -- Put minimum and Maximum amount of items inside the randomiser
 
         ["OfficeItem"] = 'encrypted_hdd',
+    },
+
+    ["Vault"] = {
+        ---- NORMAL ITEMS ----
+        ["items"] = {
+            'rolex',
+        },
+        ["ItemAmount"] = math.random(400,450), -- Put minimum and Maximum amount of items inside the randomiser
+        ---- RARE ITEMS ----
+        ["Chance"] = 50, -- CHANCE OF GETTING RARE OR CASH ITEM
+
+        ["Rare"] = {
+            'redphone',
+        },
+        ["RareAmount"] = 1, -- Put minimum and Maximum amount of items inside the randomiser
+        ---- CASH ITEMS ----
+
+        ["Card"] = 20, -- chance of getting redphone
+        ["Cash"] = 'goldenphone',
+        ["CashAmount"] = 1, -- Put minimum and Maximum amount of items inside the randomiser
     },
 }
 
@@ -270,38 +318,32 @@ Config.LaptopUses = 3
 
 
 ---- LAPTOP LOCATIONS ----
--- Config.LaptopLocations = {
---     ["Hunter"] = {
---         ["coords"] = vector4(347.78, -1255.41, 32.7, 326.1),
---         ["TradeItem"] = "usb_green",
---         ["laptop"] = "laptop_green",
---         ["price"] = 15000,
---     },
---     ["Fernando"] = {
---         ["coords"] = vector4(-458.22, -2266.08, 8.52, 290.63),
---         ["TradeItem"] = "usb_blue",
---         ["laptop"] = "laptop_blue",
---         ["price"] = 30000,
---     },
---     ["Rico"] = {
---         ["coords"] = vector4(1689.93, 3581.6, 35.62, 216.85),
---         ["TradeItem"] = "usb_red",
---         ["laptop"] = "laptop_red",
---         ["price"] = 45000,
---     },
---     ["Gustavo"] = {
---         ["coords"] = vector4(-1423.84, 6760.71, 5.88, 90.47),
---         ["TradeItem"] = "usb_gold",
---         ["laptop"] = "laptop_gold",
---         ["price"] = 60000,
---     },
---     ["Fisher"] = {
---         ["coords"] = vector4(1470.19, 6550.24, 14.9, 92.8),
---         ["TradeItem"] = "usb_pink",
---         ["laptop"] = "laptop_pink",
---         ["price"] = 60000,
---     },
--- }
+Config.LaptopLocations = {
+    ["Hunter"] = {
+        ["coords"] = vector4(347.78, -1255.41, 32.7, 326.1),
+        ["TradeItem"] = "usb_green",
+        ["laptop"] = "laptop_green",
+        ["price"] = 5000,
+    },
+    ["Fernando"] = {
+        ["coords"] = vector4(-458.22, -2266.08, 8.52, 290.63),
+        ["TradeItem"] = "usb_blue",
+        ["laptop"] = "laptop_blue",
+        ["price"] = 10000,
+    },
+    ["Rico"] = {
+        ["coords"] = vector4(1689.93, 3581.6, 35.62, 216.85),
+        ["TradeItem"] = "usb_red",
+        ["laptop"] = "laptop_red",
+        ["price"] = 20000,
+    },
+    ["Gustavo"] = {
+        ["coords"] = vector4(-1423.84, 6760.71, 5.88, 90.47),
+        ["TradeItem"] = "usb_gold",
+        ["laptop"] = "laptop_gold",
+        ["price"] = 30000,
+    },
+}
 ---- NOTIFY SUPPORTING MULTIPLE LANGUAGES ----
 Config.Notify = { -- Don't change the ["Text"] only change the text on the RIGHT SIDE
     -- POLICE NOTIS
@@ -321,6 +363,7 @@ Config.Notify = { -- Don't change the ["Text"] only change the text on the RIGHT
     ["BankCoolDown"] = "The security lock is active, opening the door is currently not possible..",
     ["HackerSuccess"] = "You cracked the security system...",
     ["DoorSeemsUnlocked"] = "The thermite has disabled a lock",
+    ["DrawerSeemsUnlocked"] = "The hacks seems to have opened a desk draw...",
     ["DoorMinutes"] = "Bank Door opens in ",
     ["DoorSecondHalf"] = " Seconds",
     ["MissingDrill"] = "You don't have anything to open this with...",
@@ -331,12 +374,13 @@ Config.Notify = { -- Don't change the ["Text"] only change the text on the RIGHT
     ["BankOpen"] = "Bank Security is activated...",
     ["DoorIsOpen"] = "The Door is already open...",
     ["MissingExplosive"] = "Something seems wrong...",
-    ["BombExplodes"] = "C4 will explode in 30 seconds!",
+    ["BombExplodes"] = "C4 will explode in 5 seconds!",
 
     -- Thermite Notis
     ["PlacingThermite"] = "Placing Thermite...",
     ["MissingThermite"] = "This dosn't seem right...",
     ["AlreadyExploded"] = "This dosn't seem right...",
+    ["PowerOff"] = "The Power is off",
     ["PowerStillOn"] = "Electricity still running...",
 
     -- Item // server side notify
@@ -345,6 +389,7 @@ Config.Notify = { -- Don't change the ["Text"] only change the text on the RIGHT
     ["GoldBars"] = " Gold Bars",
     ["Diamonds"] = " Diamonds",
     ["found"] = "You found ",
+    ["VaultCracker"] = " Vault Gate Cracker",
 
     -- Drill Overheated
     ["DrillBroke"] = "The Drill overheated and broke!",
@@ -568,8 +613,10 @@ Config.PaletoBank = {
 
 
 Config.PacificBank = {
-    ["coords"] = vector4(236.82, 231.73, 97.12, 75.63),  -- Coordinates of the Banks
-    ["harddrivehack"] = vector4(247.19, 233.34, 97.12, 342.18),
+    ["coords"] = vector4(242.06, 218.95, 97.12, 161.17),  -- Coordinates of the red laptop hack
+    ["vaultcoords"] = vector4(237.16, 231.33, 97.12, 69.5), --cords of the vault
+    ["harddrivehack"] = vector4(247.19, 233.34, 97.12, 342.18), --coords of the harddrive hack
+    ["lowervaultgates"] = vector4(228.05, 228.69, 97.12, 160.89), --cords of the pannel for the vault gates
     ["isOpened"] = false,
     ["isVaultOpened"] = false,
     ["object"] = 961976194,
@@ -585,11 +632,13 @@ Config.PacificBank = {
 
     },
     ["drills"] = { -- drill points
-        {coords = vector3(244.37, 212.25, 97.12), rotation = vector3(0.0, 0.0, 252.69), loot = false},
-        {coords = vector3(241.56, 210.08, 97.12), rotation = vector3(0.0, 0.0, 163.96), loot = false},
-        {coords = vector3(240.22, 212.98, 97.12), rotation = vector3(0.0, 0.0, 77.49), loot = false},
-        {coords = vector3(253.1, 236.46, 97.12), rotation = vector3(0.0, 0.0, 248.6), loot = false},
-        {coords = vector3(248.81, 236.58, 97.12), rotation = vector3(0.0, 0.0, 75.59), loot = false},
+        {coords = vector3(244.37, 212.25, 97.12), rotation = vector3(0.0, 0.0, 252.69), loot = false, vaultdrill = false},
+        {coords = vector3(241.56, 210.08, 97.12), rotation = vector3(0.0, 0.0, 163.96), loot = false, vaultdrill = false},
+        {coords = vector3(240.22, 212.98, 97.12), rotation = vector3(0.0, 0.0, 77.49), loot = false, vaultdrill = false},
+        {coords = vector3(253.1, 236.46, 97.12), rotation = vector3(0.0, 0.0, 248.6), loot = false, vaultdrill = false},
+        {coords = vector3(248.81, 236.58, 97.12), rotation = vector3(0.0, 0.0, 75.59), loot = false, vaultdrill = false},
+        {coords = vector3(225.79, 230.13, 97.12), rotation = vector3(0.0, 0.0, 73.17), loot = false, vaultdrill = true},
+        {coords = vector3(226.37, 231.65, 97.12), rotation = vector3(0.0, 0.0, 70.04), loot = false, vaultdrill = true},
         
     },
     ["officedrill"] = {
@@ -606,6 +655,13 @@ Config.PacificBank = {
         {coords = vector3(252.5, 240.54, 96.12), heading = 157.24, loot = false},
         {coords = vector3(227.57, 234.95, 96.12), heading = 252.52, loot = false}, 
         {coords = vector3(232.2, 233.24, 96.12), heading = 65.77, loot = false},
+        {coords = vector3(225.79, 225.87, 96.12), heading = 342.46, loot = false},
+        {coords = vector3(224.58, 226.35, 96.12), heading = 342.24, loot = false},
+        {coords = vector3(227.66, 225.08, 96.12), heading = 340.48, loot = false},
+        {coords = vector3(228.85, 224.76, 96.12), heading = 337.09, loot = false},
+        {coords = vector3(226.95, 233.32, 96.12), heading = 254.54, loot = false},
+        {coords = vector3(226.77, 227.1, 96.12), heading = 71.47, loot = false},
+        {coords = vector3(227.86, 226.64, 96.12), heading = 248.8, loot = false},
         
     },
     ["thermite"] = { -- Thermite points
@@ -617,12 +673,19 @@ Config.PacificBank = {
         memorygame = {correctBlocks = 1, incorrectBlocks = 2, timeToShow = 4, timeToLose = 8}, completed = false},
         --memory game field controls the difficulty of each door in the bank
     },
-    ["hacktype"] = {
+    ["hacktype"] = { --locations of the upper floor office hacks and the type of hack they show
         {coords = vector4(270.37, 231.65, 110.09, 170), completed = false, hack = 'var'},
         {coords = vector4(261.7, 234.82, 110.09, 170), completed = false, hack = 'var'},
         {coords = vector4(251.85, 208.63, 110.09, 350), completed = false, hack = 'counting'},
         {coords = vector4(260.52, 205.45, 110.09, 350), completed = false, hack = 'counting'},
     },
+    ["firstfloorhacks"] = { --locations of the upper floor office hacks and the type of hack they show
+        {coords = vector4(270.37, 231.65, 106.23, 170), completed = false, hack = 'var'},
+        {coords = vector4(261.7, 234.82, 106.23, 170), completed = false, hack = 'untangle'},
+        {coords = vector4(251.85, 208.63, 106.23, 350), completed = false, hack = 'lightsout'},
+        {coords = vector4(260.52, 205.45, 106.23, 350), completed = false, hack = 'counting'},
+    },
+
 }
 
 Config.lowerVault = {
@@ -689,17 +752,17 @@ Config.lowerVault = {
 
 -- This can be customized to however you'd like!
 
-Config.PowerPlantLocations = 1 -- Change this if you change the powerplant locations amount
+Config.PowerPlantLocations = 6 -- Change this if you change the powerplant locations amount
 
 Config.PowerPlant = {
     ["locations"] = {
-        -- {coords = vector4(2831.17, 1489.19, 24.73, 165.19), open = false},
-        -- {coords = vector4(2825.2422, 1490.5781, 24.7287, 164.2826), open = false},
-        -- {coords = vector4(2817.6945, 1499.2111, 24.7288, 344.5275), open = false},
-        -- {coords = vector4(2811.8256, 1500.7874, 24.7288, 346.8244), open = false},
-        -- {coords = vector4(2829.3327, 1507.0774, 24.7287, 167.7297), open = false},
-        -- {coords = vector4(2835.2323, 1505.6520, 24.7287, 165.2132), open = false},
-        {coords = vector4(253.21, 284.47, 105.53, 256.25), open = false},
+        {coords = vector4(2831.17, 1489.19, 24.73, 165.19), open = false},
+        {coords = vector4(2825.2422, 1490.5781, 24.7287, 164.2826), open = false},
+        {coords = vector4(2817.6945, 1499.2111, 24.7288, 344.5275), open = false},
+        {coords = vector4(2811.8256, 1500.7874, 24.7288, 346.8244), open = false},
+        {coords = vector4(2829.3327, 1507.0774, 24.7287, 167.7297), open = false},
+        {coords = vector4(2835.2323, 1505.6520, 24.7287, 165.2132), open = false},
+        -- {coords = vector4(253.21, 284.47, 105.53, 256.25), open = false},
     },
 }
 
@@ -731,6 +794,12 @@ function Config.DoorlockAction(type, setLocked)
         Config.PacificBank['thermite'][1].completed = false
         Config.PacificBank['thermite'][2].completed = false
         Config.PacificBank['thermite'][3].completed = false
+
+        Config.PacificBank['firstfloorhacks'][1].completed = false
+        Config.PacificBank['firstfloorhacks'][2].completed = false
+        Config.PacificBank['firstfloorhacks'][3].completed = false
+        Config.PacificBank['firstfloorhacks'][4].completed = false
+        
     end
 end
 
