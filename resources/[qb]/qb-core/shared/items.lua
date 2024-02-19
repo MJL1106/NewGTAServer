@@ -771,5 +771,9 @@ QBShared.Items = {
 	 ['nightvision'] 				 = {['name'] = 'nightvision', 					['label'] = 'Nightvision', 				['weight'] = 1200, 		['type'] = 'item', 		['image'] = 'nightvision.png', 			['unique'] = false, 	['useable'] = true, 	['shouldClose'] = false,   ['combinable'] = nil,   ['description'] = 'Realy nice for when its dark.'},
 	 ['vault_gate_cracker'] 				 	 = {['name'] = 'vault_gate_cracker', 			  	  	['label'] = 'Vault Gate Cracker', 				['weight'] = 0, 		['type'] = 'item', 		['image'] = 'usb_device.png', 			['unique'] = false, 	['useable'] = false, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'Handy software to shut down some systems'},
 
+	 -- BOOSTING ITEMS
+	 ['boostingtablet'] = { ['name'] = 'boostingtablet', ['label'] = 'Boosting tablet', ['weight'] = 1000, ['type'] = 'item', ['image'] = 'boostingtablet.png', ['unique'] = true, ['useable'] = true, ['shouldClose'] = true, ['combinable'] = nil, ['description'] = "Seems like something's installed on this."},
+	['hackingdevice'] = { ['name'] = 'hackingdevice', ['label'] = 'Hacking device', ['weight'] = 1000, ['type'] = 'item', ['image'] = 'hackingdevice.png', ['unique'] = true, ['useable'] = true, ['shouldClose'] = true, ['combinable'] = nil, ['description'] = 'Will allow you to bypass vehicle security systems.' },
+	['gpshackingdevice'] = { ['name'] = 'gpshackingdevice', ['label'] = 'GPS hacking device', ['weight'] = 1000, ['type'] = 'item', ['image'] = 'gpshackingdevice.png', ['unique'] = true, ['useable'] = true, ['shouldClose'] = true, ['combinable'] = nil, ['description'] = 'If you wish to disable vehicle GPS systems.' },
 
 }

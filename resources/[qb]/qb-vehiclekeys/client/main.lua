@@ -563,6 +563,17 @@ function LockpickDoor(isAdvanced)
     if #(pos - GetEntityCoords(vehicle)) > 2.5 then return end
     if GetVehicleDoorLockStatus(vehicle) <= 0 then return end
 
+    local boostingInfo = Entity(vehicle).state.boostingData
+    if boostingInfo ~= nil and ((not boostingInfo.groupIdentifiers and boostingInfo.cid ~= QBCore.Functions.GetPlayerData().citizenid) or (boostingInfo.groupIdentifiers and not boostingInfo.groupIdentifiers[QBCore.Functions.GetPlayerData().citizenid])) then
+        QBCore.Functions.Notify('This vehicle is not meant for you!', 'error')
+        return
+    end
+
+    if boostingInfo ~= nil and boostingInfo.advancedSystem then
+        QBCore.Functions.Notify('This vehicle requires more advanced systems!', 'error')
+        return
+    end
+
     usingAdvanced = isAdvanced
     Config.LockPickDoorEvent()
 end
@@ -754,4 +765,8 @@ end)
 RegisterNUICallback('engine', function()
     ToggleEngine(GetVehicle())
 	SetNuiFocus(false, false)
+end)
+
+AddEventHandler('qb-vehiclekeys:client:setLastPickedVehicle', function(vehicle)
+    lastPickedVehicle = vehicle
 end)

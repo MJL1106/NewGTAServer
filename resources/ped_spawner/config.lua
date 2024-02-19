@@ -107,15 +107,20 @@ Config.PedList = {
 	    isRendered = false,
         ped = nil,
     },
+
+
+		----------------------------------------
+	---         Boosting Tablet spawn ped           ---
+	----------------------------------------
 	
-	-- {
-	-- 	model = "mp_m_shopkeep_01",
-	-- 	coords = vector3(2678.1499023438,3279.2724609375,55.241111755371), --SONORA FWY EAST
-	-- 	heading = 320.0, 
-	-- 	gender = "male", 
-	--     isRendered = false,
-    --     ped = nil,
-    -- },
+	{
+		model = "a_m_m_afriamer_01",
+		coords = vector3(-1361.64, -758.64, 22.5), --SONORA FWY EAST
+		heading = 312.54, 
+		gender = "male", 
+	    isRendered = false,
+        ped = nil,
+    },
 	
 	-- {
 	-- 	model = "mp_m_shopkeep_01",
