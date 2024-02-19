@@ -300,25 +300,25 @@ Config.LaptopUses = 3
 ---- LAPTOP LOCATIONS ----
 Config.LaptopLocations = {
     ["Hunter"] = {
-        ["coords"] = vector4(347.78, -1255.41, 32.7, 326.1),
+        ["coords"] = vector4(1444.58, 6334.66, 23.8, 134.1),
         ["TradeItem"] = "usb_green",
         ["laptop"] = "laptop_green",
         ["price"] = 5000,
     },
     ["Fernando"] = {
-        ["coords"] = vector4(-458.22, -2266.08, 8.52, 290.63),
+        ["coords"] = vector4(1444.63, 6331.95, 23.9, 48.97),
         ["TradeItem"] = "usb_blue",
         ["laptop"] = "laptop_blue",
         ["price"] = 10000,
     },
     ["Rico"] = {
-        ["coords"] = vector4(1689.93, 3581.6, 35.62, 216.85),
+        ["coords"] = vector4(-1237.86, -909.83, 2.15, 166.53),
         ["TradeItem"] = "usb_red",
         ["laptop"] = "laptop_red",
         ["price"] = 20000,
     },
     ["Gustavo"] = {
-        ["coords"] = vector4(-1423.84, 6760.71, 5.88, 90.47),
+        ["coords"] = vector4(-96.8, -821.74, 44.04, 43.35),
         ["TradeItem"] = "usb_gold",
         ["laptop"] = "laptop_gold",
         ["price"] = 30000,
@@ -396,6 +396,10 @@ Config.Notify = { -- Don't change the ["Text"] only change the text on the RIGHT
 
     ["NotEnoughCash"] = "You don't have enough cash",
     ["NothingToOffer"] = "You don't have anything to offer!",
+    ["MissingGreen"] = "You are missing a green usb",
+    ["MissingBlue"] = "You are missing a blue usb",
+    ["MissingRed"] = "You are missing a red usb",
+    ["MissingGold"] = "You are missing a gold usb",
 }
 ---- BANK LOCATIONS ----
 

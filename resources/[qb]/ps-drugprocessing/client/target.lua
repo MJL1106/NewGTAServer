@@ -1,62 +1,61 @@
 local QBCore = exports['qb-core']:GetCoreObject()
 
 CreateThread(function()
-    exports['qb-target']:SpawnPed({
-        model = 'a_m_m_hillbilly_02',
-        coords = vector4(-1187.73, -445.27, 43.91, 289.45), 
-        minusOne = true, 
-        freeze = true, 
-        invincible = true, 
-        blockevents = true,
-        target = { 
-            options = {
-                {
-					type = "client",
-					event = "ps-drugprocessing:EnterLab",
-					icon = "fas fa-atom",
-					label = Lang:t("target.talk_to_walter"),
-                }
+    exports["qb-target"]:AddBoxZone("Meth", vector3(-1187.73, -445.27, 43.91), 1.65, 2.4, {
+        name = "Meth",
+        heading = 289.45,
+        debugPoly = false,
+        minZ = 43.3,
+        maxZ = 44.91,
+    }, {
+        options = {
+            {
+                type = "client",
+                event = "ps-drugprocessing:EnterLab",
+                icon = "fas fa-key",
+                label = Lang:t("target.talk_to_walter"),
+                --job = "pawnshop", -- Remove this line if you do not want a job check.
             },
-          distance = 2.5,
         },
+    distance = 2.5
     })
-    exports['qb-target']:SpawnPed({
-        model = 'a_m_m_mlcrisis_01',
-        coords = vector4(812.49, -2399.59, 23.66, 223.1), 
-        minusOne = true, 
-        freeze = true, 
-        invincible = true, 
-        blockevents = true,
-        target = { 
-            options = {
-                {
-					type = "client",
-					event = "ps-drugprocessing:EnterCWarehouse",
-					icon = "fas fa-key",
-					label = Lang:t("target.talk_to_draco"),
-                }
+
+    exports["qb-target"]:AddBoxZone("Cocaine", vector3(812.49, -2399.59, 23.66), 1.65, 2.4, {
+        name = "Cocaine",
+        heading = 223.1,
+        debugPoly = false,
+        minZ = 23,
+        maxZ = 24,
+    }, {
+        options = {
+            {
+                type = "client",
+                event = "ps-drugprocessing:EnterCWarehouse",
+                icon = "fas fa-key",
+                label = Lang:t("target.talk_to_draco"),
+                --job = "pawnshop", -- Remove this line if you do not want a job check.
             },
-          distance = 2.5,
         },
+    distance = 2.5
     })
-    exports['qb-target']:SpawnPed({
-        model = 'mp_f_weed_01',
-        coords = vector4(102.07, 175.08, 104.59, 159.91),
-        minusOne = true, 
-        freeze = true, 
-        invincible = true, 
-        blockevents = true,
-        target = { 
-            options = {
-                {
-					type = "client",
-					event = "ps-drugprocessing:EnterWWarehouse",
-					icon = "fas fa-key",
-					label = Lang:t("target.talk_to_charlotte"),
-                }
+
+    exports["qb-target"]:AddBoxZone("Weed", vector3(102.07, 175.08, 104.59), 1.65, 2.4, {
+        name = "Weed",
+        heading = 159.91,
+        debugPoly = false,
+        minZ = 104,
+        maxZ = 105,
+    }, {
+        options = {
+            {
+                type = "client",
+                event = "ps-drugprocessing:EnterWWarehouse",
+                icon = "fas fa-key",
+                label = Lang:t("target.talk_to_charlotte"),
+                --job = "pawnshop", -- Remove this line if you do not want a job check.
             },
-          distance = 2.5,
         },
+    distance = 2.5
     })
 end)
 
