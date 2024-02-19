@@ -237,16 +237,7 @@ Config.BlacklistedPeds = {
 
 Config.HolsterVariant = {130,122,3,6,8}
 Config.HolsterableWeapons = {
-    --'WEAPON_STUNGUN',
-    'WEAPON_PISTOL',
-    'WEAPON_PISTOL_MK2',
-    'WEAPON_COMBATPISTOL',
-    'WEAPON_APPISTOL',
-    'WEAPON_PISTOL50',
-    'WEAPON_REVOLVER',
-    'WEAPON_SNSPISTOL',
-    'WEAPON_HEAVYPISTOL',
-    'WEAPON_VINTAGEPISTOL'
+    'WEAPON_STUNGUN',   
 }
 
 Config.Objects = { -- for object removal
@@ -297,7 +288,7 @@ Config.Teleports = {
 
 }
 
-Config.DefaultPrice = 20 -- Default price for the carwash
+Config.DefaultPrice = 50 -- Default price for the carwash
 Config.DirtLevel = 0.1 -- Threshold for the dirt level to be counted as dirty
 Config.CarWash = { -- carwash
     [1] = {

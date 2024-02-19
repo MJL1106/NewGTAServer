@@ -42,27 +42,27 @@ local rifles = {
 }
 
 local pistols = {
-    ["weapon_pistol"] = "w_pi_pistol",
-    ["weapon_combatpistol"] = "w_pi_combatpistol",
-    ["weapon_appistol"] = "w_pi_appistol",
-    ["weapon_pistol50"] = "w_pi_pistol50",
-    ["weapon_snspistol"] = "w_pi_sns_pistol",
-    ["weapon_heavypistol"] = "w_pi_heavypistol",
-    ["weapon_vintagepistol"] = "w_pi_vintage_pistol",
-    ["weapon_revolver"] = "w_pi_revolver",
-    ["weapon_doubleaction"] = "w_pi_doubleaction",
+    ---["weapon_pistol"] = "w_pi_pistol",
+    ---["weapon_combatpistol"] = "w_pi_combatpistol",
+    ---["weapon_appistol"] = "w_pi_appistol",
+    ---["weapon_pistol50"] = "w_pi_pistol50",
+    ---["weapon_snspistol"] = "w_pi_sns_pistol",
+    ---["weapon_heavypistol"] = "w_pi_heavypistol",
+    ---["weapon_vintagepistol"] = "w_pi_vintage_pistol",
+    ---["weapon_revolver"] = "w_pi_revolver",
+    ---["weapon_doubleaction"] = "w_pi_doubleaction",
 }
 
 local melee = {
-    ["weapon_knife"] ="prop_w_me_knife_01",
+    ---["weapon_knife"] ="prop_w_me_knife_01",
     ["weapon_nightstick"] = "w_me_nightstick",
-    ["weapon_dagger"] = "w_me_dagger",
+    ---["weapon_dagger"] = "w_me_dagger",
 }
 
 local meleelarge = {
-    ["weapon_bat"] = "w_me_bat",
-    ["weapon_golfclub"] = "w_me_gclub",
-    ["weapon_crowbar"] = "w_me_crowbar",
+    -----["weapon_bat"] = "w_me_bat",
+    -----["weapon_golfclub"] = "w_me_gclub",
+    -----["weapon_crowbar"] = "w_me_crowbar",
     ["weapon_katana"] = "w_me_katana",
 }
 
