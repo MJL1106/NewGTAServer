@@ -152,8 +152,8 @@ exports['qb-target']:AddBoxZone("magnetbreakdown",Config.MaterialBreakdown ,1.5,
 		name = "magnetbreakdown",
 		heading = 11.0,
 		debugPoly = false,
-		minZ = Config.MaterialBreakdown-2,
-		maxZ = Config.MaterialBreakdown+2,
+		minZ = Config.MaterialBreakdown.z-2,
+		maxZ = Config.MaterialBreakdown.z+2,
 	}, {
 			options = {
 				{

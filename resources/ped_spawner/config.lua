@@ -93,14 +93,20 @@ Config.PedList = {
         ped = nil,
     },
 	
-	-- {
-	-- 	model = "mp_m_shopkeep_01",
-	-- 	coords = vector3(1698.0328369141,4922.8530273438,42.063625335693), --GRAPESEED MAIN ST
-	-- 	heading = 320.0, 
-	-- 	gender = "male", 
-	--     isRendered = false,
-    --     ped = nil,
-    -- },
+	----------------------------------------
+	---         Taxi spawn ped           ---
+	----------------------------------------
+
+	{
+		model = "a_m_m_indian_01", --The model name. See above for the URL of the list.
+		coords = vector3(901.34, -170.06, 74.08), --HAIR ON HAWICK AVE
+		heading = 228.81, --Must be a float value. This means it needs a decimal and a number after the decimal.
+		gender = "male", --Use male or female
+		animDict = "abigail_mcs_1_concat-0", --The animation dictionary. Optional. Comment out or delete if not using.
+		animName = "csb_abigail_dual-0", --The animation name. Optional. Comment out or delete if not using.
+	    isRendered = false,
+        ped = nil,
+    },
 	
 	-- {
 	-- 	model = "mp_m_shopkeep_01",

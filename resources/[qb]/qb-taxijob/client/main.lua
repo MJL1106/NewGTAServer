@@ -554,33 +554,27 @@ end)
 -- setup qb-target
 function setupTarget()
     CreateThread(function()
-        exports['qb-target']:SpawnPed({
-            model = 'a_m_m_indian_01',
-            coords = vector4(901.34, -170.06, 74.08, 228.81),
-            minusOne = true,
-            freeze = true,
-            invincible = true,
-            blockevents = true,
-            animDict = 'abigail_mcs_1_concat-0',
-            anim = 'csb_abigail_dual-0',
-            flag = 1,
-            scenario = 'WORLD_HUMAN_AA_COFFEE',
-            target = {
-                options = {
-                    {
-                        type = "client",
-                        event = "qb-taxijob:client:requestcab",
-                        icon = "fas fa-sign-in-alt",
-                        label = '🚕 Request Taxi Cab',
-                        job = "taxi",
-                    }
+        exports["qb-target"]:AddBoxZone("TaxiJob", vector3(901.34, -170.06, 74.08), 1.65, 2.4, {
+            name = "TaxiJob",
+            heading = 228.81,
+            debugPoly = false,
+            minZ = 73.58,
+            maxZ = 74.58,
+        }, {
+            options = {
+                {
+                    type = "client",
+                    event = "qb-taxijob:client:requestcab",
+                    icon = "fas fa-sign-in-alt",
+                    label = '🚕 Request Taxi Cab',
+                    job = "taxi", 
                 },
-            distance = 2.5,
             },
-            spawnNow = true,
-            currentpednumber = 0,
-          })
+        distance = 2.5
+        })
+
     end)
+
 end
 
 local zone
