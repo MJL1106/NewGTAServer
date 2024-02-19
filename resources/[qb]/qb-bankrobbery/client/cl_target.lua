@@ -1318,7 +1318,7 @@ CreateThread(function()
                         type = 'client',
                         event = 'qb-bankrobbery:PedTrading:Hunter',
                         icon = 'fas fa-cookie',
-                        label = 'Talk to Hunter',
+                        label = 'Talk to Hunter Biden',
                     }
                 },
                 distance = 1.5,

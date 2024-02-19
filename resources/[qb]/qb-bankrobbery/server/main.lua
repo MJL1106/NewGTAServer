@@ -874,6 +874,17 @@ RegisterServerEvent('qb-bankrobbery:server:BuyLaptop', function(name)
     local Player = QBCore.Functions.GetPlayer(source)
     local item = Config.LaptopLocations[name]['TradeItem']
     local laptop = Config.LaptopLocations[name]['laptop']
+    local itemToPrint = ''
+
+    if item == 'usb_green' then
+        itemToPrint = 'Green Usb'
+    elseif item == 'usb_blue' then
+        itemToPrint = 'Blue Usb'
+    elseif item == 'usb_red' then
+        itemToPrint = 'Red Usb'
+    else
+        itemToPrint = 'Gold Usb'
+    end
 
     info = {  
         uses = Config.LaptopUses,
@@ -891,7 +902,7 @@ RegisterServerEvent('qb-bankrobbery:server:BuyLaptop', function(name)
             TriggerClientEvent('QBCore:Notify', source, "You don't have enough cash", 'error', 3000)
         end
     else
-        TriggerClientEvent('QBCore:Notify', source, "You don't have anything to offer", 'error', 3000)
+        TriggerClientEvent('QBCore:Notify', source, "You are missing a ".. itemToPrint, 'error', 3000)
     end
 end)
 
