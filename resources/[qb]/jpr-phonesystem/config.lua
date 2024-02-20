@@ -33,7 +33,7 @@ Config.CustomEventsFramework = false -- set true if you use exports[Config.CoreN
 Config.PhoneItems = {"phone", "phone_white", "phone_gold", "phone_red", "phone_blue", "phone_green", "phone_pink", "phone_greenLight"}
 Config.AnimationLib = 'cellphone@'
 Config.AnimationLibCar = 'anim@cellphone@in_car@ps'
-Config.WalkWithCamera = false
+Config.WalkWithCamera = true
 
 Config.PhotoWebhook = "https://discord.com/api/webhooks/1013060271574622278/-i1aqLpOPUtvF5gLmCY6Exaki1jKSgVZKBP_BaP25QkxSnEPRUSHxklRjK2sUGMUyGMm"
 
@@ -314,7 +314,7 @@ Config.CinemaJob = "police"
 Config.GarageNPCModel = "s_m_y_valet_01"
 Config.GarageMaxSpawnRange = 100
 Config.FuelScript = "LegacyFuel" --- script name
-Config.DoCarDamageValet = true
+Config.DoCarDamageValet = false
 Config.ValetPrice = 400
 Config.ImpoundState = 2
 

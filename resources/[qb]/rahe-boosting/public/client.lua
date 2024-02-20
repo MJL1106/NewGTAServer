@@ -11,6 +11,7 @@ function spawnBoostVehicle(contract)
     SetVehicleEngineOn(vehicle, false, false)
     SetVehicleOnGroundProperly(vehicle)
     SetVehicleNumberPlateText(vehicle, contract.licensePlate)
+    exports['LegacyFuel']:SetFuel(vehicle, 100.0)
 
     activeVehicle = vehicle
 

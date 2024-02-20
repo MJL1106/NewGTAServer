@@ -1061,7 +1061,7 @@ CreateThread(function()
         garageZones[#garageZones+1] = BoxZone:Create(
             vector3(v.x, v.y, v.z), 3, 3, {
             name="box_zone",
-            debugPoly = false,
+            debugPoly = true,
             minZ = v.z - 1,
             maxZ = v.z + 1,
         })

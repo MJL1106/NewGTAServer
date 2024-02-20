@@ -336,33 +336,33 @@ Config.Locations = {
         }
     },
 
-    ['MRPD'] = {
-        settings = {
-            label = 'MRPD Motorworks',
-            welcomeLabel = "Welcome to MRPD Motorworks!",
-            enabled = false,
-        },
-        categories = {
-            repair = true,
-            respray = true,
-            liveries = true,
-            tint = true,
-            extras = true,
-            plate = true,
-            cosmetics = true,
-        },
-        drawtextui = {
-            text = "MRPD Motorworks",
-        },
-        restrictions = {
-            job = { 'police', 'bcso', 'sasp' },
-            allowedClasses = { 18 },
-        },
-        zones = {
-            { coords = vector3(450.09, -975.92, 25.7), length = 9.0, width = 4.0, heading = 90.0, minZ = 24.5, maxZ = 28.5 },
-            { coords = vector3(435.53, -975.97, 25.7), length = 9.0, width = 4.0, heading = 90.0, minZ = 24.5, maxZ = 28.5 },
-        }
-    },
+    -- ['MRPD'] = {
+    --     settings = {
+    --         label = 'MRPD Motorworks',
+    --         welcomeLabel = "Welcome to MRPD Motorworks!",
+    --         enabled = false,
+    --     },
+    --     categories = {
+    --         repair = true,
+    --         respray = true,
+    --         liveries = true,
+    --         tint = true,
+    --         extras = true,
+    --         plate = true,
+    --         cosmetics = true,
+    --     },
+    --     drawtextui = {
+    --         text = "MRPD Motorworks",
+    --     },
+    --     restrictions = {
+    --         job = { 'police', 'bcso', 'sasp' },
+    --         allowedClasses = { 18 },
+    --     },
+    --     zones = {
+    --         { coords = vector3(450.09, -975.92, 25.7), length = 9.0, width = 4.0, heading = 90.0, minZ = 24.5, maxZ = 28.5 },
+    --         { coords = vector3(435.53, -975.97, 25.7), length = 9.0, width = 4.0, heading = 90.0, minZ = 24.5, maxZ = 28.5 },
+    --     }
+    -- },
 
     ['Pillbox'] = {
         settings = {
