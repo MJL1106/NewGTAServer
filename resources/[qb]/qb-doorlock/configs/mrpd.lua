@@ -601,3 +601,31 @@ Config.DoorList['MRPD--ObserveRoom2'] = {
     doorType = 'door',
     objName = -1406685646,
 }
+
+-- -1635161509 created by MJL
+Config.DoorList['MRPD--BollardsRight'] = {
+    distance = 4,
+    objYaw = 270.0,
+    fixText = false,
+    doorLabel = 'BollardsRight',
+    objCoords = vec3(410.025787, -1028.318970, 28.418146),
+    doorRate = 1.0,
+    objName = -1635161509,
+    doorType = 'sliding',
+    locked = true,
+    authorizedJobs = { ['police'] = 0 },
+}
+
+-- -1868050792 created by MJL
+Config.DoorList['MRPD--1868050792'] = {
+    objYaw = 269.99862670898,
+    doorLabel = 'BollardLeft',
+    fixText = false,
+    distance = 4,
+    objCoords = vec3(410.025787, -1020.156555, 28.401999),
+    authorizedJobs = { ['police'] = 0 },
+    objName = -1868050792,
+    doorType = 'sliding',
+    locked = true,
+    doorRate = 1.0,
+}
