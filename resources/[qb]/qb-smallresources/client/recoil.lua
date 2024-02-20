@@ -5,7 +5,7 @@ local recoils = {
     [`weapon_combatpistol`] = 0.8,
     [`weapon_appistol`] = 1.1,
     [`weapon_stungun`] = 0.1,
-    [`weapon_pistol50`] = 0.9,
+    [`weapon_pistol50`] = 1.8,
     [`weapon_snspistol`] = 0.6,
     [`weapon_heavypistol`] = 0.6,
     [`weapon_vintagepistol`] = 0.6,
@@ -22,8 +22,8 @@ local recoils = {
     [`weapon_pistolxm3`] = 0.4,
 
     -- Submachine Guns
-    [`weapon_microsmg`] = 2.9,
-    [`weapon_smg`] = 3.3,
+    [`weapon_microsmg`] = 1.9,
+    [`weapon_smg`] = 1.8,
     [`weapon_smg_mk2`] = 1.3,
     [`weapon_assaultsmg`] = 1.3,
     [`weapon_combatpdw`] = 1.3,
@@ -45,7 +45,7 @@ local recoils = {
     [`weapon_combatshotgun`] = 0.0,
 
     -- Assault Rifles
-    [`weapon_assaultrifle`] = 2.9,
+    [`weapon_assaultrifle`] = 23.5,
     [`weapon_assaultrifle_mk2`] = 2.9,
     [`weapon_carbinerifle`] = 2.9,
     [`weapon_carbinerifle_mk2`] = 3.3,

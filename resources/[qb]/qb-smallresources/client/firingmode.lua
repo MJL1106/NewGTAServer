@@ -7,7 +7,7 @@ CodeStudio = {
     },
     KeyBinds = {
         Command = 'wep_mode',
-        Key = 'H',
+        Key = 'f',
         Info_Text = 'Change Weapon Mode'
     },
     Language = {
