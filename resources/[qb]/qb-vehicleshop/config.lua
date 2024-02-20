@@ -1,7 +1,7 @@
 Config = {}
 Config.UsingTarget = GetConvar('UseTarget', 'false') == 'true'
-Config.Commission = 0.02 -- Percent that goes to sales person from a full car sale 10%
-Config.FinanceCommission = 0.02 -- Percent that goes to sales person from a finance sale 5%
+Config.Commission = 0.05 -- Percent that goes to sales person from a full car sale 10%
+Config.FinanceCommission = 0.05 -- Percent that goes to sales person from a finance sale 5%
 Config.FinanceZone = vector3(-29.53, -1103.67, 26.42)-- Where the finance menu is located
 Config.PaymentWarning = 10 -- time in minutes that player has to make payment before repo
 Config.PaymentInterval = 24 -- time in hours between payment being due
@@ -34,49 +34,34 @@ Config.Shops = {
         ['TestDriveTimeLimit'] = 1.5, -- Time in minutes until the vehicle gets deleted
         ['Location'] = vector3(-45.67, -1098.34, 26.42), -- Blip Location
         ['ReturnLocation'] = vector3(-44.74, -1082.58, 26.68), -- Location to return vehicle, only enables if the vehicleshop has a job owned
-        ['VehicleSpawn'] = vector4(-56.79, -1109.85, 26.43, 71.5), -- Spawn location when vehicle is bought
-        ['TestDriveSpawn'] = vector4(-56.79, -1109.85, 26.43, 71.5), -- Spawn location for test drive
+        ['VehicleSpawn'] = vector4(-53.81, -1110.84, 26.67, 66.53), -- Spawn location when vehicle is bought
+        ['TestDriveSpawn'] = vector4(-23.6, -1094.8, 27.31, 339.12), -- Spawn location for test drive
         ['ShowroomVehicles'] = {
             [1] = {
-                coords = vector4(-45.65, -1093.66, 25.44, 69.5), -- where the vehicle will spawn on display
+                coords = vector4(-49.82, -1083.01, 27.3, 182.87), -- where the vehicle will spawn on display
                 defaultVehicle = 'adder', -- Default display vehicle
                 chosenVehicle = 'adder', -- Same as default but is dynamically changed when swapping vehicles
             },
             [2] = {
-                coords = vector4(-48.27, -1101.86, 25.44, 294.5),
+                coords = vector4(-47.6, -1091.75, 27.3, 105.58),
                 defaultVehicle = 'schafter2',
                 chosenVehicle = 'schafter2'
             },
             [3] = {
-                coords = vector4(-39.6, -1096.01, 25.44, 66.5),
+                coords = vector4(-55.46, -1097.01, 27.3, 267.78),
                 defaultVehicle = 'comet2',
                 chosenVehicle = 'comet2'
             },
             [4] = {
-                coords = vector4(-51.21, -1096.77, 25.44, 254.5),
+                coords = vector4(-43.14, -1101.78, 27.3, 320.62),
                 defaultVehicle = 'vigero',
                 chosenVehicle = 'vigero'
             },
             [5] = {
-                coords = vector4(-40.18, -1104.13, 25.44, 338.5),
+                coords = vector4(-36.42, -1093.44, 27.3, 46.09),
                 defaultVehicle = 't20',
                 chosenVehicle = 't20'
             },
-            [6] = {
-                coords = vector4(-43.31, -1099.02, 25.44, 52.5),
-                defaultVehicle = 'bati',
-                chosenVehicle = 'bati'
-            },
-            [7] = {
-                coords = vector4(-50.66, -1093.05, 25.44, 222.5),
-                defaultVehicle = 'bati',
-                chosenVehicle = 'bati'
-            },
-            [8] = {
-                coords = vector4(-44.28, -1102.47, 25.44, 298.5),
-                defaultVehicle = 'bati',
-                chosenVehicle = 'bati'
-            }
         },
     },
     ['luxury'] = {
