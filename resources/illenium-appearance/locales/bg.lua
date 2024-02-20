@@ -288,11 +288,11 @@ Locales["bg"] = {
         }
     },
     commands = {
-        reloadskin = {
+        refreshskin = {
             title = "Презареждане на вашият персонаж",
             failure = {
                 title = "Грешка",
-                description = "В момента не може да използвате reloadskin"
+                description = "В момента не може да използвате refreshskin"
             }
         },
         clearstuckprops = {

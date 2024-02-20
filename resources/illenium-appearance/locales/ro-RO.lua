@@ -288,11 +288,11 @@ Locales["ro-RO"] = {
         }
     },
     commands = {
-        reloadskin = {
+        refreshskin = {
             title = "Reîncarcă personajul",
             failure = {
                 title = "Eroare",
-                description = "Nu poți folosi reloadskin în acest moment"
+                description = "Nu poți folosi refreshskin în acest moment"
             }
         },
         clearstuckprops = {

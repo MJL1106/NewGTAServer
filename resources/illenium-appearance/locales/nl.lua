@@ -288,11 +288,11 @@ Locales["nl"] = {
         }
     },
     commands = {
-        reloadskin = {
+        refreshskin = {
             title = "Laadt je personage opnieuw",
             failure = {
                 title = "Fout",
-                description = "Je kunt reloadskin nu niet gebruiken"
+                description = "Je kunt refreshskin nu niet gebruiken"
             }
         },
         clearstuckprops = {

@@ -288,11 +288,11 @@ Locales["ar"] = {
         }
     },
     commands = {
-        reloadskin = {
+        refreshskin = {
             title = "يجعل شخصيتك تحميل مجدداً",
             failure = {
                 title = "خطأ",
-                description = "لا يمكنك استخدام reloadskin الآن"
+                description = "لا يمكنك استخدام refreshskin الآن"
             }
         },
         clearstuckprops = {

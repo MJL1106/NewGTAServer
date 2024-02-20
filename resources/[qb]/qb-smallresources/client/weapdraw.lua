@@ -72,7 +72,7 @@ local weapons = {
     'WEAPON_DOUBLEACTION',
 }
 
-local holstered = true
+local holstered = false
 local canFire = true
 local currWeapon = `WEAPON_UNARMED`
 local currentHolster = nil
