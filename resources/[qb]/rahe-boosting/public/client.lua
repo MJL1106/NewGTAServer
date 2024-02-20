@@ -7,7 +7,6 @@ function spawnBoostVehicle(contract)
         Wait(0)
     end
 
-    print(contract.pickUpLocation.x.." ".. contract.pickUpLocation.y.. " " .. contract.pickUpLocation.z)
     SetEntityHeading(vehicle, contract.pickUpLocation.h)
     SetVehicleEngineOn(vehicle, false, false)
     SetVehicleOnGroundProperly(vehicle)
