@@ -25,8 +25,6 @@ local Translations = {
         have_evidence_bag = 'You must have an empty evidence bag with you',
         no_driver_license = 'No drivers license',
         not_cuffed_dead = 'Civilian isn\'t cuffed or dead',
-        fine_yourself = 'You Cannot Fine Yourself',
-        not_online = "This person is not online"
     },
     success = {
         uncuffed = 'You have been uncuffed',
@@ -42,8 +40,7 @@ local Translations = {
         put_anklet_on = 'You put on an ankle tracker on %{firstname} %{lastname}',
         vehicle_flagged = 'Vehicle %{plate} has been flagged for %{reason}',
         impound_vehicle_removed = 'Vehicle taken out of impound!',
-        impounded = 'Vehicle impounded',
- },
+    },
     info = {
         mr = 'Mr.',
         mrs = 'Mrs.',
@@ -113,9 +110,7 @@ local Translations = {
         target_location = 'The location of %{firstname} %{lastname} is marked on your map',
         anklet_location = 'Anklet location',
         new_call = 'New Call',
-        officer_down = 'Officer %{lastname} | %{callsign} Down',
-        fine_issued = 'Fine has been issued to offender succesfully',
-        received_fine = 'State Debt Recovery has automatically recovered the fines owed...'
+        officer_down = 'Officer %{lastname} | %{callsign} Down'
     },
     evidence = {
         red_hands = 'Red hands',
@@ -177,7 +172,6 @@ local Translations = {
         message_sent = 'Message to be sent',
         civilian_call = 'Civilian Call',
         emergency_call = 'New 911 Call',
-        fine = 'Fine A Person'
     },
     progressbar = {
         blood_clear = 'Clearing Blood...',
@@ -185,11 +179,10 @@ local Translations = {
         robbing = 'Robbing Person...',
         place_object = 'Placing object..',
         remove_object = 'Removing object..',
-        impound = 'Impounding Vehicle..',
     },
 }
 
-Lang = Lang or Locale:new({
+Lang = Locale:new({
     phrases = Translations,
     warnOnMissing = true
 })
