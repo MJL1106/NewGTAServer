@@ -217,7 +217,7 @@ CreateThread(function() -- Gunpowder Status when shooting
     while true do
         Wait(1)
         local ped = PlayerPedId()
-        if IsPedShooting(ped) then
+        if IsPedShooting(ped) or IsPedDoingDriveby(ped) then
             local weapon = GetSelectedPedWeapon(ped)
             if not WhitelistedWeapon(weapon) then
                 shotAmount = shotAmount + 1
@@ -315,7 +315,7 @@ CreateThread(function()
     while true do
         Wait(10)
         if LocalPlayer.state.isLoggedIn then
-            if PlayerJob.name == 'police' and PlayerJob.onduty then
+            if PlayerJob.name == 'police' and onDuty then
                 if IsPlayerFreeAiming(PlayerId()) and GetSelectedPedWeapon(PlayerPedId()) == `WEAPON_FLASHLIGHT` then
                     if next(Casings) then
                         local pos = GetEntityCoords(PlayerPedId(), true)

@@ -122,32 +122,34 @@ Config.PedList = {
         ped = nil,
     },
 	
-	-- {
-	-- 	model = "mp_m_shopkeep_01",
-	-- 	coords = vector3(549.04553222656,2671.5649414062,42.156478881836), --HARMONY WEST
-	-- 	heading = 100.0, 
-	-- 	gender = "male", 
-	--     isRendered = false,
-    --     ped = nil,
-    -- },
+
+	-- POLICE MRPD PEDS
+	{
+		model = "ig_trafficwarden",
+		coords = vector3(436.72, -972.98, 25.7), --HARMONY WEST
+		heading = 181.9, 
+		gender = "male", 
+	    isRendered = false,
+        ped = nil,
+    },
 	
-	-- {
-	-- 	model = "mp_m_shopkeep_01",
-	-- 	coords = vector3(-3242.2836914062,999.92767333984,12.830716133118), --BARBARENO RD
-	-- 	heading = 10.0, 
-	-- 	gender = "male", 
-	--     isRendered = false,
-    --     ped = nil,
-    -- },
+	{
+		model = "ig_trafficwarden",
+		coords = vector3(467.31, -1026.99, 28.27), --BARBARENO RD
+		heading = 280.04, 
+		gender = "male", 
+	    isRendered = false,
+        ped = nil,
+    },
 	
-	-- {
-	-- 	model = "mp_m_shopkeep_01",
-	-- 	coords = vector3(-1819.2338867188,793.30694580078,138.08335876465), --RICHMAN GLEN
-	-- 	heading = 120.0, 
-	-- 	gender = "male", 
-	--     isRendered = false,
-    --     ped = nil,
-    -- },
+	{
+		model = "ig_trafficwarden",
+		coords = vector3(466.06, -1019.78, 28.08), --BARBARENO RD
+		heading = 91.81, 
+		gender = "male", 
+	    isRendered = false,
+        ped = nil,
+    },
 	
 	-- {
 	-- 	model = "mp_m_shopkeep_01",

@@ -4,6 +4,7 @@ isHandcuffed = false
 cuffType = 1
 isEscorted = false
 PlayerJob = {}
+onDuty = false
 local DutyBlips = {}
 
 -- Functions
@@ -42,7 +43,9 @@ end
 AddEventHandler('QBCore:Client:OnPlayerLoaded', function()
     local player = QBCore.Functions.GetPlayerData()
     PlayerJob = player.job
+    onDuty = player.job.onduty
     isHandcuffed = false
+    TriggerServerEvent("QBCore:Server:SetMetaData", "ishandcuffed", false)
     TriggerServerEvent("police:server:SetHandcuffStatus", false)
     TriggerServerEvent("police:server:UpdateBlips")
     TriggerServerEvent("police:server:UpdateCurrentCops")
@@ -85,7 +88,7 @@ RegisterNetEvent('QBCore:Client:OnPlayerUnload', function()
     TriggerServerEvent("police:server:UpdateCurrentCops")
     isHandcuffed = false
     isEscorted = false
-    PlayerJob = {}
+    onDuty = false
     ClearPedTasks(PlayerPedId())
     DetachEntity(PlayerPedId(), true, false)
     if DutyBlips then
@@ -96,18 +99,18 @@ RegisterNetEvent('QBCore:Client:OnPlayerUnload', function()
     end
 end)
 
-RegisterNetEvent("QBCore:Client:SetDuty", function(newDuty)
-    PlayerJob.onduty = newDuty
-end)
-
 RegisterNetEvent('QBCore:Client:OnJobUpdate', function(JobInfo)
     if JobInfo.name ~= "police" then
+        TriggerServerEvent("QBCore:ToggleDuty")
+        onDuty = false
         if DutyBlips then
             for _, v in pairs(DutyBlips) do
                 RemoveBlip(v)
             end
         end
         DutyBlips = {}
+    else
+        onDuty = true
     end
     PlayerJob = JobInfo
     TriggerServerEvent("police:server:UpdateBlips")
@@ -131,7 +134,7 @@ end)
 
 RegisterNetEvent('police:client:UpdateBlips', function(players)
     if PlayerJob and (PlayerJob.name == 'police' or PlayerJob.name == 'ambulance') and
-        PlayerJob.onduty then
+        onDuty then
         if DutyBlips then
             for _, v in pairs(DutyBlips) do
                 RemoveBlip(v)
@@ -197,10 +200,17 @@ end)
 
 RegisterNetEvent('police:client:SendPoliceEmergencyAlert', function()
     local Player = QBCore.Functions.GetPlayerData()
-    TriggerServerEvent('police:server:policeAlert', Lang:t('info.officer_down', {lastname = Player.charinfo.lastname, callsign = Player.metadata.callsign}))
-    TriggerServerEvent('hospital:server:ambulanceAlert', Lang:t('info.officer_down', {lastname = Player.charinfo.lastname, callsign = Player.metadata.callsign}))
+    --TriggerServerEvent('police:server:policeAlert', Lang:t('info.officer_down', {lastname = Player.charinfo.lastname, callsign = Player.metadata.callsign}))
+    --TriggerServerEvent('hospital:server:ambulanceAlert', Lang:t('info.officer_down', {lastname = Player.charinfo.lastname, callsign = Player.metadata.callsign}))
+    exports['ps-dispatch']:OfficerDown()
 end)
 
+RegisterNetEvent('police:client:SendPoliceEmergencyAlert2', function()
+    local Player = QBCore.Functions.GetPlayerData()
+    --TriggerServerEvent('police:server:policeAlert', Lang:t('info.officer_down', {lastname = Player.charinfo.lastname, callsign = Player.metadata.callsign}))
+    --TriggerServerEvent('hospital:server:ambulanceAlert', Lang:t('info.officer_down', {lastname = Player.charinfo.lastname, callsign = Player.metadata.callsign}))
+    exports['ps-dispatch']:EmsDown()
+end)
 -- Threads
 CreateThread(function()
     for _, station in pairs(Config.Locations["stations"]) do

@@ -474,7 +474,7 @@ Config.FleecaBanks = {
         },
         ["drills"] = { -- drill points
             {coords = vector3(-1206.4, -339.10, 37.9593), rotation = vector3(0.0, 0.0, 200.0), loot = false},
-            {coords = vector3(-1209.44, -337.24, 37.9593), rotation = vector3(0.0, 0.0, 120.0), loot = false},
+            {coords = vector3(-1208.96, -338.41, 37.78), rotation = vector3(0.0, 0.0, 120.0), loot = false},
         },
         ["trollys"] = { -- trollys points
             {coords = vector3(-1207.6, -333.89, 36.7592), heading = 118.0, loot = false},
@@ -523,7 +523,7 @@ Config.FleecaBanks = {
             loot = false
         },
         ["drills"] = { -- drill points
-            {coords = vector3(147.24, -1047.65, 29.6162), rotation = vector3(0.0, 0.0, 70.0), loot = false},
+            {coords = vector3(146.88, -1048.56, 29.37), rotation = vector3(0.0, 0.0, 70.0), loot = false},
             {coords = vector3(148.095, -1051.1, 29.6162), rotation = vector3(0.0, 0.0, 170.0), loot = false},
         },
         ["trollys"] = { -- trollys points
@@ -548,7 +548,7 @@ Config.FleecaBanks = {
             loot = false
         },
         ["drills"] = { -- drill points
-            {coords = vector3(-353.53, -56.832, 49.3147), rotation = vector3(0.0, 0.0, 75.0), loot = false},
+            {coords = vector3(-353.91, -57.89, 49.04), rotation = vector3(0.0, 0.0, 75.0), loot = false},
             {coords = vector3(-352.81, -60.155, 49.3147), rotation = vector3(0.0, 0.0, 160.0), loot = false},
         },
         ["trollys"] = { -- trollys points

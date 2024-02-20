@@ -17,7 +17,7 @@ var Traducoes = {
     "14": "From",
     "15": "Cc/Bcc, From:",
     "16": "Email not found",
-    "17": "€",
+    "17": "$",
     "18": "Total",
     "19": "Money in",
     "20": "Money out",
@@ -1090,7 +1090,7 @@ var HTMLTranslations = {
         "en": "A higher maximum capacity provides more hours of usage as well as better overall performance of the device. Don't forget to enable optimized charging.<br><br>This capacity decreases depending on the type of device usage and over time.<br><br>This percentage can always be restored by replacing the device's battery at a certified store.",
         "bg": "По-високият максимален капацитет осигурява повече часове на използване, както и по-добра цялостна производителност на устройството. Не забравяйте да активирате оптимизирано зареждане.<br><br>Този капацитет намалява в зависимост от вида на използване на устройството и с времето.<br><br>Този процент винаги може да бъде възстановен чрез подмяна на батерията на устройството в сертифициран магазин.",
         "pt": "Uma capacidade máxima mais alta oferece mais horas de uso, bem como melhor desempenho geral do dispositivo. Não se esqueça de ativar o carregamento otimizado.<br><br>Essa capacidade diminui dependendo do tipo de uso do dispositivo e ao longo do tempo.<br><br>Esse percentual pode sempre ser restaurado substituindo a bateria do dispositivo em uma loja certificada."
-    },    
+    },
     "translation179": {
         "en": "Theme:",
         "bg": "Тема:",
@@ -1845,12 +1845,12 @@ var HTMLTranslations = {
         "en": "Low power mode",
         "bg": "Режим на ниска мощност",
         "pt": "Modo de economia de energia"
-    },  
+    },
     "translation330": {
         "en": "VIDEO",
         "bg": "Видео",
         "pt": "VIDEO"
-    },    
+    },
     "translation331": {
         "en": "Search",
         "bg": "Търсене",
@@ -2160,7 +2160,7 @@ var HTMLTranslations = {
         "en": "Music:",
         "bg": "Музика:",
         "pt": "Música:"
-    },    
+    },
     "translation394": {
         "en": "WHAT WE HAVE TODAY",
         "bg": "ТОВА, КОЕТО ИМАМЕ ДНЕС",
@@ -2170,62 +2170,62 @@ var HTMLTranslations = {
         "en": "ALL GAMES",
         "bg": "ВСИЧКИ ИГРИ",
         "pt": "TODOS OS JOGOS"
-    },   
+    },
     "translation396": {
         "en": "Emoji Panel",
         "bg": "Панел с емотикони",
         "pt": "Painel Emojis"
-    },  
+    },
     "translation397": {
         "en": "SMILEYS AND PEOPLE",
         "bg": "УСМИВКИ И ХОРА",
         "pt": "SMILEYS E PESSOAS"
-    },  
+    },
     "translation398": {
         "en": "ANIMALS AND NATURE",
         "bg": "ЖИВОТНИ И ПРИРОДА",
         "pt": "ANIMAIS E NATUREZA"
-    },  
+    },
     "translation399": {
         "en": "FOOD AND DRINK",
         "bg": "ХРАНА И НАПИТКИ",
         "pt": "COMIDA E BEBIDA"
-    },  
+    },
     "translation400": {
         "en": "ACTIVITIES AND SPORTS",
         "bg": "ДЕЙНОСТИ И ИЗПЪЛНЕНИЕ",
         "pt": "ATIVIDADES E EXECICIO"
-    },  
+    },
     "translation401": {
         "en": "TRIPS AND LOCATIONS",
         "bg": "ПЪТУВАНИЯ И МЕСТОПОЛОЖЕНИЯ",
         "pt": "VIAGENS E LOCAIS"
-    },  
+    },
     "translation402": {
         "en": "UTENSILS",
         "bg": "УТЕНЗИЛИ",
         "pt": "UTENSÍLIOS"
-    },  
+    },
     "translation403": {
         "en": "OTHERS",
         "bg": "ДРУГИ",
         "pt": "OUTROS"
-    },  
+    },
     "translation404": {
         "en": "No news",
         "bg": "Няма новини",
         "pt": "Nenhuma noticia"
-    },  
+    },
     "translation405": {
         "en": "Title",
         "bg": "Заглавие",
         "pt": "Titulo"
-    }, 
+    },
     "translation406": {
         "en": "Description",
         "bg": "Описание",
         "pt": "Descrição"
-    }, 
+    },
     "translation407": {
         "en": "Create new news",
         "bg": "Създаване на нова новина",
@@ -2235,7 +2235,7 @@ var HTMLTranslations = {
         "en": "No posts",
         "bg": "Няма публикации",
         "pt": "Nenhum post"
-    },  
+    },
     "translation409": {
         "en": "Create new post",
         "bg": "Създаване на нова публикация",

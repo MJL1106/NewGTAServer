@@ -14,7 +14,7 @@ Config.RCoreTattoosCompatibility = false
 
 Config.AsynchronousLoading = false -- Change this to false if you want the NUI data to load before displaying the appearance UI
 
-Config.UseTarget = false
+Config.UseTarget = true
 
 Config.TextUIOptions = {
     position = "left-center"
@@ -42,7 +42,7 @@ Config.ShowNearestShopOnly = true
 Config.HideRadar = false -- Hides the minimap while the appearance menu is open
 Config.NearestShopBlipUpdateDelay = 10000
 
-Config.InvincibleDuringCustomization = true
+Config.InvincibleDuringCustomization = false
 
 Config.PreventTrackerRemoval = true -- Disables "Scarf and Chains" section if the player has tracker
 Config.TrackerClothingOptions = {
@@ -364,7 +364,7 @@ Config.Stores = {
     {
         type = "clothing",
         coords = vector4(124.82, -224.36, 54.56, 335.41),
-        size = vector3(4, 4, 4),
+        size = vector3(6, 6, 6),
         rotation = 45,
         usePoly = false,
         points = {
@@ -372,6 +372,21 @@ Config.Stores = {
             vector3(125.8349609375, -228.48097229004, 54.56),
             vector3(116.3140335083, -225.02020263672, 54.56),
             vector3(122.56930541992, -207.83396911621, 54.56)
+        }
+    },
+    { --PD Store inside MRPD lockers
+        type = "clothing",
+        coords = vector4(462.12, -999.72, 30.69, 359.07),
+        size = vector3(5, 5, 5),
+        rotation = 45,
+        usePoly = false,
+        showBlip = false,
+        targetModel = "ig_karen_daniels",
+        points = {
+            vector3(461.1, -999.75, 30.69),
+            vector3(462.54, -999.56, 30.69),
+            vector3(462.71, -998.69, 30.69),
+            vector3(461.2, -998.67, 30.69)
         }
     },
     {

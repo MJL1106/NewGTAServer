@@ -263,20 +263,20 @@ Config.Garages = {
         ["job"] = "cartel",
         ["jobType"] = "cartel"
     },
-    ["police"] = {
-        ["label"] = "Police",
-        ["takeVehicle"] = vector3(454.6, -1017.4, 28.4),
-        ["spawnPoint"] = vector4(438.4, -1018.3, 27.7, 90.0),
-        ["putVehicle"] = vector3(452.88, -1006.98, 27.5),
-        ["showBlip"] = false,
-        ["blipName"] = "Police",
-        ["blipNumber"] = 357,
-        ["blipColor"] = 3,
-        ["type"] = "job",                --public, job, gang, depot
-        ["vehicle"] = "car",              --car, air, sea, rig
-        ["job"] = "police",
-        ["jobType"] = "leo"
-    },
+    -- ["police"] = {
+    --     ["label"] = "Police",
+    --     ["takeVehicle"] = vector3(454.6, -1017.4, 28.4),
+    --     ["spawnPoint"] = vector4(438.4, -1018.3, 27.7, 90.0),
+    --     ["putVehicle"] = vector3(452.88, -1006.98, 27.5),
+    --     ["showBlip"] = false,
+    --     ["blipName"] = "Police",
+    --     ["blipNumber"] = 357,
+    --     ["blipColor"] = 3,
+    --     ["type"] = "job",                --public, job, gang, depot
+    --     ["vehicle"] = "car",              --car, air, sea, rig
+    --     ["job"] = "police",
+    --     ["jobType"] = "leo"
+    -- },
     ["intairport"] = {
         ["label"] = "Airport Hangar",
         ["takeVehicle"] = vector3(-1025.92, -3017.86, 13.95),

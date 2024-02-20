@@ -25,8 +25,6 @@ local Translations = {
         have_evidence_bag = 'Musíte mať so sebou prázdnu tašku s dôkazmi',
         no_driver_license = 'Žiaden vodičský preukaz',
         not_cuffed_dead = 'Civilista nie je spútaný a ani mŕtvy',
-        fine_yourself = '???',
-        not_online = "???"
     },
     success = {
         uncuffed = 'Boli ste zbavení pút',
@@ -112,8 +110,6 @@ local Translations = {
         target_location = 'Lokácia osoby ${firstname} ${lastname} je vyznačená na mape',
         anklet_location = 'Lokácia sledovača',
         new_call = 'Nový hovor',
-        fine_issued = '???',
-        received_fine = '???'
     },
     evidence = {
         red_hands = 'Červené ruky',
@@ -175,7 +171,6 @@ local Translations = {
         message_sent = 'Správa na odoslanie',
         civilian_call = 'Hovor od civilistu',
         emergency_call = 'Nový 911 hovor',
-        fine = '???'
     },
     progressbar = {
         blood_clear = 'Čistíš krv...',
@@ -186,10 +181,7 @@ local Translations = {
     },
 }
 
-if GetConvar('qb_locale', 'en') == 'sk' then
-    Lang = Locale:new({
-        phrases = Translations,
-        warnOnMissing = true,
-        fallbackLang = Lang,
-    })
-end
+Lang = Locale:new({
+    phrases = Translations,
+    warnOnMissing = true
+})
