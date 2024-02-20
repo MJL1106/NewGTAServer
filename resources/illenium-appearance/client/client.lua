@@ -1,5 +1,5 @@
 local client = client
-local reloadSkinTimer = GetGameTimer()
+local refreshskinTimer = GetGameTimer()
 
 local function LoadPlayerUniform(reset)
     if reset then
@@ -605,7 +605,7 @@ function OpenMenu(isPedMenu, menuType, menuData)
         menuItems[#menuItems + 1] = {
             title = _L("clothing.outfits.civilian.title"),
             description = _L("clothing.outfits.civilian.description"),
-            event = "illenium-appearance:client:reloadSkin",
+            event = "illenium-appearance:client:refreshskin",
             args = true
         }
 
@@ -704,21 +704,21 @@ RegisterNetEvent("illenium-appearance:client:openJobOutfitsMenu", function(outfi
 end)
 
 local function InCooldown()
-    return (GetGameTimer() - reloadSkinTimer) < Config.ReloadSkinCooldown
+    return (GetGameTimer() - refreshskinTimer) < Config.refreshskinCooldown
 end
 
-RegisterNetEvent("illenium-appearance:client:reloadSkin", function(bypassChecks)
+RegisterNetEvent("illenium-appearance:client:refreshskin", function(bypassChecks)
     if not bypassChecks and InCooldown() or Framework.CheckPlayerMeta() or cache.vehicle or IsPedFalling(cache.ped) then
         lib.notify({
-            title = _L("commands.reloadskin.failure.title"),
-            description = _L("commands.reloadskin.failure.description"),
+            title = _L("commands.refreshskin.failure.title"),
+            description = _L("commands.refreshskin.failure.description"),
             type = "error",
             position = Config.NotifyOptions.position
         })
         return
     end
 
-    reloadSkinTimer = GetGameTimer()
+    refreshskinTimer = GetGameTimer()
     BackupPlayerStats()
 
     lib.callback("illenium-appearance:server:getAppearance", false, function(appearance)
@@ -744,7 +744,7 @@ RegisterNetEvent("illenium-appearance:client:ClearStuckProps", function()
         return
     end
 
-    reloadSkinTimer = GetGameTimer()
+    refreshskinTimer = GetGameTimer()
 
     for _, v in pairs(GetGamePool("CObject")) do
       if IsEntityAttachedToEntity(cache.ped, v) then

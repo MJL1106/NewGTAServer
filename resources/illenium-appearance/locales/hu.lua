@@ -288,7 +288,7 @@ Locales["hu"] = {
         }
     },
     commands = {
-        reloadskin = {
+        refreshskin = {
             title = "Karaktere újratöltése",
             failure = {
                 title = "Hiba",

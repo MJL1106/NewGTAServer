@@ -343,8 +343,8 @@ if Config.EnableJobOutfitsCommand then
     end)
 end
 
-lib.addCommand("reloadskin", { help = _L("commands.reloadskin.title") }, function(source)
-    TriggerClientEvent("illenium-appearance:client:reloadSkin", source)
+lib.addCommand("refreshskin", { help = _L("commands.refreshskin.title") }, function(source)
+    TriggerClientEvent("illenium-appearance:client:refreshskin", source)
 end)
 
 lib.addCommand("clearstuckprops", { help = _L("commands.clearstuckprops.title") }, function(source)

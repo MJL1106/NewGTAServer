@@ -172,3 +172,31 @@
 {"level":"debug","message":"Retrieving accounts","module":"accounts","timestamp":"2024-02-19T05:33:17.946Z"}
 {"level":"silly","message":"Response Promise Event pefcl:getAccounts:2d9ac0d9-ebee-4ae5-9f55-189be7ea5aaa (12.2597ms), Data >>","module":"events","timestamp":"2024-02-19T05:33:17.958Z"}
 {"level":"silly","message":{"data":[{"accountName":"Personal account","balance":0,"createdAt":"2024-02-18, 5:32:48 p.m.","deletedAt":null,"id":1,"isDefault":true,"number":"920,5572-2181-2645","ownerIdentifier":"license:b27179133e8df658895ecd5f756db2a4a4c8cd08","role":"owner","type":"personal","updatedAt":"2024-02-19T02:17:29.000Z"},{"accountName":"BaLLAS","balance":3000,"createdAt":"2024-02-18, 9:14:55 p.m.","deletedAt":null,"id":2,"isDefault":false,"number":"920,3718-2301-3658","ownerIdentifier":"license:b27179133e8df658895ecd5f756db2a4a4c8cd08","role":"owner","type":"personal","updatedAt":"2024-02-19T02:17:55.000Z"},{"accountName":"bALLAS","balance":500,"createdAt":"2024-02-18, 9:15:09 p.m.","deletedAt":null,"id":3,"isDefault":false,"number":"920,1084-0155-2337","ownerIdentifier":"license:b27179133e8df658895ecd5f756db2a4a4c8cd08","role":"owner","type":"shared","updatedAt":"2024-02-19T02:15:09.000Z"}],"status":"ok"},"module":"events","timestamp":"2024-02-19T05:33:17.958Z"}
+{"level":"debug","message":"Initializing...","module":"base","timestamp":"2024-02-19T23:48:11.237Z"}
+{"level":"debug","message":"Initialized Boot controller","module":"base","timestamp":"2024-02-19T23:48:11.241Z"}
+{"level":"debug","message":"Initialized User controller","module":"base","timestamp":"2024-02-19T23:48:11.242Z"}
+{"level":"debug","message":"Initialized Cash controller","module":"base","timestamp":"2024-02-19T23:48:11.242Z"}
+{"level":"debug","message":"Initialized Invoice controller","module":"base","timestamp":"2024-02-19T23:48:11.242Z"}
+{"level":"debug","message":"Initialized Account controller","module":"base","timestamp":"2024-02-19T23:48:11.243Z"}
+{"level":"debug","message":"Initialized Transaction controller","module":"base","timestamp":"2024-02-19T23:48:11.243Z"}
+{"level":"debug","message":"Initialized Broadcast controller","module":"base","timestamp":"2024-02-19T23:48:11.243Z"}
+{"level":"debug","message":"Loading language from config: en","module":"i18n","timestamp":"2024-02-19T23:48:11.244Z"}
+{"level":"debug","message":"Checking database connection ..","module":"boot","timestamp":"2024-02-19T23:48:11.355Z"}
+{"level":"debug","message":"Connected to database.","module":"boot","timestamp":"2024-02-19T23:48:11.591Z"}
+{"level":"info","message":"Starting pefcl.","module":"boot","timestamp":"2024-02-19T23:48:11.591Z"}
+{"level":"debug","message":"Loading player for pefcl.","module":"user","timestamp":"2024-02-19T23:48:54.439Z"}
+{"level":"debug","message":{"identifier":"license:b27179133e8df658895ecd5f756db2a4a4c8cd08","name":"Pepperfield","source":1},"module":"user","timestamp":"2024-02-19T23:48:54.440Z"}
+{"level":"debug","message":"Player loaded. Emitting: pefcl:userLoaded","module":"user","timestamp":"2024-02-19T23:48:54.446Z"}
+{"level":"debug","message":"Creating initial cash row for source: 1","module":"cash","timestamp":"2024-02-19T23:48:54.501Z"}
+{"level":"silly","message":"Checking if default account exists for source: 1","module":"accounts","timestamp":"2024-02-19T23:48:54.510Z"}
+{"level":"silly","message":"Identifier: license:b27179133e8df658895ecd5f756db2a4a4c8cd08","module":"accounts","timestamp":"2024-02-19T23:48:54.511Z"}
+{"level":"silly","message":"Default account exists.","module":"accounts","timestamp":"2024-02-19T23:48:54.547Z"}
+{"level":"silly","message":"netPromise > pefcl:getMyCash > RequestObj","module":"events","timestamp":"2024-02-19T23:49:31.915Z"}
+{"level":"silly","message":{"data":{},"source":1},"module":"events","timestamp":"2024-02-19T23:49:31.916Z"}
+{"level":"silly","message":"netPromise > pefcl:getAccounts > RequestObj","module":"events","timestamp":"2024-02-19T23:49:31.920Z"}
+{"level":"silly","message":{"data":null,"source":1},"module":"events","timestamp":"2024-02-19T23:49:31.920Z"}
+{"level":"debug","message":"Retrieving accounts","module":"accounts","timestamp":"2024-02-19T23:49:31.921Z"}
+{"level":"silly","message":"Response Promise Event pefcl:getMyCash:f510a299-8a7b-4d97-9521-c5365e6b1e0c (9.4451ms), Data >>","module":"events","timestamp":"2024-02-19T23:49:31.925Z"}
+{"level":"silly","message":{"data":0,"status":"ok"},"module":"events","timestamp":"2024-02-19T23:49:31.926Z"}
+{"level":"silly","message":"Response Promise Event pefcl:getAccounts:b71123b8-0ef7-4cba-a2bb-eeea08f1f1e1 (16.6874ms), Data >>","module":"events","timestamp":"2024-02-19T23:49:31.937Z"}
+{"level":"silly","message":{"data":[{"accountName":"Personal account","balance":0,"createdAt":"2024-02-18, 5:32:48 p.m.","deletedAt":null,"id":1,"isDefault":true,"number":"920,5572-2181-2645","ownerIdentifier":"license:b27179133e8df658895ecd5f756db2a4a4c8cd08","role":"owner","type":"personal","updatedAt":"2024-02-19T02:17:29.000Z"},{"accountName":"BaLLAS","balance":3000,"createdAt":"2024-02-18, 9:14:55 p.m.","deletedAt":null,"id":2,"isDefault":false,"number":"920,3718-2301-3658","ownerIdentifier":"license:b27179133e8df658895ecd5f756db2a4a4c8cd08","role":"owner","type":"personal","updatedAt":"2024-02-19T02:17:55.000Z"},{"accountName":"bALLAS","balance":500,"createdAt":"2024-02-18, 9:15:09 p.m.","deletedAt":null,"id":3,"isDefault":false,"number":"920,1084-0155-2337","ownerIdentifier":"license:b27179133e8df658895ecd5f756db2a4a4c8cd08","role":"owner","type":"shared","updatedAt":"2024-02-19T02:15:09.000Z"}],"status":"ok"},"module":"events","timestamp":"2024-02-19T23:49:31.937Z"}
