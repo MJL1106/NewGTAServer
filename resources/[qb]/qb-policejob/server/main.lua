@@ -1015,6 +1015,7 @@ RegisterNetEvent('police:server:UpdateCurrentCops', function()
             amount += 1
         end
     end
+    TriggerEvent('police:SetCopCount', amount)
     TriggerClientEvent("police:SetCopCount", -1, amount)
     updatingCops = false
 end)
