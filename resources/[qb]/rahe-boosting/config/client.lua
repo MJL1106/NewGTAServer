@@ -20,7 +20,7 @@ clConfig = {
     vehicleAreaRadius = 215.0,
 
     -- The performance mods that will be applied if the boosting vehicle is tuned (values found at https://docs.fivem.net/natives/?_0x6AF0636DDEDCB6DD).
-    tunedVehiclePerformanceModIndices = { 11, 12, 13, 15 },
+    tunedVehiclePerformanceModIndices = { 11, 12, 13, 15, 16 },
 
     -- If the turbo be toggled on a tuned boosting vehicle.
     tunedVehicleToggleTurbo = true,

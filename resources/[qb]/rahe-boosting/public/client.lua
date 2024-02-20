@@ -12,6 +12,7 @@ function spawnBoostVehicle(contract)
     SetVehicleEngineOn(vehicle, false, false)
     SetVehicleOnGroundProperly(vehicle)
     SetVehicleNumberPlateText(vehicle, contract.licensePlate)
+
     activeVehicle = vehicle
 
     TriggerServerEvent("rahe-boosting:server:setEntityData", VehToNet(vehicle), contract)
