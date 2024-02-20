@@ -120,38 +120,6 @@ RegisterNetEvent('qb-bankrobbery:server:FleecaTable', function(Table, bank, pos,
                 TriggerClientEvent('QBCore:Notify', src, Config.Notify["Got"] .. MarkedBags .. Config.Notify["BagsOfInked"])
                 TriggerEvent('qb-log:server:CreateLog', 'bankrobbery', 'Bank Robbery', 'green', '**Cash**:\n'..MarkedBags..'\n**Person**:\n'..GetPlayerName(src))
             end
-        else
-            if Config.BanModders and Config.Wrapper == 'ox' then
-                local BannedBy = 'QB-Bankrobbery'
-                local banTime = 2395343223
-                local reason = 'Modding money through bankrobbery script'
-                local timeTable = os.date('*t', banTime)
-                MySQL.Async.insert('INSERT INTO bans (name, license, discord, ip, reason, expire, bannedby) VALUES (?, ?, ?, ?, ?, ?, ?)', {
-                    GetPlayerName(source),
-                    QBCore.Functions.GetIdentifier(source, 'license'),
-                    QBCore.Functions.GetIdentifier(source, 'discord'),
-                    QBCore.Functions.GetIdentifier(source, 'ip'),
-                    reason,
-                    banTime,
-                    BannedBy
-                })
-                DropPlayer(source, 'You have been banned:\n' .. reason .. '\n\nBan expires: ' .. timeTable['day'] .. '/' .. timeTable['month'] .. '/' .. timeTable['year'] .. ' ' .. timeTable['hour'] .. ':' .. timeTable['min'] .. '\n🔸 Check our Discord for more information: ' .. QBCore.Config.Server.discord)
-            elseif Config.Modders and Config.Wrapper == 'ghmatti' then 
-                local BannedBy = 'QB-Bankrobbery'
-                local banTime = 2395343223
-                local reason = 'Modding money through bankrobbery script'
-                local timeTable = os.date('*t', banTime)
-                exports.ghmattimysql:execute('INSERT INTO bans (name, license, discord, ip, reason, expire, bannedby) VALUES (@name, @license, @discord, @ip, @reason, @expire, @bannedby)', {
-                    ['@name'] = GetPlayerName(source),
-                    ['@license'] = QBCore.Functions.GetIdentifier(source, 'license'),
-                    ['@discord'] = QBCore.Functions.GetIdentifier(source, 'discord'),
-                    ['@ip'] = QBCore.Functions.GetIdentifier(source, 'ip'),
-                    ['@reason'] = reason,
-                    ['@expire'] = banTime,
-                    ['@bannedby'] = BannedBy
-                })
-                DropPlayer(source, 'You have been banned:\n' .. reason .. '\n\nBan expires: ' .. timeTable['day'] .. '/' .. timeTable['month'] .. '/' .. timeTable['year'] .. ' ' .. timeTable['hour'] .. ':' .. timeTable['min'] .. '\n🔸 Check our Discord for more information: ' .. QBCore.Config.Server.discord)
-            end
         end
 
     elseif bank == 'paleto' then 
@@ -175,38 +143,6 @@ RegisterNetEvent('qb-bankrobbery:server:FleecaTable', function(Table, bank, pos,
                 TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[item], 'add')
                 TriggerClientEvent('QBCore:Notify', src, Config.Notify["Got"] .. MarkedBags .. Config.Notify["BagsOfInked"])
                 TriggerEvent('qb-log:server:CreateLog', 'bankrobbery', 'Bank Robbery', 'green', '**Cash**:\n'..MarkedBags..'\n**Person**:\n'..GetPlayerName(src))
-            end
-        else
-            if Config.BanModders and Config.Wrapper == 'ox' then
-                local BannedBy = 'QB-Bankrobbery'
-                local banTime = 2395343223
-                local reason = 'Modding money through bankrobbery script'
-                local timeTable = os.date('*t', banTime)
-                MySQL.Async.insert('INSERT INTO bans (name, license, discord, ip, reason, expire, bannedby) VALUES (?, ?, ?, ?, ?, ?, ?)', {
-                    GetPlayerName(source),
-                    QBCore.Functions.GetIdentifier(source, 'license'),
-                    QBCore.Functions.GetIdentifier(source, 'discord'),
-                    QBCore.Functions.GetIdentifier(source, 'ip'),
-                    reason,
-                    banTime,
-                    BannedBy
-                })
-                DropPlayer(source, 'You have been banned:\n' .. reason .. '\n\nBan expires: ' .. timeTable['day'] .. '/' .. timeTable['month'] .. '/' .. timeTable['year'] .. ' ' .. timeTable['hour'] .. ':' .. timeTable['min'] .. '\n🔸 Check our Discord for more information: ' .. QBCore.Config.Server.discord)
-            elseif Config.Modders and Config.Wrapper == 'ghmatti' then 
-                local BannedBy = 'QB-Bankrobbery'
-                local banTime = 2395343223
-                local reason = 'Modding money through bankrobbery script'
-                local timeTable = os.date('*t', banTime)
-                exports.ghmattimysql:execute('INSERT INTO bans (name, license, discord, ip, reason, expire, bannedby) VALUES (@name, @license, @discord, @ip, @reason, @expire, @bannedby)', {
-                    ['@name'] = GetPlayerName(source),
-                    ['@license'] = QBCore.Functions.GetIdentifier(source, 'license'),
-                    ['@discord'] = QBCore.Functions.GetIdentifier(source, 'discord'),
-                    ['@ip'] = QBCore.Functions.GetIdentifier(source, 'ip'),
-                    ['@reason'] = reason,
-                    ['@expire'] = banTime,
-                    ['@bannedby'] = BannedBy
-                })
-                DropPlayer(source, 'You have been banned:\n' .. reason .. '\n\nBan expires: ' .. timeTable['day'] .. '/' .. timeTable['month'] .. '/' .. timeTable['year'] .. ' ' .. timeTable['hour'] .. ':' .. timeTable['min'] .. '\n🔸 Check our Discord for more information: ' .. QBCore.Config.Server.discord)
             end
         end
 
@@ -303,38 +239,6 @@ RegisterNetEvent('qb-bankrobbery:server:drillLoot', function(bank, pos, closestB
                 TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[cashitem], 'add')
                 TriggerEvent('qb-log:server:CreateLog', 'bankrobbery', 'Bank Robbery', 'green', '**Goldbars**:\n'..doubleitem..'\n**Person**:\n'..GetPlayerName(src))
             end
-        else 
-            if Config.BanModders and Config.Wrapper == 'ox' then
-                local BannedBy = 'QB-Bankrobbery'
-                local banTime = 2395343223
-                local reason = 'Modding money through bankrobbery script'
-                local timeTable = os.date('*t', banTime)
-                MySQL.Async.insert('INSERT INTO bans (name, license, discord, ip, reason, expire, bannedby) VALUES (?, ?, ?, ?, ?, ?, ?)', {
-                    GetPlayerName(source),
-                    QBCore.Functions.GetIdentifier(source, 'license'),
-                    QBCore.Functions.GetIdentifier(source, 'discord'),
-                    QBCore.Functions.GetIdentifier(source, 'ip'),
-                    reason,
-                    banTime,
-                    BannedBy
-                })
-                DropPlayer(source, 'You have been banned:\n' .. reason .. '\n\nBan expires: ' .. timeTable['day'] .. '/' .. timeTable['month'] .. '/' .. timeTable['year'] .. ' ' .. timeTable['hour'] .. ':' .. timeTable['min'] .. '\n🔸 Check our Discord for more information: ' .. QBCore.Config.Server.discord)
-            elseif Config.Modders and Config.Wrapper == 'ghmatti' then 
-                local BannedBy = 'QB-Bankrobbery'
-                local banTime = 2395343223
-                local reason = 'Modding money through bankrobbery script'
-                local timeTable = os.date('*t', banTime)
-                exports.ghmattimysql:execute('INSERT INTO bans (name, license, discord, ip, reason, expire, bannedby) VALUES (@name, @license, @discord, @ip, @reason, @expire, @bannedby)', {
-                    ['@name'] = GetPlayerName(source),
-                    ['@license'] = QBCore.Functions.GetIdentifier(source, 'license'),
-                    ['@discord'] = QBCore.Functions.GetIdentifier(source, 'discord'),
-                    ['@ip'] = QBCore.Functions.GetIdentifier(source, 'ip'),
-                    ['@reason'] = reason,
-                    ['@expire'] = banTime,
-                    ['@bannedby'] = BannedBy
-                })
-                DropPlayer(source, 'You have been banned:\n' .. reason .. '\n\nBan expires: ' .. timeTable['day'] .. '/' .. timeTable['month'] .. '/' .. timeTable['year'] .. ' ' .. timeTable['hour'] .. ':' .. timeTable['min'] .. '\n🔸 Check our Discord for more information: ' .. QBCore.Config.Server.discord)
-            end
         end
     elseif bank == 'paleto' then
         local item = Config.Lockers["Paleto"]["items"][math.random(1, #Config.Lockers["Paleto"]["items"])]
@@ -365,38 +269,6 @@ RegisterNetEvent('qb-bankrobbery:server:drillLoot', function(bank, pos, closestB
                 Player.Functions.AddItem(cashitem, amount, false)
                 TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[cashitem], 'add')
                 TriggerEvent('qb-log:server:CreateLog', 'bankrobbery', 'Bank Robbery', 'green', '**Goldbars**:\n'..doubleitem..'\n**Person**:\n'..GetPlayerName(src))
-            end
-        else 
-            if Config.BanModders and Config.Wrapper == 'ox' then
-                local BannedBy = 'QB-Bankrobbery'
-                local banTime = 2395343223
-                local reason = 'Modding money through bankrobbery script'
-                local timeTable = os.date('*t', banTime)
-                MySQL.Async.insert('INSERT INTO bans (name, license, discord, ip, reason, expire, bannedby) VALUES (?, ?, ?, ?, ?, ?, ?)', {
-                    GetPlayerName(source),
-                    QBCore.Functions.GetIdentifier(source, 'license'),
-                    QBCore.Functions.GetIdentifier(source, 'discord'),
-                    QBCore.Functions.GetIdentifier(source, 'ip'),
-                    reason,
-                    banTime,
-                    BannedBy
-                })
-                DropPlayer(source, 'You have been banned:\n' .. reason .. '\n\nBan expires: ' .. timeTable['day'] .. '/' .. timeTable['month'] .. '/' .. timeTable['year'] .. ' ' .. timeTable['hour'] .. ':' .. timeTable['min'] .. '\n🔸 Check our Discord for more information: ' .. QBCore.Config.Server.discord)
-            elseif Config.Modders and Config.Wrapper == 'ghmatti' then 
-                local BannedBy = 'QB-Bankrobbery'
-                local banTime = 2395343223
-                local reason = 'Modding money through bankrobbery script'
-                local timeTable = os.date('*t', banTime)
-                exports.ghmattimysql:execute('INSERT INTO bans (name, license, discord, ip, reason, expire, bannedby) VALUES (@name, @license, @discord, @ip, @reason, @expire, @bannedby)', {
-                    ['@name'] = GetPlayerName(source),
-                    ['@license'] = QBCore.Functions.GetIdentifier(source, 'license'),
-                    ['@discord'] = QBCore.Functions.GetIdentifier(source, 'discord'),
-                    ['@ip'] = QBCore.Functions.GetIdentifier(source, 'ip'),
-                    ['@reason'] = reason,
-                    ['@expire'] = banTime,
-                    ['@bannedby'] = BannedBy
-                })
-                DropPlayer(source, 'You have been banned:\n' .. reason .. '\n\nBan expires: ' .. timeTable['day'] .. '/' .. timeTable['month'] .. '/' .. timeTable['year'] .. ' ' .. timeTable['hour'] .. ':' .. timeTable['min'] .. '\n🔸 Check our Discord for more information: ' .. QBCore.Config.Server.discord)
             end
         end
 
@@ -530,38 +402,6 @@ RegisterNetEvent('qb-bankrobbery:server:GetTrolleyLoot', function(Trolley, bank,
                 TriggerClientEvent('QBCore:Notify', src, Config.Notify["Got"] .. MarkedBags .. Config.Notify["BagsOfInked"])
                 TriggerEvent('qb-log:server:CreateLog', 'bankrobbery', 'Bank Robbery', 'green', '**Cash**:\n'..MarkedBags..'\n**Person**:\n'..GetPlayerName(src))
             end
-        else 
-            if Config.BanModders and Config.Wrapper == 'ox' then
-                local BannedBy = 'QB-Bankrobbery'
-                local banTime = 2395343223
-                local reason = 'Modding money through bankrobbery script'
-                local timeTable = os.date('*t', banTime)
-                MySQL.Async.insert('INSERT INTO bans (name, license, discord, ip, reason, expire, bannedby) VALUES (?, ?, ?, ?, ?, ?, ?)', {
-                    GetPlayerName(source),
-                    QBCore.Functions.GetIdentifier(source, 'license'),
-                    QBCore.Functions.GetIdentifier(source, 'discord'),
-                    QBCore.Functions.GetIdentifier(source, 'ip'),
-                    reason,
-                    banTime,
-                    BannedBy
-                })
-                DropPlayer(source, 'You have been banned:\n' .. reason .. '\n\nBan expires: ' .. timeTable['day'] .. '/' .. timeTable['month'] .. '/' .. timeTable['year'] .. ' ' .. timeTable['hour'] .. ':' .. timeTable['min'] .. '\n🔸 Check our Discord for more information: ' .. QBCore.Config.Server.discord)
-            elseif Config.Modders and Config.Wrapper == 'ghmatti' then 
-                local BannedBy = 'QB-Bankrobbery'
-                local banTime = 2395343223
-                local reason = 'Modding money through bankrobbery script'
-                local timeTable = os.date('*t', banTime)
-                exports.ghmattimysql:execute('INSERT INTO bans (name, license, discord, ip, reason, expire, bannedby) VALUES (@name, @license, @discord, @ip, @reason, @expire, @bannedby)', {
-                    ['@name'] = GetPlayerName(source),
-                    ['@license'] = QBCore.Functions.GetIdentifier(source, 'license'),
-                    ['@discord'] = QBCore.Functions.GetIdentifier(source, 'discord'),
-                    ['@ip'] = QBCore.Functions.GetIdentifier(source, 'ip'),
-                    ['@reason'] = reason,
-                    ['@expire'] = banTime,
-                    ['@bannedby'] = BannedBy
-                })
-                DropPlayer(source, 'You have been banned:\n' .. reason .. '\n\nBan expires: ' .. timeTable['day'] .. '/' .. timeTable['month'] .. '/' .. timeTable['year'] .. ' ' .. timeTable['hour'] .. ':' .. timeTable['min'] .. '\n🔸 Check our Discord for more information: ' .. QBCore.Config.Server.discord)
-            end
         end
 
     elseif bank == 'paleto' then 
@@ -580,38 +420,6 @@ RegisterNetEvent('qb-bankrobbery:server:GetTrolleyLoot', function(Trolley, bank,
                 Player.Functions.AddItem(item, MarkedBags, false, info)
                 TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[item], 'add')
                 TriggerClientEvent('QBCore:Notify', src, Config.Notify["Got"] .. MarkedBags .. Config.Notify["BagsOfInked"])
-            end
-        else 
-            if Config.BanModders and Config.Wrapper == 'ox' then
-                local BannedBy = 'QB-Bankrobbery'
-                local banTime = 2395343223
-                local reason = 'Modding money through bankrobbery script'
-                local timeTable = os.date('*t', banTime)
-                MySQL.Async.insert('INSERT INTO bans (name, license, discord, ip, reason, expire, bannedby) VALUES (?, ?, ?, ?, ?, ?, ?)', {
-                    GetPlayerName(source),
-                    QBCore.Functions.GetIdentifier(source, 'license'),
-                    QBCore.Functions.GetIdentifier(source, 'discord'),
-                    QBCore.Functions.GetIdentifier(source, 'ip'),
-                    reason,
-                    banTime,
-                    BannedBy
-                })
-                DropPlayer(source, 'You have been banned:\n' .. reason .. '\n\nBan expires: ' .. timeTable['day'] .. '/' .. timeTable['month'] .. '/' .. timeTable['year'] .. ' ' .. timeTable['hour'] .. ':' .. timeTable['min'] .. '\n🔸 Check our Discord for more information: ' .. QBCore.Config.Server.discord)
-            elseif Config.Modders and Config.Wrapper == 'ghmatti' then 
-                local BannedBy = 'QB-Bankrobbery'
-                local banTime = 2395343223
-                local reason = 'Modding money through bankrobbery script'
-                local timeTable = os.date('*t', banTime)
-                exports.ghmattimysql:execute('INSERT INTO bans (name, license, discord, ip, reason, expire, bannedby) VALUES (@name, @license, @discord, @ip, @reason, @expire, @bannedby)', {
-                    ['@name'] = GetPlayerName(source),
-                    ['@license'] = QBCore.Functions.GetIdentifier(source, 'license'),
-                    ['@discord'] = QBCore.Functions.GetIdentifier(source, 'discord'),
-                    ['@ip'] = QBCore.Functions.GetIdentifier(source, 'ip'),
-                    ['@reason'] = reason,
-                    ['@expire'] = banTime,
-                    ['@bannedby'] = BannedBy
-                })
-                DropPlayer(source, 'You have been banned:\n' .. reason .. '\n\nBan expires: ' .. timeTable['day'] .. '/' .. timeTable['month'] .. '/' .. timeTable['year'] .. ' ' .. timeTable['hour'] .. ':' .. timeTable['min'] .. '\n🔸 Check our Discord for more information: ' .. QBCore.Config.Server.discord)
             end
         end
 
@@ -756,38 +564,6 @@ RegisterNetEvent('qb-bankrobbery:server:giveHardDrive', function(Pos)
         TriggerClientEvent('QBCore:Notify', src, Config.Notify["FoundHDD"])
         TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items['encrypted_hdd'], 'add')
         Player.Functions.AddItem('encrypted_hdd', 1, false)
-    else
-        if Config.BanModders and Config.Wrapper == 'ox' then
-            local BannedBy = 'QB-Bankrobbery'
-            local banTime = 2395343223
-            local reason = 'Modding money through bankrobbery script'
-            local timeTable = os.date('*t', banTime)
-            MySQL.Async.insert('INSERT INTO bans (name, license, discord, ip, reason, expire, bannedby) VALUES (?, ?, ?, ?, ?, ?, ?)', {
-                GetPlayerName(source),
-                QBCore.Functions.GetIdentifier(source, 'license'),
-                QBCore.Functions.GetIdentifier(source, 'discord'),
-                QBCore.Functions.GetIdentifier(source, 'ip'),
-                reason,
-                banTime,
-                BannedBy
-            })
-            DropPlayer(source, 'You have been banned:\n' .. reason .. '\n\nBan expires: ' .. timeTable['day'] .. '/' .. timeTable['month'] .. '/' .. timeTable['year'] .. ' ' .. timeTable['hour'] .. ':' .. timeTable['min'] .. '\n🔸 Check our Discord for more information: ' .. QBCore.Config.Server.discord)
-        elseif Config.Modders and Config.Wrapper == 'ghmatti' then 
-            local BannedBy = 'QB-Bankrobbery'
-            local banTime = 2395343223
-            local reason = 'Modding money through bankrobbery script'
-            local timeTable = os.date('*t', banTime)
-            exports.ghmattimysql:execute('INSERT INTO bans (name, license, discord, ip, reason, expire, bannedby) VALUES (@name, @license, @discord, @ip, @reason, @expire, @bannedby)', {
-                ['@name'] = GetPlayerName(source),
-                ['@license'] = QBCore.Functions.GetIdentifier(source, 'license'),
-                ['@discord'] = QBCore.Functions.GetIdentifier(source, 'discord'),
-                ['@ip'] = QBCore.Functions.GetIdentifier(source, 'ip'),
-                ['@reason'] = reason,
-                ['@expire'] = banTime,
-                ['@bannedby'] = BannedBy
-            })
-            DropPlayer(source, 'You have been banned:\n' .. reason .. '\n\nBan expires: ' .. timeTable['day'] .. '/' .. timeTable['month'] .. '/' .. timeTable['year'] .. ' ' .. timeTable['hour'] .. ':' .. timeTable['min'] .. '\n🔸 Check our Discord for more information: ' .. QBCore.Config.Server.discord)
-        end
     end
 end)
 
