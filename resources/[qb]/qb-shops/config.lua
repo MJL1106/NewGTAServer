@@ -311,7 +311,7 @@ Config.Products = {
             amount = 100,
             info = {},
             type = "item",
-            slot = 1,
+            slot = 6,
         },
         [7] = {
             name = "finescale",
@@ -319,7 +319,15 @@ Config.Products = {
             amount = 100,
             info = {},
             type = "item",
-            slot = 2,
+            slot = 7,
+        },
+        [8] = {
+            name = "emptybaggie",
+            price = 5,
+            amount = 100,
+            info = {},
+            type = "item",
+            slot = 8,
         },
     },
     ["gearshop"] = {

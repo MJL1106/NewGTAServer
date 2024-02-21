@@ -29,6 +29,48 @@ RegisterServerEvent('ps-drugprocessing:processCocaLeaf', function()
 	end
 end)
 
+RegisterServerEvent('ps-drugprocessing:processCrack', function()
+    local src = source
+    local Player = QBCore.Functions.GetPlayer(src)
+    local amount = math.random(2,4)
+	if Player.Functions.RemoveItem('coke', 1) then
+		if Player.Functions.RemoveItem('bakingsoda', 1) then
+			if Player.Functions.RemoveItem('emptybaggie', 1) then
+				if Player.Functions.RemoveItem('water_bottle', 1) then
+					if Player.Functions.AddItem('crack_baggy', amount) then
+						TriggerClientEvent("inventory:client:ItemBox", source, QBCore.Shared.Items['coke'], "remove", 1)
+						TriggerClientEvent("inventory:client:ItemBox", source, QBCore.Shared.Items['bakingsoda'], "remove", 1)
+						TriggerClientEvent("inventory:client:ItemBox", source, QBCore.Shared.Items['emptybaggie'], "remove",1)
+						TriggerClientEvent("inventory:client:ItemBox", source, QBCore.Shared.Items['water_bottle'], "remove", 1)
+						TriggerClientEvent("inventory:client:ItemBox", source, QBCore.Shared.Items['crack_baggy'], "add", amount)
+						TriggerClientEvent('QBCore:Notify', src, "Crack baggy successfully processed!", "success")
+					else
+						Player.Functions.AddItem('coke', 1)
+						Player.Functions.AddItem('bakingsoda', 1)
+						Player.Functions.AddItem('emptybaggie', 1)
+						Player.Functions.AddItem('water_bottle', 1)
+					end
+				else
+					Player.Functions.AddItem('coke', 1)
+					Player.Functions.AddItem('bakingsoda', 1)
+					Player.Functions.AddItem('emptybaggie', 1)
+					TriggerClientEvent('QBCore:Notify', src, "Missing Water bottle", "error")
+
+				end
+			else
+				Player.Functions.AddItem('coke', 1)
+				Player.Functions.AddItem('bakingsoda', 1)
+				TriggerClientEvent('QBCore:Notify', src, "Missing Empty baggies", "error")
+			end
+		else
+			Player.Functions.AddItem('coke', 1)
+			TriggerClientEvent('QBCore:Notify', src, Lang:t("error.no_bakingsoda"), "error")
+		end
+	else
+		TriggerClientEvent('QBCore:Notify', src, Lang:t("error.no_cokain"), "error")
+	end
+end)
+
 RegisterServerEvent('ps-drugprocessing:processCocaPowder', function()
 	local src = source
     local Player = QBCore.Functions.GetPlayer(src)

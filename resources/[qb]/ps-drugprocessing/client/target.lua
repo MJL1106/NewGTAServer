@@ -204,6 +204,24 @@ CreateThread(function()
         },
     distance = 3.5
     })
+    exports["qb-target"]:AddBoxZone("crackbaggieprocess", vector3(1086, -3197.54, -39.2), 2.5, 1.4, {
+        name = "crackbaggieprocess",
+        heading = 30,
+        debugPoly = false,
+        minZ = -39.39,
+        maxZ = -38.39,
+    }, {
+        options = {
+            {
+                type = "client",
+                event = "ps-drugprocessing:ProcessCrackBaggie",
+                icon = "fas fa-weight-scale",
+                label = "Process Crack baggie",
+                --job = "cokecutter", -- Remove this line if you do not want a job check.
+            },
+        },
+    distance = 3.5
+    })
     exports["qb-target"]:AddBoxZone("cokepowdercut", vector3(1092.89, -3195.78, -39.2), 7.65, 1.2, {
         name = "cokepowdercut",
         heading = 90,
