@@ -52,7 +52,7 @@ CreateThread(function()
                 type = "client",
                 event = "tr-blackmarket:OpenShop",
                 label = Config.Text["TargetLabel"],
-                icon = Config.Icons["Eyeicon"]
+                icon = "fa-solid fa-comments-dollar"
             }
         },
         distance = 1.5
@@ -63,7 +63,7 @@ end)
 RegisterNetEvent('tr-blackmarket:OpenShop', function()
     local BlackMarket = {
         { header = Config.Text['PedHeader'], isMenuHeader = true, icon = Config.Icons["Header"] },
-    --    { header = Config.Text['Pistols'], icon = Config.Icons['Pistol'], params = { event = "tr-blackmarket:PistolShop" } },
+        { header = Config.Text['Pistols'], icon = Config.Icons['Pistol'], params = { event = "tr-blackmarket:PistolShop" } },
      --   { header = Config.Text['SubMachineGuns'], icon = Config.Icons['SubMachineGuns'], params = { event = "tr-blackmarket:SubMachineGunsShop" } },
     --    { header = Config.Text['Shotguns'], icon = Config.Icons['Shotguns'], params = { event = "tr-blackmarket:ShotGunsShop" } },
      --   { header = Config.Text['AssaultWeapons'], icon = Config.Icons['AssaultWeapons'], params = { event = "tr-blackmarket:AssaultWeaponsShop" } },

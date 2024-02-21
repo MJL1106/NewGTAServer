@@ -255,6 +255,14 @@ Config.Products = {
             slot = 15,
             requiredJob = { "mechanic" }
         },
+        [16] = {
+            name = "bakingsoda",
+            price = 3,
+            amount = 25,
+            info = { quality = 100, },
+            type = "item",
+            slot = 10,
+        },
     },
     ["weedshop"] = {
         [1] = {
@@ -296,6 +304,22 @@ Config.Products = {
             info = {},
             type = "item",
             slot = 5,
+        },
+        [6] = {
+            name = "trimming_scissors",
+            price = 100,
+            amount = 100,
+            info = {},
+            type = "item",
+            slot = 1,
+        },
+        [7] = {
+            name = "finescale",
+            price = 250,
+            amount = 100,
+            info = {},
+            type = "item",
+            slot = 2,
         },
     },
     ["gearshop"] = {

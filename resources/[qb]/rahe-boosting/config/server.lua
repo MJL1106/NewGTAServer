@@ -293,6 +293,30 @@ svConfig = {
             receiveItemIds = {
                 [1] = 'repairkit'
             }
+        },
+        ['hackingdevice'] = {
+            cashRequired = 4000,
+            cryptoRequired = 30,
+            availablePerRestart = 5,
+            isSoldOut = false,
+            title = "Hacking device",
+            description = "Will allow you to bypass vehicle security systems.",
+            iconFile = 'hackingdevice.png',
+            receiveItemIds = {
+                [1] = 'hackingdevice'
+            }
+        },
+        ['gpshackingdevice'] = {
+            cashRequired = 5000,
+            cryptoRequired = 35,
+            availablePerRestart = 5,
+            isSoldOut = false,
+            title = "GPS hacking device",
+            description = "If you wish to disable vehicle GPS systems.",
+            iconFile = 'gpshackingdevice.png',
+            receiveItemIds = {
+                [1] = 'gpshackingdevice'
+            }
         }
     }
 }
