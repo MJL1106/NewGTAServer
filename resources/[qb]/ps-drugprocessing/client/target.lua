@@ -39,12 +39,12 @@ CreateThread(function()
     distance = 2.5
     })
 
-    exports["qb-target"]:AddBoxZone("Weed", vector3(102.07, 175.08, 104.59), 1.65, 2.4, {
+    exports["qb-target"]:AddBoxZone("Weed", vector3(-716.12, -2470.5, 13.95), 1.65, 2.4, {
         name = "Weed",
-        heading = 159.91,
+        heading = 14.29,
         debugPoly = false,
-        minZ = 104,
-        maxZ = 105,
+        minZ = 13.2,
+        maxZ = 14.5,
     }, {
         options = {
             {
@@ -186,7 +186,7 @@ CreateThread(function()
         },
     distance = 3.5
     })
-    exports["qb-target"]:AddBoxZone("cokeleafproc", vector3(1086.2, -3194.9, -38.99), 2.5, 1.4, {
+    exports["qb-target"]:AddBoxZone("cokeleafproc", vector3(1086.2, -3194.9, -39.2), 2.5, 1.4, {
         name = "cokeleafproc",
         heading = 0,
         debugPoly = false,
@@ -204,7 +204,25 @@ CreateThread(function()
         },
     distance = 3.5
     })
-    exports["qb-target"]:AddBoxZone("cokepowdercut", vector3(1092.89, -3195.78, -38.99), 7.65, 1.2, {
+    exports["qb-target"]:AddBoxZone("crackbaggieprocess", vector3(1086, -3197.54, -39.2), 2.5, 1.4, {
+        name = "crackbaggieprocess",
+        heading = 30,
+        debugPoly = false,
+        minZ = -39.39,
+        maxZ = -38.39,
+    }, {
+        options = {
+            {
+                type = "client",
+                event = "ps-drugprocessing:ProcessCrackBaggie",
+                icon = "fas fa-weight-scale",
+                label = "Process Crack baggie",
+                --job = "cokecutter", -- Remove this line if you do not want a job check.
+            },
+        },
+    distance = 3.5
+    })
+    exports["qb-target"]:AddBoxZone("cokepowdercut", vector3(1092.89, -3195.78, -39.2), 7.65, 1.2, {
         name = "cokepowdercut",
         heading = 90,
         debugPoly = false,
@@ -222,7 +240,7 @@ CreateThread(function()
         },
     distance = 3.5
     })
-    exports["qb-target"]:AddBoxZone("cokebricked", vector3(1100.51, -3199.46, -38.93), 2.6, 1.0, {
+    exports["qb-target"]:AddBoxZone("cokebricked", vector3(1100.51, -3199.46, -39.2), 2.6, 1.0, {
         name = "cokebricked",
         heading = 90,
         debugPoly = false,
@@ -240,7 +258,7 @@ CreateThread(function()
         },
     distance = 3.5
     })
-    exports["qb-target"]:AddBoxZone("weedproces", vector3(1038.37, -3206.06, -38.17), 2.6, 1.0, {
+    exports["qb-target"]:AddBoxZone("weedproces", vector3(1038.37, -3206.06, -38.47), 2.6, 1.0, {
         name = "weedproces",
         heading = 0,
         debugPoly = false,

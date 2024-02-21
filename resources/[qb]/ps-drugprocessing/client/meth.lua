@@ -19,7 +19,7 @@ local function ProcessChemicals()
 		while timeLeft > 0 do
 			Wait(1000)
 			timeLeft -= 1
-			if #(GetEntityCoords(playerPed)-Config.CircleZones.MethProcessing.coords) > 2 then
+			if #(GetEntityCoords(playerPed)-Config.CircleZones.MethProcessing.coords) > 3.5 then
 				QBCore.Functions.Notify(Lang:t("error.too_far"), "error")
 				TriggerServerEvent('ps-drugprocessing:cancelProcessing')
 				break
@@ -112,7 +112,7 @@ local function ProcessProduct()
 		while timeLeft > 0 do
 			Wait(1000)
 			timeLeft -= 1
-			if #(GetEntityCoords(playerPed)-Config.CircleZones.MethBag.coords) > 2 then
+			if #(GetEntityCoords(playerPed)-Config.CircleZones.MethBag.coords) > 3.5 then
 				QBCore.Functions.Notify(Lang:t("error.too_far"), "error")
 				TriggerServerEvent('ps-drugprocessing:cancelProcessing')
 				break
@@ -177,21 +177,30 @@ local function ExitMethlab()
 end
 
 RegisterNetEvent('ps-drugprocessing:ProcessChemicals', function()
-	local coords = GetEntityCoords(PlayerPedId(source))
-	
-	if #(coords-Config.CircleZones.MethProcessing.coords) < 5 then
-		if not isProcessing then
-			QBCore.Functions.TriggerCallback('ps-drugprocessing:validate_items', function(result)
-				if result.ret then
-					ProcessChemicals()
-				else
-					QBCore.Functions.Notify(Lang:t("error.no_item", {item = result.item}))
-				end
-			end, {sulfuric_acid = Config.MethProcessing.SulfAcid, hydrochloric_acid = Config.MethProcessing.HydAcid, sodium_hydroxide = Config.MethProcessing.SodHyd})
-		else
-			QBCore.Functions.Notify(Lang:t("error.already_processing"), 'error')
-		end
-	end
+    local coords = GetEntityCoords(PlayerPedId(source))
+
+    if #(coords - Config.CircleZones.MethProcessing.coords) < 5 then
+        if not isProcessing then
+            QBCore.Functions.TriggerCallback('ps-drugprocessing:validate_items', function(result)
+                if result.ret then
+                    ProcessChemicals()
+                else
+                    -- Assuming result.items is a table with item names as keys and required quantities as values
+                    local missingItemsMessage = ""
+                    for item, quantity in pairs(result.items) do
+                        missingItemsMessage = missingItemsMessage .. 1 .. "x " .. quantity .. ", "
+                    end
+                    -- Remove the last comma and space
+                    missingItemsMessage = missingItemsMessage:sub(1, -3)
+
+                    -- Notify with the formatted message
+                    QBCore.Functions.Notify(Lang:t("error.no_item", {item = missingItemsMessage}))
+                end
+            end, {sulfuric_acid = Config.MethProcessing.SulfAcid, hydrochloric_acid = Config.MethProcessing.HydAcid, sodium_hydroxide = Config.MethProcessing.SodHyd})
+        else
+            QBCore.Functions.Notify(Lang:t("error.already_processing"), 'error')
+        end
+    end
 end)
 
 RegisterNetEvent('ps-drugprocessing:ChangeTemp', function()
@@ -208,7 +217,8 @@ RegisterNetEvent('ps-drugprocessing:ChangeTemp', function()
 					end
 				end, 10, 5, 3)
 			else
-				QBCore.Functions.Notify(Lang:t("error.no_item", {item = result.item}))
+				local missingItemsMessage = "1x " .. result.item
+				QBCore.Functions.Notify(Lang:t("error.no_item", {item = missingItemsMessage}))
 			end
 		end, {liquidmix = 1})
 	else
@@ -230,7 +240,8 @@ RegisterNetEvent('ps-drugprocessing:ChangeTemp2', function()
 					end
 				end, 10, 5, 3)
 			else
-				QBCore.Functions.Notify(Lang:t("error.no_item", {item = result.item}))
+				local missingItemsMessage = "1x " .. result.item
+				QBCore.Functions.Notify(Lang:t("error.no_item", {item = missingItemsMessage}))
 			end
 		end, {chemicalvapor = 1})
 	else
@@ -248,7 +259,8 @@ RegisterNetEvent('ps-drugprocessing:ProcessProduct', function()
 				if result.ret then
 					ProcessProduct()
 				else
-					QBCore.Functions.Notify(Lang:t("error.no_item", {item = result.item}))
+					local missingItemsMessage = "1x " .. result.item
+					QBCore.Functions.Notify(Lang:t("error.no_item", {item = missingItemsMessage}))
 				end
 			end, {methtray=1})
 		else

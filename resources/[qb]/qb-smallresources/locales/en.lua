@@ -21,6 +21,7 @@ local Translations = {
         healing_progress = "Healing",
         meth_progress = "Smoking Ass Meth",
         lsd_progress = "Smoking Ass LSD",
+        heroin_progress = "Injecting Black Tar Heroin..",
         joint_progress = "Lighting joint..",
         use_parachute_progress = "Putting on parachute..",
         pack_parachute_progress = "Packing parachute..",

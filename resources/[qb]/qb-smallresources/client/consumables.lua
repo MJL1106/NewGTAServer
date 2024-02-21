@@ -6,6 +6,7 @@ local ParachuteEquiped = false
 local currentVest = nil
 local currentVestTexture = nil
 local healing = false
+local totalConsumed = 0
 
 -- Functions
 RegisterNetEvent('QBCore:Client:UpdateObject', function()
@@ -56,6 +57,7 @@ local function MethBagEffect()
     local startStamina = 8
     TrevorEffect()
     SetRunSprintMultiplierForPlayer(PlayerId(), 1.49)
+    TriggerServerEvent('hud:server:GainStress', math.random(20,25))
     while startStamina > 0 do
         Wait(1000)
         if math.random(5, 100) < 10 then
@@ -87,6 +89,7 @@ local function EcstasyEffect()
 end
 
 local function AlienEffect()
+    AddArmourToPed(PlayerPedId(), 15)
     StartScreenEffect("DrugsMichaelAliensFightIn", 3.0, 0)
     Wait(math.random(5000, 8000))
     StartScreenEffect("DrugsMichaelAliensFight", 3.0, 0)
@@ -95,31 +98,109 @@ local function AlienEffect()
     StopScreenEffect("DrugsMichaelAliensFightIn")
     StopScreenEffect("DrugsMichaelAliensFight")
     StopScreenEffect("DrugsMichaelAliensFightOut")
-    AddArmourToPed(PlayerPedId(), 15)
 end
 
+
+local function HeroinEffect()
+    local playerPed = PlayerPedId() -- Gets the player's ped
+    local damageAmount = 45 -- The amount of health you want to decrease
+
+    -- Get the current health of the player
+    local currentHealth = GetEntityHealth(playerPed)
+
+    -- Calculate the new health value
+    local newHealth = currentHealth - damageAmount
+
+    -- Set the new health value
+    -- Make sure the new health is not less than 0
+    SetEntityHealth(playerPed, math.max(0, newHealth))
+    AddArmourToPed(PlayerPedId(), 40)
+    StartScreenEffect("DrugsMichaelAliensFightIn", 3.0, 0)
+    Wait(math.random(5000, 8000))
+    StartScreenEffect("DrugsMichaelAliensFight", 3.0, 0)
+    Wait(math.random(5000, 8000))
+    StartScreenEffect("DrugsMichaelAliensFightOut", 3.0, 0)
+    StopScreenEffect("DrugsMichaelAliensFightIn")
+    StopScreenEffect("DrugsMichaelAliensFight")
+    StopScreenEffect("DrugsMichaelAliensFightOut")
+end
+
+local playerCrackConsumptionCounts = {}
 local function CrackBaggyEffect()
-    local startStamina = 8
+    local playerId = PlayerId()
+    local playerServerId = GetPlayerServerId(playerId) -- Assuming a multiplayer environment; adjust as needed
     local ped = PlayerPedId()
+
+    -- Initialize the player's consumption count if not already done
+    if not playerCrackConsumptionCounts[playerServerId] then
+        playerCrackConsumptionCounts[playerServerId] = { count = 0, lastDecreaseTime = GetGameTimer() }
+    end
+
+    -- Increase consumption count
+    playerCrackConsumptionCounts[playerServerId].count = playerCrackConsumptionCounts[playerServerId].count + 1
+
+    -- Check for stumbling effect
+    if playerCrackConsumptionCounts[playerServerId].count >= 7 then
+        if math.random(1, 100) <= 80 then -- Adjust the chance as necessary
+            -- Apply stumbling effect
+            SetPedToRagdoll(ped, 1000, 2000, 3, false, false, false)
+        end
+    end
+
+    -- Other effects
+    AddArmourToPed(ped, 15)
+    SetRunSprintMultiplierForPlayer(playerId, 1.3)
     AlienEffect()
-    SetRunSprintMultiplierForPlayer(PlayerId(), 1.3)
+
+    -- Start the effect duration and counter decrease logic
+    local startStamina = 8
     while startStamina > 0 do
         Wait(1000)
-        if math.random(1, 100) < 10 then
-            RestorePlayerStamina(PlayerId(), 1.0)
-        end
-        startStamina -= 1
-        if math.random(1, 100) < 60 and IsPedRunning(ped) then
-            SetPedToRagdoll(ped, math.random(1000, 2000), math.random(1000, 2000), 3, false, false, false)
-        end
-        if math.random(1, 100) < 51 then
-            AlienEffect()
+        RestorePlayerStamina(playerId, 1.0)
+        startStamina = startStamina - 1
+
+        -- Decrease consumption counter every 3 minutes
+        if GetGameTimer() - playerCrackConsumptionCounts[playerServerId].lastDecreaseTime > 45000 then -- 180000 ms = 3 minutes
+            playerCrackConsumptionCounts[playerServerId].count = math.max(0, playerCrackConsumptionCounts[playerServerId].count - 1)
+            playerCrackConsumptionCounts[playerServerId].lastDecreaseTime = GetGameTimer()
         end
     end
-    if IsPedRunning(ped) then
-        SetPedToRagdoll(ped, math.random(1000, 3000), math.random(1000, 3000), 3, false, false, false)
+
+    -- Reset run sprint multiplier after effects wear off
+    SetRunSprintMultiplierForPlayer(playerId, 1.0)
+end
+
+local playerLSDConsumptionCounts = {}
+local function LSDTabEffect()
+    local playerId = PlayerId()
+    local playerServerId = GetPlayerServerId(playerId) -- Assuming a multiplayer environment; adjust as needed
+    local ped = PlayerPedId()
+
+    -- Initialize the player's consumption count if not already done
+    if not playerLSDConsumptionCounts[playerServerId] then
+        playerLSDConsumptionCounts[playerServerId] = { count = 0, lastDecreaseTime = GetGameTimer() }
     end
-    SetRunSprintMultiplierForPlayer(PlayerId(), 1.0)
+
+    -- Increase consumption count
+    playerLSDConsumptionCounts[playerServerId].count = playerLSDConsumptionCounts[playerServerId].count + 1
+
+    -- Check for stumbling effect
+    if playerLSDConsumptionCounts[playerServerId].count >= 12 then
+        if math.random(1, 100) <= 75 then -- Adjust the chance as necessary
+            -- Apply stumbling effect
+            SetPedToRagdoll(ped, 1000, 2000, 3, false, false, false)
+        end
+    end
+
+    AlienEffect()
+
+
+    -- Decrease consumption counter every 3 minutes
+    if GetGameTimer() - playerLSDConsumptionCounts[playerServerId].lastDecreaseTime > 80000 then -- 180000 ms = 3 minutes
+        playerLSDConsumptionCounts[playerServerId].count = math.max(0, playerLSDConsumptionCounts[playerServerId].count - 2)
+        playerLSDConsumptionCounts[playerServerId].lastDecreaseTime = GetGameTimer()
+    end
+
 end
 
 local function CokeBaggyEffect()
@@ -374,10 +455,11 @@ RegisterNetEvent('consumables:client:UseJoint', function()
             TriggerEvent('animations:client:EmoteCommandStart', {"smokeweed"})  
         end
         TriggerEvent("evidence:client:SetStatus", "weedsmell", 300)
-        for i = 1, 5, 1 do
+        -- for i = 1, 5, 1 do
             Wait(10000)
-            TriggerServerEvent('hud:server:RelieveStress', math.random(5, 10))
-        end           
+            TriggerServerEvent('hud:server:RelieveStress', math.random(25, 35))
+            AddArmourToPed(PlayerPedId(), 10)
+        -- end           
         TriggerEvent('animations:client:SmokeWeed')
     end)
 end)
@@ -495,7 +577,7 @@ RegisterNetEvent('consumables:client:ResetArmor', function()
     end
 end)
 RegisterNetEvent('consumables:client:LSD', function()
-    QBCore.Functions.Progressbar("snort_lsd", Lang:t('consumables.lsd_progress'), 1500, false, true, {
+    QBCore.Functions.Progressbar("snort_lsd", Lang:t('consumables.lsd_progress'), math.random(3500, 5000), false, true, {
         disableMovement = false,
         disableCarMovement = false,
         disableMouse = false,
@@ -508,7 +590,29 @@ RegisterNetEvent('consumables:client:LSD', function()
         StopAnimTask(PlayerPedId(), "switch@trevor@trev_smoking_meth", "trev_smoking_meth_loop", 1.0)
         TriggerServerEvent("consumables:server:useLSD")
         TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["lsd"], "remove")
-        AlienEffect()        
+        LSDTabEffect()       
+    end, function() -- Cancel
+        StopAnimTask(PlayerPedId(), "switch@trevor@trev_smoking_meth", "trev_smoking_meth_loop", 1.0)
+        QBCore.Functions.Notify(Lang:t('consumables.canceled'), "error")
+    end)
+end)
+
+RegisterNetEvent('consumables:client:heroin', function()
+    QBCore.Functions.Progressbar("use_heroin", Lang:t('consumables.heroin_progress'), math.random(8000, 10000), false, true, {
+        disableMovement = false,
+        disableCarMovement = false,
+        disableMouse = false,
+        disableCombat = true,
+    }, {
+        animDict = "switch@trevor@trev_smoking_meth",
+        anim = "trev_smoking_meth_loop",
+        flags = 49,
+    }, {}, {}, function() -- Done
+        StopAnimTask(PlayerPedId(), "switch@trevor@trev_smoking_meth", "trev_smoking_meth_loop", 1.0)
+        TriggerServerEvent("consumables:server:useHeroin")
+        TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["heroin"], "remove")
+        TriggerServerEvent('hud:server:GainStress',20)
+        HeroinEffect()      
     end, function() -- Cancel
         StopAnimTask(PlayerPedId(), "switch@trevor@trev_smoking_meth", "trev_smoking_meth_loop", 1.0)
         QBCore.Functions.Notify(Lang:t('consumables.canceled'), "error")

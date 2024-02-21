@@ -1,6 +1,6 @@
 Config = {}
 
-Config.KeyRequired = true
+Config.KeyRequired = false
 
 Config.Delays = {
 	WeedProcessing = 1000 * 10,
@@ -60,7 +60,7 @@ Config.CokeLab = {
 
 Config.WeedLab = {
 	["enter"] = {
-		coords = vector4(102.07, 175.09, 104.59, 165.63), 
+		coords = vector4(-716.12, -2470.5, 13.95, 14.29), 
     },
     ["exit"] = {
         coords = vector4(1066.01, -3183.38, -39.16, 93.01), -- GTA DLC Weed Lab -- 

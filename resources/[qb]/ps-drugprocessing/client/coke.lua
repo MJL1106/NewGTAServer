@@ -215,6 +215,38 @@ local function ProcessBricks()
 	end)
 end
 
+local function ProcessCrack()
+    isProcessing = true
+    local playerPed = PlayerPedId()
+
+    TaskStartScenarioInPlace(playerPed, "PROP_HUMAN_PARKING_METER", 0, true)
+
+    QBCore.Functions.Progressbar("search_register", Lang:t("progressbar.processing"), 1000, false, true, {
+        disableMovement = true,
+        disableCarMovement = true,
+        disableMouse = false,
+        disableCombat = true,
+    }, {}, {}, {}, function()
+        TriggerServerEvent('ps-drugprocessing:processCrack')
+
+        local timeLeft = Config.Delays.CokeProcessing / 1000
+        while timeLeft > 0 do
+            Wait(1000)
+            timeLeft -= 1
+
+            if #(GetEntityCoords(playerPed)-Config.CircleZones.CokeProcessing.coords) > 4 then
+                TriggerServerEvent('ps-drugprocessing:cancelProcessing')
+                break
+            end
+        end
+        ClearPedTasks(playerPed)
+        isProcessing = false
+    end, function()
+        ClearPedTasks(playerPed)
+        isProcessing = false
+    end)
+end
+
 RegisterNetEvent('ps-drugprocessing:ProcessCocaFarm', function()
 	local coords = GetEntityCoords(PlayerPedId())
 
@@ -224,7 +256,7 @@ RegisterNetEvent('ps-drugprocessing:ProcessCocaFarm', function()
 				if result.ret then
 					ProcessCoke()
 				else
-					QBCore.Functions.Notify(Lang:t("error.no_item", {item = result.item}))
+					QBCore.Functions.Notify("You need "..Config.CokeProcessing.CokeLeaf.. "x Cocaine leaves and 1x Trimming Scissors")
 				end
 			end, {coca_leaf = Config.CokeProcessing.CokeLeaf, trimming_scissors = 1})
 		end
@@ -247,13 +279,30 @@ RegisterNetEvent('ps-drugprocessing:ProcessCocaPowder', function()
 				if result.ret then
 					CutCokePowder()
 				else
-					QBCore.Functions.Notify(Lang:t("error.no_item", {item = result.item}))
+					QBCore.Functions.Notify("You need "..Config.CokeProcessing.Coke.. "x Cocaine, " .. Config.CokeProcessing.BakingSoda 
+					.. "x Baking Soda, and 1x Fine scale")
 				end
 			end, check)
 		else
 			QBCore.Functions.Notify(Lang:t("error.already_processing"), 'error')
 		end
 	end
+end)
+
+RegisterNetEvent('ps-drugprocessing:ProcessCrackBaggie', function()
+    local coords = GetEntityCoords(PlayerPedId())
+
+    if #(coords-Config.CircleZones.CokeProcessing.coords) < 5 then
+        if not isProcessing then
+            QBCore.Functions.TriggerCallback('ps-drugprocessing:validate_items', function(result)
+                if result.ret then
+                    ProcessCrack()
+                else
+                    QBCore.Functions.Notify("You need 1x Cocaine powder, 1x Baking Soda, 1x Empty baggie, and 1x Bottle of water")
+                end
+            end, {coke = 1, bakingsoda = 1, emptybaggie = 1, water_bottle = 1})
+        end
+    end
 end)
 
 RegisterNetEvent('ps-drugprocessing:ProcessBricks', function()
@@ -266,7 +315,7 @@ RegisterNetEvent('ps-drugprocessing:ProcessBricks', function()
 				if result.ret then
 					ProcessBricks()
 				else
-					QBCore.Functions.Notify(Lang:t("error.no_item", {item = result.item}))
+					QBCore.Functions.Notify("You need "..amount.. "x Coke packages and 1x Fine scale")
 				end
 			end, {coke_small_brick = Config.CokeProcessing.SmallBrick, finescale = 1})
 		else

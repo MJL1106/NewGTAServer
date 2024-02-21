@@ -116,7 +116,7 @@ RegisterNetEvent('ps-drugprocessing:ProcessPoppy', function()
 				if result.ret then
 					ProcessHeroin()
 				else
-					QBCore.Functions.Notify(Lang:t("error.no_item", {item = result.item}))
+					QBCore.Functions.Notify("You need 1x Poppy leaves")
 				end
 			end, {poppyresin = Config.HeroinProcessing.Poppy})
 		end
