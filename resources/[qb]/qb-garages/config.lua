@@ -371,76 +371,76 @@ Config.Garages = {
         ["type"] = "depot",                --public, job, gang, depot
         ["vehicle"] = "sea"                 --car, air, sea, rig
     },
-    ["rigdepot"] = {
-        ["label"] = "Big Rig Depot",
-        ["takeVehicle"] = vector3(2373.64, 3104.58, 48.05),
-        ["spawnPoint"] = vector4(2373.63, 3110.19, 48.12, 123.26),
-        ["showBlip"] = true,
-        ["blipName"] = "Big Rig Depot",
-        ["blipNumber"] = 68,
-        ["blipColor"] = 2,
-        ["type"] = "depot",                --public, job, gang, depot
-        ["vehicle"] = "rig"                 --car, air, sea, rig
-    },
-    ["dumborigparking"] = {
-        ["label"] = "Dumbo Big Rig Parking",
-        ["takeVehicle"] = vector3(161.23, -3188.73, 5.97),
-        ["spawnPoint"] = vector4(172.59, -3178.28, 5.79, 269.66),
-        ["putVehicle"] =vector3(172.64, -3182.48, 5.79),
-        ["showBlip"] = true,
-        ["blipName"] = "Big Rig Parking",
-        ["blipNumber"] = 357,
-        ["blipColor"] = 2,
-        ["type"] = "public",                --public, job, gang, depot
-        ["vehicle"] = "rig"                 --car, air, sea, rig
-    },
-    ["popsrigparking"] = {
-        ["label"] = "Pop's Big Rig Parking",
-        ["takeVehicle"] = vector3(121.05, 6587.59, 32.09),
-        ["spawnPoint"] = vector4(131.08, 6589.77, 31.99, 272.9),
-        ["putVehicle"] = vector3(126.08, 6595.23, 31.95),
-        ["showBlip"] = true,
-        ["blipName"] = "Big Rig Parking",
-        ["blipNumber"] = 357,
-        ["blipColor"] = 2,
-        ["type"] = "public",                --public, job, gang, depot
-        ["vehicle"] = "rig"                 --car, air, sea, rig
-    },
-    ["ronsrigparking"] = {
-        ["label"] = "Ron's Big Rig Parking",
-        ["takeVehicle"] = vector3(-2523.99, 2319.13, 33.22),
-        ["spawnPoint"] = vector4(-2531.0, 2335.86, 33.13, 210.88),
-        ["putVehicle"] = vector3(-2526.56, 2335.61, 33.06),
-        ["showBlip"] = true,
-        ["blipName"] = "Big Rig Parking",
-        ["blipNumber"] = 357,
-        ["blipColor"] = 2,
-        ["type"] = "public",                --public, job, gang, depot
-        ["vehicle"] = "rig"                 --car, air, sea, rig
-    },
-    ["ronsrigparking2"] = {
-        ["label"] = "Ron's Big Rig Parking",
-        ["takeVehicle"] = vector3(2567.7, 463.03, 108.6),
-        ["spawnPoint"] = vector4(2555.24, 446.92, 108.52, 314.79),
-        ["putVehicle"] = vector3(2558.69, 425.04, 108.52),
-        ["showBlip"] = false,
-        ["blipName"] = "Big Rig Parking",
-        ["blipNumber"] = 357,
-        ["blipColor"] = 2,
-        ["type"] = "public",                --public, job, gang, depot
-        ["vehicle"] = "rig"                 --car, air, sea, rig
-    },
-    ["ronsrigparking3"] = {
-        ["label"] = "Ron's Big Rig Parking",
-        ["takeVehicle"] = vector3(-23.63, -2551.7, 6.14),
-        ["spawnPoint"] = vector4(-32.81, -2536.0, 6.07, 53.26),
-        ["putVehicle"] = vector3(-36.32, -2541.84, 6.07),
-        ["showBlip"] = false,
-        ["blipName"] = "Big Rig Parking",
-        ["blipNumber"] = 357,
-        ["blipColor"] = 2,
-        ["type"] = "public",                --public, job, gang, depot
-        ["vehicle"] = "rig"                 --car, air, sea, rig
-    },
+    -- ["rigdepot"] = {
+    --     ["label"] = "Big Rig Depot",
+    --     ["takeVehicle"] = vector3(2373.64, 3104.58, 48.05),
+    --     ["spawnPoint"] = vector4(2373.63, 3110.19, 48.12, 123.26),
+    --     ["showBlip"] = true,
+    --     ["blipName"] = "Big Rig Depot",
+    --     ["blipNumber"] = 68,
+    --     ["blipColor"] = 2,
+    --     ["type"] = "depot",                --public, job, gang, depot
+    --     ["vehicle"] = "rig"                 --car, air, sea, rig
+    -- },
+    -- ["dumborigparking"] = {
+    --     ["label"] = "Dumbo Big Rig Parking",
+    --     ["takeVehicle"] = vector3(161.23, -3188.73, 5.97),
+    --     ["spawnPoint"] = vector4(172.59, -3178.28, 5.79, 269.66),
+    --     ["putVehicle"] =vector3(172.64, -3182.48, 5.79),
+    --     ["showBlip"] = true,
+    --     ["blipName"] = "Big Rig Parking",
+    --     ["blipNumber"] = 357,
+    --     ["blipColor"] = 2,
+    --     ["type"] = "public",                --public, job, gang, depot
+    --     ["vehicle"] = "rig"                 --car, air, sea, rig
+    -- },
+    -- ["popsrigparking"] = {
+    --     ["label"] = "Pop's Big Rig Parking",
+    --     ["takeVehicle"] = vector3(121.05, 6587.59, 32.09),
+    --     ["spawnPoint"] = vector4(131.08, 6589.77, 31.99, 272.9),
+    --     ["putVehicle"] = vector3(126.08, 6595.23, 31.95),
+    --     ["showBlip"] = true,
+    --     ["blipName"] = "Big Rig Parking",
+    --     ["blipNumber"] = 357,
+    --     ["blipColor"] = 2,
+    --     ["type"] = "public",                --public, job, gang, depot
+    --     ["vehicle"] = "rig"                 --car, air, sea, rig
+    -- },
+    -- ["ronsrigparking"] = {
+    --     ["label"] = "Ron's Big Rig Parking",
+    --     ["takeVehicle"] = vector3(-2523.99, 2319.13, 33.22),
+    --     ["spawnPoint"] = vector4(-2531.0, 2335.86, 33.13, 210.88),
+    --     ["putVehicle"] = vector3(-2526.56, 2335.61, 33.06),
+    --     ["showBlip"] = true,
+    --     ["blipName"] = "Big Rig Parking",
+    --     ["blipNumber"] = 357,
+    --     ["blipColor"] = 2,
+    --     ["type"] = "public",                --public, job, gang, depot
+    --     ["vehicle"] = "rig"                 --car, air, sea, rig
+    -- },
+    -- ["ronsrigparking2"] = {
+    --     ["label"] = "Ron's Big Rig Parking",
+    --     ["takeVehicle"] = vector3(2567.7, 463.03, 108.6),
+    --     ["spawnPoint"] = vector4(2555.24, 446.92, 108.52, 314.79),
+    --     ["putVehicle"] = vector3(2558.69, 425.04, 108.52),
+    --     ["showBlip"] = false,
+    --     ["blipName"] = "Big Rig Parking",
+    --     ["blipNumber"] = 357,
+    --     ["blipColor"] = 2,
+    --     ["type"] = "public",                --public, job, gang, depot
+    --     ["vehicle"] = "rig"                 --car, air, sea, rig
+    -- },
+    -- ["ronsrigparking3"] = {
+    --     ["label"] = "Ron's Big Rig Parking",
+    --     ["takeVehicle"] = vector3(-23.63, -2551.7, 6.14),
+    --     ["spawnPoint"] = vector4(-32.81, -2536.0, 6.07, 53.26),
+    --     ["putVehicle"] = vector3(-36.32, -2541.84, 6.07),
+    --     ["showBlip"] = false,
+    --     ["blipName"] = "Big Rig Parking",
+    --     ["blipNumber"] = 357,
+    --     ["blipColor"] = 2,
+    --     ["type"] = "public",                --public, job, gang, depot
+    --     ["vehicle"] = "rig"                 --car, air, sea, rig
+    -- },
 }
 Config.HouseGarages = {}
