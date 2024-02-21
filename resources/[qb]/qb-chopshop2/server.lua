@@ -35,34 +35,34 @@ end
 
 -- Loops
 
-CreateThread(function()
-    while true do
-        Wait(5000)
-        if not inProgress then
-            if randomLoc == nil and randomVeh == nil and currentplate == nil then
-                randomLoc = randomLocations[math.random(1, #randomLocations)]
-                randomVeh = randomModels[math.random(1, #randomModels)]
-                inProgress = true
-                Wait(1000)
-                local nativeHash = GetHashKey("CREATE_AUTOMOBILE")
-                chopvehicle = Citizen.InvokeNative(nativeHash, GetHashKey(randomVeh), randomLoc.x, randomLoc.y, randomLoc.z, randomLoc.w, true, true)
-                while not DoesEntityExist(chopvehicle) do Wait(0) end
-                currentplate = QBCore.Shared.RandomInt(2) .. QBCore.Shared.RandomStr(3) .. QBCore.Shared.RandomInt(3)
-                SetVehicleNumberPlateText(chopvehicle, currentplate)
-                SetVehicleDoorsLocked(chopvehicle, 2)
-                print(tostring("Vehicle: " .. randomVeh .. " | Coords: " .. randomLoc .. " | Plate: " .. currentplate))
-                local Players = QBCore.Functions.GetPlayers()
-                for i = 1, #Players, 1 do
-                    local Player = QBCore.Functions.GetPlayer(Players[i])
-                    if Player.Functions.GetItemByName(ChopItem) then
-                        TriggerClientEvent('cad-chopshop:notifyOwner', Players[i], randomLoc.x, randomLoc.y, randomLoc.z, randomVeh, currentplate)
-                    end
-                end
-                CooldownTimer(Config.Cooldowns)
-            end
-        end
-    end
-end)
+-- CreateThread(function()
+--     while true do
+--         Wait(5000)
+--         if not inProgress then
+--             if randomLoc == nil and randomVeh == nil and currentplate == nil then
+--                 randomLoc = randomLocations[math.random(1, #randomLocations)]
+--                 randomVeh = randomModels[math.random(1, #randomModels)]
+--                 inProgress = true
+--                 Wait(1000)
+--                 local nativeHash = GetHashKey("CREATE_AUTOMOBILE")
+--                 chopvehicle = Citizen.InvokeNative(nativeHash, GetHashKey(randomVeh), randomLoc.x, randomLoc.y, randomLoc.z, randomLoc.w, true, true)
+--                 while not DoesEntityExist(chopvehicle) do Wait(0) end
+--                 currentplate = QBCore.Shared.RandomInt(2) .. QBCore.Shared.RandomStr(3) .. QBCore.Shared.RandomInt(3)
+--                 SetVehicleNumberPlateText(chopvehicle, currentplate)
+--                 SetVehicleDoorsLocked(chopvehicle, 2)
+--                 print(tostring("Vehicle: " .. randomVeh .. " | Coords: " .. randomLoc .. " | Plate: " .. currentplate))
+--                 local Players = QBCore.Functions.GetPlayers()
+--                 for i = 1, #Players, 1 do
+--                     local Player = QBCore.Functions.GetPlayer(Players[i])
+--                     if Player.Functions.GetItemByName(ChopItem) then
+--                         TriggerClientEvent('cad-chopshop:notifyOwner', Players[i], randomLoc.x, randomLoc.y, randomLoc.z, randomVeh, currentplate)
+--                     end
+--                 end
+--                 CooldownTimer(Config.Cooldowns)
+--             end
+--         end
+--     end
+-- end)
 
 -- Create Usable Items
 
