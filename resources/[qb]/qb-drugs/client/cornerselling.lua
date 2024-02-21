@@ -339,6 +339,33 @@ local function SellToPed(ped)
     end
 end
 
+function spawnWalkingNPC(modelName, x, y, z, heading)
+    local model = GetHashKey(modelName)
+
+    RequestModel(model)
+    while not HasModelLoaded(model) do
+        Wait(1) -- Wait for the model to load
+    end
+
+    local playerPed = PlayerPedId() -- Get the player ped to move the NPC towards
+    local ped = CreatePed(4, model, x, y, z, heading, false, true)
+
+    -- Ensure the ped doesn't despawn automatically when far away
+    SetEntityAsMissionEntity(ped, true, false)
+
+    -- Make the NPC move towards the player at a walking pace
+    TaskGoToEntity(ped, playerPed, -1, 5.0, 1.0, 1073741824.0, 0)
+
+    -- Optionally set move rate override (1.0 is normal walking speed)
+    SetPedMoveRateOverride(ped, 1.0)
+
+    -- Make the ped react in a friendly manner and not flee when shots are fired
+    SetPedFleeAttributes(ped, 0, 0)
+    SetPedCombatAttributes(ped, 17, 1)
+
+    SetModelAsNoLongerNeeded(model)
+end
+
 local function ToggleSelling()
     if not cornerselling then
         cornerselling = true
@@ -363,10 +390,19 @@ local function ToggleSelling()
                     end
                 end
                 local startDist = #(startLocation - coords)
-                if startDist > 10 then
+                if startDist > 30 then
                     TooFarAway()
                 end
                 Wait(0)
+            end
+        end)
+        -- Start the NPC spawning thread
+        CreateThread(function()
+            while cornerselling do
+                local x, y, z = table.unpack(startLocation + vector3(math.random(-15, 15), math.random(-15, 15), 0))
+                spawnWalkingNPC("a_m_m_skater_01", x, y, z, math.random(0, 360))
+
+                Wait(90000) -- Wait 90 seconds before spawning the next NPC
             end
         end)
     else
