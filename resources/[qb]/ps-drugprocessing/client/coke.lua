@@ -224,7 +224,7 @@ RegisterNetEvent('ps-drugprocessing:ProcessCocaFarm', function()
 				if result.ret then
 					ProcessCoke()
 				else
-					QBCore.Functions.Notify(Lang:t("error.no_item", {item = result.item}))
+					QBCore.Functions.Notify("You need "..Config.CokeProcessing.CokeLeaf.. "x Cocaine leaves and 1x Trimming Scissors")
 				end
 			end, {coca_leaf = Config.CokeProcessing.CokeLeaf, trimming_scissors = 1})
 		end
@@ -247,7 +247,8 @@ RegisterNetEvent('ps-drugprocessing:ProcessCocaPowder', function()
 				if result.ret then
 					CutCokePowder()
 				else
-					QBCore.Functions.Notify(Lang:t("error.no_item", {item = result.item}))
+					QBCore.Functions.Notify("You need "..Config.CokeProcessing.Coke.. "x Cocaine, " .. Config.CokeProcessing.BakingSoda 
+					.. "x Baking Soda, and 1x Fine scale")
 				end
 			end, check)
 		else
@@ -266,7 +267,7 @@ RegisterNetEvent('ps-drugprocessing:ProcessBricks', function()
 				if result.ret then
 					ProcessBricks()
 				else
-					QBCore.Functions.Notify(Lang:t("error.no_item", {item = result.item}))
+					QBCore.Functions.Notify("You need "..amount.. "x Coke packages and 1x Fine scaleaaa")
 				end
 			end, {coke_small_brick = Config.CokeProcessing.SmallBrick, finescale = 1})
 		else

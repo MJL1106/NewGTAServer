@@ -37,9 +37,11 @@ RegisterServerEvent('ps-drugprocessing:processThionylChloride', function()
 			end
 		else
 			Player.Functions.AddItem("lsa", 1)
+			print("inside lsa")
 			TriggerClientEvent('QBCore:Notify', src, Lang:t("error.no_chemicals"), "error")
 		end
 	else
+		print("got neither")
 		TriggerClientEvent('QBCore:Notify', src, Lang:t("error.no_lsa"), "error")
 	end
 end)

@@ -64,31 +64,42 @@ local function Processthionylchloride()
 	end)
 end
 
+local counter = 0
 CreateThread(function()
-    while true do
-        Wait(0)
         local playerPed = PlayerPedId()
         local coords = GetEntityCoords(playerPed)
 
-        if #(coords-Config.CircleZones.lsdProcessing.coords) < 2 then
-            if not isProcessing then
-                local pos = GetEntityCoords(PlayerPedId())
-                QBCore.Functions.DrawText3D(pos.x, pos.y, pos.z, Lang:t("drawtext.process_lsd"))
-            end
-            if IsControlJustReleased(0, 38) and not isProcessing then
-				QBCore.Functions.TriggerCallback('ps-drugprocessing:validate_items', function(result)
-					if result.ret then
-                        Processlsd()
-					else
-						QBCore.Functions.Notify(Lang:t("error.no_item", {item = result.item}))
-					end
-				end, {lsa = 1, thionyl_chloride = 1})
-            end
-        else
-            Wait(500)
-        end
-    end
+        exports['qb-target']:AddBoxZone("lsdProcessing", vector3(2503.45, -427.49, 92.99), 2.0,2.0, {
+			name="lsdProcessing",
+			heading = 356.5,
+			debugPoly=false,
+			minZ=92.5,
+			maxZ=93.3,
+		}, {
+			options = {
+				{
+					type = "client",
+					action = function()
+						if not isProcessing then
+							QBCore.Functions.TriggerCallback('ps-drugprocessing:validate_items', function(result)
+								if result.ret then
+									Processlsd() -- Directly call the processing function
+								else
+									QBCore.Functions.Notify("You need 1x LSD and 1x Thionyl Chloride")
+								end
+							end, {lsa = 1, thionyl_chloride = 1})
+						end
+					end,
+					icon = "fas fa-capsules",
+					label = "Process LSD",
+					job = all,
+				},
+			},
+			distance = 2.0
+		})
 end)
+
+
 
 RegisterNetEvent('ps-drugprocessing:processingThiChlo', function()
 	local coords = GetEntityCoords(PlayerPedId(source))
@@ -99,7 +110,7 @@ RegisterNetEvent('ps-drugprocessing:processingThiChlo', function()
 				if result.ret then
 					Processthionylchloride()
 				else
-					QBCore.Functions.Notify(Lang:t("error.no_item", {item = result.item}))
+					QBCore.Functions.Notify("You need 1x LSA and 1x Chemicals")
 				end
 			end, {lsa = 1, chemicals = 1})
 		end

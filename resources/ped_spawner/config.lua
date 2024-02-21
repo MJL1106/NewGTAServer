@@ -77,8 +77,8 @@ Config.PedList = {
 
 	{ --WEED
 		model = "mp_f_weed_01",
-		coords = vector3(102.07, 175.08, 104.59), --
-		heading = 159.91, 
+		coords = vector3(-716.12, -2470.5, 13.95), --
+		heading = 14.29, 
 		gender = "female", 
 	    isRendered = false,
         ped = nil,
@@ -150,24 +150,27 @@ Config.PedList = {
 	    isRendered = false,
         ped = nil,
     },
+	----------------------------------------
+	---      Drug Process Peds     ---
+	----------------------------------------
+
+	{
+		model = "mp_m_shopkeep_01",
+		coords = vector3(-679.62, 5800.59, 17.33), --INESENO RD
+		heading = 153.17, 
+		gender = "male", 
+	    isRendered = false,
+        ped = nil,
+    },
 	
-	-- {
-	-- 	model = "mp_m_shopkeep_01",
-	-- 	coords = vector3(-3038.8520507812,584.50695800781,7.9089326858521), --INESENO RD
-	-- 	heading = 10.0, 
-	-- 	gender = "male", 
-	--     isRendered = false,
-    --     ped = nil,
-    -- },
-	
-	-- {
-	-- 	model = "mp_m_shopkeep_01",
-	-- 	coords = vector3(372.544921875,326.61099243164,103.56636047363), --CLINTON AVE VINEWOOD
-	-- 	heading = 250.0, 
-	-- 	gender = "male", 
-	--     isRendered = false,
-    --     ped = nil,
-    -- },
+	{
+		model = "a_m_m_trampbeac_01",
+		coords = vector3(2503.35, -427.38, 92.99), --CLINTON AVE VINEWOOD
+		heading = 177.12, 
+		gender = "male", 
+	    isRendered = false,
+        ped = nil,
+    },
 	
 	-- {
 	-- 	model = "mp_m_shopkeep_01",
