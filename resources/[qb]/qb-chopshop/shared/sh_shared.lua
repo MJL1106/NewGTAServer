@@ -236,6 +236,6 @@ Shared.DropOffLocations = { -- You can always add more vector3 coordinates
     vector3(2053.63, 3193.05, 44.48), -- small sandy
     vector3(2351.43, 3133.49, 47.5), -- big sandy
     vector3(2339.95, 3050.42, 47.45), -- big sandy
-    vector3(-197.28, 6271.4, 30.79) -- paleto
+    vector3(-197.28, 6271.4, 30.79), -- paleto
     vector3(-377.6, -2673.21, 6.02) -- Docks Warehouse
 }

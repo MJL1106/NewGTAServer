@@ -738,6 +738,8 @@ QBShared.Items = {
 	["farm_sumo_limao"]  		= {["name"] = "farm_sumo_limao", 				["label"] = "Lemon Juice", 						["weight"] = 100, 		["type"] = "item", 			["image"] = "farm_sumo_limao.png", 				["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,    ["combinable"] = nil,   ["description"] = ""},
     ---------recycle
 	["chopradio"] = {["name"] = "chopradio", ["label"] = "Chop Radio", ["weight"] = 500, ["type"] = "item", ["image"] = "chopradio.png", ["unique"] = false, ["useable"] = true,     ["shouldClose"] = true, ["combinable"] = nil, ["description"] = "Special radio which informs you about cool stuff"},
+
+	["radio"] = {["name"] = "radio", ["label"] = "Radio", ["weight"] = 500, ["type"] = "item", ["image"] = "radio.png", ["unique"] = false, ["useable"] = true,     ["shouldClose"] = true, ["combinable"] = nil, ["description"] = "Communication Device"},
     -- Jim-Recycle Items
 ["recyclablematerial"]  = {["name"] = "recyclablematerial",   ["label"] = "Recycle Box",      ["weight"] = 100, ["type"] = "item", 		["image"] = "recyclablematerial.png",   ["unique"] = false, 	["useable"] = false, 	["shouldClose"] = false, ["combinable"] = nil,   ["description"] = "A box of Recyclable Materials"},
 ["bottle"]              = {["name"] = "bottle",               ["label"] = "Empty Bottle",     ["weight"] = 10,  ["type"] = "item", 		["image"] = "bottle.png",               ["unique"] = false, 	["useable"] = false, 	["shouldClose"] = false, ["combinable"] = nil,   ["description"] = "A glass bottle"},
