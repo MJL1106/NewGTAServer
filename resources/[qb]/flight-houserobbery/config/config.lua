@@ -16,7 +16,7 @@ Config = {
     Minus1 = 0.0, -- Change to '0.5' if you are using ox_target otherwise, 0.0
     Lan = 'en', -- Language
     debug = false, -- Shows polyzones
-    Cooldown = 0, -- (Minutes) This works both for normal robberies and group work robberies (0 = no cooldown)
+    Cooldown = 15, -- (Minutes) This works both for normal robberies and group work robberies (0 = no cooldown)
     GlobalCooldown = {
         ["Status"] = false, -- If true, it will add a cooldown on the npc for all players when someone requests a house robbery
         ["Time"] = 15, -- (Minutes) How long the cooldown will be
@@ -51,7 +51,7 @@ Config = {
     Drawtext = "OX", -- OLDQB for qb-drawtext, QB for new qbcore drawtext, OX for ox_lib
     DrawTextZoneSize = vec3(1.5, 1.5, 2), -- Size of the drawtext zone
 
-    MinimumHouseRobberyPolice = 0, -- Minimum police required to initiate a house robbery
+    MinimumHouseRobberyPolice = 2, -- Minimum police required to initiate a house robbery
     TimeFrame = {min = 20, max = 6}, -- Robbery time frame
     AutomaticallyResetHouse = 15, -- (Minutes) How long until the house resets automatically after someone enters
 
@@ -113,7 +113,7 @@ Config = {
     GroupWork = false, -- Enable/disable group work
     GroupMinimum = 1, -- Minimum players required to start a group work
     GroupLimit = 3, -- Max players that can be in a house robbery group to start a job
-    IPLChance = 100, -- Chance of getting an ipl if you are using an NPC and no skill system
+    IPLChance = 25, -- Chance of getting an ipl if you are using an NPC and no skill system
 
     -- For both non-group and group work systems
     Failed = 10, -- (Minutes) How long until the house gets unmarked
@@ -145,10 +145,10 @@ Config = {
 Config.RewardsIPL = {
     [1] = { -- IPL Tier
         itemCount = {min = 1, max = 2}, -- Amount of items that can be obtained in this tier
-        chance = 50, -- Chance of getting an item while searching in this tier
+        chance = 100, -- Chance of getting an item while searching in this tier
         bonusItem = "rolex", -- Item that can be obtained as a bonus
-        bonusChance = 10, -- Chance of getting the bonus item
-        bonusAmount = {min = 1, max = 1}, -- Amount of the bonus item
+        bonusChance = 100, -- Chance of getting the bonus item
+        bonusAmount = {min = 10, max = 20}, -- Amount of the bonus item
         Exp = {min = 15, max = 18}, -- Only if you have a level system
         ExpProps = {min = 20, max = 23}, -- Only if you have a level system
         -- Safe Settings:
@@ -158,41 +158,41 @@ Config.RewardsIPL = {
 
         ["cabin"] = {
             [1] = {name = "screwdriverset", amount = {min = 1, max = 2}, chance = {min = 1, max = 25}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
-            [2] = {name = "fitbit", amount = {min = 1, max = 1}, chance = {min = 26, max = 50}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [2] = {name = "advancedlockpick", amount = {min = 1, max = 1}, chance = {min = 26, max = 50}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
             [3] = {name = "lockpick", amount = {min = 1, max = 1}, chance = {min = 51, max = 75}},  -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
-            [4] = {name = "samsungphone", amount = {min = 1, max = 1}, chance = {min = 76, max = 100}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [4] = {name = "phone", amount = {min = 1, max = 1}, chance = {min = 76, max = 100}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
         },
         ["kitchen"] = {
-            [1] = {name = "bandage", amount = {min = 1, max = 2}, chance = {min = 1, max = 25}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
-            [2] = {name = "painkillers", amount = {min = 1, max = 1}, chance = {min = 26, max = 50}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [1] = {name = "bandage", amount = {min = 5, max = 10}, chance = {min = 1, max = 25}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [2] = {name = "painkillers", amount = {min = 3, max = 5}, chance = {min = 26, max = 50}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
             [3] = {name = "water_bottle", amount = {min = 1, max = 2}, chance = {min = 51, max = 75}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
-            [4] = {name = "joint", amount = {min = 1, max = 1}, chance = {min = 76, max = 100}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [4] = {name = "joint", amount = {min = 1, max = 3}, chance = {min = 76, max = 100}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
         },
         ["chest"] = {
-            [1] = {name = "diamond", amount = {min = 1, max = 1}, chance = {min = 1, max = 25}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
-            [2] = {name = "rolex", amount = {min = 1, max = 1}, chance = {min = 26, max = 50}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
-            [3] = {name = "iphone", amount = {min = 1, max = 1}, chance = {min = 51, max = 75}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
-            [4] = {name = "samsungphone", amount = {min = 1, max = 1}, chance = {min = 76, max = 100}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [1] = {name = "diamond", amount = {min = 1, max = 15}, chance = {min = 1, max = 25}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [2] = {name = "rolex", amount = {min = 5, max = 10}, chance = {min = 26, max = 50}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [3] = {name = "phone", amount = {min = 1, max = 1}, chance = {min = 51, max = 75}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [4] = {name = "ifaks", amount = {min = 1, max = 1}, chance = {min = 76, max = 100}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
         },
         ["livingroom"] = {
-            [1] = {name = "fitbit", amount = {min = 1, max = 1}, chance = {min = 1, max = 25}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [1] = {name = "cryptostick", amount = {min = 1, max = 1}, chance = {min = 1, max = 25}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
             [2] = {name = "screwdriverset", amount = {min = 1, max = 2}, chance = {min = 26, max = 50}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
             [3] = {name = "bandage", amount = {min = 1, max = 2}, chance = {min = 51, max = 75}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
-            [4] = {name = "plastic", amount = {min = 1, max = 1}, chance = {min = 76, max = 100}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [4] = {name = "trojan_usb", amount = {min = 1, max = 1}, chance = {min = 76, max = 100}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
         },
         ["safe"] = {
-            [1] = {name = "rolex", amount = {min = 2, max = 3}, chance = {min = 1, max = 25}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
-            [2] = {name = "diamond", amount = {min = 2, max = 3}, chance = {min = 26, max = 50}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
-            [3] = {name = "goldchain", amount = {min = 2, max = 3}, chance = {min = 51, max = 75}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
-            [4] = {name = "weapon_pistol", amount = {min = 1, max = 1}, chance = {min = 76, max = 100}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [1] = {name = "rolex", amount = {min = 4, max = 11}, chance = {min = 1, max = 25}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [2] = {name = "diamond", amount = {min = 5, max = 20}, chance = {min = 26, max = 50}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [3] = {name = "goldchain", amount = {min = 6, max = 15}, chance = {min = 51, max = 75}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [4] = {name = "pistol_ammo", amount = {min = 1, max = 2}, chance = {min = 76, max = 100}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
         }
     },
     [2] = { -- IPL Tier
         itemCount = {min = 1, max = 2}, -- Amount of items that can be obtained in this tier
-        chance = 60, -- Chance of getting an item while searching in this tier
+        chance = 100, -- Chance of getting an item while searching in this tier
         bonusItem = "diamond", -- Item that can be obtained as a bonus
-        bonusChance = 10, -- Chance of getting the bonus item
-        bonusAmount = {min = 1, max = 1}, -- Amount of the bonus item
+        bonusChance = 100, -- Chance of getting the bonus item
+        bonusAmount = {min = 10, max = 20}, -- Amount of the bonus item
         Exp = {min = 22, max = 24}, -- Only if you have a level system
         ExpProps = {min = 27, max = 29}, -- Only if you have a level system
         -- Safe Settings:
@@ -202,41 +202,41 @@ Config.RewardsIPL = {
 
         ["cabin"] = { 
             [1] = {name = "advancedlockpick", amount = {min = 1, max = 1}, chance = {min = 1, max = 25}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
-            [2] = {name = "iphone", amount = {min = 1, max = 1}, chance = {min = 26, max = 50}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
-            [3] = {name = "rolex", amount = {min = 1, max = 1}, chance = {min = 51, max = 75}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
-            [4] = {name = "joint", amount = {min = 1, max = 2}, chance = {min = 76, max = 100}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [2] = {name = "phone", amount = {min = 1, max = 1}, chance = {min = 26, max = 50}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [3] = {name = "rolex", amount = {min = 4, max = 7}, chance = {min = 51, max = 75}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [4] = {name = "joint", amount = {min = 1, max = 4}, chance = {min = 76, max = 100}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
         },
         ["kitchen"] = { 
-            [1] = {name = "painkillers", amount = {min = 1, max = 2}, chance = {min = 1, max = 25}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [1] = {name = "painkillers", amount = {min = 3, max = 6}, chance = {min = 1, max = 25}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
             [2] = {name = "advancedlockpick", amount = {min = 1, max = 1}, chance = {min = 26, max = 50}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
-            [3] = {name = "goldchain", amount = {min = 1, max = 1}, chance = {min = 51, max = 75}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
-            [4] = {name = "joint", amount = {min = 1, max = 2}, chance = {min = 76, max = 100}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [3] = {name = "goldchain", amount = {min = 4, max = 10}, chance = {min = 51, max = 75}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [4] = {name = "weapn_knife", amount = {min = 1, max = 2}, chance = {min = 76, max = 100}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
         },
         ["chest"] = { 
-            [1] = {name = "diamond_ring", amount = {min = 1, max = 1}, chance = {min = 1, max = 25}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
-            [2] = {name = "rolex", amount = {min = 1, max = 1}, chance = {min = 26, max = 50}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
-            [3] = {name = "10kgoldchain", amount = {min = 1, max = 1}, chance = {min = 51, max = 75}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
-            [4] = {name = "pistol_ammo", amount = {min = 1, max = 1}, chance = {min = 76, max = 100}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [1] = {name = "diamond_ring", amount = {min = 10, max = 15}, chance = {min = 1, max = 25}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [2] = {name = "handcuffs", amount = {min = 1, max = 1}, chance = {min = 26, max = 50}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [3] = {name = "10kgoldchain", amount = {min = 3, max = 5}, chance = {min = 51, max = 75}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [4] = {name = "pistol_ammo", amount = {min = 2, max = 3}, chance = {min = 76, max = 100}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
         },
         ["livingroom"] = { 
-            [1] = {name = "samsung", amount = {min = 1, max = 1}, chance = {min = 1, max = 25}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
-            [2] = {name = "painkillers", amount = {min = 1, max = 2}, chance = {min = 26, max = 50}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
-            [3] = {name = "lockpick", amount = {min = 1, max = 1}, chance = {min = 51, max = 75}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
-            [4] = {name = "diamond_ring", amount = {min = 1, max = 1}, chance = {min = 76, max = 100}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [1] = {name = "cryptostick", amount = {min = 1, max = 1}, chance = {min = 1, max = 25}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [2] = {name = "painkillers", amount = {min = 5, max = 7}, chance = {min = 26, max = 50}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [3] = {name = "lockpick", amount = {min = 1, max = 4}, chance = {min = 51, max = 75}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [4] = {name = "diamond_ring", amount = {min = 6, max = 8}, chance = {min = 76, max = 100}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
         },
         ["safe"] = {
-            [1] = {name = "rolex", amount = {min = 2, max = 3}, chance = {min = 1, max = 25}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
-            [2] = {name = "diamond", amount = {min = 2, max = 3}, chance = {min = 26, max = 50}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
-            [3] = {name = "goldchain", amount = {min = 2, max = 3}, chance = {min = 51, max = 75}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
-            [4] = {name = "weapon_pistol", amount = {min = 1, max = 1}, chance = {min = 76, max = 100}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [1] = {name = "rolex", amount = {min = 7, max = 11}, chance = {min = 1, max = 25}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [2] = {name = "diamond", amount = {min = 7, max = 12}, chance = {min = 26, max = 50}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [3] = {name = "goldchain", amount = {min = 8, max = 12}, chance = {min = 51, max = 75}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [4] = {name = "pistol_extendedclip", amount = {min = 1, max = 1}, chance = {min = 76, max = 100}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
         }
     },
     [3] = { -- IPL Tier
         itemCount = {min = 1, max = 3}, -- Amount of items that can be obtained in this tier
-        chance = 70, -- Chance of getting an item while searching in this tier
+        chance = 100, -- Chance of getting an item while searching in this tier
         bonusItem = "diamond_ring", -- Item that can be obtained as a bonus
-        bonusChance = 10, -- Chance of getting the bonus item
-        bonusAmount = {min = 1, max = 1}, -- Amount of the bonus item
+        bonusChance = 100, -- Chance of getting the bonus item
+        bonusAmount = {min = 10, max = 20}, -- Amount of the bonus item
         Exp = {min = 26, max = 30}, -- Only if you have a level system
         ExpProps = {min = 31, max = 35}, -- Only if you have a level system
         -- Safe Settings:
@@ -245,34 +245,34 @@ Config.RewardsIPL = {
         ExpSafe = {min = 20, max = 25}, -- Only if you have a level system
 
         ["cabin"] = { 
-            [1] = {name = "goldchain", amount = {min = 1, max = 1}, chance = {min = 1, max = 25}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
-            [2] = {name = "handcuffs", amount = {min = 1, max = 1}, chance = {min = 26, max = 50}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
-            [3] = {name = "diamond", amount = {min = 1, max = 2}, chance = {min = 51, max = 75}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
-            [4] = {name = "diamond_ring", amount = {min = 1, max = 2}, chance = {min = 76, max = 100}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [1] = {name = "goldchain", amount = {min = 8, max = 12}, chance = {min = 1, max = 25}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [2] = {name = "handcuffs", amount = {min = 1, max = 3}, chance = {min = 26, max = 50}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [3] = {name = "diamond", amount = {min = 20, max = 25}, chance = {min = 51, max = 75}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [4] = {name = "diamond_ring", amount = {min = 25, max = 30}, chance = {min = 76, max = 100}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
         },
         ["kitchen"] = { 
-            [1] = {name = "firstaid", amount = {min = 1, max = 2}, chance = {min = 1, max = 25}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
-            [2] = {name = "10kgoldchain", amount = {min = 1, max = 1}, chance = {min = 26, max = 50}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
-            [3] = {name = "weapon_knife", amount = {min = 1, max = 1}, chance = {min = 51, max = 75}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
-            [4] = {name = "joint", amount = {min = 1, max = 3}, chance = {min = 76, max = 100}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [1] = {name = "ifaks", amount = {min = 2, max = 4}, chance = {min = 1, max = 25}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [2] = {name = "10kgoldchain", amount = {min = 8, max = 11}, chance = {min = 26, max = 50}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [3] = {name = "weapon_knife", amount = {min = 1, max = 2}, chance = {min = 51, max = 75}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [4] = {name = "thermite", amount = {min = 3, max = 5}, chance = {min = 76, max = 100}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
         }, 
         ["chest"] = { 
             [1] = {name = "handcuffs", amount = {min = 1, max = 1}, chance = {min = 1, max = 25}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
-            [2] = {name = "rolex", amount = {min = 1, max = 1}, chance = {min = 26, max = 50}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
-            [3] = {name = "weapon_pistol", amount = {min = 1, max = 1}, chance = {min = 51, max = 75}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
-            [4] = {name = "rifle_ammo", amount = {min = 1, max = 1}, chance = {min = 76, max = 100}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [2] = {name = "rolex", amount = {min = 30, max = 35}, chance = {min = 26, max = 50}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [3] = {name = "smg_ammo", amount = {min = 3, max = 4}, chance = {min = 51, max = 75}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [4] = {name = "rifle_ammo", amount = {min = 1, max = 2}, chance = {min = 76, max = 100}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
         },
         ["livingroom"] = { 
-            [1] = {name = "iphone", amount = {min = 1, max = 2}, chance = {min = 1, max = 25}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
-            [2] = {name = "advancedlockpick", amount = {min = 1, max = 1}, chance = {min = 26, max = 50}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
-            [3] = {name = "joint", amount = {min = 1, max = 3}, chance = 100}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
-            [4] = {name = "diamond_ring", amount = {min = 1, max = 2}, chance = {min = 76, max = 100}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [1] = {name = "phone", amount = {min = 1, max = 2}, chance = {min = 1, max = 25}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [2] = {name = "advancedlockpick", amount = {min = 3, max = 5}, chance = {min = 26, max = 50}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [3] = {name = "shotgun_ammo", amount = {min = 1, max = 3}, chance = {min = 51, max = 75}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [4] = {name = "diamond_ring", amount = {min = 10, max = 15}, chance = {min = 76, max = 100}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
         },
         ["safe"] = {
-            [1] = {name = "rolex", amount = {min = 2, max = 3}, chance = {min = 1, max = 25}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
-            [2] = {name = "diamond", amount = {min = 2, max = 3}, chance = {min = 26, max = 50}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
-            [3] = {name = "goldchain", amount = {min = 2, max = 3}, chance = {min = 51, max = 75}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
-            [4] = {name = "weapon_pistol", amount = {min = 1, max = 1}, chance = {min = 76, max = 100}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [1] = {name = "rolex", amount = {min = 30, max = 35}, chance = {min = 1, max = 25}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [2] = {name = "diamond", amount = {min = 30, max = 35}, chance = {min = 26, max = 50}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [3] = {name = "usb_green", amount = {min = 1, max = 2}, chance = {min = 51, max = 75}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [4] = {name = "weapon_vintagepistol", amount = {min = 1, max = 1}, chance = {min = 76, max = 100}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
         }
     },
 }
@@ -289,10 +289,10 @@ Config.RewardsShell = {
             [1] = {name = "screwdriverset", amount = {min = 1, max = 2}, chance = {min = 1, max = 25}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
             [2] = {name = "fitbit", amount = {min = 1, max = 1}, chance = {min = 26, max = 50}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
             [3] = {name = "lockpick", amount = {min = 1, max = 1}, chance = {min = 51, max = 75}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
-            [4] = {name = "samsungphone", amount = {min = 1, max = 1}, chance = {min = 76, max = 100}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [4] = {name = "phone", amount = {min = 1, max = 1}, chance = {min = 76, max = 100}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
         },
         ["kitchen"] = { 
-            [1] = {name = "bandage", amount = {min = 1, max = 2}, chance = {min = 1, max = 25}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [1] = {name = "bandage", amount = {min = 1, max = 1}, chance = {min = 1, max = 25}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
             [2] = {name = "painkillers", amount = {min = 1, max = 1}, chance = {min = 26, max = 50}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
             [3] = {name = "water_bottle", amount = {min = 1, max = 2}, chance = {min = 51, max = 75}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
             [4] = {name = "joint", amount = {min = 1, max = 1}, chance = {min = 76, max = 100}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
@@ -300,8 +300,8 @@ Config.RewardsShell = {
         ["chest"] = { 
             [1] = {name = "diamond", amount = {min = 1, max = 1}, chance = {min = 1, max = 25}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
             [2] = {name = "rolex", amount = {min = 1, max = 1}, chance = {min = 26, max = 50}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
-            [3] = {name = "iphone", amount = {min = 1, max = 1}, chance = {min = 51, max = 75}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
-            [4] = {name = "samsungphone", amount = {min = 1, max = 1}, chance = {min = 76, max = 100}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [3] = {name = "weapon_knife", amount = {min = 1, max = 1}, chance = {min = 51, max = 75}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [4] = {name = "weapon_crowbar", amount = {min = 1, max = 1}, chance = {min = 76, max = 100}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
         },
         ["livingroom"] = { 
             [1] = {name = "fitbit", amount = {min = 1, max = 1}, chance = {min = 1, max = 25}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
@@ -311,69 +311,69 @@ Config.RewardsShell = {
         },
     },
     [2] = { -- Shell Tier
-        itemCount = {min = 1, max = 2}, -- Amount of items that can be obtained in this tier
-        chance = 40, -- Chance of getting an item while searching in this tier
+        itemCount = {min = 1, max = 4}, -- Amount of items that can be obtained in this tier
+        chance = 45, -- Chance of getting an item while searching in this tier
         bonusItem = "diamond", -- Item that can be obtained as a bonus
-        bonusChance = 10, -- Chance of getting the bonus item
+        bonusChance = 30, -- Chance of getting the bonus item
         bonusAmount = {min = 1, max = 1}, -- Amount of the bonus item
         Exp = {min = 6, max = 7}, -- Only if you have a level system
 
         ["cabin"] = {
             [1] = {name = "advancedlockpick", amount = {min = 1, max = 1}, chance = {min = 1, max = 25}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
-            [2] = {name = "iphone", amount = {min = 1, max = 1}, chance = {min = 26, max = 50}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [2] = {name = "phone", amount = {min = 1, max = 1}, chance = {min = 26, max = 50}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
             [3] = {name = "rolex", amount = {min = 1, max = 1}, chance = {min = 51, max = 75}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
             [4] = {name = "joint", amount = {min = 1, max = 2}, chance = {min = 76, max = 100}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
         },
         ["kitchen"] = {
             [1] = {name = "painkillers", amount = {min = 1, max = 2}, chance = {min = 1, max = 25}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
             [2] = {name = "advancedlockpick", amount = {min = 1, max = 1}, chance = {min = 26, max = 50}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
-            [3] = {name = "goldchain", amount = {min = 1, max = 1}, chance = {min = 51, max = 75}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [3] = {name = "goldchain", amount = {min = 1, max = 3}, chance = {min = 51, max = 75}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
             [4] = {name = "joint", amount = {min = 1, max = 2}, chance = {min = 76, max = 100}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
         }, 
         ["chest"] = {
             [1] = {name = "diamond_ring", amount = {min = 1, max = 1}, chance = {min = 1, max = 25}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
             [2] = {name = "rolex", amount = {min = 1, max = 1}, chance = {min = 26, max = 50}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
-            [3] = {name = "10kgoldchain", amount = {min = 1, max = 1}, chance = {min = 51, max = 75}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [3] = {name = "10kgoldchain", amount = {min = 1, max = 3}, chance = {min = 51, max = 75}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
             [4] = {name = "pistol_ammo", amount = {min = 1, max = 1}, chance = {min = 76, max = 100}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
         },
         ["livingroom"] = {
-            [1] = {name = "samsung", amount = {min = 1, max = 1}, chance = {min = 1, max = 25}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [1] = {name = "phone", amount = {min = 1, max = 1}, chance = {min = 1, max = 25}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
             [2] = {name = "painkillers", amount = {min = 1, max = 2}, chance = {min = 26, max = 50}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
             [3] = {name = "lockpick", amount = {min = 1, max = 1}, chance = {min = 51, max = 75}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
-            [4] = {name = "diamond_ring", amount = {min = 1, max = 1}, chance = {min = 76, max = 100}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [4] = {name = "diamond_ring", amount = {min = 2, max = 4}, chance = {min = 76, max = 100}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
         }, 
     },
     [3] = { -- Shell Tier
-        itemCount = {min = 1, max = 3}, -- Amount of items that can be obtained in this tier
-        chance = 50, -- Chance of getting an item while searching in this tier
+        itemCount = {min = 1, max = 5}, -- Amount of items that can be obtained in this tier
+        chance = 65, -- Chance of getting an item while searching in this tier
         bonusItem = "diamond_ring", -- Item that can be obtained as a bonus
-        bonusChance = 40, -- Chance of getting the bonus item
-        bonusAmount = {min = 1, max = 1}, -- Amount of the bonus item
+        bonusChance = 55, -- Chance of getting the bonus item
+        bonusAmount = {min = 3, max = 5}, -- Amount of the bonus item
         Exp = {min = 9, max = 10}, -- Only if you have a level system
 
         ["cabin"] = {
-            [1] = {name = "goldchain", amount = {min = 1, max = 1}, chance = {min = 1, max = 25}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [1] = {name = "goldchain", amount = {min = 4, max = 7}, chance = {min = 1, max = 25}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
             [2] = {name = "handcuffs", amount = {min = 1, max = 1}, chance = {min = 26, max = 50}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
-            [3] = {name = "diamond", amount = {min = 1, max = 2}, chance = {min = 51, max = 75}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
-            [4] = {name = "diamond_ring", amount = {min = 1, max = 2}, chance = {min = 76, max = 100}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [3] = {name = "diamond", amount = {min = 6, max = 8}, chance = {min = 51, max = 75}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [4] = {name = "diamond_ring", amount = {min = 4, max = 6}, chance = {min = 76, max = 100}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
         },
         ["kitchen"] = {
-            [1] = {name = "firstaid", amount = {min = 1, max = 2}, chance = {min = 1, max = 25}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
-            [2] = {name = "10kgoldchain", amount = {min = 1, max = 1}, chance = {min = 26, max = 50}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [1] = {name = "ifaks", amount = {min = 1, max = 1}, chance = {min = 1, max = 25}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [2] = {name = "10kgoldchain", amount = {min = 5, max = 7}, chance = {min = 26, max = 50}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
             [3] = {name = "weapon_knife", amount = {min = 1, max = 1}, chance = {min = 51, max = 75}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
             [4] = {name = "joint", amount = {min = 1, max = 3}, chance = {min = 76, max = 100}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
         },
         ["chest"] = {
             [1] = {name = "handcuffs", amount = {min = 1, max = 1}, chance = {min = 1, max = 25}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
-            [2] = {name = "rolex", amount = {min = 1, max = 1}, chance = {min = 26, max = 50}},  -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
-            [3] = {name = "weapon_pistol", amount = {min = 1, max = 1}, chance = {min = 51, max = 75}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
-            [4] = {name = "rifle_ammo", amount = {min = 1, max = 1}, chance = {min = 76, max = 100}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [2] = {name = "rolex", amount = {min = 8, max = 12}, chance = {min = 26, max = 50}},  -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [3] = {name = "pistol_ammo", amount = {min = 2, max = 4}, chance = {min = 51, max = 75}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [4] = {name = "shotgun_ammo", amount = {min = 1, max = 1}, chance = {min = 76, max = 100}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
         },
         ["livingroom"] = {
-            [1] = {name = "iphone", amount = {min = 1, max = 2}, chance = {min = 1, max = 25}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
-            [2] = {name = "advancedlockpick", amount = {min = 1, max = 1}, chance = {min = 26, max = 50}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [1] = {name = "phone", amount = {min = 1, max = 2}, chance = {min = 1, max = 25}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [2] = {name = "advancedlockpick", amount = {min = 2, max = 3}, chance = {min = 26, max = 50}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
             [3] = {name = "joint", amount = {min = 1, max = 3}, chance = {min = 51, max = 75}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
-            [4] = {name = "diamond_ring", amount = {min = 1, max = 2}, chance = {min = 76, max = 100}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
+            [4] = {name = "diamond_ring", amount = {min = 8, max = 12}, chance = {min = 76, max = 100}}, -- 'amount' is how many of that item, 'chance' gets a random number, if that number is between min and max, you get the item
         },
     },
 }
@@ -432,7 +432,7 @@ Config.IPL = {
 
         ['safe'] = {
             ['status'] = true, -- Enable/Disable safes for this specific IPL
-            ['chance'] = 10, -- (%)Chance of a safe spawning in this specific IPL
+            ['chance'] = 40, -- (%)Chance of a safe spawning in this specific IPL
             ['coords'] = vector4(-39.33, -581.93, 83.91, 342.04), -- Coords where the safe spawns
             ['model'] = 'h4_prop_h4_safe_01a', -- Model of the safe
             ['modelopen'] = 'h4_prop_h4_safe_01b', -- Model of the safe when it's open
@@ -474,12 +474,12 @@ Config.IPL = {
         },
     },
     ["delPerroHeights"] = {
-        OwnerChance = 50, -- (%) Chance of a ped being home
+        OwnerChance = 20, -- (%) Chance of a ped being home
         PetChance = 50, -- (%) Chance of a pet being home
         GunChance = 50, -- (%) Chance of the owner holding a gun
-        SleepChance = 60, -- (%) Chance of the owner being asleep
-        DogSleepChance = 50, -- (%) Chance of the pet being asleep
-        AlarmChance = 50, -- (%) Chance of the alarm going off anyways
+        SleepChance = 80, -- (%) Chance of the owner being asleep
+        DogSleepChance = 80, -- (%) Chance of the pet being asleep
+        AlarmChance = 25, -- (%) Chance of the alarm going off anyways
         OwnerModel = {'g_m_m_chicold_01', 'a_m_m_beach_01', 'a_m_m_og_boss_01', 'a_m_m_soucent_01'}, -- Owner models that gets chosen randomly to spawn (Can change the models to whatever you want)
         PetModel = {'a_c_rottweiler', 'a_c_chop', 'a_c_shepherd', 'a_c_retriever'}, -- Pet models that gets chosen randomly to spawn (Can change the models to whatever you want)
         VehicleSpawnCoords = vector4(-1479.45, -513.76, 31.81, 34.18), -- Owner's vehicle spawn coords (You can change this to your liking)
@@ -493,7 +493,7 @@ Config.IPL = {
 
         ['safe'] = {
             ['status'] = true, -- Enable/Disable safes for this specific IPL
-            ['chance'] = 10, -- (%)Chance of a safe spawning in this specific IPL
+            ['chance'] = 30, -- (%)Chance of a safe spawning in this specific IPL
             ['coords'] = vector4(-1448.54, -548.85, 72.84, 303.19), -- Coords where the safe spawns
             ['model'] = 'h4_prop_h4_safe_01a', -- Model of the safe
             ['modelopen'] = 'h4_prop_h4_safe_01b', -- Model of the safe when it's open
@@ -558,12 +558,12 @@ Config.IPL = {
         },
     },
     ["delPerroHeights2"] = { 
-        OwnerChance = 50, -- (%) Chance of a ped being home
+        OwnerChance = 20, -- (%) Chance of a ped being home
         PetChance = 50, -- (%) Chance of a pet being home
         GunChance = 50, -- (%) Chance of the owner holding a gun
-        SleepChance = 60, -- (%) Chance of the owner being asleep
-        DogSleepChance = 50, -- (%) Chance of the pet being asleep
-        AlarmChance = 50, -- (%) Chance of the alarm going off anyways
+        SleepChance = 80, -- (%) Chance of the owner being asleep
+        DogSleepChance = 80, -- (%) Chance of the pet being asleep
+        AlarmChance = 25, -- (%) Chance of the alarm going off anyways
         OwnerModel = {'g_m_m_chicold_01', 'a_m_m_beach_01', 'a_m_m_og_boss_01', 'a_m_m_soucent_01'}, -- Owner models that gets chosen randomly to spawn (Can change the models to whatever you want)
         PetModel = {'a_c_rottweiler', 'a_c_chop', 'a_c_shepherd', 'a_c_retriever'}, -- Pet models that gets chosen randomly to spawn (Can change the models to whatever you want)
         VehicleSpawnCoords = vector4(-1467.26, -505.1, 31.81, 30.06), -- Owner's vehicle spawn coords (You can change this to your liking)
@@ -577,7 +577,7 @@ Config.IPL = {
 
         ['safe'] = {
             ['status'] = true, -- Enable/Disable safes for this specific IPL
-            ['chance'] = 10, -- (%)Chance of a safe spawning in this specific IPL
+            ['chance'] = 30, -- (%)Chance of a safe spawning in this specific IPL
             ['coords'] = vector4(-1469.37, -537.5, 50.73, 135.04), -- Coords where the safe spawns
             ['model'] = 'h4_prop_h4_safe_01a', -- Model of the safe
             ['modelopen'] = 'h4_prop_h4_safe_01b', -- Model of the safe when it's open
@@ -652,12 +652,12 @@ Config.IPL = {
         },
     },
     ["3655WildOatsDrive"] = {
-        OwnerChance = 50, -- (%) Chance of a ped being home
-        PetChance = 50, -- (%) Chance of a pet being home
-        GunChance = 50, -- (%) Chance of the owner holding a gun
-        SleepChance = 60, -- (%) Chance of the owner being asleep
+        OwnerChance = 100, -- (%) Chance of a ped being home
+        PetChance = 100, -- (%) Chance of a pet being home
+        GunChance = 70, -- (%) Chance of the owner holding a gun
+        SleepChance = 20, -- (%) Chance of the owner being asleep
         DogSleepChance = 50, -- (%) Chance of the pet being asleep
-        AlarmChance = 50, -- (%) Chance of the alarm going off anyways
+        AlarmChance = 35, -- (%) Chance of the alarm going off anyways
         OwnerModel = {'g_m_m_chicold_01', 'a_m_m_beach_01', 'a_m_m_og_boss_01', 'a_m_m_soucent_01'}, -- Owner models that gets chosen randomly to spawn (Can change the models to whatever you want)
         PetModel = {'a_c_rottweiler', 'a_c_chop', 'a_c_shepherd', 'a_c_retriever'}, -- Pet models that gets chosen randomly to spawn (Can change the models to whatever you want)
         VehicleSpawnCoords = vector4(-188.02, 501.8, 133.97, 89.8), -- Owner's vehicle spawn coords (You can change this to your liking)
@@ -671,7 +671,7 @@ Config.IPL = {
 
         ['safe'] = {
             ['status'] = true, -- Enable/Disable safes for this specific IPL
-            ['chance'] = 10, -- (%)Chance of a safe spawning in this specific IPL
+            ['chance'] = 80, -- (%)Chance of a safe spawning in this specific IPL
             ['coords'] = vector4(-173.84, 489.83, 130.04, 186.97), -- Coords where the safe spawns
             ['model'] = 'h4_prop_h4_safe_01a', -- Model of the safe
             ['modelopen'] = 'h4_prop_h4_safe_01b', -- Model of the safe when it's open
@@ -745,12 +745,12 @@ Config.IPL = {
         },
     },
     ["2044NorthConkerAvenue"] = { 
-        OwnerChance = 50, -- (%) Chance of a ped being home
-        PetChance = 50, -- (%) Chance of a pet being home
-        GunChance = 50, -- (%) Chance of the owner holding a gun
-        SleepChance = 60, -- (%) Chance of the owner being asleep
+        OwnerChance = 100, -- (%) Chance of a ped being home
+        PetChance = 100, -- (%) Chance of a pet being home
+        GunChance = 70, -- (%) Chance of the owner holding a gun
+        SleepChance = 20, -- (%) Chance of the owner being asleep
         DogSleepChance = 50, -- (%) Chance of the pet being asleep
-        AlarmChance = 50, -- (%) Chance of the alarm going off anyways
+        AlarmChance = 35, -- (%) Chance of the alarm going off anyways
         OwnerModel = {'g_m_m_chicold_01', 'a_m_m_beach_01', 'a_m_m_og_boss_01', 'a_m_m_soucent_01'}, -- Owner models that gets chosen randomly to spawn (Can change the models to whatever you want)
         PetModel = {'a_c_rottweiler', 'a_c_chop', 'a_c_shepherd', 'a_c_retriever'}, -- Pet models that gets chosen randomly to spawn (Can change the models to whatever you want)
         VehicleSpawnCoords = vector4(352.88, 436.81, 146.03, 297.56), -- Owner's vehicle spawn coords (You can change this to your liking)
@@ -764,7 +764,7 @@ Config.IPL = {
 
         ['safe'] = {
             ['status'] = true, -- Enable/Disable safes for this specific IPL
-            ['chance'] = 10, -- (%)Chance of a safe spawning in this specific IPL
+            ['chance'] = 80, -- (%)Chance of a safe spawning in this specific IPL
             ['coords'] = vector4(334.34, 435.17, 141.77, 117.66), -- Coords where the safe spawns
             ['model'] = 'h4_prop_h4_safe_01a', -- Model of the safe
             ['modelopen'] = 'h4_prop_h4_safe_01b', -- Model of the safe when it's open
@@ -848,12 +848,12 @@ Config.IPL = {
         },
     },
     ["legionSquare"] = { 
-        OwnerChance = 50, -- (%) Chance of a ped being home
+        OwnerChance = 20, -- (%) Chance of a ped being home
         PetChance = 50, -- (%) Chance of a pet being home
         GunChance = 50, -- (%) Chance of the owner holding a gun
-        SleepChance = 60, -- (%) Chance of the owner being asleep
-        DogSleepChance = 50, -- (%) Chance of the pet being asleep
-        AlarmChance = 50, -- (%) Chance of the alarm going off anyways
+        SleepChance = 80, -- (%) Chance of the owner being asleep
+        DogSleepChance = 80, -- (%) Chance of the pet being asleep
+        AlarmChance = 25, -- (%) Chance of the alarm going off anyways
         OwnerModel = {'g_m_m_chicold_01', 'a_m_m_beach_01', 'a_m_m_og_boss_01', 'a_m_m_soucent_01'}, -- Owner models that gets chosen randomly to spawn (Can change the models to whatever you want)
         PetModel = {'a_c_rottweiler', 'a_c_chop', 'a_c_shepherd', 'a_c_retriever'}, -- Pet models that gets chosen randomly to spawn (Can change the models to whatever you want)
         VehicleSpawnCoords = vector4(323.16, -1002.95, 28.3, 0.11), -- Owner's vehicle spawn coords (You can change this to your liking)
@@ -862,7 +862,7 @@ Config.IPL = {
         OwnerCoords = {vector4(259.11, -995.7, -99.01, 175.04), vector4(261.16, -996.53, -98.57, 102.13), vector4(262.63, -1003.78, -98.27, 88.31)}, -- Coords where the owner can spawn inside the house (You can change the coords, or add more to them)
         PetCoords = {vector4(259.47, -1003.9, -99.01, 314.56), vector4(261.72, -994.87, -99.01, 187.34), vector4(254.33, -1001.13, -98.93, 280.99)}, -- Coords where the pet can spawn inside the house (You can change the coords, or add more to them)
 
-        ["level"] = 25, -- Only if you have a level system, used to specify which skill level is needed for the robbery
+        ["level"] = 30, -- Only if you have a level system, used to specify which skill level is needed for the robbery
         ["tier"] = 1, -- House tiers (1 to 3), 1 being the lowest, 3 the highest
 
         ['safe'] = {
@@ -931,12 +931,12 @@ Config.IPL = {
         },
     },
     ["2045NorthConkerAvenue"] = { 
-        OwnerChance = 50, -- (%) Chance of a ped being home
-        PetChance = 50, -- (%) Chance of a pet being home
-        GunChance = 50, -- (%) Chance of the owner holding a gun
-        SleepChance = 60, -- (%) Chance of the owner being asleep
+        OwnerChance = 100, -- (%) Chance of a ped being home
+        PetChance = 100, -- (%) Chance of a pet being home
+        GunChance = 70, -- (%) Chance of the owner holding a gun
+        SleepChance = 20, -- (%) Chance of the owner being asleep
         DogSleepChance = 50, -- (%) Chance of the pet being asleep
-        AlarmChance = 50, -- (%) Chance of the alarm going off anyways
+        AlarmChance = 35, -- (%) Chance of the alarm going off anyways
         OwnerModel = {'g_m_m_chicold_01', 'a_m_m_beach_01', 'a_m_m_og_boss_01', 'a_m_m_soucent_01'}, -- Owner models that gets chosen randomly to spawn (Can change the models to whatever you want)
         PetModel = {'a_c_rottweiler', 'a_c_chop', 'a_c_shepherd', 'a_c_retriever'}, -- Pet models that gets chosen randomly to spawn (Can change the models to whatever you want)
         VehicleSpawnCoords = vector4(369.28, 434.26, 143.57, 264.51), -- Owner's vehicle spawn coords (You can change this to your liking)
@@ -950,7 +950,7 @@ Config.IPL = {
 
         ['safe'] = {
             ['status'] = true, -- Enable/Disable safes for this specific IPL
-            ['chance'] = 10, -- (%)Chance of a safe spawning in this specific IPL
+            ['chance'] = 80, -- (%)Chance of a safe spawning in this specific IPL
             ['coords'] = vector4(378.2, 433.01, 138.3, 350.56), -- Coords where the safe spawns
             ['model'] = 'h4_prop_h4_safe_01a', -- Model of the safe
             ['modelopen'] = 'h4_prop_h4_safe_01b', -- Model of the safe when it's open
@@ -1013,7 +1013,7 @@ Config.IPL = {
                 ["text"] = "Steal Laptop"
             },
             [3] = {
-                ["itemname"] = "weapon_appistol",
+                ["itemname"] = "weapon_vintagepistol",
                 ["PropName"] = "w_pi_appistol_luxe",
                 ["coords"] = vector4(379.65, 431.8, 137.90, 345.57),
                 ["pitch"] = -90.0,
