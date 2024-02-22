@@ -121,8 +121,8 @@ Config = {
     -- Npc settings, works for both non-group work and group work
     NPCStatus = true, -- Enable/disable npc
     NpcModel = `g_m_m_chicold_01`, -- Model of the npc
-    NpcCoords = vector4(116.34, -1953.83, 19.75, 41.11), -- Coords of the npc
-    NpcTargetCoords = vector3(116.29, -1953.82, 20.75), -- Change this with the npc location
+    NpcCoords = vector4(725.78, -694.28, 26.51, 90.96), -- Coords of the npc
+    NpcTargetCoords = vector3(725.78, -694.28, 26.51), -- Change this with the npc location
     NpcTargetMinZ = 19.5, -- Min Z of the npc target
     NpcTargetMaxZ = 21.5, -- Max Z of the npc target
     NpcAnimation = "WORLD_HUMAN_LEANING", -- Animation of the npc
