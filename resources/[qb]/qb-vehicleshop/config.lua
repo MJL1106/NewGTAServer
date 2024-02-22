@@ -95,33 +95,33 @@ Config.Shops = {
         ['ShowroomVehicles'] = {
             [1] = {
                 coords = vector4(-1265.31, -354.44, 35.91, 205.08),
-                defaultVehicle = 'rmodskyline34',
-                chosenVehicle = 'rmodskyline34'
+                defaultVehicle = 's15lunar',
+                chosenVehicle = 's15lunar'
             },
             [2] = {
                 coords = vector4(-1270.06, -358.55, 35.91, 247.08),
-                defaultVehicle = 'HBLS1000RR',
-                chosenVehicle = 'HBLS1000RR'
+                defaultVehicle = 'evo9',
+                chosenVehicle = 'evo9'
             },
             [3] = {
                 coords = vector4(-1269.21, -365.03, 35.91, 297.12),
-                defaultVehicle = 'lwgtr',
-                chosenVehicle = 'lwgtr'
+                defaultVehicle = 'brz13varis',
+                chosenVehicle = 'brz13varis'
             },
             [4] = {
                 coords = vector4(-1252.07, -364.2, 35.91, 56.44),
-                defaultVehicle = 'HBLV4SL',
-                chosenVehicle = 'HBLV4SL'
+                defaultVehicle = 'escaladeprime',
+                chosenVehicle = 'escaladeprime'
             },
             [5] = {
                 coords = vector4(-1255.49, -365.91, 35.91, 55.63),
-                defaultVehicle = 'zx10r',
-                chosenVehicle = 'zx10r'
+                defaultVehicle = 'scubieblob',
+                chosenVehicle = 'scubieblob'
             },
             [6] = {
                 coords = vector4(-1249.21, -362.97, 35.91, 53.24),
-                defaultVehicle = 'chr',
-                chosenVehicle = 'chr'
+                defaultVehicle = 'rmodpagani',
+                chosenVehicle = 'rmodpagani'
             },
         }
     }, -- Add your next table under this comma
@@ -236,7 +236,7 @@ Config.Shops = {
         },
         ['Job'] = 'cardealer', -- Name of job or none
         ['ShopLabel'] = 'Truck Motor Shop', -- Blip name
-        ['showBlip'] = false, -- true or false
+        ['showBlip'] = true, -- true or false
         ['blipSprite'] = 477, -- Blip sprite
         ['blipColor'] = 2, -- Blip color
         ['TestDriveTimeLimit'] = 0.5, -- Time in minutes until the vehicle gets deleted

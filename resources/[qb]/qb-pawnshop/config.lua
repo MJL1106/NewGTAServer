@@ -52,11 +52,47 @@ Config.PawnItems = {
     },
     [8] = {
         item = 'laptop',
-        price = math.random(50,100)
+        price = math.random(75,100)
     },
     [9] = {
         item = 'goldbar',
         price = math.random(30,50)
+    },
+    [10] = {
+        item = 'musicequipment',
+        price = math.random(75,100)
+    },
+    [11] = {
+        item = 'coffeemaker',
+        price = math.random(50,90)
+    },
+    [12] = {
+        item = 'laptop',
+        price = math.random(50,100)
+    },
+    [13] = {
+        item = 'flight_artpiece',
+        price = math.random(50,100)
+    },
+    [14] = {
+        item = 'microwave',
+        price = math.random(50,100)
+    },
+    [15] = {
+        item = 'flight_painting',
+        price = math.random(90,125)
+    },
+    [16] = {
+        item = 'flight_guitar',
+        price = math.random(50,100)
+    },
+    [17] = {
+        item = 'flight_suitcase',
+        price = math.random(50,100)
+    },
+    [18] = {
+        item = 'pcequipment',
+        price = math.random(80,125)
     }
 }
 
