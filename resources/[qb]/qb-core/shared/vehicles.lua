@@ -4566,7 +4566,7 @@ QBShared.Vehicles = {
         ['price'] = 99999999,
         ['category'] = 'super',
         ['categoryLabel'] = 'Super',
-        ['hash'] = `brz13varis`,
+        ['hash'] = 'brz13varis',
         ['shop'] = 'luxury',
     },
     ['zx10r'] = {
@@ -4593,7 +4593,7 @@ QBShared.Vehicles = {
         ['name'] = 'evo9',
         ['brand'] = 'evo9',
         ['model'] = 'evo9',
-        ['price'] = 99999999,
+        ['price'] = false,
         ['category'] = 'super',
         ['categoryLabel'] = 'Super',
         ['hash'] = `evo9`,
@@ -4750,7 +4750,7 @@ QBShared.Vehicles = {
         ['shop'] = 'luxury',
     },
     ['scubieblob'] = {
-        ['name'] = 'scubieblob,
+        ['name'] = 'scubieblob',
         ['brand'] = 'scubieblob',
         ['model'] = 'scubieblob',
         ['price'] = 99999999,
@@ -4763,7 +4763,7 @@ QBShared.Vehicles = {
         ['name'] = 'Urus_Stretch_6',
         ['brand'] = 'Urus_Stretch_6',
         ['model'] = 'Urus_Stretch_6',
-        ['price'] = 99999999,
+        ['price'] = false,
         ['category'] = 'super',
         ['categoryLabel'] = 'Super',
         ['hash'] = 'Urus_Stretch_6', -- Replace backticks (`) with single or double quotes
@@ -4773,6 +4773,6 @@ QBShared.Vehicles = {
 
 -- Populate VehicleHashes table
 QBShared.VehicleHashes = {}
-for _, v in pairs(QBShared.Vehicles) do
+for k, v in pairs(QBShared.Vehicles) do
     QBShared.VehicleHashes[v.hash] = v
 end

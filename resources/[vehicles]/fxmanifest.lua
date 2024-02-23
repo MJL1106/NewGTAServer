@@ -462,3 +462,4 @@ data_file 'AUDIO_SOUNDDATA' 'audioconfig/ta488f154_sounds.dat'
 data_file 'AUDIO_WAVEPACK' 'sfx/dlc_ta488f154'
 
 client_script 'vehicle_names.lua'
+client_script 'vehicles.lua'
