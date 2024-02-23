@@ -801,4 +801,5 @@ QBShared.Items = {
 
 	['racingtablet'] = { ['name'] = 'racingtablet', ['label'] = 'Racing tablet', ['weight'] = 1000, ['type'] = 'item', ['image'] = 'racingtablet.png', ['unique'] = true, ['useable'] = true, ['shouldClose'] = true, ['combinable'] = nil, ['description'] = 'Seems like something to do with cars.' },
 
+	["fakeplate"] 		 	 	 		 = {["name"] = "fakeplate",         		["label"] = "Fake Plate Kit",			["weight"] = 0, 		["type"] = "item", 		["image"] = "image1.png", 				["unique"] = true,     ["useable"] = true, 	["shouldClose"] = true,   	["combinable"] = nil,   ["description"] = "Use on a vehicle to alter its plate or change it back - 1 time use.."},
 }

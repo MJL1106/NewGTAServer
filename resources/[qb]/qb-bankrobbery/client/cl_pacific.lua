@@ -60,17 +60,7 @@ RegisterNetEvent('qb-bankrobbery:pacific:thermitedoor', function()
                                     TriggerServerEvent('qb-doorlock:server:updateState', 'PacifcTopEntrance', false, false, false, true, false, false)
                                     QBCore.Functions.Notify(Config.Notify["DoorSeemsUnlocked"], 'error', 4500)
 
-                                    if not copsCalled then
-                                        local s1, s2 = GetStreetNameAtCoord(coords.x, coords.y, coords.z)
-                                        local street1 = GetStreetNameFromHashKey(s1)
-                                        local street2 = GetStreetNameFromHashKey(s2)
-                                        local streetLabel = street1
-                                        if street2 ~= nil then
-                                            streetLabel = streetLabel .. ' ' .. street2
-                                        end
-                                        TriggerServerEvent('qb-bankrobbery:server:callCops', 'pacific', 0, streetLabel, coords)
-                                        copsCalled = true
-                                    end
+                                    
                                 end
                             end,
                             function() -- failure
@@ -109,10 +99,21 @@ RegisterNetEvent('qb-bankrobbery:pacific:hacktype', function()
                                 TriggerServerEvent('qb-doorlock:server:updateState', 'PacificMainEntrance', false, false, false, true, false, false)
                                 
                                 QBCore.Functions.Notify(Config.Notify["HackerSuccess"], 'error', 4500)
+
+                                
+                                if not copsCalled then
+                                    local s1, s2 = GetStreetNameAtCoord(coords.x, coords.y, coords.z)
+                                    local street1 = GetStreetNameFromHashKey(s1)
+                                    local street2 = GetStreetNameFromHashKey(s2)
+                                    local streetLabel = street1
+                                    if street2 ~= nil then
+                                        streetLabel = streetLabel .. ' ' .. street2
+                                    end
+                                    TriggerServerEvent('qb-bankrobbery:server:callCops', 'pacific', 0, streetLabel, coords)
+                                    copsCalled = true
+                                end
                             end
                         end
-                    else
-                        QBCore.Functions.Notify(Config.Notify["FleecaHackFail"], 'error', 4500)
                     end
                 end, 7,3)  -- Keep these parameters as they are essential for the function to operate correctly
                 break  -- Exit the loop if a hack is initiated to prevent multiple hacks at once
@@ -128,10 +129,19 @@ RegisterNetEvent('qb-bankrobbery:pacific:hacktype', function()
                                 TriggerServerEvent('qb-doorlock:server:updateState', 'PacificAdminOffice', false, false, false, true, false, false)
                                 TriggerServerEvent('qb-doorlock:server:updateState', 'PacificMainEntrance', false, false, false, true, false, false)
                                 QBCore.Functions.Notify(Config.Notify["HackerSuccess"], 'error', 4500)
+                                if not copsCalled then
+                                    local s1, s2 = GetStreetNameAtCoord(coords.x, coords.y, coords.z)
+                                    local street1 = GetStreetNameFromHashKey(s1)
+                                    local street2 = GetStreetNameFromHashKey(s2)
+                                    local streetLabel = street1
+                                    if street2 ~= nil then
+                                        streetLabel = streetLabel .. ' ' .. street2
+                                    end
+                                    TriggerServerEvent('qb-bankrobbery:server:callCops', 'pacific', 0, streetLabel, coords)
+                                    copsCalled = true
+                                end
                             end
                         end
-                    else
-                        QBCore.Functions.Notify(Config.Notify["FleecaHackFail"], 'error', 4500)
                     end
                 end, 10)  -- Keep these parameters as they are essential for the function to operate correctly
                 break  -- Exit the loop if a hack is initiated to prevent multiple hacks at once
