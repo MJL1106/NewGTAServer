@@ -139,6 +139,10 @@ local function CrackBaggyEffect()
     -- Increase consumption count
     playerCrackConsumptionCounts[playerServerId].count = playerCrackConsumptionCounts[playerServerId].count + 1
 
+    if playerCrackConsumptionCounts[playerServerId].count >= 6 then
+        QBCore.Functions.Notify("Extreme Overdose.", "error")
+    end
+
     -- Check for stumbling effect
     if playerCrackConsumptionCounts[playerServerId].count >= 7 then
         if math.random(1, 100) <= 80 then -- Adjust the chance as necessary
@@ -184,6 +188,9 @@ local function LSDTabEffect()
     -- Increase consumption count
     playerLSDConsumptionCounts[playerServerId].count = playerLSDConsumptionCounts[playerServerId].count + 1
 
+    if playerLSDConsumptionCounts[playerServerId].count >= 10 then
+        QBCore.Functions.Notify("Extreme Overdose.", "error")
+    end
     -- Check for stumbling effect
     if playerLSDConsumptionCounts[playerServerId].count >= 12 then
         if math.random(1, 100) <= 75 then -- Adjust the chance as necessary
