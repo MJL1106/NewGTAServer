@@ -1,8 +1,8 @@
 Config = {}
 
 Config.UsarPed = true -- set to false everything that involves the ped will be automatically disabled (target, ped spawn, menu for purchase and location on the map)
-Config.Ped = {-592.76, -1063.9, 2146,"Sr Manel",94.66,0x94562DD7,"a_m_m_farmer_01"} -- order: coords - name (label) - heading - hash - ped spawn name
-Config.PedTargetLoc = vector3(-592.76, -1063.9, 2146) -- Ped target location (must be the same as the ped)
+Config.Ped = {-589.39, -1068.72, 22,"Sr Manel",94.66,0x94562DD7,"a_m_m_farmer_01"} -- order: coords - name (label) - heading - hash - ped spawn name
+Config.PedTargetLoc = vector3(-589.39, -1068.72, 22) -- Ped target location (must be the same as the ped)
 
 Config.Gatos = { -- Coords to spawn cats in uwu, set sitting to false in order the cat will not sit but move, or set true the cat will sit, add as many cats u want but remove , from } last one
     ['cat1'] = {['coords'] = vector4(-573.9, -1056.29, 22.43, 115.15),['sitting'] = true},
@@ -18,3 +18,17 @@ Config.Gatos = { -- Coords to spawn cats in uwu, set sitting to false in order t
     ['cat11'] = {['coords'] = vector4(-581.1, -1063.61, 22.79, 219.69),['sitting'] = false},
     ['cat12'] = {['coords'] = vector4(-572.98, -1057.41, 24.5, 88.18),['sitting'] = true}
 }
+    Config.Location = {
+    Coords = vector4(-589.39, -1068.72, 22.34, 0.01),
+    ModelName = "a_m_y_epsilon_02",
+    ModelHash = 0xAA82FF9B,
+    SetBlipSprite = 303,
+    SetBlipDisplay = 6,
+    SetBlipScale = 0.85,
+    SetBlipColour = 40,
+    BlipName = "BlackMarket Dealer"}
+    
+
+
+
+

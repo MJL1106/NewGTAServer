@@ -172,14 +172,14 @@ Config.PedList = {
         ped = nil,
     },
 	
-	-- {
-	-- 	model = "mp_m_shopkeep_01",
-	-- 	coords = vector3(2557.1782226562,380.76174926758,108.62292480469), --PALOMINO FWY
-	-- 	heading = 340.0, 
-	-- 	gender = "male", 
-	--     isRendered = false,
-    --     ped = nil,
-    -- },
+	{
+	 	model = "a_f_m_fatwhite_01",
+	 	coords = vector3(vector4(-589.39, -1068.72, 22.34, 0.01)), ---UWU SHOP
+	 	heading = 340.0, 
+	 	gender = "male", 
+	    isRendered = false,
+        ped = nil,
+     },
 	
 	-- {
 	-- 	model = "mp_m_shopkeep_01",
