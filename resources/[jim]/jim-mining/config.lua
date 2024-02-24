@@ -146,7 +146,7 @@ Config = {
 			{ name = "goldpan", price = 500, amount = 100, info = {}, type = "item", slot = 5, },
 			{ name = "pickaxe",	price = 100, amount = 100, info = {}, type = "item", slot = 6, },
 			{ name = "miningdrill",	price = 1000000, amount = 50, info = {}, type = "item", slot = 7, },
-			{ name = "mininglaser",	price = 6000000, amount = 5, info = {}, type = "item", slot = 8, },
+			--{ name = "mininglaser",	price = 6000000, amount = 5, info = {}, type = "item", slot = 8, },
 			{ name = "drillbit", price = 5, amount = 100, info = {}, type = "item", slot = 9, },
 		},
 	},
