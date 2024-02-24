@@ -19,7 +19,7 @@ Citizen.CreateThread(function()
         distance = 1.5
     })
 
-    exports['qb-target']:AddBoxZone("uwu-balcao", vector3(-587.59, -1059.67, 22.5), 1.6, 3.6, {
+    exports['qb-target']:AddBoxZone("uwu-balcao", vector3(-587.59, -1059.67, 21), 1.6, 3.6, {
         name="uwu-balcao",
         heading=89,
         debugpoly = false,
@@ -34,7 +34,7 @@ Citizen.CreateThread(function()
         distance = 3.5
     })
 
-    exports['qb-target']:AddBoxZone("uwu-tabuleiro1", vector3(-584.1, -1062.1, 22.6), 0.5, 0.7, {
+    exports['qb-target']:AddBoxZone("uwu-tabuleiro1", vector3(-584.1, -1062.1, 21), 0.5, 0.7, {
         name = "uwu-tabuleiro1",
         heading = 87.8,
         debugpoly = false,
@@ -43,13 +43,13 @@ Citizen.CreateThread(function()
             {
             event = "mt-UwUCafe:client:Tabuleiro1",
             icon = "far fa-clipboard",
-            label = "Board",
+            label = "Countertop",
             },
         },
         distance = 1.5
     })
 
-    exports['qb-target']:AddBoxZone("uwu-tabuleiro2", vector3(-584.11, -1059.39, 22.67), 0.5, 0.7, {
+    exports['qb-target']:AddBoxZone("uwu-tabuleiro2", vector3(-584.11, -1059.39, 21), 0.5, 0.7, {
         name="uwu-tabuleiro2",
         heading=87.8,
         debugpoly = false,
@@ -58,7 +58,7 @@ Citizen.CreateThread(function()
             {
             event = "mt-UwUCafe:client:Tabuleiro1",
             icon = "far fa-clipboard",
-            label = "Board",
+            label = "Countertop",
             },
         },
         distance = 1.5
@@ -86,7 +86,7 @@ Citizen.CreateThread(function()
             distance = 1.5
         })
 
-    exports['qb-target']:AddBoxZone("uwu-fogao", vector3(-590.95, -1056.56, 22.28), 0.7, 1.5, {
+    exports['qb-target']:AddBoxZone("uwu-fogao", vector3(-590.95, -1056.56, 21), 0.7, 1.5, {
         name="uwu-fogao",
         heading=91.25,
         debugPoly=false,
@@ -103,7 +103,7 @@ Citizen.CreateThread(function()
             distance = 1.5
         })
 
-    exports['qb-target']:AddBoxZone("uwu-ementa1", vector3(-584.25, -1058.8, 22.37), 0.5, 0.4, {
+    exports['qb-target']:AddBoxZone("uwu-ementa1", vector3(-584.25, -1058.8, 21), 0.5, 0.4, {
         name="uwu-ementa1",
         debugpoly = false,
         heading=270,
@@ -150,7 +150,7 @@ Citizen.CreateThread(function()
             {
                 event = "mt-UwUCafe:client:AcariciarGato",
                 icon = "fas fa-cat",
-                label = "Caress cat",
+                label = "Pet cat",
             },
         },
         distance = 2.0
@@ -165,7 +165,7 @@ Citizen.CreateThread(function()
             {
             event = "mt-UwUCafe:client:MenuBebidas",
             icon = "far fa-coffee",
-            label = "Use Coffe Machine",
+            label = "Use Coffee Machine",
             job = "uwu",
             },
         },

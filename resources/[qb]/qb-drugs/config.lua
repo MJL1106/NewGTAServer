@@ -149,8 +149,8 @@ Config = {
             max = 70,
         },
         ["oxy"] = {
-            min = 15,
-            max = 48,
+            min = 3,
+            max = 10,
         },
     },
 
