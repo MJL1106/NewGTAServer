@@ -38,7 +38,7 @@ Citizen.CreateThread(function()
     SetBlipAsShortRange(blip, true)
 
     BeginTextCommandSetBlipName("STRING")
-    AddTextComponentString('Cat Cafe')
+    AddTextComponentString('UWU')
     EndTextCommandSetBlipName(blip)
 end)
 
@@ -60,21 +60,21 @@ RegisterNetEvent('mt-UwUCafe:client:MenuComidas', function() -- Menu to make foo
         },
         {
             header = "Strawberry Cupcake",
-            txt = "Ingredients: <br> - 1 Milk <br> - 1 Butter <br> - 1 Flouwer <br> - 1 Strawberry Package",
+            txt = "Ingredients: <br> - 1 Milk <br> - 1 Butter <br> - 1 Flower <br> - 1 Strawberry Package",
             params = {
                 event = "mt-UwUCafe:client:FazerCupcakeMorango",
             }
         },
         {
             header = "Chocolate Cupcake",
-            txt = "Ingredients: <br> - 1 Milk <br> - 1 Butter <br> - 1 Flouwer <br> - 1 Chocolate",
+            txt = "Ingredients: <br> - 1 Milk <br> - 1 Butter <br> - 1 Flower <br> - 1 Chocolate",
             params = {
                 event = "mt-UwUCafe:client:FazerCupcakeChocolate",
             }
         },
         {
-            header = "Limon Cupcake",
-            txt = "Ingredients: <br> - 1 Milk <br> - 1 Buter <br> - 1 Flouwer <br> - 1 Limon",
+            header = "Lemon Cupcake",
+            txt = "Ingredients: <br> - 1 Milk <br> - 1 Butter <br> - 1 Flower <br> - 1 Lemon",
             params = {
                 event = "mt-UwUCafe:client:FazerCupcakeLimao",
             }
@@ -101,22 +101,22 @@ RegisterNetEvent('mt-UwUCafe:client:MenuComidas', function() -- Menu to make foo
             }
         },
         {
-            header = "Nutela Pancake",
-            txt = "Ingredients: <br> - 1 Flouwer <br> - 1 Milk <br> - 1 Sugar pack <br> - 1 Nutela",
+            header = "Nuttela Pancake",
+            txt = "Ingredients: <br> - 1 Flouwer <br> - 1 Milk <br> - 1 Sugar pack <br> - 1 Nuttela",
             params = {
                 event = "mt-UwUCafe:client:FazerPanquencaNutela",
             }
         },
         {
             header = "Oreo Pancake",
-            txt = "Ingredients: <br> - 1 Flouwer <br> - 1 Milk <br> - 1 Sugar pack <br> - 1 Oreo",
+            txt = "Ingredients: <br> - 1 Flower <br> - 1 Milk <br> - 1 Sugar pack <br> - 1 Oreo",
             params = {
                 event = "mt-UwUCafe:client:FazerPanquencaOreo",
             }
         },
         {
             header = "Chocolat Muffin",
-            txt = "Ingredients: <br> - 1 Flouwer <br> - 1 Milk <br> - 1 Chocolate",
+            txt = "Ingredients: <br> - 1 Flower <br> - 1 Milk <br> - 1 Chocolate",
             params = {
                 event = "mt-UwUCafe:client:FazerMuffinChocolate",
             }
@@ -129,8 +129,8 @@ RegisterNetEvent('mt-UwUCafe:client:MenuComidas', function() -- Menu to make foo
             }
         },
         {
-            header = "Nutela Waffle",
-            txt = "Ingredients: <br> - 1 Flouwer <br> - 1 Milk <br> - 1 Nutela",
+            header = "Nuttela Waffle",
+            txt = "Ingredients: <br> - 1 Flouwer <br> - 1 Milk <br> - 1 Nuttela",
             params = {
                 event = "mt-UwUCafe:client:FazerWaffleNutela",
             }
@@ -173,7 +173,7 @@ RegisterNetEvent('mt-UwUCafe:client:MenuBebidas', function() -- Menu for making 
             }
         },
         {
-            header = "Straberry Bubble Tea",
+            header = "Strawberry Bubble Tea",
             txt = "Ingredients: <br> - 1 Strawberry Package <br> - 1 Water Bottle",
             params = {
                 event = "mt-UwUCafe:client:FazerBubbleTeaMorango",

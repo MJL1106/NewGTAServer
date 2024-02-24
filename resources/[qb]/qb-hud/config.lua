@@ -234,5 +234,5 @@ Config.vehicles = {
 Config.enginebrake = true -- brakes the car if you downshift the wrong way
 
 
-Config.gearhud = 2 -- if 1 - show gear / if 2 show gear and km/h and Rpm from 0 to 1 / if 0 disable hud
+Config.gearhud = 1 -- if 1 - show gear / if 2 show gear and km/h and Rpm from 0 to 1 / if 0 disable hud
 
