@@ -1,203 +1,115 @@
-local QBCore = exports['qb-core']:GetCoreObject()
-RegisterNetEvent('QBCore:Client:UpdateObject', function() QBCore = exports['qb-core']:GetCoreObject() end)
+if not Config.Overrides.disableNos then
 --========================================================== NOS
 --Leave alone--
-local NitrousActivated = false
---local VehicleNitrous = {}
-local nosColour = {}
-local manualPurgeLoc = {}
 local soundId = GetSoundId()
 manualPurgeLoc = {}
 
-RegisterNetEvent('QBCore:Client:OnPlayerLoaded', function() GetNos() GetNosColour() end)
+onPlayerLoaded(function() GetNos() GetNosColour() end)
 
-AddEventHandler('onResourceStart', function(resource) if GetCurrentResourceName() == resource then GetNos() GetNosColour() end end)
+AddEventHandler('onResourceStart', function(resource)
+	if GetCurrentResourceName() == resource then GetNos() GetNosColour() end
+end)
 
 function GetNos()
-	local p = promise.new()
-	QBCore.Functions.TriggerCallback('jim-mechanic:GetNosLoaded', function(vehs) p:resolve(vehs) end)
-	VehicleNitrous = Citizen.Await(p)
+	VehicleNitrous = triggerCallback('jim-mechanic:GetNosLoaded')
 	for plate in pairs(VehicleNitrous) do
-		if Config.Debug then print("^5Debug^7: ^3VehicleNitrous^7[^6"..tostring(plate).."^7] = { ^2level^7: ^4"..tonumber(VehicleNitrous[plate].level).."^7, ^2hasnitro^7: ^4"..tostring(VehicleNitrous[plate].hasnitro).."^7 }") end
+		if Config.System.Debug then print("^5Debug^7: ^3VehicleNitrous^7[^6"..tostring(plate).."^7] = { ^2level^7: ^4"..tonumber(VehicleNitrous[plate].level).."^7, ^2hasnitro^7: ^4"..tostring(VehicleNitrous[plate].hasnitro).."^7 }") end
 	end
 end
 
 function GetNosColour()
-	local p = promise.new()
-	QBCore.Functions.TriggerCallback('jim-mechanic:GetNosColour', function(vehs) p:resolve(vehs) end)
-	nosColour = Citizen.Await(p)
+	nosColour = triggerCallback('jim-mechanic:GetNosColour')
 	for plate in pairs(nosColour) do
-		if Config.Debug then print("^5Debug^7: ^3nosColour^7[^6"..tostring(plate).."^7] = { ^2RBG^7: ^4"..nosColour[plate][1].."^7, ^4"..nosColour[plate][2].."^7, ^4"..nosColour[plate][3].." ^7}") end
+		if Config.System.Debug then
+			print("^5Debug^7: ^3nosColour^7[^6"..tostring(plate).."^7] = { ^2RBG^7: ^4"..nosColour[plate][1].."^7, ^4"..nosColour[plate][2].."^7, ^4"..nosColour[plate][3].." ^7}")
+		end
 	end
 end
 
-RegisterNetEvent('jim-mechanic:client:applyNOS', function()
-	local playerPed	= PlayerPedId()
-	local coords = GetEntityCoords(playerPed)
-	--if not jobChecks() then return end --uncomment this line to make nos mechanic only
-	--if not locationChecks() then return end
-	if not inCar() then return end
-	if not nearPoint(coords) then return end
-	if not IsPedInAnyVehicle(playerPed, false) then	vehicle = getClosest(coords) pushVehicle(vehicle) end
-	if lockedCar(vehicle) then return end
-	if DoesEntityExist(vehicle) then
-		if not IsToggleModOn(vehicle, 18) then triggerNotify(nil, Loc[Config.Lan]["nos"].notinstalled, "error") return end
-		for _, v in pairs({"engine"}) do
-			if #(GetEntityCoords(PlayerPedId()) - GetWorldPositionOfEntityBone(vehicle, GetEntityBoneIndexByName(vehicle, v))) <= 2.5 then
-				lookVeh(GetWorldPositionOfEntityBone(vehicle, GetEntityBoneIndexByName(vehicle, v)))
-				found = true
-				break
+local function nosAdd(ped, vehicle) local item = Items["nos"]
+	stopTempCam()
+	local above = isVehicleLift(vehicle)
+	local emote = { anim = above and "idle_b" or "fixing_a_ped", dict = above and "amb@prop_human_movie_bulb@idle_a" or "mini@repair", flag = above and 1 or 16 }
+	triggerNotify(nil, Loc[Config.Lan]["common"].installing..item.label, "success")
+	if progressBar({label = Loc[Config.Lan]["common"].installing..item.label, time = math.random(7000,10000), anim = emote.anim, dict = emote.dict, flag = emote.flag, cancel = true }) then SetVehicleModKit(vehicle, 0)
+		if VehicleNitrous[trim(GetVehicleNumberPlateText(vehicle))] then addItem("noscan", 1) end
+		TriggerServerEvent('jim-mechanic:server:LoadNitrous', trim(GetVehicleNumberPlateText(vehicle)))
+		updateCar(vehicle)
+		removeItem("nos", 1)
+		triggerNotify(nil, item.label.." "..Loc[Config.Lan]["common"].installed, "success")
+	else
+		triggerNotify(nil, item.label..Loc[Config.Lan]["common"].instfail, "error")
+	end
+	if Config.Overrides.DoorAnimations then SetVehicleDoorsShut(vehicle, 4, false) end
+	ClearPedTasks(ped)
+	emptyHands(ped)
+end
+
+local function nosFail(ped, vehicle)
+	stopTempCam()
+	triggerNotify(nil, Items["nos"].label..Loc[Config.Lan]["common"].instfail, "error")
+	if Config.Overrides.DoorAnimations then SetVehicleDoorShut(vehicle, 4, false) end
+	emptyHands(ped)
+	if Config.NOS.explosiveFail then
+		local chance = math.random(1,10)
+		if not Config.NOS.explosiveFailJob then
+			if not jobChecks() then
+				if chance == 10 then
+					SetVehicleDoorBroken(vehicle, 4, 0) -- Rip Hood off
+					Wait(100)
+					AddExplosion(GetOffsetFromEntityInWorldCoords(vehicle, 0.0, 1.6, 1.0), 2, 0.8, 1, 0, 1.0, true)
+				end
+			end
+		elseif Config.NOS.explosiveFailJob then
+			if chance == 10 then
+				SetVehicleDoorBroken(vehicle, 4, 0) -- Rip Hood off
+				Wait(100)
+				AddExplosion(GetOffsetFromEntityInWorldCoords(vehicle, 0.0, 1.6, 1.0), 2, 0.8, 1, 0, 1.0, true)
 			end
 		end
-		SetVehicleEngineOn(vehicle, false, false, true)
-		TaskTurnPedToFaceEntity(playerPed, vehicle, 1000)
+	end
+end
+
+RegisterNetEvent('jim-mechanic:client:applyNOS', function() local Ped = PlayerPedId()
+	local coords = GetEntityCoords(Ped)
+	if Config.NOS.JobOnly then
+		if not jobChecks() then return end
+		if not locationChecks() then return end
+	end
+	if not inCar() then return end
+	if not nearPoint(coords) then return end
+	if not IsPedInAnyVehicle(Ped, false) then vehicle = getClosest(coords) pushVehicle(vehicle) end
+	if lockedCar(vehicle) then return end
+	if DoesEntityExist(vehicle) then
+		local cam = createTempCam(Ped, GetEntityCoords(vehicle))
+		local above = isVehicleLift(vehicle)
+		if not IsToggleModOn(vehicle, 18) then triggerNotify(nil, Loc[Config.Lan]["nos"].notinstalled, "error") return end
+		if not lookAtEngine(vehicle) then return end
+		SetVehicleEngineOn(vehicle, false, false, false)
 		Wait(1000)
-		playAnim("mini@repair", "fixing_a_ped", 35000, 16)
-		SetVehicleDoorOpen(vehicle, 4, false, false)
-		if Config.skillcheck == "qb-lock" then
-			local time = math.random(7000,10000)
-			playAnim("mini@repair", "fixing_a_ped", time, 16)
-			local success = exports['qb-lock']:StartLockPickCircle(math.random(2,4), math.random(7,10), success)
-			if success then
-				QBCore.Functions.Progressbar("drink_something", Loc[Config.Lan]["common"].installing.."NOS..", time, false, true, { disableMovement = true, disableCarMovement = true, disableMouse = false, disableCombat = false, },
-				{ animDict = "mini@repair", anim = "fixing_a_ped", flags = 8, }, {}, {}, function() SetVehicleModKit(vehicle, 0)
-					ClearPedTasks(playerPed)
-					if VehicleNitrous[trim(GetVehicleNumberPlateText(vehicle))] then toggleItem(true, "noscan") end
-					TriggerServerEvent('jim-mechanic:server:LoadNitrous', trim(GetVehicleNumberPlateText(vehicle)))
-					SetVehicleDoorShut(vehicle, 4, false)
-					updateCar(vehicle)
-					toggleItem(false, "nos")
-					triggerNotify(nil, Loc[Config.Lan]["nos"].installed, "success")
-				end, function() -- Cancel
-					triggerNotify(nil, Loc[Config.Lan]["nos"].failed, "error")
-					SetVehicleDoorShut(vehicle, 4, false)
-					emptyHands(playerPed)
-				end, "nos")
-			else
-				triggerNotify(nil, Loc[Config.Lan]["nos"].failed, "error")
-				SetVehicleDoorShut(vehicle, 4, false)
-				emptyHands(playerPed)
-				if Config.explosiveFail then
-					local chance = math.random(1,10)
-					if not Config.explosiveFailJob then
-						if not jobChecks() then
-							if chance == 10 then
-								SetVehicleDoorBroken(vehicle, 4, 0) -- Rip Hood off
-								Wait(100)
-								AddExplosion(GetOffsetFromEntityInWorldCoords(vehicle, 0.0, 1.6, 1.0), 2, 0.8, 1, 0, 1.0, true)
-							end
-						end
-					elseif Config.explosiveFailJob then
-						if chance == 10 then
-							SetVehicleDoorBroken(vehicle, 4, 0) -- Rip Hood off
-							Wait(100)
-							AddExplosion(GetOffsetFromEntityInWorldCoords(vehicle, 0.0, 1.6, 1.0), 2, 0.8, 1, 0, 1.0, true)
-						end
-					end
-				end
-			end
-		elseif Config.skillcheck == "ps-ui" then
-			exports['ps-ui']:Circle(function(success)
-				local time = math.random(7000,10000)
-				if success then
-					QBCore.Functions.Progressbar("drink_something", Loc[Config.Lan]["common"].installing.."NOS..", time, false, true, { disableMovement = true, disableCarMovement = true, disableMouse = false, disableCombat = false, },
-					{ animDict = "mini@repair", anim = "fixing_a_ped", flags = 8, }, {}, {}, function() SetVehicleModKit(vehicle, 0)
-						ClearPedTasks(playerPed)
-						if VehicleNitrous[trim(GetVehicleNumberPlateText(vehicle))] then toggleItem(true, "noscan") end
-						TriggerServerEvent('jim-mechanic:server:LoadNitrous', trim(GetVehicleNumberPlateText(vehicle)))
-						SetVehicleDoorShut(vehicle, 4, false)
-						updateCar(vehicle)
-						toggleItem(false, "nos")
-						triggerNotify(nil, Loc[Config.Lan]["nos"].installed, "success")
-					end, function() -- Cancel
-						triggerNotify(nil, Loc[Config.Lan]["nos"].failed, "error")
-						SetVehicleDoorShut(vehicle, 4, false)
-						emptyHands(playerPed)
-					end, "nos")
-				else
-					triggerNotify(nil, Loc[Config.Lan]["nos"].failed, "error")
-					SetVehicleDoorShut(vehicle, 4, false)
-					emptyHands(playerPed)
-					if Config.explosiveFail then
-						local chance = math.random(1,10)
-						if not Config.explosiveFailJob then
-							if not jobChecks() then
-								if chance == 10 then
-									SetVehicleDoorBroken(vehicle, 4, 0) -- Rip Hood off
-									Wait(100)
-									AddExplosion(GetOffsetFromEntityInWorldCoords(vehicle, 0.0, 1.6, 1.0), 2, 0.8, 1, 0, 1.0, true)
-								end
-							end
-						elseif Config.explosiveFailJob then
-							if chance == 10 then
-								SetVehicleDoorBroken(vehicle, 4, 0) -- Rip Hood off
-								Wait(100)
-								AddExplosion(GetOffsetFromEntityInWorldCoords(vehicle, 0.0, 1.6, 1.0), 2, 0.8, 1, 0, 1.0, true)
-							end
-						end
-					end
-				end
+		playAnim(above and "amb@prop_human_movie_bulb@idle_a" or "mini@repair", above and "idle_b" or "fixing_a_ped", 35000, 16)
+		startTempCam(cam)
+		if Config.Overrides.DoorAnimations then SetVehicleDoorOpen(vehicle, 4, false, false) end
+		if Config.NOS.skillcheck == "qb-lock" then
+			local Skillbar = exports['qb-lock']:StartLockPickCircle(math.random(2,4), math.random(7,10), success)
+			if Skillbar then nosAdd(Ped, vehicle) else nosFail(Ped, vehicle) end
+		elseif Config.NOS.skillcheck == "ps-ui" then
+			exports['ps-ui']:Circle(function(Skillbar)
+				if Skillbar then nosAdd(Ped, vehicle) else nosFail(Ped, vehicle) end
 			end, 2, 20)
-		elseif Config.skillcheck == "qb-skillbar" then
+		elseif Config.NOS.skillcheck == "qb-skillbar" then
 			local Skillbar = exports['qb-skillbar']:GetSkillbarObject()
-			Skillbar.Start({ duration = math.random(2500,5000), pos = math.random(10, 30), width = math.random(10, 20),	},
-			function() -- On success
-			triggerNotify(nil, Loc[Config.Lan]["nos"].installing, "success")
-				playAnim("mini@repair", "fixing_a_ped", time, 16)
-				QBCore.Functions.Progressbar("drink_something", Loc[Config.Lan]["common"].installing.."NOS..", math.random(7000,10000), false, true, { disableMovement = true, disableCarMovement = true, disableMouse = false, disableCombat = false, },
-				{ animDict = "mini@repair", anim = "fixing_a_ped", flags = 8, }, {}, {}, function() SetVehicleModKit(vehicle, 0)
-					ClearPedTasks(playerPed)
-					qblog("`nos - "..QBCore.Shared.Items["nos"].label.."` installed [**"..trim(GetVehicleNumberPlateText(vehicle)).."**]")
-					if VehicleNitrous[trim(GetVehicleNumberPlateText(vehicle))] then toggleItem(true, "noscan") end
-					TriggerServerEvent('jim-mechanic:server:LoadNitrous', trim(GetVehicleNumberPlateText(vehicle)))
-					SetVehicleDoorShut(vehicle, 4, false)
-					toggleItem(false, "nos")
-					triggerNotify(nil, Loc[Config.Lan]["nos"].installed, "success")
-				end, function() -- Cancel
-					triggerNotify(nil, Loc[Config.Lan]["nos"].failed, "error")
-					SetVehicleDoorShut(vehicle, 4, false)
-					ClearPedTasks(playerPed)
-				end, "nos")
+			Skillbar.Start({ duration = math.random(2500,5000), pos = math.random(10, 30), width = math.random(10, 20),	},	function() -- On success
+				nosAdd(Ped, vehicle)
 			end, function() -- On fail
-				triggerNotify(nil, Loc[Config.Lan]["nos"].failed, "error")
-				SetVehicleDoorShut(vehicle, 4, false)
-				ClearPedTasks(playerPed)
-				if Config.explosiveFail then
-					local chance = math.random(1,10)
-					if not Config.explosiveFailJob then
-						if not jobChecks() then
-							if chance == 10 then
-								SetVehicleDoorBroken(vehicle, 4, 0) -- Rip Hood off
-								Wait(100)
-								AddExplosion(GetOffsetFromEntityInWorldCoords(vehicle, 0.0, 1.6, 1.0), 2, 0.8, 1, 0, 1.0, true)
-							end
-						end
-					elseif Config.explosiveFailJob then
-						if chance == 10 then
-							SetVehicleDoorBroken(vehicle, 4, 0) -- Rip Hood off
-							Wait(100)
-							AddExplosion(GetOffsetFromEntityInWorldCoords(vehicle, 0.0, 1.6, 1.0), 2, 0.8, 1, 0, 1.0, true)
-						end
-					end
-				end
+				nosFail(Ped, vehicle)
 			end)
-		else
-            triggerNotify(nil, Loc[Config.Lan]["nos"].installing, "success")
-			playAnim("mini@repair", "fixing_a_ped", time, 16)
-            QBCore.Functions.Progressbar("drink_something", Loc[Config.Lan]["common"].installing.."NOS..", math.random(7000,10000), false, true, { disableMovement = true, disableCarMovement = true, disableMouse = false, disableCombat = false, },
-            { animDict = "mini@repair", anim = "fixing_a_ped", flags = 8, }, {}, {}, function() SetVehicleModKit(vehicle, 0)
-                ClearPedTasks(playerPed)
-                qblog("`nos - "..QBCore.Shared.Items["nos"].label.."` installed [**"..trim(GetVehicleNumberPlateText(vehicle)).."**]")
-                if VehicleNitrous[trim(GetVehicleNumberPlateText(vehicle))] then toggleItem(true, "noscan") end
-                TriggerServerEvent('jim-mechanic:server:LoadNitrous', trim(GetVehicleNumberPlateText(vehicle)))
-                SetVehicleDoorShut(vehicle, 4, false)
-                toggleItem(false, "nos")
-                triggerNotify(nil, Loc[Config.Lan]["nos"].installed, "success")
-            end, function() -- Cancel
-                triggerNotify(nil, Loc[Config.Lan]["nos"].failed, "error")
-                SetVehicleDoorShut(vehicle, 4, false)
-                ClearPedTasks(playerPed)
-            end, "nos")
+        elseif Config.NOS.skillcheck == "ox_lib" then
+            local Skillbar = exports.ox_lib:skillCheck({'easy', 'easy', 'easy' }, {'1', '2', '3', '4'})
+            if Skillbar then nosAdd(Ped, vehicle)
+            else nosFail(Ped, vehicle) end
+        else
+			nosAdd(Ped, vehicle)
 		end
 	end
 end)
@@ -205,11 +117,8 @@ end)
 RegisterNetEvent('jim-mechanic:client:UpdateNitroLevel', function(Plate, level) VehicleNitrous[Plate] = { hasnitro = true, level = level } end)
 
 RegisterNetEvent('jim-mechanic:client:LoadNitrous', function(Plate)
-	if not LocalPlayer.state.isLoggedIn then return end
     VehicleNitrous[Plate] = { hasnitro = true, level = 100, }
-	local playerPed	= PlayerPedId()
-	local coords = GetEntityCoords(playerPed)
-    local CurrentVehicle = getClosest(coords) pushVehicle(vehicle)
+    local CurrentVehicle = getClosest(GetEntityCoords(PlayerPedId())) pushVehicle(vehicle)
     local CPlate = trim(GetVehicleNumberPlateText(CurrentVehicle))
     if CPlate == Plate then TriggerEvent('hud:client:UpdateNitrous', VehicleNitrous[Plate].hasnitro, VehicleNitrous[Plate].level, false) end
 end)
@@ -217,30 +126,25 @@ end)
 RegisterNetEvent('jim-mechanic:client:UnloadNitrous', function(Plate)
 	if not LocalPlayer.state.isLoggedIn then return end
     VehicleNitrous[Plate] = nil
-    local CurrentVehicle = GetVehiclePedIsIn(PlayerPedId())
-    local CPlate = trim(GetVehicleNumberPlateText(CurrentVehicle))
+    local CPlate = trim(GetVehicleNumberPlateText(GetVehiclePedIsIn(PlayerPedId())))
     if CPlate == Plate then NitrousActivated = false TriggerEvent('hud:client:UpdateNitrous', false, nil, false) end
 end)
 
-local boosting = false
-local forceStop = false
-local damageTimer = 0
-local CurrentVehicle
-local Plate
+local boosting, CurrentVehicle, CurrentTopSpeed, Plate = false, false, 0, nil, nil
 
 RegisterKeyMapping('levelUP', 'Boost/Purge lvl Up', 'keyboard', 'PRIOR')
 RegisterCommand('levelUP', function()
 	local Plate = trim(GetVehicleNumberPlateText(GetVehiclePedIsIn(PlayerPedId())))
 	if VehicleNitrous[Plate] and VehicleNitrous[Plate].hasnitro and GetPedInVehicleSeat(GetVehiclePedIsIn(PlayerPedId()), -1) == PlayerPedId() then
 		if purgemode and purgeSize < 1.0 then
-			purgeSize = purgeSize + 0.1
+			purgeSize += 0.1
 			if purgeSize >= 1.0 then purgeSize = 1.0 end
 			if purgeSize > 0.1 then
 				if not ShowOdo then	triggerNotify(nil, Loc[Config.Lan]["nos"].spray..math.floor(purgeSize*10)) end
 			end
 		end
 		if not purgemode and boostLevel < 3 and not NitrousActivated then
-			boostLevel = boostLevel + 1
+			boostLevel += 1
 			if boostLevel > 3 then boostLevel = 3 end
 			if boostLevel <= 3 then
 				if not ShowOdo then	triggerNotify(nil, Loc[Config.Lan]["nos"].boost..boostLevel) end
@@ -248,19 +152,20 @@ RegisterCommand('levelUP', function()
 		end
 	end
 end)
+
 RegisterKeyMapping('levelDown', 'Boost/Purge lvl Down', 'keyboard', 'NEXT')
 RegisterCommand('levelDown', function()
 	local Plate = trim(GetVehicleNumberPlateText(GetVehiclePedIsIn(PlayerPedId())))
 	if VehicleNitrous[Plate] and VehicleNitrous[Plate].hasnitro and GetPedInVehicleSeat(GetVehiclePedIsIn(PlayerPedId()), -1) == PlayerPedId() then
 		if purgemode and purgeSize > 0.1 then
-			purgeSize = purgeSize - 0.1
+			purgeSize -= 0.1
 			if purgeSize < 0.1 then purgeSize = 0.1 end
 			if purgeSize > 0.1 then
 				if not ShowOdo then	triggerNotify(nil, Loc[Config.Lan]["nos"].spray..math.floor(purgeSize*10)) end
 			end
 		end
 		if not purgemode and boostLevel > 1 and not NitrousActivated then
-			boostLevel = boostLevel - 1
+			boostLevel -= 1
 			if boostLevel < 1 then boostLevel = 1 end
 			if not ShowOdo then	triggerNotify(nil, Loc[Config.Lan]["nos"].boost..boostLevel) end
 		end
@@ -278,63 +183,92 @@ RegisterCommand('nosSwitch', function()
 	end
 end)
 
-
 RegisterKeyMapping('+nosBoost', 'Boost', 'keyboard', 'LSHIFT')
 RegisterCommand('+nosBoost', function()
-	CurrentVehicle = GetVehiclePedIsIn(PlayerPedId())
-	if IsPedInAnyVehicle(PlayerPedId()) then
+	local Ped = PlayerPedId()
+	CurrentVehicle = GetVehiclePedIsIn(Ped)
+	if tonumber(CurrentVehicle) == 0 or DoesEntityExist(CurrentVehicle) == false then return end
+	if IsPedInAnyVehicle(Ped) then
 		Plate = trim(GetVehicleNumberPlateText(CurrentVehicle))
-		if VehicleNitrous[Plate] and VehicleNitrous[Plate].hasnitro and (GetVehicleWheelieState(CurrentVehicle) ~= 129 and GetVehicleWheelieState(CurrentVehicle) ~= 65 and not IsEntityInAir(CurrentVehicle)) and GetPedInVehicleSeat(CurrentVehicle, -1) == PlayerPedId() then
+		if VehicleNitrous[Plate] and VehicleNitrous[Plate].hasnitro and (GetVehicleWheelieState(CurrentVehicle) ~= 129 and GetVehicleWheelieState(CurrentVehicle) ~= 65 and not IsEntityInAir(CurrentVehicle)) and GetPedInVehicleSeat(CurrentVehicle, -1) == Ped then
 			TriggerEvent('hud:client:UpdateNitrous', VehicleNitrous[Plate].hasnitro, VehicleNitrous[Plate].level, false)
-			forceStop = true
 			if purgemode then
 				TriggerServerEvent('jim-mechanic:server:SyncPurge', VehToNet(CurrentVehicle), true, purgeSize)
-				CreateThread(function()
-					while boosting do
-						purgeCool = purgeCool + 1
-						Wait(500)
-					end
-				end)
+				CreateThread(function()	while boosting do purgeCool += 1 Wait(500) end end)
 			end
 			if not purgemode then
 				if (GetEntitySpeed(CurrentVehicle) * 3.6) > 25.0 and not boosting then
 					boosting = true
-					ModifyVehicleTopSpeed(CurrentVehicle, (Config.NosTopSpeed or -1.0))
-					ApplyForceToEntity(CurrentVehicle, 3, 0, Config.NosBoostPower[boostLevel], 0, 0.0, -1.2, 0.0, 0, true, true, true, false, true)
+					ApplyForceToEntity(CurrentVehicle, 3, 0, Config.NOS.NosBoostPower[boostLevel], 0, 0.0, -1.2, 0.0, 0, true, true, true, false, true)
 					NitrousActivated = true
-					if Config.EnableScreen then SetNitroBoostScreenEffectsEnabled(true) end
-					if Config.EnableTrails then TriggerServerEvent('jim-mechanic:server:SyncTrail', VehToNet(CurrentVehicle), true) end
+					if Config.NOS.EnableScreen then
+						SetNitroBoostScreenEffectsEnabled(true)
+					end
+					if Config.NOS.EnableTrails then
+						TriggerServerEvent('jim-mechanic:server:SyncTrail', VehToNet(CurrentVehicle), true)
+					end
+					if Config.NOS.EnableFlame then
+						TriggerServerEvent('jim-mechanic:server:SyncFlame', VehToNet(CurrentVehicle), true, boostLevel)
+					end
 					SetVehicleBoostActive(CurrentVehicle, 1)
+					CreateThread(function()
+						while NitrousActivated and Config.NOS.HandlingChange do
+							if boostLevel == 1 then
+								SetVehicleCheatPowerIncrease(CurrentVehicle, 1.25)
+								SetVehicleTurboPressure(CurrentVehicle, 1.25 * GetVehicleCurrentRpm(CurrentVehicle))
+								SetVehicleHandlingFloat(CurrentVehicle, "CHandlingData", "fMass", defVehStats[Plate]["hFloat"] + 30.0)
+							end
+							if boostLevel == 2 then
+								SetVehicleCheatPowerIncrease(CurrentVehicle, 1.5)
+								SetVehicleTurboPressure(CurrentVehicle, 1.5 * GetVehicleCurrentRpm(CurrentVehicle))
+								SetVehicleHandlingFloat(CurrentVehicle, "CHandlingData", "fMass", defVehStats[Plate]["hFloat"] + 60.0)
+							end
+							if boostLevel == 3 then
+								SetVehicleCheatPowerIncrease(CurrentVehicle, 2.2)
+								SetVehicleTurboPressure(CurrentVehicle, 2.2 * GetVehicleCurrentRpm(CurrentVehicle))
+								SetVehicleHandlingFloat(CurrentVehicle, "CHandlingData", "fMass", defVehStats[Plate]["hFloat"] + 90.0)
+							end
+							ModifyVehicleTopSpeed(CurrentVehicle, Config.NOS.NosBoostPower[boostLevel])
+							Wait(0)
+						end
+					end)
 					-- Boosting Effects
 					CreateThread(function()
 						while NitrousActivated do
 							if VehicleNitrous[Plate].level - 1 >= 0 then
-								local nitrousUseRate = Config.NitrousUseRate
-								if boostLevel == 1 then nitrousUseRate = nitrousUseRate - (Config.NitrousUseRate / 2) end
-								if boostLevel == 3 then nitrousUseRate = nitrousUseRate + (Config.NitrousUseRate / 2) end
-								if Config.EnableFlame then TriggerServerEvent('jim-mechanic:server:SyncFlame', VehToNet(CurrentVehicle), true) end
-								TriggerServerEvent('jim-mechanic:server:UpdateNitroLevel', Plate, (VehicleNitrous[Plate].level - nitrousUseRate))
-								TriggerEvent("jim-mechanic:client:NosUpdateDelay", Plate, (VehicleNitrous[Plate].level - nitrousUseRate))
+								local nitrousUseRate = Config.NOS.NitrousUseRate
+								if boostLevel == 1 then	nitrousUseRate -= (Config.NOS.NitrousUseRate / 2) end
+								if boostLevel == 3 then	nitrousUseRate += (Config.NOS.NitrousUseRate / 2) end
+								TriggerEvent('jim-mechanic:client:UpdateNitroLevel', Plate, (VehicleNitrous[Plate].level - nitrousUseRate)) -- update client with new level / this is now only server synced when leaving the vehicle
 								TriggerEvent('hud:client:UpdateNitrous', VehicleNitrous[Plate].hasnitro,  VehicleNitrous[Plate].level, true)
+
 							elseif VehicleNitrous[Plate].level - 1 <= 0 then
 								TriggerServerEvent('jim-mechanic:server:UnloadNitrous', Plate)
-								toggleItem(true, "noscan")
-								if Config.EnableScreen then SetNitroBoostScreenEffectsEnabled(false) end
-								if Config.EnableTrails then TriggerServerEvent('jim-mechanic:server:SyncTrail', VehToNet(CurrentVehicle), false) end
+								addItem("noscan", 1)
+								if Config.NOS.EnableScreen then SetNitroBoostScreenEffectsEnabled(false) end
+								if Config.NOS.EnableTrails then	TriggerServerEvent('jim-mechanic:server:SyncTrail', VehToNet(CurrentVehicle), false) end
+								if Config.NOS.EnableFlame then TriggerServerEvent('jim-mechanic:server:SyncFlame', VehToNet(CurrentVehicle), false, nil, nil) end
 								NitrousActivated = false
-								boosting = not boosting
-								SetVehicleBoostActive(CurrentVehicle, 0)
-								if Config.EnableFlame then TriggerServerEvent('jim-mechanic:server:SyncFlame', VehToNet(CurrentVehicle), false) end
-								ModifyVehicleTopSpeed(CurrentVehicle, -1.0)
+								boosting = false
+								SetVehicleBoostActive(CurrentVehicle, false)
+								--Reset veh modifiers
+								if Config.NOS.HandlingChange then
+									SetVehicleCheatPowerIncrease(CurrentVehicle, defVehStats[Plate]["pIncrease"])
+									SetVehicleHandlingFloat(CurrentVehicle, "CHandlingData", "fMass", defVehStats[Plate]["hFloat"])
+									ModifyVehicleTopSpeed(CurrentVehicle, defVehStats[Plate]["speedMod"])
+								end
 							end
+
 							Wait(100)
+							if IsVehicleStopped(CurrentVehicle) or (GetEntitySpeed(CurrentVehicle) * 3.6) < 20.0 then ExecuteCommand("-nosBoost") end
 						end
 					end)
 					CreateThread(function()
+						local plate = trim(GetVehicleNumberPlateText(CurrentVehicle))
 						while NitrousActivated do
-							damageTimer = damageTimer + 1
+							damageTimer += 1
 							local engDamage = math.random(14, 19)
-							local dmgFctr = (math.random(20, 50) / 10)
+							local dmgFctr = (math.random(40, 60) / 10)
 							if damageTimer > 7 then
 								CreateThread(function()
 									RequestAmbientAudioBank("DLC_sum20_Open_Wheel_Racing_Sounds", 0)
@@ -342,33 +276,38 @@ RegisterCommand('+nosBoost', function()
 									Wait(1000)
 									StopSound(soundId)
 								end)
-								if boostLevel == 1 then
-									engDamage = math.random(0, 13)
-									dmgFctr = (math.random(10, 20) / 10)
-								elseif boostLevel == 3 then
-									engDamage = math.random(19, 25)
-									dmgFctr = (math.random(40, 70) / 10)
-								end
+								if boostLevel == 1 then engDamage = math.random(0, 13) dmgFctr = (math.random(10, 20) / 10)
+								elseif boostLevel == 3 then engDamage = math.random(19, 25) dmgFctr = (math.random(40, 70) / 10) end
 								SetVehicleEngineHealth(CurrentVehicle, (GetVehicleEngineHealth(CurrentVehicle) - engDamage))
-								if useMechJob() then
-									local DamageComponents = { "radiator", "fuel", }
-									local randomComponent = DamageComponents[math.random(1, #DamageComponents)]
-									local randomDamage = (math.random() + math.random(0, 1)) * dmgFctr
-									exports['qb-mechanicjob']:SetVehicleStatus(QBCore.Functions.GetPlate(CurrentVehicle), randomComponent, exports['qb-mechanicjob']:GetVehicleStatus(QBCore.Functions.GetPlate(CurrentVehicle), randomComponent) - randomDamage)
+								if Config.Repairs.ExtraDamages == true then
+									DamageRandomComponent(plate, GetVehicleEngineHealth(CurrentVehicle), GetVehicleBodyHealth(CurrentVehicle))
 								end
 							end
-							if damageTimer >= 14 and boostLevel == 3 and Config.boostExplode then
-								forceStop = true
-								AddExplosion(GetOffsetFromEntityInWorldCoords(CurrentVehicle, 0.0, 1.6, 1.0), 23, 0.8, 1, 0, 1.0, true)
-								TriggerServerEvent('jim-mechanic:server:UnloadNitrous', Plate)
-								if Config.EnableScreen then SetNitroBoostScreenEffectsEnabled(false) end
-								if Config.EnableTrails then TriggerServerEvent('jim-mechanic:server:SyncTrail', VehToNet(CurrentVehicle), false) end
-								NitrousActivated = false
-								boosting = not boosting
-								SetVehicleBoostActive(CurrentVehicle, 0)
-								if Config.EnableFlame then TriggerServerEvent('jim-mechanic:server:SyncFlame', VehToNet(CurrentVehicle), false) end
-								ModifyVehicleTopSpeed(CurrentVehicle, -1.0)
-								damageTimer = 14
+							if damageTimer >= 14  then damageTimer = 14
+								if boostLevel == 3 and Config.NOS.boostExplode then
+									local coords = GetOffsetFromEntityInWorldCoords(CurrentVehicle, 0.0, 1.6, 1.0)
+
+									AddExplosion(coords, 23, 0.8, 1, 0, 1.0, true)
+
+									TriggerServerEvent('jim-mechanic:server:UnloadNitrous', plate)
+									if Config.NOS.EnableScreen then SetNitroBoostScreenEffectsEnabled(false) end
+									if Config.NOS.EnableTrails then TriggerServerEvent('jim-mechanic:server:SyncTrail', VehToNet(CurrentVehicle), false) end
+									NitrousActivated = false
+									boosting = not boosting
+									SetVehicleBoostActive(CurrentVehicle, false, 0.0, 0.0, 0.0, false)
+									CreateThread(function()
+										if Config.NOS.EnableFlame then
+											for i = 0, 10 do
+												TriggerServerEvent('jim-mechanic:server:SyncFlame', VehToNet(CurrentVehicle), true, nil, nil)
+												Wait(math.random(200,500))
+												TriggerServerEvent('jim-mechanic:server:SyncFlame', VehToNet(CurrentVehicle), false, nil, nil)
+												Wait(math.random(0,100))
+											end
+										end
+									end)
+									boostLevel = 1
+									damageTimer = 0
+								end
 							end
 							Wait(1000)
 						end
@@ -376,56 +315,75 @@ RegisterCommand('+nosBoost', function()
 				end
 			end
 		end
-	else
-		if forceStop then -- This will make sure it doesn't break boosting in any car the person leaves. Clears the effects once and waits till you boost in another car
-			forceStop = false
-			if nosupdated then nosupdated = false end
-			SetVehicleBoostActive(GetVehiclePedIsIn(PlayerPedId(), true), 0)
-			TriggerServerEvent('jim-mechanic:server:SyncPurge', VehToNet(GetVehiclePedIsIn(PlayerPedId(), true)), false)
-			if Config.EnableFlame then TriggerServerEvent('jim-mechanic:server:SyncFlame', VehToNet(GetVehiclePedIsIn(PlayerPedId(), true)), false) end
-			if Config.EnableTrails then TriggerServerEvent('jim-mechanic:server:SyncTrail', VehToNet(GetVehiclePedIsIn(PlayerPedId(), true)), false) end
-			if Config.EnableScreen then SetNitroBoostScreenEffectsEnabled(false) end
+	end
+end, false)
 
-			ModifyVehicleTopSpeed(GetVehiclePedIsIn(PlayerPedId(), true), -1.0)
+function forceStopNos() local Ped = PlayerPedId()
+	if GetVehiclePedIsIn(Ped, true) == 0 then
+		if Config.System.Debug then print("^5Debug^7: ^3forceStopNos^7: ^4Driver left vehicle, resetting NOS effects") end
+		SetVehicleBoostActive(GetVehiclePedIsIn(Ped, true), false, 0.0, 0.0, 0.0, false)
+		TriggerServerEvent('jim-mechanic:server:SyncPurge', VehToNet(GetVehiclePedIsIn(Ped, true)), false, nil)
+		if Config.NOS.EnableFlame then
+			TriggerServerEvent('jim-mechanic:server:SyncFlame', VehToNet(GetVehiclePedIsIn(Ped, true)), false, nil, nil)
+		end
+		if Config.NOS.EnableTrails then TriggerServerEvent('jim-mechanic:server:SyncTrail', VehToNet(GetVehiclePedIsIn(Ped, true)), false) end
+		if Config.NOS.EnableScreen then SetNitroBoostScreenEffectsEnabled(false) end
+		local Plate = trim(GetVehicleNumberPlateText(GetVehiclePedIsIn(Ped, true)))
+		if VehicleNitrous[Plate] then
+			TriggerEvent('hud:client:UpdateNitrous', VehicleNitrous[Plate].hasnitro, VehicleNitrous[Plate].level, false)
+		else
+			TriggerEvent('hud:client:UpdateNitrous', false, 0, false)
+		end
 
-			if VehicleNitrous[trim(GetVehicleNumberPlateText(GetVehiclePedIsIn(PlayerPedId(), true)))] then
-				TriggerEvent('hud:client:UpdateNitrous', VehicleNitrous[trim(GetVehicleNumberPlateText(GetVehiclePedIsIn(PlayerPedId(), true)))].hasnitro, VehicleNitrous[trim(GetVehicleNumberPlateText(GetVehiclePedIsIn(PlayerPedId(), true)))].level, false)
-			else
-				TriggerEvent('hud:client:UpdateNitrous', false, 0, false)
+		--Reset veh modifiers
+		if Config.NOS.HandlingChange and CurrentVehicle then
+			if DoesEntityExist(veh) and veh ~= 0 and veh ~= nil and defVehStats[Plate] ~= nil then
+				SetVehicleCheatPowerIncrease(CurrentVehicle, defVehStats[Plate]["pIncrease"])
+				SetVehicleHandlingFloat(CurrentVehicle, "CHandlingData", "fMass", defVehStats[Plate]["hFloat"])
+				ModifyVehicleTopSpeed(CurrentVehicle, defVehStats[Plate]["speedMod"])
 			end
-			NitrousActivated = false
-			boostLevel = 1
-			damageTimer = 0
-			purgeCool = 0
-			boosting = false
-			CurrentVehicle = nil
-			Plate = nil
-			Wait(1500)
-			StopSound(soundId)
 		end
 	end
-end)
+	NitrousActivated = false
+	boostLevel = 1
+	damageTimer = 0
+	purgeCool = 0
+	boosting = false
+	CurrentVehicle = nil
+	Plate = nil
+	Wait(1500)
+	StopSound(soundId)
+end
+
 RegisterCommand('-nosBoost', function()
+	local Ped = PlayerPedId()
 	if tonumber(CurrentVehicle) == 0 or DoesEntityExist(CurrentVehicle) == false then return end
-	TriggerServerEvent('jim-mechanic:server:SyncPurge', VehToNet(CurrentVehicle), false)
+	TriggerServerEvent('jim-mechanic:server:SyncPurge', VehToNet(CurrentVehicle), false, nil)
 	if NitrousActivated then
 		StopSound(soundId)
 		SetVehicleBoostActive(CurrentVehicle, 0)
-		if Config.EnableFlame then TriggerServerEvent('jim-mechanic:server:SyncFlame', VehToNet(CurrentVehicle), false) end
-		ModifyVehicleTopSpeed(CurrentVehicle, -1.0)
+		if Config.NOS.EnableFlame then TriggerServerEvent('jim-mechanic:server:SyncFlame', VehToNet(CurrentVehicle), false, nil, nil) end
 		TriggerEvent('hud:client:UpdateNitrous', VehicleNitrous[Plate].hasnitro, VehicleNitrous[Plate].level, false)
 		NitrousActivated = not NitrousActivated
-		if Config.EnableTrails then TriggerServerEvent('jim-mechanic:server:SyncTrail', VehToNet(CurrentVehicle), false) end
-		if Config.EnableScreen then SetNitroBoostScreenEffectsEnabled(false) end
+
+		--Reset veh modifiers
+		if Config.NOS.HandlingChange and CurrentVehicle then
+			SetVehicleCheatPowerIncrease(CurrentVehicle, defVehStats[Plate]["pIncrease"])
+			SetVehicleHandlingFloat(CurrentVehicle, "CHandlingData", "fMass", defVehStats[Plate]["hFloat"])
+			ModifyVehicleTopSpeed(CurrentVehicle, defVehStats[Plate]["speedMod"])
+		end
+
+		if Config.NOS.EnableTrails then TriggerServerEvent('jim-mechanic:server:SyncTrail', VehToNet(CurrentVehicle), false) end
+		if Config.NOS.EnableScreen then SetNitroBoostScreenEffectsEnabled(false) end
 		if VehicleNitrous[Plate] then
 			CreateThread(function()
 				while boosting do
-					Wait(1000)
-					purgeCool = purgeCool + 1
-					if purgeCool >= Config.NitrousCoolDown then
-						if Config.CooldownConfirm and boosting then
+					Wait(1200)
+					purgeCool += 1
+					if purgeCool >= Config.NOS.NitrousCoolDown then
+						if Config.NOS.CooldownConfirm and boosting then
 							RequestAmbientAudioBank("dlc_xm_heists_fm_uc_sounds", 0)
-							PlaySoundFromEntity(soundId, "download_complete", GetVehiclePedIsIn(PlayerPedId()), "dlc_xm_heists_fm_uc_sounds", 1, 0)
+							PlaySoundFromEntity(soundId, "download_complete", GetVehiclePedIsIn(Ped), "dlc_xm_heists_fm_uc_sounds", 1, 0)
 							Wait(200)
 						end
 						purgeCool = 0
@@ -443,35 +401,36 @@ end)
 --For testing Purge locations
 --[[CreateThread(function()
 	local vehicle = GetVehiclePedIsIn(PlayerPedId())
-	--while true do
+	while true do
 		if DoesEntityExist(vehicle) then
-		--SetVehicleNitroPurgeEnabled(vehicle, true)
-		--Wait(1000)
-		--SetVehicleNitroPurgeEnabled(vehicle, false)
-		--Wait(1000)
-	--end
+			SetVehicleNitroPurgeEnabled(vehicle, true, 1.0)
+			Wait(1000)
+			SetVehicleNitroPurgeEnabled(vehicle, false)
+			Wait(1000)
+		end
+		Wait(0)
+	end
 end)]]
 
 --Purge Effects
-local vehiclePurge = {}
-local vehicleTrails = {}
+local vehiclePurge, vehicleTrails = {}, {}
 
-RegisterNetEvent('jim-mechanic:client:SyncPurge', function(netid, enabled, size)
-	if not LocalPlayer.state.isLoggedIn then return end
-	if not NetworkDoesEntityExistWithNetworkId(netid) then return end
-	if #(GetEntityCoords(NetToVeh(netid)) - GetEntityCoords(PlayerPedId())) >= 200 then return end
-	if DoesEntityExist(NetToVeh(netid)) then SetVehicleNitroPurgeEnabled(NetToVeh(netid), enabled, size) end
+AddStateBagChangeHandler('jim_syncPurge', nil, function(bagName, key, value)
+    local entity = GetEntityFromStateBagName(bagName)
+    if entity == 0 then return end
+	SetVehicleNitroPurgeEnabled(entity, value[1], value[2])
 end)
 
 function SetVehicleNitroPurgeEnabled(vehicle, enabled, size)
 	local bonnet = nil
+	local plate = trim(GetVehicleNumberPlateText(vehicle))
 	if enabled and DoesEntityExist(vehicle) then
 		RequestAmbientAudioBank("CARWASH_SOUNDS", 0)
 		PlaySoundFromEntity(soundId, "SPRAY", vehicle, "CARWASH_SOUNDS", 1, 0)
 		local off = GetOffsetFromEntityGivenWorldCoords(vehicle, GetWorldPositionOfEntityBone(vehicle, GetEntityBoneIndexByName(vehicle, 'engine')))
 		local ptfxs = {}
 		local manFound = false
-		for i=0,3 do
+		for i = 0,3 do
 			if IsThisModelABike(GetEntityModel(vehicle)) then
 				ptfxs[#ptfxs+1] = CreateVehiclePurgeSpray(vehicle, off.x - 0.1, off.y-0.2, off.z, 40.0, -90.0, 70.0, size) -- Left
 				ptfxs[#ptfxs+1] = CreateVehiclePurgeSpray(vehicle, off.x + 0.1, off.y-0.2, off.z, 40.0, 90.0, -70.0, size)	--Right
@@ -490,19 +449,13 @@ function SetVehicleNitroPurgeEnabled(vehicle, enabled, size)
 					ptfxs[#ptfxs+1] = CreateVehiclePurgeSpray(vehicle, off.x + 0.2, off.y + 0.5, off.z, 40.0, 20.0, 0.0, size)
 				end
 			end
-			if nosColour[trim(GetVehicleNumberPlateText(vehicle))] then
-				for i=1, #ptfxs do
-					SetParticleFxLoopedColour(ptfxs[i],
-					nosColour[trim(GetVehicleNumberPlateText(vehicle))][1]/255,
-					nosColour[trim(GetVehicleNumberPlateText(vehicle))][2]/255,
-					nosColour[trim(GetVehicleNumberPlateText(vehicle))][3]/255)
+			if nosColour[plate] then
+				for i = 1, #ptfxs do
+					SetParticleFxLoopedColour(ptfxs[i], nosColour[plate][1]/255, nosColour[plate][2]/255, nosColour[plate][3]/255)
 				end
 			else
 				for i=1, #ptfxs do
-					SetParticleFxLoopedColour(ptfxs[i],
-					255/255,
-					255/255,
-					255/255)
+					SetParticleFxLoopedColour(ptfxs[i],	255/255, 255/255, 255/255)
 				end
 			end
 		end
@@ -518,18 +471,15 @@ function SetVehicleNitroPurgeEnabled(vehicle, enabled, size)
 	end
 end
 function CreateVehiclePurgeSpray(vehicle, xOffset, yOffset, zOffset, xRot, yRot, zRot, scale)
-	if not LocalPlayer.state.isLoggedIn then return end
 	if DoesEntityExist(vehicle) then UseParticleFxAssetNextCall('core')
 	return StartParticleFxLoopedOnEntity('ent_sht_steam', vehicle, xOffset, yOffset, zOffset, xRot, yRot, zRot, scale, 0, 0, 0) end
 end
 
--- Trails
-RegisterNetEvent('jim-mechanic:client:SyncTrail', function(netid, enabled)
-	if not LocalPlayer.state.isLoggedIn then return end
-	if not NetworkDoesEntityExistWithNetworkId(netid) then return end
-	if DoesEntityExist(NetToVeh(netid)) then
-	if #(GetEntityCoords(NetToVeh(netid)) - GetEntityCoords(PlayerPedId())) >= 200 then return end
-	SetVehicleLightTrailEnabled(NetToVeh(netid), enabled) end
+--[[TRAIL EFFECTS]]--
+AddStateBagChangeHandler('jim_syncTrail', nil, function(bagName, key, value)
+    local entity = GetEntityFromStateBagName(bagName)
+    if entity == 0 then return end
+	SetVehicleLightTrailEnabled(entity, value)
 end)
 
 function SetVehicleLightTrailEnabled(vehicle, enabled)
@@ -544,44 +494,65 @@ function SetVehicleLightTrailEnabled(vehicle, enabled)
 		vehicleTrails[vehicle] = nil
 	end
 end
-
 function CreateVehicleLightTrail(vehicle, bone, scale)
 	if DoesEntityExist(vehicle) then UseParticleFxAssetNextCall('core')
 	local ptfx = StartParticleFxLoopedOnEntityBone('veh_light_red_trail', vehicle, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, bone, scale, false, false, false)
 	SetParticleFxLoopedEvolution(ptfx, "speed", 1.0, false)
 	return ptfx end
 end
-
 function StopVehicleLightTrail(ptfx, duration)
-	Citizen.CreateThread(function()
-		local startTime = GetGameTimer()
+	CreateThread(function()
 		local endTime = GetGameTimer() + duration
 		while GetGameTimer() < endTime do
-			Wait(0)
-			local now = GetGameTimer()
-			local scale = (endTime - now) / duration
+			local scale = (endTime - GetGameTimer()) / duration
 			SetParticleFxLoopedScale(ptfx, scale)
 			SetParticleFxLoopedAlpha(ptfx, scale)
+			Wait(0)
 		end
 		StopParticleFxLooped(ptfx)
 	end)
 end
-RegisterNetEvent('jim-mechanic:client:SyncFlame', function(netid, enable)
-	if not LocalPlayer.state.isLoggedIn then return end
-	if not NetworkDoesEntityExistWithNetworkId(netid) then return end
-	if #(GetEntityCoords(NetToVeh(netid)) - GetEntityCoords(PlayerPedId())) >= 200 then return end
-	if enable and DoesEntityExist(NetToVeh(netid)) then
-		if boostLevel == 1 then	CreateVehicleExhaustBackfire(NetToVeh(netid)) end
-		if boostLevel == 2 then
-			loadPtfxDict("veh_xs_vehicle_mods")
-			SetVehicleNitroEnabled(NetToVeh(netid), true)
-		end
-		if boostLevel == 3 then loadPtfxDict("veh_xs_vehicle_mods")
-		SetVehicleNitroEnabled(NetToVeh(netid), true) Wait(10) SetVehicleBoostActive(NetToVeh(netid), 1)
-	end
-	else SetVehicleNitroEnabled(NetToVeh(netid), false) SetVehicleBoostActive(NetToVeh(netid), 0) ModifyVehicleTopSpeed(NetToVeh(netid), -1.0)
-	end
+
+--[[FLAME EFFECTS]]--
+local flameTable = {}
+AddStateBagChangeHandler('jim_syncFlame', nil, function(bagName, key, value)
+    local entity = GetEntityFromStateBagName(bagName)
+    if entity == 0 then return end
+	if value[1] == true then startFlame(entity, tonumber(value[2]))
+	elseif value[1] == false then stopFlame(entity) end
 end)
+
+local flameTable = {}
+function startFlame(entity, level) --starts a flame effect loop on client instead of asking server to send over and over
+	flameTable[entity] = true local wait = 0
+	CreateThread(function()
+		while flameTable[entity] do
+			if not DoesEntityExist(entity) then break end
+			if entity ~= 0 and DoesEntityExist(entity) then wait = 0
+				if level == 1 then
+					CreateVehicleExhaustBackfire(entity)
+					--unloadPtfxDict("veh_xs_vehicle_mods")
+				end
+				if level == 2 then
+					loadPtfxDict("veh_xs_vehicle_mods")
+				end
+				if level == 3 then
+					loadPtfxDict("veh_xs_vehicle_mods")
+				end
+				SetVehicleNitroEnabled(entity, true, 2.0, 5.0, 0.1, true)
+				Wait(10)
+				SetVehicleBoostActive(entity, 1)
+			else wait = 1000
+			end
+			Wait(wait)
+		end
+		SetVehicleNitroEnabled(entity, false)
+		SetVehicleBoostActive(entity, false, 0.0, 0.0, 0.0, false)
+	end)
+end
+
+function stopFlame(entity) flameTable[entity] = nil end
+
 --Exhaust Fires
 function CreateVehicleExhaustBackfire(vehicle)
 	local exhaustNames = { "exhaust", }
@@ -610,143 +581,143 @@ function SetNitroBoostScreenEffectsEnabled(enabled)
 end
 
 -- Mechanic Remove NOS
-RegisterNetEvent('jim-mechanic:client:giveNOS', function()
+RegisterNetEvent('jim-mechanic:client:giveNOS', function() local item = Items["nos"]
 	if not jobChecks() then return end
-	local playerPed	= PlayerPedId()
-	local coords = GetEntityCoords(playerPed)
-	local vehicle = getClosest(coords) pushVehicle(vehicle)
+	local Ped = PlayerPedId()
+	local coords = GetEntityCoords(Ped)
+	local vehicle = getClosest(coords) pushVehicle(vehicle) local above = isVehicleLift(vehicle)
 	if lockedCar(vehicle) then return end
-	TaskTurnPedToFaceEntity(playerPed, vehicle, 1000)
+	TaskTurnPedToFaceEntity(Ped, vehicle, 1000)
 	Wait(1000)
-	SetVehicleDoorOpen(vehicle, 4, false, false)
-	playAnim("mini@repair", "fixing_a_ped", 8000, 16)
-	QBCore.Functions.Progressbar("accepted_key", Loc[Config.Lan]["nos"].removing, math.random(7000,10000), false, true, { disableMovement = true, disableCarMovement = true, disableMouse = false, disableCombat = false, },
-	{ animDict = "mini@repair", anim = "fixing_a_ped", flags = 16, }, {}, {}, function()
-		SetVehicleDoorShut(vehicle, 4, false)
+	local emote = { anim = above and "idle_b" or "fixing_a_ped", dict = above and "amb@prop_human_movie_bulb@idle_a" or "mini@repair", flag = above and 1 or 16 }
+	if Config.Overrides.DoorAnimations then SetVehicleDoorOpen(vehicle, 4, false, false) end
+	if progressBar({label = Loc[Config.Lan]["common"].removing..item.label, time = math.random(7000,10000), anim = emote.anim, dict = emote.dict, flag = emote.flag, icon = "mechanic_tools"}) then
+		if Config.Overrides.DoorAnimations then SetVehicleDoorShut(vehicle, 4, false) end
 		updateCar(vehicle)
 		TriggerServerEvent('jim-mechanic:server:UnloadNitrous', trim(GetVehicleNumberPlateText(vehicle)))
-		TriggerServerEvent('jim-mechanic:server:giveNOS')
-		emptyHands(playerPed)
-		triggerNotify(nil, Loc[Config.Lan]["nos"].removed, "success")
-	end, function()
-		triggerNotify(nil, Loc[Config.Lan]["nos"].remfail, "error")
-		emptyHands(playerPed)
-	end)
+		addItem("noscan", 1)
+		triggerNotify(nil, item.label.." "..Loc[Config.Lan]["common"].removed, "success")
+	else
+		triggerNotify(nil, item.label..Loc[Config.Lan]["common"].remfail, "error")
+	end
+	emptyHands(Ped)
 end)
 
 RegisterNetEvent('jim-mechanic:client:ChangeColour', function(Plate, newColour)
 	if not LocalPlayer.state.isLoggedIn then return end
 	nosColour[Plate] = newColour
-	if Config.Debug then print("^5Debug^7: ^2Recieving new ^3nosColour^7[^6"..tostring(Plate).."^7] = { ^2RBG: ^7= ^6"..nosColour[Plate][1].."^7, ^6"..nosColour[Plate][2].."^7, ^6"..nosColour[Plate][3].." ^7}") end
+	if Config.System.Debug then print("^5Debug^7: ^2Recieving new ^3nosColour^7[^6"..tostring(Plate).."^7] = { ^2RBG: ^7= ^6"..nosColour[Plate][1].."^7, ^6"..nosColour[Plate][2].."^7, ^6"..nosColour[Plate][3].." ^7}") end
 end)
 
 RegisterNetEvent('jim-mechanic:client:NOS:RGBApply', function(data)
-	local ped = PlayerPedId()
-	local coords = GetEntityCoords(ped)
+	local Ped = PlayerPedId()
+	local coords = GetEntityCoords(Ped)
 	local vehicle = getClosest(coords)
-	if not DoesEntityExist(vehicle) then return end
-	TaskTurnPedToFaceEntity(ped, vehicle, 1000)
-	Wait(1000)
-	SetVehicleDoorOpen(vehicle, 4, false, false)
-	playAnim("mini@repair", "fixing_a_ped", 8000, 16)
+	local above = isVehicleLift(vehicle)
+	local emote = { anim = above and "idle_b" or "fixing_a_ped", dict = above and "amb@prop_human_movie_bulb@idle_a" or "mini@repair", flag = above and 1 or 16 }
+	lookEnt(vehicle)
 	loadPtfxDict("scr_recartheft")
 	UseParticleFxAssetNextCall("scr_recartheft")
 	SetParticleFxNonLoopedColour(data[1] / 255, data[2] / 255, data[3] / 255)
 	SetParticleFxNonLoopedAlpha(1.0)
-	Wait(1000)
-	local spray = StartNetworkedParticleFxNonLoopedAtCoord("scr_wheel_burnout", GetOffsetFromEntityInWorldCoords(PlayerPedId(), 0.0, 0.6, 0.8), 0.0, 0.0, GetEntityHeading(vehicle), 0.5, 0.0, 0.0, 0.0)
-	Wait(3000)
-	TriggerServerEvent("jim-mechanic:server:ChangeColour", trim(GetVehicleNumberPlateText(vehicle)), data)
-	SetVehicleDoorShut(vehicle, 4, false)
-	emptyHands(ped)
-	if Config.CosmeticRemoval then toggleItem(false, "noscolour") end
-	triggerNotify(nil, Loc[Config.Lan]["nos"].nosColour.." "..Loc[Config.Lan]["check"].tireinst, "success")
-	qblog("`noscolour` installed [**"..trim(GetVehicleNumberPlateText(vehicle)).."**]")
+	local spray = StartNetworkedParticleFxNonLoopedAtCoord("scr_wheel_burnout", GetOffsetFromEntityInWorldCoords(Ped, 0.0, 0.6, 0.8), 0.0, 0.0, GetEntityHeading(vehicle), 0.5, 0.0, 0.0, 0.0)
+
+	if progressBar({label = Loc[Config.Lan]["common"].installing, time = math.random(5000,8000), cancel = true, anim = emote.anim, dict = emote.dict, flag = emote.flag, icon = "noscolour",}) then
+		TriggerServerEvent("jim-mechanic:server:ChangeColour", trim(GetVehicleNumberPlateText(vehicle)), data)
+		if Config.Overrides.CosmeticItemRemoval then removeItem("noscolour", 1) end
+		triggerNotify(nil, Loc[Config.Lan]["nos"].nosColour.." "..Loc[Config.Lan]["common"].installed, "success")
+		qblog("`noscolour` installed [**"..trim(GetVehicleNumberPlateText(vehicle)).."**]")
+	end
+	emptyHands(PlayerPedId())
+	local cam = CreateCamWithParams("DEFAULT_SCRIPTED_CAMERA", GetOffsetFromEntityInWorldCoords(vehicle, 1.8, -3.5, 2.5), 0.0, 0.0, 0.0, 60.00, false, 0) PointCamAtEntity(cam, vehicle)
+	startTempCam(cam)
+	Wait(300)
+	TriggerServerEvent('jim-mechanic:server:SyncPurge', VehToNet(vehicle), true, 0.9)
+	Wait(2000)
+	stopTempCam()
+	TriggerServerEvent('jim-mechanic:server:SyncPurge', VehToNet(vehicle), false, nil)
 end)
 
-RegisterNetEvent('jim-mechanic:client:NOS:RGBPicker', function()
+RegisterNetEvent('jim-mechanic:client:NOS:RGBHexMenu', function(data)
 	local coords = GetEntityCoords(PlayerPedId())
-	local vehicle = getClosest(coords)
-	local currentCol
-	local plate = trim(GetVehicleNumberPlateText(vehicle))
-	if nosColour[plate] then
-		local r, g, b = table.unpack(nosColour[plate])
-		currentCol = "[ <span style='color:#"..rgbToHex(table.unpack(nosColour[plate])):upper().."; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black, 0em 0em 0.5em white, 0em 0em 0.5em white'> "..r.." "..g.." "..b.." </span>]"
-	else currentCol = "[ <span style='color:#FFFFFF; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black, 0em 0em 0.5em white, 0em 0em 0.5em white'> 255 255 255 </span>]" end
-	if DoesEntityExist(vehicle) then
-		local dialog = exports['qb-input']:ShowInput({
-			header = 	"<center>"..Loc[Config.Lan]["nos"].nosColour
-						.."<br>"..Loc[Config.Lan]["paintrgb"].rgb
-						.."<br><br>- "..Loc[Config.Lan]["common"].current.." -<br>"..currentCol,
-			inputs = {
-				{ type = 'number', name = 'Red', text = 'R' },
-				{ type = 'number', name = 'Green', text = 'G' },
-				{ type = 'number', name = 'Blue', text = 'B' }, } })
+	local dialog = {}
+	local r, g, b = table.unpack(data.currentCol)
+	if Config.System.Menu == "ox" then
+		if data.hex then format = { type = 'color', label = "HEX:", format = "hex", default = "#"..rgbToHex(r, g, b):upper() }
+		else format = { type = 'color', label = "RGB:", format = "rgb", default = "rgb("..r..", "..g..", "..b..")" } end
+		dialog = exports[OXLibExport]:inputDialog(
+			Loc[Config.Lan]["nos"].nosColour.." - "..(data.hex and Loc[Config.Lan]["paintrgb"].hexP or Loc[Config.Lan]["paintrgb"].rgbP).."\n"..(data.hex and "#"..rgbToHex(r, g, b):upper() or "["..r..", "..g..", "..b.."]"), { format })
 		if dialog then
-			local r, g, b = table.unpack({(tonumber(dialog.Red) or 0), (tonumber(dialog.Green) or 0), (tonumber(dialog.Blue) or 0)})
-			if r > 255 then r = 255 end
-			if g > 255 then g = 255 end
-			if b > 255 then b = 255 end
-			local data = { r, g, b }
-			TriggerEvent('jim-mechanic:client:NOS:RGBApply', data)
+			if data.hex then
+				dialog[1] = dialog[1]:gsub("#", "") r, g, b = HexTorgb(dialog[1])
+			else
+				dialog[1] = convertOxRGB(dialog[1])
+				r, g, b = tonumber(dialog[1][1]) or r, tonumber(dialog[1][2]) or g, tonumber(dialog[1][3]) or b end
 		end
-    end
-end)
-
-RegisterNetEvent('jim-mechanic:client:NOS:HEXPicker', function()
-	local coords = GetEntityCoords(PlayerPedId())
-	local vehicle = getClosest(coords)
-	local currentCol
-	local plate = trim(GetVehicleNumberPlateText(vehicle))
-	if nosColour[plate] then
-		local r, g, b = table.unpack(nosColour[plate])
-		currentCol = "[ #<span style='color:#"..rgbToHex(table.unpack(nosColour[plate])):upper().."; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black, 0em 0em 0.5em white, 0em 0em 0.5em white'>"..rgbToHex(table.unpack(nosColour[plate])):upper().." </span>]"
-	else currentCol = "[ #<span style='color:#FFFFFF; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black, 0em 0em 0.5em white, 0em 0em 0.5em white'>FFFFFF </span>]" end
-	if DoesEntityExist(vehicle) then
-		local dialog = exports['qb-input']:ShowInput({
-			header = 	"<center>"..Loc[Config.Lan]["nos"].nosColour
-						.."<br>"..Loc[Config.Lan]["paintrgb"].hex
-						.."<br><br>- "..Loc[Config.Lan]["common"].current.." -<br>"..currentCol,
-			submitText = Loc[Config.Lan]["xenons"].customconfirm,
-			inputs = {
-				{ type = 'text', name = 'hex', text = '#' }, } })
+	else
+		if data.hex then format = { { type = 'text', name = 'hex', text = "#"..rgbToHex(r, g, b):upper() } }
+		else format = { { type = 'number', name = 'Red', text = 'R - '..r }, { type = 'number', name = 'Green', text = 'G - '..g }, { type = 'number', name = 'Blue', text = 'B - '..b } }
+		end
+			dialog = exports['qb-input']:ShowInput({
+				header = "<center>"..Loc[Config.Lan]["nos"].nosColour
+						.."<br>"..(data.hex and Loc[Config.Lan]["paintrgb"].hexP or Loc[Config.Lan]["paintrgb"].rgbP)
+						.."<br><br>- "..Loc[Config.Lan]["common"].current.." -<br>"..(data.hex and "#"..rgbToHex(r, g, b):upper() or "["..r..", "..g..", "..b.."]"),
+				submitText = Loc[Config.Lan]["xenons"].customconfirm,
+				inputs = format }
+			)
 		if dialog then
-			if not dialog.hex then return TriggerEvent("jim-mechanic:client:NOS:HEXPicker") end
-			if dialog.hex then
+			if data.hex then
 				local hex = dialog.hex:gsub("#","")
 				while string.len(hex) < 6 do hex = hex.."0"	Wait(10) end
-				TriggerEvent('jim-mechanic:client:NOS:RGBApply', table.pack(HexTorgb(hex)))
+				r, g, b = HexTorgb(hex)
+			else
+				r, g, b = tonumber(dialog.Red or r), tonumber(dialog.Green or g), tonumber(dialog.Blue or b)
 			end
 		end
-    end
+	end
+	if dialog then
+		if r > 255 then r = 255 end if g > 255 then g = 255 end if b > 255 then b = 255 end
+		TriggerEvent('jim-mechanic:client:NOS:RGBApply', { r, g, b })
+	else
+		TriggerEvent("jim-mechanic:client:NOS:rgbORhex")
+	end
 end)
 
-RegisterNetEvent('jim-mechanic:client:NOS:rgbORhex', function()
-	local ped = PlayerPedId()
-	local coords = GetEntityCoords(ped)
+RegisterNetEvent('jim-mechanic:client:NOS:rgbORhex', function() local Ped = PlayerPedId()
+	local coords = GetEntityCoords(Ped)
 	local vehicle = getClosest(coords)
 	if not inCar() then return end
 	local plate = trim(GetVehicleNumberPlateText(vehicle))
+	local r, g, b = nil
 	if nosColour[plate] then
-		local r, g, b = table.unpack(nosColour[plate])
-		currentRBGCol = "[<span style='color:#"..rgbToHex(table.unpack(nosColour[plate])):upper().."; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black, 0em 0em 0.5em white, 0em 0em 0.5em white'> "..r.." "..g.." "..b.." </span>]<br>"
-		currentHEXCol = "[#<span style='color:#"..rgbToHex(table.unpack(nosColour[plate])):upper().."; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black, 0em 0em 0.5em white, 0em 0em 0.5em white'>"..rgbToHex(r, g, b):upper().." </span>]<br>"
+		r, g, b = table.unpack(nosColour[plate])
+		currentRBGCol = Config.System.Menu == "ox" and r..", "..g..", "..b or "[<span style='color:#"..rgbToHex(table.unpack(nosColour[plate])):upper().."; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black, 0em 0em 0.5em white, 0em 0em 0.5em white'> "..r.." "..g.." "..b.." </span>]<br>"
+		currentHEXCol = Config.System.Menu == "ox" and rgbToHex(table.unpack(nosColour[plate])):upper() or "[#<span style='color:#"..rgbToHex(table.unpack(nosColour[plate])):upper().."; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black, 0em 0em 0.5em white, 0em 0em 0.5em white'>"..rgbToHex(r, g, b):upper().." </span>]<br>"
 	else
-		currentRBGCol = "[<span style='color:#FFFFFF; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black, 0em 0em 0.5em white, 0em 0em 0.5em white'> 255 255 255 </span>]<br>"
-		currentHEXCol = "[#<span style='color:#FFFFFF; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black, 0em 0em 0.5em white, 0em 0em 0.5em white'>FFFFFF </span>]<br>"
+		r, g, b = table.unpack({ 255, 255, 255 })
+		currentRBGCol = Config.System.Menu == "ox" and "255, 255, 255" or "[<span style='color:#FFFFFF; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black, 0em 0em 0.5em white, 0em 0em 0.5em white'> 255 255 255 </span>]<br>"
+		currentHEXCol = Config.System.Menu == "ox" and "#FFFFFF" or "[#<span style='color:#FFFFFF; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black, 0em 0em 0.5em white, 0em 0em 0.5em white'>FFFFFF </span>]<br>"
 	end
 	if DoesEntityExist(vehicle) then
 		local PaintMenu = {}
-		PaintMenu[#PaintMenu+1] = { icon = "noscolour", header = Loc[Config.Lan]["nos"].nosColour, text = Loc[Config.Lan]["paintrgb"].customheader, isMenuHeader = true }
-		PaintMenu[#PaintMenu+1] = { icon = "fas fa-circle-xmark", header = "", txt = string.gsub(Loc[Config.Lan]["common"].close, "❌ ", ""), params = { event = "jim-mechanic:client:Menu:Close" } }
-		PaintMenu[#PaintMenu+1] = { header = Loc[Config.Lan]["paintrgb"].hex, text = Loc[Config.Lan]["common"].current..":<br>"..currentHEXCol, params = { event = "jim-mechanic:client:NOS:HEXPicker" }, }
-		PaintMenu[#PaintMenu+1] = { header = Loc[Config.Lan]["paintrgb"].rgb, text = Loc[Config.Lan]["common"].current..":<br>"..currentRBGCol, params = { event = "jim-mechanic:client:NOS:RGBPicker" }, }
-		exports['qb-menu']:openMenu(PaintMenu)
+		PaintMenu[#PaintMenu+1] = {
+			header = Loc[Config.Lan]["paintrgb"].hexP, text = Loc[Config.Lan]["common"].current..":<br>"..currentHEXCol, params = { event = "jim-mechanic:client:NOS:RGBHexMenu", args = { hex = true, currentCol = { r, g, b } }, },
+			title = Loc[Config.Lan]["paintrgb"].hexP, description = Loc[Config.Lan]["common"].current..": \n"..currentHEXCol, event = "jim-mechanic:client:NOS:RGBHexMenu", args = { hex = true, currentCol = { r, g, b } }
+		}
+		PaintMenu[#PaintMenu+1] = {
+			header = Loc[Config.Lan]["paintrgb"].rgbP, text = Loc[Config.Lan]["common"].current..":<br>"..currentRBGCol, params = { event = "jim-mechanic:client:NOS:RGBHexMenu", args = { hex = false, currentCol = { r, g, b } } },
+			title = Loc[Config.Lan]["paintrgb"].rgbP, description = Loc[Config.Lan]["common"].current..": \n"..currentRBGCol, event = "jim-mechanic:client:NOS:RGBHexMenu", args = { hex = false, currentCol = { r, g, b } }
+		}
+		openMenu(PaintMenu, {
+			header = Loc[Config.Lan]["nos"].nosColour,
+			headertxt = Loc[Config.Lan]["paintrgb"].customheader,
+			canClose = true,
+		})
 	end
 end)
 
 manualPurgeLoc = {
-	--SUPER CARS
+	--SUPER CARS--
 	[`autarch`] = {
 		{ 0.25, -0.6, -0.2, 40.0, -80.0, 90.0 }, --Left
 		{ -0.25, -0.6, -0.2, 40.0, 80.0, -90.0 }, --Right
@@ -803,6 +774,10 @@ manualPurgeLoc = {
 		{ -0.25, -0.70, 0.25, 20.0, -20.0, 0.0 }, --Right
 		{ -0.25, -0.80, 0.25, 20.0, -20.0, 0.0 }, --Right
 		{ -0.25, -0.90, 0.25, 20.0, -20.0, 0.0 }, --Right
+	},
+	[`ignus`] = {
+		{ 0.80, 0.45, 0.15, 75.0, 20.0, 0.0 }, --Left
+		{ -0.80, 0.45, 0.15, 75.0, -20.0, 0.0 }, --Right
 	},
 	[`infernus`] = {
 		{ 0.50, 0.3, 0.45, 50.0, 20.0, 0.0 }, --Left
@@ -973,3 +948,4 @@ manualPurgeLoc = {
 		{ -0.50, -0.25, 0.20, 40.0, -40.0, 0.0 }, --Right
 	},
 }
+end

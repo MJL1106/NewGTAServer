@@ -330,6 +330,7 @@ QBShared.Items = {
 	['nitrous'] 				 	 = {['name'] = 'nitrous', 			  	  		['label'] = 'Nitrous', 					['weight'] = 1000, 		['type'] = 'item', 		['image'] = 'nitrous.png', 				['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'Speed up, gas pedal! :D'},
 	['repairkit'] 					 = {['name'] = 'repairkit', 			 	  	['label'] = 'Repairkit', 				['weight'] = 2500, 		['type'] = 'item', 		['image'] = 'repairkit.png', 			['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'A nice toolbox with stuff to repair your vehicle'},
 	['advancedrepairkit'] 			 = {['name'] = 'advancedrepairkit', 			['label'] = 'Advanced Repairkit', 		['weight'] = 4000, 		['type'] = 'item', 		['image'] = 'advancedkit.png', 			['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'A nice toolbox with stuff to repair your vehicle'},
+	['racekit'] 			 = {['name'] = 'racekit', 			['label'] = 'Race Kit', 		['weight'] = 4000, 		['type'] = 'item', 		['image'] = 'racekit.png', 			['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'A nice toolbox with stuff to repair your vehicle'},
 	['cleaningkit'] 				 = {['name'] = 'cleaningkit', 			 	  	['label'] = 'Cleaning Kit', 			['weight'] = 250, 		['type'] = 'item', 		['image'] = 'cleaningkit.png', 			['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'A microfiber cloth with some soap will let your car sparkle again!'},
 	['tunerlaptop'] 				 = {['name'] = 'tunerlaptop', 			    	['label'] = 'Tunerchip', 				['weight'] = 2000, 		['type'] = 'item', 		['image'] = 'tunerchip.png', 			['unique'] = true, 		['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'With this tunerchip you can get your car on steroids... If you know what you\'re doing'},
 	['harness'] 				 	 = {['name'] = 'harness', 			  	  		['label'] = 'Race Harness', 			['weight'] = 1000, 		['type'] = 'item', 		['image'] = 'harness.png', 				['unique'] = true, 		['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'Racing Harness so no matter what you stay in the car'},
@@ -447,6 +448,33 @@ QBShared.Items = {
 	["tires"]=              {["name"] = "tires",            ["label"] = "Drift Smoke Tires",	["weight"] = 0, ["type"] = "item",  ["image"] = "tires.png", 	  		["unique"] = true,  ["useable"] = true, ["shouldClose"] = true, ["description"] = ""},
 
 	["horn"]=               {["name"] = "horn",             ["label"] = "Custom Vehicle Horn",	["weight"] = 0, ["type"] = "item",  ["image"] = "horn.png", 			["unique"] = true,  ["useable"] = true, ["shouldClose"] = true, ["description"] = ""},
+
+	-- Vehicle Extra Damage Items
+	oilp1                       = { name = "oilp1", label = "Tier 1 Oil Pump", weight = 0, type = "item", image = "oilp1.png", unique = true, useable = true, shouldClose = true, description = ""},
+	oilp2                       = { name = "oilp2", label = "Tier 2 Oil Pump", weight = 0, type = "item", image = "oilp2.png", unique = true, useable = true, shouldClose = true, description = ""},
+	oilp3                       = { name = "oilp3", label = "Tier 3 Oil Pump", weight = 0, type = "item", image = "oilp3.png", unique = true, useable = true, shouldClose = true, description = ""},
+
+	drives1                     = { name = "drives1", label = "Tier 1 Drive Shaft", weight = 0, type = "item", image = "drives1.png", unique = true, useable = true, shouldClose = true, description = ""},
+	drives2                     = { name = "drives2", label = "Tier 2 Drive Shaft", weight = 0, type = "item", image = "drives2.png", unique = true, useable = true, shouldClose = true, description = ""},
+	drives3                     = { name = "drives3", label = "Tier 3 Drive Shaft", weight = 0, type = "item", image = "drives3.png", unique = true, useable = true, shouldClose = true, description = ""},
+
+	cylind1                     = { name = "cylind1", label = "Tier 1 Cylinder Head",	weight = 0, type = "item", image = "cylind1.png", unique = true, useable = true, shouldClose = true, description = ""},
+	cylind2                     = { name = "cylind2", label = "Tier 2 Cylinder Head",	weight = 0, type = "item", image = "cylind2.png", unique = true, useable = true, shouldClose = true, description = ""},
+	cylind3                     = { name = "cylind3", label = "Tier 3 Cylinder Head",	weight = 0, type = "item", image = "cylind3.png", unique = true, useable = true, shouldClose = true, description = ""},
+
+	cables1                     = { name = "cables1", label = "Tier 1 Battery Cables", weight = 0, type = "item", image = "cables1.png", unique = true, useable = true, shouldClose = true, description = ""},
+	cables2                     = { name = "cables2", label = "Tier 2 Battery Cables", weight = 0, type = "item", image = "cables2.png", unique = true, useable = true, shouldClose = true, description = ""},
+	cables3                     = { name = "cables3", label = "Tier 3 Battery Cables", weight = 0, type = "item", image = "cables3.png", unique = true, useable = true, shouldClose = true, description = ""},
+
+	fueltank1                   = { name = "fueltank1", label = "Tier 1 Fuel Tank", weight = 0, type = "item", image = "fueltank1.png", unique = true, useable = true, shouldClose = true, description = ""},
+	fueltank2                   = { name = "fueltank2", label = "Tier 2 Fuel Tank", weight = 0, type = "item", image = "fueltank2.png", unique = true, useable = true, shouldClose = true, description = ""},
+	fueltank3                   = { name = "fueltank3", label = "Tier 3 Fuel Tank", weight = 0, type = "item", image = "fueltank3.png", unique = true, useable = true, shouldClose = true, description = ""},
+
+	antilag                     = { name = "antilag", label = "AntiLag", weight = 0, type = "item", image = "antiLag.png", unique = true, useable = true, shouldClose = true, description = ""},
+	manual                      = { name = 'manual', label = 'Manual Transmission', weight = 0, type = 'item', image = 'manual.png', unique = true, useable = true, shouldClose = true, combinable = nil, description = 'Manual Transmission change for vehicles' },
+
+	underglow                   = { name = 'underglow', label = 'Underglow LEDS', weight = 0, type = 'item', image = 'underglow.png', unique = true, useable = true, shouldClose = true, combinable = nil, description = 'Underglow addition for vehicles' },
+
 
 	["internals"] =         {["name"] = "internals",        ["label"] = "Internal Cosmetics",	["weight"] = 0, ["type"] = "item",  ["image"] = "internals.png", 		["unique"] = true,  ["useable"] = true, ["shouldClose"] = true, ["description"] = ""},
 	["externals"] =         {["name"] = "externals",        ["label"] = "Exterior Cosmetics",	["weight"] = 0, ["type"] = "item",  ["image"] = "mirror.png", 			["unique"] = true,  ["useable"] = true, ["shouldClose"] = true, ["description"] = ""},
