@@ -266,8 +266,21 @@ RegisterNetEvent('police:client:CuffPlayerSoft', function()
         if player ~= -1 and distance < 1.5 then
             local playerId = GetPlayerServerId(player)
             if not IsPedInAnyVehicle(GetPlayerPed(player)) and not IsPedInAnyVehicle(PlayerPedId()) then
-                TriggerServerEvent("police:server:CuffPlayer", playerId, true)
-                HandCuffAnimation()
+                local circles = 1
+                local seconds = 3
+                
+                -- Display the lockpick mini-game to the player that's being cuffed
+                exports['ps-ui']:Circle(function(success)
+                    if success then
+                        -- If the mini-game was successful, notify the player they avoided being cuffed
+                        QBCore.Functions.Notify("You successfully avoided being cuffed!", "success", playerId)
+                    else
+                        -- If the mini-game was not successful, proceed with cuffing
+                        TriggerServerEvent("police:server:CuffPlayer", playerId, true)
+                        HandCuffAnimation()
+                        QBCore.Functions.Notify("Failed to avoid cuffs!", "error", playerId)
+                    end
+                end, circles, seconds)
             else
                 QBCore.Functions.Notify(Lang:t("error.vehicle_cuff"), "error")
             end
