@@ -99,7 +99,7 @@ if Config.CustomEventsFramework == false then
         local biller = QBCore.Functions.GetPlayer(source)
         local billed = QBCore.Functions.GetPlayer(tonumber(args[1]))
         local amount = tonumber(args[2])
-        if biller.PlayerData.job.name == "police" or biller.PlayerData.job.name == 'ambulance' or biller.PlayerData.job.name == 'mechanic' then
+        if biller.PlayerData.job.name == "police" or biller.PlayerData.job.name == 'ambulance' or biller.PlayerData.job.name == 'mechanic' or biller.PlayerData.job.name == 'tuners' or biller.PlayerData.job.name == 'uwu' or biller.PlayerData.job.name == 'burgershot' then
             if billed ~= nil then
                 if biller.PlayerData.citizenid ~= billed.PlayerData.citizenid then
                     if amount and amount > 0 then

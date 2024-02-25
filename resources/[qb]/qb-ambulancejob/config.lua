@@ -60,6 +60,12 @@ Config.Locations = { -- Edit the various interaction points for players or creat
     ["main"] = {
         [1] = vector3(327.34, -603.86, 43.28),
     },
+    ["garage"] = {
+        [1] = vector3(339.42, -584.6, 28.8),
+    },
+    ["main2"] = {
+        [1] = vector3(332.3, -595.8, 43.28),
+    },
     ["stash"] = {
         [1] = vector3(298.61, -598.29, 43.28),
     },
