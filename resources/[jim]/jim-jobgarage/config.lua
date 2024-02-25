@@ -34,7 +34,7 @@ Config = {
 	DistCheck = false, -- Require the vehicle to be near by to remove it
 
 	Locations = {
-		{ 	zoneEnable = false,
+		{ 	zoneEnable = true,
 			job = "mechanic",
 			garage = {
 				spawn = vec4(-179.34, -1285.27, 30.83, 89.24),  -- Where the car will spawn
@@ -47,35 +47,12 @@ Config = {
 						bulletproof = true,
 						extras = { 1, 4 },
 					},
-					["burrito3"] = { },
+					["f450c"] = { },
+					["f550rbc"] = { },
 				},
 			},
 		},
-		{ 	zoneEnable = false,
-			job = "police",
-			garage = {
-				spawn = vec4(435.41, -975.93, 25.31, 90.86),
-				out = vec4(441.39, -974.78, 25.7, 178.49),
-				list = {
-					["police"] = {
-						CustomName = "Police Car",
-						livery = 5,
-						extras = { 1, 2 },
-						performance = "max",
-						trunkItems = {
-							{ name = "heavyarmor", amount = 2, info = {}, type = "item", slot = 1, },
-							{ name = "empty_evidence_bag", amount = 10, info = {}, type = "item", slot = 2, },
-							{ name = "police_stormram", amount = 1, info = {}, type = "item", slot = 3, },
-						},
-					},
-					["fbi"] = {
-						rank = { 4 },
-						performance = { 2, 3, 3, 2, 4, true },
-					},
-				},
-			},
-		},
-		{ 	zoneEnable = false,
+		{ 	zoneEnable = true,
 			job = "ambulance",
 			garage = {
 				spawn = vec4(294.95, -606.92, 43.24, 64.84),

@@ -3,14 +3,14 @@ Konfig = {}
 QBCore.PlayerData = QBCore.PlayerData or {}
 
 Konfig.emergencyJobs = { -- Put here the job that you want to drive in the emergencyVehicles below
-    'police',
-    'ambulance',
-    'leo',
-    'ems',
+    -- 'police',
+    -- 'ambulance',
+    -- 'leo',
+    -- 'ems',
 }
 Konfig.emergencyVehicles = { -- Put here the vehicles that you want only emergency services to be able to get in
-    "police",
-    "ambulance",
+    -- "police",
+    -- "ambulance",
 }
 RegisterNetEvent('QBCore:Client:OnPlayerLoaded')
 AddEventHandler('QBCore:Client:OnPlayerLoaded', function()
