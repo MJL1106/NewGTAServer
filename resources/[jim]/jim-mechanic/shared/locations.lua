@@ -302,10 +302,10 @@ Config.Locations[#Config.Locations+1] = { --[[ GABZ LS TUNER SHOP ]]--
 	Enabled = true,
 	job = "tuners",
 	zones = {
-		vec2(154.69816589355, -3007.0153808594),
-		vec2(120.64015197754, -3006.7275390625),
+		vec2(184.69816589355, -2987.0153808594),
+		vec2(120.64015197754, -2987.7275390625),
 		vec2(120.48593902588, -3051.8874511719),
-		vec2(154.61296081543, -3051.5419921875)
+		vec2(184.61296081543, -3051.5419921875)
 	},
 	autoClock = { enter = true, exit = true, },
 	stash = {
@@ -336,7 +336,7 @@ Config.Locations[#Config.Locations+1] = { --[[ GABZ LS TUNER SHOP ]]--
 	garage = {
 		spawn = vec4(163.22, -3009.31, 5.27, 89.72),
 		out = vec4(157.37, -3016.57, 7.04, 179.58),
-		list = { "towtruck", "panto", "slamtruck", "cheburek", "utillitruck3" },
+		list = { "towtruck" },
 		prop = true,
 	},
 	payments = {
