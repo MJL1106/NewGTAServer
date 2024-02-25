@@ -293,6 +293,10 @@ local function EMSControls(variable)
                     TriggerEvent('qb-ambulancejob:elevator_main')
                 elseif variable == "main" then
                     TriggerEvent('qb-ambulancejob:elevator_roof')
+                elseif variable == "main2" then
+                    TriggerEvent('qb-ambulancejob:elevator_main2')
+                elseif variable == "garage" then
+                    TriggerEvent('qb-ambulancejob:elevator_garage')
                 end
             end
             Wait(1)
@@ -378,6 +382,46 @@ RegisterNetEvent('qb-ambulancejob:elevator_roof', function()
         currentHospital = k
 
         local coords = Config.Locations["main"][currentHospital]
+        SetEntityCoords(ped, coords.x, coords.y, coords.z, 0, 0, 0, false)
+        SetEntityHeading(ped, coords.w)
+
+        Wait(100)
+
+        DoScreenFadeIn(1000)
+    end
+end)
+
+RegisterNetEvent('qb-ambulancejob:elevator_garage', function()
+    local ped = PlayerPedId()
+    for k, _ in pairs(Config.Locations["garage"]) do
+        DoScreenFadeOut(500)
+        while not IsScreenFadedOut() do
+            Wait(10)
+        end
+
+        currentHospital = k
+
+        local coords = Config.Locations["main2"][currentHospital]
+        SetEntityCoords(ped, coords.x, coords.y, coords.z, 0, 0, 0, false)
+        SetEntityHeading(ped, coords.w)
+
+        Wait(100)
+
+        DoScreenFadeIn(1000)
+    end
+end)
+
+RegisterNetEvent('qb-ambulancejob:elevator_main2', function()
+    local ped = PlayerPedId()
+    for k, _ in pairs(Config.Locations["main2"]) do
+        DoScreenFadeOut(500)
+        while not IsScreenFadedOut() do
+            Wait(10)
+        end
+
+        currentHospital = k
+
+        local coords = Config.Locations["garage"][currentHospital]
         SetEntityCoords(ped, coords.x, coords.y, coords.z, 0, 0, 0, false)
         SetEntityHeading(ped, coords.w)
 
@@ -536,6 +580,46 @@ if Config.UseTarget then
                 distance = 8
             })
         end
+        for k, v in pairs(Config.Locations["garage"]) do
+            exports['qb-target']:AddBoxZone("garage" .. k, vector3(v.x, v.y, v.z), 2, 2, {
+                name = "garage" .. k,
+                debugPoly = false,
+                heading = -20,
+                minZ = v.z - 2,
+                maxZ = v.z + 2,
+            }, {
+                options = {
+                    {
+                        type = "client",
+                        event = "qb-ambulancejob:elevator_garage",
+                        icon = "fas fa-hand-point-up",
+                        label = "Take Elevator",
+                        job = "ambulance"
+                    },
+                },
+                distance = 8
+            })
+        end
+        for k, v in pairs(Config.Locations["main2"]) do
+            exports['qb-target']:AddBoxZone("main2" .. k, vector3(v.x, v.y, v.z), 2, 2, {
+                name = "main2" .. k,
+                debugPoly = false,
+                heading = -20,
+                minZ = v.z - 2,
+                maxZ = v.z + 2,
+            }, {
+                options = {
+                    {
+                        type = "client",
+                        event = "qb-ambulancejob:elevator_main2",
+                        icon = "fas fa-hand-point-up",
+                        label = "Take Elevator",
+                        job = "ambulance"
+                    },
+                },
+                distance = 8
+            })
+        end
         for k, v in pairs(Config.Locations["main"]) do
             exports['qb-target']:AddBoxZone("main" .. k, vector3(v.x, v.y, v.z), 1.5, 1.5, {
                 name = "main" .. k,
@@ -646,6 +730,32 @@ else
         end
 
         local roofCombo = ComboZone:Create(roofPoly, { name = "roofCombo", debugPoly = false })
+        roofCombo:onPlayerInOut(function(isPointInside)
+            if isPointInside and PlayerJob.name == "ambulance" then
+                if onDuty then
+                    exports['qb-core']:DrawText(Lang:t('text.elevator_main'), 'left')
+                    EMSControls("main")
+                else
+                    exports['qb-core']:DrawText(Lang:t('error.not_ems'), 'left')
+                end
+            else
+                check = false
+                exports['qb-core']:HideText()
+            end
+        end)
+
+        local garagePoly = {}
+        for k, v in pairs(Config.Locations["garage"]) do
+            garagePoly[#roofPoly + 1] = BoxZone:Create(vector3(vector3(v.x, v.y, v.z)), 2, 2, {
+                name = "garage" .. k,
+                debugPoly = false,
+                heading = 70,
+                minZ = v.z - 2,
+                maxZ = v.z + 2,
+            })
+        end
+
+        local garageCombo = ComboZone:Create(garagePoly, { name = "garageCombo", debugPoly = false })
         roofCombo:onPlayerInOut(function(isPointInside)
             if isPointInside and PlayerJob.name == "ambulance" then
                 if onDuty then

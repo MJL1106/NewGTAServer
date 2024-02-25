@@ -55,11 +55,17 @@ Config = {
 		{ 	zoneEnable = true,
 			job = "ambulance",
 			garage = {
-				spawn = vec4(294.95, -606.92, 43.24, 64.84),
-				out = vec4(294.54, -599.52, 43.28, 159.68),
+				spawn = vector4(317.25, -573.78, 28.8, 252.57),
+				out = vector4(317.93, -582.11, 28.8, 347.77),
 				list = {
-					["ambulance"] = {
-						CustomName = "Ambulance"
+					["Ambulance_Dodge_RAM"] = {
+						CustomName = "Ambulance Dodge RAM"
+					},
+					["ambulance1"] = {
+						CustomName = "Ambulance Mercedes"
+					},
+					["amrvan"] = {
+						CustomName = "Ambulance Van"
 					},
 				},
 			},
