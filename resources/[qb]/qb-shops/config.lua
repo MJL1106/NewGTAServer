@@ -136,7 +136,7 @@ Config.Products = {
     ["hardware"] = {
         [1] = {
             name = "lockpick",
-            price = 200,
+            price = 350,
             amount = 50,
             info = {},
             type = "item",
@@ -248,7 +248,7 @@ Config.Products = {
         },
         [15] = {
             name = "advancedrepairkit",
-            price = 500,
+            price = 850,
             amount = 50,
             info = {},
             type = "item",

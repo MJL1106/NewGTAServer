@@ -88,7 +88,7 @@ local function RepairVehicleFull(veh)
         SetVehicleDoorOpen(veh, 4, false, false)
     end
 	
-	QBCore.Functions.Progressbar("repair_vehicle", Lang:t("progress.repair_veh"), math.random(20000, 30000), false, true, {
+	QBCore.Functions.Progressbar("repair_vehicle", Lang:t("progress.repair_veh"), math.random(15000, 20000), false, true, {
 		disableMovement = true,
 		disableCarMovement = true,
 		disableMouse = false,
@@ -155,6 +155,48 @@ local function RepairVehicle(veh)
 			SetVehicleDoorShut(veh, 4, false)
 		end
 		TriggerServerEvent('qb-vehiclefailure:removeItem', "repairkit")
+	end, function() -- Cancel
+		StopAnimTask(PlayerPedId(), "mini@repair", "fixing_a_player", 1.0)
+		QBCore.Functions.Notify(Lang:t("error.failed_notification"), "error")
+		if (IsBackEngine(GetEntityModel(veh))) then
+			SetVehicleDoorShut(veh, 5, false)
+		else
+			SetVehicleDoorShut(veh, 4, false)
+		end
+	end)
+end
+
+local function RepairVehicleRace(veh)
+	if (IsBackEngine(GetEntityModel(veh))) then
+        SetVehicleDoorOpen(veh, 5, false, false)
+    else
+        SetVehicleDoorOpen(veh, 4, false, false)
+    end
+	QBCore.Functions.Progressbar("repair_vehicle", Lang:t("progress.repair_veh"), math.random(4000, 5000), false, true, {
+		disableMovement = true,
+		disableCarMovement = true,
+		disableMouse = false,
+		disableCombat = true,
+	}, {
+		animDict = "mini@repair",
+		anim = "fixing_a_player",
+		flags = 16,
+	}, {}, {}, function() -- Done
+		StopAnimTask(PlayerPedId(), "mini@repair", "fixing_a_player", 1.0)
+		QBCore.Functions.Notify(Lang:t("success.repaired_veh"))
+		SetVehicleEngineHealth(veh, 500.0)
+		SetVehicleEngineOn(veh, true, false)
+		SetVehicleTyreFixed(veh, 0)
+		SetVehicleTyreFixed(veh, 1)
+		SetVehicleTyreFixed(veh, 2)
+		SetVehicleTyreFixed(veh, 3)
+		SetVehicleTyreFixed(veh, 4)
+		if (IsBackEngine(GetEntityModel(veh))) then
+			SetVehicleDoorShut(veh, 5, false)
+		else
+			SetVehicleDoorShut(veh, 4, false)
+		end
+		TriggerServerEvent('qb-vehiclefailure:removeItem', "racekit")
 	end, function() -- Cancel
 		StopAnimTask(PlayerPedId(), "mini@repair", "fixing_a_player", 1.0)
 		QBCore.Functions.Notify(Lang:t("error.failed_notification"), "error")
@@ -325,6 +367,32 @@ RegisterNetEvent('qb-vehiclefailure:client:RepairVehicleFull', function()
 			end
 			if #(pos - drawpos) < 2.0 and not IsPedInAnyVehicle(ped) then
 				RepairVehicleFull(veh)
+			end
+		else
+			if #(pos - vehpos) > 4.9 then
+				QBCore.Functions.Notify(Lang:t("error.out_range_veh"), "error")
+			else
+				QBCore.Functions.Notify(Lang:t("error.inside_veh"), "error")
+			end
+		end
+	else
+		QBCore.Functions.Notify(Lang:t("error.not_near_veh"), "error")
+	end
+end)
+
+RegisterNetEvent('qb-vehiclefailure:client:RepairVehicleRace', function()
+	local veh = QBCore.Functions.GetClosestVehicle()
+	if veh ~= nil and veh ~= 0 then
+		local ped = PlayerPedId()
+		local pos = GetEntityCoords(ped)
+		local vehpos = GetEntityCoords(veh)
+		if #(pos - vehpos) < 5.0 and not IsPedInAnyVehicle(ped) then
+			local drawpos = GetOffsetFromEntityInWorldCoords(veh, 0, 2.5, 0)
+			if (IsBackEngine(GetEntityModel(veh))) then
+				drawpos = GetOffsetFromEntityInWorldCoords(veh, 0, -2.5, 0)
+			end
+			if #(pos - drawpos) < 2.0 and not IsPedInAnyVehicle(ped) then
+				RepairVehicleRace(veh)
 			end
 		else
 			if #(pos - vehpos) > 4.9 then

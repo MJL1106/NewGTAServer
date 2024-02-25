@@ -40,7 +40,7 @@ Config = {
 			coords = vec3(-549.68, 282.64, 82.98),
 		},
 		{ -- GabzTuners Radio Prop
-			job = "mechanic",
+			job = "tuners",
 			enableBooth = true,
 			DefaultVolume = 0.1,
 			radius = 30,

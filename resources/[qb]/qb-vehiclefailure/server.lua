@@ -25,6 +25,13 @@ QBCore.Functions.CreateUseableItem("advancedrepairkit", function(source, item)
     end
 end)
 
+QBCore.Functions.CreateUseableItem("racekit", function(source, item)
+    local Player = QBCore.Functions.GetPlayer(source)
+	if Player.Functions.GetItemBySlot(item.slot) ~= nil then
+        TriggerClientEvent("qb-vehiclefailure:client:RepairVehicleRace", source)
+    end
+end)
+
 RegisterNetEvent('qb-vehiclefailure:removeItem', function(item)
     local src = source
     local ply = QBCore.Functions.GetPlayer(src)
