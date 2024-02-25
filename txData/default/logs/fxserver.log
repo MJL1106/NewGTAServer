@@ -1,385 +1,165 @@
 
 ================================================================
-======== Log Rotated - 2/24/2024, 12:00:00 AM                   
+======== Log Rotated - 2/25/2024, 12:00:00 AM                   
 ================================================================
-[  script:qb-chopshop] Vehicle: asea | Coords: vec4(-327.799988, -2748.600098, 6.020000, 90.000000) | Plate: 63gxs376
-[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 1 police online (3 is required for isImportant classes to generate).
+[script:rahe-boosting] [info] Starting the contract generator[97m (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
 [script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[script:rahe-boosting] [93m[info] Starting the contract generator (automatic trigger). There are currently 1 police online (3 is required for isImportant classes to generate).
+[script:rahe-boosting] [93m[info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
 [script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[  script:qb-chopshop] Vehicle: carbonizzare | Coords: vec4(-772.200012, -1281.800049, 4.600000, 90.000000) | Plate: 53IWD608
-[38;5;89m[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 1 police online (3 is required for isImportant classes to generate).
+[script:rahe-boosting] [0m[info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
 [script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[  script:qb-chopshop] Vehicle: surge | Coords: vec4(-971.000000, -2410.399902, 13.300000, 90.000000) | Plate: 44Jtv549
-[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 1 police online (3 is required for isImportant classes to generate).
+[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
 [script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[38;5;79m[  script:qb-chopshop] Vehicle: voltic | Coords: vec4(75.199997, 164.899994, 104.699997, 90.000000) | Plate: 88fOe136
-[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 1 police online (3 is required for isImportant classes to generate).
+[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
 [script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 1 police online (3 is required for isImportant classes to generate).
+[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
 [script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[  script:qb-chopshop] Vehicle: baller | Coords: vec4(-521.900024, -266.799988, 34.900002, 90.000000) | Plate: 50OUG821
-[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 1 police online (3 is required for isImportant classes to generate).
+[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
 [script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[  script:qb-chopshop] Vehicle: comet | Coords: vec4(75.199997, 164.899994, 104.699997, 90.000000) | Plate: 34RZI038
-[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 1 police online (3 is required for isImportant classes to generate).
+[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
 [script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[  script:qb-chopshop] Vehicle: serrano | Coords: vec4(907.479980, -54.720001, 78.760002, 90.000000) | Plate: 68eDo204
-[script:rahe-boosting] [0m[info] Starting the contract generator (automatic trigger). There are currently 1 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 1 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[  script:qb-chopshop] Vehicle: baller | Coords: vec4(833.760010, -1271.810059, 26.280001, 90.000000) | Plate: 76FES297
-[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 1 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[  script:qb-chopshop] Vehicle: stalion | Coords: vec4(1371.300049, -2549.500000, 47.599998, 90.000000) | Plate: 85Brc031
-[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 1 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 1 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[  script:qb-chopshop] Vehicle: moonbeam | Coords: vec4(-556.099976, -1794.699951, 22.000000, 90.000000) | Plate: 96uVj350
-[38;5;89m[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 1 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[  script:qb-chopshop] Vehicle: banshee | Coords: vec4(383.799988, -1652.900024, 37.299999, 90.000000) | Plate: 75Nsf432
-[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 1 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[  script:qb-chopshop] Vehicle: serrano | Coords: vec4(880.409973, -39.270000, 78.760002, 90.000000) | Plate: 71BpI441
-[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 1 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[script:rahe-boosting] [93m[info] Starting the contract generator (automatic trigger). There are currently 1 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[  script:qb-chopshop] Vehicle: cognoscenti | Coords: vec4(2774.649902, 3471.370117, 55.439999, 90.000000) | Plate: 01hIm328
-[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 1 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[38;5;73m[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[38;5;73m[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[  script:qb-chopshop] [0mVehicle: carbonizzare | Coords: vec4(225.669998, -776.580017, 30.770000, 90.000000) | Plate: 08mAC373
-[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[38;5;73m[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 1 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[38;5;73m[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[38;5;73m[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[  script:qb-chopshop] Vehicle: surge | Coords: vec4(510.209991, -3054.699951, 6.070000, 90.000000) | Plate: 51xWV937
-[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 1 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[38;5;73m[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[38;5;73m[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[38;5;73m[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 1 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[  script:qb-chopshop] Vehicle: prairie | Coords: vec4(-1643.010010, -834.770020, 9.990000, 90.000000) | Plate: 17oZL072
-[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[38;5;73m[ citizen-server-impl] Server list query returned an error: System.Net.Sockets.SocketException: Operation timed out <- System.Net.Http.HttpRequestException: Operation timed out (185.108.171.136:30120)
-[ citizen-server-impl] [0mServer list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 1 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[  script:qb-chopshop] Vehicle: xls | Coords: vec4(2774.649902, 3471.370117, 55.439999, 90.000000) | Plate: 61EAK222
-[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[38;5;73m[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 1 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[38;5;73m[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[38;5;73m[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[  script:qb-chopshop] [0mVehicle: regina | Coords: vec4(-2723.399902, 13.200000, 15.100000, 90.000000) | Plate: 65Nur112
-[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 1 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[38;5;73m[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[ citizen-server-impl] sync thread hitch warning: timer interval of 108 milliseconds
-[ citizen-server-impl] sync thread hitch warning: timer interval of 106 milliseconds
-[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[38;5;73m[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[38;5;73m[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 1 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[38;5;73m[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[  script:qb-chopshop] Vehicle: rocoto | Coords: vec4(-2723.399902, 13.200000, 15.100000, 90.000000) | Plate: 19mtq251
-[38;5;73m[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[38;5;73m[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 1 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[ citizen-server-impl] [91mServer list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[38;5;73m[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[ citizen-server-impl] [91mServer list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[  script:qb-chopshop] Vehicle: stalion | Coords: vec4(1245.010010, 2713.149902, 38.009998, 90.000000) | Plate: 46fXg858
-[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 1 police online (3 is required for isImportant classes to generate).
+[script:rahe-boosting] [info] Starting the contract generator ([93mautomatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
 [38;5;89m[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[script:rahe-boosting] [info][97m Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
+[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
+[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
+[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
+[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
+[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
+[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
+[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
+[script:rahe-boosting] [info][97m Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
+[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
+[script:rahe-boosting] [97m[info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
+[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
+[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
+[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
+[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
+[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
+[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
+[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
+[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
+[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
+[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
+[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
+[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
+[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
+[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
+[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
 [ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
 [38;5;73m[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
+[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] sync thread hitch warning: timer interval of 102 milliseconds
 [38;5;73m[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
 [ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[  script:qb-chopshop] Vehicle: premier | Coords: vec4(-432.799988, -2166.100098, 9.900000, 90.000000) | Plate: 39snp760
-[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 1 police online (3 is required for isImportant classes to generate).
+[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
 [script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
 [38;5;73m[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[38;5;73m[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] [91mServer list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
 [ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
 [ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
 [ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[38;5;89m[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 1 police online (3 is required for isImportant classes to generate).
+[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
 [script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[38;5;73m[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
 [ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[  script:qb-chopshop] Vehicle: tampa | Coords: vec4(-356.989990, 6067.100098, 31.070000, 90.000000) | Plate: 55IxS687
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] network thread hitch warning: timer interval of 195 milliseconds
+[ citizen-server-impl] sync thread hitch warning: timer interval of 196 milliseconds
+[ citizen-server-impl] server thread hitch warning: timer interval of 197 milliseconds
+[ citizen-server-impl] sync thread hitch warning: timer interval of 185 milliseconds
+[ citizen-server-impl] network thread hitch warning: timer interval of 185 milliseconds
+[ citizen-server-impl] server thread hitch warning: timer interval of 191 milliseconds
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
 [ citizen-server-impl] [0mServer list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
 [38;5;73m[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
+[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
 [38;5;73m[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[script:rahe-boosting] [0m[info] Starting the contract generator (automatic trigger). There are currently 1 police online (3 is required for isImportant classes to generate).
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
 [script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
 [ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
 [ citizen-server-impl] [91mServer list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[38;5;73m[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[38;5;73m[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[  script:qb-chopshop] Vehicle: ninef | Coords: vec4(-1643.010010, -834.770020, 9.990000, 90.000000) | Plate: 83ZaL770
 [ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[38;5;89m[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 1 police online (3 is required for isImportant classes to generate).
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
 [script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
 [ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
 [ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
 [ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
 [ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[38;5;73m[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
+[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
+[ citizen-server-impl] [91mServer list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[38;5;73m[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] network thread hitch warning: timer interval of 161 milliseconds
+[ citizen-server-impl] sync thread hitch warning: timer interval of 162 milliseconds
+[ citizen-server-impl] server thread hitch warning: timer interval of 163 milliseconds
 [ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 1 police online ([93m3 is required for isImportant classes to generate).
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[38;5;73m[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
 [script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
 [ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[  script:qb-chopshop] Vehicle: serrano | Coords: vec4(-327.799988, -2748.600098, 6.020000, 90.000000) | Plate: 81rNq263
-[ citizen-server-impl] sync thread hitch warning: timer interval of 123 milliseconds
-[38;5;73m[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[38;5;73m[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[script:rahe-boosting] [0m[info] Starting the contract generator (automatic trigger). There are currently 1 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[ citizen-server-impl] [0mServer list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[ citizen-server-impl] server thread hitch warning: timer interval of 155 milliseconds
-[ citizen-server-impl] sync thread hitch warning: timer interval of 114 milliseconds
-[  script:qb-chopshop] Vehicle: sadler | Coords: vec4(2774.649902, 3471.370117, 55.439999, 90.000000) | Plate: 01GLq282
 [ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
 [ citizen-server-impl] [0mServer list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
 [ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 1 police online (3 is required for isImportant classes to generate).
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
 [script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
+[38;5;73m[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[38;5;73m[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[38;5;73m[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
+[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[38;5;73m[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
+[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
 [ citizen-server-impl] [0mServer list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
 [ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] [91mServer list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
 [ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[ citizen-server-impl] [0msync thread hitch warning: timer interval of 134 milliseconds
-[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[  script:qb-chopshop] Vehicle: dukes | Coords: vec4(-451.100006, -333.500000, 34.000000, 90.000000) | Plate: 48xUJ468
-[ citizen-server-impl] sync thread hitch warning: timer interval of 131 milliseconds
-[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 1 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[38;5;89m[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 1 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[ citizen-server-impl] [97mServer list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[  script:qb-chopshop] Vehicle: tampa | Coords: vec4(-556.099976, -1794.699951, 22.000000, 90.000000) | Plate: 34rfi377
-[38;5;73m[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[38;5;73m[ citizen-server-impl] [0mServer list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[38;5;73m[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[script:rahe-boosting] [93m[info] Starting the contract generator (automatic trigger). There are currently 1 police online (3 is required for isImportant classes to generate).
+[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
 [script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
 [ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
 [38;5;73m[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[38;5;73m[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[  script:qb-chopshop] Vehicle: jester | Coords: vec4(1127.819946, 2648.169922, 37.490002, 90.000000) | Plate: 14KVG568
+[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
+[ citizen-server-impl] [91mServer list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
 [ citizen-server-impl] sync thread hitch warning: timer interval of 108 milliseconds
-[ citizen-server-impl] server thread hitch warning: timer interval of 157 milliseconds
-[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 1 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[38;5;73m[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[38;5;73m[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[  script:qb-chopshop] Vehicle: baller | Coords: vec4(1127.819946, 2648.169922, 37.490002, 90.000000) | Plate: 16QTf692
-[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 1 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[ citizen-server-impl] [97mServer list query returned an error: System.Net.Sockets.SocketException: Operation timed out <- System.Net.Http.HttpRequestException: Operation timed out (185.108.171.136:30120)
-[38;5;73m[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 1 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[  script:qb-chopshop] Vehicle: rancherxl | Coords: vec4(-3139.800049, 1078.699951, 20.200001, 90.000000) | Plate: 11TOX389
-[ citizen-server-impl] sync thread hitch warning: timer interval of 112 milliseconds
-[ citizen-server-impl] network thread hitch warning: timer interval of 152 milliseconds
-[script:rahe-boosting] [0m[info] Starting the contract generator (automatic trigger). There are currently 1 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[  script:qb-chopshop] [0mVehicle: tampa | Coords: vec4(-592.099976, 138.199997, 60.099998, 90.000000) | Plate: 79bOL673
-[script:rahe-boosting] [93m[info] Starting the contract generator (automatic trigger). There are currently 1 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 1 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[  script:qb-chopshop] Vehicle: ingot | Coords: vec4(75.199997, 164.899994, 104.699997, 90.000000) | Plate: 17ouL194
-[ citizen-server-impl] sync thread hitch warning: timer interval of 103 milliseconds
-[script:rahe-boosting] [93m[info] Starting the contract generator (automatic trigger). There are currently 1 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[  script:qb-chopshop] Vehicle: massacro | Coords: vec4(-311.279999, -757.900024, 33.970001, 90.000000) | Plate: 44Qbj248
-[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 1 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[  script:qb-chopshop] Vehicle: sultan | Coords: vec4(1642.599976, -2413.300049, 93.099998, 90.000000) | Plate: 11WEd450
-[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 1 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[script:rahe-boosting] [info] Starting the [93mcontract generator (automatic trigger). There are currently 1 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[  script:qb-chopshop] Vehicle: buccaneer | Coords: vec4(-2078.760010, -331.440002, 12.630000, 90.000000) | Plate: 79RHJ927
-[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 1 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[  script:qb-chopshop] Vehicle: ingot | Coords: vec4(-1613.900024, 18.799999, 61.799999, 90.000000) | Plate: 32HKk096
-[script:rahe-boosting] [info][97m Starting the contract generator (automatic trigger). There are currently 1 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [97m[info] The contract generator stopped as there are no players in the queue.
-[  script:qb-chopshop] Vehicle: sadler | Coords: vec4(322.399994, -1900.500000, 25.799999, 90.000000) | Plate: 03cpT182
-[script:rahe-boosting] [93m[info] Starting the contract generator (automatic trigger). There are currently 1 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[ citizen-server-impl] network thread hitch warning: timer interval of 211 milliseconds
-[ citizen-server-impl] sync thread hitch warning: timer interval of 206 milliseconds
-[ citizen-server-impl] server thread hitch warning: timer interval of 211 milliseconds
-[ citizen-server-impl] sync thread hitch warning: timer interval of 221 milliseconds
-[ citizen-server-impl] network thread hitch warning: timer interval of 223 milliseconds
-[ citizen-server-impl] server thread hitch warning: timer interval of 224 milliseconds
-[ citizen-server-impl] network thread hitch warning: timer interval of 224 milliseconds
-[ citizen-server-impl] sync thread hitch warning: timer interval of 224 milliseconds
-[ citizen-server-impl] server thread hitch warning: timer interval of 239 milliseconds
-[ citizen-server-impl] sync thread hitch warning: timer interval of 121 milliseconds
-[ citizen-server-impl] sync thread hitch warning: timer interval of 108 milliseconds
-[ citizen-server-impl] sync thread hitch warning: timer interval of 233 milliseconds
-[ citizen-server-impl] network thread hitch warning: timer interval of 233 milliseconds
-[ citizen-server-impl] server thread hitch warning: timer interval of 193 milliseconds
-[ citizen-server-impl] sync thread hitch warning: timer interval of 216 milliseconds
-[ citizen-server-impl] network thread hitch warning: timer interval of 217 milliseconds
-[ citizen-server-impl] server thread hitch warning: timer interval of 214 milliseconds
-[ citizen-server-impl] network thread hitch warning: timer interval of 192 milliseconds
-[ citizen-server-impl] sync thread hitch warning: timer interval of 193 milliseconds
-[ citizen-server-impl] server thread hitch warning: timer interval of 192 milliseconds
-[ citizen-server-impl] sync thread hitch warning: timer interval of 174 milliseconds
-[ citizen-server-impl] network thread hitch warning: timer interval of 175 milliseconds
-[ citizen-server-impl] server thread hitch warning: timer interval of 211 milliseconds
-[ citizen-server-impl] sync thread hitch warning: timer interval of 184 milliseconds
-[ citizen-server-impl] network thread hitch warning: timer interval of 185 milliseconds
-[ citizen-server-impl] server thread hitch warning: timer interval of 184 milliseconds
-[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 1 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[38;5;79m[  script:qb-chopshop] Vehicle: asea | Coords: vec4(-1708.750000, -899.460022, 7.810000, 90.000000) | Plate: 98RsJ927
-[script:rahe-boosting] [info] Starting the contract generator ([93mautomatic trigger). There are currently 1 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[  script:qb-chopshop] [0mVehicle: primo | Coords: vec4(-2723.399902, 13.200000, 15.100000, 90.000000) | Plate: 57mUc653
-[ citizen-server-impl] sync thread hitch warning: timer interval of 145 milliseconds
-[ citizen-server-impl] network thread hitch warning: timer interval of 219 milliseconds
-[ citizen-server-impl] sync thread hitch warning: timer interval of 206 milliseconds
-[ citizen-server-impl] server thread hitch warning: timer interval of 219 milliseconds
-[ citizen-server-impl] server thread hitch warning: timer interval of 200 milliseconds
-[ citizen-server-impl] sync thread hitch warning: timer interval of 154 milliseconds
-[ citizen-server-impl] network thread hitch warning: timer interval of 154 milliseconds
-[ citizen-server-impl] sync thread hitch warning: timer interval of 143 milliseconds
-[ citizen-server-impl] sync thread hitch warning: timer interval of 124 milliseconds
-[ citizen-server-impl] sync thread hitch warning: timer interval of 170 milliseconds
-[ citizen-server-impl] network thread hitch warning: timer interval of 169 milliseconds
-[ citizen-server-impl] server thread hitch warning: timer interval of 169 milliseconds
-[ citizen-server-impl] server thread hitch warning: timer interval of 265 milliseconds
-[ citizen-server-impl] sync thread hitch warning: timer interval of 221 milliseconds
-[ citizen-server-impl] network thread hitch warning: timer interval of 221 milliseconds
-[ citizen-server-impl] sync thread hitch warning: timer interval of 196 milliseconds
-[ citizen-server-impl] network thread hitch warning: timer interval of 198 milliseconds
-[ citizen-server-impl] server thread hitch warning: timer interval of 233 milliseconds
-[ citizen-server-impl] sync thread hitch warning: timer interval of 216 milliseconds
-[ citizen-server-impl] network thread hitch warning: timer interval of 216 milliseconds
-[ citizen-server-impl] server thread hitch warning: timer interval of 250 milliseconds
-[ citizen-server-impl] [97msync thread hitch warning: timer interval of 226 milliseconds
-[ citizen-server-impl] network thread hitch warning: timer interval of 224 milliseconds
-[ citizen-server-impl] server thread hitch warning: timer interval of 239 milliseconds
-[ citizen-server-impl] sync thread hitch warning: timer interval of 218 milliseconds
-[ citizen-server-impl] network thread hitch warning: timer interval of 218 milliseconds
-[ citizen-server-impl] server thread hitch warning: timer interval of 218 milliseconds
-[ citizen-server-impl] server thread hitch warning: timer interval of 240 milliseconds
-[ citizen-server-impl] sync thread hitch warning: timer interval of 197 milliseconds
-[ citizen-server-impl] network thread hitch warning: timer interval of 195 milliseconds
-[ citizen-server-impl] server thread hitch warning: timer interval of 215 milliseconds
-[ citizen-server-impl] sync thread hitch warning: timer interval of 175 milliseconds
-[ citizen-server-impl] network thread hitch warning: timer interval of 177 milliseconds
-[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 1 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[  script:qb-chopshop] Vehicle: surge | Coords: vec4(-1708.750000, -899.460022, 7.810000, 90.000000) | Plate: 94JeL229
-[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 1 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[ citizen-server-impl] [0mServer list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[script:rahe-boosting] [info][97m Starting the contract generator (automatic trigger). There are currently 1 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[ citizen-server-impl] sync thread hitch warning: timer interval of 109 milliseconds
-[ citizen-server-impl] sync thread hitch warning: timer interval of 124 milliseconds
-[ citizen-server-impl] sync thread hitch warning: timer interval of 101 milliseconds
-[ citizen-server-impl] sync thread hitch warning: timer interval of 152 milliseconds
-[ citizen-server-impl] server thread hitch warning: timer interval of 151 milliseconds
-[ citizen-server-impl] sync thread hitch warning: timer interval of 157 milliseconds
-[ citizen-server-impl] network thread hitch warning: timer interval of 154 milliseconds
-[ citizen-server-impl] server thread hitch warning: timer interval of 155 milliseconds
-[ citizen-server-impl] sync thread hitch warning: timer interval of 136 milliseconds
-[ citizen-server-impl] sync thread hitch warning: timer interval of 109 milliseconds
-[ citizen-server-impl] sync thread hitch warning: timer interval of 121 milliseconds
-[ citizen-server-impl] sync thread hitch warning: timer interval of 115 milliseconds
-[ citizen-server-impl] sync thread hitch warning: timer interval of 106 milliseconds
-[38;5;73m[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[  script:qb-chopshop] Vehicle: cognoscenti | Coords: vec4(-4.600000, -670.299988, 31.900000, 90.000000) | Plate: 31EgJ297
-[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[ citizen-server-impl] sync thread hitch warning: timer interval of 150 milliseconds
-[ citizen-server-impl] network thread hitch warning: timer interval of 152 milliseconds
-[ citizen-server-impl] server thread hitch warning: timer interval of 184 milliseconds
-[38;5;73m[ citizen-server-impl] sync thread hitch warning: timer interval of 124 milliseconds
-[ citizen-server-impl] server thread hitch warning: timer interval of 157 milliseconds
-[ citizen-server-impl] sync thread hitch warning: timer interval of 126 milliseconds
-[ citizen-server-impl] sync thread hitch warning: timer interval of 463 milliseconds
-[ citizen-server-impl] network thread hitch warning: timer interval of 479 milliseconds
-[ citizen-server-impl] server thread hitch warning: timer interval of 504 milliseconds
-[ citizen-server-impl] sync thread hitch warning: timer interval of 222 milliseconds
-[ citizen-server-impl] network thread hitch warning: timer interval of 208 milliseconds
-[ citizen-server-impl] server thread hitch warning: timer interval of 235 milliseconds
-[ citizen-server-impl] sync thread hitch warning: timer interval of 168 milliseconds
-[ citizen-server-impl] network thread hitch warning: timer interval of 173 milliseconds
-[ citizen-server-impl] sync thread hitch warning: timer interval of 125 milliseconds
-[ citizen-server-impl] server thread hitch warning: timer interval of 168 milliseconds
-[ citizen-server-impl] server thread hitch warning: timer interval of 151 milliseconds
-[ citizen-server-impl] sync thread hitch warning: timer interval of 198 milliseconds
-[ citizen-server-impl] network thread hitch warning: timer interval of 206 milliseconds
-[ citizen-server-impl] server thread hitch warning: timer interval of 211 milliseconds
-[ citizen-server-impl] sync thread hitch warning: timer interval of 119 milliseconds
-[ citizen-server-impl] server thread hitch warning: timer interval of 191 milliseconds
-[ citizen-server-impl] sync thread hitch warning: timer interval of 146 milliseconds
-[ citizen-server-impl] sync thread hitch warning: timer interval of 137 milliseconds
-[ citizen-server-impl] server thread hitch warning: timer interval of 166 milliseconds
+[38;5;73m[ citizen-server-impl] sync thread hitch warning: timer interval of 102 milliseconds
+[38;5;73m[ citizen-server-impl] sync thread hitch warning: timer interval of 149 milliseconds
+[ citizen-server-impl] server thread hitch warning: timer interval of 153 milliseconds
+[ citizen-server-impl] sync thread hitch warning: timer interval of 167 milliseconds
+[ citizen-server-impl] network thread hitch warning: timer interval of 167 milliseconds
+[ citizen-server-impl] server thread hitch warning: timer interval of 175 milliseconds
+[38;5;73m[ citizen-server-impl] sync thread hitch warning: timer interval of 371 milliseconds
+[ citizen-server-impl] network thread hitch warning: timer interval of 371 milliseconds
+[ citizen-server-impl] server thread hitch warning: timer interval of 391 milliseconds
+[ citizen-server-impl] sync thread hitch warning: timer interval of 255 milliseconds
+[ citizen-server-impl] network thread hitch warning: timer interval of 254 milliseconds
+[ citizen-server-impl] server thread hitch warning: timer interval of 318 milliseconds
+[ citizen-server-impl] sync thread hitch warning: timer interval of 147 milliseconds
+[ citizen-server-impl] network thread hitch warning: timer interval of 151 milliseconds
+[ citizen-server-impl] server thread hitch warning: timer interval of 358 milliseconds
+[ citizen-server-impl] sync thread hitch warning: timer interval of 306 milliseconds
+[ citizen-server-impl] network thread hitch warning: timer interval of 303 milliseconds
+[ citizen-server-impl] server thread hitch warning: timer interval of 182 milliseconds
+[ citizen-server-impl] sync thread hitch warning: timer interval of 138 milliseconds
+[ citizen-server-impl] sync thread hitch warning: timer interval of 120 milliseconds
 [ citizen-server-main] -> Quitting: SIGHUP received
