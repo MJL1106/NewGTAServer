@@ -363,7 +363,7 @@ Config.CarItems = {
 
 Config.Items = {
     label = "Police Armory",
-    slots = 29,
+    slots = 31,
     items = {
         [1] = {
             name = "weapon_pistol",
@@ -538,7 +538,7 @@ Config.Items = {
             authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8}
         },
         [18] = {
-            name = "drone",
+            name = "camera",
             price = 0,
             amount = 50,
             info = {},
@@ -556,7 +556,7 @@ Config.Items = {
             authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8}
         },
         [20] = {
-            name = "police-shield",
+            name = "nightvision",
             price = 0,
             amount = 50,
             info = {},
@@ -565,7 +565,7 @@ Config.Items = {
             authorizedJobGrades = {0,1,2,3, 4, 5, 6, 7, 8}
         },
         [21] = {
-            name = "uvlight",
+            name = "pistol_extendedclip",
             price = 0,
             amount = 50,
             info = {},
@@ -590,8 +590,8 @@ Config.Items = {
             type = "item",
             slot = 23,
             authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8}
-        }
-        [22] = {
+        },
+        [24] = {
             name = "painkillers",
             price = 0,
             amount = 50,
@@ -600,7 +600,7 @@ Config.Items = {
             slot = 22,
             authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8}
         },
-        [23] = {
+        [25] = {
             name = "diving_gear",
             price = 0,
             amount = 50,
@@ -609,7 +609,7 @@ Config.Items = {
             slot = 23,
             authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8}
         },
-        [24] = {
+        [26] = {
             name = "parachute",
             price = 0,
             amount = 50,
@@ -618,7 +618,7 @@ Config.Items = {
             slot = 24,
             authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8}
         },
-        [25] = {
+        [27] = {
             name = "advancedrepairkit",
             price = 0,
             amount = 10,
@@ -627,7 +627,7 @@ Config.Items = {
             slot = 25,
             authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8}
         },
-        [26] = {
+        [28] = {
             name = "weapon_m4",
             price = 12,
             amount = 1,
@@ -640,7 +640,7 @@ Config.Items = {
             slot = 26,
             authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8,}
         },
-        [27] = {
+        [29] = {
             name = "weapon_ar15",
             price = 12,
             amount = 1,
@@ -655,7 +655,7 @@ Config.Items = {
             slot = 27,
             authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8,}
         },
-        [28] = {
+        [30] = {
             name = "weapon_scarh",
             price = 12,
             amount = 1,
@@ -668,7 +668,7 @@ Config.Items = {
             slot = 28,
             authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8,}
         },
-        [29] = {
+        [31] = {
             name = "oxy",
             price = 0,
             amount = 10,
