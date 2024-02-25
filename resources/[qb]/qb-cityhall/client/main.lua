@@ -219,16 +219,26 @@ RegisterNetEvent('qb-cityhall:client:getIds', function()
 end)
 
 RegisterNetEvent('qb-cityhall:client:sendDriverEmail', function(charinfo)
+    print("Trying toi send emaiL")
     SetTimeout(math.random(2500, 4000), function()
         local gender = Lang:t('email.mr')
         if PlayerData.charinfo.gender == 1 then
             gender = Lang:t('email.mrs')
         end
-        TriggerServerEvent('qb-phone:server:sendNewMail', {
-            sender = Lang:t('email.sender'),
-            subject = Lang:t('email.subject'),
-            message =  Lang:t('email.message', {gender = gender, lastname = charinfo.lastname, firstname = charinfo.firstname, phone = charinfo.phone}),
-            button = {}
+        -- TriggerServerEvent('qb-phone:server:sendNewMail', {
+        --     sender = Lang:t('email.sender'),
+        --     subject = Lang:t('email.subject'),
+        --     message =  Lang:t('email.message', {gender = gender, lastname = charinfo.lastname, firstname = charinfo.firstname, phone = charinfo.phone}),
+        --     button = {}
+        -- })
+        
+        -- Trigger the email send event with the customized content
+        TriggerServerEvent('jpr-phonesystem:server:sendEmail', {
+            Assunto = "Driving School Enrollment",
+            Conteudo = Lang:t('email.message', {gender = gender, lastname = charinfo.lastname, firstname = charinfo.firstname, phone = charinfo.phone}),
+            Enviado = Lang:t('email.sender'), -- Your sender email
+            Destinatario = charinfo.citizenid, -- Recipient's citizen ID
+            Event = {} -- If you have any specific event to trigger upon email interaction, specify here
         })
     end)
 end)
