@@ -2,7 +2,7 @@ print("^2Jim^7-^2Mechanic ^7v^42^7.^49^7.^48^3SpamFix ^7- ^2Mechanic Script by ^
 
 Config = {
 	Lan = "en", -- Pick your language here
-	Debug = false, -- Set to true to show green debug boxes to help track
+	Debug = true, -- Set to true to show green debug boxes to help track
 	img = "qb-inventory/html/images/", -- Set this to the directory for your inventory image files
 	JimShops = false, -- If using my free script jim-shops, enable this to use it with the mechanic stores.
 	JimMenu = false, -- If using my free edit of qb-menu enable this.
@@ -14,21 +14,21 @@ Config = {
 	RenewedBanking = false, -- This is used for manualrepair benches, enable to use
 
 -- Main variables
-	isVehicleOwned = false, -- Keep this true if you only want changes to be made to owned vehicles
+	isVehicleOwned = true, -- Keep this true if you only want changes to be made to owned vehicles
 	RequiresJob = true,  -- Do the specfic items require the mechanic job?
-	LocationRequired = false, -- Are the mecahnics locked to specific locations?
-	LocationBlips = false, -- Enable to grab the blip locations from locations.lua
-	CosmeticsJob = false, -- Do vehicle cosmetics require a mechanic job role?
+	LocationRequired = true, -- Are the mecahnics locked to specific locations?
+	LocationBlips = true, -- Enable to grab the blip locations from locations.lua
+	CosmeticsJob = true, -- Do vehicle cosmetics require a mechanic job role?
 
 	ShowStash = true, -- If true, it will show the locations job stash if `StashRepair` or `StashCraft` is enabled or not
 
 	FreeRepair = false,  -- Are repairs free? True means yes
-	StashRepair = false, -- Enable for repair materials to be removed from a job stash (disabled if RequiresJob = false)
+	StashRepair = true, -- Enable for repair materials to be removed from a job stash (disabled if RequiresJob = false)
 
 	Stores = false, -- Set true to turn on shop storage features
 
 	Crafting = true, -- Set true to turn on crafting features
-	StashCraft = false,  -- Set true to grab materials from mechaincs stash for crafting
+	StashCraft = true,  -- Set true to grab materials from mechaincs stash for crafting
 
 	PreviewPhone = true, -- Enable this is preview menu generates an email, False if you want to give an item
 	PreviewJob = false, -- Enable this if you want /preview to require a Job Role
@@ -39,7 +39,7 @@ Config = {
 						-- "gks" = use gks-phone for emails
 						-- "qs" = use qs-smartphone for emails
 
-	CosmeticRemoval = true, -- If "true" items will be removed on successful application of a mod
+	CosmeticRemoval = false, -- If "true" items will be removed on successful application of a mod
 							-- If "false" items will not be removed on use.
 
 	ShowOdo = true, -- Wether the distance is showed in car by default
@@ -71,10 +71,10 @@ Config = {
 								-- Default is 5% because $200,000 would be $10,000 max to repair by this system
 								-- 5% of a $10,000 car would be $500
 
-	repairEngine = true, -- Set this to true if automated repairs also repair engine (not just body)
+	repairEngine = false, -- Set this to true if automated repairs also repair engine (not just body)
 	repairExtras = false, -- Set this to true for automated repairs to also repair extra damages (if mechanicjob is available and repairEngine is true)
 
-	requireDutyCheck = false, -- if set to true, the repair bench will only be usable if there are no mechanics in the server ON DUTY
+	requireDutyCheck = true, -- if set to true, the repair bench will only be usable if there are no mechanics in the server ON DUTY
 	dutyMessage = "There is a Mechanic on duty!", -- This is the notification that pops up when a person tries to repair when a mechanic is on duty, choose what you want for it.
 
 	repairAnimate = true, -- Better than staring at a progress bar, "damaged" parts will be removed and replaced. Making it look more authentic
