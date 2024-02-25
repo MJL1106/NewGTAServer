@@ -3,7 +3,7 @@ Locations = Locations or {}
 Locations["uwucafe"] = {
     enable = true,
     job = "uwu",
-    label = "Cat Cafe",
+    label = "UwU Cafe",
     autoClock = { enter = true, exit = true, },
     logo = "https://i.imgur.com/03eA7N0.png",
     zones = {
@@ -17,7 +17,7 @@ Locations["uwucafe"] = {
     blip = {
         coords = vec3(-581.06, -1066.22, 22.34),
         blipcolor = 48,
-        blipsprite = 89,
+        blipsprite = 621,
         blipscale = 0.7,
         blipdisp = 6,
         blipcat = nil,

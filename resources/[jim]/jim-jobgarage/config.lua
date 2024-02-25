@@ -37,7 +37,7 @@ Config = {
 		{ 	zoneEnable = true,
 			job = "mechanic",
 			garage = {
-				spawn = vec4(-179.34, -1285.27, 30.83, 89.24),  -- Where the car will spawn
+				spawn = vector4(-185.25, -1291.05, 31.3, 177.84),  -- Where the car will spawn
 				out = vec4(-177.1, -1282.25, 31.3, 179.01),	-- Where the parking stand is
 				list = {
 					["cheburek"] = {
@@ -49,6 +49,28 @@ Config = {
 					},
 					["f450c"] = { },
 					["f550rbc"] = { },
+				},
+			},
+		},
+		{ 	zoneEnable = true,
+			job = "burgershot",
+			garage = {
+				spawn = vector4(-1169.49, -897.87, 13.88, 28.5),  -- Where the car will spawn
+				out = vector4(-1165.6, -899.11, 14.08, 30.36),	-- Where the parking stand is
+				list = {
+					["faggio"] = {},
+				},
+			},
+		},
+		{ 	zoneEnable = true,
+		job = "uwu",
+		garage = {
+				spawn = vector4(-560.47, -1103.02, 22.18, 178.72),  -- Where the car will spawn
+				out = vector4(-555.47, -1099.52, 22.13, 91.56),	-- Where the parking stand is
+				list = {
+					["primo"] = {
+						colors = { 51 },
+					},
 				},
 			},
 		},
