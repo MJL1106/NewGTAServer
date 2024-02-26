@@ -9,13 +9,13 @@ Config.SlughterEveryAnimal = false
 
 -- protection system againts players
 -- if hunters have this weapons they can't shoot players with it!
-Config.ShootingProtection = false
+Config.ShootingProtection = true
 Config.ProtectedWeapons = { 'weapon_musket' }
 -- End
 
 -- hunting hours
 Config.HuntingHours = {
-    active = false,
+    active = true,
     range = {
         start = 23,
         ends = 7
@@ -29,7 +29,7 @@ Config.BaitIndicator = {
 }
 
 Config.BaitCooldown = 1000 * 30 -- 1000 per sec
-Config.SpawningTimer = 1000 * 10 -- script will wait until "SpawningTimer" time out then it will spwan animal
+Config.SpawningTimer = 1000 * 45 -- script will wait until "SpawningTimer" time out then it will spwan animal
 
 Config.AnimalsEatingSpeed = 1000 * 15 -- how much animals will wait in baits location
 Config.AnimalsFleeView = 15.0 -- animal Flee range if they get to see players
@@ -99,14 +99,14 @@ Config.Animals = { {
 
 Config.HuntingArea = {
     {
-        name = "llegal hunting Area",
+        name = "Legal hunting Area",
         coord = vector3(-840.6, 4183.3, 215.29),
         radius = 1000.0,
         llegal = true,
         showBlip = true
     },
     {
-        name = "illlegal hunting Area",
+        name = "Illegal hunting Area",
         coord = vector3(870.01, 5158.01, 452.54),
         radius = 500.0,
         llegal = false,
@@ -117,7 +117,7 @@ Config.HuntingArea = {
 Config.SellSpots = {
     [1] = {
         BlipsCoords = vector3(570.34, 2796.46, 42.01),
-        name = 'sell hunting stuff!',
+        name = 'Hunting Buyer',
         showBlip = true,
         SellerNpc = {
             model = 'csb_chef',
