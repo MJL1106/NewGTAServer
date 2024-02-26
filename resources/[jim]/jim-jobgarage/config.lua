@@ -69,7 +69,7 @@ Config = {
 				out = vector4(-555.47, -1099.52, 22.13, 91.56),	-- Where the parking stand is
 				list = {
 					["primo"] = {
-						colors = { 51 },
+						colors = { 49 },
 					},
 				},
 			},
