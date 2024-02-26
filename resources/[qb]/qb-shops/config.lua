@@ -392,7 +392,7 @@ Config.Products = {
     },
     ["weapons"] = {
         [1] = {
-            name = "weapon_knife",
+            name = "weapon_wrench",
             price = 250,
             amount = 250,
             info = {},
@@ -407,42 +407,42 @@ Config.Products = {
             type = "item",
             slot = 2,
         },
-        [3] = {
-            name = "weapon_hatchet",
-            price = 250,
-            amount = 250,
-            info = {},
-            type = "item",
-            slot = 3,
-            requiredJob = { "mechanic", "police" }
-        },
-        [4] = {
-            name = "weapon_snspistol",
-            price = 8000,
-            amount = 5,
-            info = {},
-            type = "item",
-            slot = 4,
-            requiresLicense = false
-        },
-        [5] = {
-            name = "weapon_vintagepistol",
-            price = 12000,
-            amount = 5,
-            info = {},
-            type = "item",
-            slot = 5,
-            requiresLicense = false
-        },
-        [6] = {
-            name = "pistol_ammo",
-            price = 500,
-            amount = 250,
-            info = {},
-            type = "item",
-            slot = 6,
-            requiresLicense = false
-        },
+        -- [3] = {
+        --     name = "weapon_hatchet",
+        --     price = 250,
+        --     amount = 250,
+        --     info = {},
+        --     type = "item",
+        --     slot = 3,
+        --     requiredJob = { "mechanic", "police" }
+        -- },
+        -- [4] = {
+        --     name = "weapon_snspistol",
+        --     price = 8000,
+        --     amount = 5,
+        --     info = {},
+        --     type = "item",
+        --     slot = 4,
+        --     requiresLicense = false
+        -- },
+        -- [5] = {
+        --     name = "weapon_vintagepistol",
+        --     price = 12000,
+        --     amount = 5,
+        --     info = {},
+        --     type = "item",
+        --     slot = 5,
+        --     requiresLicense = false
+        -- },
+        -- [6] = {
+        --     name = "pistol_ammo",
+        --     price = 500,
+        --     amount = 250,
+        --     info = {},
+        --     type = "item",
+        --     slot = 6,
+        --     requiresLicense = false
+        -- },
     },
     ["casino"] = {
         [1] = {
@@ -1095,7 +1095,7 @@ Config.Locations = {
 
     -- Leisure Shop Locations
     ["leisureshop"] = {
-        ["label"] = "Leisure Shop",
+        ["label"] = "Scuba Shop",
         ["coords"] = vector4(-1505.91, 1511.95, 115.29, 257.13),
         ["ped"] = 'a_m_y_beach_01',
         ["scenario"] = "WORLD_HUMAN_STAND_MOBILE_CLUBHOUSE",
@@ -1104,9 +1104,9 @@ Config.Locations = {
         ["targetLabel"] = "Open Leisure Shop",
         ["products"] = Config.Products["leisureshop"],
         ["showblip"] = true,
-        ["blipsprite"] = 52,
+        ["blipsprite"] = 471,
         ["blipscale"] = 0.8,
-        ["blipcolor"] = 0,
+        ["blipcolor"] = 26,
         ["delivery"] = vector4(-1507.64, 1505.52, 115.29, 262.2)
     },
 	----huntingshop
