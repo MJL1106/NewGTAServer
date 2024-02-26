@@ -222,7 +222,7 @@ function createFreeUseShop(shopShape, name)
                         {
                             isMenuHeader = true,
                             icon = "fa-solid fa-circle-info",
-                            header = getVehBrand():upper() .. ' ' .. getVehName():upper() .. ' - $' .. getVehPrice(),
+                            header = getVehBrand():upper() .. ' ' .. getVehName():upper(),
                         },
                         {
                             header = Lang:t('menus.test_header'),
@@ -232,30 +232,30 @@ function createFreeUseShop(shopShape, name)
                                 event = 'qb-vehicleshop:client:TestDrive',
                             }
                         },
-                        {
-                            header = Lang:t('menus.freeuse_buy_header'),
-                            txt = Lang:t('menus.freeuse_buy_txt'),
-                            icon = "fa-solid fa-hand-holding-dollar",
-                            params = {
-                                isServer = true,
-                                event = 'qb-vehicleshop:server:buyShowroomVehicle',
-                                args = {
-                                    buyVehicle = Config.Shops[insideShop]["ShowroomVehicles"][ClosestVehicle].chosenVehicle
-                                }
-                            }
-                        },
-                        {
-                            header = Lang:t('menus.finance_header'),
-                            txt = Lang:t('menus.freeuse_finance_txt'),
-                            icon = "fa-solid fa-coins",
-                            params = {
-                                event = 'qb-vehicleshop:client:openFinance',
-                                args = {
-                                    price = getVehPrice(),
-                                    buyVehicle = Config.Shops[insideShop]["ShowroomVehicles"][ClosestVehicle].chosenVehicle
-                                }
-                            }
-                        },
+                        -- {
+                        --     header = Lang:t('menus.freeuse_buy_header'),
+                        --     txt = Lang:t('menus.freeuse_buy_txt'),
+                        --     icon = "fa-solid fa-hand-holding-dollar",
+                        --     params = {
+                        --         isServer = true,
+                        --         event = 'qb-vehicleshop:server:buyShowroomVehicle',
+                        --         args = {
+                        --             buyVehicle = Config.Shops[insideShop]["ShowroomVehicles"][ClosestVehicle].chosenVehicle
+                        --         }
+                        --     }
+                        -- },
+                        -- {
+                        --     header = Lang:t('menus.finance_header'),
+                        --     txt = Lang:t('menus.freeuse_finance_txt'),
+                        --     icon = "fa-solid fa-coins",
+                        --     params = {
+                        --         event = 'qb-vehicleshop:client:openFinance',
+                        --         args = {
+                        --             price = getVehPrice(),
+                        --             buyVehicle = Config.Shops[insideShop]["ShowroomVehicles"][ClosestVehicle].chosenVehicle
+                        --         }
+                        --     }
+                        -- },
                         {
                             header = Lang:t('menus.swap_header'),
                             txt = Lang:t('menus.swap_txt'),
@@ -518,40 +518,78 @@ RegisterNetEvent('qb-vehicleshop:client:openVehCats', function(data)
     }
     for k, v in pairs(QBCore.Shared.Vehicles) do
         if QBCore.Shared.Vehicles[k]["category"] == data.catName then
-            if type(QBCore.Shared.Vehicles[k]["shop"]) == 'table' then
-                for _, shop in pairs(QBCore.Shared.Vehicles[k]["shop"]) do
-                    if shop == insideShop then
-                        vehMenu[#vehMenu + 1] = {
-                            header = v.name,
-                            txt = Lang:t('menus.veh_price') .. v.price,
-                            icon = "fa-solid fa-car-side",
-                            params = {
-                                isServer = true,
-                                event = 'qb-vehicleshop:server:swapVehicle',
-                                args = {
-                                    toVehicle = v.model,
-                                    ClosestVehicle = ClosestVehicle,
-                                    ClosestShop = insideShop
+            if data.catName == 'import' or data.catName == 'tier1' or data.catName == 'tier2' or data.catName == 'tier3' or data.catName == 'tier4' or data.catName == 'tier5' then
+                if type(QBCore.Shared.Vehicles[k]["shop"]) == 'table' then
+                    for _, shop in pairs(QBCore.Shared.Vehicles[k]["shop"]) do
+                        if shop == insideShop then
+                            vehMenu[#vehMenu + 1] = {
+                                header = v.name,
+                                -- txt = Lang:t('menus.veh_price') .. v.price,
+                                icon = "fa-solid fa-car-side",
+                                params = {
+                                    isServer = true,
+                                    event = 'qb-vehicleshop:server:swapVehicle',
+                                    args = {
+                                        toVehicle = v.model,
+                                        ClosestVehicle = ClosestVehicle,
+                                        ClosestShop = insideShop
+                                    }
                                 }
                             }
-                        }
+                        end
                     end
-                end
-            elseif QBCore.Shared.Vehicles[k]["shop"] == insideShop then
-                vehMenu[#vehMenu + 1] = {
-                    header = v.name,
-                    txt = Lang:t('menus.veh_price') .. v.price,
-                    icon = "fa-solid fa-car-side",
-                    params = {
-                        isServer = true,
-                        event = 'qb-vehicleshop:server:swapVehicle',
-                        args = {
-                            toVehicle = v.model,
-                            ClosestVehicle = ClosestVehicle,
-                            ClosestShop = insideShop
+                elseif QBCore.Shared.Vehicles[k]["shop"] == insideShop then
+                    vehMenu[#vehMenu + 1] = {
+                        header = v.name,
+                        -- txt = Lang:t('menus.veh_price') .. v.price,
+                        icon = "fa-solid fa-car-side",
+                        params = {
+                            isServer = true,
+                            event = 'qb-vehicleshop:server:swapVehicle',
+                            args = {
+                                toVehicle = v.model,
+                                ClosestVehicle = ClosestVehicle,
+                                ClosestShop = insideShop
+                            }
                         }
                     }
-                }
+                end
+            else
+                if type(QBCore.Shared.Vehicles[k]["shop"]) == 'table' then
+                    for _, shop in pairs(QBCore.Shared.Vehicles[k]["shop"]) do
+                        if shop == insideShop then
+                            vehMenu[#vehMenu + 1] = {
+                                header = v.name,
+                                txt = Lang:t('menus.veh_price') .. v.price,
+                                icon = "fa-solid fa-car-side",
+                                params = {
+                                    isServer = true,
+                                    event = 'qb-vehicleshop:server:swapVehicle',
+                                    args = {
+                                        toVehicle = v.model,
+                                        ClosestVehicle = ClosestVehicle,
+                                        ClosestShop = insideShop
+                                    }
+                                }
+                            }
+                        end
+                    end
+                elseif QBCore.Shared.Vehicles[k]["shop"] == insideShop then
+                    vehMenu[#vehMenu + 1] = {
+                        header = v.name,
+                        txt = Lang:t('menus.veh_price') .. v.price,
+                        icon = "fa-solid fa-car-side",
+                        params = {
+                            isServer = true,
+                            event = 'qb-vehicleshop:server:swapVehicle',
+                            args = {
+                                toVehicle = v.model,
+                                ClosestVehicle = ClosestVehicle,
+                                ClosestShop = insideShop
+                            }
+                        }
+                    }
+                end
             end
         end
     end
