@@ -114,7 +114,7 @@ Config.Shops = {
                 chosenVehicle = 'scubieblob'
             },
             [6] = {
-                coords = vector4(138.54, -149.89, 54.15, 55.78),
+                coords = vector4(138.54, -149.89, 54.1, 55.78),
                 defaultVehicle = 'rmodpagani',
                 chosenVehicle = 'rmodpagani'
             },
