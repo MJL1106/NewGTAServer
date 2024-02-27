@@ -12,7 +12,7 @@ Config.Products = {
     ["normal"] = {
         [1] = {
             name = "tosti",
-            price = 2,
+            price = 25,
             amount = 50,
             info = {},
             type = "item",
@@ -20,7 +20,7 @@ Config.Products = {
         },
         [2] = {
             name = "water_bottle",
-            price = 2,
+            price = 20,
             amount = 50,
             info = {},
             type = "item",
@@ -28,7 +28,7 @@ Config.Products = {
         },
         [3] = {
             name = "kurkakola",
-            price = 2,
+            price = 10,
             amount = 50,
             info = {},
             type = "item",
@@ -36,7 +36,7 @@ Config.Products = {
         },
         [4] = {
             name = "twerks_candy",
-            price = 2,
+            price = 18,
             amount = 50,
             info = {},
             type = "item",
@@ -44,7 +44,7 @@ Config.Products = {
         },
         [5] = {
             name = "snikkel_candy",
-            price = 2,
+            price = 18,
             amount = 50,
             info = {},
             type = "item",
@@ -52,7 +52,7 @@ Config.Products = {
         },
         [6] = {
             name = "sandwich",
-            price = 2,
+            price = 30,
             amount = 50,
             info = {},
             type = "item",
@@ -60,7 +60,7 @@ Config.Products = {
         },
         [7] = {
             name = "beer",
-            price = 7,
+            price = 18,
             amount = 50,
             info = {},
             type = "item",
@@ -68,7 +68,7 @@ Config.Products = {
         },
         [8] = {
             name = "whiskey",
-            price = 10,
+            price = 18,
             amount = 50,
             info = {},
             type = "item",
@@ -76,7 +76,7 @@ Config.Products = {
         },
         [9] = {
             name = "vodka",
-            price = 12,
+            price = 19,
             amount = 50,
             info = {},
             type = "item",
@@ -110,7 +110,7 @@ Config.Products = {
     ["liquor"] = {
         [1] = {
             name = "beer",
-            price = 7,
+            price = 18,
             amount = 50,
             info = {},
             type = "item",
@@ -118,7 +118,7 @@ Config.Products = {
         },
         [2] = {
             name = "whiskey",
-            price = 10,
+            price = 18,
             amount = 50,
             info = {},
             type = "item",
@@ -126,7 +126,7 @@ Config.Products = {
         },
         [3] = {
             name = "vodka",
-            price = 12,
+            price = 19,
             amount = 50,
             info = {},
             type = "item",
@@ -253,7 +253,6 @@ Config.Products = {
             info = {},
             type = "item",
             slot = 15,
-            requiredJob = { "mechanic" }
         },
         [16] = {
             name = "bakingsoda",
