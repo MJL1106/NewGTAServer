@@ -539,26 +539,25 @@ RegisterNetEvent('consumables:client:UseHeavyArmor', function()
     if GetPedArmour(PlayerPedId()) == 100 then QBCore.Functions.Notify(Lang:t('consumables.armor_full'), 'error') return end
     local ped = PlayerPedId()
     local PlayerData = QBCore.Functions.GetPlayerData()
-    EquipParachuteAnim()    
     QBCore.Functions.Progressbar("use_heavyarmor", Lang:t('consumables.heavy_armor_progress'), 5000, false, true, {
         disableMovement = false,
         disableCarMovement = false,
         disableMouse = false,
         disableCombat = true,
     }, {}, {}, {}, function() -- Done
-        if PlayerData.charinfo.gender == 0 then
-            currentVest = GetPedDrawableVariation(ped, 9)
-            currentVestTexture = GetPedTextureVariation(ped, 9)
-            if GetPedDrawableVariation(ped, 9) == 7 then
-                SetPedComponentVariation(ped, 9, 19, GetPedTextureVariation(ped, 9), 2)
-            else
-                SetPedComponentVariation(ped, 9, 5, 2, 2) -- Blue
-            end
-        else
-            currentVest = GetPedDrawableVariation(ped, 30)
-            currentVestTexture = GetPedTextureVariation(ped, 30)
-            SetPedComponentVariation(ped, 9, 30, 0, 2)
-        end
+        -- if PlayerData.charinfo.gender == 0 then
+        --     currentVest = GetPedDrawableVariation(ped, 9)
+        --     currentVestTexture = GetPedTextureVariation(ped, 9)
+        --     if GetPedDrawableVariation(ped, 9) == 7 then
+        --         SetPedComponentVariation(ped, 9, 19, GetPedTextureVariation(ped, 9), 2)
+        --     else
+        --         SetPedComponentVariation(ped, 9, 5, 2, 2) -- Blue
+        --     end
+        -- else
+        --     currentVest = GetPedDrawableVariation(ped, 30)
+        --     currentVestTexture = GetPedTextureVariation(ped, 30)
+        --     SetPedComponentVariation(ped, 9, 30, 0, 2)
+        -- end
         TriggerEvent("inventory:client:ItemBox", QBCore.Shared.Items["heavyarmor"], "remove")
         TriggerServerEvent("consumables:server:useHeavyArmor")
         SetPedArmour(ped, 100)
