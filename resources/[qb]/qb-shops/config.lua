@@ -331,22 +331,11 @@ Config.Products = {
         },
     },
     ["gearshop"] = {
-        [1] = {
-            name = "diving_gear",
-            price = 1500,
-            amount = 10,
-            info = {},
-            type = "item",
-            slot = 1,
-        },
-        [2] = {
-            name = "jerry_can",
-            price = 200,
-            amount = 50,
-            info = {},
-            type = "item",
-            slot = 2,
-        },
+        [1] = { name = "fishbait",      price = 5, amount = 10, info = {}, type = "item", slot = 1 },
+        [2] = { name = "anchor",        price = 5, amount = 10, info = {}, type = "item", slot = 2 },
+        [3] = { name = "bonfire",       price = 5, amount = 10, info = {}, type = "item", slot = 3 },
+        [4] = { name = "fishingrod1",   price = 5, amount = 10, info = {}, type = "item", slot = 4 },
+        [5] = { name = "fishnet1",      price = 5, amount = 10, info = {}, type = "item", slot = 5 },
     },
     ["leisureshop"] = {
         [1] = {
@@ -1078,13 +1067,13 @@ Config.Locations = {
 
     -- Sea Word Locations
     ["seaword"] = {
-        ["label"] = "Sea Word",
+        ["label"] = "Sea World",
         ["coords"] = vector4(-1687.03, -1072.18, 13.15, 52.93),
         ["ped"] = 'a_m_y_beach_01',
         ["scenario"] = "WORLD_HUMAN_STAND_IMPATIENT",
         ["radius"] = 1.5,
         ["targetIcon"] = "fas fa-fish",
-        ["targetLabel"] = "Sea Word",
+        ["targetLabel"] = "Sea World",
         ["products"] = Config.Products["gearshop"],
         ["showblip"] = true,
         ["blipsprite"] = 52,
