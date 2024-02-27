@@ -181,6 +181,56 @@ Config.PedList = {
         ped = nil,
      },
 	
+
+		----------------------------------------
+	---     Fishing Peds     ---
+	----------------------------------------
+
+	{
+		model = "s_m_y_ammucity_01",                            -- Boat/Gear Menu
+		coords = vector3(-806.17, -1496.57, 1.6),               
+		heading = 100.0,
+		gender = "male",
+        scenario = "WORLD_HUMAN_STAND_FISHING"
+	},
+	{
+		model = "u_m_m_filmdirector",                            -- Boat/Gear Menu
+		coords = vector3(-1604.236, 5256.483, 2.073),               
+		heading = 291.202,
+		gender = "male",
+        scenario = "WORLD_HUMAN_STAND_FISHING"
+	},
+	{
+		model = "s_m_o_busker_01",                            -- Boat/Gear Menu
+		coords = vector3(3373.215, 5183.515, 1.46),               
+		heading = 266.111,
+		gender = "male",
+        scenario = "WORLD_HUMAN_STAND_FISHING"
+	},
+	{
+		model = "ig_cletus",                            -- Boat/Gear Menu
+		coords = vector3(1694.811, 39.927, 161.767),               
+		heading = 191.786,
+		gender = "male",
+        scenario = "WORLD_HUMAN_STAND_FISHING"
+	},
+	{
+		model = "a_m_m_hillbilly_01",                            -- Boat/Gear Menu
+		coords = vector3(1299.665, 4231.885, 33.909),               
+		heading = 81.693,
+		gender = "male",
+        scenario = "WORLD_HUMAN_STAND_FISHING"
+	},
+    {
+		model = "s_m_y_busboy_01",
+		coords = vector3(-1816.406, -1193.334, 14.305),         -- Regular/Exotic Fish Sells
+		heading = 325.172,
+		gender = "male",
+        scenario = "WORLD_HUMAN_CLIPBOARD"
+	},
+
+
+
 	-- {
 	-- 	model = "mp_m_shopkeep_01",
 	-- 	coords = vector3(1165.0246582031,-324.23849487305,69.205039978027), --WEST MIRROR DR

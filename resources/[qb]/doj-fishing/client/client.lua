@@ -90,30 +90,30 @@ CreateThread(function()
 	end
 end)
 
-CreateThread(function()
-	while true do
-		Wait(500)
-		for k = 1, #Config.PedList, 1 do
-			v = Config.PedList[k]
-			local playerCoords = GetEntityCoords(PlayerPedId())
-			local dist = #(playerCoords - v.coords)
+-- CreateThread(function()
+-- 	while true do
+-- 		Wait(500)
+-- 		for k = 1, #Config.PedList, 1 do
+-- 			v = Config.PedList[k]
+-- 			local playerCoords = GetEntityCoords(PlayerPedId())
+-- 			local dist = #(playerCoords - v.coords)
 
-			if dist < 50.0 and not peds[k] then
-				local ped = nearPed(v.model, v.coords, v.heading, v.gender, v.animDict, v.animName, v.scenario)
-				peds[k] = {ped = ped}
-			end
+-- 			if dist < 50.0 and not peds[k] then
+-- 				local ped = nearPed(v.model, v.coords, v.heading, v.gender, v.animDict, v.animName, v.scenario)
+-- 				peds[k] = {ped = ped}
+-- 			end
 
-			if dist >= 50.0 and peds[k] then
-				for i = 255, 0, -51 do
-					Wait(50)
-					SetEntityAlpha(peds[k].ped, i, false)
-				end
-				DeletePed(peds[k].ped)
-				peds[k] = nil
-			end
-		end
-	end
-end)
+-- 			if dist >= 50.0 and peds[k] then
+-- 				for i = 255, 0, -51 do
+-- 					Wait(50)
+-- 					SetEntityAlpha(peds[k].ped, i, false)
+-- 				end
+-- 				DeletePed(peds[k].ped)
+-- 				peds[k] = nil
+-- 			end
+-- 		end
+-- 	end
+-- end)
 
 --============================================================== Events
 
