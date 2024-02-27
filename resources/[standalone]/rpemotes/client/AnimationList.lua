@@ -23744,7 +23744,7 @@ RP.PropEmotes = {
             EmoteLoop = true,
             EmoteMoving = false,
         }
-  }
+  },
   ["bsdrink"] = {
     "amb@world_human_drinking@coffee@male@idle_a", 
     "idle_c", 
@@ -23795,9 +23795,10 @@ RP.PropEmotes = {
 	{ Prop = 'uwu_cup_straw', PropBone = 28422, PropPlacement = {0.0, 0.0, 0.0, 0.0, 0.0, 130.0},
 		EmoteLoop = true, EmoteMoving = true, }},
 ["uwu4"] = {
-	amb@world_human_drinking@coffee@male@idle_a", "idle_c", "", AnimationOptions =
-	{ Prop = 'uwu_mug', PropBone = 28422, PropPlacement = {0.0, 0.0, 0.0, 0.0, 0.0, 130.0},
-		EmoteLoop = true, EmoteMoving = true, }},
+    "amb@world_human_drinking@coffee@male@idle_a", "idle_c", "", AnimationOptions =
+    { Prop = 'uwu_mug', PropBone = 28422, PropPlacement = {0.0, 0.0, 0.0, 0.0, 0.0, 130.0},
+        EmoteLoop = true, EmoteMoving = true, }},
+        
 ["uwu5"] = {
 	"mp_player_inteat@burger", "mp_player_int_eat_burger", "", AnimationOptions =
 	{ Prop = 'uwu_pastry', PropBone = 18905, PropPlacement = {0.16, 0.06, -0.03, -50.0, 16.0, 60.0},

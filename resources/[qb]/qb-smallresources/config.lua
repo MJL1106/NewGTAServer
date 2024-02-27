@@ -97,31 +97,23 @@ Config.Disable = {
 
 Config.ConsumablesEat = {
 
-    ["sandwich"] = math.random(25, 30),
-    ["tosti"] = math.random(20, 30),
-    ["twerks_candy"] = math.random(20, 30),
-    ["snikkel_candy"] = math.random(24, 31),
-    ["burger-bleeder"] = math.random(35, 54),
-    ["burger-moneyshot"] = math.random(35, 54),
-    ["burger-torpedo"] = math.random(35, 54),
-    ["burger-heartstopper"] = math.random(35, 54),
-    ["burger-meatfree"] = math.random(35, 54),
-    ["burger-fries"] = math.random(35, 54),
+    ["sandwich"] = math.random(8, 10),
+    ["tosti"] = math.random(5, 12),
+    ["twerks_candy"] = math.random(5, 10),
+    ["snikkel_candy"] = math.random(5, 10),
 
 }
 
 Config.ConsumablesDrink = {
-    ["water_bottle"] = math.random(35, 54),
-    ["kurkakola"] = math.random(35, 54),
-    ["coffee"] = math.random(40, 50),
-    ["burger-softdrink"] = math.random(40, 50),
-    ["burger-mshake"] = math.random(40, 50),
+    ["water_bottle"] = math.random(10, 15),
+    ["kurkakola"] = math.random(5, 8),
+    ["coffee"] = math.random(5, 8),
 }
 
 Config.ConsumablesAlcohol = {
-    ["whiskey"] = math.random(20, 30),
-    ["beer"] = math.random(30, 40),
-    ["vodka"] = math.random(20, 40),
+    ["whiskey"] = math.random(6, 12),
+    ["beer"] = math.random(7, 9),
+    ["vodka"] = math.random(5, 8),
 }
 
 Config.ConsumablesCustom = {
