@@ -781,6 +781,11 @@ CreateThread(function()
 
         local damageDone = (playerHealth - health)
 
+        if armorDamaged then
+            -- Trigger the event whenever armor is damaged, regardless of how it was damaged
+            TriggerServerEvent("hospital:server:SetArmor", GetPedArmour(ped))
+        end
+
         if armorDamaged or healthDamaged then
             local hit, bone = GetPedLastDamageBone(ped)
             local bodypart = Config.Bones[bone]
@@ -792,9 +797,7 @@ CreateThread(function()
                     if weapon then
                         if armorDamaged and (bodypart == 'SPINE' or bodypart == 'UPPER_BODY') or weapon == Config.WeaponClasses['NOTHING'] then
                             checkDamage = false -- Don't check damage if the it was a body shot and the weapon class isn't that strong
-                            if armorDamaged then
-                                TriggerServerEvent("hospital:server:SetArmor", GetPedArmour(ped))
-                            end
+                            TriggerServerEvent("hospital:server:SetArmor", GetPedArmour(ped))
                         end
 
                         if checkDamage then
