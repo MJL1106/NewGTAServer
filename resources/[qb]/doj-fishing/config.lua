@@ -50,11 +50,11 @@ Config.smallLootboxCash = 100                                  	-- Price of the 
 Config.smallLootboxReward = 'diamond_ring'                      -- Item reward besides the "Corroded Key"
 
 Config.largeLootboxRewards = {                                  -- Rewards found in the treasure chest (keep price = 0)
-    [1] = { name = "water", price = 0, amount = 1, info = {}, type = "item", slot = 1, },
-	[2] = { name = "water", price = 0, amount = 1, info = {}, type = "item", slot = 2, },
-    [3] = { name = "water", price = 0, amount = 1, info = {}, type = "item", slot = 3, },
-    [4] = { name = "water", price = 0, amount = 1, info = {}, type = "item", slot = 4, },
-    [5] = { name = "water", price = 0, amount = 1, info = {}, type = "item", slot = 5, },
+    [1] = { name = "diamond", price = 0, amount = 4, info = {}, type = "item", slot = 1, },
+	[2] = { name = "crack_baggy", price = 0, amount = 1, info = {}, type = "item", slot = 2, },
+    [3] = { name = "coke_small_brick", price = 0, amount = 1, info = {}, type = "item", slot = 3, },
+    [4] = { name = "lighter", price = 0, amount = 1, info = {}, type = "item", slot = 4, },
+    [5] = { name = "pistol_ammo", price = 0, amount = 1, info = {}, type = "item", slot = 5, },
 
 }
 
