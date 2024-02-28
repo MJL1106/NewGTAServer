@@ -260,8 +260,18 @@ Config.Products = {
             amount = 25,
             info = { quality = 100, },
             type = "item",
-            slot = 10,
+            slot = 16,
         },
+        [17] = {
+            name = "detector",
+            price = 750,
+            amount = 25,
+            info = { quality = 100, },
+            type = "item",
+            slot = 17,
+        },
+
+
     },
     ["weedshop"] = {
         [1] = {

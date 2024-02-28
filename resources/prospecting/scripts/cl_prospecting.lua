@@ -308,9 +308,11 @@ function ProspectingThreads()
                 local target, dist, index, difficulyModifier = getClosestTarget(pos)
                 if index then
                     local dist = dist * difficulyModifier
-                    if dist < 3.0 then
+                    print(dist)
+                    print(difficulyModifier)
+                    if dist < 6.8 then
                         -- SetInstructionalButton(CONTROLS["dig"]["label"], CONTROLS["dig"]["control"], true)
-                        -- ShowFloatingHelp(CONTROLS["dig_hint"]["label"], pos)
+                        ShowFloatingHelp(CONTROLS["dig_hint"]["label"], pos)
                         if IsDisabledControlJustPressed(0, CONTROLS["dig"]["control"]) then
                             DigTarget(index)
                         end
@@ -319,18 +321,18 @@ function ProspectingThreads()
                         -- SetInstructionalButton(CONTROLS["dig"]["label"], CONTROLS["dig"]["control"], false)
                     end
                     if dist < 3.0 then
-                        circleScale = 0.0
-                        scannerScale = 0.0
-                        scannerState = "ultra"
+                        circleScale = 0.2
+                        scannerScale = 4.5
+                        scannerState = "fast"
                     elseif dist < 4.0 then
-                        scannerFrametime = 0.35
-                        scannerScale = 4.50
+                        circleScale = 0.3
+                        scannerScale = 4.0
                         scannerState = "fast"
-                    elseif dist < 5.0 then
-                        scannerFrametime = 0.4
-                        scannerScale = 3.75
+                    elseif dist < 6.8 then
+                        circleScale = 0.35
+                        scannerScale = 3.5
                         scannerState = "fast"
-                    elseif dist < 6.5 then
+                    elseif dist < 7.0 then
                         scannerFrametime = 0.425
                         scannerScale = 3.00
                         scannerState = "fast"

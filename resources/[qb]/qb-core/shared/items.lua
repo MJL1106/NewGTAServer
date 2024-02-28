@@ -376,6 +376,9 @@ QBShared.Items = {
 	['empty_evidence_bag'] 			 = {['name'] = 'empty_evidence_bag', 			['label'] = 'Empty Evidence Bag', 		['weight'] = 0, 		['type'] = 'item', 		['image'] = 'evidence.png', 			['unique'] = false, 	['useable'] = false, 	['shouldClose'] = false,   ['combinable'] = nil,   ['description'] = 'Used a lot to keep DNA from blood, bullet shells and more'},
 	['filled_evidence_bag'] 		 = {['name'] = 'filled_evidence_bag', 			['label'] = 'Evidence Bag', 			['weight'] = 200, 		['type'] = 'item', 		['image'] = 'evidence.png', 			['unique'] = true, 		['useable'] = false, 	['shouldClose'] = false,   ['combinable'] = nil,   ['description'] = 'A filled evidence bag to see who committed the crime >:('},
 
+
+	['detector']                   = {['name'] = 'detector',          ['label'] = 'Detector',          ['weight'] = 100,       ['type'] = 'item',    ['image'] = 'detector.png',        ['unique'] = false, ['useable'] = true, ['shouldClose'] = true, ['combinable'] = nil, ['description']  = 'Go find some things'},
+
 	-- Firework Tools
 	['firework1'] 				 	 = {['name'] = 'firework1', 			  	  	['label'] = '2Brothers', 				['weight'] = 1000, 		['type'] = 'item', 		['image'] = 'firework1.png', 			['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'Fireworks'},
 	['firework2'] 				 	 = {['name'] = 'firework2', 			  	  	['label'] = 'Poppelers', 				['weight'] = 1000, 		['type'] = 'item', 		['image'] = 'firework2.png', 			['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'Fireworks'},
@@ -799,8 +802,14 @@ QBShared.Items = {
 ["can"]                 = {["name"] = "can",                  ["label"] = "Empty Can",        ["weight"] = 10,  ["type"] = "item", 		["image"] = "can.png",                  ["unique"] = false, 	["useable"] = false, 	["shouldClose"] = false, ["combinable"] = nil,   ["description"] = "An empty can, good for recycling"},
 ['licenseplate']                  = {['name'] = 'licenseplate',                       ['label'] = 'License Plate',             ['weight'] = 100,         ['type'] = 'item',         ['image'] = 'licenseplate.png',         ['unique'] = true,         ['useable'] = true,     ['shouldClose'] = true,       ['combinable'] = nil,  ['description'] = 'Vehicle license plate'},
 ["oxypackage"] 			    	 = {["name"] = "oxypackage",				    ["label"] = "Drug Package",			   	["weight"] = 10000,    	["type"] = "item",		["image"] = "oxy-box.png",         	["unique"] = true,		["useable"] = false,	    ["shouldClose"] = true,    ["combinable"] = nil,   ["description"] = ""},
-	-- mt-crafting 2.0
-	["mesa_craft"]  	= {["name"] = "mesa_craft", 			["label"] = "Crafting table", 								["weight"] = 150, 		["type"] = "item", 			["image"] = "mesa_craft.png", 				["unique"] = false, 	["useable"] = true, 	["shouldClose"] = true,    ["combinable"] = nil,   ["description"] = "A Portable Crafting Bench"},
+
+--- CRAFTING BLUEPRINTs
+["blueprint_ammo"]  = {["name"] = "blueprint_ammo", ["label"] = "Pistol Ammo BP",	 ["weight"] = 200, 		["type"] = "item", 		["image"] = "blueprint_ammo.png", 	["unique"] = true, 	["useable"] = true, 	["shouldClose"] = false,   ["combinable"] = nil,   ["description"] = "A blueprint explaining how to craft pistol ammo."},
+["blueprint_armor"]  = {["name"] = "blueprint_armor", ["label"] = "Armor BP",	 ["weight"] = 200, 		["type"] = "item", 		["image"] = "blueprint_armor.png", 	["unique"] = true, 	["useable"] = true, 	["shouldClose"] = false,   ["combinable"] = nil,   ["description"] = "A blueprint explaining how to craft Armor."},
+["blueprint_thermite"]  = {["name"] = "blueprint_thermite", ["label"] = "Thermite  BP",	 ["weight"] = 200, 		["type"] = "item", 		["image"] = "blueprint_thermite.png", 	["unique"] = true, 	["useable"] = true, 	["shouldClose"] = false,   ["combinable"] = nil,   ["description"] = "A blueprint explaining how to craft thermite."},
+["blueprint_vintage"]  = {["name"] = "blueprint_vintage", ["label"] = "Vintage Pistol BP",	 ["weight"] = 200, 		["type"] = "item", 		["image"] = "blueprint_vintage.png", 	["unique"] = true, 	["useable"] = true, 	["shouldClose"] = false,   ["combinable"] = nil,   ["description"] = "A blueprint explaining how to craft a vintage pistol."},
+
+
 -----gundrop item
 ["goldenphone"]  = {["name"] = "goldenphone", ["label"] = "Golden Satellite Phone",	 ["weight"] = 200, 		["type"] = "item", 		["image"] = "goldenphone.png", 	["unique"] = false, 	["useable"] = true, 	["shouldClose"] = false,   ["combinable"] = nil,   ["description"] = "A communication device used to contact russian mafia."},
 
