@@ -13,6 +13,7 @@ Config.Chances = {
     ["common"] = 100, -- 100%
     ["rare"] = 15, -- 15%
     ["epic"] = 5, -- 5%
+    ["ultra"] = 3, -- 3%
 }
 Config.ShowDrawMaker = true -- show draw marker on in game while prospecting
 Config.DetectorItem = "detector"
@@ -52,6 +53,9 @@ Config.Items = {
             [3] = {name = "advancedlockpick", min = 1, max = 1},
             [4] = {name = "electronickit", min = 1, max = 1},
             [5] = {name = "ifaks", min = 1, max = 1},
+        },
+        ["ultra"] = {
+            [1] = {name = "blueprint_armor", min = 1, max = 1},
         }
     },
     ["loc2"] = {
@@ -77,6 +81,9 @@ Config.Items = {
             [2] = {name = "thermite", min = 1, max = 1},
             [3] = {name = "goldbar", min = 1, max = 1},
             [4] = {name = "armor", min = 1, max = 1},
+        },
+        ["ultra"] = {
+            [1] = {name = "blueprint_ammo", min = 1, max = 1},
         }
     },
 }

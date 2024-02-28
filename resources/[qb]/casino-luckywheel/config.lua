@@ -8,7 +8,7 @@ Config.VehicleSpawnCoords = vector4(933.29, -2.82, 78.76, 144.6)
 Config.VehiclePlateText = 'Diamond'
 
 
-Config.LimitedSpins = false				-- [true = players spin once per day for free] [false= $5000 a spin]
+Config.LimitedSpins = true				-- [true = players spin once per day for free] [false= $5000 a spin]
 Config.LimitedSpinResetTime = 3600000 	-- 1 hour real time
 
  

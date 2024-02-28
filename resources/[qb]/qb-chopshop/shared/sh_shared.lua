@@ -29,8 +29,8 @@ Shared.DropoffZoneRadius = 4.0
 -- Rewards
 Shared.LaptopChance = 0 -- % Chance to ge a laptop in glovebox, requires ox_inventory
 Shared.RewardDrops = 5 -- How many reward drops are done after chopping a vehicle
-Shared.RewardAmount = { min = 2, max = 8} -- min and max amount of items from RewardTable that are given per drop
-Shared.CashReward = { min = 50, max = 150} -- Cash reward for completing a chop contract
+Shared.RewardAmount = { min = 6, max = 10} -- min and max amount of items from RewardTable that are given per drop
+Shared.CashReward = { min = 75, max = 150} -- Cash reward for completing a chop contract
 
 Shared.RewardTable = {
     'metalscrap',
@@ -40,6 +40,7 @@ Shared.RewardTable = {
     'aluminum',
     'steel',
     'glass',
+    'rubber',
 }
 
 -- Vehicles
