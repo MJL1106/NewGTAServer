@@ -1933,7 +1933,7 @@ var HTMLTranslations = {
         "pt": "por exemplo, Comprado na MediaMarkt"
     },
     "translation348": {
-        "en": "e.g. $1499",
+        "en": "e.g. 1499$",
         "bg": "например 1499€",
         "pt": "Ex: 1499€"
     },

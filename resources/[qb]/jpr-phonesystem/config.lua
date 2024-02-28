@@ -26,7 +26,7 @@ Config.PhoneModel = `prop_amb_phone`
 Config.BillingCommand = "sendbill"
 Config.AllowKeyMapping = true
 Config.DefaultKey = 'M' -- you need to have phone item on first slot
-Config.CloseAndOpenPhoneWithSameKey = false
+Config.CloseAndOpenPhoneWithSameKey = true
 Config.Inventory = "qb-inventory" 
 Config.UniquePhones = true
 Config.CustomEventsFramework = false -- set true if you use exports[Config.CoreName]: instead of QBCore.Functions., if you dont know this, let it false
@@ -177,8 +177,8 @@ Config.CryptoLabelNameDesc = "(JPR)"
 Config.CryptoLogo = "./img/logo.jpg"
 
 Config.UberEatsItems = {
-    {itemname = "sandwich", itemlabel = "Sandwich", price = 25, category = "food", image = "./img/ubereats/sandwich.png", rate = 4.9},
-    {itemname = "water_bottle", itemlabel = "Água", price = 15, category = "drink", image = "./img/ubereats/water_bottle.png", rate = 3},
+    {itemname = "sandwich", itemlabel = "Sandwich", price = 25, category = "food", image = "./img/ubereats/bread.png", rate = 4.9},
+    {itemname = "water_bottle", itemlabel = "Water", price = 15, category = "drink", image = "./img/ubereats/water.png", rate = 3},
 }
 
 Config.UberEatsNPCModel = "a_f_y_fitness_02"
@@ -226,7 +226,7 @@ Config.AppStoreApps = {
     {name = "home", label = "Home", backColor = "rgba(239, 124, 9, 0.178)", time = 6000, rate = 3.6, age = 16, image = "./img/apps/home.png", category = "Management", description = "Manage, share, verify, and ensure your security with this app.", banner = "./img/appstore/casa.jpg"},
     {name = "mail", label = "Mail", backColor = "rgba(7, 129, 243, 0.178)", time = 4800, rate = 3.6, age = 12, image = "./img/apps/mail.png", category = "Management", description = "Create, send emails, pay, confirm, delete, and have fun with this wonderful app!", banner = "./img/appstore/mail.jpg"},
     {name = "olx", label = "Advert", backColor = "rgba(7, 153, 243, 0.178)", time = 6200, rate = 4.7, age = 14, image = "./img/apps/olx.png", category = "Sales", description = "Find practically anything on Advert: cars, houses, job ads, vacation homes, smartphones, furniture, clothing, new and used electronics, it's all on OLX!\nOLX helps you break the tie...", banner = "./img/appstore/olx.jpg"},
-    {name = "bolsa", label = "Crypto", backColor = "rgba(56, 56, 56, 0.178)", time = 8600, rate = 3.5, age = 18, image = "./img/apps/bolsa.png", category = "Market", description = "Invest, sell, transfer, crypto is the future!", banner = "./img/appstore/bolsa.jpg"},
+    -- {name = "bolsa", label = "Crypto", backColor = "rgba(56, 56, 56, 0.178)", time = 8600, rate = 3.5, age = 18, image = "./img/apps/bolsa.png", category = "Market", description = "Invest, sell, transfer, crypto is the future!", banner = "./img/appstore/bolsa.jpg"},
     {name = "twitter", label = "Catiter", backColor = "rgba(0, 166, 255, 0.178)", time = 7000, rate = 3.2, age = 12, image = "./img/apps/twitter.png", category = "Social Network", description = "Share your interests, follow your favorite topics, and express your opinions!\nCatiter is your social network and the place to find out what's happening in the world.", banner = "./img/appstore/twitter.jpg"},
     {name = "carteira", label = "Wallet", backColor = "rgba(255, 145, 0, 0.178)", time = 4700, rate = 4.1, age = 12, image = "./img/apps/carteira.png", category = "Management", description = "Transfer, check transactions, purchase, pay bills, and check everything you're entitled to.", banner = "./img/appstore/carteira.jpg"},
     {name = "instagram", label = "Share It", backColor = "rgba(200, 0, 255, 0.178)", time = 6700, rate = 4.3, age = 12, image = "./img/apps/instagram.png", category = "Social Network", description = "Connect with friends, share what you're up to, or see what's new from others around the world.\nExplore our community, where you can feel free to be yourself and share everything from your daily routine to life's highlights.", banner = "./img/appstore/instagram.jpg"},
