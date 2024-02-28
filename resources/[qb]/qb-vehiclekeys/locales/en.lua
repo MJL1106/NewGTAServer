@@ -5,7 +5,7 @@ local Translations = {
         vlock = 'Vehicle locked!',
         vunlock = 'Vehicle unlocked!',
         vlockpick = 'You managed to pick the door lock open!',
-        fvlockpick = 'You fail to find the keys and get frustrated.',
+        fvlockpick = 'You fail to hotwire the car.',
         vgkeys = 'You hand over the keys.',
         vgetkeys = 'You get keys to the vehicle!',
         fpid = 'Fill out the player ID and Plate arguments',
@@ -14,11 +14,11 @@ local Translations = {
     },
     progress = {
         takekeys = 'Taking keys from body...',
-        hskeys = 'Searching for the car keys...',
+        hskeys = 'Hotwiring...',
         acjack = 'Attempting Carjacking...',
     },
     info = {
-        skeys = '~g~[H]~w~ - Search for Keys',
+        skeys = '~g~[H]~w~ - Hotwire vehicle',
         tlock = 'Toggle Vehicle Locks',
         palert = 'Vehicle theft in progress. Type: ',
         engine = 'Toggle Engine',

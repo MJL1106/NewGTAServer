@@ -615,32 +615,65 @@ function Hotwire(vehicle, plate)
 
     SetVehicleAlarm(vehicle, true)
     SetVehicleAlarmTimeLeft(vehicle, hotwireTime)
-    QBCore.Functions.Progressbar("hotwire_vehicle", Lang:t("progress.hskeys"), hotwireTime, false, true, {
-        disableMovement = true,
-        disableCarMovement = true,
-        disableMouse = false,
-        disableCombat = true
-    }, {
-        animDict = "anim@amb@clubhouse@tutorial@bkr_tut_ig3@",
-        anim = "machinic_loop_mechandplayer",
-        flags = 16
-    }, {}, {}, function() -- Done
-        StopAnimTask(ped, "anim@amb@clubhouse@tutorial@bkr_tut_ig3@", "machinic_loop_mechandplayer", 1.0)
-        TriggerServerEvent('hud:server:GainStress', math.random(1, 4))
-        if (math.random() <= Config.HotwireChance) then
-            TriggerServerEvent('qb-vehiclekeys:server:AcquireVehicleKeys', plate)
+        -- QBCore.Functions.Progressbar("hotwire_vehicle", Lang:t("progress.hskeys"), hotwireTime, false, true, {
+        --     disableMovement = true,
+        --     disableCarMovement = true,
+        --     disableMouse = false,
+        --     disableCombat = true
+        -- }, {
+        --     animDict = "anim@amb@clubhouse@tutorial@bkr_tut_ig3@",
+        --     anim = "machinic_loop_mechandplayer",
+        --     flags = 16
+        -- }, {}, {}, function() -- Done
+        --     StopAnimTask(ped, "anim@amb@clubhouse@tutorial@bkr_tut_ig3@", "machinic_loop_mechandplayer", 1.0)
+        --     TriggerServerEvent('hud:server:GainStress', math.random(1, 4))
+        --     if (math.random() <= Config.HotwireChance) then
+        --         TriggerServerEvent('qb-vehiclekeys:server:AcquireVehicleKeys', plate)
+        --     else
+        --         QBCore.Functions.Notify(Lang:t("notify.fvlockpick"), "error")
+        --     end
+        --     Wait(Config.TimeBetweenHotwires)
+        --     IsHotwiring = false
+        -- end, function() -- Cancel
+        --     StopAnimTask(ped, "anim@amb@clubhouse@tutorial@bkr_tut_ig3@", "machinic_loop_mechandplayer", 1.0)
+        --     IsHotwiring = false
+        -- end)
+        -- SetTimeout(10000, function()
+        --     AttemptPoliceAlert("steal")
+        -- end)
+
+    exports['ps-ui']:Circle(function(success)
+        if success then
+            QBCore.Functions.Progressbar("hotwire_vehicle", Lang:t("progress.hskeys"), hotwireTime, false, true, {
+                disableMovement = true,
+                disableCarMovement = true,
+                disableMouse = false,
+                disableCombat = true
+            }, {
+                animDict = "anim@amb@clubhouse@tutorial@bkr_tut_ig3@",
+                anim = "machinic_loop_mechandplayer",
+                flags = 16
+            }, {}, {}, function() -- Done
+                StopAnimTask(ped, "anim@amb@clubhouse@tutorial@bkr_tut_ig3@", "machinic_loop_mechandplayer", 1.0)
+                TriggerServerEvent('hud:server:GainStress', math.random(1, 4))
+                if (math.random() <= Config.HotwireChance) then
+                    TriggerServerEvent('qb-vehiclekeys:server:AcquireVehicleKeys', plate)
+                else
+                    QBCore.Functions.Notify(Lang:t("notify.fvlockpick"), "error")
+                end
+                Wait(Config.TimeBetweenHotwires)
+                IsHotwiring = false
+            end, function() -- Cancel
+                StopAnimTask(ped, "anim@amb@clubhouse@tutorial@bkr_tut_ig3@", "machinic_loop_mechandplayer", 1.0)
+                IsHotwiring = false
+            end)
         else
-            QBCore.Functions.Notify(Lang:t("notify.fvlockpick"), "error")
+            exports['ps-dispatch']:CarJacking(vehicle)
+            AttemptPoliceAlert("carjack")
+            TriggerServerEvent('hud:server:GainStress', math.random(1, 4))
+            TriggerEvent("QBCore:Notify", "You failed to Hotwire the car.", "error")
         end
-        Wait(Config.TimeBetweenHotwires)
-        IsHotwiring = false
-    end, function() -- Cancel
-        StopAnimTask(ped, "anim@amb@clubhouse@tutorial@bkr_tut_ig3@", "machinic_loop_mechandplayer", 1.0)
-        IsHotwiring = false
-    end)
-    SetTimeout(10000, function()
-        AttemptPoliceAlert("steal")
-    end)
+    end, 3, 15)
     IsHotwiring = false
 end
 function CarjackVehicle(target)
