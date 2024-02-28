@@ -162,25 +162,25 @@ local function createPeds()
         Wait(0)
     end
 
-    ShopPed["casino"] = CreatePed(0, current, Config.SellCasinoChips.coords.x, Config.SellCasinoChips.coords.y, Config.SellCasinoChips.coords.z-1, Config.SellCasinoChips.coords.w, false, false)
-    FreezeEntityPosition(ShopPed["casino"], true)
-    SetEntityInvincible(ShopPed["casino"], true)
-    SetBlockingOfNonTemporaryEvents(ShopPed["casino"], true)
+    -- ShopPed["casino"] = CreatePed(0, current, Config.SellCasinoChips.coords.x, Config.SellCasinoChips.coords.y, Config.SellCasinoChips.coords.z-1, Config.SellCasinoChips.coords.w, false, false)
+    -- FreezeEntityPosition(ShopPed["casino"], true)
+    -- SetEntityInvincible(ShopPed["casino"], true)
+    -- SetBlockingOfNonTemporaryEvents(ShopPed["casino"], true)
 
-    if Config.UseTarget then
-        exports['qb-target']:AddTargetEntity(ShopPed["casino"], {
-            options = {
-                {
-                    label = 'Sell Chips',
-                    icon = 'fa-solid fa-coins',
-                    action = function()
-                        TriggerServerEvent("qb-shops:server:sellChips")
-                    end
-                }
-            },
-            distance = 2.0
-        })
-    end
+    -- if Config.UseTarget then
+    --     exports['qb-target']:AddTargetEntity(ShopPed["casino"], {
+    --         options = {
+    --             {
+    --                 label = 'Sell Chips',
+    --                 icon = 'fa-solid fa-coins',
+    --                 action = function()
+    --                     TriggerServerEvent("qb-shops:server:sellChips")
+    --                 end
+    --             }
+    --         },
+    --         distance = 2.0
+    --     })
+    -- end
 
     pedSpawned = true
 end
