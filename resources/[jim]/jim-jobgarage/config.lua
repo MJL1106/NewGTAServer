@@ -34,7 +34,7 @@ Config = {
 	DistCheck = false, -- Require the vehicle to be near by to remove it
 
 	Locations = {
-		{ 	zoneEnable = true,
+		{ 	zoneEnable = false,
 			job = "mechanic",
 			garage = {
 				spawn = vector4(-185.25, -1291.05, 31.3, 177.84),  -- Where the car will spawn
