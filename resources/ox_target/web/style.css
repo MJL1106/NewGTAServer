@@ -28,12 +28,12 @@ p {
   top: 50.5%;
   left: 50%;
   transform: translate(-50%, -50%);
-  fill: #5bb894;
+  fill: #5b83b8;
 
 }
 
 .eye-hover {
-  fill: #5bb894;
+  fill: #5b83b8;
 }
 
 #hex::before {
@@ -42,10 +42,10 @@ p {
   left: 50%;
   transform: translateY(-50%) translateX(-50%);
   content: "\2B22";
-  color: rgba(0, 73, 45, 0.548);
+  color: rgba(0, 12, 102, 0.548);
   font-size: 5.07vh;
   text-shadow: #ffffff00 1px 0 10px;
-  -webkit-text-stroke: 1px #84ffd0
+  -webkit-text-stroke: 1px #84b5ff;
 }
 
 #options-wrapper {
@@ -60,12 +60,10 @@ p {
   flex-direction: row;
   justify-content: Flex start;
   align-items: center;
-  background: linear-gradient(
-    to bottom,
-    rgba(1, 48, 30, 0.479) 0%,
-    rgba(0, 73, 45, 0.384) 66%,
-    rgba(0, 61, 38, 0.438) 100%
-  );
+  background: linear-gradient(to bottom,
+      rgba(1, 17, 48, 0.479) 0%,
+      rgba(0, 13, 73, 0.384) 66%,
+      rgba(0, 4, 61, 0.438) 100%);
   border-radius: 5px;
   font-size: 15pt;
   line-height: 50pt;
@@ -81,10 +79,10 @@ p {
 }
 
 .option-container:hover {
-  background: #3a9471b7;
+  background: #3a5694b7;
   border-radius: 5px;
   transform-origin: left top;
-  box-shadow: 0px 0px 15px 3px #84ffd0b4;
+  box-shadow: 0px 0px 15px 3px #84ceffb4;
   color: var(--color-default);
   margin-left: 4pt;
 }
@@ -96,7 +94,7 @@ p {
   margin: 7pt;
   padding-left: 3px;
   padding-right: 3.5px;
-  color:  #84ffd0;
+  color: #84b5ff;
 }
 
 .option-label {

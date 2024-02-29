@@ -1,7 +1,7 @@
 Config.Locations =  {
     ["Centres"] = {
         ["RecycleCity"] = {
-            Enable = true,
+            Enable = false,
             Job = nil,
             Blip = {
                 blipEnable = true,
@@ -143,7 +143,7 @@ Config.Locations =  {
             },
         },
         ["RecycleNorth"] = {
-            Enable = true,
+            Enable = false,
             Job = nil,
             Blip = {
                 blipEnable = true,
