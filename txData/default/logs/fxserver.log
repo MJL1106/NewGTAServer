@@ -398,3 +398,19 @@
 [ citizen-server-impl] network thread hitch warning: timer interval of 431 milliseconds
 [ citizen-server-impl] sync thread hitch warning: timer interval of 428 milliseconds
 [ citizen-server-impl] server thread hitch warning: timer interval of 464 milliseconds
+[38;5;73m[ citizen-server-impl] sync thread hitch warning: timer interval of 102 milliseconds
+[ citizen-server-impl] [0msync thread hitch warning: timer interval of 103 milliseconds
+[ citizen-server-impl] sync thread hitch warning: timer interval of 472 milliseconds
+[ citizen-server-impl] network thread hitch warning: timer interval of 472 milliseconds
+[ citizen-server-impl] server thread hitch warning: timer interval of 490 milliseconds
+[ citizen-server-impl] sync thread hitch warning: timer interval of 104 milliseconds
+[ citizen-server-impl] network thread hitch warning: timer interval of 490 milliseconds
+[ citizen-server-impl] server thread hitch warning: timer interval of 526 milliseconds
+[ citizen-server-impl] sync thread hitch warning: timer interval of 455 milliseconds
+[38;5;73m[ citizen-server-impl] sync thread hitch warning: timer interval of 115 milliseconds
+[ citizen-server-impl] sync thread hitch warning: timer interval of 490 milliseconds
+[ citizen-server-impl] network thread hitch warning: timer interval of 490 milliseconds
+[ citizen-server-impl] server thread hitch warning: timer interval of 506 milliseconds
+[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
+[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
+[ citizen-server-main] -> Quitting: SIGHUP received
