@@ -4544,8 +4544,8 @@ QBShared.Vehicles = {
         ['brand'] = '17mansorypnmr',
         ['model'] = '17mansorypnmr',
         ['price'] = 99999999999,
-        ['category'] = 'tier1', --Keep in this format
-        ['categoryLabel'] = 'Tier 1', --Keep in this format
+        ['category'] = 'tier3', --Keep in this format
+        ['categoryLabel'] = 'Tier 3', --Keep in this format
         ['hash'] = '17mansorypnmr', 
         ['shop'] = 'luxury',
     },
@@ -4594,8 +4594,8 @@ QBShared.Vehicles = {
         ['brand'] = 'escaladeprime',
         ['model'] = 'escaladeprime',
         ['price'] = 99999999999,
-        ['category'] = 'tier2',
-        ['categoryLabel'] = 'Tier 2',
+        ['category'] = 'tier4',
+        ['categoryLabel'] = 'Tier 4',
         ['hash'] = `escaladeprime`,
         ['shop'] = 'luxury',
     },
@@ -4614,8 +4614,8 @@ QBShared.Vehicles = {
         ['brand'] = 'GODzVIPS63AMG',
         ['model'] = 'GODzVIPS63AMG',
         ['price'] = 99999999999,
-        ['category'] = 'tier3',
-        ['categoryLabel'] = 'Tier 3',
+        ['category'] = 'tier4',
+        ['categoryLabel'] = 'Tier 4',
         ['hash'] = `GODzVIPS63AMG`,
         ['shop'] = 'luxury',
     },
@@ -4634,8 +4634,8 @@ QBShared.Vehicles = {
         ['brand'] = 'Hycaders6',
         ['model'] = 'Hycaders6',
         ['price'] = 99999999999,
-        ['category'] = 'tier3',
-        ['categoryLabel'] = 'Tier 3',
+        ['category'] = 'tier4',
+        ['categoryLabel'] = 'Tier 4',
         ['hash'] = `Hycaders6`,
         ['shop'] = 'luxury',
     },
