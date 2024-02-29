@@ -1,7 +1,7 @@
 Config.Locations = Config.Locations or {}
 
 Config.Locations[#Config.Locations+1] = { --[[ GABZ ALTA STREET BENNYS ]]--
-	Enabled = true,
+	Enabled = false,
 	job = "mechanic",
 	zones = {
 		vec2(-263.99075317382, -1349.6701660156),
@@ -485,13 +485,13 @@ Config.Locations[#Config.Locations+1] = { --[[ POPULAR STREET LS CUSTOMS ]]--
 }
 
 Config.Locations[#Config.Locations+1] = { --[[ OTTOS AUTOS ]]--
-	Enabled = false,
+	Enabled = true,
 	job = "mechanic",
 	zones = {
-		vec2(824.64721679688, -802.48284912109),
-		vec2(838.40698242188, -802.47802734375),
-		vec2(837.53460693359, -830.51928710938),
-		vec2(823.86810302734, -830.36676025391)
+		vector2(794.2, -769.3),
+		vector2(794.2, -833.21),
+		vector2(852.39, -833.42),
+		vector2(844.57, -768.23)
 	},
 	autoClock = { enter = true, exit = true, },
 	stash = {
@@ -509,15 +509,15 @@ Config.Locations[#Config.Locations+1] = { --[[ OTTOS AUTOS ]]--
 	manualRepair = {
 		{ coords = vec4(835.0, -801.06, 26.27, 0.25), prop = true, },
 	},
-	carLift = {
-		{ coords = vec4(828.15, -812.69, 26.33, 270.5) },
-		{ coords = vec4(828.25, -819.93, 26.33, 270.5) },
-		{ coords = vec4(827.96, -805.63, 26.33, 270.5) },
-	},
+	-- carLift = {
+	-- 	{ coords = vec4(828.15, -812.69, 26.33, 270.5) },
+	-- 	{ coords = vec4(828.25, -819.93, 26.33, 270.5) },
+	-- 	{ coords = vec4(827.96, -805.63, 26.33, 270.5) },
+	-- },
 	garage = {
 		spawn = vec4(826.59, -793.63, 26.21, 84.34),
 		out = vec4(824.3, -801.2, 26.37, 0.65),
-		list = { "towtruck", "panto", "slamtruck", "cheburek", "utillitruck3" },
+		list = { "towtruck" },
 		prop = true
 	},
 	payments = {

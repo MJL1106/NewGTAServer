@@ -139,11 +139,10 @@ Config = {
 		"bottle",
 		"can",
 		"sandwich",
-        "pistol_ammo",
         "bakingsoda",
         "plastic",
         "rubber",
-        "empty_weed_bag",
+		"lockpick",
 	},
 	ScrapItems = {
 		"steel",

@@ -635,6 +635,22 @@ Config.Locations = {
         ["delivery"] = vector4(379.97, 357.3, 102.56, 26.42)
     },
 
+    ["247supermarket10"] = {
+        ["label"] = "24/7 Supermarket",
+        ["coords"] = vector4(812.35, -781.54, 26.18, 270.84),
+        ["ped"] = 'mp_m_shopkeep_01',
+        ["scenario"] = "WORLD_HUMAN_STAND_MOBILE",
+        ["radius"] = 1.5,
+        ["targetIcon"] = "fas fa-shopping-basket",
+        ["targetLabel"] = "Open Shop",
+        ["products"] = Config.Products["normal"],
+        ["showblip"] = true,
+        ["blipsprite"] = 52,
+        ["blipscale"] = 0.6,
+        ["blipcolor"] = 0,
+        ["delivery"] = vector4(815.96, -770.83, 26.32, 91.96)
+    },
+
     -- LTD Gasoline Locations
     ["ltdgasoline"] = {
         ["label"] = "LTD Gasoline",
