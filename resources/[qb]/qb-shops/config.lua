@@ -1050,21 +1050,21 @@ Config.Locations = {
     },
 
     -- Sea Word Locations
-    ["seaword"] = {
-        ["label"] = "Sea World",
-        ["coords"] = vector4(-1687.03, -1072.18, 13.15, 52.93),
-        ["ped"] = 'a_m_y_beach_01',
-        ["scenario"] = "WORLD_HUMAN_STAND_IMPATIENT",
-        ["radius"] = 1.5,
-        ["targetIcon"] = "fas fa-fish",
-        ["targetLabel"] = "Sea World",
-        ["products"] = Config.Products["gearshop"],
-        ["showblip"] = true,
-        ["blipsprite"] = 52,
-        ["blipscale"] = 0.8,
-        ["blipcolor"] = 0,
-        ["delivery"] = vector4(-1674.18, -1073.7, 13.15, 333.56)
-    },
+    -- ["seaword"] = {
+    --     ["label"] = "Sea World",
+    --     ["coords"] = vector4(-1687.03, -1072.18, 13.15, 52.93),
+    --     ["ped"] = 'a_m_y_beach_01',
+    --     ["scenario"] = "WORLD_HUMAN_STAND_IMPATIENT",
+    --     ["radius"] = 1.5,
+    --     ["targetIcon"] = "fas fa-fish",
+    --     ["targetLabel"] = "Sea World",
+    --     ["products"] = Config.Products["gearshop"],
+    --     ["showblip"] = true,
+    --     ["blipsprite"] = 52,
+    --     ["blipscale"] = 0.8,
+    --     ["blipcolor"] = 0,
+    --     ["delivery"] = vector4(-1674.18, -1073.7, 13.15, 333.56)
+    -- },
 
     -- Leisure Shop Locations
     ["leisureshop"] = {

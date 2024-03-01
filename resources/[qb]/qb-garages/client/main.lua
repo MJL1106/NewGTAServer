@@ -16,6 +16,7 @@ local blipsZonesLoaded = false
 
 --Menus
 local function MenuGarage(type, garage, indexgarage)
+    print("Opening First menu?")
     local header
     local leave
     if type == "house" then
@@ -243,6 +244,7 @@ local function round(num, numDecimalPlaces)
 end
 
 RegisterNetEvent("qb-garages:client:VehicleList", function(data)
+    print("Opening veh list")
     local type = data.type
     local garage = data.garage
     local indexgarage = data.index
