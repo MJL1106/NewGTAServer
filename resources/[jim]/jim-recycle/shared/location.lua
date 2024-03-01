@@ -1,7 +1,7 @@
 Config.Locations =  {
     ["Centres"] = {
         ["RecycleCity"] = {
-            Enable = false,
+            Enable = true,
             Job = nil,
             Blip = {
                 blipEnable = true,
@@ -20,7 +20,7 @@ Config.Locations =  {
                 vector2(736.34, -1366.38)
             },
             JobLocations = {
-                Enter = { coords = vec4(746.82, -1398.93, 25.55, 0.0), w = 0.4, d = 1.6, tele = vec4(736.95, -1374.25, 12.63, 266.58) },
+                Enter = { coords = vector4(744.34, -1381.75, 27.89, 283.57), w = 0.4, d = 1.6, tele = vec4(736.95, -1374.25, 12.63, 266.58) },
                 Exit = { coords = vec4(736.27, -1374.31, 11.64, 0.0), w = 1.5, d = 0.6, tele = vec4(746.77, -1399.53, 26.61, 181.16) },
                 Duty = { coords = vec4(739.55, -1376.5, 12.14, 0.0), w = 0.5, d = 0.5, },
                 Trolly = { coords = vec4(743.86, -1369.56, 11.57, 256.38), prop = "ex_Prop_Crate_Closed_BC" },
