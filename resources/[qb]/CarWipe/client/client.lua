@@ -58,7 +58,6 @@ AddEventHandler("delall", function ()
                 print("wipe cancelled")
                 return
             end
-            print("Wipe goes on")
             TriggerEvent('chat:addMessage', {
                 template = '<div style="padding: 0.5vw; margin: 0.5vw; background-color: rgba(202, 45, 45, 1); border-radius: 3px;"><i class="fas fa-car-crash"></i> {0}:<br> {1}</div>',
                 args = { 'CarWipe', 'A car wipe is coming in 1 minute. If you don\'t want your car to disappear, sit in it' }
