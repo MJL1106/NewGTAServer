@@ -20,10 +20,6 @@ RegisterCommand('toggleNV', function()
                 SetNightvision(true)
                 mode = 1
             elseif mode == 1 then
-                QBCore.Functions.Notify('Thermal vision on!')
-                SetSeethrough(true)
-                mode = 2
-            elseif mode == 2 then
                 QBCore.Functions.Notify('Nightvision off!')
                 SetNightvision(false)
                 SetSeethrough(false)
@@ -32,6 +28,8 @@ RegisterCommand('toggleNV', function()
         else
             QBCore.Functions.Notify('You are not wearing a nightvision helmet!', 'error')
         end
+    else
+        return
     end
 end)
 RegisterKeyMapping('toggleNV', 'Toggle nightvision', 'keyboard', Config.NVKey)
