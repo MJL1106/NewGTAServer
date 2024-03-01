@@ -8,7 +8,7 @@ Config.DisplaySettings = {
 
 Config.PedSettings = {
     collision = false, --set true to enable the ped collision
-    pedAlpha = 255, --invisibility of the ped, 0 to 255
+    pedAlpha = 0, --invisibility of the ped, 0 to 255
     boardAlpha = 200, --invisibility of the board, 0 to 255
     drawText = true --disabling this wont draw a 3d text
 }
