@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
 .container {
     display: none;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    user-select: none; 
+    user-select: none;
 }
 
 .jugadores-on {
@@ -19,19 +20,19 @@
     position: fixed;
     top: 90vh;
     left: 5vh;
-    background: linear-gradient(-45deg, #1c7e97, #418da0,#058bac,#058aac,#00ccff);
+    background: linear-gradient(-45deg, #442ec0, #3d2ec0, #312ec0, #2e38c0, #2e6dc0);
     box-shadow: 0 0 10px rgb(10, 0, 0);
-    animation: boton-click 1s ease-in-out forwards,blinkxd 3s ease-in-out infinite,10s rotate linear infinite;
+    animation: boton-click 1s ease-in-out forwards, blinkxd 3s ease-in-out infinite, 10s rotate linear infinite;
     animation-delay: 0.5s;
     border: 1.8px solid;
-    border-image: linear-gradient(var(--angle), #1c7e9700, #418da000,#058bac00,#058aac00,#00ccff00) 1;
+    border-image: linear-gradient(var(--angle), #1c7e9700, #418da000, #058bac00, #058aac00, #00ccff00) 1;
     border-radius: 7px;
 }
 
 .fondocolor {
     width: 120%;
     height: 120%;
-    background: linear-gradient(-45deg, #1c7e9700, #418da000,#058bac00,#058aac00,#00ccff00);
+    background: linear-gradient(-45deg, #1c7e9700, #418da000, #058bac00, #058aac00, #00ccff00);
     background-size: 400% 400%;
     filter: blur(2);
     opacity: 0.4;
@@ -51,42 +52,43 @@
 .imagenlogo {
     top: 50%;
     left: 37%;
-    position:absolute;
-    width:25%;
-    animation-name:shake-slow 10s ease-in-out infinite;
+    position: absolute;
+    width: 25%;
+    animation-name: shake-slow 10s ease-in-out infinite;
 }
 
 .title-screen .contenedor {
     width: 100%;
     margin: 0 auto;
     margin-top: 20%;
-    margin-left:0%;
+    margin-left: 0%;
 }
 
 .entrada {
     animation: logo-entrada 2s cubic-bezier(0.000, 1.465, 0.810, 1.650) forwards;
 }
+
 .blinkxd {
     animation: blinkxd 4s ease-in-out infinite !important;
 }
 
 .title-screen .btn-iniciar {
     font-family: 'Poppins', sans-serif;
-    font-weight:bold;
+    font-weight: bold;
     font-size: 1.2em;
     padding: 10px 20px;
     text-align: center;
     border: 1.5px solid;
-    border-image: linear-gradient(var(--angle), #1c7e9700, #418da000,#058bac00) 1;
+    border-image: linear-gradient(var(--angle), #1c7e9700, #418da000, #058bac00) 1;
     border-radius: 7px;
     width: 149px;
     margin: auto;
     color: rgb(255, 255, 255);
-    animation: entrada-iniciar 3s forwards linear, blinkxd 3s ease-in-out infinite,5s rotate linear infinite,gradient 15s ease infinite;
+    animation: entrada-iniciar 3s forwards linear, blinkxd 3s ease-in-out infinite, 5s rotate linear infinite, gradient 15s ease infinite;
     opacity: 0;
     animation-delay: 1s;
     transition: ease-in-out 0.3s;
-    background: linear-gradient(-45deg, #1c7e97, #418da0,#058bac,#058aac,#00ccff);
+    background: linear-gradient(-45deg, #442ec0, #3d2ec0, #312ec0, #2e38c0, #2e6dc0);
     background-size: 400% 400%;
     filter: blur(2);
 }
@@ -97,9 +99,9 @@
     color: rgb(255, 255, 255);
     transition: ease-in-out 0.3s;
     border: 1.5px solid;
-    border-image: linear-gradient(var(--angle), #1c7e9700, #418da000,#058bac00) 1; 
+    border-image: linear-gradient(var(--angle), #1c7e9700, #418da000, #058bac00) 1;
     border-radius: 3px;
-    animation:blinkxd 3s ease-in-out infinite,1s rotate linear infinite,;
+    animation: blinkxd 3s ease-in-out infinite, 1s rotate linear infinite, ;
     cursor: pointer;
 }
 
@@ -127,8 +129,8 @@
     font-size: 1.75vh;
     color: rgba(255, 255, 255, 0);
     border-bottom: 4px solid;
-    border-image: linear-gradient(var(--angle), #1c7e9700, #418da000,#058bac00,#058aac00,#00ccff00) 1;
-    animation: blinkxd 6s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite,5s rotate linear infinite;
+    border-image: linear-gradient(var(--angle), #1c7e9700, #418da000, #058bac00, #058aac00, #00ccff00) 1;
+    animation: blinkxd 6s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite, 5s rotate linear infinite;
     box-shadow: 0 0 40px #00ccff;
 }
 
@@ -136,15 +138,15 @@
     --angle: 0deg;
     position: absolute;
     background-color: rgba(0, 238, 255, 0);
-    top:50%;
+    top: 50%;
     left: -5%;
     width: 110%;
     height: 100%;
     border-top: 4px solid;
-    border-image: linear-gradient(var(--angle), #1c7e9700, #418da000,#058bac00,#058aac00,#00ccff00) 1;
-    animation: blinkxd 6s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite,5s rotate linear infinite;
+    border-image: linear-gradient(var(--angle), #1c7e9700, #418da000, #058bac00, #058aac00, #00ccff00) 1;
+    animation: blinkxd 6s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite, 5s rotate linear infinite;
     box-shadow: 0 0 40px #00ccff;
-} 
+}
 
 .main-screen {
     position: absolute;
@@ -154,7 +156,7 @@
     z-index: 100;
 }
 
-.characters-block-header > p {
+.characters-block-header>p {
     text-align: center;
     color: #ffffff;
     line-height: 24px;
@@ -178,44 +180,44 @@
     border-right: 1px solid;
     overflow: visible !important;
     box-shadow: 0 0 30px rgb(30 0 0 / 98%) !important;
-    border-image: linear-gradient(var(--angle), #0073ff00,#0073ff00,#0073ff00,#0073ff00,#0073ff00) 1;
-    animation: 20s rotate linear infinite,shake-slow2 10s ease-in-out infinite,gradient 15s ease infinite;
-    background: linear-gradient(-45deg, #1c7e97, #418da0,#058bac00,#058aac,#000000b0); 
+    border-image: linear-gradient(var(--angle), #0073ff00, #0073ff00, #0073ff00, #0073ff00, #0073ff00) 1;
+    animation: 20s rotate linear infinite, shake-slow2 10s ease-in-out infinite, gradient 15s ease infinite;
+    background: linear-gradient(-45deg, #1c7e97, #418da0, #058bac00, #058aac, #000000b0);
     background-size: 400% 400%;
-    
+
 
 }
 
 .character-list-header {
-    text-transform: uppercase; 
+    text-transform: uppercase;
     position: relative;
     top: -2vh;
     width: 100%;
     height: 10%;
     right: 0;
-    animation:shake-slow 10s ease-in-out infinite;
+    animation: shake-slow 10s ease-in-out infinite;
 }
 
 .character-logo {
     top: -7vh;
     width: 100%;
     height: 10%;
-    position:relative;
+    position: relative;
     right: -27vh;
 
 }
 
 .character-logo .headimageleft {
-    position:fixed;
+    position: fixed;
     width: 40%;
     border-radius: .8vh;
     overflow: visible !important;
-    left:13vh;
-    animation:shake-slow 15s ease-in-out infinite;
+    left: 13vh;
+    animation: shake-slow 15s ease-in-out infinite;
 
 }
 
-.character-list-header > p {
+.character-list-header>p {
     text-align: center;
     font-size: 2.4vh;
     margin-top: 3.1vh;
@@ -236,7 +238,7 @@
     border-radius: .3vh;
 }
 
-.character > span {
+.character>span {
     color: #ffffff;
     font-weight: 900;
     text-transform: uppercase;
@@ -256,20 +258,21 @@
     background-color: rgba(0, 0, 0, 0.445);
     border-left: 3px solid;
     border-right: 3px solid;
-    border-top:0px solid;
-    border-bottom:0px solid;
-    border-image: linear-gradient(var(--angle), #1c7e97, #418da0,#058bac00,#058aac,#000000b0) 1;
-    animation: blinkxd 10s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite,5s rotate linear infinite;
-    background: linear-gradient(-45deg, #1c7e97, #418da0,#058bac00,#058aac,#000000b0);
+    border-top: 0px solid;
+    border-bottom: 0px solid;
+    border-image: linear-gradient(var(--angle), #1c7e97, #418da0, #058bac00, #058aac, #000000b0) 1;
+    animation: blinkxd 10s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite, 5s rotate linear infinite;
+    background: linear-gradient(-45deg, #1c7e97, #418da0, #058bac00, #058aac, #000000b0);
 }
 
-.character-no > span {
+.character-no>span {
     color: rgb(255, 255, 255);
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: .1vh;
     font-family: 'Poppins', sans-serif;
 }
+
 #cid {
     color: #ffffff;
     position: relative;
@@ -279,15 +282,15 @@
     line-height: 80px;
 }
 
-.char-selected { 
+.char-selected {
     box-shadow: 0 0 100px rgba(0, 195, 255, 0.4) !important;
     border-top: 2px solid;
     border-bottom: 2px solid;
     border-left: 0.5px solid;
-    border-right:0.5px solid;
-    border-image: linear-gradient(var(--angle), #1c7e97,#418da0,#058bac00,#058bac,#00000000) 1; 
-    animation: 3s rotate linear infinite,gradient 15s ease infinite;
-    background: linear-gradient(-45deg, #1c7e97, #418da0,#058bac00,#058bac,#00000000); 
+    border-right: 0.5px solid;
+    border-image: linear-gradient(var(--angle), #1c7e97, #418da0, #058bac00, #058bac, #00000000) 1;
+    animation: 3s rotate linear infinite, gradient 15s ease infinite;
+    background: linear-gradient(-45deg, #1c7e97, #418da0, #058bac00, #058bac, #00000000);
     background-size: 400% 400%;
 
 }
@@ -316,7 +319,7 @@
     margin-right: 10px;
 }
 
-.character-btn > p {
+.character-btn>p {
     color: #ffffff;
     letter-spacing: .1vh;
     text-align: center;
@@ -329,38 +332,38 @@
 
 #play {
     display: none;
-    animation:gradient 10s ease infinite,8s rotate linear infinite,blinkxd 3s ease-in-out infinite;
+    animation: gradient 10s ease infinite, 8s rotate linear infinite, blinkxd 3s ease-in-out infinite;
     border-radius: 4px;
     transition: 0.2s;
     overflow: visible !important;
-    background: linear-gradient(-45deg, #1c7e97, #418da0,#058bac00,#058aac,#00000000);
+    background: linear-gradient(-45deg, #1c7e97, #418da0, #058bac00, #058aac, #00000000);
     background-size: 400% 400%;
     border-radius: .3vh;
     transition: all 0.2s ease;
 }
 
 #play:hover {
-    animation:0.4s rotate linear infinite,gradient 15s ease infinite;
+    animation: 0.4s rotate linear infinite, gradient 15s ease infinite;
     border-radius: .6vh;
-    border:3px solid black;
+    border: 3px solid black;
     transition: 0.2s;
     box-shadow: 0 0 10px #058bac00 !important;
     overflow: visible !important;
-    background: linear-gradient(-45deg, #1c7e97, #418da0,#058bac00,#058aac,#00000000);
+    background: linear-gradient(-45deg, #1c7e97, #418da0, #058bac00, #058aac, #00000000);
     background-size: 400% 400%;
-    border-image: linear-gradient(var(--angle), #1c7e97, #418da0,#058bac00,#058bac00,#00000000) 1; 
-    font-size:5vh;
-    transform:scale(1.05);
+    border-image: linear-gradient(var(--angle), #1c7e97, #418da0, #058bac00, #058bac00, #00000000) 1;
+    font-size: 5vh;
+    transform: scale(1.05);
     cursor: pointer;
 }
 
 #delete {
     display: none;
-    animation:gradient 10s ease infinite,8s rotate linear infinite;
+    animation: gradient 10s ease infinite, 8s rotate linear infinite;
     border-radius: 4px;
     transition: 0.5s;
     overflow: visible !important;
-    background: linear-gradient(-45deg, #1c7e97, #418da0,#058bac00,#058aac,#00000000); 
+    background: linear-gradient(-45deg, #1c7e97, #418da0, #058bac00, #058aac, #00000000);
     background-size: 400% 400%;
     border-radius: .3vh;
     transition: all 0.2s ease;
@@ -368,18 +371,18 @@
 }
 
 #delete:hover {
-    animation:0.4s rotate linear infinite,gradient 15s ease infinite,blinkxd 3s ease-in-out infinite;
+    animation: 0.4s rotate linear infinite, gradient 15s ease infinite, blinkxd 3s ease-in-out infinite;
     border-radius: .6vh;
-    border:3px solid black;
+    border: 3px solid black;
     transition: 0.2s;
     box-shadow: 0 0 10px #058bac !important;
     overflow: visible !important;
-    background: linear-gradient(-45deg, #1c7e97, #418da0,#058bac00,#058aac,#00000000);
+    background: linear-gradient(-45deg, #1c7e97, #418da0, #058bac00, #058aac, #00000000);
     background-size: 400% 400%;
-    border-image: linear-gradient(var(--angle), #1c7e97, #418da0,#058bac00,#058aac,#00000000) 1; 
-    font-size:5vh; 
-    transform:scale(1.05);
-    cursor: pointer; 
+    border-image: linear-gradient(var(--angle), #1c7e97, #418da0, #058bac00, #058aac, #00000000) 1;
+    font-size: 5vh;
+    transform: scale(1.05);
+    cursor: pointer;
 }
 
 .character-info {
@@ -399,9 +402,9 @@
     border-left: 2px solid;
     border-right: 2px solid;
     box-shadow: 0 0 40px rgb(30 0 0 / 98%) !important;
-    border-image: linear-gradient(var(--angle), #1c7e9700, #418da000,#058bac00,#058aac00,#00000000) 1;
-    animation:5s rotate linear infinite,shake-slow3 10s ease-in-out infinite,gradient 15s ease infinite;
-    background: linear-gradient(-45deg, #1c7e97, #418da0,#058bac00,#058aac,#00000000);
+    border-image: linear-gradient(var(--angle), #1c7e9700, #418da000, #058bac00, #058aac00, #00000000) 1;
+    animation: 5s rotate linear infinite, shake-slow3 10s ease-in-out infinite, gradient 15s ease infinite;
+    background: linear-gradient(-45deg, #1c7e97, #418da0, #058bac00, #058aac, #00000000);
     background-size: 400% 400%;
 }
 
@@ -481,8 +484,8 @@
     padding: 30px;
     font-family: 'Poppins', sans-serif;
     box-shadow: 0 0 40px rgb(30 0 0 / 98%) !important;
-    border-image: linear-gradient(var(--angle), #1c7e97, #418da0,#058bac00,#058aac,#00000000 ) 1;
-    animation:gradient 15s ease infinite;
+    border-image: linear-gradient(var(--angle), #1c7e97, #418da0, #058bac00, #058aac, #00000000) 1;
+    animation: gradient 15s ease infinite;
     color: #ffffff;
     font-family: 'Poppins', sans-serif;
     overflow: visible !important;
@@ -502,12 +505,12 @@
     overflow: visible !important;
 }
 
-.characters-delete-block-header > p {
+.characters-delete-block-header>p {
     font-family: 'Poppins', sans-serif;
     overflow: visible !important;
 }
 
-.character-delete > p {
+.character-delete>p {
     padding-top: 50px;
     font-size: 1.3vh;
     overflow: visible !important;
@@ -524,11 +527,11 @@
     bottom: 0;
     left: 5%;
     margin-bottom: 20px;
-    animation:gradient 10s ease infinite,8s rotate linear infinite;
+    animation: gradient 10s ease infinite, 8s rotate linear infinite;
     border-radius: 4px;
     transition: 0.2s;
     overflow: visible !important;
-    background: linear-gradient(-45deg, #00ff3c, #00ff3c,#00ff3c,#298d40,#298d40);
+    background: linear-gradient(-45deg, #00ff3c, #00ff3c, #00ff3c, #298d40, #298d40);
     background-size: 400% 400%;
 }
 
@@ -539,15 +542,15 @@
     bottom: 0;
     left: 5%;
     margin-bottom: 20px;
-    animation:3s rotate linear infinite,gradient 15s ease infinite;
+    animation: 3s rotate linear infinite, gradient 15s ease infinite;
     border-radius: .6vh;
-    border:2px solid black;
+    border: 2px solid black;
     transition: 0.2s;
     box-shadow: 0 0 20px #00ff3c !important;
     overflow: visible !important;
-    background: linear-gradient(-45deg, #00ff3c, #00ff3c,#00ff3c,#298d40,#298d40);
+    background: linear-gradient(-45deg, #00ff3c, #00ff3c, #00ff3c, #298d40, #298d40);
     background-size: 400% 400%;
-    border-image: linear-gradient(var(--angle), #00ff3c00, #00ff3c00,#00ff3c00,#298d4000,#298d4000) 1;
+    border-image: linear-gradient(var(--angle), #00ff3c00, #00ff3c00, #00ff3c00, #298d4000, #298d4000) 1;
     cursor: pointer;
 }
 
@@ -558,11 +561,11 @@
     bottom: 0;
     right: 5%;
     margin-bottom: 20px;
-    animation:gradient 10s ease infinite,8s rotate linear infinite;
+    animation: gradient 10s ease infinite, 8s rotate linear infinite;
     border-radius: 4px;
     transition: 0.2s;
     overflow: visible !important;
-    background: linear-gradient(-45deg, #ff0033, #ff0033,#ff0033,#913144,#72192b);
+    background: linear-gradient(-45deg, #ff0033, #ff0033, #ff0033, #913144, #72192b);
     background-size: 400% 400%;
 }
 
@@ -573,19 +576,19 @@
     bottom: 0;
     right: 5%;
     margin-bottom: 20px;
-    animation:3s rotate linear infinite,gradient 15s ease infinite;
+    animation: 3s rotate linear infinite, gradient 15s ease infinite;
     border-radius: .6vh;
-    border:2px solid black;
+    border: 2px solid black;
     transition: 0.2s;
     box-shadow: 0 0 20px #ff0033 !important;
     overflow: visible !important;
-    background: linear-gradient(-45deg, #ff0033, #ff0033,#ff0033,#913144,#72192b);
+    background: linear-gradient(-45deg, #ff0033, #ff0033, #ff0033, #913144, #72192b);
     background-size: 400% 400%;
-    border-image: linear-gradient(var(--angle), #ff003300,#25b6c300,#25b6c300,#25b6c300,#ff003300) 1;
+    border-image: linear-gradient(var(--angle), #ff003300, #25b6c300, #25b6c300, #25b6c300, #ff003300) 1;
     cursor: pointer;
 }
 
-.character-acceptdel-btn > p {
+.character-acceptdel-btn>p {
     color: #ffffff;
     text-align: center;
     padding-top: 1vh;
@@ -595,7 +598,7 @@
     text-transform: uppercase;
 }
 
-.character-canceldel-btn > p {
+.character-canceldel-btn>p {
     color: #ffffff;
     text-align: center;
     padding-top: 1vh;
@@ -616,37 +619,38 @@
     left: 27%;
     background-color: rgba(15, 0, 0, 0.8);
     border-radius: .6vh;
-    border:2px solid black;
+    border: 2px solid black;
     padding: 30px;
     font-family: 'Poppins', sans-serif;
     box-shadow: 0 0 40px rgb(20 0 0 / 98%) !important;
-    animation: 8s rotate linear infinite,shake-slow 10s ease-in-out infinite;
-    border-image: linear-gradient(var(--angle), #1c7e97, #418da0,#058bac00,#058aac,#00000000) 1;
+    animation: 8s rotate linear infinite, shake-slow 10s ease-in-out infinite;
+    border-image: linear-gradient(var(--angle), #1c7e97, #418da0, #058bac00, #058aac, #00000000) 1;
 
 }
 
 .material-icons-one {
     margin-left: 39.5vh;
     color: #ffffff;
-    background: linear-gradient(-45deg, #1c7e97, #418da0,#058bac00,#058aac,#00ccff);
-    animation: 3s rotate linear infinite,gradient 15s ease infinite;
+    background: linear-gradient(-45deg, #1c7e97, #418da0, #058bac00, #058aac, #00ccff);
+    animation: 3s rotate linear infinite, gradient 15s ease infinite;
     background-size: 400% 400%;
     font-size: 1.3vh;
     font-weight: 900;
     border-radius: .3vh;
     padding: .3vh;
 }
+
 .material-icons-one:hover {
     margin-left: 39.5vh;
     color: #ffffff;
-    background: linear-gradient(-45deg, #1c7e97, #418da0,#058bac,#058aac,#00ccff);
-    animation: 3s rotate linear infinite,gradient 15s ease infinite;
+    background: linear-gradient(-45deg, #442ec0, #3d2ec0, #312ec0, #2e38c0, #2e6dc0);
+    animation: 3s rotate linear infinite, gradient 15s ease infinite;
     background-size: 400% 400%;
     font-size: 1.3vh;
     font-weight: 900;
     border-radius: .3vh;
     padding: .3vh;
-    cursor:pointer;
+    cursor: pointer;
 }
 
 .characters-register-block-header {
@@ -689,7 +693,7 @@
 select {
     position: absolute;
     border: none;
-    border: .3vh solid #00c3ff00; 
+    border: .3vh solid #00c3ff00;
     background-color: #00c3ff;
     outline: none;
     width: 93.5%;
@@ -769,16 +773,16 @@ input[type="date"]::-webkit-clear-button {
     position: absolute;
     max-width: 87%;
     height: 4vh;
-    background: linear-gradient(-45deg, #1c7e97, #418da0,#058bac,#058aac,#00ccff);
+    background: linear-gradient(-45deg, #442ec0, #3d2ec0, #312ec0, #2e38c0, #2e6dc0);
     background-size: 400% 400%;
     border-radius: .3vh;
     bottom: 3vh;
     margin: 0 auto;
     left: 0;
     right: 0;
-    animation:7s rotate linear infinite,gradient 15s ease infinite;
+    animation: 7s rotate linear infinite, gradient 15s ease infinite;
     border: 1.5px solid;
-    border-image: linear-gradient(var(--angle), #1c7e97, #418da0,#058bac,#058aac,#00ccff) 1;
+    border-image: linear-gradient(var(--angle), #442ec0, #3d2ec0, #312ec0, #2e38c0, #2e6dc0) 1;
     border-radius: 7px;
 
 }
@@ -787,24 +791,24 @@ input[type="date"]::-webkit-clear-button {
     position: absolute;
     max-width: 87%;
     height: 4vh;
-    background: linear-gradient(-45deg, #1c7e97, #418da0,#058bac,#058aac,#00ccff);
+    background: linear-gradient(-45deg, #442ec0, #3d2ec0, #312ec0, #2e38c0, #2e6dc0);
     background-size: 400% 400%;
     border-radius: .3vh;
     bottom: 3vh;
     margin: 0 auto;
     left: 0;
     right: 0;
-    animation:7s rotate linear infinite,gradient 15s ease infinite;
+    animation: 7s rotate linear infinite, gradient 15s ease infinite;
     border: 1.5px solid;
-    border-image: linear-gradient(var(--angle), #1c7e97, #418da0,#058bac,#058aac,#00ccff) 1;
+    border-image: linear-gradient(var(--angle), #442ec0, #3d2ec0, #312ec0, #2e38c0, #2e6dc0) 1;
     border-radius: 7px;
     box-shadow: 0 0 100px rgb(30 0 0 / 98%) !important;
-    transform:scale(1.1);
+    transform: scale(1.1);
     cursor: pointer;
 
 }
 
-.character-reg-btn > p {
+.character-reg-btn>p {
     text-align: center;
     line-height: 4vh;
     color: #ffffff;
@@ -826,7 +830,7 @@ input[type="date"]::-webkit-clear-button {
     padding: 1vh;
     overflow: visible !important;
 }
-    
+
 .loading-rondje>p {
     color: rgb(0, 0, 0);
     margin-top: 1vh;
@@ -834,33 +838,36 @@ input[type="date"]::-webkit-clear-button {
     text-shadow: 1px 1px 0px #00000085;
     opacity: 0;
 }
-    
+
 .lds-ring {
     display: contents;
-    position:absolute;
+    position: absolute;
     width: 80px;
     height: 80px;
-    animation:blinkxd 2s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite !important;
+    animation: blinkxd 2s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite !important;
 }
-    
+
 .lds-ring div {
     box-sizing: border-box;
     display: block;
-    position:  absolute; /*    position: relative; este son multiples*/
+    position: absolute;
+    /*    position: relative; este son multiples*/
     width: 64px;
     height: 64px;
     border-radius: 50%;
-    animation: lds-ring 2.5s cubic-bezier(0.5, 0, 0.5, 1) infinite, 2s rotate linear infinite,blinkxd 2s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite !important;
+    animation: lds-ring 2.5s cubic-bezier(0.5, 0, 0.5, 1) infinite, 2s rotate linear infinite, blinkxd 2s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite !important;
     border: 15px solid;
-    border-image: linear-gradient(var(--angle), #1c7e97,#418da0,#00ccff) 1;
+    border-image: linear-gradient(var(--angle), #312ec0, #2e38c0, #2e6dc0) 1;
 }
 
 .lds-ring div:nth-child(1) {
     animation-delay: -0.45s;
 }
+
 .lds-ring div:nth-child(2) {
     animation-delay: -0.3s;
 }
+
 .lds-ring div:nth-child(3) {
     animation-delay: -0.15s;
 }
@@ -869,6 +876,7 @@ input[type="date"]::-webkit-clear-button {
     0% {
         transform: rotate(0deg);
     }
+
     100% {
         transform: rotate(360deg);
     }
@@ -878,21 +886,27 @@ input[type="date"]::-webkit-clear-button {
     0% {
         transform: translate(0, 0) rotate(0)
     }
+
     15% {
         transform: translate(4px, 2px) rotate(-.1deg)
     }
+
     30% {
         transform: translate(3px, -5px) rotate(0.5deg)
     }
+
     50% {
         transform: translate(4px, -3px) rotate(-.5deg)
     }
+
     70% {
         transform: translate(-3px, 3px) rotate(1.2deg)
     }
+
     85% {
         transform: translate(-3px, 3px) rotate(1.2deg)
     }
+
     100% {
         transform: translate(0, 0) rotate(0)
     }
@@ -903,38 +917,64 @@ input[type="date"]::-webkit-clear-button {
         filter: brightness(0.90);
         transform: translate(0, 0) rotate(0)
     }
+
     15% {
         transform: translate(4px, 2px) rotate(-.1deg)
     }
+
     30% {
         transform: translate(3px, -5px) rotate(0.5deg);
-                filter: brightness(1);
+        filter: brightness(1);
     }
+
     50% {
         filter: brightness(1.5);
         transform: translate(4px, -3px) rotate(-.5deg)
     }
+
     70% {
         transform: translate(-3px, 3px) rotate(1.2deg);
-                filter: brightness(1);
+        filter: brightness(1);
     }
+
     85% {
         transform: translate(-3px, 3px) rotate(1.2deg)
     }
+
     100% {
         transform: translate(0, 0) rotate(0);
         filter: brightness(0.90);
     }
 }
 
-@keyframes shake-slow2{
-    0%{transform:translate(0, 0) rotate(0) perspective(1600px) rotateY(30deg)}
-    15%{transform:translate(4px, 2px) rotate(-.1deg) perspective(1600px) rotateY(30deg)}
-    30%{transform:translate(3px, -5px) rotate(0.5deg) perspective(1600px) rotateY(30deg)}
-    50%{transform:translate(4px, -3px) rotate(-.5deg) perspective(1600px) rotateY(30deg)}
-    70%{transform:translate(-3px, 3px) rotate(1.2deg) perspective(1600px) rotateY(30deg)}
-    85%{transform:translate(-3px, 3px) rotate(1.2deg) perspective(1600px) rotateY(30deg)}
-    100%{transform:translate(0, 0) rotate(0) perspective(1600px) rotateY(30deg)}
+@keyframes shake-slow2 {
+    0% {
+        transform: translate(0, 0) rotate(0) perspective(1600px) rotateY(30deg)
+    }
+
+    15% {
+        transform: translate(4px, 2px) rotate(-.1deg) perspective(1600px) rotateY(30deg)
+    }
+
+    30% {
+        transform: translate(3px, -5px) rotate(0.5deg) perspective(1600px) rotateY(30deg)
+    }
+
+    50% {
+        transform: translate(4px, -3px) rotate(-.5deg) perspective(1600px) rotateY(30deg)
+    }
+
+    70% {
+        transform: translate(-3px, 3px) rotate(1.2deg) perspective(1600px) rotateY(30deg)
+    }
+
+    85% {
+        transform: translate(-3px, 3px) rotate(1.2deg) perspective(1600px) rotateY(30deg)
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(0) perspective(1600px) rotateY(30deg)
+    }
 
 }
 
@@ -943,6 +983,7 @@ input[type="date"]::-webkit-clear-button {
         transform: scale(0.8);
         opacity: 0;
     }
+
     100% {
         transform: scale(1);
         opacity: 100;
@@ -953,9 +994,11 @@ input[type="date"]::-webkit-clear-button {
     0% {
         filter: brightness(0.75)
     }
+
     50% {
         filter: brightness(1.75)
     }
+
     100% {
         filter: brightness(0.75)
     }
@@ -965,6 +1008,7 @@ input[type="date"]::-webkit-clear-button {
     0% {
         opacity: 0%;
     }
+
     100% {
         opacity: 100%;
     }
@@ -975,6 +1019,7 @@ input[type="date"]::-webkit-clear-button {
         transform: scale(1.5);
         opacity: 0;
     }
+
     100% {
         transform: scale(1.0);
         opacity: 100;
@@ -983,22 +1028,25 @@ input[type="date"]::-webkit-clear-button {
 
 @keyframes rotate {
     to {
-      --angle: 360deg;
+        --angle: 360deg;
     }
-  }
-  @property --angle {
-      syntax: '<angle>';
-      initial-value: 0deg;
-      inherits: false;
-  }
-  
+}
+
+@property --angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+
 @keyframes gradient {
     0% {
         background-position: 0% 50%;
     }
+
     50% {
         background-position: 100% 50%;
     }
+
     100% {
         background-position: 0% 50%;
     }

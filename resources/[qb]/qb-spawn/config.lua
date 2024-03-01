@@ -19,9 +19,9 @@ QB.Spawns = {
         label = "Paleto Bay",
     },
 
-    ["motel"] = {
-        coords = vector4(327.56, -205.08, 53.08, 163.5),
-        location = "motel",
-        label = "Motels",
+    ["apartments"] = {
+        coords = vector4(-663.62, -1080.3, 14.51, 146.87),
+        location = "apartments",
+        label = "Apartments",
     },
 }
