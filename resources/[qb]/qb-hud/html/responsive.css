@@ -8,57 +8,73 @@
         transform: scale(1, 1);
         bottom: 6.9vh !important;
     }
+
     .q-ml-xl {
         font-size: 50px;
     }
+
     #Speedo {
         font-size: 70px !important;
     }
+
     #FuelGaugeBackground {
         font-size: 36px;
     }
+
     #FuelGaugeValue {
         font-size: 36px;
     }
+
     #FuelGaugeIcon {
         font-size: 14px;
     }
+
     #Icons {
         font-size: 19.5px;
     }
+
     #speedometer {
         position: relative;
         left: 2.5vh !important;
     }
+
     #fuelgauge {
         position: relative;
         left: 7vh !important;
         bottom: 6.7vh !important;
     }
+
     #altitudegauge {
         position: relative;
         left: 11vh !important;
     }
+
     #seatbelt {
         position: relative;
         left: 8.5vh !important;
     }
+
     speed {
         font-size: 2vh !important;
     }
+
     speed:after {
         font-size: 0.9vh !important;
     }
+
     altitude {
         font-size: 2vh !important;
     }
+
     altitude:after {
         font-size: 0.9vh !important;
     }
+
     .square {
         left: 2.5vh !important;
         bottom: 6% !important;
     }
+
     .circle {
         left: 3.2vh !important;
         width: 27.6vh !important;
@@ -72,84 +88,107 @@
         transform: scale(1.3, 1.3);
         bottom: 7.6vh !important;
     }
+
     .q-ml-xl {
         font-size: 100px;
-        margin-left: -45px !important; /* Change this to space radials */
+        margin-left: -45px !important;
+        /* Change this to space radials */
     }
+
     #Speedo {
         font-size: 125px !important;
     }
+
     #Speed {
         font-size: 50px !important;
     }
+
     #FuelGaugeBackground {
         font-size: 75px !important;
         left: 50% !important;
         top: 20px !important;
     }
+
     #FuelGaugeValue {
         font-size: 75px !important;
         left: 0% !important;
         top: 20px !important;
     }
+
     #FuelGaugeIcon {
         font-size: 25px;
     }
+
     #Altimeter {
         font-size: 125px !important;
         left: 41% !important;
     }
+
     #AltimeterValue {
         font-size: 125px !important;
         left: -9% !important;
     }
+
     #Alt {
         font-size: 50px !important;
     }
+
     #Icons {
         font-size: 50px;
     }
+
     #SeatbeltLocation {
         left: 35% !important;
         top: -40px;
     }
+
     #SeatbeltIcon {
         font-size: 40px !important;
     }
+
     #speedometer {
         position: relative;
         left: 2.5vh !important;
     }
+
     #fuelgauge {
         position: relative;
         left: 5.3vh !important;
         bottom: 7.1vh !important;
     }
+
     #altitudegauge {
         position: relative;
         left: 8.2vh !important;
     }
+
     #seatbelt {
         position: relative;
         left: 6.5vh !important;
     }
+
     speed {
         font-size: 1.2vh !important;
     }
+
     speed:after {
         font-size: 0.6vh !important;
     }
+
     altitude {
         font-size: 1.2vh !important;
     }
+
     altitude:after {
         font-size: 0.6vh !important;
     }
+
     .square {
         left: 2.4vh !important;
         bottom: 6.1% !important;
         width: 29.3vh !important;
     }
+
     .circle {
         left: 3.6vh !important;
         width: 27.6vh !important;
@@ -163,58 +202,74 @@
         transform: scale(1.3, 1.3);
         bottom: 7.6vh !important;
     }
+
     .q-ml-xl {
         font-size: 50px;
     }
+
     #Speedo {
         font-size: 70px !important;
     }
+
     #FuelGaugeBackground {
         font-size: 36px;
     }
+
     #FuelGaugeValue {
         font-size: 36px;
     }
+
     #FuelGaugeIcon {
         font-size: 14px;
     }
+
     #Icons {
         font-size: 19.5px;
     }
+
     #speedometer {
         position: relative;
         left: 2.5vh !important;
     }
+
     #fuelgauge {
         position: relative;
         left: 6.4vh !important;
         bottom: 6.85vh !important;
     }
+
     #altitudegauge {
         position: relative;
         left: 11.2vh !important;
     }
+
     #seatbelt {
         position: relative;
         left: 4vh !important;
     }
+
     speed {
         font-size: 1.4vh !important;
     }
+
     speed:after {
         font-size: 0.7vh !important;
     }
+
     altitude {
         font-size: 1.4vh !important;
     }
+
     altitude:after {
         font-size: 0.7vh !important;
     }
+
     .square {
         left: 2.3vh !important;
         bottom: 6.1% !important;
         width: 29.3vh !important;
     }
+
     .circle {
         left: 3.5vh !important;
         width: 27.6vh !important;
@@ -228,57 +283,73 @@
         transform: scale(1.3, 1.3);
         bottom: 7.2vh !important;
     }
+
     .q-ml-xl {
         font-size: 50px;
     }
+
     #Speedo {
         font-size: 70px !important;
     }
+
     #FuelGaugeBackground {
         font-size: 36px;
     }
+
     #FuelGaugeValue {
         font-size: 36px;
     }
+
     #FuelGaugeIcon {
         font-size: 14px;
     }
+
     #Icons {
         font-size: 19.5px;
     }
+
     #speedometer {
         position: relative;
         left: 2.5vh !important;
     }
+
     #fuelgauge {
         position: relative;
         left: 6.3vh !important;
         bottom: 6.5vh !important;
     }
+
     #altitudegauge {
         position: relative;
         left: 11vh !important;
     }
+
     #seatbelt {
         position: relative;
         left: 4.8vh !important;
     }
+
     speed {
         font-size: 1.4vh !important;
     }
+
     speed:after {
         font-size: 0.7vh !important;
     }
+
     altitude {
         font-size: 1.4vh !important;
     }
+
     altitude:after {
         font-size: 0.7vh !important;
     }
+
     .square {
         left: 2.3vh !important;
         bottom: 6% !important;
     }
+
     .circle {
         left: 3.5vh !important;
         width: 27.6vh !important;
@@ -291,19 +362,23 @@
         position: relative;
         left: 2.5vh !important;
     }
+
     #fuelgauge {
         position: relative;
         left: 6.5vh !important;
         bottom: 5.7vh !important;
     }
+
     #seatbelt {
         position: relative;
         left: 6.5vh !important;
     }
+
     .square {
         left: 2.5vh !important;
         bottom: 6% !important;
     }
+
     .circle {
         left: 3.2vh !important;
         width: 27.6vh !important;
@@ -317,57 +392,73 @@
         transform: scale(1.2, 1.2);
         bottom: 7.4vh !important;
     }
+
     .q-ml-xl {
         font-size: 50px;
     }
+
     #Speedo {
         font-size: 70px !important;
     }
+
     #FuelGaugeBackground {
         font-size: 36px;
     }
+
     #FuelGaugeValue {
         font-size: 36px;
     }
+
     #FuelGaugeIcon {
         font-size: 14px;
     }
+
     #Icons {
         font-size: 19.5px;
     }
+
     #speedometer {
         position: relative;
         left: 2.5vh !important;
     }
+
     #fuelgauge {
         position: relative;
         left: 6.3vh !important;
         bottom: 6.9vh !important;
     }
+
     #altitudegauge {
         position: relative;
         left: 10vh !important;
     }
+
     #seatbelt {
         position: relative;
         left: 8vh !important;
     }
+
     speed {
         font-size: 1.6vh !important;
     }
+
     speed:after {
         font-size: 0.7vh !important;
     }
+
     altitude {
         font-size: 1.6vh !important;
     }
+
     altitude:after {
         font-size: 0.7vh !important;
     }
+
     .square {
         left: 2vh !important;
         bottom: 6% !important;
     }
+
     .circle {
         left: 2.7vh !important;
         width: 27.6vh !important;
@@ -381,57 +472,73 @@
         transform: scale(1, 1);
         bottom: 6.4vh !important;
     }
+
     .q-ml-xl {
         font-size: 50px;
     }
+
     #Speedo {
         font-size: 70px !important;
     }
+
     #FuelGaugeBackground {
         font-size: 36px;
     }
+
     #FuelGaugeValue {
         font-size: 36px;
     }
+
     #FuelGaugeIcon {
         font-size: 14px;
     }
+
     #Icons {
         font-size: 19.5px;
     }
+
     #speedometer {
         position: relative;
         left: 2.5vh !important;
     }
+
     #fuelgauge {
         position: relative;
         left: 6.6vh !important;
         bottom: 6.05vh !important;
     }
+
     #altitudegauge {
         position: relative;
         left: 10vh !important;
     }
+
     #seatbelt {
         position: relative;
         left: 8vh !important;
     }
+
     speed {
         font-size: 1.8vh !important;
     }
+
     speed:after {
         font-size: 0.8vh !important;
     }
+
     altitude {
         font-size: 1.8vh !important;
     }
+
     altitude:after {
         font-size: 0.8vh !important;
     }
+
     .square {
         left: 2.2vh !important;
         bottom: 6% !important;
     }
+
     .circle {
         left: 3.2vh !important;
         width: 27.6vh !important;
@@ -443,59 +550,75 @@
     .responsive {
         margin-left: 32vh !important;
         transform: scale(1, 1);
-        bottom: 6.9vh !important;
+        bottom: 2.9vh !important;
     }
+
     .q-ml-xl {
         font-size: 50px;
     }
+
     #Speedo {
         font-size: 70px !important;
     }
+
     #FuelGaugeBackground {
         font-size: 36px;
     }
+
     #FuelGaugeValue {
         font-size: 36px;
     }
+
     #FuelGaugeIcon {
         font-size: 14px;
     }
+
     #Icons {
         font-size: 19.5px;
     }
+
     #speedometer {
         position: relative;
         left: 2.5vh !important;
     }
+
     #fuelgauge {
         position: relative;
         left: 7.2vh !important;
-        bottom: 6.6vh !important;
+        bottom: 2.9vh !important;
     }
+
     #altitudegauge {
         position: relative;
         left: 11vh !important;
     }
+
     #seatbelt {
         position: relative;
-        left: -5.6vh !important;
+        left: 130.2vh !important;
     }
+
     speed {
         font-size: 2vh !important;
     }
+
     speed:after {
         font-size: 1.2vh !important;
     }
+
     altitude {
         font-size: 2vh !important;
     }
+
     altitude:after {
         font-size: 0.9vh !important;
     }
+
     .square {
         left: 2.5vh !important;
         bottom: 6% !important;
     }
+
     .circle {
         left: 3.7vh !important;
         width: 27.3vh !important;
@@ -509,57 +632,73 @@
         transform: scale(0.65, 0.65);
         bottom: 4.7vh !important;
     }
+
     .q-ml-xl {
         font-size: 50px;
     }
+
     #Speedo {
         font-size: 70px !important;
     }
+
     #FuelGaugeBackground {
         font-size: 36px;
     }
+
     #FuelGaugeValue {
         font-size: 36px;
     }
+
     #FuelGaugeIcon {
         font-size: 14px;
     }
+
     #Icons {
         font-size: 19.5px;
     }
+
     #speedometer {
         position: relative;
         left: 2.5vh !important;
     }
+
     #fuelgauge {
         position: relative;
         left: 8.6vh !important;
         bottom: 5.2vh !important;
     }
+
     #altitudegauge {
         position: relative;
         left: 11vh !important;
     }
+
     #seatbelt {
         position: relative;
         left: 8.5vh !important;
     }
+
     speed {
         font-size: 3vh !important;
     }
+
     speed:after {
         font-size: 1.4vh !important;
     }
+
     altitude {
         font-size: 3vh !important;
     }
+
     altitude:after {
         font-size: 1.4vh !important;
     }
+
     .square {
         left: 2.5vh !important;
         bottom: 6% !important;
     }
+
     .circle {
         left: 4vh !important;
         width: 27.6vh !important;
