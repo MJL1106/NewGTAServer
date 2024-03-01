@@ -346,21 +346,11 @@ RegisterNetEvent('qb-radialmenu:client:ChangeSeat', function(data)
     local Veh = GetVehiclePedIsIn(PlayerPedId())
     local IsSeatFree = IsVehicleSeatFree(Veh, data.id)
     local speed = GetEntitySpeed(Veh)
-    local HasHarnass = exports['qb-smallresources']:HasHarness()
-    if not HasHarnass then
-        local kmh = speed * 3.6
-        if IsSeatFree then
-            if kmh <= 100.0 then
-                SetPedIntoVehicle(PlayerPedId(), Veh, data.id)
-                QBCore.Functions.Notify(Lang:t("info.switched_seats", {seat = data.title}))
-            else
-                QBCore.Functions.Notify(Lang:t("error.vehicle_driving_fast"), 'error')
-            end
-        else
-            QBCore.Functions.Notify(Lang:t("error.seat_occupied"), 'error')
-        end
+    if IsSeatFree then
+        SetPedIntoVehicle(PlayerPedId(), Veh, data.id)
+        QBCore.Functions.Notify(Lang:t("info.switched_seats", {seat = data.title}))
     else
-        QBCore.Functions.Notify(Lang:t("error.race_harness_on"), 'error')
+        QBCore.Functions.Notify(Lang:t("error.seat_occupied"), 'error')
     end
 end)
 
