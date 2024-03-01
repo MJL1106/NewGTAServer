@@ -2,7 +2,7 @@ local QBCore = exports['qb-core']:GetCoreObject()
 
 CreateThread(function()
     -- BLIP
-    local blip = AddBlipForCoord(110.59, -1088.84, 29.3)
+    local blip = AddBlipForCoord(-753.08, -1047.95, 12.45)
     SetBlipSprite(blip, 473)
     SetBlipColour(blip, 3)
     SetBlipScale(blip, 0.6)
@@ -11,7 +11,7 @@ CreateThread(function()
     AddTextComponentString("Vehicle Rental")
     EndTextCommandSetBlipName(blip)
     -- QB TARGET
-    exports['qb-target']:AddBoxZone("CarRental", vector3(110.97, -1090.61, 29.3), 0.6, 0.6, {
+    exports['qb-target']:AddBoxZone("CarRental", vector3(-753.08, -1047.95, 12.45), 0.6, 0.6, {
         name = "CarRental",
         heading = 23.99,
         debugPoly = false,
@@ -54,7 +54,7 @@ RegisterNetEvent('qb-rentals:Client:RentVehicle', function(model)
     QBCore.Functions.TriggerCallback('qb-rentals:Server:Rent', function(canRent)
         if canRent then 
             -- SPAWN VEHICLE
-            local coords = vector4(121.32, -1081.9, 29.19, 0.02)
+            local coords = vector4(-750.87, -1044.83, 12.42, 299.21)
             QBCore.Functions.SpawnVehicle(model, function(veh)
                 SetEntityHeading(veh, coords.w)
                 exports['LegacyFuel']:SetFuel(veh, 100.0)

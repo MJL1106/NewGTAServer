@@ -15,14 +15,14 @@ Config.GenderNumbers = { -- No reason to touch these.
 
 Config.PedList = {
 	-- AIRLINES
-	{
-		model = `a_m_y_business_02`,
-		coords = vector4(110.97, -1090.61, 29.3, 23.99),
-		gender = 'male'
-	},
-	{
-		model = `ig_pilot`,
-		coords = vector4(1725.6, 3300.79, 41.22, 277.31),
-		gender = 'male'
-	}
+	-- {
+	-- 	model = `a_m_y_business_02`,
+	-- 	coords = vector4(110.97, -1090.61, 29.3, 23.99),
+	-- 	gender = 'male'
+	-- },
+	-- {
+	-- 	model = `ig_pilot`,
+	-- 	coords = vector4(1725.6, 3300.79, 41.22, 277.31),
+	-- 	gender = 'male'
+	-- }
 }

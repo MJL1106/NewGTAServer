@@ -231,14 +231,14 @@ Config.PedList = {
 
 
 
-	-- {
-	-- 	model = "mp_m_shopkeep_01",
-	-- 	coords = vector3(1165.0246582031,-324.23849487305,69.205039978027), --WEST MIRROR DR
-	-- 	heading = 90.0, 
-	-- 	gender = "male", 
-	--     isRendered = false,
-    --     ped = nil,
-    -- },
+	{
+		model = "a_m_y_business_02",
+		coords = vector3(-753.04, -1048.1, 12.44), --WEST MIRROR DR
+		heading = 303.87, 
+		gender = "male", 
+	    isRendered = false,
+        ped = nil,
+    },
 	
 	-- {
 	-- 	model = "mp_m_shopkeep_01",

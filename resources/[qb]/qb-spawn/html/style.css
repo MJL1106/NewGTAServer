@@ -3,20 +3,20 @@
 .container {
     font-family: 'Poppins', sans-serif;
 }
- 
+
 .spawn-locations {
     text-transform: uppercase;
     position: absolute;
     top: 10vh;
     left: 10vh;
-    background: linear-gradient(-45deg, #1c7e97, #418da0,#058bac,#058aac,#00ccff);
+    background: linear-gradient(-45deg, #442ec0, #3d2ec0, #312ec0, #2e38c0, #2e6dc0);
     background-size: 400% 400%;
     border-radius: .8vh;
     padding: 30px;
     border-top: 4px solid;
     border-bottom: 4px solid;
-    border-image: linear-gradient(var(--angle), #1c7e97, #418da0,#058bac,#058aac,#00ccff) 1;
-    animation:5s rotate linear infinite, shake-slow2 30s ease-in-out infinite;
+    border-image: linear-gradient(var(--angle), #442ec0, #3d2ec0, #312ec0, #2e38c0, #2e6dc0) 1;
+    animation: 5s rotate linear infinite, shake-slow2 30s ease-in-out infinite;
 }
 
 
@@ -30,7 +30,7 @@
 
 }
 
-.location > p {
+.location>p {
     position: relative;
     color: #ededed;
     text-align: center;
@@ -40,34 +40,34 @@
 
 .location:hover {
     border: 2px solid;
-    border-image: linear-gradient(var(--angle), #1c7e97, #418da0,#058bac,#058aac,#00ccff) 1;
-    animation: blinkxd 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite,5s rotate linear infinite, shake-slow2 30s ease-in-out infinite;
+    border-image: linear-gradient(var(--angle), #442ec0, #3d2ec0, #312ec0, #2e38c0, #2e6dc0) 1;
+    animation: blinkxd 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite, 5s rotate linear infinite, shake-slow2 30s ease-in-out infinite;
     background-color: rgba(0, 0, 0, 0);
     transition: 0.2s;
 }
 
 .selected {
     border: 3px solid;
-    border-image: linear-gradient(var(--angle), #1c7e97, #418da0,#058bac,#058aac,#00ccff) 1;
-    animation: blinkxd 5s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite,8s rotate linear infinite, shake-slow1 10s ease-in-out infinite;
+    border-image: linear-gradient(var(--angle), #442ec0, #3d2ec0, #312ec0, #2e38c0, #2e6dc0) 1;
+    animation: blinkxd 5s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite, 8s rotate linear infinite, shake-slow1 10s ease-in-out infinite;
     background-color: rgb(0, 0, 0, 0.3);
-    box-shadow: 0 0 10px #1c7e97 !important;
+    box-shadow: 0 0 10px#442ec0 !important;
 }
 
 .submit-spawn {
-    animation:gradient 10s ease infinite,8s rotate linear infinite;
+    animation: gradient 10s ease infinite, 8s rotate linear infinite;
     border-radius: 4px;
     width: 28vh;
     height: 4.5vh;
     margin-bottom: .75vh;
     transition: 0.2s;
     border-radius: .3vh;
-    box-shadow: 0 0 10px #1c7e97 !important;
-    background: linear-gradient(-45deg, #1c7e97, #418da0,#058bac,#058aac,#00ccff);
+    box-shadow: 0 0 10px #442ec0 !important;
+    background: linear-gradient(-45deg, #442ec0, #3d2ec0, #312ec0, #2e38c0, #2e6dc0);
     background-size: 400% 400%;
 }
 
-.submit-spawn > p {
+.submit-spawn>p {
     position: relative;
     color: white;
     text-align: center;
@@ -79,15 +79,15 @@
 }
 
 .submit-spawn:hover {
-    animation:0.4s rotate linear infinite,gradient 15s ease infinite;
+    animation: 0.4s rotate linear infinite, gradient 15s ease infinite;
 
-    border:2px solid black;
-    box-shadow: 0 0 30px #00ffe1 !important;
-    background-color: rgb(0, 238, 255);
+    border: 2px solid black;
+    box-shadow: 0 0 30px #2e6dc0 !important;
+    background-color: rgb(46, 109, 192);
     transition: 0.2s;
-    background: linear-gradient(-45deg, #1c7e97, #418da0,#058bac,#058aac,#00ccff);
+    background: linear-gradient(-45deg, #442ec0, #3d2ec0, #312ec0, #2e38c0, #2e6dc0);
     background-size: 400% 400%;
-    border-image: linear-gradient(var(--angle), #1c7e97, #418da0,#058bac,#058aac,#00ccff) 1;
+    border-image: linear-gradient(var(--angle), #442ec0, #3d2ec0, #312ec0, #2e38c0, #2e6dc0) 1;
 }
 
 #spawn-label {
@@ -101,7 +101,7 @@
     transition: 0.2s;
 }
 
-.loclabel > p {
+.loclabel>p {
     font-family: 'Poppins', sans-serif;
     letter-spacing: 1px;
     font-weight: bold;
@@ -112,32 +112,72 @@
 }
 
 
-@keyframes shake-slow{
-    0%{transform:translate(0, 0) rotate(0)}
-    15%{transform:translate(4px, 2px) rotate(-.1deg)}
-    30%{transform:translate(3px, -5px) rotate(0.5deg)}
-    50%{transform:translate(4px, -3px) rotate(-.5deg)}
-    70%{transform:translate(-3px, 3px) rotate(1.2deg)}
-    85%{transform:translate(-3px, 3px) rotate(1.2deg)}
-    100%{transform:translate(0, 0) rotate(0)}
+@keyframes shake-slow {
+    0% {
+        transform: translate(0, 0) rotate(0)
+    }
+
+    15% {
+        transform: translate(4px, 2px) rotate(-.1deg)
+    }
+
+    30% {
+        transform: translate(3px, -5px) rotate(0.5deg)
+    }
+
+    50% {
+        transform: translate(4px, -3px) rotate(-.5deg)
+    }
+
+    70% {
+        transform: translate(-3px, 3px) rotate(1.2deg)
+    }
+
+    85% {
+        transform: translate(-3px, 3px) rotate(1.2deg)
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(0)
+    }
 
 }
 
-@keyframes shake-slow2{
-    0%{transform:translate(0, 0) rotate(0) perspective(1600px) rotateY(30deg)}
-    15%{transform:translate(4px, 2px) rotate(-.1deg) perspective(1600px) rotateY(30deg)}
-    30%{transform:translate(3px, -5px) rotate(0.5deg) perspective(1600px) rotateY(30deg)}
-    50%{transform:translate(4px, -3px) rotate(-.5deg) perspective(1600px) rotateY(30deg)}
-    70%{transform:translate(-3px, 3px) rotate(1.2deg) perspective(1600px) rotateY(30deg)}
-    85%{transform:translate(-3px, 3px) rotate(1.2deg) perspective(1600px) rotateY(30deg)}
-    100%{transform:translate(0, 0) rotate(0) perspective(1600px) rotateY(30deg)}
+@keyframes shake-slow2 {
+    0% {
+        transform: translate(0, 0) rotate(0) perspective(1600px) rotateY(30deg)
+    }
+
+    15% {
+        transform: translate(4px, 2px) rotate(-.1deg) perspective(1600px) rotateY(30deg)
+    }
+
+    30% {
+        transform: translate(3px, -5px) rotate(0.5deg) perspective(1600px) rotateY(30deg)
+    }
+
+    50% {
+        transform: translate(4px, -3px) rotate(-.5deg) perspective(1600px) rotateY(30deg)
+    }
+
+    70% {
+        transform: translate(-3px, 3px) rotate(1.2deg) perspective(1600px) rotateY(30deg)
+    }
+
+    85% {
+        transform: translate(-3px, 3px) rotate(1.2deg) perspective(1600px) rotateY(30deg)
+    }
+
+    100% {
+        transform: translate(0, 0) rotate(0) perspective(1600px) rotateY(30deg)
+    }
 
 }
 
 @keyframes rotate {
-  to {
-    --angle: 360deg;
-  }
+    to {
+        --angle: 360deg;
+    }
 }
 
 @property --angle {
@@ -150,22 +190,26 @@
     0% {
         filter: brightness(0.75)
     }
+
     50% {
         filter: brightness(1.75)
     }
+
     100% {
         filter: brightness(0.75)
     }
 }
 
 @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
