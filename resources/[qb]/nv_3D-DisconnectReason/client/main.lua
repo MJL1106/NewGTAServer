@@ -122,7 +122,7 @@ end
 function CreateWait(source, name, reason, coords)
     Draw3DTextTimeout({
         xyz=coords,
-        timeout=60000,
+        timeout=15000,
         text={
             content= Config.Translation(source, name, reason),
             rgb = {255 , 255, 255},
