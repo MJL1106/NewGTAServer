@@ -12,13 +12,6 @@ Config.MenuItems = {
         icon = 'user',
         items = {
             {
-                id = 'givenum',
-                title = 'Give Contact Details',
-                icon = 'address-book',
-                type = 'client',
-                event = 'qb-phone:client:GiveContactDetails',
-                shouldClose = true
-            }, {
                 id = 'getintrunk',
                 title = 'Get In Trunk',
                 icon = 'car',
@@ -33,25 +26,11 @@ Config.MenuItems = {
                 event = 'qb-drugs:client:cornerselling',
                 shouldClose = true
             }, {
-                id = 'togglehotdogsell',
-                title = 'Hotdog Selling',
-                icon = 'hotdog',
-                type = 'client',
-                event = 'qb-hotdogjob:client:ToggleSell',
-                shouldClose = true
-            }, {
                 id = 'interactions',
                 title = 'Interaction',
                 icon = 'triangle-exclamation',
                 items = {
                     {
-                        id = 'handcuff',
-                        title = 'Cuff',
-                        icon = 'user-lock',
-                        type = 'client',
-                        event = 'police:client:CuffPlayerSoft',
-                        shouldClose = true
-                    }, {
                         id = 'playerinvehicle',
                         title = 'Put In Vehicle',
                         icon = 'car-side',
