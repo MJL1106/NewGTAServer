@@ -128,6 +128,16 @@ QBCore.Functions.CreateUseableItem("blueprint_vintage", function(source)
         end
     end
 end)
+QBCore.Functions.CreateUseableItem("blueprint_pistolext", function(source)
+    local Player = QBCore.Functions.GetPlayer(source)
+    if Player.Functions.GetItemByName("blueprint_pistolext") then
+        local craftItem = "pistol_extendedclip"
+        local addedBlueprint = blueprintUsed(source, craftItem)
+        if addedBlueprint then
+            Player.Functions.RemoveItem("blueprint_pistolext", 1)
+        end
+    end
+end)
 
 RegisterNetEvent("glow_crafting_sv:getWorkBenchData", function()
     local src = source

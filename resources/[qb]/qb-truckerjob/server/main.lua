@@ -32,6 +32,8 @@ RegisterNetEvent('qb-trucker:server:01101110', function(drops)
     local Player = QBCore.Functions.GetPlayer(src)
     drops = tonumber(drops)
     local bonus = 0
+    local rareItem = 'blueprint_pistolext'
+    local chance = math.random(1,1000)
 
     if drops >= 5 then
         if Config.TruckerJobBonus < 0 then Config.TruckerJobBonus = 0 end
@@ -42,6 +44,10 @@ RegisterNetEvent('qb-trucker:server:01101110', function(drops)
     Player.Functions.AddJobReputation(drops)
     Player.Functions.AddMoney("bank", payment, "trucker-salary")
     TriggerClientEvent('QBCore:Notify', src, Lang:t("success.you_earned", {value = payment}), 'success')
+    if chance <= 50 then
+        Player.Functions.AddItem('blueprint_pistolext', 1, false)
+        TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items['blueprint_pistolext'], 'add', 1)
+    end
 end)
 
 RegisterNetEvent('qb-trucker:server:nano', function()
