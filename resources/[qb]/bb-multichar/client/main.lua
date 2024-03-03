@@ -25,6 +25,13 @@ CreateThread(function()
 	end
 end)
 
+-- Client-side override
+RegisterCommand("seat", function(source, args, rawCommand)
+    -- Notification or empty block to disable the command
+    QBCore.Functions.Notify("You don't have access to this command", "error")
+end, false)
+
+
 RegisterNetEvent('bb-multichar:client:start', function() createPeds() end)
 
 function createPeds()
