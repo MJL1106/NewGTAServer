@@ -326,6 +326,17 @@ QBShared.Jobs = {
             },
         },
 	},
+    ['electrical'] = {
+		label = 'Electrical',
+		defaultDuty = true,
+		offDutyPay = false,
+		grades = {
+            ['0'] = {
+                name = 'Electrician',
+                payment = 150
+            },
+        },
+	},
 	['tow'] = {
 		label = 'Towing',
 		defaultDuty = true,

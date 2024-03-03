@@ -3,7 +3,7 @@ local availableJobs = {
     ["trucker"] = "Trucker",
     ["taxi"] = "Taxi",
     ["tow"] = "Tow Truck",
-    ["reporter"] = "News Reporter",
+    ["electrical"] = "Electrician",
     ["garbage"] = "Garbage Collector",
     ["bus"] = "Bus Driver",
 }
