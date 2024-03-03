@@ -201,7 +201,7 @@ giveJob = function()
             exports['qb-target']:AddBoxZone(zoneName, jobLoc, 2, 2, {
                 name = zoneName,
                 heading = 100,
-                debugPoly = true, -- This will draw the debug polygon only when inside the zone
+                debugPoly = false, -- This will draw the debug polygon only when inside the zone
                 minZ = jobLoc.z - 1,
                 maxZ = jobLoc.z + 1,
                 }, {
@@ -337,7 +337,7 @@ CreateThread(function()
     exports['qb-target']:AddBoxZone('SpawnCar'..math.random(1,100), vector3(729.50396728516,-1961.6475830078,29.287824630737), 1, 1, {
     name = 'SpawnCar'..math.random(1,100),
     heading = 132.94,
-    debugPoly = true,
+    debugPoly = false,
     minZ = 28.80846,
     maxZ = 30.20846,
     }, {
@@ -360,7 +360,7 @@ CreateThread(function()
     exports['qb-target']:AddBoxZone('ToggleDuty'..math.random(1,100), vector3(729.4091796875,-1974.2263183594,29.292043685913), 1, 1, {
     name = 'ToggleDuty'..math.random(1,100),
     heading = 132.94,
-    debugPoly = true,
+    debugPoly = false,
     minZ = 28.80846,
     maxZ = 30.20846,
     }, {
