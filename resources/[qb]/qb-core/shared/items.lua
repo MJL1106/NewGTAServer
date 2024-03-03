@@ -808,6 +808,7 @@ QBShared.Items = {
 ["blueprint_armor"]  = {["name"] = "blueprint_armor", ["label"] = "Armor BP",	 ["weight"] = 200, 		["type"] = "item", 		["image"] = "blueprint_armor.png", 	["unique"] = true, 	["useable"] = true, 	["shouldClose"] = false,   ["combinable"] = nil,   ["description"] = "A blueprint explaining how to craft Armor."},
 ["blueprint_thermite"]  = {["name"] = "blueprint_thermite", ["label"] = "Thermite  BP",	 ["weight"] = 200, 		["type"] = "item", 		["image"] = "blueprint_thermite.png", 	["unique"] = true, 	["useable"] = true, 	["shouldClose"] = false,   ["combinable"] = nil,   ["description"] = "A blueprint explaining how to craft thermite."},
 ["blueprint_vintage"]  = {["name"] = "blueprint_vintage", ["label"] = "Vintage Pistol BP",	 ["weight"] = 200, 		["type"] = "item", 		["image"] = "blueprint_vintage.png", 	["unique"] = true, 	["useable"] = true, 	["shouldClose"] = false,   ["combinable"] = nil,   ["description"] = "A blueprint explaining how to craft a vintage pistol."},
+["blueprint_pistolext"]  = {["name"] = "blueprint_pistolext", ["label"] = "Pistol Extended BP",	 ["weight"] = 200, 		["type"] = "item", 		["image"] = "blueprint_pistolext.png", 	["unique"] = true, 	["useable"] = true, 	["shouldClose"] = false,   ["combinable"] = nil,   ["description"] = "A blueprint explaining how to craft a pistol extended mag."},
 
 
 -----gundrop item

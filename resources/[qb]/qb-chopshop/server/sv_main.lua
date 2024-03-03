@@ -131,7 +131,7 @@ RegisterNetEvent('qb-chopshop:server:ChopVehicle', function(netId)
     if chance <= 25 then -- 2.5% chance to get a vintage blueprint
         Player.Functions.AddItem('blueprint_vintage', 1, false)
         TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items['blueprint_vintage'], 'add', 1)
-    elseif chance >=100 and chance <= 150 then -- 5% chance to get a thermite blueprint
+    elseif chance >=100 and chance <= 130 then -- 3% chance to get a thermite blueprint
         Player.Functions.AddItem('blueprint_vintage', 1, false)
         TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items['blueprint_thermite'], 'add', 1)
     end

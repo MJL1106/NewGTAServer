@@ -239,15 +239,28 @@ Config.PedList = {
 	    isRendered = false,
         ped = nil,
     },
+
+			----------------------------------------
+	---     Electrical Peds     ---
+	----------------------------------------
 	
-	-- {
-	-- 	model = "mp_m_shopkeep_01",
-	-- 	coords = vector3(-706.06341552734,-914.91168212891,19.215585708618), --PALOMINO AVE
-	-- 	heading = 90.0, 
-	-- 	gender = "male", 
-	--     isRendered = false,
-    --     ped = nil,
-    -- },
+	{
+		model = "mp_m_shopkeep_01",
+		coords = vector3(729.50396728516,-1961.6475830078,29.287824630737), --PALOMINO AVE
+		heading = -90.0, 
+		gender = "male", 
+	    isRendered = false,
+        ped = nil,
+    },
+
+	{
+		model = "mp_m_shopkeep_01",
+		coords = vector(729.4091796875,-1974.2263183594,29.292043685913), --PALOMINO AVE
+		heading = -90.0, 
+		gender = "male", 
+	    isRendered = false,
+        ped = nil,
+    },
 	
 	-- {
 	-- 	model = "mp_m_shopkeep_01",

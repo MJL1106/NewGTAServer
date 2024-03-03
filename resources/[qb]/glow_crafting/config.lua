@@ -134,4 +134,16 @@ Config.blueprintRecipes = {
         },
         blueprintImage = "https://cfx-nui-qb-inventory/html/images/blueprint_vintage.png"
     },
+    pistol_extendedclip = {
+        item = "pistol_extendedclip",
+        label = "Pistol Extended clip",
+        image = "https://cfx-nui-qb-inventory/html/images/pistol_extendedclip.png",
+        isAttachment = false,
+        points = 1,
+        components = {
+            {item = "iron", label = "Iron", amount = 10, image = "https://cfx-nui-qb-inventory/html/images/iron.png"},
+            {item = "plastic", label = "Plastic", amount = 15, image = "https://cfx-nui-qb-inventory/html/images/plastic.png"},
+        },
+        blueprintImage = "https://cfx-nui-qb-inventory/html/images/blueprint_pistolext.png"
+    },
 }
