@@ -447,31 +447,17 @@ RegisterNetEvent('inventory:client:OpenInventory', function(PlayerAmmo, inventor
         if other then
             currentOtherInventory = other.name
         end
-        QBCore.Functions.TriggerCallback('inventory:server:ConvertQuality', function(data)
-            inventory = data.inventory
-            other = data.other
-            SendNUIMessage({
-                action = "open",
-                inventory = inventory,
-                slots = Config.MaxInventorySlots,
-                other = other,
-                maxweight = Config.MaxInventoryWeight,
-                Ammo = PlayerAmmo,
-                maxammo = Config.MaximumAmmoValues,
-            })
-            inInventory = true
-        end,inventory,other)
+        SendNUIMessage({
+            action = "open",
+            inventory = inventory,
+            slots = Config.MaxInventorySlots,
+            other = other,
+            maxweight = Config.MaxInventoryWeight,
+            Ammo = PlayerAmmo,
+            maxammo = Config.MaximumAmmoValues,
+        })
+        inInventory = true
     end
-end)
-
-RegisterNetEvent('inventory:client:UpdateOtherInventory', function(items, isError)
-    SendNUIMessage({
-        action = "update",
-        inventory = items,
-        maxweight = Config.MaxInventoryWeight,
-        slots = Config.MaxInventorySlots,
-        error = isError,
-    })
 end)
 
 RegisterNetEvent('inventory:client:UpdatePlayerInventory', function(isError)
@@ -654,10 +640,10 @@ end)
 
 RegisterNetEvent('qb-inventory:client:giveAnim', function()
     if IsPedInAnyVehicle(PlayerPedId(), false) then
-        return
+	return
     else
-        LoadAnimDict('mp_common')
-        TaskPlayAnim(PlayerPedId(), 'mp_common', 'givetake1_b', 8.0, 1.0, -1, 16, 0, 0, 0, 0)
+	LoadAnimDict('mp_common')
+	TaskPlayAnim(PlayerPedId(), 'mp_common', 'givetake1_b', 8.0, 1.0, -1, 16, 0, 0, 0, 0)
     end
 end)
 
