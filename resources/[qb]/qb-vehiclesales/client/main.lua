@@ -82,19 +82,23 @@ end
 local function openSellContract(bool)
     local pData = QBCore.Functions.GetPlayerData()
 
-    SetNuiFocus(bool, bool)
-    SendNUIMessage({
-        action = "sellVehicle",
-        showTakeBackOption = false,
-        bizName = Config.Zones[Zone].BusinessName,
-        sellerData = {
-            firstname = pData.charinfo.firstname,
-            lastname = pData.charinfo.lastname,
-            account = pData.charinfo.account,
-            phone = pData.charinfo.phone
-        },
-        plate = QBCore.Functions.GetPlate(GetVehiclePedIsUsing(PlayerPedId()))
-    })
+    if pData.job.name == "carsales" then
+        SetNuiFocus(bool, bool)
+        SendNUIMessage({
+            action = "sellVehicle",
+            showTakeBackOption = false,
+            bizName = Config.Zones[Zone].BusinessName,
+            sellerData = {
+                firstname = pData.charinfo.firstname,
+                lastname = pData.charinfo.lastname,
+                account = pData.charinfo.account,
+                phone = pData.charinfo.phone
+            },
+            plate = QBCore.Functions.GetPlate(GetVehiclePedIsUsing(PlayerPedId()))
+        })
+    else
+        QBCore.Functions.Notify("You do not have the required job to sell vehicles.", "error")
+    end
 end
 
 local function openBuyContract(sellerData, vehicleData)
@@ -177,6 +181,21 @@ local function CreateZones()
         })
 
         SellSpot:onPlayerInOut(function(isPointInside)
+            local pData = QBCore.Functions.GetPlayerData() -- Assuming this fetches up-to-date data which includes job and duty status
+            local playerJob = pData.job.name
+            local onDuty = pData.job.onduty
+        
+            -- Assuming 'Zone' and 'k' are properly defined in your context, 
+            -- and 'k' represents the specific zone for car sales
+            if playerJob == "carsales" then -- Ensure this matches your job identifier for car sales
+                if isPointInside and Zone ~= k and not onDuty then
+                    -- Player is entering the polyzone, is not on duty, and their job is car sales
+                    TriggerServerEvent('QBCore:ToggleDuty')
+                elseif not isPointInside and onDuty then
+                    -- Player is exiting the polyzone and is currently on duty
+                    TriggerServerEvent('QBCore:ToggleDuty')
+                end
+            end
             if isPointInside and Zone ~= k then
                 Zone = k
                 QBCore.Functions.TriggerCallback('qb-occasions:server:getVehicles', function(vehicles)

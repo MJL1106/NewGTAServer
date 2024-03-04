@@ -220,6 +220,26 @@ QBShared.Jobs = {
             },
         },
 	},
+    ['carsales'] = {
+		label = 'Vehicle Reseller',
+		defaultDuty = true,
+		offDutyPay = false,
+		grades = {
+			['0'] = {
+                name = 'Valuer',
+                payment = 2000
+            },
+			['1'] = {
+                name = 'Manager',
+                payment = 2550
+            },
+			['2'] = {
+                name = 'Owner',
+				isboss = true,
+                payment = 3800
+            },
+        },
+	},
 	['mechanic'] = {
 		label = 'Mechanic',
         type = "mechanic",

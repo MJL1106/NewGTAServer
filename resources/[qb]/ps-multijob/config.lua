@@ -3,7 +3,7 @@ Config = Config or {}
 -- Side of the screen where you want the ui to be on. Can either be "left" or "right"
 Config.Side = "right"
 
-Config.MaxJobs = 6
+Config.MaxJobs = 20
 Config.IgnoredJobs = {
 	["unemployed"] = true,
 }
@@ -26,6 +26,7 @@ Config.WhitelistJobs = {
 	["uwu"] = true,
 	["judge"] = true,
 	["lawyer"] = true,
+	["carsales"] = true,
 }
 
 Config.Descriptions = {
@@ -45,6 +46,7 @@ Config.Descriptions = {
 	["vineyard"] = "Get them vines",
 	["hotdog"] = "Sell them glizzys",
 	["electrical"] = "Fix them poles",
+	["carsales"] = "Car resales",
 }
 
 -- Change the icons to any free font awesome icon, also add other jobs your server might have to the list
@@ -66,4 +68,5 @@ Config.FontAwesomeIcons = {
 	["vineyard"] = "fa-solid fa-wine-bottle",
 	["hotdog"] = "fa-solid fa-hotdog",
 	["electrical"] = "fa-solid fa-bolt",
+	["carsales"] = "fa-solid fa-cards",
 }
