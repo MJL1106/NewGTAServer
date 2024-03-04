@@ -94,7 +94,7 @@ Config = {
 		damages = true,					-- Makes jim-mechanic automatically handle extra damages instead of needing an edit to vehfailure
 		repairKits = false,				-- Takes control of repairkit and advancedrepairkit
 		fixCommand = true,				-- takes control of /fix command
-		PreventRoll = true,			-- takes control of preventing rolling your car back over when upside down
+		PreventRoll = false,			-- takes control of preventing rolling your car back over when upside down
 		increaseEngDamage = true,		-- enabling this adds extra damage based on what the body damage has just taken
 
 		damageLimits = {
