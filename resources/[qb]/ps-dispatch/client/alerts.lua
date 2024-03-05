@@ -159,9 +159,8 @@ local function PrisonBreak()
 end
 exports('PrisonBreak', PrisonBreak)
 
-local function StoreRobbery(camId)
-    local coords = GetEntityCoords(cache.ped)
-
+local function StoreRobbery(camId, storeCoords)
+    local coords = storeCoords
     local dispatchData = {
         message = locale('storerobbery'),
         codeName = 'storerobbery',
@@ -180,8 +179,8 @@ local function StoreRobbery(camId)
 end
 exports('StoreRobbery', StoreRobbery)
 
-local function FleecaBankRobbery(camId)
-    local coords = GetEntityCoords(cache.ped)
+local function FleecaBankRobbery(camId, bankCoords)
+    local coords = bankCoords
 
     local dispatchData = {
         message = locale('fleecabank'),
@@ -201,8 +200,8 @@ local function FleecaBankRobbery(camId)
 end
 exports('FleecaBankRobbery', FleecaBankRobbery)
 
-local function PaletoBankRobbery(camId)
-    local coords = GetEntityCoords(cache.ped)
+local function PaletoBankRobbery(camId,bankCoords)
+    local coords = bankCoords
 
     local dispatchData = {
         message = locale('paletobank'),
@@ -222,8 +221,8 @@ local function PaletoBankRobbery(camId)
 end
 exports('PaletoBankRobbery', PaletoBankRobbery)
 
-local function PacificBankRobbery(camId)
-    local coords = GetEntityCoords(cache.ped)
+local function PacificBankRobbery(camId, bankCoords)
+    local coords = bankCoords
 
     local dispatchData = {
         message = locale('pacificbank'),
@@ -243,8 +242,8 @@ local function PacificBankRobbery(camId)
 end
 exports('PacificBankRobbery', PacificBankRobbery)
 
-local function VangelicoRobbery(camId)
-    local coords = GetEntityCoords(cache.ped)
+local function VangelicoRobbery(camId,jewCoords)
+    local coords = jewCoords
 
     local dispatchData = {
         message = locale('vangelico'),

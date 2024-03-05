@@ -250,25 +250,26 @@ RegisterNetEvent('qb-storerobbery:client:robberyCall', function(type, key, stree
             cameraId = Config.Registers[key].camId
         end
         PlaySound(-1, "Lose_1st", "GTAO_FM_Events_Soundset", 0, 0, 1)
-        TriggerServerEvent("dispatch:server:notify",{
-            dispatchcodename = "storerobbery", -- has to match the codes in sv_dispatchcodes.lua so that it generates the right blip
-            dispatchCode = "10-90",
-            firstStreet = locationInfo,
-            gender = gender,
-            camId = cameraId,
-            model = nil,
-            plate = nil,
-            priority = 2, -- priority
-            firstColor = nil,
-            automaticGunfire = false,
-            origin = {
-                x = coords.x,
-                y = coords.y,
-                z = coords.z,
-            },
-            dispatchMessage = "Store Robbery", -- message
-            job = {"police"} -- jobs that will get the alerts
-        })
+        -- TriggerServerEvent("dispatch:server:notify",{
+        --     dispatchcodename = "storerobbery", -- has to match the codes in sv_dispatchcodes.lua so that it generates the right blip
+        --     dispatchCode = "10-90",
+        --     firstStreet = locationInfo,
+        --     gender = gender,
+        --     camId = cameraId,
+        --     model = nil,
+        --     plate = nil,
+        --     priority = 2, -- priority
+        --     firstColor = nil,
+        --     automaticGunfire = false,
+        --     origin = {
+        --         x = coords.x,
+        --         y = coords.y,
+        --         z = coords.z,
+        --     },
+        --     dispatchMessage = "Store Robbery", -- message
+        --     job = {"police"} -- jobs that will get the alerts
+        -- })
+        exports['ps-dispatch']:StoreRobbery(cameraId,coords)
         local transG = 250
         local blip = AddBlipForCoord(coords.x, coords.y, coords.z)
         SetBlipSprite(blip, 458)
