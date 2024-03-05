@@ -5,7 +5,7 @@ Config = {
     Dealers = {},
     UseTarget =  false,
     -- GetConvar('UseTarget', 'false') == 'true', -- Use qb-target interactions (don't change this, go to your server.cfg and add setr UseTarget true)
-    PoliceCallChance = 99, --in percentage (if 99, theres the 99% to call the police)
+    PoliceCallChance = 18, --in percentage (if 99, theres the 99% to call the police)
 
     -- Shop Config
     Products = {
@@ -118,7 +118,7 @@ Config = {
         },
         ["weed_amnesia"] = {
             min = 20,
-            max = 70,
+            max = 50,
         },
         ["weed_purple-haze"] = {
             min = 20,
@@ -126,27 +126,27 @@ Config = {
         },
         ["weed_ak47"] = {
             min = 20,
-            max = 70,
+            max = 50,
         },
         ["coke_brick"] = {
+            min = 130,
+            max = 170,
+        },
+        ["heroin"] = {
+            min = 50,
+            max = 90,
+        },
+        ["lsd"] = {
             min = 190,
             max = 250,
         },
-        ["heroin"] = {
-            min = 130,
-            max = 180,
-        },
-        ["lsd"] = {
-            min = 100,
-            max = 150,
-        },
         ["meth"] = {
-            min = 110,
-            max = 160,
+            min = 140,
+            max = 190,
         },
         ["weed_skunk"] = {
             min = 20,
-            max = 70,
+            max = 60,
         },
         ["oxy"] = {
             min = 3,

@@ -3,7 +3,7 @@ Config = {}
 
 -- Coords for all safezones
 Config.zones = {
-	{ ['x'] = 300, ['y'] = -589.22, ['z'] = 43.28},
+	{ ['x'] = 315.18, ['y'] = -589.97, ['z'] = 43.28},
 }
 
 

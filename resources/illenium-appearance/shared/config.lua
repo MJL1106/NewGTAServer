@@ -69,9 +69,9 @@ Config.OnDutyOnlyClothingRooms = false -- Set to `true` to make the clothing roo
 
 Config.BossManagedOutfits = true -- Allows Job / Gang bosses to manage their own job / gang outfits
 
-Config.refreshskinCooldown = 0
+Config.refreshskinCooldown = 5
 
-Config.AutomaticFade = false -- Enables automatic fading and hides the Fade section from Hair
+Config.AutomaticFade = true -- Enables automatic fading and hides the Fade section from Hair
 
 -- ACE Permissions Config
 Config.EnableACEPermissions = false
