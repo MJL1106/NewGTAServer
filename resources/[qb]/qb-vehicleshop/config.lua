@@ -109,7 +109,7 @@ Config.Shops = {
                 chosenVehicle = 'escaladeprime'
             },
             [5] = {
-                coords = vector4(143.37, -165.09, 53.6, 22.89),
+                coords = vector4(143.37, -165.09, 54.16, 22.89),
                 defaultVehicle = 'scubieblob',
                 chosenVehicle = 'scubieblob'
             },
