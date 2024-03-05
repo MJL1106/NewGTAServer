@@ -308,8 +308,8 @@ local function DrugSale()
     local coords = GetEntityCoords(cache.ped)
 
     local dispatchData = {
-        message = locale('drugsell'),
-        codeName = 'suspicioushandoff',
+        message = locale('susactivity'),
+        codeName = 'Suspicious Activity',
         code = '10-13',
         icon = 'fas fa-tablets',
         priority = 2,

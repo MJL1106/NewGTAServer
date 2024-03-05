@@ -708,7 +708,7 @@ local function InCooldown()
 end
 
 RegisterNetEvent("illenium-appearance:client:refreshskin", function(bypassChecks)
-    if not bypassChecks and InCooldown() or Framework.CheckPlayerMeta() or cache.vehicle or IsPedFalling(cache.ped) then
+    if not bypassChecks and InCooldown() or Framework.CheckPlayerMeta() or IsPedFalling(cache.ped) then
         lib.notify({
             title = _L("commands.refreshskin.failure.title"),
             description = _L("commands.refreshskin.failure.description"),
