@@ -1,5 +1,6 @@
 local totalThermiteCompleted = 0
 local copsCalled = false
+local bankPacLoc = Config.PacificBank['coords']
 
 RegisterNetEvent('qb-bankrobbery:pacific:thermitedoor', function()
     local ped = PlayerPedId()
@@ -102,14 +103,14 @@ RegisterNetEvent('qb-bankrobbery:pacific:hacktype', function()
 
                                 
                                 if not copsCalled then
-                                    local s1, s2 = GetStreetNameAtCoord(coords.x, coords.y, coords.z)
+                                    local s1, s2 = GetStreetNameAtCoord(bankPacLoc.x, bankPacLoc.y, bankPacLoc.z)
                                     local street1 = GetStreetNameFromHashKey(s1)
                                     local street2 = GetStreetNameFromHashKey(s2)
                                     local streetLabel = street1
                                     if street2 ~= nil then
                                         streetLabel = streetLabel .. ' ' .. street2
                                     end
-                                    TriggerServerEvent('qb-bankrobbery:server:callCops', 'pacific', 0, streetLabel, coords)
+                                    TriggerServerEvent('qb-bankrobbery:server:callCops', 'pacific', 0, streetLabel, bankPacLoc)
                                     copsCalled = true
                                 end
                             end
@@ -130,14 +131,14 @@ RegisterNetEvent('qb-bankrobbery:pacific:hacktype', function()
                                 TriggerServerEvent('qb-doorlock:server:updateState', 'PacificMainEntrance', false, false, false, true, false, false)
                                 QBCore.Functions.Notify(Config.Notify["HackerSuccess"], 'error', 4500)
                                 if not copsCalled then
-                                    local s1, s2 = GetStreetNameAtCoord(coords.x, coords.y, coords.z)
+                                    local s1, s2 = GetStreetNameAtCoord(bankPacLoc.x, bankPacLoc.y, bankPacLoc.z)
                                     local street1 = GetStreetNameFromHashKey(s1)
                                     local street2 = GetStreetNameFromHashKey(s2)
                                     local streetLabel = street1
                                     if street2 ~= nil then
                                         streetLabel = streetLabel .. ' ' .. street2
                                     end
-                                    TriggerServerEvent('qb-bankrobbery:server:callCops', 'pacific', 0, streetLabel, coords)
+                                    TriggerServerEvent('qb-bankrobbery:server:callCops', 'pacific', 0, streetLabel, bankPacLoc)
                                     copsCalled = true
                                 end
                             end

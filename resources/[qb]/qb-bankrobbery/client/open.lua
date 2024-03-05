@@ -6,7 +6,7 @@ RegisterNetEvent('qb-bankrobbery:client:robberyCall', function(type, key, street
             cameraId = Config.FleecaBanks[key]['camId']
             bank = 'Fleeca'
             PlaySound(-1, 'Lose_1st', 'GTAO_FM_Events_Soundset', 0, 0, 1)
-            exports['ps-dispatch']:FleecaBankRobbery(cameraId)
+            exports['ps-dispatch']:FleecaBankRobbery(cameraId,coords)
         elseif type == 'paleto' then
             cameraId = Config.PaletoBank['camId']
             bank = 'Blaine County Savings'
@@ -17,7 +17,7 @@ RegisterNetEvent('qb-bankrobbery:client:robberyCall', function(type, key, street
             PlaySound(-1, 'Lose_1st', 'GTAO_FM_Events_Soundset', 0, 0, 1)
             Wait(100)
             PlaySoundFrontend( -1, 'Beep_Red', 'DLC_HEIST_HACKING_SNAKE_SOUNDS', 1 )
-            exports['ps-dispatch']:PaletoBankRobbery(camId)
+            exports['ps-dispatch']:PaletoBankRobbery(camId,coords)
         elseif type == 'pacific' then
             cameraId = Config.PacificBank['camId']
             bank = 'Pacific Standard Bank'
@@ -28,7 +28,7 @@ RegisterNetEvent('qb-bankrobbery:client:robberyCall', function(type, key, street
             PlaySound(-1, 'Lose_1st', 'GTAO_FM_Events_Soundset', 0, 0, 1)
             Wait(100)
             PlaySoundFrontend( -1, 'Beep_Red', 'DLC_HEIST_HACKING_SNAKE_SOUNDS', 1 )
-            exports['ps-dispatch']:PacificBankRobbery(camId)
+            exports['ps-dispatch']:PacificBankRobbery(camId,coords)
         end
         local transG = 250
         local blip = AddBlipForCoord(coords.x, coords.y, coords.z)

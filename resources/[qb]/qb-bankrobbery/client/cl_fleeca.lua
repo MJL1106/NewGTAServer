@@ -364,6 +364,7 @@ RegisterNetEvent('qb-bankrobbery:UseBankLaptop', function(colour, laptopData)
                         QBCore.Functions.TriggerCallback('qb-bankrobbery:server:getCops', function(CurrentCops)
                             if CurrentCops >= Config.MinimumFleecaPolice then
                                 if not Config.FleecaBanks[closestBank]['isOpened'] then
+                                    local bankCoords = Config.FleecaBanks[closestBank]['coords']
                                     SetEntityHeading(ped, Config.FleecaBanks[closestBank]['coords'].w)
                                     QBCore.Functions.Progressbar('hack_gate', 'Connecting the laptop..', math.random(5000, 10000), false, true, {
                                         disableMovement = true,
@@ -380,14 +381,14 @@ RegisterNetEvent('qb-bankrobbery:UseBankLaptop', function(colour, laptopData)
                                         TriggerServerEvent('qb-bankrobbery:server:RemoveLaptop', 'laptop_green')
                                         TriggerEvent('qb-bankrobbery:LaptopFleeca', closestBank)
                                         if not copsCalled then
-                                            local s1, s2 = GetStreetNameAtCoord(pos.x, pos.y, pos.z)
+                                            local s1, s2 = GetStreetNameAtCoord(bankCoords.x, bankCoords.y, bankCoords.z)
                                             local street1 = GetStreetNameFromHashKey(s1)
                                             local street2 = GetStreetNameFromHashKey(s2)
                                             local streetLabel = street1
                                             if street2 ~= nil then
                                                 streetLabel = streetLabel .. ' ' .. street2
                                             end
-                                            TriggerServerEvent('qb-bankrobbery:server:callCops', 'small', closestBank, streetLabel, pos)
+                                            TriggerServerEvent('qb-bankrobbery:server:callCops', 'small', closestBank, streetLabel, bankCoords)
                                             copsCalled = true
                                         end
                                     end, function() -- Cancel

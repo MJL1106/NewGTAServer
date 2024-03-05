@@ -122,16 +122,16 @@ RegisterNetEvent('qb-bankrobbery:paleto:thermitedoor', function()
                                 Wait(3000)
                                 StopParticleFxLooped(effect, 0)
                                 DeleteObject(thermal_charge)
-
+                                local bankLoc = Config.PaletoBank['coords']
                                 if not copsCalled then
-                                    local s1, s2 = GetStreetNameAtCoord(coords.x, coords.y, coords.z)
+                                    local s1, s2 = GetStreetNameAtCoord(bankLoc.x, bankLoc.y, bankLoc.z)
                                     local street1 = GetStreetNameFromHashKey(s1)
                                     local street2 = GetStreetNameFromHashKey(s2)
                                     local streetLabel = street1
                                     if street2 ~= nil then
                                         streetLabel = streetLabel .. ' ' .. street2
                                     end
-                                    TriggerServerEvent('qb-bankrobbery:server:callCops', 'paleto', 0, streetLabel, coords)
+                                    TriggerServerEvent('qb-bankrobbery:server:callCops', 'paleto', 0, streetLabel, bankLoc)
                                     copsCalled = true
                                 end
 
