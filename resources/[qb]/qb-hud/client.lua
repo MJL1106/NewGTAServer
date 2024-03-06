@@ -1183,7 +1183,6 @@ Citizen.CreateThread(function()
             local selectedgear = getSelectedGear()
             local gearlol = getinfo(selectedgear)
             --print("RPM: " .. rpm)  -- Debugging line
-
             SendNUIMessage({
                 rpm = rpmlol,
                 gear = gearlol
