@@ -25,3 +25,20 @@
 [06:26:01][MONITOR] Restarting server (resource "WC_Male_Without_Brands" failed to start within the 120s time limit).
 [06:29:40][MONITOR] Restarting server (resource "WC_Male_Without_Brands" failed to start within the 120s time limit).
 [06:33:06][MONITOR] Restarting server (server close detected).
+
+================================================================
+======== txAdmin v6.0.2 atop fxserver 7290 Starting - 3/6/2024, 6:35:46 AM
+================================================================
+[06:36:11][mjl1106] logged in from 127.0.0.1 via citizenfx
+[06:40:19][MONITOR] Restarting server (resource "WC_Female_Without_Brands" failed to start within the 120s time limit).
+[06:43:03][MONITOR] Restarting server (resource "WC_Female_Without_Brands" failed to start within the 120s time limit).
+[06:45:47][MONITOR] Restarting server (resource "WC_Female_Without_Brands" failed to start within the 120s time limit).
+[06:48:14][MONITOR] Restarting server (resource "WC_Female_Without_Brands" failed to start within the 120s time limit).
+[06:51:20][MONITOR] Restarting server (resource "WC_Male_Without_Brands" failed to start within the 120s time limit).
+[06:56:16][MONITOR] Restarting server (resource "WC_Male_Without_Brands" failed to start within the 120s time limit).
+[07:00:46][MONITOR] Restarting server (resource "WC_Male_Without_Brands" failed to start within the 120s time limit).
+[07:04:47][MONITOR] Restarting server (resource "WC_Male_Without_Brands" failed to start within the 120s time limit).
+
+================================================================
+======== txAdmin v6.0.2 atop fxserver 7290 Starting - 3/6/2024, 7:06:09 AM
+================================================================
