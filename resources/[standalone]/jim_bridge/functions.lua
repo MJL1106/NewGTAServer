@@ -381,7 +381,7 @@ function progressBar(data)
 			Config.System.Debug and 1000 or data.time,
 			data.dead and data.dead or false,
 			data.cancel or true,
-			{ disableMovement = true, disableCarMovement = true, disableMouse = false, disableCombat = true, },
+			{ disableMovement = false, disableCarMovement = false, disableMouse = false, disableCombat = true, },
 			{ animDict = data.dict, anim = data.anim, flags = data.flag and data.flag or 32, task = data.task }, {}, {},
 			function()
 				result = true
