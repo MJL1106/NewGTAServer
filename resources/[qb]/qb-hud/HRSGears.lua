@@ -43,7 +43,6 @@ Citizen.CreateThread(function()
         if IsPedInAnyVehicle(player, false) and isInVehicleModel then
             if not hasBeenSet then
                 manualon = true
-                print("A manual car? cool cool")
                 hasBeenSet = true
             end
         else
@@ -54,7 +53,7 @@ Citizen.CreateThread(function()
 end)
 
 function getinfo(gea)
-    if isInVehicleModel then
+    -- if isInVehicleModel then
         if gea == 0 then
             return "N"
         elseif gea == -1 then
@@ -62,9 +61,9 @@ function getinfo(gea)
         else
             return gea
         end
-    else
-        return "A"
-    end
+    -- else
+    --     return "A"
+    -- end
 end
 
 
@@ -454,7 +453,44 @@ Citizen.CreateThread(function()
     end
 end)
 
-
+--automatic car gear shift display
+Citizen.CreateThread(function()
+    while true do
+        Citizen.Wait(0) -- Efficient looping
+        if manualon == false and vehicle ~= nil then
+            local playerPed = GetPlayerPed(-1)
+            if IsPedInAnyVehicle(playerPed, false) then
+                local vehicle = GetVehiclePedIsIn(playerPed, false)
+                
+                -- Assuming 'selectedgear' is already being updated elsewhere for manual shifting
+                -- Now check for reverse in automatic vehicles
+                local velocity = GetEntityVelocity(vehicle)
+                local speed = math.sqrt(velocity.x * velocity.x + velocity.y * velocity.y + velocity.z * velocity.z)
+    
+                if speed > 0.5 and GetVehicleCurrentGear(vehicle) == 0 then
+                    local direction = GetEntityForwardVector(vehicle)
+                    local dotProduct = velocity.x * direction.x + velocity.y * direction.y + velocity.z * direction.z
+                    
+                    -- If dotProduct is negative, the vehicle is moving in the opposite direction to where it's facing, i.e., reversing
+                    if dotProduct < 0 then
+                        selectedgear = -1 -- Vehicle is reversing
+                    end
+                else
+                    -- For automatic vehicles, update the gear as normal. 
+                    -- This code path is entered if the vehicle is not reversing.
+                    -- If you're manually setting 'selectedgear' for manual cars elsewhere, this line might be adjusted or removed.
+                    selectedgear = GetVehicleCurrentGear(vehicle)
+                end
+                
+                -- Now, update your HUD here if necessary.
+                -- If your HUD updates are tied to a specific event or are periodically refreshed, you might not need to do anything here.
+                -- Otherwise, invoke your HUD update logic, possibly using 'getSelectedGear()' to fetch the latest gear state.
+            end
+        else
+            Citizen.Wait(100)
+        end
+    end
+end)
 
 
 
