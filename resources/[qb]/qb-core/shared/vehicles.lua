@@ -4819,6 +4819,16 @@ QBShared.Vehicles = {
         ['hash'] = '19gv80', -- Replace backticks (`) with single or double quotes
         ['shop'] = 'luxury',    
     },
+    ['sultanrsv8'] = {
+        ['name'] = 'sultanrsv8',
+        ['brand'] = 'sultanrsv8',
+        ['model'] = 'sultanrsv8',
+        ['price'] = 999999999999,
+        ['category'] = 'tier4',
+        ['categoryLabel'] = 'Tier 4',
+        ['hash'] = 'sultanrsv8', -- Replace backticks (`) with single or double quotes
+        ['shop'] = 'luxury',    
+    },
 }
 
 -- Populate VehicleHashes table

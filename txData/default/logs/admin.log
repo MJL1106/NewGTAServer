@@ -1,9 +1,15 @@
 
 ================================================================
-======== txAdmin v6.0.2 atop fxserver 7290 Starting - 3/4/2024, 1:28:57 PM
+======== txAdmin v6.0.2 atop fxserver 7290 Starting - 3/5/2024, 10:51:28 AM
 ================================================================
 
 ================================================================
-======== Log Rotated - 3/4/2024, 1:28:58 PM                     
+======== Log Rotated - 3/5/2024, 10:51:28 AM                    
 ================================================================
-[13:33:50][mjl1106] logged in via in-game ui
+[10:55:51][mjl1106] logged in via in-game ui
+[11:06:59][mjl1106] logged in from 127.0.0.1 via citizenfx
+[11:07:00][mjl1106] logged in via in-game ui
+[12:27:38][mjl1106] executed "RESTART SERVER"
+[12:32:27][mjl1106] logged in via in-game ui
+[17:36:53][mjl1106] executed "RESTART SERVER"
+[17:47:43][mjl1106] executed "RESTART SERVER"
