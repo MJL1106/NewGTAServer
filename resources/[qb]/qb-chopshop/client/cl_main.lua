@@ -26,13 +26,13 @@ local vehMods = { -- You can add more here
 
 --- Functions
 
---- Alerts the police - Change this to whatever police alert script you use, ProjectSloth qb-dispatch by default
----@param veh object - Vehicle object
----@return nil
-local AlertPolice = function(veh)
-    if GetResourceState('ps-dispatch') ~= 'started' then return end
-    exports['ps-dispatch']:VehicleTheft(veh)
-end
+-- - Alerts the police - Change this to whatever police alert script you use, ProjectSloth qb-dispatch by default
+-- -@param veh object - Vehicle object
+-- -@return nil
+-- local AlertPolice = function(veh)
+--     if GetResourceState('ps-dispatch') ~= 'started' then return end
+--     exports['ps-dispatch']:VehicleTheft(veh)
+-- end
 
 --- Creates a randomly off-set blip radius for given coordinates
 ---@param coords vec3 - Coordinates of a location

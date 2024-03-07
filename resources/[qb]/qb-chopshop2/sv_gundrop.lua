@@ -23,7 +23,8 @@ RegisterNetEvent("cad-gundrop:server:ItemHandler", function(kind, item, amount)
         Player.Functions.AddItem(item, amount)
         TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[item], 'add', amount)
     elseif kind == 'remove' then
-        cooldown = os.time() + (Config.Cooldown * 60)
+        -- cooldown = os.time() + (Config.Cooldown * 60)
+        print("Trying to remove")
         Player.Functions.RemoveItem(item, amount)
         TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[item], 'remove', amount)
     end
@@ -31,6 +32,15 @@ end)
 
 RegisterNetEvent("cad-gundrop:server:showTarget", function(obj, item, amount)
     TriggerClientEvent('cad-gundrop:client:showTarget', -1, obj, item, amount)
+end)
+
+RegisterNetEvent("cad-gundrop:server:RemoveItem", function(item,amount)
+    local src = source
+    local Player = QBCore.Functions.GetPlayer(src)
+    print("Auto remove")
+    Player.Functions.RemoveItem(item, amount)
+    TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[item], 'remove', amount)
+
 end)
 
 RegisterNetEvent("cad-gundrop:server:removeTarget", function(obj)
@@ -51,9 +61,13 @@ end)
 -- Golden Satalite Phone
 QBCore.Functions.CreateUseableItem("goldenphone", function(source, item)
     local src = source
+    local Player = QBCore.Functions.GetPlayer(src)
     local time = os.time()
     if checkTime() then
+        cooldown = os.time() + (Config.Cooldown * 60)
         TriggerClientEvent("cad-gundrop:client:CreateDrop", src, tostring(item.name), true, 400)
+        Player.Functions.RemoveItem(item.name, 1)
+        TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[item.name], 'remove', 1)
     else
         TriggerClientEvent("QBCore:Notify", src, 'Please wait for sometime before you use again!')
     end
@@ -62,8 +76,12 @@ end)
 -- Red Satellite Phone
 QBCore.Functions.CreateUseableItem("redphone", function(source, item)
     local src = source
+    local Player = QBCore.Functions.GetPlayer(src)
     if checkTime() then
+        cooldown = os.time() + (Config.Cooldown * 60)
         TriggerClientEvent("cad-gundrop:client:CreateDrop", src, tostring(item.name), true, 400)
+        Player.Functions.RemoveItem(item.name, 1)
+        TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[item.name], 'remove', 1)
     else
         TriggerClientEvent("QBCore:Notify", src, 'Please wait for sometime before you use again!')
     end
@@ -72,8 +90,12 @@ end)
 -- Green Satellite Phone
 QBCore.Functions.CreateUseableItem("greenphone", function(source, item)
     local src = source
+    local Player = QBCore.Functions.GetPlayer(src)
     if checkTime() then
+        cooldown = os.time() + (Config.Cooldown * 60)
         TriggerClientEvent("cad-gundrop:client:CreateDrop", src, tostring(item.name), true, 400)
+        Player.Functions.RemoveItem(item.name, 1)
+        TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[item.name], 'remove', 1)
     else
         TriggerClientEvent("QBCore:Notify", src, 'Please wait for sometime before you use again!')
     end
