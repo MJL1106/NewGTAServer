@@ -1,3 +1,4 @@
+local QBCore = exports['qb-core']:GetCoreObject()
 RegisterNetEvent('jim-mechanic:client:Manual:Menu', function(data) local Ped = PlayerPedId()
 	if not outCar() then return end
 	if Config.ManualRepairs.requireDutyCheck == true then
@@ -33,7 +34,8 @@ RegisterNetEvent('jim-mechanic:client:Manual:Menu', function(data) local Ped = P
 	end
 
 	if GetPedInVehicleSeat(vehicle, -1) ~= Ped then return end
-	local cash = getPlayer().cash
+	local player = QBCore.Functions.GetPlayerData() -- This is a placeholder; adjust based on your actual method to get player data.
+	local cash = player.money["cash"]
 
 	local headertxt =
 		"Class: "..searchCar(vehicle).class..br..(isOx() and br or "")..

@@ -1,4 +1,5 @@
 PlayerJob = {}
+local QBCore = exports['qb-core']:GetCoreObject()
 
 onPlayerLoaded(function()
 	if GetResourceState(QBExport):find("start") then
@@ -436,7 +437,8 @@ RegisterNetEvent('jim-mechanic:client:NosRefill', function(data) local Ped = Pla
 			cash = Config.NOS.NosRefillCharge
 		end
 	else
-		cash = getPlayer().Cash
+		local player = QBCore.Functions.GetPlayerData() -- This is a placeholder; adjust based on your actual method to get player data.
+		cash = player.money["cash"]
 	end
 	if cash >= Config.NOS.NosRefillCharge then
 		refilling = true
