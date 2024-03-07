@@ -1,13 +1,13 @@
 CreateThread(function()
 	-- Melee
-	SetWeaponDamageModifier(`WEAPON_UNARMED`, 0.2) 
-	SetWeaponDamageModifier(`WEAPON_FLASHLIGHT`, 0.2) 
+	SetWeaponDamageModifier(`WEAPON_UNARMED`, 0.4) 
+	SetWeaponDamageModifier(`WEAPON_FLASHLIGHT`, 0.4) 
 	SetWeaponDamageModifier(`WEAPON_KNIFE`, 0.6) 
 	SetWeaponDamageModifier(`WEAPON_MACHETE`, 1.0) 
 	SetWeaponDamageModifier(`WEAPON_DAGGER`, 0.6) 
 	SetWeaponDamageModifier(`WEAPON_SWITCHBLADE`, 0.6) -- Shank
 	SetWeaponDamageModifier(`WEAPON_HATCHET`, 0.7) 
-	SetWeaponDamageModifier(`WEAPON_NIGHTSTICK`, 0.0) 
+	SetWeaponDamageModifier(`WEAPON_NIGHTSTICK`, 0.5) 
 	SetWeaponDamageModifier(`WEAPON_HAMMER`, 0.4) 
 	SetWeaponDamageModifier(`WEAPON_BAT`, 0.4) 
 	SetWeaponDamageModifier(`WEAPON_GOLFCLUB`, 0.4) 
@@ -18,24 +18,24 @@ CreateThread(function()
 	-- Pistols
 	SetWeaponDamageModifier(`WEAPON_TASER`, 0.0) -- new taser shit
 	SetWeaponDamageModifier(`WEAPON_SNSPISTOL`, 0.6) 
-	SetWeaponDamageModifier(`WEAPON_PISTOL`, 0.7) -- Colt 1911
+	SetWeaponDamageModifier(`WEAPON_PISTOL`, 0.9) -- Colt 1911
 	SetWeaponDamageModifier(`WEAPON_PISTOL_MK2`, 0.8) -- Beretta M9
-	SetWeaponDamageModifier(`WEAPON_COMBATPISTOL`, 0.7) -- FN FNX-45
+	SetWeaponDamageModifier(`WEAPON_COMBATPISTOL`, 0.8) -- FN FNX-45
 	SetWeaponDamageModifier(`WEAPON_APPISTOL`, 0.6) 
-	SetWeaponDamageModifier(`WEAPON_HEAVYPISTOL`, 1.19) 
-	SetWeaponDamageModifier(`WEAPON_PISTOL50`, 1.2) -- Desert Eagle
+	SetWeaponDamageModifier(`WEAPON_HEAVYPISTOL`, 0.9) --does nothing change the blacklisted further down
+	SetWeaponDamageModifier(`WEAPON_PISTOL50`, 0.9) -- Desert Eagle
 	-- Submachine Guns
 	SetWeaponDamageModifier(`WEAPON_MICROSMG`, 0.7)
-	SetWeaponDamageModifier(`WEAPON_MACHINEPISTOL`, 0.6) -- Tec 9
-	SetWeaponDamageModifier(`WEAPON_MINISMG`, 0.7) -- Skorpion
-	SetWeaponDamageModifier(`WEAPON_COMBATPDW`, 0.7) 
-	SetWeaponDamageModifier(`WEAPON_SMG`, 0.6) -- MP5
+	SetWeaponDamageModifier(`WEAPON_MACHINEPISTOL`, 0.68) -- Tec 9
+	SetWeaponDamageModifier(`WEAPON_MINISMG`, 0.56) -- Skorpion
+	SetWeaponDamageModifier(`WEAPON_COMBATPDW`, 0.45) 
+	SetWeaponDamageModifier(`WEAPON_SMG`, 0.77) -- MP5
 	-- Rifles
-	SetWeaponDamageModifier(`WEAPON_COMPACTRIFLE`, 0.9) -- Draco NAK9
-	SetWeaponDamageModifier(`WEAPON_ASSAULTRIFLE`, 1.0) -- AK 47
-	SetWeaponDamageModifier(`WEAPON_ASSAULTRIFLE_MK2`, 0.9) -- M70
+	SetWeaponDamageModifier(`WEAPON_COMPACTRIFLE`, 0.46) -- Draco NAK9
+	SetWeaponDamageModifier(`WEAPON_ASSAULTRIFLE`, 0.5) -- AK 47
+	SetWeaponDamageModifier(`WEAPON_ASSAULTRIFLE_MK2`, 0.5) -- M70
 	SetWeaponDamageModifier(`WEAPON_CARBINERIFLE`, 0.5) 
-	SetWeaponDamageModifier(`WEAPON_CARBINERIFLE_MK2`, 1.2) -- PD 762
+	SetWeaponDamageModifier(`WEAPON_CARBINERIFLE_MK2`, 0.7) -- PD 762
 	-- Sniper Rifles
 	SetWeaponDamageModifier(`WEAPON_SNIPERRFILE`, 1.5) -- M24
 	-- Miscellaneous
@@ -67,8 +67,8 @@ CreateThread(function()
 	-- Pistol (Blacklisted)
 	SetWeaponDamageModifier(`WEAPON_STUNGUN`, 0.0)
 	SetWeaponDamageModifier(`WEAPON_SNSPISTOL_MK2`, 0.0)
-	SetWeaponDamageModifier(`WEAPON_HEAVYPISTOL`, 1.19) 
-	SetWeaponDamageModifier(`WEAPON_VINTAGEPISTOL`, 0.3)
+	SetWeaponDamageModifier(`WEAPON_HEAVYPISTOL`, 0.7) 
+	SetWeaponDamageModifier(`WEAPON_VINTAGEPISTOL`, 0.55)
 	SetWeaponDamageModifier(`WEAPON_FLAREGUN`, 0.0)
 	SetWeaponDamageModifier(`WEAPON_MARKSMANPISTOL`, 0.0)
 	SetWeaponDamageModifier(`WEAPON_REVOLVER`, 0.7)
@@ -95,9 +95,9 @@ CreateThread(function()
 	SetWeaponDamageModifier(`WEAPON_COMBATSHOTGUN`, 0.0) 
 	-- Rifles (Blacklisted)
 	SetWeaponDamageModifier(`WEAPON_ADVANCEDRIFLE`, 0.5) 
-	SetWeaponDamageModifier(`WEAPON_SPECIALCARBINE`, 1.1) 
-	SetWeaponDamageModifier(`WEAPON_SPECIALCARBINE_MK2`, 0.5) 
-	SetWeaponDamageModifier(`WEAPON_BULLPUPRIFLE`, 1.1) 
+	SetWeaponDamageModifier(`WEAPON_SPECIALCARBINE`, 0.55) 
+	SetWeaponDamageModifier(`WEAPON_SPECIALCARBINE_MK2`, 0.65) 
+	SetWeaponDamageModifier(`WEAPON_BULLPUPRIFLE`, 0.45) 
 	SetWeaponDamageModifier(`WEAPON_BULLPUPRIFLE_MK2`, 0.5) 
 	SetWeaponDamageModifier(`WEAPON_MILITARYRIFLE`, 0.0) 
 	-- LMG (Blacklisted)

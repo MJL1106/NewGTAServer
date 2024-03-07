@@ -64,15 +64,18 @@ Config.ItemDrops = {
     ["goldenphone"] = {
         [1] = {name = "WEAPON_ASSAULTRIFLE", amount = 1}, 
         [2] = {name = "WEAPON_ADVANCEDRIFLE", amount = 1}, 
-        [3] = {name = "WEAPON_CARBINERIFLE_MK2", amount = 1},
+        [3] = {name = "WEAPON_ASSAULTRIFLE_MK2", amount = 1},
         [4] = {name = "WEAPON_COMPACTRIFLE", amount = 1},
         [5] = {name = "WEAPON_SPECIALCARBINE_MK2", amount = 1},
         [6] = {name = "WEAPON_BULLPUPRIFLE_MK2", amount = 1},
+        [7] = {name = "WEAPON_SPECIALCARBINE", amount = 1},
+        [8] = {name = "WEAPON_BULLPUPRIFLE", amount = 1},
     },
     ["redphone"] = {
         [1] = {name = "WEAPON_MICROSMG", amount = 1},  
         [2] = {name = "WEAPON_COMBATPDW", amount = 1},
         [3] = {name = "WEAPON_MACHINEPISTOL", amount = 1},
+        [4] = {name = "WEAPON_MINISMG", amount = 1},
     },
     ["greenphone"] = {
         [1] = {name = "WEAPON_PISTOL50", amount = 1},

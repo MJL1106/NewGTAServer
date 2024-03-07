@@ -13,7 +13,7 @@
   "logger": {},
   "monitor": {
     "restarterSchedule": [],
-    "resourceStartingTolerance": 120
+    "resourceStartingTolerance": 600
   },
   "playerDatabase": {
     "onJoinCheckBan": true,

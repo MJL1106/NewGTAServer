@@ -39,8 +39,8 @@ Config.PistolShop = {
     slots = 4,
     items = {
         [1] = {
-            name = "weapon_pistol_mk2",
-            price = 30000,
+            name = "WEAPON_SNSPISTOL",
+            price = 12000,
             amount = 1,
             info = { quality = 100, },
             type = "item",
