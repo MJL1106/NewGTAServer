@@ -173,12 +173,14 @@ end)
 RegisterNetEvent("cad-gundrop:client:CreateDrop", function(useditem, roofCheck, planeSpawnDistance)
     local playerCoords = GetOffsetFromEntityInWorldCoords(PlayerPedId(), 0.0, 10.0, 0.0)        
     local item, amount = GetRandomItemData(useditem)
+   
     QBCore.Functions.TriggerCallback("cad-gundrop:server:getCops", function(CurrentCops)
         if CurrentCops >= Config.RequiredCops then            
             QBCore.Functions.Notify(Config.Lang["contacted_mafia"], "success")
             QBCore.Functions.Notify(Config.Lang["pilot_contact"], "success")
             PoliceAlert()    
-            TriggerServerEvent("cad-gundrop:server:ItemHandler", "remove", useditem, 1)
+            -- TriggerServerEvent("cad-gunsdrop:server:RemoveItem", useditem, 1)
+            -- TriggerServerEvent("cad-gundrop:server:ItemHandler", "remove", useditem, 1)
             TriggerEvent("cad-gundrop:client:StartDrop", item, amount, roofCheck or false, planeSpawnDistance or 400.0, vector3(playerCoords.x, playerCoords.y, playerCoords.z))                
         else
             QBCore.Functions.Notify(Config.Lang["no_cops"], "error")
