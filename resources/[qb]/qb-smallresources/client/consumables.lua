@@ -465,7 +465,7 @@ RegisterNetEvent('consumables:client:UseJoint', function()
         -- for i = 1, 5, 1 do
             Wait(10000)
             TriggerServerEvent('hud:server:RelieveStress', math.random(25, 35))
-            AddArmourToPed(PlayerPedId(), 10)
+            -- AddArmourToPed(PlayerPedId(), 10)
         -- end           
         TriggerEvent('animations:client:SmokeWeed')
     end)

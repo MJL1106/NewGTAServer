@@ -109,24 +109,28 @@ Config = {
 
     DrugsPrice = {
         ["weed_white-widow"] = {
-            min = 20,
-            max = 70,
+            min = 50,
+            max = 90,
         },
         ["weed_og-kush"] = {
             min = 20,
             max = 70,
         },
         ["weed_amnesia"] = {
-            min = 20,
-            max = 50,
+            min = 35,
+            max = 65,
         },
         ["weed_purple-haze"] = {
+            min = 40,
+            max = 80,
+        },
+        ["weed_skunk"] = {
             min = 20,
-            max = 70,
+            max = 60,
         },
         ["weed_ak47"] = {
-            min = 20,
-            max = 50,
+            min = 30,
+            max = 65,
         },
         ["coke_brick"] = {
             min = 130,
@@ -143,10 +147,6 @@ Config = {
         ["meth"] = {
             min = 140,
             max = 190,
-        },
-        ["weed_skunk"] = {
-            min = 20,
-            max = 60,
         },
         ["oxy"] = {
             min = 3,
