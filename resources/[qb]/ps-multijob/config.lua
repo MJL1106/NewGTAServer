@@ -27,6 +27,7 @@ Config.WhitelistJobs = {
 	["judge"] = true,
 	["lawyer"] = true,
 	["carsales"] = true,
+	["weedshop"] = true,
 }
 
 Config.Descriptions = {
@@ -45,8 +46,12 @@ Config.Descriptions = {
 	["garbage"] = "Drive a garbage truck",
 	["vineyard"] = "Get them vines",
 	["hotdog"] = "Sell them glizzys",
+	["uwu"] = "Uwuuuu",
+	["tuners"] = "Fix them cars",
+	["burgershot"] = "Flip my burger",
 	["electrical"] = "Fix them poles",
 	["carsales"] = "Car resales",
+	["weedshop"] = "Sell that zaza",
 }
 
 -- Change the icons to any free font awesome icon, also add other jobs your server might have to the list
@@ -68,5 +73,9 @@ Config.FontAwesomeIcons = {
 	["vineyard"] = "fa-solid fa-wine-bottle",
 	["hotdog"] = "fa-solid fa-hotdog",
 	["electrical"] = "fa-solid fa-bolt",
+	["tuners"] = "fa-solid fa-wrench",
+	["uwu"] = "fa-solid fa-cookie",
+	["burgershot"] = "fa-solid fa-hotdog",
 	["carsales"] = "fa-solid fa-cards",
+	["weedshop"] = "fa-solid fa-pagelines",
 }

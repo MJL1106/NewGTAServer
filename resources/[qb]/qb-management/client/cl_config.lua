@@ -31,6 +31,9 @@ Config.BossMenus = {
     ['carsales'] = {
         vector3(796.84, -829.51, 26.25),
     },
+    ['weedshop'] = {
+        vector3(375.06, -824.66, 29.09),
+    },
 }
 
 Config.BossMenuZones = {
@@ -54,6 +57,9 @@ Config.BossMenuZones = {
     },
     ['carsales'] = {
         { coords = vector3(796.84, -829.51, 26.25), length = 1.15, width = 3, heading = 4.27, minZ = 25.5, maxZ = 26.8 },
+    },
+    ['weedshop'] = {
+        { coords = vector3(375.06, -824.66, 29.09), length = 1.15, width = 3, heading = 189.62, minZ = 28.5, maxZ = 29.5 },
     },
 }
 

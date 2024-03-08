@@ -125,6 +125,17 @@ QBShared.Jobs = {
             },
         },
 	},
+    ['weedshop'] = { 
+        label = 'Weedshop',
+        defaultDuty = true, 
+        offDutyPay = false, 
+        grades = { 
+            ['0'] = { name = 'Harvester', payment = 600 }, 
+            ['1'] = { name = 'Bagger', payment = 900 }, 
+            ['2'] = { name = 'Roller', payment = 1400 }, 
+            ['3'] = { name = 'Boss', isboss = true, payment = 2000 },
+        }, 
+    },
 	['realestate'] = {
 		label = 'Real Estate',
 		defaultDuty = true,
