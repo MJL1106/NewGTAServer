@@ -334,6 +334,7 @@ local function CreateItemDrop(index)
     DropsNear[index].isDropShowing = true
     PlaceObjectOnGroundProperly(dropItem)
     FreezeEntityPosition(dropItem, true)
+    SetEntityCollision(dropItem, false, true)
 	if Config.UseTarget then
 		exports['qb-target']:AddTargetEntity(dropItem, {
 			options = {
