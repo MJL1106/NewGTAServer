@@ -4,10 +4,10 @@ default = {
         content="Test",
         rgb={255 , 255, 255},
         textOutline=true,
-        scaleMultiplier=1,
+        scaleMultiplier=0.5,
         font=0
     },
-    perspectiveScale=4,
+    perspectiveScale=2,
     radius=5000,
     timeout=5000
 }
