@@ -1,55 +1,105 @@
 html,
 body {
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
 }
 
 .noselect {
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-    -khtml-user-select: none; /* Konqueror HTML */
-    -moz-user-select: none; /* Old versions of Firefox */
-    -ms-user-select: none; /* Internet Explorer/Edge */
-    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera, and Firefox */
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently supported by Chrome, Edge, Opera, and Firefox */
 }
 
 .video-background {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    z-index: -99;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  z-index: -99;
 }
+
 
 .menu-container {
-    position: absolute;
-    bottom: 0;
-    text-align: left;
-    margin-left: 1%;
-    padding-bottom: 4%;
+  display: flex;
+  justify-content: space-between;
+  /* Spaces out the child elements */
+  align-items: center;
+  /* Vertically aligns the child elements */
+  position: absolute;
+  bottom: 4.85%;
+  left: 0;
+  right: 0;
+  /* Ensures it stretches across the bottom */
+  padding: 0 10px;
+  /* Adds some padding on the sides */
 }
 
+.music-change,
+.space {
+  display: flex;
+  align-items: center;
+  /* Aligns the text and images vertically */
+}
+
+.menu-text {
+  font-size: 15px;
+  color: rgb(255, 255, 255);
+  text-shadow: -1px -1px 1px rgba(255, 255, 255, .1), 1px 1px 1px rgba(0, 0, 0, .5);
+  font-family: 'Montserrat', sans-serif;
+  margin-right: 10px;
+  /* Adds spacing between text and images */
+}
+
+.music-change img,
+.space img {
+  width: auto;
+  /* Resets any specific width settings */
+  height: auto;
+  /* Maintains aspect ratio */
+}
+
+/* Apply fixed pixel widths if needed to ensure consistent image sizes */
+.music-change img {
+  width: 40px;
+  /* Example size, adjust as needed */
+}
+
+.space img {
+  width: 100px;
+  /* Example size, adjust as needed */
+}
+
+
 .textbox {
-    color: rgb(255, 255, 255);
-    font-size: 15px;
-    font-family: 'Montserrat', sans-serif;
-    align-items: center;
-    text-shadow: -1px -1px 1px rgba(255, 255, 255, .1), 1px 1px 1px rgba(0, 0, 0, .5);
-    position: absolute;
-    bottom: 0;
-    margin-bottom: 4%;
-    margin-left: 12.25%;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 30px;
-    padding-top: 0.10%;
-    padding-bottom: 0.10%;
-    padding-right: 1.5%;
-    padding-left: 1.75%;
-    width: 626px;
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
+  align-items: center;
+  text-shadow: -1px -1px 1px rgba(255, 255, 255, .1), 1px 1px 1px rgba(0, 0, 0, .5);
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 4%;
+  margin-left: 12.25%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 30px;
+  padding-top: 0.10%;
+  padding-bottom: 0.10%;
+  padding-right: 1.5%;
+  padding-left: 1.75%;
+  width: 626px;
 }
 
 .textbox2 {
@@ -72,14 +122,14 @@ body {
 }
 
 .textbox .heading-textbox::before {
-    position: fixed;
-    content: "";
-    width: 4px;
-    height: 23px;
-    background-color: #0084ff;
-    left: 12.3%;
-    border-radius: 20px;
-    margin-top: 1px;
+  position: fixed;
+  content: "";
+  width: 4px;
+  height: 23px;
+  background-color: #0084ff;
+  left: 12.3%;
+  border-radius: 20px;
+  margin-top: 1px;
 }
 
 .textbox2 .heading-textbox::before {
@@ -98,192 +148,204 @@ body {
 
 
 .blue-text {
-    color: #0084ff;
+  color: #0084ff;
 }
 
 .heading-textbox {
-    color: rgb(255, 255, 255);
-    font-size: 20px;
-    font-family: 'Montserrat', sans-serif;
-    text-shadow: -1px -1px 1px rgba(255, 255, 255, .1), 1px 1px 1px rgba(0, 0, 0, .5);
-    margin-bottom: -8px;
-    margin-top: 3%;
-    white-space: nowrap
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+  text-shadow: -1px -1px 1px rgba(255, 255, 255, .1), 1px 1px 1px rgba(0, 0, 0, .5);
+  margin-bottom: -8px;
+  margin-top: 3%;
+  white-space: nowrap
 }
 
 .arrow-up,
 .arrow-down,
 .music-change,
 .space {
-    color: rgb(255, 255, 255);
-    font-size: 15px;
-    font-family: 'Montserrat', sans-serif;
-    display: flex;
-    align-items: center;
-    text-shadow: -1px -1px 1px rgba(255, 255, 255, .1), 1px 1px 1px rgba(0, 0, 0, .5);
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  align-items: center;
+  text-shadow: -1px -1px 1px rgba(255, 255, 255, .1), 1px 1px 1px rgba(0, 0, 0, .5);
 }
 
 .arrow-up img,
 .arrow-down img,
 .music-change img,
 .space img {
-    margin-right: 5px;
+  margin-right: 5px;
 }
 
 .video-container video {
-    /* Make video to at least 100% wide and tall */
-    min-width: 100%;
-    min-height: 100%;
+  /* Make video to at least 100% wide and tall */
+  min-width: 100%;
+  min-height: 100%;
 
-    /* Center the video */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  /* Center the video */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.img-center {
-    text-align: center;
-    height: 90vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.img-top-left {
+  position: absolute;
+  /* Position absolutely within .background */
+  top: 5.2%;
+  /* Align top */
+  left: 0;
+  /* Align left */
+  /* No need to set height or display for top-left alignment */
 }
 
 .sky {
-    height: 100%;
-    color: #FFF;
-    display: block;
+  height: 100%;
+  color: #FFF;
+  display: block;
 }
 
 #circleG {
-    position: absolute;
-    width: auto;
-    display: flex;
-    align-items: center;
-    bottom: 0;
-    right: 0;
-    margin-bottom: 4%;
-    margin-right: 1%;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 0.6%;
-    border-radius: 30px;
+  position: absolute;
+  width: auto;
+  display: flex;
+  align-items: center;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 4%;
+  margin-right: 1%;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0.6%;
+  border-radius: 30px;
 }
 
-.circleG{   
-	background-color:#0084ff;
-	height:10px;
-	width:10px;
-	animation-name:bounce_circleG;
-	animation-duration:1.5s;
-	animation-iteration-count:infinite;
-	animation-direction:linear;
-	border-radius:9px;
+.circleG {
+  background-color: #0084ff;
+  height: 10px;
+  width: 10px;
+  animation-name: bounce_circleG;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-direction: linear;
+  border-radius: 9px;
 }
-div#circleG > .circleG:nth-child(even) {
-	margin: 0 7px;
+
+div#circleG>.circleG:nth-child(even) {
+  margin: 0 7px;
 }
-#circleG_1{
-	animation-delay:0.3s;
+
+#circleG_1 {
+  animation-delay: 0.3s;
 }
-#circleG_2{
-	animation-delay:0.7s;
+
+#circleG_2 {
+  animation-delay: 0.7s;
 }
-#circleG_3{
-	animation-delay:0.9s;
+
+#circleG_3 {
+  animation-delay: 0.9s;
 }
-@keyframes bounce_circleG{
-	0%{
-	}
-	50%{
-		background-color: rgb(255, 255, 255)
-	}
-	100%{
-	}
+
+@keyframes bounce_circleG {
+  0% {}
+
+  50% {
+    background-color: rgb(255, 255, 255)
+  }
+
+  100% {}
 }
 
 
 .discord {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin-top: 4%;
-    margin-right: 1%;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-    height: 55px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 3.95%;
+  margin-right: 1%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  height: 55px;
 }
 
 .tiktok {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin-top: 7.5%;
-    margin-right: 1%;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-    height: 55px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 7.5%;
+  margin-right: 1%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  height: 55px;
 }
 
 .website {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin-top: 11%;
-    margin-right: 1%;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-    height: 55px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 11%;
+  margin-right: 1%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  height: 55px;
 }
 
 .shaded-text {
-    color: rgb(255, 255, 255);
-    font-size: 15px;
-    font-family: 'Montserrat', sans-serif;
-    text-shadow: -1px -1px 1px rgba(255, 255, 255, .1), 1px 1px 1px rgba(0, 0, 0, .5);
-    background-clip: text;
-    -webkit-background-clip: text;
-    animation: gradient-animation 5s infinite;
-    animation-fill-mode: forwards;
-    width: 120px;
-    text-align: center;
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
+  text-shadow: -1px -1px 1px rgba(255, 255, 255, .1), 1px 1px 1px rgba(0, 0, 0, .5);
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: gradient-animation 5s infinite;
+  animation-fill-mode: forwards;
+  width: 120px;
+  text-align: center;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+    opacity: 1;
   }
 
-  @keyframes gradient-animation {
-    0% {
-      background-position: 0% 50%;
-      opacity: 1;
-    }
-    20% {
-      opacity: 1;
-    }
-    40% {
-      opacity: 0;
-    }
-    60% {
-      background-position: 100% 50%;
-      opacity: 0;
-    }
-    80% {
-      opacity: 0;
-    }
-    100% {
-      background-position: 0% 50%;
-      opacity: 1;
-    }
+  20% {
+    opacity: 1;
   }
 
-  .scroll-box {
-    position: absolute;
-    height: 600px;
-    width: 300px;
-    font-family: 'Montserrat', sans-serif;
-    text-shadow: -1px -1px 1px rgba(255, 255, 255, .1), 1px 1px 1px rgba(0, 0, 0, .5);
-    margin-top: 4%;
-    margin-left: 1%;
-    align-items: center;
-    border-radius: 10px;
-    overflow: hidden;
+  40% {
+    opacity: 0;
+  }
+
+  60% {
+    background-position: 100% 50%;
+    opacity: 0;
+  }
+
+  80% {
+    opacity: 0;
+  }
+
+  100% {
+    background-position: 0% 50%;
+    opacity: 1;
+  }
+}
+
+.scroll-box {
+  position: absolute;
+  height: 600px;
+  width: 300px;
+  font-family: 'Montserrat', sans-serif;
+  text-shadow: -1px -1px 1px rgba(255, 255, 255, .1), 1px 1px 1px rgba(0, 0, 0, .5);
+  margin-top: 4%;
+  margin-left: 1%;
+  align-items: center;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 /*
@@ -293,59 +355,59 @@ div#circleG > .circleG:nth-child(even) {
 */
 
 .header {
-    padding-top: 10px;
-    padding-bottom: 10px;
-    position: relative;
-    padding-left: 3.5%;
-    padding-right: 4.5%;
-    background-color: #0084ffad;
-    text-align: center;
-    font-size: 20px;
-    border-radius: 10px 10px 0px 0px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: relative;
+  padding-left: 3.5%;
+  padding-right: 4.5%;
+  background-color: #0084ffad;
+  text-align: center;
+  font-size: 20px;
+  border-radius: 10px 10px 0px 0px;
 }
 
 .person img {
-    width: 60px;
-    margin-right: 15px;
-    border-radius: 50%;
+  width: 60px;
+  margin-right: 15px;
+  border-radius: 50%;
 }
 
 .person {
-    align-items: center;
-    display: flex;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding-left: 15px;
-    padding-top: 10px;
-    padding-bottom: 10px;
+  align-items: center;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding-left: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
-.person .menu-text{
+.person .menu-text {
   text-align: left;
   padding-right: 5%;
 }
 
-.person:last-child{
+.person:last-child {
   border-radius: 0px 0px 10px 10px;
   padding-bottom: 10px;
 }
 
-.owner-role{
+.owner-role {
   color: #0084ff;
 }
 
-.manager-role{
- color: rgb(30, 75, 255);
+.manager-role {
+  color: rgb(30, 75, 255);
 }
 
-.developer-role{
- color: rgb(149, 47, 245);
+.developer-role {
+  color: rgb(149, 47, 245);
 }
 
-.admin-role{
- color: rgb(240, 3, 248);
+.admin-role {
+  color: rgb(240, 3, 248);
 }
 
-.date{
+.date {
   position: absolute;
   font-size: 12px;
   margin-top: 3%;
@@ -354,40 +416,41 @@ div#circleG > .circleG:nth-child(even) {
 }
 
 
-.textboxh{
+.textboxh {
   display: flex;
   text-align: center;
 
 }
 
-.songname{
+.songname {
+
   color: rgb(255, 255, 255);
   font-size: 12px;
   font-family: 'Montserrat', sans-serif;
   text-shadow: -1px -1px 1px rgba(255, 255, 255, .1), 1px 1px 1px rgba(0, 0, 0, .5);
   background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 0px 30px 30px 0px; 
+  border-radius: 0px 30px 30px 0px;
   align-items: center;
   overflow: hidden;
   white-space: nowrap;
 }
 
-.load{
+.load {
   position: absolute;
   right: 0;
-  margin-top: 4.5%;
+  margin-top: 4.15%;
   margin-right: 6%;
   display: flex;
   overflow: hidden;
 }
 
-.loader{
+.loader {
   height: 34px;
   display: flex;
   align-items: center;
   right: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  border-radius: 30px 0px 0px 30px; 
+  border-radius: 30px 0px 0px 30px;
   padding-top: 2.5px;
   padding-bottom: 2.5px;
   padding-right: 6px;
@@ -405,25 +468,30 @@ div#circleG > .circleG:nth-child(even) {
   animation: animate 0.9s linear infinite;
 
 }
-@keyframes animate{
-  50%{
+
+@keyframes animate {
+  50% {
     height: 10%;
   }
-  70%{
+
+  70% {
     height: 25%;
   }
-  100%{
+
+  100% {
     height: 50%;
   }
 }
 
-.stroke:nth-child(1){
+.stroke:nth-child(1) {
   animation-delay: 0s;
 }
-.stroke:nth-child(2){
+
+.stroke:nth-child(2) {
   animation-delay: 0.3s;
 }
-.stroke:nth-child(3){
+
+.stroke:nth-child(3) {
   animation-delay: 0.6s;
 }
 
@@ -434,7 +502,7 @@ div#circleG > .circleG:nth-child(even) {
   -moz-transform: translateX(100%);
   -webkit-transform: translateX(100%);
   transform: translateX(100%);
-  
+
   -moz-animation: my-animation 15s linear infinite;
   -webkit-animation: my-animation 15s linear infinite;
   animation: my-animation 15s linear infinite;
@@ -442,14 +510,24 @@ div#circleG > .circleG:nth-child(even) {
 
 /* for Firefox */
 @-moz-keyframes my-animation {
-  from { -moz-transform: translateX(100%); }
-  to { -moz-transform: translateX(-100%); }
+  from {
+    -moz-transform: translateX(100%);
+  }
+
+  to {
+    -moz-transform: translateX(-100%);
+  }
 }
 
 /* for Chrome */
 @-webkit-keyframes my-animation {
-  from { -webkit-transform: translateX(100%); }
-  to { -webkit-transform: translateX(-100%); }
+  from {
+    -webkit-transform: translateX(100%);
+  }
+
+  to {
+    -webkit-transform: translateX(-100%);
+  }
 }
 
 @keyframes my-animation {
@@ -458,6 +536,7 @@ div#circleG > .circleG:nth-child(even) {
     -webkit-transform: translateX(100%);
     transform: translateX(100%);
   }
+
   to {
     -moz-transform: translateX(-100%);
     -webkit-transform: translateX(-100%);
@@ -465,15 +544,18 @@ div#circleG > .circleG:nth-child(even) {
   }
 }
 
-.namePlaceholder{
+.namePlaceholder {
   position: absolute;
+  top: 5.5%;
+  /* Adjust if you need some space from the bottom */
+  left: 50%;
+  /* Start at the middle of the screen */
+  transform: translateX(-50%);
+  /* Move it back to truly center it */
   color: rgb(255, 255, 255);
   font-size: 16px;
   font-family: 'Montserrat', sans-serif;
   text-shadow: -1px -1px 1px rgba(255, 255, 255, .1), 1px 1px 1px rgba(0, 0, 0, .5);
-  position: absolute;
-  margin-top: 4%;
-  margin-left: 20%;
   padding-top: 10px;
   padding-bottom: 10px;
 }
