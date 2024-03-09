@@ -177,8 +177,8 @@ Config.CryptoLabelNameDesc = "(JPR)"
 Config.CryptoLogo = "./img/logo.jpg"
 
 Config.UberEatsItems = {
-    {itemname = "sandwich", itemlabel = "Sandwich", price = 25, category = "food", image = "./img/ubereats/bread.png", rate = 4.9},
-    {itemname = "water_bottle", itemlabel = "Water", price = 15, category = "drink", image = "./img/ubereats/water.png", rate = 3},
+    {itemname = "sandwich", itemlabel = "Sandwich", price = 35, category = "food", image = "./img/ubereats/bread.png", rate = 4.9},
+    {itemname = "water_bottle", itemlabel = "Water", price = 30, category = "drink", image = "./img/ubereats/water.png", rate = 3},
 }
 
 Config.UberEatsNPCModel = "a_f_y_fitness_02"
