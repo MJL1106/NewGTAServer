@@ -89,32 +89,32 @@ Config.Shops = {
         ['TestDriveSpawn'] = vector4(126.47, -118.97, 54.84, 68.1), -- Spawn location for test drive
         ['ShowroomVehicles'] = {
             [1] = {
-                coords = vector4(120.72, -156.67, 54.16, 24.43),
+                coords = vector4(120.72, -156.67, 54.02, 24.43),
                 defaultVehicle = 's15lunar',
                 chosenVehicle = 's15lunar'
             },
             [2] = {
-                coords = vector4(126.29, -158.6, 54.16, 26.15),
+                coords = vector4(126.29, -158.6, 54.02, 26.15),
                 defaultVehicle = 'evo9',
                 chosenVehicle = 'evo9'
             },
             [3] = {
-                coords = vector4(132.04, -160.75, 54.16, 19.52),
+                coords = vector4(132.04, -160.75, 54.02, 19.52),
                 defaultVehicle = 'brz13varis',
                 chosenVehicle = 'brz13varis'
             },
             [4] = {
-                coords = vector4(137.75, -162.81, 54.16, 22.81),
+                coords = vector4(137.75, -162.81, 54.02, 22.81),
                 defaultVehicle = 'escaladeprime',
                 chosenVehicle = 'escaladeprime'
             },
             [5] = {
-                coords = vector4(143.37, -165.09, 54.16, 22.89),
+                coords = vector4(143.37, -165.09, 54.02, 22.89),
                 defaultVehicle = 'scubieblob',
                 chosenVehicle = 'scubieblob'
             },
             [6] = {
-                coords = vector4(138.54, -149.89, 54.1, 55.78),
+                coords = vector4(138.54, -149.89, 54.08, 55.78),
                 defaultVehicle = 'rmodpagani',
                 chosenVehicle = 'rmodpagani'
             },
