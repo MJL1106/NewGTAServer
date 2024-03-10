@@ -133,7 +133,7 @@ else
         local billed = exports[Config.CoreName]:GetPlayer(tonumber(args[1]))
         local amount = tonumber(args[2])
 
-        if biller.PlayerData.job.name == "police" or biller.PlayerData.job.name == 'ambulance' or biller.PlayerData.job.name == 'mechanic' or biller.PlayerData.job.name == 'tuners' or biller.PlayerData.job.name == 'burgershot' or biller.PlayerData.job.name == 'uwu' then
+        if biller.PlayerData.job.name == "police" or biller.PlayerData.job.name == 'ambulance' or biller.PlayerData.job.name == 'mechanic' or biller.PlayerData.job.name == 'tuners' or biller.PlayerData.job.name == 'burgershot' or biller.PlayerData.job.name == 'uwu' or biller.PlayerData.job.name == 'carsales' or biller.PlayerData.job.name == 'cardealer' or biller.PlayerData.job.name == 'weedshop' then
             if billed ~= nil then
                 if biller.PlayerData.citizenid ~= billed.PlayerData.citizenid then
                     if amount and amount > 0 then
@@ -180,3 +180,57 @@ QBCore.Functions.CreateCallback('jpr-phonesystem:server:getServerTimeInfos', fun
     }
     cb(data)
 end)
+
+function AntiErrorItemSerialValidation(item, player)
+    if Config.UniquePhones then
+        if item.info then
+            return true
+        else
+            return false
+        end 
+    else
+        return player.PlayerData.citizenid
+    end
+end
+
+function ItemSerialValidation(item, player)
+    if Config.UniquePhones then
+        if item.info.serie ~= nil or item.info.serie ~= "" then
+            return true
+        else
+            return false
+        end 
+    else
+        return player.PlayerData.citizenid
+    end
+end
+
+function GetSerialFromItem(item, player)
+    if Config.UniquePhones then
+        if item.info.serie ~= nil or item.info.serie ~= "" then
+            return item.info.serie
+        else
+            return nil
+        end 
+    else
+        return player.PlayerData.citizenid
+    end
+end
+
+function GetPhoneItem(playerInfos)
+    local phone = nil
+
+    if playerInfos then
+        for _, phoneItem in ipairs(Config.PhoneItems) do
+            local item = playerInfos.Functions.GetItemByName(phoneItem)
+
+            if item then
+                phone = item
+
+                break
+            end
+        end
+    end
+
+    return phone
+end

@@ -36,7 +36,12 @@ Config.AnimationLibCar = 'anim@cellphone@in_car@ps'
 Config.WalkWithCamera = true
 Config.ServerSidedClockMessages = true
 
-Config.PhotoWebhook = "https://discord.com/api/webhooks/1013060271574622278/-i1aqLpOPUtvF5gLmCY6Exaki1jKSgVZKBP_BaP25QkxSnEPRUSHxklRjK2sUGMUyGMm"
+Config.UploadSystem = {
+    UseDiscordSystem = false, -- not recommended due to discord rules
+    UseFiveManageSystem = true, -- recommended
+    FiveManageSystemTokenKey = "", -- your fivemanage TOKEN Key, follow: https://joaos-organization-3.gitbook.io/jpresources-documentation/installation/phone-system/installation-page/qbcore#using-fivemanage
+    PhotoWebhook = "https://discord.com/api/webhooks/1013060271574622278/-i1aqLpOPUtvF5gLmCY6Exaki1jKSgVZKBP_BaP25QkxSnEPRUSHxklRjK2sUGMUyGMm"
+}
 
 Config.StartingWallPaper = "background3"
 Config.DefaultWallpapers = { --- DO NOT RENAME THE FILES, ALLWAYS BACKGROUND + NUMBER
@@ -120,10 +125,12 @@ Config.BatteryDamageToDamageDisplay = 50
 Config.ChanceToDisableDisplayWithBatteryDamage = 10 -- 0 to 100   60% of battery life have a chance to disable display (with Config.BatteryDamageToStartBlinkingDisplay)
 
 Config.UseTargetToBatteryZones = true
+Config.ShowChargingZonesBlips = false
 Config.BlipSpriteChargingZone = 354
 Config.BlipColourChargingZone = 5
 Config.BlipScaleChargingZone = 0.7
 Config.BlipLabelChargingZone = "Charging Zone"
+Config.TakePowerBankAfterUse = false
 
 Config.ChargingZones = {
     {coords = vector3(438.55, -986.8, 30.69), distance = 5, name = "Zona 1"},
@@ -439,4 +446,5 @@ Config.Locales = {
     ["76"] = "Phone box call ended",
     ["77"] = "Call taken",
     ["78"] = "Cant call to yourself",
+    ["79"] = "Message sent to available units!",
 }

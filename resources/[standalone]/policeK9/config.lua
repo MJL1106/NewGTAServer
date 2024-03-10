@@ -19,7 +19,7 @@ Config.StayCommand = 29 							-- B - Press this button to have the dog stay
 
 Config.ThirdEyeName = 'qb-target'					-- Name of the third eye system you use
 Config.K9Kennel = {									-- Location of where police can pull out a K9
-	vector3(453.94, -990.0, 30.69),
+	vector3(458.1, -999.77, 30.69),
 }
 Config.DogMaxHp = 200								-- Sets Dog's max hp (MAX IS 200)
 Config.LEOJobName = {'police'}						-- Name of police job that can pull out K9
