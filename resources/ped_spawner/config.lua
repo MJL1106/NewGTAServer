@@ -255,21 +255,21 @@ Config.PedList = {
 
 	{
 		model = "mp_m_shopkeep_01",
-		coords = vector(729.4091796875,-1974.2263183594,29.292043685913), --PALOMINO AVE
+		coords = vector3(729.4091796875,-1974.2263183594,29.292043685913), --PALOMINO AVE
 		heading = -90.0, 
 		gender = "male", 
 	    isRendered = false,
         ped = nil,
     },
 	
-	-- {
-	-- 	model = "mp_m_shopkeep_01",
-	-- 	coords = vector3(24.404470443726,-1347.4686279297,29.497045516968), --INNOCENCE BLVD
-	-- 	heading = 270.0, 
-	-- 	gender = "male", 
-	--     isRendered = false,
-    --     ped = nil,
-    -- },
+	{
+		model = "cs_prolsec_02",
+		coords = vector3(458.21, -999.8, 30.69), --PD DOG
+		heading = 355.03, 
+		gender = "male", 
+	    isRendered = false,
+        ped = nil,
+    },
 	
 	-- {
 	-- 	model = "mp_m_shopkeep_01",
