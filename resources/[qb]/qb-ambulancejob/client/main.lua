@@ -11,6 +11,8 @@ local doctorCount = 0
 local CurrentDamageList = {}
 local cam = nil
 local playerArmor = nil
+local isPlayerOnBed = false
+local currentBedKey = nil
 inBedDict = "anim@gangops@morgue@table@"
 inBedAnim = "body_search"
 isInHospitalBed = false
@@ -883,6 +885,37 @@ RegisterNetEvent('qb-ambulancejob:beds', function()
     end
 end)
 
+RegisterNetEvent('qb-ambulancejob:useLobbyBed', function(bedKey, bedCoords)
+    if isPlayerOnBed then return end
+
+    local playerPed = PlayerPedId()
+    local dict = "amb@world_human_sunbathe@male@back@base"
+    local anim = "base"
+    
+    RequestAnimDict(dict)
+    while not HasAnimDictLoaded(dict) do
+        Citizen.Wait(10)
+    end
+
+    SetEntityCoords(playerPed, bedCoords.x, bedCoords.y, bedCoords.z + 0.2)
+    SetEntityHeading(playerPed, bedCoords.w)
+
+    TaskPlayAnim(playerPed, dict, anim, 8.0, -8.0, -1, 1, 0, false, false, false)
+
+    isPlayerOnBed = true
+    currentBedKey = bedKey
+end)
+
+RegisterNetEvent('qb-ambulancejob:leaveLobbyBed', function(bedKey)
+    if not isPlayerOnBed or currentBedKey ~= bedKey then return end
+
+    local playerPed = PlayerPedId()
+    ClearPedTasks(playerPed)  -- This stops the animation
+
+    isPlayerOnBed = false
+    currentBedKey = nil
+end)
+
 -- Convar turns into a boolean
 if Config.UseTarget then
     CreateThread(function()
@@ -926,6 +959,32 @@ if Config.UseTarget then
             })
         end
     end)
+
+    for k, v in pairs(Config.Locations["lobbybeds"]) do
+        exports['qb-target']:AddBoxZone("lobbybeds" .. k, v.coords, 2.5, 2.3, {
+            name = "lobbybeds" .. k,
+            heading = v.coords.w,
+            debugPoly = false,
+            minZ = v.coords.z - 1,
+            maxZ = v.coords.z + 1,
+        }, {
+            options = {
+                {
+                    type = "client",
+                    action = function()
+                        if not isPlayerOnBed then
+                            TriggerEvent("qb-ambulancejob:useLobbyBed", k, v.coords)
+                        elseif isPlayerOnBed and currentBedKey == k then
+                            TriggerEvent("qb-ambulancejob:leaveLobbyBed", k)
+                        end
+                    end,
+                    icon = "fas fa-bed",
+                    label = "Use Bed", -- This is a static label due to qb-target limitations
+                },
+            },
+            distance = 1.5
+        })
+    end
 else
     CreateThread(function()
         local checkingPoly = {}
