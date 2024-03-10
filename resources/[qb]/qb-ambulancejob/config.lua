@@ -1,6 +1,6 @@
 Config = {}
 Config.UseTarget = true -- Use qb-target interactions (don't change this, go to your server.cfg and add setr UseTarget true)
-Config.MinimalDoctors = 5 -- How many players with the ambulance job to prevent the hospital check-in system from being used
+Config.MinimalDoctors = 1 -- How many players with the ambulance job to prevent the hospital check-in system from being used
 Config.DocCooldown = 1 -- Cooldown between doctor calls allowed, in minutes
 Config.WipeInventoryOnRespawn = false -- Enable or disable removing all the players items when they respawn at the hospital
 Config.Helicopter = "polmav" -- Helicopter model that players with the ambulance job can use
@@ -35,7 +35,7 @@ Config.AlertShowInfo = 2 -- How many injuries a player must have before being al
 
 Config.Locations = { -- Edit the various interaction points for players or create new ones
     ["checking"] = {
-	    [1] = vector3(308.19, -595.35, 43.29),
+	    [1] = vector3(311.83, -593.32, 43.0),
 	    [2] = vector3(-254.54, 6331.78, 32.43), -- paleto
     },
     ["duty"] = {
@@ -89,6 +89,10 @@ Config.Locations = { -- Edit the various interaction points for players or creat
         [2] = {coords = vector4(1761.96, 2591.51, 45.66, 269.8), taken = false, model = 2117668672},
         [3] = {coords = vector4(1771.8, 2598.02, 45.66, 89.05), taken = false, model = 2117668672},
         [4] = {coords = vector4(1771.85, 2591.85, 45.66, 91.51), taken = false, model = 2117668672},
+    },
+    ["lobbybeds"] = {
+        [1] = {coords = vector4(322.39, -589.57, 42.85, 71.28), taken = false, model = -1091386327},
+        [2] = {coords = vector4(325.72, -601.78, 42.85, 342.27), taken = false, model = -1091386327},
     },
     ["stations"] = {
         [1] = {label = Lang:t('info.pb_hospital'), coords = vector4(304.27, -600.33, 43.28, 272.249)}
