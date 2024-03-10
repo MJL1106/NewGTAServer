@@ -104,6 +104,31 @@ Config.CityContacts = {
         name = "Real",
         apelido = "Estate",
     },
+    {
+        job = "uwu",
+        name = "Uwu",
+        apelido = "Food",
+    },
+    {
+        job = "burgershot",
+        name = "Burger Shot",
+        apelido = "Food",
+    },
+    {
+        job = "cardealer",
+        name = "PDM",
+        apelido = "Cars",
+    },
+    {
+        job = "carsales",
+        name = "Car Resales",
+        apelido = "Cars",
+    },
+    {
+        job = "weedshop",
+        name = "White Widow",
+        apelido = "Zaza",
+    },
 }
 
 Config.BatterySystem = false
