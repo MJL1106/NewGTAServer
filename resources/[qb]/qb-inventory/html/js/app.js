@@ -684,6 +684,19 @@ function handleDragDrop() {
             $(this).find("img").css("filter", "brightness(50%)");
 
             //  $(".item-slot").css("border", "1px solid rgba(255, 255, 255, 0.1)");
+            ui.helper.css({
+                "position": "relative",
+                "width": "98px",
+                "height": "98px",
+                "float": "left",
+                "border": "1px solid rgba(0, 12, 102, 0.448)",
+                "background-image": "radial-gradient(circle, rgba(0, 12, 102, 0.606), #000000)",
+                "margin": "3px",
+                "transition": "opacity 0.2s ease 0s, box-shadow 0.3s ease-in-out",
+                "border-radius": "9px",
+                "opacity": "0.9",
+                "box-shadow": "0 0 0 rgb(0, 12, 102)"
+            });
 
             var itemData = $(this).data("item");
             var dragAmount = $("#item-amount").val();
@@ -796,7 +809,7 @@ function handleDragDrop() {
             setTimeout(function () {
                 IsDragging = false;
             }, 300);
-            $(this).css("background", "rgba(0, 0, 0, 0.3)");
+            // $(this).css("background", "rgba(0, 12, 102, 0.3)");
             $(this).find("img").css("filter", "brightness(100%)");
             // $("#item-use").css("background", "rgba(" + InventoryOption + ", 0.3)");
         },
