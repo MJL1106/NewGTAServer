@@ -8683,6 +8683,9 @@ carteira
     font-weight: 100;
     font-size: 1.6vh;
     top: 76%;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
     transition: 0.5s ease;
     font-family: ProLight;
     color: #848484;
@@ -25955,9 +25958,9 @@ instagram
     font-family: Instagram;
     position: relative;
     text-align: center;
-    top: 11.5%;
+    top: 29%;
     height: 9%;
-    font-size: 2.8vh;
+    font-size: 2.6vh;
     transition: 0.5s ease;
 }
 
@@ -25968,142 +25971,100 @@ instagram
     position: relative;
     text-align: left;
     top: 20%;
-    height: 4.35%;
     left: 5%;
     font-size: 1.4vh;
     transition: 0.5s ease;
 }
 
-.instagram-menu-1 > .caixaregistro > h3 {
-    color: #848484;
-    font-family: ProLight;
-    position: relative;
-    text-align: center;
-    font-size: 1.5vh;
-    transition: 0.5s ease;
-    z-index: 2;
-
-}
-
-.instagram-menu-1 > .caixaregistro > h3 {
-    width: 100%; 
-    text-align: center; 
-    border-bottom: 1px solid #848484; 
-    line-height: 0.1em;
-    margin: 10px 0 20px; 
- } 
- 
- .instagram-menu-1 > .caixaregistro > h3 > span { 
-     background: var(--modoatualfundo); 
-     padding:0 10px; 
- }
-
-.instagram-menu-1 > .caixaregistro {
-    position: relative;
-    width: 90%;
-    left: 5%;
-    top: 18%;
-}
-
 .instagram-menu-1 > input {
     position: relative;
-    width: 90%;
-    left: 4.6%;
-    height: 6%;
-    top: 11%;
-    margin-bottom: 2%;
+    width: 85%;
+    left: 7.5%;
+    height: 5.8%;
+    top: 28%;
+    margin-bottom: 1.8%;
     padding-left: 2.5%;
     border: none;
     outline: none;
-    font-size: 1.3vh;
+    font-size: 1.05vh;
     color: #848484;
     font-family: ProLight;
     background-color: var(--modoatualfundo2);
     border-radius: 0.5vh;
     border: 0.5px solid var(--coratualbordas);
-    transition: 0.5s ease;
 }
 
-.instagram-menu-1 > .idsoftware {
+.instagram-menu-1 > .botaoconfirmarnickinsta {
     position: relative;
-    width: 90%;
-    left: 4.6%;
-    height: 6%;
-    top: 11%;
-    margin-bottom: 2%;
-    padding-left: 2.5%;
-    border: none;
-    outline: none;
-    font-size: 1.3vh;
-    color: #848484;
-    font-family: ProLight;
-    background-color: var(--modoatualfundo2);
-    border-radius: 0.5vh;
-    
-    border: 0.5px solid var(--coratualbordas);
-}
-
-.instagram-menu-1 > .idsoftware > p {
-    line-height: 2.10vh;
-    position: relative;
-    top: 20%;
-    cursor: default;
-}
-
-.instagram-menu-1 > .botaoconfirmarnick {
-    position: relative;
-    width: 90%;
-    height: 6%;
-    left: 5%;
-    top: 12.1%;
+    width: 85%;
+    height: 5.5%;
+    left: 7.5%;
+    top: 28.5%;
     border-radius: 0.5vh;
     background-color: #3478f5;
     cursor: pointer;
     transition: 0.5s ease;
 }
 
-.instagram-menu-1 > .botaoconfirmarnick:hover {
+.instagram-menu-1 > .botaoconfirmarnickinsta:hover {
     transform: scale(1.03);
 }
 
-.instagram-menu-1 > .botaoconfirmarnick > h1 {
+.instagram-menu-1 > .botaoconfirmarnickinsta > h1 {
     color: white;
     font-family: ProBold;
     position: relative;
     text-align: center;
     font-weight: normal;
-    top: 29%;
+    top: 30%;
     height: 17%;
-    font-size: 1.25vh;
+    font-size: 1.05vh;
     transition: 0.5s ease;
 }
 
-.instagram-menu-1 > .botaoconfirmarnick2 {
+.instagram-menu-1 > .botaoconfirmarnickinsta2 {
     position: relative;
-    width: 90%;
-    height: 6%;
-    left: 5%;
-    top: 12.1%;
+    width: 85%;
+    height: 5.5%;
+    left: -100%;
+    top: 23%;
     border-radius: 0.5vh;
     background-color: #3478f5;
     cursor: pointer;
     transition: 0.5s ease;
 }
 
-.instagram-menu-1 > .botaoconfirmarnick2:hover {
+.instagram-menu-1 > .botaoconfirmarnickinsta2:hover {
     transform: scale(1.03);
 }
 
-.instagram-menu-1 > .botaoconfirmarnick2 > h1 {
+.instagram-menu-1 > .botaoconfirmarnickinsta2 > h1 {
     color: white;
     font-family: ProBold;
     position: relative;
     text-align: center;
     font-weight: normal;
-    top: 29%;
+    top: 32%;
     height: 17%;
-    font-size: 1.25vh;
+    font-size: 1.03vh;
     transition: 0.5s ease;
+}
+
+.instagram-menu-1 > h3 {
+    font-size: 1.1vh;
+    font-family: ProBold;
+    position: relative;
+    top: 58.5%;
+    margin: auto;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+    color: #848484;
+}
+
+.instagram-menu-1 > h3 > b {
+    color: var(--modocoratual);
 }
 
 .app-instagram > .instagram-menu-5 {
@@ -29626,28 +29587,24 @@ tiktok
     transition: 0.5s ease;
 }
 
-.app-tiktok > .app-tiktok-menu5 > h1 {
+.app-tiktok-menu5 > h1 {
     color: var(--modoatualtexto);
     font-family: ProBold;
-    font-weight: bolder;
     position: relative;
-    text-align: left;
-    top: 12.5%;
     text-align: center;
-    font-size: 1.55vh;
+    top: 30%;
+    height: 9%;
+    font-size: 2vh;
     transition: 0.5s ease;
-    cursor: default;
-    width: 100%;
-    padding-bottom: 3%;
-    z-index: 1;
 }
 
-.app-tiktok > .app-tiktok-menu5 > h2 {
+
+.app-tiktok-menu5 > h2 {
     color: var(--modoatualtexto);
     font-family: ProLight;
     position: relative;
     text-align: left;
-    top: 11%;
+    top: 26%;
     text-align: center;
     font-size: 1vh;
     transition: 0.5s ease;
@@ -29658,136 +29615,105 @@ tiktok
     z-index: 1;
 }
 
-.app-tiktok > .app-tiktok-menu5 > input {
+.app-tiktok-menu5 > input {
     position: relative;
-    width: 90%;
-    left: 4.6%;
-    height: 6%;
-    top: 12%;
-    margin-bottom: 2%;
+    width: 85%;
+    left: 7.5%;
+    height: 5.8%;
+    top: 26%;
+    margin-bottom: 1.8%;
     padding-left: 2.5%;
     border: none;
     outline: none;
-    font-size: 1.3vh;
+    font-size: 1.05vh;
     color: #848484;
     font-family: ProLight;
     background-color: var(--modoatualfundo2);
     border-radius: 0.5vh;
     border: 0.5px solid var(--coratualbordas);
-    transition: 0.5s ease;
 }
 
-.app-tiktok > .app-tiktok-menu5 > .idsoftware {
+.app-tiktok-menu5 > .botaoconfirmarnicktiktok {
     position: relative;
-    width: 90%;
-    left: 4.6%;
-    height: 6%;
-    top: 12%;
-    margin-bottom: 2%;
-    padding-left: 2.5%;
-    border: none;
-    outline: none;
-    font-size: 1.3vh;
-    color: #848484;
-    font-family: ProLight;
-    background-color: var(--modoatualfundo2);
-    border-radius: 0.5vh;
-    
-    border: 0.5px solid var(--coratualbordas);
-}
-
-.app-tiktok > .app-tiktok-menu5 > .idsoftware > p {
-    line-height: 2.10vh;
-    position: relative;
-    top: 20%;
-    cursor: default;
-}
-
-.app-tiktok > .app-tiktok-menu5 > .botaoconfirmarnick {
-    position: relative;
-    width: 90%;
-    height: 6%;
-    left: 5%;
-    top: 14.1%;
+    width: 85%;
+    height: 5.5%;
+    left: 7.5%;
+    top: 26.5%;
     border-radius: 0.5vh;
     background-color: rgb(254, 44, 85);
     cursor: pointer;
     transition: 0.5s ease;
 }
 
-.app-tiktok > .app-tiktok-menu5 > .botaoconfirmarnick:hover {
+.app-tiktok-menu5 > .botaoconfirmarnicktiktok:hover {
     transform: scale(1.03);
 }
 
-.app-tiktok > .app-tiktok-menu5 > .botaoconfirmarnick > h1 {
+.app-tiktok-menu5 > .botaoconfirmarnicktiktok > h1 {
     color: white;
     font-family: ProBold;
     position: relative;
     text-align: center;
     font-weight: normal;
-    top: 29%;
+    top: 30%;
     height: 17%;
-    font-size: 1.25vh;
+    font-size: 1.05vh;
     transition: 0.5s ease;
 }
 
-.app-tiktok > .app-tiktok-menu5 > .botaoconfirmarnick2 {
+.app-tiktok-menu5 > .botaoconfirmarnicktiktok2 {
     position: relative;
-    width: 90%;
-    height: 6%;
-    left: 5%;
-    top: 13.1%;
+    width: 85%;
+    height: 5.5%;
+    left: -100%;
+    top: 21.5%;
     border-radius: 0.5vh;
     background-color: rgb(254, 44, 85);
     cursor: pointer;
     transition: 0.5s ease;
 }
 
-.app-tiktok > .app-tiktok-menu5 > .botaoconfirmarnick2:hover {
+.app-tiktok-menu5 > .botaoconfirmarnicktiktok2:hover {
     transform: scale(1.03);
 }
 
-.app-tiktok > .app-tiktok-menu5 > .botaoconfirmarnick2 > h1 {
+.app-tiktok-menu5 > .botaoconfirmarnicktiktok2 > h1 {
     color: white;
     font-family: ProBold;
     position: relative;
     text-align: center;
     font-weight: normal;
-    top: 29%;
+    top: 32%;
     height: 17%;
-    font-size: 1.25vh;
+    font-size: 1.03vh;
     transition: 0.5s ease;
 }
 
-.app-tiktok > .app-tiktok-menu5 > .caixaregistro > h3 {
-    color: #848484;
-    font-family: ProLight;
+.app-tiktok-menu5 > img {
+    position: absolute;
+    width: 35%;
+    left: 31.5%;
+    top: 11.5%;
+    justify-content: center;
+    margin: auto;
+    align-items: center;
+}
+
+.app-tiktok-menu5 > h3 {
+    font-size: 1.1vh;
+    font-family: ProBold;
     position: relative;
+    top: 50.5%;
+    margin: auto;
+    justify-content: center;
     text-align: center;
-    font-size: 1.5vh;
-    transition: 0.5s ease;
-    z-index: 2;
-
+    align-items: center;
+    cursor: pointer;
+    color: #848484;
 }
 
-.app-tiktok > .app-tiktok-menu5 > .caixaregistro > h3 {
-    width: 100%; 
-    text-align: center; 
-    border-bottom: 1px solid #848484; 
-    line-height: 0.1em;
-    margin: 10px 0 20px; 
- } 
- 
- .app-tiktok > .app-tiktok-menu5 > .caixaregistro > h3 > span { 
-     background: var(--modoatualfundo); 
-     padding:0 10px; 
- }
-
- .app-tiktok > .app-tiktok-menu5  > .caixaregistro {
-    position: relative;
-    width: 90%;
-    left: 5%;
-    top: 18%;
+.app-tiktok-menu5 > h3 > b {
+    color: var(--modocoratual);
 }
 
 .app-tiktok > .forcarcorrespostas {
