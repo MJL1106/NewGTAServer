@@ -1,134 +1,422 @@
 
 ================================================================
-======== Log Rotated - 3/10/2024, 12:00:00 AM                   
+======== FXServer Starting - 3/12/2024, 1:45:51 PM              
 ================================================================
-[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[script:rahe-boosting] [93m[info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[ citizen-server-impl] sync thread hitch warning: timer interval of 103 milliseconds
-[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[script:rahe-boosting] [info] Starting the [93mcontract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[script:rahe-boosting] [0m[info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[ citizen-server-impl] sync thread hitch warning: timer interval of 127 milliseconds
-[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[ citizen-server-impl] sync thread hitch warning: timer interval of 114 milliseconds
-[script:rahe-boosting] [97m[info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[script:rahe-boosting] [info] Starting the contract generator (automatic[97m trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[ citizen-server-impl] sync thread hitch warning: timer interval of 105 milliseconds
-[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[ citizen-server-impl] server thread hitch warning: timer interval of 158 milliseconds
-[ citizen-server-impl] sync thread hitch warning: timer interval of 135 milliseconds
-[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[script:rahe-boosting] [93m[info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[script:rahe-boosting] [97m[info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[ citizen-server-impl] [0mServer list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[38;5;73m[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[38;5;73m[ citizen-server-impl] [91mServer list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[38;5;73m[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[38;5;73m[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[script:rahe-boosting] [info] Starting the contract generator[97m (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[38;5;73m[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[38;5;73m[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[ citizen-server-impl] [0mServer list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[38;5;73m[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[ citizen-server-impl] [0mServer list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[ citizen-server-impl] sync thread hitch warning: timer interval of 121 milliseconds
-[ citizen-server-impl] Server list query returned an error: System.Threading.Tasks.TaskCanceledException: A task was canceled. <- System.TimeoutException: A task was canceled. <- System.Threading.Tasks.TaskCanceledException: The request was canceled due to the configured HttpClient.Timeout of 30 seconds elapsing.
-[ citizen-server-impl] sync thread hitch warning: timer interval of 115 milliseconds
-[ citizen-server-impl] server thread hitch warning: timer interval of 152 milliseconds
-[ citizen-server-impl] sync thread hitch warning: timer interval of 102 milliseconds
-[ citizen-server-impl] sync thread hitch warning: timer interval of 150 milliseconds
-[ citizen-server-impl] server thread hitch warning: timer interval of 311 milliseconds
-[ citizen-server-impl] sync thread hitch warning: timer interval of 259 milliseconds
-[ citizen-server-impl] network thread hitch warning: timer interval of 257 milliseconds
-[ citizen-server-impl] network thread hitch warning: timer interval of 322 milliseconds
-[ citizen-server-impl] sync thread hitch warning: timer interval of 323 milliseconds
-[ citizen-server-impl] server thread hitch warning: timer interval of 334 milliseconds
-[ citizen-server-impl] network thread hitch warning: timer interval of 272 milliseconds
-[ citizen-server-impl] sync thread hitch warning: timer interval of 272 milliseconds
-[ citizen-server-impl] server thread hitch warning: timer interval of 276 milliseconds
-[ citizen-server-impl] network thread hitch warning: timer interval of 210 milliseconds
-[ citizen-server-impl] sync thread hitch warning: timer interval of 210 milliseconds
-[ citizen-server-impl] server thread hitch warning: timer interval of 209 milliseconds
-[ citizen-server-impl] sync thread hitch warning: timer interval of 318 milliseconds
-[ citizen-server-impl] network thread hitch warning: timer interval of 328 milliseconds
-[ citizen-server-impl] server thread hitch warning: timer interval of 334 milliseconds
-[ citizen-server-impl] sync thread hitch warning: timer interval of 212 milliseconds
-[ citizen-server-impl] network thread hitch warning: timer interval of 204 milliseconds
-[ citizen-server-impl] server thread hitch warning: timer interval of 233 milliseconds
-[ citizen-server-impl] sync thread hitch warning: timer interval of 141 milliseconds
-[ citizen-server-impl] server thread hitch warning: timer interval of 257 milliseconds
-[ citizen-server-impl] sync thread hitch warning: timer interval of 143 milliseconds
-[ citizen-server-impl] server thread hitch warning: timer interval of 165 milliseconds
-[ citizen-server-impl] sync thread hitch warning: timer interval of 131 milliseconds
-[ citizen-server-impl] sync thread hitch warning: timer interval of 148 milliseconds
-[ citizen-server-impl] server thread hitch warning: timer interval of 211 milliseconds
-[ citizen-server-impl] server thread hitch warning: timer interval of 159 milliseconds
-[ citizen-server-impl] sync thread hitch warning: timer interval of 103 milliseconds
-[ citizen-server-impl] sync thread hitch warning: timer interval of 105 milliseconds
-[ citizen-server-impl] sync thread hitch warning: timer interval of 176 milliseconds
-[ citizen-server-impl] network thread hitch warning: timer interval of 176 milliseconds
-[ citizen-server-impl] server thread hitch warning: timer interval of 215 milliseconds
-[ citizen-server-impl] network thread hitch warning: timer interval of 170 milliseconds
-[ citizen-server-impl] sync thread hitch warning: timer interval of 171 milliseconds
-[ citizen-server-impl] server thread hitch warning: timer interval of 174 milliseconds
-[ citizen-server-main] -> Quitting: SIGHUP received
+[           resources] [32mScanning resources.
+[           resources] Found 267 resources.
+[          svadhesive] Authenticating server license key...
+[38;5;66m[          svadhesive] Server license key authentication succeeded. Welcome!
+[    c-scripting-core] Creating script environments for sessionmanager
+[           resources] Started resource sessionmanager
+[    c-scripting-core] Creating script environments for monitor
+[      script:monitor] [txAdmin] Resource v6.0.2 threads and commands set up. All Ready.
+[38;5;83m[           resources] Started resource monitor
+[38;5;161m[    c-scripting-core] Creating script environments for mapmanager
+[           resources] Started resource mapmanager
+[    c-scripting-core] Creating script environments for PolyZone
+[           resources] Started resource PolyZone
+[    c-scripting-core] Creating script environments for chat
+[38;5;83m[           resources] Started resource chat
+[           resources] Started resource spawnmanager
+[   script:mapmanager] Started gametype Freeroam
+[           resources] Started resource basic-gamemode
+[    c-scripting-core] Creating script environments for hardcap
+[           resources] Started resource hardcap
+[    c-scripting-core] Creating script environments for baseevents
+[           resources] Started resource baseevents
+[    c-scripting-core] Creating script environments for oxmysql
+[38;5;83m[           resources] Started resource oxmysql
+[38;5;161m[    c-scripting-core] Creating script environments for qb-core
+[38;5;83m[           resources] Started resource qb-core
+[    c-resources-core] Resource 'ox_lib' can't run:
+[    c-resources-core]   1. onesync: OneSync needs to be enabled
+[ citizen-server-impl] Couldn't start resource ox_lib.
+[    c-resources-core] Resource 'ox_lib' can't run:
+[    c-resources-core]   1. onesync: OneSync needs to be enabled
+[    c-resources-core] Could not start dependency ox_lib for resource ox_target.
+[ citizen-server-impl] Couldn't start resource ox_target.
+[    c-scripting-core] Creating script environments for illenium-appearance
+[script:illenium-appe] SCRIPT ERROR: ox_lib must be started before this resource.
+[script:illenium-appe] > fn (@ox_lib/init.lua:19)
+[38;5;54m[script:illenium-appe] SCRIPT ERROR: @illenium-appearance/server/framework/qb/migrate.lua:72: attempt to index a nil value (global 'lib')
+[script:illenium-appe] > fn (@illenium-appearance/server/framework/qb/migrate.lua:72)
+[script:illenium-appe] SCRIPT ERROR: @illenium-appearance/server/framework/esx/management.lua:11: attempt to index a nil value (global 'lib')
+[script:illenium-appe] > fn (@illenium-appearance/server/framework/esx/management.lua:11)
+[script:illenium-appe] SCRIPT ERROR: @illenium-appearance/server/server.lua:44: attempt to index a nil value (global 'lib')
+[script:illenium-appe] > fn (@illenium-appearance/server/server.lua:44)
+[script:illenium-appe] SCRIPT ERROR: @illenium-appearance/server/permissions.lua:4: attempt to index a nil value (global 'lib')
+[script:illenium-appe] > fn (@illenium-appearance/server/permissions.lua:4)
+[38;5;83m[           resources] Started resource illenium-appearance
+[38;5;161m[    c-scripting-core] Creating script environments for CarWipe
+[38;5;83m[           resources] Started resource CarWipe
+[resources:Custom-Wea] [94mAsset Custom-Weapons/w_me_katana.ytd uses 32.0 MiB of physical memory.
+[resources:Custom-Wea] Asset Custom-Weapons/w_sb_mp5.ytd uses 24.5 MiB of physical memory.
+[           resources] Started resource Custom-Weapons (2 warnings)
+[    c-scripting-core] Creating script environments for EFn_ElectricJob
+[           resources] Started resource EFn_ElectricJob
+[    c-scripting-core] Creating script environments for Renewed-Weaponscarry
+[script:Renewed-Weapo] [0mSCRIPT ERROR: ox_lib must be started before this resource.
+[script:Renewed-Weapo] > fn (@ox_lib/init.lua:19)
+[script:Renewed-Weapo] SCRIPT ERROR: @Renewed-Weaponscarry/init.lua:2: module 'server' not found
+[script:Renewed-Weapo] > fn (@Renewed-Weaponscarry/init.lua:2)
+[           resources] Started resource Renewed-Weaponscarry
+[    c-scripting-core] Creating script environments for bb-multichar
+[           resources] [0mStarted resource bb-multichar
+[    c-scripting-core] Creating script environments for casino-luckywheel
+[38;5;83m[           resources] Started resource casino-luckywheel
+[           resources] Started resource casinohack-main
+[    c-scripting-core] Creating script environments for doj-fishing
+[           resources] Started resource doj-fishing
+[    c-scripting-core] Creating script environments for fakeplates-main
+[           resources] Started resource fakeplates-main
+[    c-scripting-core] Creating script environments for flight-houserobbery
+[script:flight-houser] SCRIPT ERROR: ox_lib must be started before this resource.
+[script:flight-houser] > fn (@ox_lib/init.lua:19)
+[    c-scripting-core] Failed to load script @es_extended/imports.lua.
+[script:flight-houser] SCRIPT ERROR: @flight-houserobbery/opensource/server/server.lua:22: attempt to index a nil value (global 'lib')
+[script:flight-houser] [0mSCRIPT ERROR: ?:-1: attempt to index a nil value (field 'lib')
+[script:flight-houser] [0mSCRIPT ERROR: ?:-1: attempt to index a nil value (field 'lib')
+[38;5;83m[           resources] Started resource flight-houserobbery
+[38;5;161m[    c-scripting-core] Creating script environments for glow_crafting
+[38;5;83m[           resources] Started resource glow_crafting
+[38;5;161m[    c-scripting-core] Creating script environments for gx-weedshop
+[38;5;83m[           resources] Started resource gx-weedshop
+[38;5;83m[           resources] Started resource hacking
+[    c-scripting-core] Creating script environments for hackingdevice
+[           resources] Started resource hackingdevice
+[    c-scripting-core] Creating script environments for jpr-phonesystem
+[           resources] Started resource jpr-phonesystem
+[           resources] Started resource knockout
+[    c-scripting-core] Creating script environments for lightsout
+[           resources] Started resource lightsout
+[           resources] Started resource memorygame
+[           resources] Started resource ms-peds
+[           resources] Started resource menuv
+[    c-scripting-core] Creating script environments for nad_rockstar
+[           resources] Started resource nad_rockstar
+[           resources] Started resource nh-context
+[    c-scripting-core] Creating script environments for numbers
+[           resources] [0mStarted resource numbers
+[    c-scripting-core] Creating script environments for nv_3D-DisconnectReason
+[           resources] Started resource nv_3D-DisconnectReason
+[    c-scripting-core] Creating script environments for osm-valet
+[           resources] Started resource osm-valet
+[           resources] Started resource pd-safe-master
+[    c-scripting-core] Creating script environments for ps-camera
+[           resources] [0mStarted resource ps-camera
+[    c-scripting-core] Creating script environments for ps-dispatch
+[  script:ps-dispatch] SCRIPT ERROR: ox_lib must be started before this resource.
+[  script:ps-dispatch] > fn (@ox_lib/init.lua:19)
+[  script:ps-dispatch] SCRIPT ERROR: @ps-dispatch/server/main.lua:56: attempt to index a nil value (global 'lib')
+[  script:ps-dispatch] > fn (@ps-dispatch/server/main.lua:56)
+[           resources] Started resource ps-dispatch
+[    c-scripting-core] Creating script environments for ps-drugprocessing
+[38;5;83m[           resources] Started resource ps-drugprocessing
+[    c-scripting-core] Creating script environments for ps-mdt
+[           resources] Started resource ps-mdt
+[38;5;161m[    c-scripting-core] Creating script environments for ps-multijob
+[38;5;83m[           resources] Started resource ps-multijob
+[38;5;83m[           resources] Started resource ps-ui
+[    c-scripting-core] Creating script environments for qb-adminmenu
+[38;5;83m[           resources] Started resource qb-adminmenu
+[    c-scripting-core] Creating script environments for qb-ambulancejob
+[           resources] Started resource qb-ambulancejob
+[    c-scripting-core] Creating script environments for qb-anticheat
+[           resources] Started resource qb-anticheat
+[38;5;192m[resources:qb-interio] Warning: could not find file `starter_shells_k4mb1.ytyp` (defined in fxmanifest.lua:14)
+[           resources] Started resource qb-interior (1 warning)
+[38;5;161m[    c-scripting-core] Creating script environments for qb-weathersync
+[38;5;83m[           resources] Started resource qb-weathersync
+[38;5;161m[    c-scripting-core] Creating script environments for qb-apartments
+[resources:qb-apartme] Warning: could not find client_script `client/gui.lua` (defined in fxmanifest.lua:19)
+[           resources] Started resource qb-apartments (1 warning)
+[    c-scripting-core] Creating script environments for qb-atms
+[38;5;180m[   resources:qb-atms] Warning: could not find file `nui/images/logo.png` (defined in fxmanifest.lua:18)
+[           resources] Started resource qb-atms (1 warning)
+[    c-scripting-core] Creating script environments for qb-banking
+[38;5;83m[           resources] Started resource qb-banking
+[38;5;161m[    c-scripting-core] Creating script environments for qb-bankrobbery
+[resources:qb-bankrob] [0mWarning: could not find client_script `client/cl_paletosecond.lua` (defined in fxmanifest.lua:11)
+[           resources] Started resource qb-bankrobbery (1 warning)
+[           resources] Started resource qb-menu
+[    c-resources-core] Resource 'ox_lib' can't run:
+[    c-resources-core]   1. onesync: OneSync needs to be enabled
+[    c-resources-core] Could not start dependency ox_lib for resource ox_target.
+[    c-resources-core] Could not start dependency qb-target for resource qb-blackmarket.
+[ citizen-server-impl] Couldn't start resource qb-blackmarket.
+[    c-scripting-core] Creating script environments for qb-busjob
+[           resources] Started resource qb-busjob
+[    c-scripting-core] Creating script environments for qb-car-music
+[38;5;83m[           resources] Started resource qb-car-music
+[    c-resources-core] Resource 'ox_lib' can't run:
+[    c-resources-core]   1. onesync: OneSync needs to be enabled
+[    c-resources-core] Could not start dependency ox_lib for resource qb-chopshop.
+[ citizen-server-impl] Couldn't start resource qb-chopshop.
+[38;5;161m[    c-scripting-core] Creating script environments for qb-chopshop2
+[           resources] Started resource qb-chopshop2
+[    c-scripting-core] Creating script environments for qb-cityhall
+[38;5;83m[           resources] Started resource qb-cityhall
+[38;5;161m[    c-scripting-core] Creating script environments for qb-community-service
+[           resources] Started resource qb-community-service
+[    c-scripting-core] Creating script environments for qb-doorlock
+[           resources] Started resource qb-doorlock
+[    c-scripting-core] [0mCreating script environments for qb-drugs
+[           resources] Started resource qb-drugs
+[    c-scripting-core] Creating script environments for qb-farmingsimulator
+[           resources] Started resource qb-farmingsimulator
+[    c-scripting-core] Creating script environments for qb-fitbit
+[           resources] Started resource qb-fitbit
+[    c-scripting-core] Creating script environments for qb-garages
+[           resources] Started resource qb-garages
+[    c-scripting-core] [0mCreating script environments for qb-garbagejob
+[           resources] Started resource qb-garbagejob
+[    c-scripting-core] Creating script environments for qb-houses
+[38;5;83m[           resources] Started resource qb-houses
+[    c-scripting-core] [0mCreating script environments for qb-hud
+[38;5;83m[           resources] Started resource qb-hud
+[    c-scripting-core] Creating script environments for qb-hunting
+[           resources] Started resource qb-hunting
+[           resources] Started resource qb-input
+[    c-scripting-core] Creating script environments for qb-weapons
+[resources:qb-weapons] Warning: could not find file `weaponsnspistol.meta` (defined in fxmanifest.lua:16)
+[           resources] Started resource qb-weapons (1 warning)
+[    c-scripting-core] Creating script environments for qb-inventory
+[           resources] Started resource qb-inventory
+[38;5;161m[    c-scripting-core] Creating script environments for qb-jewelery
+[38;5;83m[           resources] Started resource qb-jewelery
+[           resources] Started resource qb-keyminigame
+[    c-scripting-core] Creating script environments for qb-loading
+[38;5;83m[           resources] Started resource qb-loading
+[38;5;83m[           resources] Started resource qb-lock
+[38;5;83m[           resources] Started resource qb-lockpick
+[38;5;161m[    c-scripting-core] Creating script environments for qb-management
+[38;5;83m[           resources] Started resource qb-management
+[38;5;161m[    c-scripting-core] Creating script environments for qb-moneywash
+[38;5;83m[           resources] Started resource qb-moneywash
+[    c-scripting-core] Creating script environments for qb-newsjob
+[           resources] Started resource qb-newsjob
+[    c-scripting-core] Creating script environments for qb-oxyruns
+[           resources] Started resource qb-oxyruns
+[    c-scripting-core] [0mCreating script environments for qb-pawnshop
+[           resources] Started resource qb-pawnshop
+[    c-scripting-core] Creating script environments for qb-policejob
+[           resources] [0mStarted resource qb-policejob
+[    c-scripting-core] Creating script environments for qb-printer
+[           resources] Started resource qb-printer
+[    c-scripting-core] Creating script environments for qb-prison
+[38;5;83m[           resources] Started resource qb-prison
+[38;5;161m[    c-scripting-core] Creating script environments for qb-radialmenu
+[           resources] Started resource qb-radialmenu
+[    c-scripting-core] Creating script environments for qb-rentals
+[           resources] Started resource qb-rentals
+[           resources] Started resource qb-scoreboard
+[    c-scripting-core] Creating script environments for qb-shops
+[           resources] Started resource qb-shops
+[resources:qb-skillba] Warning: could not find file `html/VerdanaBold.ttf` (defined in fxmanifest.lua:11)
+[           resources] Started resource qb-skillbar (1 warning)
+[    c-scripting-core] Creating script environments for qb-smallresources
+[resources:qb-smallre] Warning: could not find file `events.meta` (defined in fxmanifest.lua:23)
+[           resources] Started resource qb-smallresources (1 warning)
+[    c-scripting-core] Creating script environments for qb-spawn
+[           resources] Started resource qb-spawn
+[    c-scripting-core] Creating script environments for qb-storerobbery
+[           resources] Started resource qb-storerobbery
+[    c-scripting-core] Creating script environments for qb-streetraces
+[38;5;83m[           resources] Started resource qb-streetraces
+[38;5;161m[    c-scripting-core] Creating script environments for qb-taxijob
+[           resources] Started resource qb-taxijob
+[    c-scripting-core] Creating script environments for qb-towjob
+[           resources] Started resource qb-towjob
+[    c-scripting-core] Creating script environments for qb-truckerjob
+[           resources] Started resource qb-truckerjob
+[    c-scripting-core] Creating script environments for qb-truckrobbery
+[           resources] Started resource qb-truckrobbery
+[    c-scripting-core] Creating script environments for qb-tunerchip
+[38;5;83m[           resources] Started resource qb-tunerchip
+[38;5;161m[    c-scripting-core] Creating script environments for qb-vehiclefailure
+[38;5;83m[           resources] Started resource qb-vehiclefailure
+[38;5;161m[    c-scripting-core] Creating script environments for qb-vehiclekeys
+[           resources] Started resource qb-vehiclekeys
+[    c-scripting-core] Creating script environments for qb-vehiclesales
+[38;5;161m[resources:qb-vehicle] Warning: could not find file `html/reset.css` (defined in fxmanifest.lua:29)
+[           resources] Started resource qb-vehiclesales (1 warning)
+[38;5;161m[    c-scripting-core] Creating script environments for qb-vehicleshop
+[           resources] Started resource qb-vehicleshop
+[    c-scripting-core] Creating script environments for qb-weed
+[           resources] Started resource qb-weed
+[           resources] Started resource rahe-hackingdevice
+[    c-resources-core] Resource 'ox_lib' can't run:
+[    c-resources-core]   1. onesync: OneSync needs to be enabled
+[    c-resources-core] Could not start dependency ox_lib for resource rahe-boosting.
+[ citizen-server-impl] Couldn't start resource rahe-boosting.
+[    c-resources-core] Resource 'ox_lib' can't run:
+[    c-resources-core]   1. onesync: OneSync needs to be enabled
+[    c-resources-core] Could not start dependency ox_lib for resource rahe-racing.
+[ citizen-server-impl] Couldn't start resource rahe-racing.
+[    c-scripting-core] Creating script environments for thommie-nightvision-main
+[           resources] Started resource thommie-nightvision-main
+[38;5;83m[           resources] Started resource untangle-main
+[           resources] Started resource varhack
+[    c-scripting-core] Creating script environments for LegacyFuel
+[   script:LegacyFuel] SCRIPT ERROR: ox_lib must be started before this resource.
+[   script:LegacyFuel] > fn (@ox_lib/init.lua:19)
+[38;5;83m[           resources] Started resource LegacyFuel
+[   resources:MenuAPI] Warning: could not find file `html/css/img/*.png` (defined in fxmanifest.lua:11)
+[           resources] Started resource MenuAPI (1 warning)
+[38;5;83m[           resources] Started resource bob74_ipl
+[38;5;161m[    c-scripting-core] Creating script environments for bowling
+[38;5;83m[           resources] Started resource bowling
+[38;5;161m[    c-scripting-core] Creating script environments for connectqueue
+[38;5;173m[ script:connectqueue] QUEUE:  [connectqueue] Disabling hardcap 
+[           resources] Stopping resource hardcap
+[           resources] Started resource connectqueue
+[    c-resources-core] Resource 'ox_lib' can't run:
+[    c-resources-core]   1. onesync: OneSync needs to be enabled
+[    c-resources-core] Could not start dependency ox_lib for resource ox_target.
+[    c-resources-core] Could not start dependency qb-target for resource d3-arcade.
+[ citizen-server-impl] Couldn't start resource d3-arcade.
+[    c-scripting-core] Creating script environments for interact-sound
+[           resources] Started resource interact-sound
+[           resources] Started resource jim_bridge
+[38;5;83m[           resources] Started resource mhacking
+[38;5;83m[           resources] Started resource mystic-vehiclemenu
+[38;5;161m[    c-scripting-core] Creating script environments for poledance
+[38;5;83m[           resources] Started resource poledance
+[    c-scripting-core] Creating script environments for policeK9
+[38;5;205m[  resources:policeK9] Warning: could not find file `html/sounds/*.ogg` (defined in fxmanifest.lua:30)
+[           resources] Started resource policeK9 (1 warning)
+[38;5;161m[    c-scripting-core] Creating script environments for policebadge
+[38;5;83m[           resources] Started resource policebadge
+[           resources] Started resource progressbar
+[    c-scripting-core] Creating script environments for ptelevision
+[  script:ptelevision] SCRIPT ERROR: ox_lib must be started before this resource.
+[  script:ptelevision] > fn (@ox_lib/init.lua:19)
+[38;5;83m[           resources] Started resource ptelevision
+[38;5;161m[    c-scripting-core] Creating script environments for rcore_billards
+[38;5;84m[resources:rcore_bill] Warning: could not find server_script `server/code.lua` (defined in fxmanifest.lua:13)
+[           resources] Started resource rcore_billards (1 warning)
+[    c-resources-core] Resource 'rpemotes' can't run:
+[    c-resources-core]   1. onesync: OneSync needs to be enabled
+[ citizen-server-impl] Couldn't start resource rpemotes.
+[38;5;83m[           resources] Started resource safecracker
+[    c-scripting-core] Creating script environments for yarn
+[38;5;83m[           resources] Started resource yarn
+[38;5;73m[ citizen-server-impl] Running build tasks on resource webpack - it'll restart once completed.
+[    c-resources-core] Could not start dependency webpack for resource screenshot-basic.
+[ citizen-server-impl] Couldn't start resource screenshot-basic.
+[           resources] Started resource warmenu
+[    c-scripting-core] Creating script environments for wk_wars2x
+[38;5;83m[           resources] Started resource wk_wars2x
+[38;5;161m[    c-scripting-core] Creating script environments for x-radiolist
+[           resources] Started resource x-radiolist
+[    c-scripting-core] Creating script environments for xsound
+[           resources] Started resource xsound
+[    c-resources-core] Resource 'pma-voice' can't run:
+[    c-resources-core]   1. onesync: OneSync needs to be enabled
+[ citizen-server-impl] Couldn't start resource pma-voice.
+[    c-scripting-core] Creating script environments for qb-radio
+[     script:qb-radio] SCRIPT ERROR: @qb-radio/server.lua:8: No such export addChannelCheck in resource pma-voice
+[  resources:qb-radio] Warning: could not find client_script `animation.lua` (defined in fxmanifest.lua:9)
+[  resources:qb-radio] Warning: could not find file `html/img/cursor.png` (defined in fxmanifest.lua:18)
+[           resources] Started resource qb-radio (2 warnings)
+[    c-scripting-core] Creating script environments for jim-burgershot
+[script:jim-burgersho] Jim-Burgershot v2.6 - BurgerShot Job Script by Jimathy
+[           resources] Started resource jim-burgershot
+[    c-scripting-core] Creating script environments for jim-catcafe
+[  script:jim-catcafe] SCRIPT ERROR: ox_lib must be started before this resource.
+[  script:jim-catcafe] > fn (@ox_lib/init.lua:19)
+[    c-scripting-core] Failed to load script @ox_core/imports/client.lua.
+[    c-scripting-core] Failed to load script @es_extended/imports.lua.
+[    c-scripting-core] Failed to load script @qbx_core/modules/playerdata.lua.
+[  script:jim-catcafe] Bridge: 'qb-menu' export found 
+[  script:jim-catcafe] Bridge: 'qb-core' export found 
+[  script:jim-catcafe] Bridge: 'qb-inventory' export found 
+[  script:jim-catcafe] Bridge: Loading 732 Items from qb-core
+[  script:jim-catcafe] Bridge: Loading 382 Vehicles from qb-core
+[  script:jim-catcafe] Bridge: Loading 23 Jobs from qb-core	Bridge: Loading 8 Gangs from qb-core
+[  script:jim-catcafe] Jim-[32mCatCafe v2.0 - CatCafe Script by Jimathy
+[38;5;83m[           resources] Started resource jim-catcafe
+[38;5;161m[    c-scripting-core] Creating script environments for jim-djbooth
+[38;5;176m[  script:jim-djbooth] Jim-DJBooth v1.3.2 by Jimathy
+[           resources] Started resource jim-djbooth
+[    c-scripting-core] Creating script environments for jim-jobgarage
+[script:jim-jobgarage] Jim-JobGarage v1.4.3 - Job Garage Script by Jimathy
+[           resources] Started resource jim-jobgarage
+[    c-scripting-core] Creating script environments for jim-mechanic
+[ script:jim-mechanic] SCRIPT ERROR: ox_lib must be started before this resource.
+[ script:jim-mechanic] > fn (@ox_lib/init.lua:19)
+[    c-scripting-core] Failed to load script @ox_core/imports/client.lua.
+[    c-scripting-core] Failed to load script @es_extended/imports.lua.
+[    c-scripting-core] Failed to load script @qbx_core/modules/playerdata.lua.
+[ script:jim-mechanic] Bridge: 'qb-core' export found 
+[ script:jim-mechanic] Bridge: 'qb-inventory' export found 
+[ script:jim-mechanic] Bridge: 'qb-menu' export found 
+[ script:jim-mechanic] Bridge: Loading 732 Items from qb-core
+[ script:jim-mechanic] Bridge: Loading 382 Vehicles from qb-core
+[ script:jim-mechanic] Bridge: Loading 23 Jobs from qb-core	Bridge: Loading 8 Gangs from qb-core
+[ script:jim-mechanic] Jim-Mechanic v3.4 - Mechanic Script by Jimathy
+[           resources] Started resource jim-mechanic
+[    c-scripting-core] Creating script environments for jim-mining
+[   script:jim-mining] Jim-Mining v2.4.2 [0m- Mining Script by Jimathy
+[           resources] Started resource jim-mining
+[38;5;161m[    c-scripting-core] Creating script environments for jim-recycle
+[  script:jim-recycle] [0mJim-Recycle v2.7.2 - Recycling Script by Jimathy
+[           resources] Started resource jim-recycle
+[           resources] Started resource CR%20(This%20version%20has%20more%20Cedar%20trees%20south%20the%20forests)
+[           resources] Started resource Cedar%20tree_s%20only
+[           resources] Started resource RRC%20(This%20version%20has%20more%20Redwood%20trees%20south%20the%20forests)
+[           resources] Started resource Redwood%20tree_s%20only
+[resources:asset_map:] Asset asset_map/desertos_prison.ytd uses 30.5 MiB of physical memory.
+[resources:asset_map:] Asset asset_map/divinity_statue.ydr uses 32.0 MiB of physical memory.
+[resources:asset_map:] Asset asset_map/patoche_billard_det17.ydr uses 18.0 MiB of physical memory.
+[resources:asset_map:] Asset asset_map/w_ar_assaultrifle+hi.ytd uses 19.0 MiB of physical memory.
+[resources:asset_map:] Asset asset_map/w_ar_assaultrifle.ytd uses 19.0 MiB of physical memory.
+[resources:asset_map:] Asset asset_map/w_ar_carbinerifle.ytd uses 21.0 MiB of physical memory.
+[resources:asset_map:] Asset asset_map/w_ar_carbinerifle_hi.ytd uses 21.0 MiB of physical memory.
+[resources:asset_map:] Asset asset_map/w_ar_carbineriflemk2.ydr uses 32.0 MiB of physical memory.
+[resources:asset_map:] Asset asset_map/w_ar_carbineriflemk2.ytd uses 32.0 MiB of physical memory.
+[resources:asset_map:] Asset asset_map/w_ar_carbineriflemk2_hi.ydr uses 32.0 MiB of physical memory.
+[resources:asset_map:] Asset asset_map/w_ar_carbineriflemk2_mag1.ydr uses 32.0 MiB of physical memory.
+[resources:asset_map:] Asset asset_map/w_ar_carbineriflemk2_mag1.ytd uses 32.0 MiB of physical memory.
+[resources:asset_map:] Asset asset_map/w_ar_carbineriflemk2_mag2.ydr uses 32.0 MiB of physical memory.
+[resources:asset_map:] Asset asset_map/w_ar_carbineriflemk2_mag2.ytd uses 32.0 MiB of physical memory.
+[resources:asset_map:] Asset asset_map/w_pi_pistolmk2.ytd uses 34.5 MiB of physical memory.
+[           resources] Started resource asset_map (15 warnings)
+[    c-scripting-core] Creating script environments for cfx-gabz-mapdata
+[           resources] Started resource cfx-gabz-mapdata
+[    c-scripting-core] Creating script environments for cfx-gabz-burgershot
+[38;5;96m[resources:cfx-gabz-b] Asset cfx-gabz-burgershot/gabz_burgershot_txd.ytd uses 22.1 MiB of physical memory.
+[           resources] Started resource cfx-gabz-burgershot (1 warning)
+[38;5;161m[    c-scripting-core] Creating script environments for cfx-gabz-casino
+[           resources] Started resource cfx-gabz-casino
+[    c-scripting-core] Creating script environments for cfx-gabz-catcafe
+[38;5;23m[resources:cfx-gabz-c] Asset cfx-gabz-catcafe/denis3d_catcafe_txd.ytd uses 23.0 MiB of physical memory.
+[           resources] Started resource cfx-gabz-catcafe (1 warning)
+[    c-scripting-core] Creating script environments for cfx-gabz-fleeca
+[38;5;83m[           resources] Started resource cfx-gabz-fleeca
+[    c-scripting-core] Creating script environments for cfx-gabz-impound
+[           resources] Started resource cfx-gabz-impound
+[    c-scripting-core] Creating script environments for cfx-gabz-mrpd
+[38;5;40m[resources:cfx-gabz-m] Asset cfx-gabz-mrpd/gabz_mrpd_txd.ytd uses 35.0 MiB of physical memory.
+[           resources] Started resource cfx-gabz-mrpd (1 warning)
+[38;5;161m[    c-scripting-core] Creating script environments for cfx-gabz-ottos
+> txaEvent "serverShuttingDown" "{＂delay＂:5000,＂author＂:＂mjl1106＂,＂message＂:＂Server shutting down (requested by mjl1106).＂}"
+[resources:cfx-gabz-o] Asset cfx-gabz-ottos/denis3d_otto_mechanic_txd.ytd uses 24.0 MiB of physical memory.
+[           resources] Started resource cfx-gabz-ottos (1 warning)
+[    c-scripting-core] [0mCreating script environments for cfx-gabz-pdprops
+[38;5;99m[resources:cfx-gabz-p] Asset cfx-gabz-pdprops/gabz_pdprops01_txd.ytd uses 27.5 MiB of physical memory.
+[           resources] Started resource cfx-gabz-pdprops (1 warning)
+[38;5;161m[    c-scripting-core] Creating script environments for cfx-gabz-pacificbank
+[38;5;128m[resources:cfx-gabz-p] Asset cfx-gabz-pacificbank/gabz_sm_pb_txd.ytd uses 26.8 MiB of physical memory.
+[           resources] Started resource cfx-gabz-pacificbank (1 warning)
+[38;5;161m[    c-scripting-core] Creating script environments for cfx-gabz-paletobank
+[38;5;83m[           resources] Started resource cfx-gabz-paletobank
+[38;5;161m[    c-scripting-core] Creating script environments for cfx-gabz-pdm
+[resources:cfx-gabz-p] Asset cfx-gabz-pdm/gabz_pdm_txd.ytd uses 17.5 MiB of physical memory.
+[           resources] Started resource cfx-gabz-pdm (1 warning)
+[    c-scripting-core] Creating script environments for cfx-gabz-pillbox
+[resources:cfx-gabz-p] Asset cfx-gabz-pillbox/gabz_pillbox_textures_01.ytd uses 24.8 MiB of physical memory.
+[           resources] Started resource cfx-gabz-pillbox (1 warning)
+[    c-scripting-core] Creating script environments for cfx-gabz-sandypd
+[           resources] Started resource cfx-gabz-sandypd
+[    c-scripting-core] Creating script environments for cfx-gabz-townhall
