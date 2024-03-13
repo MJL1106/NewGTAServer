@@ -1,3 +1,3 @@
 @echo off
-"C:/NewGTAServer/server//FXServer.exe" +set serverProfile "default"
+"C:/Users/admin/Documents/GitHub/NewGTAServer/server//FXServer.exe" +set serverProfile "default"
 pause
