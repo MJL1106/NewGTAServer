@@ -58,7 +58,7 @@ Config = {
     -- Used for few framework dependent things. Accepted values: "qb-core", false
     Framework = "qb-core",
     -- You can disable the Adult Emotes here.
-    AdultEmotesDisabled = false,
+    AdultEmotesDisabled = true,
     -- You can disable the Animal Emotes here.
     AnimalEmotesEnabled = true,
     -- Used to enable or disable the search feature in the menu.
