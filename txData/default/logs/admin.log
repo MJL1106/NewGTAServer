@@ -39,19 +39,3 @@
 ======== txAdmin v6.0.2 atop fxserver 7290 Starting - 3/13/2024, 9:06:52 AM
 ================================================================
 [09:10:36][mjl1106] logged in via in-game ui
-
-================================================================
-======== txAdmin v6.0.2 atop fxserver 7290 Starting - 3/13/2024, 12:47:49 PM
-================================================================
-[12:47:59][mjl1106] logged in from 127.0.0.1 via citizenfx
-[12:48:19][mjl1106] executed "curl -X GET \   -H "X-API-KEY: API-Token" \   https://fini.dev/api/v3/keys/verify"
-[12:51:00][mjl1106] executed "RESTART SERVER"
-[12:53:19][mjl1106] executed "curl -X GET \   -H "X-API-KEY: API-Token" \   https://fini.dev/api/v3/keys/verify"
-[13:04:39][mjl1106] executed "RESTART SERVER"
-[13:06:23][mjl1106] executed "RESTART SERVER"
-
-================================================================
-======== txAdmin v6.0.2 atop fxserver 7290 Starting - 3/13/2024, 1:14:27 PM
-================================================================
-[13:33:39][mjl1106] logged in from 127.0.0.1 via citizenfx
-[13:50:51][mjl1106] executed "ensure "FiniAC""
