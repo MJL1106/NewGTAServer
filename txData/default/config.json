@@ -13,7 +13,7 @@
   "logger": {},
   "monitor": {
     "restarterSchedule": [],
-    "resourceStartingTolerance": 120
+    "resourceStartingTolerance": 600
   },
   "playerDatabase": {
     "onJoinCheckBan": true,
@@ -34,6 +34,9 @@
   "fxRunner": {
     "serverDataPath": "C:/NewGTAServer/",
     "cfgPath": "C:/NewGTAServer/server.cfg",
-    "autostart": true
+    "commandLine": "",
+    "onesync": "on",
+    "autostart": true,
+    "quiet": false
   }
 }
