@@ -4599,14 +4599,14 @@ QBShared.Vehicles = {
         ['hash'] = `escaladeprime`,
         ['shop'] = 'luxury',
     },
-	['madf350lift'] = {
-        ['name'] = 'madf350lift',
-        ['brand'] = 'madf350lift',
-        ['model'] = 'madf350lift',
+	['rmodmk7'] = {
+        ['name'] = 'rmodmk7',
+        ['brand'] = 'rmodmk7',
+        ['model'] = 'rmodmk7',
         ['price'] = 99999999999,
-        ['category'] = 'tier2',
-        ['categoryLabel'] = 'Tier 2',
-        ['hash'] = `madf350lift`,
+        ['category'] = 'tier1',
+        ['categoryLabel'] = 'Tier 1',
+        ['hash'] = `rmodmk7`,
         ['shop'] = 'luxury',
     },
 	['GODzVIPS63AMG'] = {
@@ -4619,14 +4619,14 @@ QBShared.Vehicles = {
         ['hash'] = `GODzVIPS63AMG`,
         ['shop'] = 'luxury',
     },
-	['GODzKSTERZOTACHA'] = {
-        ['name'] = 'GODzKSTERZOTACHA',
-        ['brand'] = 'GODzKSTERZOTACHA',
-        ['model'] = 'GODzKSTERZOTACHA',
+	['suprapandem'] = {
+        ['name'] = 'suprapandem',
+        ['brand'] = 'suprapandem',
+        ['model'] = 'suprapandem',
         ['price'] = 99999999999,
         ['category'] = 'tier3',
         ['categoryLabel'] = 'Tier 3',
-        ['hash'] = `GODzKSTERZOTACHA`,
+        ['hash'] = `suprapandem`,
         ['shop'] = 'luxury',
     },
 	['Hycaders6'] = {
@@ -4689,14 +4689,14 @@ QBShared.Vehicles = {
         ['hash'] = `rmodpagani`,
         ['shop'] = 'luxury',
     },
-    ['rs7mans'] = {
-        ['name'] = 'rs7mans',
-        ['brand'] = 'rs7mans',
-        ['model'] = 'rs7mans',
+    ['GODzRAMTRX6x6'] = {
+        ['name'] = 'GODzRAMTRX6x6',
+        ['brand'] = 'GODzRAMTRX6x6',
+        ['model'] = 'GODzRAMTRX6x6',
         ['price'] = 99999999999,
         ['category'] = 'tier4',
         ['categoryLabel'] = 'Tier 4',
-        ['hash'] = `rs7mans`,
+        ['hash'] = `GODzRAMTRX6x6`,
         ['shop'] = 'luxury',
     },
     ['rs7beast'] = {
