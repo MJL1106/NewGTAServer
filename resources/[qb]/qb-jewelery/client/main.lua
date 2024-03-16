@@ -240,7 +240,7 @@ RegisterNetEvent('jewstore:thermitedoor', function()
         if Dist <= 1.5 then
             SetEntityHeading(ped, Config.ThermiteLocations['thermite'][k]['coords'].w)
             TriggerServerEvent('qb-bankrobbery:server:RemoveThermite')
-            exports['memorygame']:thermiteminigame(1, 3, 4, 7,
+            exports['memorygame']:thermiteminigame(8, 3, 4, 7,
             function() -- success
                 totalCompleted = totalCompleted + 1
                 QBCore.Functions.Notify("Thermite Placed", 'success', 4500)

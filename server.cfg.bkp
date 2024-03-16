@@ -45,6 +45,7 @@ ensure baseevents
 
 
 # QBCore & Extra stuff
+ensure FiniAC
 ensure qb-core
 ensure ox_lib
 ensure ox_target
@@ -56,6 +57,7 @@ ensure [jim]
 ensure [defaultmaps]
 ensure [clothing]
 ensure [vehicles]
+ensure FiniAC
 ensure Forced-First-Person-main
 ensure v42-notify
 ensure prospecting
@@ -68,10 +70,12 @@ ensure carsounds
 
 ## Permissions ##
 add_ace group.admin command allow # allow all commands
+add_ace resource.FiniAC command allow
 #add_principal identifier.{{principalMasterIdentifier}} qbcore.god <- doesn't exist yet, change the generated one below to qbcore.god
 add_principal identifier.steam:110000115a71fba qbcore.god
 add_principal identifier.steam:110000115ceb248 qbcore.god
 add_principal identifier.steam:11000010e87be4d qbcore.god #--pep
+add_principal identifier.steam:110000154d96125 qbcore.admin
 add_principal identifier.steam:11000014aadcc8a qbcore.admin #benito
 # Resources
 add_ace resource.qb-core command allow # Allow qb-core to execute commands

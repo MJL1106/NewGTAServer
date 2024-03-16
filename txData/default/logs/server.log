@@ -1,62 +1,35 @@
 
 ================================================================
-======== txAdmin Starting - 3/13/2024, 7:26:51 AM               
+======== Log Rotated - 3/16/2024, 12:00:00 AM                   
 ================================================================
-[7:30:59 AM] txAdmin: Logger started
-
-================================================================
-======== txAdmin Starting - 3/13/2024, 7:39:38 AM               
-================================================================
-[7:42:04 AM] txAdmin: Logger started
-[7:43:22 AM] [KpVCw#1] MJL: joined with identifiers [steam:1100001324fa523; license:ec6c328d6d02f816bf13e4a9d09768c02d6e3125; xbl:2535415531070562; live:1055522508602522; discord:213410953641852928; fivem:2586828]
-[7:53:10 AM] [KpVCw#1] MJL: disconnected (Exiting)
-
-================================================================
-======== txAdmin Starting - 3/13/2024, 8:09:58 AM               
-================================================================
-[8:12:15 AM] txAdmin: Logger started
-
-================================================================
-======== txAdmin Starting - 3/13/2024, 8:26:56 AM               
-================================================================
-[8:29:14 AM] txAdmin: Logger started
-
-================================================================
-======== txAdmin Starting - 3/13/2024, 8:30:15 AM               
-================================================================
-[8:30:46 AM] txAdmin: Logger started
-
-================================================================
-======== txAdmin Starting - 3/13/2024, 8:36:30 AM               
-================================================================
-[8:37:01 AM] txAdmin: Logger started
-[8:37:33 AM] [ng73Q#1] MJL: joined with identifiers [steam:1100001324fa523; license:ec6c328d6d02f816bf13e4a9d09768c02d6e3125; xbl:2535415531070562; live:1055522508602522; discord:213410953641852928; fivem:2586828]
-[8:42:30 AM] [ng73Q#1] MJL: disconnected (Exiting)
-
-================================================================
-======== txAdmin Starting - 3/13/2024, 8:46:16 AM               
-================================================================
-[8:46:45 AM] txAdmin: Logger started
-[8:48:19 AM] [rr9xj#1] MJL: joined with identifiers [steam:1100001324fa523; license:ec6c328d6d02f816bf13e4a9d09768c02d6e3125; xbl:2535415531070562; live:1055522508602522; discord:213410953641852928; fivem:2586828]
-[8:54:17 AM] [rr9xj#1] MJL: said "/exithouse"
-[8:54:17 AM] [rr9xj#1] MJL: said "/enterhouse"
-[8:56:19 AM] [rr9xj#1] MJL: died from suicide (Falling)
-[8:59:09 AM] [rr9xj#1] MJL: disconnected (Exiting)
-
-================================================================
-======== txAdmin Starting - 3/13/2024, 9:06:52 AM               
-================================================================
-[9:07:21 AM] txAdmin: Logger started
-[9:10:05 AM] [dxXAr#1] MJL: joined with identifiers [steam:1100001324fa523; license:ec6c328d6d02f816bf13e4a9d09768c02d6e3125; xbl:2535415531070562; live:1055522508602522; discord:213410953641852928; fivem:2586828]
-[9:15:53 AM] [dxXAr#1] MJL: disconnected (Exiting)
-
-================================================================
-======== txAdmin Starting - 3/13/2024, 1:55:53 PM               
-================================================================
-[1:56:24 PM] txAdmin: Logger started
-[1:58:52 PM] [H3jay#1] MJL: joined with identifiers [steam:1100001324fa523; license:ec6c328d6d02f816bf13e4a9d09768c02d6e3125; xbl:2535415531070562; live:1055522508602522; discord:213410953641852928; fivem:2586828]
-[2:00:32 PM] [H3jay#1] MJL: disconnected (Exiting)
-[2:03:00 PM] txAdmin: Logger started
-[2:03:52 PM] [z7ibh#1] MJL: joined with identifiers [steam:1100001324fa523; license:ec6c328d6d02f816bf13e4a9d09768c02d6e3125; xbl:2535415531070562; live:1055522508602522; discord:213410953641852928; fivem:2586828]
-[2:06:18 PM] [z7ibh#1] MJL: disconnected (Exiting)
-[2:45:06 PM] txAdmin: Logger started
+[4:50:24 AM] [nBgMB#1] Le0va: joined with identifiers [steam:110000115ceb248; license:eb50d0f0e1234a21689c685afbb0031705183403; xbl:2535464818703766; live:985157324057631; discord:246676459643600897; fivem:8879279; license2:eb50d0f0e1234a21689c685afbb0031705183403]
+[4:59:50 AM] [nBgMB#1] Le0va: said "/hideHUD"
+[4:59:52 AM] [nBgMB#1] Le0va: said "/hideHUD"
+[5:00:02 AM] [nBgMB#1] Le0va: said "/hideHUD"
+[5:03:38 AM] [nBgMB#1] Le0va: said "/hideHUD"
+[5:03:40 AM] [nBgMB#1] Le0va: said "/hideHUD"
+[5:03:43 AM] [nBgMB#1] Le0va: said "/hideHUD"
+[5:03:49 AM] [nBgMB#1] Le0va: said "/hideHUD"
+[5:03:57 AM] [nBgMB#1] Le0va: said "/hideHUD"
+[5:04:02 AM] [nBgMB#1] Le0va: said "/hideHUD"
+[5:04:08 AM] [nBgMB#1] Le0va: said "/hideHUD"
+[5:04:25 AM] [nBgMB#1] Le0va: said "/hideHUD"
+[5:04:33 AM] [nBgMB#1] Le0va: said "/hideHUD"
+[5:04:39 AM] [nBgMB#1] Le0va: said "/hideHUD"
+[5:04:44 AM] [nBgMB#1] Le0va: said "/hideHUD"
+[5:30:20 AM] txAdmin: ((Broadcast) txAdmin): said "This server is scheduled to restart in 30 minutes."
+[5:39:47 AM] [nBgMB#1] Le0va: said "/hideHUD"
+[5:45:20 AM] txAdmin: ((Broadcast) txAdmin): said "This server is scheduled to restart in 15 minutes."
+[5:50:21 AM] txAdmin: ((Broadcast) txAdmin): said "This server is scheduled to restart in 10 minutes."
+[5:54:32 AM] [nBgMB#1] Le0va: died from suicide (Falling)
+[5:55:12 AM] [nBgMB#1] Le0va: died from suicide (Falling)
+[5:55:21 AM] txAdmin: ((Broadcast) txAdmin): said "This server is scheduled to restart in 5 minutes."
+[5:56:21 AM] txAdmin: ((Broadcast) txAdmin): said "This server is scheduled to restart in 4 minutes."
+[5:57:21 AM] txAdmin: ((Broadcast) txAdmin): said "This server is scheduled to restart in 3 minutes."
+[5:58:21 AM] txAdmin: ((Broadcast) txAdmin): said "This server is scheduled to restart in 2 minutes."
+[5:59:21 AM] txAdmin: ((Broadcast) txAdmin): said "This server is scheduled to restart in 1 minute. Please disconnect now."
+[6:00:21 AM] [nBgMB#1] Le0va: disconnected ([txAdmin] Server restarting (scheduled restart at 06:00).)
+[6:00:50 AM] txAdmin: Logger started
+[10:45:48 AM] txAdmin: Logger started
+[12:01:03 PM] [FLHe3#1] DaddyDizzle: joined with identifiers [steam:11000014bb53aeb; license:e0893217ab0d40d6a510bcbfe1c9441b4a208a2b; discord:584024523989581834; fivem:8961289; license2:e0893217ab0d40d6a510bcbfe1c9441b4a208a2b]
+[12:06:18 PM] [FLHe3#1] DaddyDizzle: disconnected (Server shutting down: SIGHUP received)

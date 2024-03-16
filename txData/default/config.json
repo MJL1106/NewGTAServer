@@ -12,8 +12,12 @@
   },
   "logger": {},
   "monitor": {
-    "restarterSchedule": [],
-    "resourceStartingTolerance": 120
+    "restarterSchedule": [
+      "14:00",
+      "22:00",
+      "06:00"
+    ],
+    "resourceStartingTolerance": 300
   },
   "playerDatabase": {
     "onJoinCheckBan": true,
@@ -27,7 +31,10 @@
     "disableNuiSourceCheck": false
   },
   "discordBot": {
-    "enabled": false,
+    "enabled": true,
+    "token": "MTIxNzU5MzU2MzQ1ODcwMzQyMA.GiLAej.8yoY-2Q070gtxLWfOOJQdDwh240z6-y0JE3FQw",
+    "guild": "1106948392627748964",
+    "announceChannel": false,
     "embedJson": "{\n  \"title\": \"{{serverName}}\",\n  \"url\": \"{{serverBrowserUrl}}\",\n  \"description\": \"You can configure this embed in `txAdmin > Settings > Discord Bot`, and edit everything from it (except footer).\",\n  \"fields\": [\n    {\n      \"name\": \"> STATUS\",\n      \"value\": \"```\\n{{statusString}}\\n```\",\n      \"inline\": true\n    },\n    {\n      \"name\": \"> PLAYERS\",\n      \"value\": \"```\\n{{serverClients}}/{{serverMaxClients}}\\n```\",\n      \"inline\": true\n    },\n    {\n      \"name\": \"> F8 CONNECT COMMAND\",\n      \"value\": \"```\\nconnect 123.123.123.123\\n```\"\n    },\n    {\n      \"name\": \"> NEXT RESTART\",\n      \"value\": \"```\\n{{nextScheduledRestart}}\\n```\",\n      \"inline\": true\n    },\n    {\n      \"name\": \"> UPTIME\",\n      \"value\": \"```\\n{{uptime}}\\n```\",\n      \"inline\": true\n    }\n  ],\n  \"image\": {\n    \"url\": \"https://i.imgur.com/ZZRp4pj.png\"\n  },\n  \"thumbnail\": {\n    \"url\": \"https://i.imgur.com/9i9lvOp.png\"\n  }\n}",
     "embedConfigJson": "{\n  \"onlineString\": \"🟢 Online\",\n  \"onlineColor\": \"#0BA70B\",\n  \"partialString\": \"🟡 Partial\",\n  \"partialColor\": \"#FFF100\",\n  \"offlineString\": \"🔴 Offline\",\n  \"offlineColor\": \"#A70B28\",\n  \"buttons\": [\n    {\n      \"emoji\": \"1062338355909640233\",\n      \"label\": \"Connect\",\n      \"url\": \"{{serverJoinUrl}}\"\n    },\n    {\n      \"emoji\": \"1062339910654246964\",\n      \"label\": \"txAdmin Discord\",\n      \"url\": \"https://discord.gg/txAdmin\"\n    },\n    {\n      \"emoji\": \"😏\",\n      \"label\": \"ZAP-Hosting\",\n      \"url\": \"https://zap-hosting.com/txadmin6\"\n    }\n  ]\n}"
   },
@@ -35,8 +42,8 @@
     "serverDataPath": "C:/Users/admin/Documents/GitHub/NewGTAServer/",
     "cfgPath": "C:/Users/admin/Documents/GitHub/NewGTAServer/server.cfg",
     "commandLine": "",
-    "autostart": true,
     "onesync": "on",
+    "autostart": true,
     "quiet": false
   }
 }

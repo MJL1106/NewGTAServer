@@ -26,7 +26,7 @@ Config.EnableTrades = true -- Accept trading for Laptops?
 
 
 
-Config.MinimumFleecaPolice = 0
+Config.MinimumFleecaPolice = 2
 Config.MinimumPaletoPolice = 3
 Config.MinimumPowerPolice = 4
 Config.MinimumPAleto2 = 0
@@ -106,7 +106,7 @@ Config.FleecaRepeat = 2 -- How many times in a row do they need to hack the syst
 ---- ** PALETO HACK CONFIG ** ---- 
 Config.PaletoTime = 7 -- How much time do they have to enter the hack?
 Config.PaletoBlocks = 5 -- How many different blocks can the hack have?
-Config.PaletoRepeat = 2 -- How many times in a row do they need to hack the system?
+Config.PaletoRepeat = 3 -- How many times in a row do they need to hack the system?
 
 ---- ** PACIFIC HACK CONFIG ** ----
 Config.PacificTime = 6 -- How much time do they have to enter the hack?
@@ -473,8 +473,8 @@ Config.FleecaBanks = {
             loot = false
         },
         ["drills"] = { -- drill points
-            {coords = vector3(-1206.4, -339.10, 37.9593), rotation = vector3(0.0, 0.0, 200.0), loot = false},
-            {coords = vector3(-1208.96, -338.41, 37.78), rotation = vector3(0.0, 0.0, 120.0), loot = false},
+            {coords = vector3(-1206.4, -339.10, 38.02), rotation = vector3(0.0, 0.0, 200.0), loot = false},
+            {coords = vector3(-1208.96, -338.41, 38.02), rotation = vector3(0.0, 0.0, 120.0), loot = false},
         },
         ["trollys"] = { -- trollys points
             {coords = vector3(-1207.6, -333.89, 36.7592), heading = 118.0, loot = false},
@@ -523,7 +523,7 @@ Config.FleecaBanks = {
             loot = false
         },
         ["drills"] = { -- drill points
-            {coords = vector3(146.88, -1048.56, 29.37), rotation = vector3(0.0, 0.0, 70.0), loot = false},
+            {coords = vector3(146.88, -1048.56, 29.615), rotation = vector3(0.0, 0.0, 70.0), loot = false},
             {coords = vector3(148.095, -1051.1, 29.6162), rotation = vector3(0.0, 0.0, 170.0), loot = false},
         },
         ["trollys"] = { -- trollys points
@@ -548,7 +548,7 @@ Config.FleecaBanks = {
             loot = false
         },
         ["drills"] = { -- drill points
-            {coords = vector3(-353.91, -57.89, 49.04), rotation = vector3(0.0, 0.0, 75.0), loot = false},
+            {coords = vector3(-353.91, -57.89, 49.3147), rotation = vector3(0.0, 0.0, 75.0), loot = false},
             {coords = vector3(-352.81, -60.155, 49.3147), rotation = vector3(0.0, 0.0, 160.0), loot = false},
         },
         ["trollys"] = { -- trollys points
@@ -597,8 +597,8 @@ Config.PaletoBank = {
 
 
 Config.PacificBank = {
-    ["coords"] = vector4(242.06, 218.95, 97.12, 161.17),  -- Coordinates of the red laptop hack
-    ["vaultcoords"] = vector4(237.16, 231.33, 97.12, 69.5), --cords of the vault
+    ["coords"] = vector4(242.06, 218.95, 96.47, 161.17),  -- Coordinates of the red laptop hack
+    ["vaultcoords"] = vector4(237.16, 231.33, 97.2, 69.5), --cords of the vault
     ["harddrivehack"] = vector4(247.19, 233.34, 97.12, 342.18), --coords of the harddrive hack
     ["lowervaultgates"] = vector4(228.05, 228.69, 97.12, 160.89), --cords of the pannel for the vault gates
     ["isOpened"] = false,
@@ -616,17 +616,17 @@ Config.PacificBank = {
 
     },
     ["drills"] = { -- drill points
-        {coords = vector3(244.37, 212.25, 97.12), rotation = vector3(0.0, 0.0, 252.69), loot = false, vaultdrill = false},
-        {coords = vector3(241.56, 210.08, 97.12), rotation = vector3(0.0, 0.0, 163.96), loot = false, vaultdrill = false},
-        {coords = vector3(240.22, 212.98, 97.12), rotation = vector3(0.0, 0.0, 77.49), loot = false, vaultdrill = false},
-        {coords = vector3(253.1, 236.46, 97.12), rotation = vector3(0.0, 0.0, 248.6), loot = false, vaultdrill = false},
-        {coords = vector3(248.81, 236.58, 97.12), rotation = vector3(0.0, 0.0, 75.59), loot = false, vaultdrill = false},
-        {coords = vector3(225.79, 230.13, 97.12), rotation = vector3(0.0, 0.0, 73.17), loot = false, vaultdrill = true},
-        {coords = vector3(226.37, 231.65, 97.12), rotation = vector3(0.0, 0.0, 70.04), loot = false, vaultdrill = true},
+        {coords = vector3(244.37, 212.25, 97.4), rotation = vector3(0.0, 0.0, 252.69), loot = false, vaultdrill = false},
+        {coords = vector3(241.56, 210.08, 97.4), rotation = vector3(0.0, 0.0, 163.96), loot = false, vaultdrill = false},
+        {coords = vector3(240.22, 212.98, 97.4), rotation = vector3(0.0, 0.0, 77.49), loot = false, vaultdrill = false},
+        {coords = vector3(253.1, 236.46, 97.4), rotation = vector3(0.0, 0.0, 248.6), loot = false, vaultdrill = false},
+        {coords = vector3(248.81, 236.58, 97.4), rotation = vector3(0.0, 0.0, 75.59), loot = false, vaultdrill = false},
+        {coords = vector3(225.79, 230.13, 97.4), rotation = vector3(0.0, 0.0, 73.17), loot = false, vaultdrill = true},
+        {coords = vector3(226.37, 231.65, 97.4), rotation = vector3(0.0, 0.0, 70.04), loot = false, vaultdrill = true},
         
     },
     ["officedrill"] = {
-        {coords = vector3(278.88, 217.42, 110.27), rotation = vector3(0.0, 0.0, 340), loot = false},
+        {coords = vector3(278.88, 217.42, 110.77), rotation = vector3(0.0, 0.0, 340), loot = false},
     },
     ["officehack"] = {
         {coords = vector3(278.67, 213.05, 110.05), rotation = vector3(0.0, 0.0, 100), loot = false},
