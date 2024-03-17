@@ -74,3 +74,22 @@
 [06:00:21][SCHEDULER] Restarting server (scheduled restart at 06:00).
 [10:42:22][mjl1106] logged in from 127.0.0.1 via citizenfx
 [10:42:47][mjl1106] executed "RESTART SERVER"
+
+================================================================
+======== txAdmin v6.0.2 atop fxserver 7290 Starting - 3/16/2024, 12:10:01 PM
+================================================================
+[12:14:01][mjl1106] logged in from 127.0.0.1 via citizenfx
+[12:16:57][mjl1106] executed "RESTART SERVER"
+[12:19:18][mjl1106] logged in via in-game ui
+[12:20:38][mjl1106] logged in via in-game ui
+[13:22:18][mjl1106] executed "ensure JD_logsV3"
+[13:22:36][mjl1106] executed "RESTART SERVER"
+[13:24:56][mjl1106] executed "RESTART SERVER"
+[14:00:02][SCHEDULER] Restarting server (scheduled restart at 14:00).
+[14:10:46][mjl1106] executed "RESTART SERVER"
+[14:12:02][mjl1106] executed "RESTART SERVER"
+[14:13:56][mjl1106] logged in via in-game ui
+[14:14:55][mjl1106] executed "RESTART SERVER"
+[22:00:13][SCHEDULER] Restarting server (scheduled restart at 22:00).
+[06:00:24][SCHEDULER] Restarting server (scheduled restart at 06:00).
+[14:00:35][SCHEDULER] Restarting server (scheduled restart at 14:00).
