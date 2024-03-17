@@ -31,8 +31,8 @@
     "disableNuiSourceCheck": false
   },
   "discordBot": {
-    "enabled": true,
-    "token": "MTIxNzU5MzU2MzQ1ODcwMzQyMA.GiLAej.8yoY-2Q070gtxLWfOOJQdDwh240z6-y0JE3FQw",
+    "enabled": false,
+    "token": "",
     "guild": "1106948392627748964",
     "announceChannel": false,
     "embedJson": "{\n  \"title\": \"{{serverName}}\",\n  \"url\": \"{{serverBrowserUrl}}\",\n  \"description\": \"You can configure this embed in `txAdmin > Settings > Discord Bot`, and edit everything from it (except footer).\",\n  \"fields\": [\n    {\n      \"name\": \"> STATUS\",\n      \"value\": \"```\\n{{statusString}}\\n```\",\n      \"inline\": true\n    },\n    {\n      \"name\": \"> PLAYERS\",\n      \"value\": \"```\\n{{serverClients}}/{{serverMaxClients}}\\n```\",\n      \"inline\": true\n    },\n    {\n      \"name\": \"> F8 CONNECT COMMAND\",\n      \"value\": \"```\\nconnect 123.123.123.123\\n```\"\n    },\n    {\n      \"name\": \"> NEXT RESTART\",\n      \"value\": \"```\\n{{nextScheduledRestart}}\\n```\",\n      \"inline\": true\n    },\n    {\n      \"name\": \"> UPTIME\",\n      \"value\": \"```\\n{{uptime}}\\n```\",\n      \"inline\": true\n    }\n  ],\n  \"image\": {\n    \"url\": \"https://i.imgur.com/ZZRp4pj.png\"\n  },\n  \"thumbnail\": {\n    \"url\": \"https://i.imgur.com/9i9lvOp.png\"\n  }\n}",
