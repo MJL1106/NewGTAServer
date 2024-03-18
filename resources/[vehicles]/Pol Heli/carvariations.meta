@@ -2,7 +2,7 @@
 <CVehicleModelInfoVariation>
   <variationData>
     <Item>
-      <modelName>polheli</modelName>
+      <modelName>polmav</modelName>
       <colors>
         <Item>
           <indices content="char_array">

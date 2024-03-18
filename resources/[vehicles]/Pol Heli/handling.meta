@@ -3,7 +3,7 @@
 <CHandlingDataMgr>
   <HandlingData>
     <Item type="CHandlingData">
-	  <handlingName>polheli</handlingName>
+	  <handlingName>polmav</handlingName>
       <fMass value="4000.000000" />
       <fInitialDragCoeff value="4.000000" />
       <fPercentSubmerged value="75.000000" />

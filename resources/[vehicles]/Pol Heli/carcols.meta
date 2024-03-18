@@ -4,7 +4,7 @@
    <Sirens>
     <Item>
       <id value="94796"/>
-      <name>polheli</name>
+      <name>polmav</name>
       <timeMultiplier value="1.00000000"/>
       <lightFalloffMax value="90.00000000"/>
       <lightFalloffExponent value="10.00000000"/>
