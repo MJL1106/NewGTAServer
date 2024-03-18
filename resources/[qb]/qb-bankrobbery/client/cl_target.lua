@@ -558,6 +558,33 @@ Citizen.CreateThread(function()
     end
 end)
 
+Citizen.CreateThread(function() 
+    exports['qb-target']:AddBoxZone('CardGatesVault', vector3(228.05, 228.69, 97.12), 1, 1, {
+      name = 'CardGatesVault',
+      heading = 160.89,
+      debugPoly = Config.debugPoly,
+      minZ = 96,
+      maxZ = 97.5,
+      }, {
+      options = {
+          {
+            type = "client",
+            action = function()
+                TriggerEvent('qb-bankrobbery:UsePacificVaultCard')
+            end,
+            icon = "fas fa-usb",
+            label = "Use Security Card",
+            item = "vault_gate_cracker", -- Makes it only display if you have the laptop
+            job = all,
+          },
+      },
+      distance = 2.5
+    })
+end)
+
+
+
+
 -- table Pacific
 CreateThread(function() 
     exports['qb-target']:AddBoxZone('qb-banklaptop:tablepacific'..math.random(1,100), vector3(Config.PacificBank['grab']['pos'].x, Config.PacificBank['grab']['pos'].y, Config.PacificBank['grab']['pos'].z), 1.3, 1.3, { 

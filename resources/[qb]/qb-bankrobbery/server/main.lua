@@ -729,7 +729,7 @@ end)
 
 RegisterServerEvent('qb-bankrobbery:server:PacificFirstFloorCounter', function()
     PacificFirstFloorCounter = PacificFirstFloorCounter + 1
-
+    
     if PacificFirstFloorCounter == 4 then
         TriggerClientEvent('qb-bankrobbery:pacific:firstfloorcounter', -1)
     end

@@ -192,29 +192,29 @@ RegisterNetEvent('qb-bankrobbery:pacific:firstFloorEnable', function()
                             Wait(1000)
                             if firstFloorCounter == 4 then
                                 QBCore.Functions.Notify(Config.Notify["HackerSuccess"], 'error', 4500)
-                                Citizen.CreateThread(function() 
-                                    exports['qb-target']:AddBoxZone('CardGatesVault', vector3(228.05, 228.69, 97.12), 1, 1, {
-                                      name = 'CardGatesVault',
-                                      heading = 160.89,
-                                      debugPoly = Config.debugPoly,
-                                      minZ = 96,
-                                      maxZ = 97.5,
-                                      }, {
-                                      options = {
-                                          {
-                                            type = "client",
-                                            action = function()
-                                                TriggerEvent('qb-bankrobbery:UsePacificVaultCard')
-                                            end,
-                                            icon = "fas fa-usb",
-                                            label = "Use Security Card",
-                                            item = "vault_gate_cracker", -- Makes it only display if you have the laptop
-                                            job = all,
-                                          },
-                                      },
-                                      distance = 2.5
-                                    })
-                                  end)
+                                -- Citizen.CreateThread(function() 
+                                --     exports['qb-target']:AddBoxZone('CardGatesVault', vector3(228.05, 228.69, 97.12), 1, 1, {
+                                --       name = 'CardGatesVault',
+                                --       heading = 160.89,
+                                --       debugPoly = Config.debugPoly,
+                                --       minZ = 96,
+                                --       maxZ = 97.5,
+                                --       }, {
+                                --       options = {
+                                --           {
+                                --             type = "client",
+                                --             action = function()
+                                --                 TriggerEvent('qb-bankrobbery:UsePacificVaultCard')
+                                --             end,
+                                --             icon = "fas fa-usb",
+                                --             label = "Use Security Card",
+                                --             item = "vault_gate_cracker", -- Makes it only display if you have the laptop
+                                --             job = all,
+                                --           },
+                                --       },
+                                --       distance = 2.5
+                                --     })
+                                --   end)
                                   Citizen.CreateThread(function() 
                                     exports['qb-target']:AddBoxZone('VaultGatesItem', vector3(269.49, 223.47, 97.14), 1, 1, {
                                       name = 'VaultGatesItem',
@@ -256,29 +256,29 @@ RegisterNetEvent('qb-bankrobbery:pacific:firstFloorEnable', function()
                             Wait(1000)
                             if firstFloorCounter == 4 then
                                 QBCore.Functions.Notify(Config.Notify["HackerSuccess"], 'error', 4500)
-                                Citizen.CreateThread(function() 
-                                    exports['qb-target']:AddBoxZone('CardGatesVault', vector3(228.05, 228.69, 97.12), 1, 1, {
-                                      name = 'CardGatesVault',
-                                      heading = 160.89,
-                                      debugPoly = Config.debugPoly,
-                                      minZ = 96,
-                                      maxZ = 97.5,
-                                      }, {
-                                      options = {
-                                          {
-                                            type = "client",
-                                            action = function()
-                                                TriggerEvent('qb-bankrobbery:UsePacificVaultCard')
-                                            end,
-                                            icon = "fas fa-usb",
-                                            label = "Use Security Card",
-                                            item = "vault_gate_cracker", -- Makes it only display if you have the laptop
-                                            job = all,
-                                          },
-                                      },
-                                      distance = 2.5
-                                    })
-                                  end)
+                                -- Citizen.CreateThread(function() 
+                                --     exports['qb-target']:AddBoxZone('CardGatesVault', vector3(228.05, 228.69, 97.12), 1, 1, {
+                                --       name = 'CardGatesVault',
+                                --       heading = 160.89,
+                                --       debugPoly = Config.debugPoly,
+                                --       minZ = 96,
+                                --       maxZ = 97.5,
+                                --       }, {
+                                --       options = {
+                                --           {
+                                --             type = "client",
+                                --             action = function()
+                                --                 TriggerEvent('qb-bankrobbery:UsePacificVaultCard')
+                                --             end,
+                                --             icon = "fas fa-usb",
+                                --             label = "Use Security Card",
+                                --             item = "vault_gate_cracker", -- Makes it only display if you have the laptop
+                                --             job = all,
+                                --           },
+                                --       },
+                                --       distance = 2.5
+                                --     })
+                                --   end)
                                   Citizen.CreateThread(function() 
                                     exports['qb-target']:AddBoxZone('VaultGatesItem', vector3(269.49, 223.47, 97.14), 1, 1, {
                                       name = 'VaultGatesItem',
@@ -320,29 +320,29 @@ RegisterNetEvent('qb-bankrobbery:pacific:firstFloorEnable', function()
                             Wait(1000)
                             if firstFloorCounter == 4 then
                                 QBCore.Functions.Notify(Config.Notify["HackerSuccess"], 'error', 4500)
-                                Citizen.CreateThread(function() 
-                                    exports['qb-target']:AddBoxZone('CardGatesVault', vector3(228.05, 228.69, 97.12), 1, 1, {
-                                      name = 'CardGatesVault',
-                                      heading = 160.89,
-                                      debugPoly = Config.debugPoly,
-                                      minZ = 96,
-                                      maxZ = 97.5,
-                                      }, {
-                                      options = {
-                                          {
-                                            type = "client",
-                                            action = function()
-                                                TriggerEvent('qb-bankrobbery:UsePacificVaultCard')
-                                            end,
-                                            icon = "fas fa-usb",
-                                            label = "Use Security Card",
-                                            item = "vault_gate_cracker", -- Makes it only display if you have the laptop
-                                            job = all,
-                                          },
-                                      },
-                                      distance = 2.5
-                                    })
-                                  end)
+                                -- Citizen.CreateThread(function() 
+                                --     exports['qb-target']:AddBoxZone('CardGatesVault', vector3(228.05, 228.69, 97.12), 1, 1, {
+                                --       name = 'CardGatesVault',
+                                --       heading = 160.89,
+                                --       debugPoly = Config.debugPoly,
+                                --       minZ = 96,
+                                --       maxZ = 97.5,
+                                --       }, {
+                                --       options = {
+                                --           {
+                                --             type = "client",
+                                --             action = function()
+                                --                 TriggerEvent('qb-bankrobbery:UsePacificVaultCard')
+                                --             end,
+                                --             icon = "fas fa-usb",
+                                --             label = "Use Security Card",
+                                --             item = "vault_gate_cracker", -- Makes it only display if you have the laptop
+                                --             job = all,
+                                --           },
+                                --       },
+                                --       distance = 2.5
+                                --     })
+                                --   end)
                                   Citizen.CreateThread(function() 
                                     exports['qb-target']:AddBoxZone('VaultGatesItem', vector3(269.49, 223.47, 97.14), 1, 1, {
                                       name = 'VaultGatesItem',
@@ -386,29 +386,29 @@ RegisterNetEvent('qb-bankrobbery:pacific:firstFloorEnable', function()
                         Wait(1000)
                         if firstFloorCounter == 4 then
                             QBCore.Functions.Notify(Config.Notify["HackerSuccess"], 'error', 4500)
-                            Citizen.CreateThread(function() 
-                                exports['qb-target']:AddBoxZone('CardGatesVault', vector3(228.05, 228.69, 97.12), 1, 1, {
-                                  name = 'CardGatesVault',
-                                  heading = 160.89,
-                                  debugPoly = Config.debugPoly,
-                                  minZ = 96,
-                                  maxZ = 97.5,
-                                  }, {
-                                  options = {
-                                      {
-                                        type = "client",
-                                        action = function()
-                                            TriggerEvent('qb-bankrobbery:UsePacificVaultCard')
-                                        end,
-                                        icon = "fas fa-usb",
-                                        label = "Use Security Card",
-                                        item = "vault_gate_cracker", -- Makes it only display if you have the laptop
-                                        job = all,
-                                      },
-                                  },
-                                  distance = 2.5
-                                })
-                              end)
+                            -- Citizen.CreateThread(function() 
+                            --     exports['qb-target']:AddBoxZone('CardGatesVault', vector3(228.05, 228.69, 97.12), 1, 1, {
+                            --       name = 'CardGatesVault',
+                            --       heading = 160.89,
+                            --       debugPoly = Config.debugPoly,
+                            --       minZ = 96,
+                            --       maxZ = 97.5,
+                            --       }, {
+                            --       options = {
+                            --           {
+                            --             type = "client",
+                            --             action = function()
+                            --                 TriggerEvent('qb-bankrobbery:UsePacificVaultCard')
+                            --             end,
+                            --             icon = "fas fa-usb",
+                            --             label = "Use Security Card",
+                            --             item = "vault_gate_cracker", -- Makes it only display if you have the laptop
+                            --             job = all,
+                            --           },
+                            --       },
+                            --       distance = 2.5
+                            --     })
+                            --   end)
                               Citizen.CreateThread(function() 
                                 exports['qb-target']:AddBoxZone('VaultGatesItem', vector3(269.49, 223.47, 97.14), 1, 1, {
                                   name = 'VaultGatesItem',
