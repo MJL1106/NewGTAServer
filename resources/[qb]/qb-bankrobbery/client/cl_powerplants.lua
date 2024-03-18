@@ -19,6 +19,7 @@ RegisterNetEvent('qb-bankrobbery:powerplant:PlaceBomb', function()
                                             TriggerServerEvent('qb-bankrobbery:server:lowerVault:doorSync', 'doors', k)
                                             counterSuccess = counterSuccess + 1
                                             bombAnimation(k)
+                                            v['open'] = true
                                             
                                         end,
                                         function() -- failure
@@ -81,6 +82,5 @@ end
 
 
 RegisterNetEvent('qb-bankrobbery:client:PowerPlantgoBoom', function(k)
-    QBCore.Functions.Notify(Config.Notify["PowerOff"], 'error')
     AddExplosion(Config.PowerPlant['locations'][k]['coords'].x, Config.PowerPlant['locations'][k]['coords'].y, Config.PowerPlant['locations'][k]['coords'].z, 0, 1.0, true, false, 4.0)
 end)

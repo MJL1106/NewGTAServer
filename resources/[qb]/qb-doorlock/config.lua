@@ -105,27 +105,27 @@ Config.DoorList = {
 	-- 	distance = 1.5
 	-- },
 	-- First Pacific Door opened with lockpick 
-	{
-		objName = 'hei_v_ilev_bk_gate_pris',
-		objCoords  = vec3(257.41, 220.25, 106.4),
-		textCoords = vec3(257.41, 220.25, 106.4),
-		authorizedJobs = { 'police' },
-		objYaw = -20.0,
-		locked = true,
-		pickable = true,
-		distance = 1.5
-	},
-	-- Second Pacific Door opened with lockpick
-	{
-		objName = 'v_ilev_bk_door',
-		objCoords  = vec3(265.19, 217.84, 110.28),
-		textCoords = vec3(265.19, 217.84, 110.28),
-		authorizedJobs = { 'police' },
-		objYaw = -20.0,
-		locked = true,
-		pickable = true,
-		distance = 1.5
-	},
+	-- {
+	-- 	objName = 'hei_v_ilev_bk_gate_pris',
+	-- 	objCoords  = vec3(257.41, 220.25, 106.4),
+	-- 	textCoords = vec3(257.41, 220.25, 106.4),
+	-- 	authorizedJobs = { 'police' },
+	-- 	objYaw = -20.0,
+	-- 	locked = true,
+	-- 	pickable = true,
+	-- 	distance = 1.5
+	-- },
+	-- -- Second Pacific Door opened with lockpick
+	-- {
+	-- 	objName = 'v_ilev_bk_door',
+	-- 	objCoords  = vec3(265.19, 217.84, 110.28),
+	-- 	textCoords = vec3(265.19, 217.84, 110.28),
+	-- 	authorizedJobs = { 'police' },
+	-- 	objYaw = -20.0,
+	-- 	locked = true,
+	-- 	pickable = true,
+	-- 	distance = 1.5
+	-- },
 	-- Fleeca Door opened with lockpick
 	{
 		objName = 'v_ilev_gb_vaubar',
@@ -134,17 +134,17 @@ Config.DoorList = {
 		authorizedJobs = { 'police' },
 		locked = true,
 		pickable = true,
-		distance = 1.5
+		distance = 2.0
 	},
 	-- Fleeca Door opened with lockpick
 	{
-		objName = 'v_ilev_gb_vaubar',
+		objName = 'v_ilev_gb_vaubar', -- LEGION SQ
 		objCoords  = vec3(148.96, -1047.12, 29.7),
 		textCoords = vec3(148.96, -1047.12, 29.7),
 		authorizedJobs = { 'police' },
 		locked = true,
 		pickable = true,
-		distance = 1.5
+		distance = 2.0
 	},
 	-- Fleeca Door opened with lockpick
 	{
@@ -154,7 +154,7 @@ Config.DoorList = {
 		authorizedJobs = { 'police' },
 		locked = true,
 		pickable = true,
-		distance = 1.5
+		distance = 2.0
 	},
 	-- Fleeca Door opened with lockpick
 	{
@@ -164,7 +164,7 @@ Config.DoorList = {
 		authorizedJobs = { 'police' },
 		locked = true,
 		pickable = true,
-		distance = 1.5
+		distance = 2.0
 	},
 	-- Fleeca Door opened with lockpick
 	{
@@ -174,7 +174,7 @@ Config.DoorList = {
 		authorizedJobs = { 'police' },
 		locked = true,
 		pickable = true,
-		distance = 1.5
+		distance = 2.0
 	},
 	-- Prison Door 1
 	{
