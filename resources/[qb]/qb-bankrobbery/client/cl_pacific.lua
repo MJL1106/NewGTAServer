@@ -1,6 +1,22 @@
 local totalThermiteCompleted = 0
+local firstFloorCounter = 0
+local hacktypecounter = 0
 local copsCalled = false
 local bankPacLoc = Config.PacificBank['coords']
+
+
+RegisterNetEvent('qb-bankrobbery:pacific:thermitecounter', function()
+    totalThermiteCompleted = 3
+end)
+
+RegisterNetEvent('qb-bankrobbery:pacific:firstfloorcounter', function()
+    firstFloorCounter = 4
+end)
+
+RegisterNetEvent('qb-bankrobbery:pacific:hacktypecounter', function()
+    hacktypecounter = 4
+end)
+
 
 RegisterNetEvent('qb-bankrobbery:pacific:thermitedoor', function()
     local ped = PlayerPedId()
@@ -22,7 +38,9 @@ RegisterNetEvent('qb-bankrobbery:pacific:thermitedoor', function()
                             function() -- success
                                 Config.PacificBank['thermite'][k].completed = true
                                 exports['qb-target']:RemoveZone(hackId)
-                                totalThermiteCompleted = totalThermiteCompleted + 1
+                               
+                                TriggerServerEvent('qb-bankrobbery:server:PacificThermiteCounter', -1)
+                                
                                 QBCore.Functions.Notify(Config.Notify["PlacingThermite"], 'success', 4500)
                                 local loc = Config.PacificBank['thermite'][k]['anim']
                                 local rotx, roty, rotz = table.unpack(vec3(GetEntityRotation(ped)))
@@ -94,8 +112,11 @@ RegisterNetEvent('qb-bankrobbery:pacific:hacktype', function()
                         if Config.PacificBank['hacktype'][k].completed == false then
                             Config.PacificBank['hacktype'][k].completed = true
                             exports['qb-target']:RemoveZone(hackId)
-                            totalCompleted = totalCompleted + 1
-                            if totalCompleted == 4 then
+                            TriggerServerEvent('qb-bankrobbery:server:PacificHackTypeCounter', -1)
+                            Wait(1000)
+                            
+                            if hacktypecounter == 4 then
+                                
                                 TriggerServerEvent('qb-doorlock:server:updateState', 'PacificAdminOffice', false, false, false, true, false, false)
                                 TriggerServerEvent('qb-doorlock:server:updateState', 'PacificMainEntrance', false, false, false, true, false, false)
                                 
@@ -124,9 +145,11 @@ RegisterNetEvent('qb-bankrobbery:pacific:hacktype', function()
                         if Config.PacificBank['hacktype'][k].completed == false then
                             Config.PacificBank['hacktype'][k].completed = true
                             exports['qb-target']:RemoveZone(hackId)
-                            totalCompleted = totalCompleted + 1
+                            TriggerServerEvent('qb-bankrobbery:server:PacificHackTypeCounter', -1)
+                            Wait(1000)
                             
-                            if totalCompleted == 4 then
+                            if hacktypecounter == 4 then
+                                
                                 TriggerServerEvent('qb-doorlock:server:updateState', 'PacificAdminOffice', false, false, false, true, false, false)
                                 TriggerServerEvent('qb-doorlock:server:updateState', 'PacificMainEntrance', false, false, false, true, false, false)
                                 QBCore.Functions.Notify(Config.Notify["HackerSuccess"], 'error', 4500)
@@ -152,7 +175,6 @@ RegisterNetEvent('qb-bankrobbery:pacific:hacktype', function()
 end)
 
 --controls the hacks to enable the vault gates third eye
-local totalFirstFloor = 0
 RegisterNetEvent('qb-bankrobbery:pacific:firstFloorEnable', function()
     local ped = PlayerPedId()
     local coords = GetEntityCoords(ped)
@@ -166,9 +188,10 @@ RegisterNetEvent('qb-bankrobbery:pacific:firstFloorEnable', function()
                         if Config.PacificBank['firstfloorhacks'][k].completed == false then
                             Config.PacificBank['firstfloorhacks'][k].completed = true
                             exports['qb-target']:RemoveZone(hackId1)
-                            totalCompleted = totalCompleted + 1
-                            QBCore.Functions.Notify(Config.Notify["HackerSuccess"], 'error', 4500)
-                            if totalCompleted == 4 then
+                            TriggerServerEvent('qb-bankrobbery:server:PacificFirstFloorCounter', -1)
+                            Wait(1000)
+                            if firstFloorCounter == 4 then
+                                QBCore.Functions.Notify(Config.Notify["HackerSuccess"], 'error', 4500)
                                 Citizen.CreateThread(function() 
                                     exports['qb-target']:AddBoxZone('CardGatesVault', vector3(228.05, 228.69, 97.12), 1, 1, {
                                       name = 'CardGatesVault',
@@ -209,6 +232,9 @@ RegisterNetEvent('qb-bankrobbery:pacific:firstFloorEnable', function()
                                             icon = "fas fa-box-archive",
                                             label = "Search draw",
                                             job = all,
+                                            canInteract = function(entity)
+                                                return not Config.PacificBank['collectedGateItem']
+                                            end,
                                           },
                                       },
                                       distance = 2.5
@@ -218,7 +244,7 @@ RegisterNetEvent('qb-bankrobbery:pacific:firstFloorEnable', function()
                             end
                         end
                     end
-                end, 11,5)  -- Keep these parameters as they are essential for the function to operate correctly
+                end, 1,5)  -- Keep these parameters as they are essential for the function to operate correctly
                 break  -- Exit the loop if a hack is initiated to prevent multiple hacks at once
             elseif v.hack == 'counting' then
                 exports['casinohack-main']:OpenHackingGame(function(success)
@@ -226,9 +252,10 @@ RegisterNetEvent('qb-bankrobbery:pacific:firstFloorEnable', function()
                         if Config.PacificBank['firstfloorhacks'][k].completed == false then
                             Config.PacificBank['firstfloorhacks'][k].completed = true
                             exports['qb-target']:RemoveZone(hackId1)
-                            totalCompleted = totalCompleted + 1
-                            QBCore.Functions.Notify(Config.Notify["HackerSuccess"], 'error', 4500)
-                            if totalCompleted == 4 then
+                            TriggerServerEvent('qb-bankrobbery:server:PacificFirstFloorCounter', -1)
+                            Wait(1000)
+                            if firstFloorCounter == 4 then
+                                QBCore.Functions.Notify(Config.Notify["HackerSuccess"], 'error', 4500)
                                 Citizen.CreateThread(function() 
                                     exports['qb-target']:AddBoxZone('CardGatesVault', vector3(228.05, 228.69, 97.12), 1, 1, {
                                       name = 'CardGatesVault',
@@ -269,6 +296,9 @@ RegisterNetEvent('qb-bankrobbery:pacific:firstFloorEnable', function()
                                             icon = "fas fa-box-archive",
                                             label = "Search draw",
                                             job = all,
+                                            canInteract = function(entity)
+                                                return not Config.PacificBank['collectedGateItem']
+                                            end,
                                           },
                                       },
                                       distance = 2.5
@@ -278,7 +308,7 @@ RegisterNetEvent('qb-bankrobbery:pacific:firstFloorEnable', function()
                             end
                         end
                     end
-                end, 4)  -- Keep these parameters as they are essential for the function to operate correctly
+                end, 10)  -- Keep these parameters as they are essential for the function to operate correctly
                 break  -- Exit the loop if a hack is initiated to prevent multiple hacks at once
             elseif v.hack == 'untangle' then
                 exports['untangle-main']:hacking(function(success)
@@ -286,9 +316,10 @@ RegisterNetEvent('qb-bankrobbery:pacific:firstFloorEnable', function()
                         if Config.PacificBank['firstfloorhacks'][k].completed == false then
                             Config.PacificBank['firstfloorhacks'][k].completed = true
                             exports['qb-target']:RemoveZone(hackId1)
-                            totalCompleted = totalCompleted + 1
-                            QBCore.Functions.Notify(Config.Notify["HackerSuccess"], 'error', 4500)
-                            if totalCompleted == 4 then
+                            TriggerServerEvent('qb-bankrobbery:server:PacificFirstFloorCounter', -1)
+                            Wait(1000)
+                            if firstFloorCounter == 4 then
+                                QBCore.Functions.Notify(Config.Notify["HackerSuccess"], 'error', 4500)
                                 Citizen.CreateThread(function() 
                                     exports['qb-target']:AddBoxZone('CardGatesVault', vector3(228.05, 228.69, 97.12), 1, 1, {
                                       name = 'CardGatesVault',
@@ -329,6 +360,9 @@ RegisterNetEvent('qb-bankrobbery:pacific:firstFloorEnable', function()
                                             icon = "fas fa-box-archive",
                                             label = "Search draw",
                                             job = all,
+                                            canInteract = function(entity)
+                                                return not Config.PacificBank['collectedGateItem']
+                                            end,
                                           },
                                       },
                                       distance = 2.5
@@ -348,9 +382,10 @@ RegisterNetEvent('qb-bankrobbery:pacific:firstFloorEnable', function()
                     if Config.PacificBank['firstfloorhacks'][k].completed == false then
                         Config.PacificBank['firstfloorhacks'][k].completed = true
                         exports['qb-target']:RemoveZone(hackId1)
-                        totalCompleted = totalCompleted + 1
-                        QBCore.Functions.Notify(Config.Notify["HackerSuccess"], 'error', 4500)
-                        if totalCompleted == 4 then
+                        TriggerServerEvent('qb-bankrobbery:server:PacificFirstFloorCounter', -1)
+                        Wait(1000)
+                        if firstFloorCounter == 4 then
+                            QBCore.Functions.Notify(Config.Notify["HackerSuccess"], 'error', 4500)
                             Citizen.CreateThread(function() 
                                 exports['qb-target']:AddBoxZone('CardGatesVault', vector3(228.05, 228.69, 97.12), 1, 1, {
                                   name = 'CardGatesVault',
@@ -391,6 +426,9 @@ RegisterNetEvent('qb-bankrobbery:pacific:firstFloorEnable', function()
                                         icon = "fas fa-box-archive",
                                         label = "Search draw",
                                         job = all,
+                                        canInteract = function(entity)
+                                            return not Config.PacificBank['collectedGateItem']
+                                        end,
                                       },
                                   },
                                   distance = 2.5
@@ -406,6 +444,7 @@ RegisterNetEvent('qb-bankrobbery:pacific:firstFloorEnable', function()
 end)
 
 RegisterNetEvent('qb-bankrobbery:client:pacific:vaultGatesItem', function()
+    Config.PacificBank["collectedGateItem"] = true
     TriggerServerEvent('qb-bankrobbery:server:giveVaultGateItem')
 end)
 
@@ -1510,30 +1549,36 @@ end)
 
 function OnGoldHackDonePacific(success)
     if success then
-        Citizen.CreateThread(function()
-            for k,v in pairs(Config.PacificBank['firstfloorhacks']) do
-                local hackId1 = 'HackSystemFloor1' ..k
-                exports['qb-target']:AddBoxZone(hackId, vector3(Config.PacificBank['firstfloorhacks'][k]['coords'].x, Config.PacificBank['firstfloorhacks'][k]['coords'].y, Config.PacificBank['firstfloorhacks'][k]['coords'].z), 0.4, 1.2, {
-                    name = hackId1, 
-                    heading = Config.PacificBank['firstfloorhacks'][k]['coords'].w,
-                    debugPoly = Config.debugPoly, 
-                    minZ = Config.PacificBank['firstfloorhacks'][k]['coords'].z-1,
-                    maxZ = Config.PacificBank['firstfloorhacks'][k]['coords'].z+1,
-                    }, {
-                    options = { 
-                    { 
-                        type = 'client',
-                        event = 'qb-bankrobbery:pacific:firstFloorEnable',
-                        icon = 'fas fa-laptop-code',
-                        label = 'Hack Computer System',
-                        job = all,
-                    }
-                    },
-                    distance = 1.2,
-                })
-            end
-        end)
-
+        -- Citizen.CreateThread(function()
+        --     for k,v in pairs(Config.PacificBank['firstfloorhacks']) do
+        --         local hackId1 = 'HackSystemFloor1' ..k
+        --         exports['qb-target']:AddBoxZone(hackId, vector3(Config.PacificBank['firstfloorhacks'][k]['coords'].x, Config.PacificBank['firstfloorhacks'][k]['coords'].y, Config.PacificBank['firstfloorhacks'][k]['coords'].z), 0.4, 1.2, {
+        --             name = hackId1, 
+        --             heading = Config.PacificBank['firstfloorhacks'][k]['coords'].w,
+        --             debugPoly = Config.debugPoly, 
+        --             minZ = Config.PacificBank['firstfloorhacks'][k]['coords'].z-1,
+        --             maxZ = Config.PacificBank['firstfloorhacks'][k]['coords'].z+1,
+        --             }, {
+        --             options = { 
+        --             { 
+        --                 type = 'client',
+        --                 event = 'qb-bankrobbery:pacific:firstFloorEnable',
+        --                 icon = 'fas fa-laptop-code',
+        --                 label = 'Hack Computer System',
+        --                 job = all,
+        --                 canInteract = function(entity)
+        --                     return not Config.PacificBank['firstfloorhacks'][k].completed
+        --                 end,
+        --             }
+        --             },
+        --             distance = 1.2,
+        --         })
+        --     end
+        -- end)
+        TriggerServerEvent('qb-doorlock:server:updateState', 'PacificFirstFloor1', false, false, false, true, false, false)
+        TriggerServerEvent('qb-doorlock:server:updateState', 'PacificFirstFloor2', false, false, false, true, false, false)
+        TriggerServerEvent('qb-doorlock:server:updateState', 'PacificFirstFloor3', false, false, false, true, false, false)
+        TriggerServerEvent('qb-doorlock:server:updateState', 'PacificFirstFloor4', false, false, false, true, false, false)
         TriggerServerEvent('qb-bankrobbery:server:setBankState', true, 'pacific')
         TriggerServerEvent('qb-robbery:server:succesHeist', 35)
         exports['qb-target']:RemoveZone('vaultdoor1')

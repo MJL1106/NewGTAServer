@@ -91,6 +91,7 @@ local function OnHackDone(success)
     if success then
         QBCore.Functions.Notify(Config.Notify['HackerSuccess'], 'success')
         TriggerEvent('qb-bankrobbery:client:SetUpFleeca', closestBank)
+        TriggerServerEvent('qb-bankrobbery:server:setBankState', true, 'fleeca', closestBank)
         local time = (Config.DoorCD*(60*1000))
         local minutes = math.ceil(time/1000)
         local halftime = minutes/2
@@ -98,7 +99,7 @@ local function OnHackDone(success)
         Wait(time/2)
         QBCore.Functions.Notify(Config.Notify['DoorMinutes']..halftime..Config.Notify['DoorSecondHalf'], 'success', 5500)
         Wait(time/2)
-        TriggerServerEvent('qb-bankrobbery:server:setBankState', true, 'fleeca', closestBank)
+        
         TriggerServerEvent('qb-robbery:server:succesHeist', 15)
         TriggerServerEvent('qb-bankrobbery:server:setTimeout', 'fleeca')
         SetupVault(closestBank)
@@ -229,6 +230,30 @@ local function OpenPacificDoor()
     end
     --TriggerServerEvent('qb-doorlock:server:updateState', 'PacificGate4', false, false, false, true, false, false)
 end
+
+-- local function OpenPaletoDoor()
+--     local object = GetClosestObjectOfType(Config.PaletoBank['coords'].x, Config.PaletoBank['coords'].y, Config.PaletoBank['coords'].z, 20.0, Config.PaletoBank['object'], false, false, false)
+--     local timeOut = 10
+--     local entHeading = Config.PaletoBank['heading'].closed
+
+--     if object ~= 0 then
+--         CreateThread(function()
+--             while true do
+
+--                 if entHeading > Config.PaletoBank['heading'].open then
+--                     SetEntityHeading(object, entHeading - 10)
+--                     entHeading = entHeading - 1.0
+--                 else
+--                     break
+--                 end
+
+--                 Wait(10)
+--             end
+--         end)
+--     end
+--     --TriggerServerEvent('qb-doorlock:server:updateState', 'PacificGate4', false, false, false, true, false, false)
+-- end
+
 
 
 -- Fleecas
@@ -730,11 +755,12 @@ end)
 
 ---- BANK STATES ----
 RegisterNetEvent('qb-bankrobbery:client:setBankState', function(bankId, state)
+    local time = (Config.DoorCD*(60*1000))
     if bankId == 'paleto' then
         Config.PaletoBank['isOpened'] = state
-        if state then
-            OpenPaletoDoor()
-        end
+        -- if state then
+        --     OpenPaletoDoor()
+        -- end
     elseif bankId == 'pacific' then
         Config.PacificBank['isVaultOpened'] = state
         if state then
@@ -747,11 +773,12 @@ RegisterNetEvent('qb-bankrobbery:client:setBankState', function(bankId, state)
         end
     else
         Config.FleecaBanks[bankId]['isOpened'] = state
-        if state then
-            OpenBankDoor(bankId)
-        end
         for bankIDD, _ in pairs(Config.FleecaBanks) do
             Config.FleecaBanks[bankIDD]['isOpened'] = true
+        end
+        Wait(time)
+        if state then
+            OpenBankDoor(bankId)
         end
     end
 end)

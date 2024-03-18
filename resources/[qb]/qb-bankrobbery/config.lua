@@ -28,7 +28,7 @@ Config.EnableTrades = true -- Accept trading for Laptops?
 
 Config.MinimumFleecaPolice = 2
 Config.MinimumPaletoPolice = 3
-Config.MinimumPowerPolice = 4
+Config.MinimumPowerPolice = 0 --TODO
 Config.MinimumPAleto2 = 0
 Config.MinimumPacificPolice = 0 --No need for this as they cant do pacific without doing power first
 Config.MinimumlowerVaultPolice = 0 -- This also includes thermite in the lower Vault
@@ -39,7 +39,7 @@ Config.RemoveLaptop = true -- True means that it will remove laptop after they c
 Config.RemoveCard = true -- This means after successfully using a bank card it will be removed set to false it will not be removed
 
 ---- ** DOOR COOLDOWN ** ----
-Config.DoorCD = 1 -- How many minutes before Bank Vault opens after finishing the hack?
+Config.DoorCD = 0.1 -- How many minutes before Bank Vault opens after finishing the hack?
 
 ---- ** Trolly CONFIG ** ----
 
@@ -104,7 +104,7 @@ Config.FleecaBlocks = 4 -- How many different blocks can the hack have?
 Config.FleecaRepeat = 2 -- How many times in a row do they need to hack the system?
 
 ---- ** PALETO HACK CONFIG ** ---- 
-Config.PaletoTime = 7 -- How much time do they have to enter the hack?
+Config.PaletoTime = 9 -- How much time do they have to enter the hack?
 Config.PaletoBlocks = 5 -- How many different blocks can the hack have?
 Config.PaletoRepeat = 3 -- How many times in a row do they need to hack the system?
 
@@ -114,9 +114,9 @@ Config.PacificBlocks = 6 -- How many different blocks can the hack have?
 Config.PacificRepeat = 3 -- How many times in a row do they need to hack the system?
 
 ---- ** PACIFIC Vault HACK CONFIG ** ----
-Config.PacificVaultTime = 5 -- How much time do they have to enter the hack?
-Config.PacificVaultBlocks = 6 -- How many different blocks can the hack have?
-Config.PacificVaultRepeat = 4 -- How many times in a row do they need to hack the system?
+Config.PacificVaultTime = 12 -- How much time do they have to enter the hack? TODO
+Config.PacificVaultBlocks = 4 -- How many different blocks can the hack have?
+Config.PacificVaultRepeat = 1 -- How many times in a row do they need to hack the system?
 
 ---- ** LOWER VAULT HACK CONFIG ** ----
 Config.HDDTime = 6 -- How much time do they have to enter the hack?
@@ -151,8 +151,8 @@ Config.FleecaGoldMin = 200 -- Minimum gold bars from Fleecas
 Config.FleecaGoldMax = 210 -- Maximum gold bars from Fleecas
 
 ---- ** PALETO ** ----
-Config.PaletoBagsMin = 1-- How many bags of Marked Bills can you MINIMUM get from a Paleto Table?
-Config.PaletoBagsMax = 2 -- How many bags of Marked Bills can you MAXIMUM get from a Paleto Table?
+Config.PaletoBagsMin = 2-- How many bags of Marked Bills can you MINIMUM get from a Paleto Table?
+Config.PaletoBagsMax = 3 -- How many bags of Marked Bills can you MAXIMUM get from a Paleto Table?
 Config.PaletoGoldMin = 390 -- Minimum gold bars from Paleto
 Config.PaletoGoldMax = 410 -- Maximum gold bars from Paleto
 
@@ -360,7 +360,7 @@ Config.Notify = { -- Don't change the ["Text"] only change the text on the RIGHT
     ["PlacingThermite"] = "Placing Thermite...",
     ["MissingThermite"] = "This dosn't seem right...",
     ["AlreadyExploded"] = "This dosn't seem right...",
-    ["PowerOff"] = "The Power is off",
+    ["PowerOff"] = "ATTENTION: The City's power has been disabled. We are working to restore this issue!",
     ["PowerStillOn"] = "Electricity still running...",
 
     -- Item // server side notify
@@ -560,7 +560,7 @@ Config.FleecaBanks = {
 
 Config.PaletoBank = {
     ["coords"] = vector4(-105.28, 6480.04, 31.15, 229.64),  -- Coordinates of the Laptop Hack
-    -- ["doorLocation"] = vector4(-101.99, 6463.28, 31.63, 221.02), -- coordinates of the card hack
+    ["doorLocation"] = vector4(-101.99, 6463.28, 31.63, 221.02), -- coordinates of the card hack
     ["isOpened"] = false,
     ["object"] = -2050208642,
     ["SecurityCardReader"] = true,
@@ -602,6 +602,7 @@ Config.PacificBank = {
     ["harddrivehack"] = vector4(247.19, 233.34, 97.12, 342.18), --coords of the harddrive hack
     ["lowervaultgates"] = vector4(228.05, 228.69, 97.12, 160.89), --cords of the pannel for the vault gates
     ["isOpened"] = false,
+    ["collectedGateItem"] = false,
     ["isVaultOpened"] = false,
     ["object"] = 961976194,
     ["camId"] = 25,
@@ -665,8 +666,8 @@ Config.PacificBank = {
     },
     ["firstfloorhacks"] = { --locations of the upper floor office hacks and the type of hack they show
         {coords = vector4(270.37, 231.65, 106.23, 170), completed = false, hack = 'var'},
-        {coords = vector4(261.7, 234.82, 106.23, 170), completed = false, hack = 'untangle'},
-        {coords = vector4(251.85, 208.63, 106.23, 350), completed = false, hack = 'lightsout'},
+        {coords = vector4(261.7, 234.82, 106.23, 170), completed = false, hack = 'lightsout'},
+        {coords = vector4(251.85, 208.63, 106.23, 350), completed = false, hack = 'untangle'},
         {coords = vector4(260.52, 205.45, 106.23, 350), completed = false, hack = 'counting'},
     },
 
@@ -736,17 +737,17 @@ Config.lowerVault = {
 
 -- This can be customized to however you'd like!
 
-Config.PowerPlantLocations = 6 -- Change this if you change the powerplant locations amount
+Config.PowerPlantLocations = 1 -- Change this if you change the powerplant locations amount TODO
 
-Config.PowerPlant = {
+Config.PowerPlant = { --TODO
     ["locations"] = {
-        {coords = vector4(2831.17, 1489.19, 24.73, 165.19), open = false},
-        {coords = vector4(2825.2422, 1490.5781, 24.7287, 164.2826), open = false},
-        {coords = vector4(2817.6945, 1499.2111, 24.7288, 344.5275), open = false},
-        {coords = vector4(2811.8256, 1500.7874, 24.7288, 346.8244), open = false},
-        {coords = vector4(2829.3327, 1507.0774, 24.7287, 167.7297), open = false},
-        {coords = vector4(2835.2323, 1505.6520, 24.7287, 165.2132), open = false},
-        -- {coords = vector4(253.21, 284.47, 105.53, 256.25), open = false},
+        -- {coords = vector4(2831.17, 1489.19, 24.73, 165.19), open = false},
+        -- {coords = vector4(2825.2422, 1490.5781, 24.7287, 164.2826), open = false},
+        -- {coords = vector4(2817.6945, 1499.2111, 24.7288, 344.5275), open = false},
+        -- {coords = vector4(2811.8256, 1500.7874, 24.7288, 346.8244), open = false},
+        -- {coords = vector4(2829.3327, 1507.0774, 24.7287, 167.7297), open = false},
+        -- {coords = vector4(2835.2323, 1505.6520, 24.7287, 165.2132), open = false},
+        {coords = vector4(253.21, 284.47, 105.53, 256.25), open = false},
     },
 }
 
@@ -783,6 +784,13 @@ function Config.DoorlockAction(type, setLocked)
         Config.PacificBank['firstfloorhacks'][2].completed = false
         Config.PacificBank['firstfloorhacks'][3].completed = false
         Config.PacificBank['firstfloorhacks'][4].completed = false
+
+        Config.PowerPlant['locations'][1].open = false
+        Config.PowerPlant['locations'][2].open = false
+        Config.PowerPlant['locations'][3].open = false
+        Config.PowerPlant['locations'][4].open = false
+        Config.PowerPlant['locations'][5].open = false
+        Config.PowerPlant['locations'][6].open = false
         
     end
 end

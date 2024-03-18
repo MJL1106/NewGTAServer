@@ -12,6 +12,9 @@ elseif Config.Version == "old" then
 end
 
 local PowerPlantBomb = 0
+local PacificThermiteCounter = 0
+local PacificFirstFloorCounter = 0
+local PacificHackTypeCounter = 0
 local robberyBusy = false
 local FirstCode = true
 local lockDown = false
@@ -405,11 +408,13 @@ RegisterNetEvent('qb-bankrobbery:server:GetTrolleyLoot', function(Trolley, bank,
         end
 
     elseif bank == 'paleto' then 
-        local PaletoDist = #(pos - vector3(Config.PaletoBank['coords'].x, Config.PaletoBank['coords'].y, Config.PaletoBank['coords'].z ))
+        print("paleto bank trolleys")
+        local PaletoDist = #(pos - vector3(Config.PaletoBank['doorLocation'].x, Config.PaletoBank['doorLocation'].y, Config.PaletoBank['doorLocation'].z ))
         if PaletoDist <= 15 then
+            print("close enough distance")
             local MarkedBags = math.random(Config.PaletoBagsMin, Config.PaletoBagsMax) -- How many bags can you get per trolly in a Paleto
             local GoldBars = math.random(Config.PaletoGoldMin, Config.PaletoGoldMax) -- How many gold bars can you get in a Paleto
-
+            print("total marked bags for grabs" .. MarkedBags)
             if Trolley == 'ch_prop_gold_bar_01a' then 
                 item = 'goldbar'
                 Player.Functions.AddItem(item, GoldBars, false)
@@ -417,6 +422,7 @@ RegisterNetEvent('qb-bankrobbery:server:GetTrolleyLoot', function(Trolley, bank,
                 TriggerClientEvent('QBCore:Notify', src, Config.Notify["Got"] .. GoldBars .. Config.Notify["GoldBars"])
             elseif Trolley == 'hei_prop_heist_cash_pile' then 
                 local item = Config.BillsItem
+                print("trying to give bags" .. item)
                 Player.Functions.AddItem(item, MarkedBags, false, info)
                 TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[item], 'add')
                 TriggerClientEvent('QBCore:Notify', src, Config.Notify["Got"] .. MarkedBags .. Config.Notify["BagsOfInked"])
@@ -687,12 +693,13 @@ end)
 RegisterServerEvent('qb-bankrobbery:server:ExplodePowerPlant', function(k)
     if not BlackOutActive then 
         TriggerClientEvent('qb-bankrobbery:client:PowerPlantgoBoom', -1, k)
-
+        Config.PowerPlant["locations"][k]['open'] = true
         PowerPlantBomb = PowerPlantBomb + 1
 
     end
 
     if PowerPlantBomb == Config.PowerPlantLocations then
+        TriggerClientEvent('QBCore:Notify', -1, Config.Notify["PowerOff"], 'info', 10000)
         TriggerEvent('qb-bankrobbery:server:SetPowerTimeout')
     end
 end)
@@ -710,6 +717,34 @@ end)
 QBCore.Functions.CreateCallback('qb-bankrobbery:server:IsServerBlackedout', function(source, cb)
     cb(BlackOutActive)
 end)
+
+
+RegisterServerEvent('qb-bankrobbery:server:PacificThermiteCounter', function()
+    PacificThermiteCounter = PacificThermiteCounter + 1
+
+    if PacificThermiteCounter == 3 then
+        TriggerClientEvent('qb-bankrobbery:pacific:thermitecounter', -1)
+    end
+end)
+
+RegisterServerEvent('qb-bankrobbery:server:PacificFirstFloorCounter', function()
+    PacificFirstFloorCounter = PacificFirstFloorCounter + 1
+
+    if PacificFirstFloorCounter == 4 then
+        TriggerClientEvent('qb-bankrobbery:pacific:firstfloorcounter', -1)
+    end
+end)
+
+RegisterServerEvent('qb-bankrobbery:server:PacificHackTypeCounter', function()
+    PacificHackTypeCounter = PacificHackTypeCounter + 1
+
+    if PacificHackTypeCounter == 4 then
+        TriggerClientEvent('qb-bankrobbery:pacific:hacktypecounter', -1)
+    end
+end)
+
+
+
 
 --Paleto security card disabled from being used in inventory
 -- QBCore.Functions.CreateUseableItem('security_card_01', function(source, item)

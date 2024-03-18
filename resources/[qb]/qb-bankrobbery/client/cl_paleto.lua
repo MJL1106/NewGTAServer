@@ -474,8 +474,8 @@ RegisterNetEvent('qb-bankrobbery:PaletoTray', function()
                 TriggerServerEvent('qb-bankrobbery:server:GetTrolleyLoot', grabModel, 'paleto', pedCo)
                 LocalPlayer.state:set('inv_busy', false, true) -- Not Busy
             end
-        else
-            QBCore.Functions.Notify(Config.Notify['TrayAlreadyLooted'], 'error', 4500) 
+        -- else
+        --     QBCore.Functions.Notify(Config.Notify['TrayAlreadyLooted'], 'error', 4500) 
         end
     end
 end)

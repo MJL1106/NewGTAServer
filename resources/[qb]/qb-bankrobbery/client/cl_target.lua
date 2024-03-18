@@ -493,6 +493,9 @@ CreateThread(function()
                 icon = 'fas fa-bomb',
                 label = 'Open Door',
                 job = all,
+                canInteract = function(entity)
+                    return not Config.PacificBank['thermite'][k].completed
+                end,
               }
             },
             distance = 1.2,
@@ -518,6 +521,36 @@ CreateThread(function()
                 icon = 'fas fa-laptop-code',
                 label = 'Hack Computer System',
                 job = all,
+                canInteract = function(entity)
+                    return not Config.PacificBank['hacktype'][k].completed
+                end,
+            }
+            },
+            distance = 1.2,
+        })
+    end
+end)
+
+Citizen.CreateThread(function()
+    for k,v in pairs(Config.PacificBank['firstfloorhacks']) do
+        local hackId1 = 'HackSystemFloor1' ..k
+        exports['qb-target']:AddBoxZone(hackId, vector3(Config.PacificBank['firstfloorhacks'][k]['coords'].x, Config.PacificBank['firstfloorhacks'][k]['coords'].y, Config.PacificBank['firstfloorhacks'][k]['coords'].z), 0.4, 1.2, {
+            name = hackId1, 
+            heading = Config.PacificBank['firstfloorhacks'][k]['coords'].w,
+            debugPoly = Config.debugPoly, 
+            minZ = Config.PacificBank['firstfloorhacks'][k]['coords'].z-1,
+            maxZ = Config.PacificBank['firstfloorhacks'][k]['coords'].z+1,
+            }, {
+            options = { 
+            { 
+                type = 'client',
+                event = 'qb-bankrobbery:pacific:firstFloorEnable',
+                icon = 'fas fa-laptop-code',
+                label = 'Hack Computer System',
+                job = all,
+                canInteract = function(entity)
+                    return not Config.PacificBank['firstfloorhacks'][k].completed
+                end,
             }
             },
             distance = 1.2,
@@ -1295,6 +1328,9 @@ CreateThread(function()
                           icon = 'fas fa-bomb',
                           label = 'Place Explosive',
                           job = all,
+                          canInteract = function()
+                            return not Config.PowerPlant['locations'][k].open
+                          end,
                       }
                   },
                   distance = 1.5,
