@@ -26,7 +26,7 @@ Config.EnableTrades = true -- Accept trading for Laptops?
 
 
 
-Config.MinimumFleecaPolice = 2
+Config.MinimumFleecaPolice = 0
 Config.MinimumPaletoPolice = 3
 Config.MinimumPowerPolice = 4 
 Config.MinimumPAleto2 = 0
