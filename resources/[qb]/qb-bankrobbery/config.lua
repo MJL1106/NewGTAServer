@@ -26,7 +26,7 @@ Config.EnableTrades = true -- Accept trading for Laptops?
 
 
 
-Config.MinimumFleecaPolice = 0
+Config.MinimumFleecaPolice = 2
 Config.MinimumPaletoPolice = 3
 Config.MinimumPowerPolice = 4 
 Config.MinimumPAleto2 = 0
@@ -39,7 +39,7 @@ Config.RemoveLaptop = true -- True means that it will remove laptop after they c
 Config.RemoveCard = true -- This means after successfully using a bank card it will be removed set to false it will not be removed
 
 ---- ** DOOR COOLDOWN ** ----
-Config.DoorCD = 0.1 -- How many minutes before Bank Vault opens after finishing the hack?
+Config.DoorCD = 1 -- How many minutes before Bank Vault opens after finishing the hack?
 
 ---- ** Trolly CONFIG ** ----
 
