@@ -4,10 +4,10 @@
   <residentAnims />
   <InitDatas>
     <Item>
-      <modelName>polheli</modelName>
-      <txdName>polheli</txdName>
-      <handlingId>polheli</handlingId>
-      <gameName>polheli</gameName>
+      <modelName>polmav</modelName>
+      <txdName>polmav</txdName>
+      <handlingId>polmav</handlingId>
+      <gameName>polmav</gameName>
       <vehicleMakeName>BELL</vehicleMakeName>
       <expressionDictName>null</expressionDictName>
       <expressionName>null</expressionName>
