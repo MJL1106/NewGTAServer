@@ -244,7 +244,7 @@ RegisterNetEvent('qb-bankrobbery:pacific:firstFloorEnable', function()
                             end
                         end
                     end
-                end, 1,5)  -- Keep these parameters as they are essential for the function to operate correctly
+                end, 11,5)  -- Keep these parameters as they are essential for the function to operate correctly
                 break  -- Exit the loop if a hack is initiated to prevent multiple hacks at once
             elseif v.hack == 'counting' then
                 exports['casinohack-main']:OpenHackingGame(function(success)
@@ -373,7 +373,7 @@ RegisterNetEvent('qb-bankrobbery:pacific:firstFloorEnable', function()
                             end
                         end
                     end
-                end, 9, 15) -- amount of does (int), time
+                end, 10, 15) -- amount of does (int), time
 
             elseif v.hack == 'lightsout' then
                 local result = exports['lightsout']:StartLightsOut(grid, maxClicks)

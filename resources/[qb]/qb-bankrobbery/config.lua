@@ -28,7 +28,7 @@ Config.EnableTrades = true -- Accept trading for Laptops?
 
 Config.MinimumFleecaPolice = 2
 Config.MinimumPaletoPolice = 3
-Config.MinimumPowerPolice = 0 --TODO
+Config.MinimumPowerPolice = 4 
 Config.MinimumPAleto2 = 0
 Config.MinimumPacificPolice = 0 --No need for this as they cant do pacific without doing power first
 Config.MinimumlowerVaultPolice = 0 -- This also includes thermite in the lower Vault
@@ -109,14 +109,14 @@ Config.PaletoBlocks = 5 -- How many different blocks can the hack have?
 Config.PaletoRepeat = 3 -- How many times in a row do they need to hack the system?
 
 ---- ** PACIFIC HACK CONFIG ** ----
-Config.PacificTime = 6 -- How much time do they have to enter the hack?
+Config.PacificTime = 7 -- How much time do they have to enter the hack?
 Config.PacificBlocks = 6 -- How many different blocks can the hack have?
 Config.PacificRepeat = 3 -- How many times in a row do they need to hack the system?
 
 ---- ** PACIFIC Vault HACK CONFIG ** ----
-Config.PacificVaultTime = 12 -- How much time do they have to enter the hack? TODO
-Config.PacificVaultBlocks = 4 -- How many different blocks can the hack have?
-Config.PacificVaultRepeat = 1 -- How many times in a row do they need to hack the system?
+Config.PacificVaultTime = 5 -- How much time do they have to enter the hack? 
+Config.PacificVaultBlocks = 6 -- How many different blocks can the hack have?
+Config.PacificVaultRepeat = 4 -- How many times in a row do they need to hack the system?
 
 ---- ** LOWER VAULT HACK CONFIG ** ----
 Config.HDDTime = 6 -- How much time do they have to enter the hack?
@@ -612,7 +612,7 @@ Config.PacificBank = {
     },
     ["grab"] = { -- middle main grab point
         pos = vector3(242.91, 210.64, 96.98),
-        heading = 17.41,
+        heading = 192.54,
         loot = false
 
     },
@@ -737,17 +737,17 @@ Config.lowerVault = {
 
 -- This can be customized to however you'd like!
 
-Config.PowerPlantLocations = 1 -- Change this if you change the powerplant locations amount TODO
+Config.PowerPlantLocations = 6 -- Change this if you change the powerplant locations amount
 
-Config.PowerPlant = { --TODO
+Config.PowerPlant = { 
     ["locations"] = {
-        -- {coords = vector4(2831.17, 1489.19, 24.73, 165.19), open = false},
-        -- {coords = vector4(2825.2422, 1490.5781, 24.7287, 164.2826), open = false},
-        -- {coords = vector4(2817.6945, 1499.2111, 24.7288, 344.5275), open = false},
-        -- {coords = vector4(2811.8256, 1500.7874, 24.7288, 346.8244), open = false},
-        -- {coords = vector4(2829.3327, 1507.0774, 24.7287, 167.7297), open = false},
-        -- {coords = vector4(2835.2323, 1505.6520, 24.7287, 165.2132), open = false},
-        {coords = vector4(253.21, 284.47, 105.53, 256.25), open = false},
+        {coords = vector4(2831.17, 1489.19, 24.73, 165.19), open = false},
+        {coords = vector4(2825.2422, 1490.5781, 24.7287, 164.2826), open = false},
+        {coords = vector4(2817.6945, 1499.2111, 24.7288, 344.5275), open = false},
+        {coords = vector4(2811.8256, 1500.7874, 24.7288, 346.8244), open = false},
+        {coords = vector4(2829.3327, 1507.0774, 24.7287, 167.7297), open = false},
+        {coords = vector4(2835.2323, 1505.6520, 24.7287, 165.2132), open = false},
+        -- {coords = vector4(253.21, 284.47, 105.53, 256.25), open = false},
     },
 }
 
