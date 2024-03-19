@@ -4,8 +4,8 @@ Config = Config or {}
 -- These have to be a string thanks to how Convars are returned.
 Config.UseTarget = true
 
-Config.Timeout = 30 * (60 * 2000)
-Config.RequiredCops = 2
+Config.Timeout = 45 * (60 * 1000)
+Config.RequiredCops = 0
 Config.JewelleryLocation = {
     ["coords"] = vector3(-630.5, -237.13, 38.08),
 }

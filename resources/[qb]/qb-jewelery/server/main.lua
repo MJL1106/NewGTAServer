@@ -48,6 +48,19 @@ RegisterNetEvent('qb-jewellery:server:setVitrineState', function(stateType, stat
     end
 end)
 
+RegisterNetEvent('qb-jewellery:server:setThermiteState', function(state, k)
+    Config.ThermiteLocations['thermite'][k].completed = state
+    TriggerClientEvent('qb-jewellery:client:setThermiteState', -1, state, k)
+end)
+
+RegisterNetEvent('qb-jewellery:server:RemoveThermite', function()
+    local src = source
+	local Player = QBCore.Functions.GetPlayer(src)
+    local item = "thermite"
+    Player.Functions.RemoveItem(item, 1, false)
+    TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[item], 'remove')
+end)
+
 RegisterNetEvent('qb-jewellery:server:vitrineReward', function(vitrineIndex)
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
@@ -129,7 +142,11 @@ RegisterNetEvent('qb-jewellery:server:setTimeout', function()
                 TriggerClientEvent('qb-jewellery:client:setAlertState', -1, false)
                 TriggerEvent('qb-scoreboard:server:SetActivityBusy', "jewellery", false)
             end
-            TriggerServerEvent('qb-doorlock:server:updateState', 'JeweleryDoorMain', true, false, false, true, false, false)
+            for k, v in pairs(Config.ThermiteLocations['thermite']) do
+                v.completed = false
+                TriggerClientEvent('qb-jewellery:client:setThermiteState', -1, false, k)
+            end
+            TriggerClientEvent('qb-jewellery:client:lockDoor', -1, true)
             timeOut = false
         end)
     end
