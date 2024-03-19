@@ -79,7 +79,8 @@ add_ace group.admin finiac allow
 add_principal identifier.steam:110000115a71fba qbcore.god
 add_principal identifier.steam:110000115ceb248 qbcore.god
 add_principal identifier.steam:11000010e87be4d qbcore.god #--pep
-add_principal identifier.steam:110000154d96125 qbcore.admin
+add_principal identifier.steam:110000154d96125 qbcore.admin #--pig
+add_principal identifier.steam:11000014bb53aeb qbcore.admin #--dizz
 # Resources
 add_ace resource.qb-core command allow # Allow qb-core to execute commands
 
