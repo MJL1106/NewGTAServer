@@ -28,7 +28,7 @@ Config.EnableTrades = true -- Accept trading for Laptops?
 
 Config.MinimumFleecaPolice = 2
 Config.MinimumPaletoPolice = 3
-Config.MinimumPowerPolice = 4 
+Config.MinimumPowerPolice = 4
 Config.MinimumPAleto2 = 0
 Config.MinimumPacificPolice = 0 --No need for this as they cant do pacific without doing power first
 Config.MinimumlowerVaultPolice = 0 -- This also includes thermite in the lower Vault
