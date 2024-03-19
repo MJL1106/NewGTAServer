@@ -706,11 +706,11 @@ end)
 
 RegisterNetEvent('qb-bankrobbery:server:SetPowerTimeout', function()
     if not BlackOutActive then
-        TriggerEvent("qb-weathersync:server:toggleBlackout")
+        TriggerEvent("qb-weathersync:server:toggleBlackout", true)
         BlackOutActive = true
         Wait(Config.BlackoutTimer * (60 * 1000))  --(45 * (60 * 1000))
         BlackOutActive = false
-        TriggerEvent("qb-weathersync:server:toggleBlackout")
+        TriggerEvent("qb-weathersync:server:toggleBlackout", false)
     end
 end)
 
