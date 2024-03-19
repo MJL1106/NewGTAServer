@@ -18,7 +18,7 @@ Config.DoorList['TunerShop--2023754432'] = {
 Config.DoorList['TunerShop--Gate1'] = {
     locked = true,
     fixText = false,
-    distance = 5,
+    distance = 7,
     objYaw = 89.999961853027,
     objCoords = vec3(154.809525, -3023.889160, 8.503336),
     doorType = 'sliding',
@@ -36,7 +36,7 @@ Config.DoorList['TunerShop--456733639'] = {
     objYaw = 89.999961853027,
     objCoords = vec3(154.809525, -3034.051270, 8.503336),
     doorLabel = 'Gate2',
-    distance = 5,
+    distance = 7,
     doorType = 'sliding',
     locked = true,
     authorizedJobs = { ['tuners'] = 0 },

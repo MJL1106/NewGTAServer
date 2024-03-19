@@ -71,7 +71,7 @@ Crafting = {
 			},
 			{ ["advancedrepairkit"] = { ["iron"] = 5, ["steel"] = 2, },
 			["amount"] = 1, ["job"] = {			
-				["tuners"] = 3,["mechanic"] = 3,	}
+				["tuners"] = 3,["mechanic"] = 3,["lsc"] = 3,	}
 			},
 			{ ["racekit"] = { ["iron"] = 3,["steel"] = 1, },
 			["amount"] = 1, ["job"] = {			
@@ -79,11 +79,11 @@ Crafting = {
 			},
 			{ ["lockpick"] = { ["aluminum"] = 1, },
 			["amount"] = 1,["job"] = {			
-				["tuners"] = 3, ["mechanic"] = 3,}
+				["tuners"] = 3, ["mechanic"] = 3,["lsc"] = 3,}
 			},
 			{ ["advancedlockpick"] = { ["steel"] = 3, },
 			["amount"] = 1,["job"] = {			
-				["tuners"] = 3,["mechanic"] = 3,}
+				["tuners"] = 3,["mechanic"] = 3, ["lsc"] = 3,}
 			},
 		},
 	},

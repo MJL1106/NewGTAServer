@@ -100,7 +100,7 @@ if Config.CustomEventsFramework == false then
         local billed = QBCore.Functions.GetPlayer(tonumber(args[1]))
         local amount = tonumber(args[2])
 
-        if biller.PlayerData.job.name == "police" or biller.PlayerData.job.name == 'ambulance' or biller.PlayerData.job.name == 'mechanic' or biller.PlayerData.job.name == 'tuners' or biller.PlayerData.job.name == 'burgershot' or biller.PlayerData.job.name == 'uwu' or biller.PlayerData.job.name == 'carsales' or biller.PlayerData.job.name == 'cardealer' or biller.PlayerData.job.name == 'weedshop' then
+        if biller.PlayerData.job.name == "police" or biller.PlayerData.job.name == 'ambulance' or biller.PlayerData.job.name == 'mechanic' or biller.PlayerData.job.name == 'tuners' or biller.PlayerData.job.name == 'burgershot' or biller.PlayerData.job.name == 'uwu' or biller.PlayerData.job.name == 'carsales' or biller.PlayerData.job.name == 'cardealer' or biller.PlayerData.job.name == 'weedshop' or biller.PlayerData.job.name == 'lsc' then
             if billed ~= nil then
                 if biller.PlayerData.citizenid ~= billed.PlayerData.citizenid then
                     if amount and amount > 0 then
@@ -133,7 +133,7 @@ else
         local billed = exports[Config.CoreName]:GetPlayer(tonumber(args[1]))
         local amount = tonumber(args[2])
 
-        if biller.PlayerData.job.name == "police" or biller.PlayerData.job.name == 'ambulance' or biller.PlayerData.job.name == 'mechanic' or biller.PlayerData.job.name == 'tuners' or biller.PlayerData.job.name == 'burgershot' or biller.PlayerData.job.name == 'uwu' or biller.PlayerData.job.name == 'carsales' or biller.PlayerData.job.name == 'cardealer' or biller.PlayerData.job.name == 'weedshop' then
+        if biller.PlayerData.job.name == "police" or biller.PlayerData.job.name == 'ambulance' or biller.PlayerData.job.name == 'mechanic' or biller.PlayerData.job.name == 'tuners' or biller.PlayerData.job.name == 'burgershot' or biller.PlayerData.job.name == 'uwu' or biller.PlayerData.job.name == 'carsales' or biller.PlayerData.job.name == 'cardealer' or biller.PlayerData.job.name == 'weedshop' or biller.PlayerData.job.name == 'lsc' then
             if billed ~= nil then
                 if biller.PlayerData.citizenid ~= billed.PlayerData.citizenid then
                     if amount and amount > 0 then

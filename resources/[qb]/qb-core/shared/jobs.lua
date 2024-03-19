@@ -309,6 +309,35 @@ QBShared.Jobs = {
             },
         },
 	},
+    ['lsc'] = {
+		label = 'LSC',
+        type = "lsc",
+		defaultDuty = true,
+		offDutyPay = false,
+		grades = {
+            ['0'] = {
+                name = 'Recruit',
+                payment = 625
+            },
+			['1'] = {
+                name = 'Novice',
+                payment = 825
+            },
+			['2'] = {
+                name = 'Experienced',
+                payment = 1000
+            },
+			['3'] = {
+                name = 'Advanced',
+                payment = 1250
+            },
+			['4'] = {
+                name = 'Manager',
+				isboss = true,
+                payment = 1500
+            },
+        },
+	},
 	['judge'] = {
 		label = 'Honorary',
 		defaultDuty = true,
