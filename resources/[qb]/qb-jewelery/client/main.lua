@@ -116,6 +116,14 @@ RegisterNetEvent('qb-jewellery:client:setVitrineState', function(stateType, stat
     Config.Locations[k][stateType] = state
 end)
 
+RegisterNetEvent('qb-jewellery:client:setThermiteState', function(state, k)
+    Config.ThermiteLocations['thermite'][k].completed = state
+end)
+
+RegisterNetEvent('qb-jewellery:client:lockDoor', function(locked)
+    TriggerServerEvent('qb-doorlock:server:updateState', 'JeweleryDoorMain', locked, false, false, true, false, false)
+end)
+
 -- Threads
 
 CreateThread(function()
@@ -224,6 +232,9 @@ CreateThread(function()
                 icon = 'fas fa-bomb',
                 label = 'Blow Fuse',
                 job = all,
+                canInteract = function(entity)
+                    return not Config.ThermiteLocations['thermite'][k].completed
+                end,
             }
             },
             distance = 1.2,
@@ -239,10 +250,11 @@ RegisterNetEvent('jewstore:thermitedoor', function()
         local Dist = #(coords - vector3(v['coords'].x, v['coords'].y, v['coords'].z))
         if Dist <= 1.5 then
             SetEntityHeading(ped, Config.ThermiteLocations['thermite'][k]['coords'].w)
-            TriggerServerEvent('qb-bankrobbery:server:RemoveThermite')
-            exports['memorygame']:thermiteminigame(8, 3, 4, 7,
+            TriggerServerEvent('qb-jewellery:server:RemoveThermite')
+            exports['memorygame']:thermiteminigame(1, 3, 4, 7, --TODO
             function() -- success
                 totalCompleted = totalCompleted + 1
+                TriggerServerEvent('qb-jewellery:server:setThermiteState', true, k)
                 QBCore.Functions.Notify("Thermite Placed", 'success', 4500)
                 local loc = Config.ThermiteLocations['thermite'][k]['anim']
                 local rotx, roty, rotz = table.unpack(vec3(GetEntityRotation(ped)))
