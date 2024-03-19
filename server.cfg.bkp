@@ -11,6 +11,7 @@ sets tags "roleplay, rp, economy, gang, realesate, bangladesh, india, police, ra
 set sv_licenseKey "cfxk_1TMyr8Yun60XBY53fILpv_37IVWG"
 sets "Developers" "Matt"
 sets Discord ""
+sets sv_tebexSecret c5958f3e02beffa499522028865ad107bdf05d3b
 sets banner_detail ""
 sets banner_connecting ""
 sv_hostname "^TestPix ^8| ^1Gangs ^8| ^6Real Estate ^8| ^3Recently Wiped ^8| ^1Hidden Drugs ^8| ^6Custom Housing ^8| ^5Businesses ^8| ^4Active Police ^8| ^2Active EMS ^8| ^6Custom Jobs ^8| ^2Low Ping ^8|^2Active Staff ^8| ^2Real-Economy  ^8| ^1Starter Apartment ^8|"
@@ -79,7 +80,6 @@ add_principal identifier.steam:110000115a71fba qbcore.god
 add_principal identifier.steam:110000115ceb248 qbcore.god
 add_principal identifier.steam:11000010e87be4d qbcore.god #--pep
 add_principal identifier.steam:110000154d96125 qbcore.admin
-add_principal identifier.steam:11000014aadcc8a qbcore.admin #benito
 # Resources
 add_ace resource.qb-core command allow # Allow qb-core to execute commands
 
