@@ -9,18 +9,22 @@ Config.IgnoredJobs = {
 }
 
 Config.DenyDuty = {
-	["ambulance"] = true,
-	["police"] = true,
+	["ambulance"] = false,
+	["police"] = false,
 	["mechanic"] = true,
 	["tuners"] = true,
+	["lsc"] = true,
 	["burgershot"] = true,
 	["uwu"] = true,
+	["weedshop"] = true,
+	["carsales"] = true,
 }
 
 Config.WhitelistJobs = {
 	["police"] = true,
 	["ambulance"] = true,
 	["mechanic"] = true,
+	["lsc"] = true,
 	["burgershot"] = true,
 	["tuners"] = true,
 	["uwu"] = true,
@@ -34,6 +38,7 @@ Config.Descriptions = {
 	["police"] = "Shoot some criminals or maybe be a good cop and arrest them",
 	["ambulance"] = "Fix the bullet holes",
 	["mechanic"] = "Fix the bullet holes",
+	["lsc"] = "Fix the bullet holes",
 	["tow"] = "Pickup the tow truck and steal some vehicles",
 	["taxi"] = "Pickup people around the city and drive them to their destination",
 	["bus"] = "Pickup multiple people around the city and drive them to their destination",
@@ -60,6 +65,7 @@ Config.FontAwesomeIcons = {
 	["police"] = "fa-solid fa-handcuffs",
 	["ambulance"] = "fa-solid fa-user-doctor",
 	["mechanic"] = "fa-solid fa-wrench",
+	["lsc"] = "fa-solid fa-wrench",
 	["tow"] = "fa-solid fa-truck-tow",
 	["taxi"] = "fa-solid fa-taxi",
 	["bus"] = "fa-solid fa-bus",
