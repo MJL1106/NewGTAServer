@@ -3,7 +3,7 @@
   <HandlingData>
     <Item type="CHandlingData">
       <handlingName>NKJUGULAR</handlingName>
-      <fMass value="1745.000000"/>
+      <fMass value="1845.000000"/>
       <fInitialDragCoeff value="4.500000"/>
       <fDownforceModifier value="200.000"/>
       <fPercentSubmerged value="85.000000"/>
@@ -11,20 +11,20 @@
       <vecInertiaMultiplier x="1.200000" y="1.200000" z="1.400000"/>
       <fDriveBiasFront value="0.300000"/>
       <nInitialDriveGears value="6"/>
-      <fInitialDriveForce value="0.39800"/>
+      <fInitialDriveForce value="0.46"/>
       <fDriveInertia value="1.000000"/>
       <fClutchChangeRateScaleUpShift value="8.100000"/>
       <fClutchChangeRateScaleDownShift value="8.100000"/>
       <fInitialDriveMaxFlatVel value="255.50000"/>
-      <fBrakeForce value="1.10000"/>
+      <fBrakeForce value="2.30000"/>
       <fBrakeBiasFront value="0.540000"/>
       <fHandBrakeForce value="0.650000"/>
       <fSteeringLock value="40.000000"/>
-      <fTractionCurveMax value="2.620000"/>
-      <fTractionCurveMin value="2.380000"/>
-      <fTractionCurveLateral value="22.500000"/>
+      <fTractionCurveMax value="3.620000"/>
+      <fTractionCurveMin value="3.380000"/>
+      <fTractionCurveLateral value="20.500000"/>
       <fTractionSpringDeltaMax value="0.150000"/>
-      <fLowSpeedTractionLossMult value="1.200000"/>
+      <fLowSpeedTractionLossMult value="0.800000"/>
       <fCamberStiffnesss value="0.000000"/>
       <fTractionBiasFront value="0.49000"/>
       <fTractionLossMult value="1.000000"/>
