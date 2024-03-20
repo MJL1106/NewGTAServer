@@ -386,7 +386,7 @@ CreateThread(function()
 					Targets[tName] =
 						exports['qb-target']:AddBoxZone(tName, Curr.coords.xyz, Curr.w, Curr.d, { name=tName, heading = Curr.coords.w, debugPoly=Config.Debug, minZ = Curr.minZ, maxZ = Curr.maxZ, },
 						{ options = {
-							{ event = "jim-payments:client:Charge", icon = "fas fa-credit-card", label = Loc[Config.Lan].targetinfo["charge_customer"]..debug, job = Config.Locations[1].job, img = "<center><p><img src="..Config.Logo.." width=225px></p>" },
+							-- { event = "jim-payments:client:Charge", icon = "fas fa-credit-card", label = Loc[Config.Lan].targetinfo["charge_customer"]..debug, job = Config.Locations[1].job, img = "<center><p><img src="..Config.Logo.." width=225px></p>" },
 								{ type = "server", event = "QBCore:ToggleDuty", icon = "fas fa-user-check", label = Loc[Config.Lan].targetinfo["toggle_duty"], job = Config.Locations[1].job },
 								{ event = "qb-bossmenu:client:OpenMenu", icon = "fas fa-list", label = Loc[Config.Lan].targetinfo["open_bossmenu"], job = bossroles, }, },
 							distance = 1.5 })
@@ -726,7 +726,7 @@ RegisterNetEvent('jim-burgershot:Crafting:MakeItem', function(data)
 		for k, v in pairs(data.craft[data.item]) do	data.craft[data.item][k] *= data.amount	end
 		bartime *= data.amount bartime *= 0.9
 	end
-	if progressBar({ label = bartext, time = bartime, cancel = true, dict = animDictNow, anim = animNow, flag = 1, icon = data.item }) then
+	if progressBar({ label = bartext, time = bartime, cancel = true, dict = animDictNow, anim = animNow, flag = 4, icon = data.item }) then
 		CraftLock = false
 		TriggerServerEvent('jim-burgershot:Crafting:GetItem', data.item, data.craft)
 		Wait(500)
