@@ -44,19 +44,19 @@ Config.DoorList['burgershot-547885802'] = {
     doorRate = 1.0,
 }
 
--- 1309514423 created by MJL
-Config.DoorList['burgershot-1309514423'] = {
-    locked = true,
-    objName = 1309514423,
-    doorLabel = 'BSFreezer',
-    objYaw = 304.04959106445,
-    fixText = false,
-    objCoords = vec3(-1193.738159, -900.077454, 13.949343),
-    doorType = 'door',
-    authorizedJobs = { ['burgershot'] = 0 },
-    distance = 2,
-    doorRate = 1.0,
-}
+-- -- 1309514423 created by MJL
+-- Config.DoorList['burgershot-1309514423'] = {
+--     locked = true,
+--     objName = 1309514423,
+--     doorLabel = 'BSFreezer',
+--     objYaw = 304.04959106445,
+--     fixText = false,
+--     objCoords = vec3(-1193.738159, -900.077454, 13.949343),
+--     doorType = 'door',
+--     authorizedJobs = { ['burgershot'] = 0 },
+--     distance = 2,
+--     doorRate = 1.0,
+-- }
 
 -- 1009568243 created by MJL
 Config.DoorList['burgershot-1009568243'] = {
