@@ -17,7 +17,6 @@ files {
     'index.html',
     'css/style.css',
     'script/main.js',
-    'logo/logo.png',
     'song/*',
     'img/*'
 

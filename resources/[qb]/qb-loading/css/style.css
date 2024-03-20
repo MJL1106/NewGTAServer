@@ -192,15 +192,6 @@ body {
   transform: translate(-50%, -50%);
 }
 
-.img-top-left {
-  position: absolute;
-  /* Position absolutely within .background */
-  top: 5.2%;
-  /* Align top */
-  left: 0;
-  /* Align left */
-  /* No need to set height or display for top-left alignment */
-}
 
 .sky {
   height: 100%;
