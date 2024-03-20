@@ -2,7 +2,7 @@
 # Only change the IP if you're using a server with multiple network interfaces, otherwise change the port only.
 endpoint_add_tcp "0.0.0.0:30120"
 endpoint_add_udp "0.0.0.0:30120"
-sv_maxclients 8
+sv_maxclients 64
 set steam_webApiKey 6504493BA3D8AE6834ECF1373F9147A5
 sets tags "roleplay, rp, economy, gang, realesate, bangladesh, india, police, race, cars, bp, banglapixel"
 ## [txAdmin CFG validator]: onesync MUST only be set in the txAdmin settings page.
