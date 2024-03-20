@@ -5,7 +5,7 @@ Config.BlackoutTimer = 15 -- How many minutes are the city blackedout when power
 Config.BankTimer = {
     fleeca = 45, -- Time in minutes for cooldown
     paleto = 60, -- Time in minutes for cooldown
-    pacific = 480, -- Time in minutes for cooldown
+    pacific = 700, -- Time in minutes for cooldown
 } 
 
 ---- ** BAG IDs ** ----
@@ -747,7 +747,7 @@ Config.PowerPlant = {
         {coords = vector4(2811.8256, 1500.7874, 24.7288, 346.8244), open = false},
         {coords = vector4(2829.3327, 1507.0774, 24.7287, 167.7297), open = false},
         {coords = vector4(2835.2323, 1505.6520, 24.7287, 165.2132), open = false},
-        -- {coords = vector4(253.21, 284.47, 105.53, 256.25), open = false},
+        -- {coords = vector4(253.21, 284.47, 105.53, 256.25), open = false}, -- FOR TESTING LOCATED NEXT TO ELEC BOXES AT BIG BANK
     },
 }
 
@@ -770,6 +770,7 @@ function Config.DoorlockAction(type, setLocked)
         TriggerServerEvent('qb-doorlock:server:updateState','PacificMainEntrance', setLocked, false, false, true, false, false)
         TriggerServerEvent('qb-doorlock:server:updateState','PacifcTopEntrance', setLocked, false, false, true, false, false)
         TriggerServerEvent('qb-doorlock:server:updateState','PacificAdminOffice', setLocked, false, false, true, false, false)
+        TriggerServerEvent('qb-doorlock:server:updateState','PacificVaultDoor', setLocked, false, false, true, false, false)
 
         Config.PacificBank['hacktype'][1].completed = false
         Config.PacificBank['hacktype'][2].completed = false
