@@ -66,18 +66,15 @@ function check() {
         document.querySelector('.groups').classList.remove('transparent');
         let blocks = document.querySelectorAll('.group');
         good_positions.push(48);
-        good_positions.forEach( pos => {
-            blocks[pos].classList.add('proper');
+        good_positions.forEach(pos => {
+            if (pos < blocks.length) {
+                blocks[pos].classList.add('proper');
+            } else {
+                console.error(`Invalid position: ${pos}`);
+            }
         });
-
-        setTimeout(function() { 
-            $(".minigame").fadeOut();
-            reset()
-            $.post(`https://${GetParentResourceName()}/callback`, JSON.stringify({ 'success': false }));
-        }, 4000);
-        
-        return;
     }
+}
     if (last_pos === 48) {
         stopTimer();
         document.querySelector('.groups').classList.add('hidden');
