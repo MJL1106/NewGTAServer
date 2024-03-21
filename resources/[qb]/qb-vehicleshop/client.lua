@@ -216,7 +216,7 @@ Citizen.CreateThread(function()
             exports['qb-target']:AddBoxZone("VehicleInteractionPanel_pdm_" .. i, panelCoords, panelZoneSize.x, panelZoneSize.y, {
                 name = "VehicleInteractionPanel_" .. i,
                 heading = 0, -- Adjust heading as necessary
-                debugPoly = true, -- Set to false in production for better performance
+                debugPoly = false, -- Set to false in production for better performance
                 minZ = panelCoords.z - panelHeight / 2,
                 maxZ = panelCoords.z + panelHeight / 2
             }, {
@@ -253,7 +253,7 @@ Citizen.CreateThread(function()
             exports['qb-target']:AddBoxZone("VehicleInteractionPanel_luxury_" .. i, panelCoords, panelZoneSize.x, panelZoneSize.y, {
                 name = "VehicleInteractionPanel_" .. i,
                 heading = 204.92, -- Adjust heading as necessary
-                debugPoly = true, -- Set to false in production for better performance
+                debugPoly = false, -- Set to false in production for better performance
                 minZ = panelCoords.z - panelHeight / 2,
                 maxZ = panelCoords.z + panelHeight / 2
             }, {
