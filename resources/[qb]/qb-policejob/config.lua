@@ -415,7 +415,7 @@ Config.Items = {
             },
             type = "weapon",
             slot = 4,
-            authorizedJobGrades = {0,1,2,3,4, 5, 6, 7, 8}
+            authorizedJobGrades = {6, 7, 8}
         },
         [5] = {
             name = "weapon_carbinerifle",
@@ -430,7 +430,7 @@ Config.Items = {
             },
             type = "weapon",
             slot = 5,
-            authorizedJobGrades = {0,1,2,3,4, 5, 6, 7, 8}
+            authorizedJobGrades = {6, 7, 8}
         },
         [6] = {
             name = "weapon_nightstick",
@@ -457,7 +457,7 @@ Config.Items = {
             info = {},
             type = "item",
             slot = 8,
-            authorizedJobGrades = {0,1,2,3,4, 5, 6, 7, 8}
+            authorizedJobGrades = {6, 7, 8}
         },
         [9] = {
             name = "phone",
@@ -475,7 +475,7 @@ Config.Items = {
             info = {},
             type = "item",
             slot = 10,
-            authorizedJobGrades = {0,1,2,3,4, 5, 6, 7, 8}
+            authorizedJobGrades = {6, 7, 8}
         },
         [11] = {
             name = "handcuffs",
@@ -511,7 +511,7 @@ Config.Items = {
             info = {},
             type = "item",
             slot = 14,
-            authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8}
+            authorizedJobGrades = {6, 7, 8}
         },
         [15] = {
             name = "ifaks",
@@ -565,7 +565,7 @@ Config.Items = {
             info = {},
             type = "item",
             slot = 20,
-            authorizedJobGrades = {0,1,2,3, 4, 5, 6, 7, 8}
+            authorizedJobGrades = {6, 7, 8}
         },
         [21] = {
             name = "pistol_extendedclip",
@@ -574,7 +574,7 @@ Config.Items = {
             info = {},
             type = "item",
             slot = 21,
-            authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8}
+            authorizedJobGrades = {6, 7, 8}
         },
         [22] = {
             name = "weapon_pumpshotgun",
@@ -583,7 +583,7 @@ Config.Items = {
             info = {},
             type = "item",
             slot = 22,
-            authorizedJobGrades = {0,1,2,3, 4, 5, 6, 7, 8}
+            authorizedJobGrades = {6, 7, 8}
         },
         [23] = {
             name = "shotgun_ammo",
@@ -592,7 +592,7 @@ Config.Items = {
             info = {},
             type = "item",
             slot = 23,
-            authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8}
+            authorizedJobGrades = {6, 7, 8}
         },
         [24] = {
             name = "painkillers",
@@ -641,7 +641,7 @@ Config.Items = {
             },
             type = "weapon",
             slot = 26,
-            authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8,}
+            authorizedJobGrades = {6, 7, 8,}
         },
         [29] = {
             name = "weapon_ar15",
@@ -656,7 +656,7 @@ Config.Items = {
             },
             type = "weapon",
             slot = 27,
-            authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8,}
+            authorizedJobGrades = {6, 7, 8,}
         },
         [30] = {
             name = "weapon_scarh",
@@ -669,7 +669,7 @@ Config.Items = {
             },
             type = "weapon",
             slot = 28,
-            authorizedJobGrades = {0, 1, 2, 3, 4, 5, 6, 7, 8,}
+            authorizedJobGrades = {6, 7, 8,}
         },
         [31] = {
             name = "oxy",
@@ -678,7 +678,7 @@ Config.Items = {
             info = {},
             type = "item",
             slot = 29,
-            authorizedJobGrades = {2, 3, 4, 5, 6, 7, 8}
+            authorizedJobGrades = {0,1,2, 3, 4, 5, 6, 7, 8}
         }
     }
 }
