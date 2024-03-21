@@ -204,6 +204,80 @@ local function createVehZones(shopName, entity)
     end
 end
 
+Citizen.CreateThread(function() 
+    -- Ensure 'pdm' and 'InteractionPanel' are valid before proceeding
+    if Config.Shops['pdm'] and Config.Shops['pdm']['InteractionPanel'] then
+        for i, panel in ipairs(Config.Shops['pdm']['InteractionPanel']) do
+            local panelCoords = panel.coords
+            local panelZoneSize = vector2(1.5, 1.5) -- The size of the zone around the panel
+            local panelHeight = 1.0 -- Height of the zone
+
+            -- Using 'i' in the zone name to create unique names for each panel
+            exports['qb-target']:AddBoxZone("VehicleInteractionPanel_pdm_" .. i, panelCoords, panelZoneSize.x, panelZoneSize.y, {
+                name = "VehicleInteractionPanel_" .. i,
+                heading = 0, -- Adjust heading as necessary
+                debugPoly = false, -- Set to false in production for better performance
+                minZ = panelCoords.z - panelHeight / 2,
+                maxZ = panelCoords.z + panelHeight / 2
+            }, {
+                options = {
+                    {
+                        type = "client",
+                        event = "qb-vehicleshop:client:showVehOptions",
+                        icon = "fas fa-car",
+                        label = "Interact with Vehicle",
+                        job = "cardealer",
+                        -- canInteract = function()
+                        --     -- Additional logic here if needed, such as checking player job
+                        --     return true
+                        -- end,
+                    },
+                },
+                distance = 2.0
+            })
+        end
+    else
+        print("Configuration for 'pdm' interaction panels is not set correctly.")
+    end
+end)
+
+Citizen.CreateThread(function() 
+    -- Ensure 'pdm' and 'InteractionPanel' are valid before proceeding
+    if Config.Shops['luxury'] and Config.Shops['luxury']['InteractionPanel'] then
+        for i, panel in ipairs(Config.Shops['luxury']['InteractionPanel']) do
+            local panelCoords = panel.coords
+            local panelZoneSize = vector2(1.5, 1.5) -- The size of the zone around the panel
+            local panelHeight = 3.0 -- Height of the zone
+
+            -- Using 'i' in the zone name to create unique names for each panel
+            exports['qb-target']:AddBoxZone("VehicleInteractionPanel_luxury_" .. i, panelCoords, panelZoneSize.x, panelZoneSize.y, {
+                name = "VehicleInteractionPanel_" .. i,
+                heading = 204.92, -- Adjust heading as necessary
+                debugPoly = false, -- Set to false in production for better performance
+                minZ = panelCoords.z - panelHeight / 2,
+                maxZ = panelCoords.z + panelHeight / 2
+            }, {
+                options = {
+                    {
+                        type = "client",
+                        event = "qb-vehicleshop:client:showVehOptions",
+                        icon = "fas fa-car",
+                        label = "Interact with Vehicle",
+                        -- job = "cardealer",
+                        canInteract = function()
+                            -- Additional logic here if needed, such as checking player job
+                            return true
+                        end,
+                    },
+                },
+                distance = 2.0
+            })
+        end
+    else
+        print("Configuration for 'luxury' interaction panels is not set correctly.")
+    end
+end)
+
 -- Zones
 function createFreeUseShop(shopShape, name)
     local zone = PolyZone:Create(shopShape, {

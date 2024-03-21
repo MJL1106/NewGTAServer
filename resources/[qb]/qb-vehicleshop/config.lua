@@ -63,6 +63,29 @@ Config.Shops = {
                 chosenVehicle = 't20'
             },
         },
+        ['InteractionPanel'] = {
+             -- Example coordinates for the interaction panel
+            [1] = {
+                coords = vector3(-38.89, -1100.1, 26.97), -- where the vehicle will spawn on display
+        
+            },
+            [2] = {
+                coords = vector3(-40.71, -1094.76, 27.27),
+            
+            },
+            [3] = {
+                coords = vector3(-46.85, -1095.91, 27.27),
+                
+            },
+            [4] = {
+                coords = vector3(-51.31, -1094.84, 27.27),
+                
+            },
+            [5] = {
+                coords = vector3(-51.28, -1087.4, 27.27),
+               
+            },
+        },
     },
     ['luxury'] = {
         ['Type'] = 'free-use', -- meaning a real player has to sell the car
@@ -89,36 +112,62 @@ Config.Shops = {
         ['TestDriveSpawn'] = vector4(126.47, -118.97, 54.84, 68.1), -- Spawn location for test drive
         ['ShowroomVehicles'] = {
             [1] = {
-                coords = vector4(120.72, -156.67, 54.02, 24.43),
-                defaultVehicle = 's15lunar',
-                chosenVehicle = 's15lunar'
+                coords = vector4(120.72, -156.67, 53.88, 24.43),
+                defaultVehicle = 's15',
+                chosenVehicle = 's15'
             },
             [2] = {
-                coords = vector4(126.29, -158.6, 54.02, 26.15),
-                defaultVehicle = 'evo9',
-                chosenVehicle = 'evo9'
+                coords = vector4(126.29, -158.6, 53.88, 26.15),
+                defaultVehicle = 'GODzDRIFTCAT',
+                chosenVehicle = 'GODzDRIFTCAT'
             },
             [3] = {
-                coords = vector4(132.04, -160.75, 54.02, 19.52),
+                coords = vector4(132.04, -160.75, 53.88, 19.52),
                 defaultVehicle = 'brz13varis',
                 chosenVehicle = 'brz13varis'
             },
             [4] = {
-                coords = vector4(137.75, -162.81, 54.02, 22.81),
-                defaultVehicle = 'escaladeprime',
-                chosenVehicle = 'escaladeprime'
+                coords = vector4(137.75, -162.81, 53.88, 22.81),
+                defaultVehicle = '17mansorypnmr',
+                chosenVehicle = '17mansorypnmr'
             },
             [5] = {
-                coords = vector4(143.37, -165.09, 54.02, 22.89),
+                coords = vector4(143.37, -165.09, 53.88, 22.89),
                 defaultVehicle = 'scubieblob',
                 chosenVehicle = 'scubieblob'
             },
             [6] = {
                 coords = vector4(138.54, -149.89, 54.08, 55.78),
-                defaultVehicle = 'rmodpagani',
-                chosenVehicle = 'rmodpagani'
+                defaultVehicle = 'GODzVIPS63AMG',
+                chosenVehicle = 'GODzVIPS63AMG'
             },
-        }
+        },
+        ['InteractionPanel'] = {
+            -- Example coordinates for the interaction panel
+           [1] = {
+               coords = vector3(119.21, -153.66, 53.4), -- where the vehicle will spawn on display
+       
+           },
+           [2] = {
+               coords = vector3(124.78, -155.49, 53.4),
+           
+           },
+           [3] = {
+               coords = vector3(130.49, -157.46, 53.4),
+               
+           },
+           [4] = {
+               coords = vector3(136.34, -159.47, 53.4),
+               
+           },
+           [5] = {
+               coords = vector3(141.63, -161.61, 53.4),
+           },
+           [6] = {
+                coords = vector3(134.42, -149.53, 53.4)
+           },
+           
+       },
     }, -- Add your next table under this comma
     -- ['boats'] = {
     --     ['Type'] = 'managed', -- no player interaction is required to purchase a vehicle
