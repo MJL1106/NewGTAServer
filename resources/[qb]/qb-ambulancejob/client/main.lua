@@ -340,11 +340,11 @@ local function CheckWeaponDamage(ped)
         if HasPedBeenDamagedByWeapon(ped, k, 0) then
             detected = true
             if not IsInDamageList(k) then
-                TriggerEvent('chat:addMessage', {
-                    color = { 255, 0, 0},
-                    multiline = false,
-                    args = {Lang:t('info.status'), v.damagereason}
-                })
+                -- TriggerEvent('chat:addMessage', {
+                --     color = { 255, 0, 0},
+                --     multiline = false,
+                --     args = {Lang:t('info.status'), v.damagereason}
+                -- })
                 CurrentDamageList[#CurrentDamageList+1] = k
             end
         end

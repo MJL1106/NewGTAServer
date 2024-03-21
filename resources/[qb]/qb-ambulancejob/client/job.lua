@@ -183,20 +183,20 @@ RegisterNetEvent('hospital:client:CheckStatus', function()
                         statusChecks[#statusChecks + 1] = { bone = Config.BoneIndexes[k],
                             label = v.label .. " (" .. Config.WoundStates[v.severity] .. ")" }
                     elseif result["WEAPONWOUNDS"] then
-                        for _, v2 in pairs(result["WEAPONWOUNDS"]) do
-                            TriggerEvent('chat:addMessage', {
-                                color = { 255, 0, 0 },
-                                multiline = false,
-                                args = { Lang:t('info.status'), QBCore.Shared.Weapons[v2].damagereason }
-                            })
-                        end
+                        -- for _, v2 in pairs(result["WEAPONWOUNDS"]) do
+                        --     TriggerEvent('chat:addMessage', {
+                        --         color = { 255, 0, 0 },
+                        --         multiline = false,
+                        --         args = { Lang:t('info.status'), QBCore.Shared.Weapons[v2].damagereason }
+                        --     })
+                        -- end
                     elseif result["BLEED"] > 0 then
-                        TriggerEvent('chat:addMessage', {
-                            color = { 255, 0, 0 },
-                            multiline = false,
-                            args = { Lang:t('info.status'),
-                                Lang:t('info.is_status', { status = Config.BleedingStates[v].label }) }
-                        })
+                        -- TriggerEvent('chat:addMessage', {
+                        --     color = { 255, 0, 0 },
+                        --     multiline = false,
+                        --     args = { Lang:t('info.status'),
+                        --         Lang:t('info.is_status', { status = Config.BleedingStates[v].label }) }
+                        -- })
                     else
                         QBCore.Functions.Notify(Lang:t('success.healthy_player'), 'success')
                     end
