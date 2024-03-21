@@ -4,13 +4,16 @@ Crafting = {
 		Anims = { animDict = "mini@repair", anim = "fixing_a_ped",},
 		Recipes = {
 			{ ["nos"] = { ["noscan"] = 1, },
-				["amount"] = 1,
+				["amount"] = 1, ["job"] = {			
+					["tuners"] = 2,	}
 			},
 			{ ["noscan"] = { ["steel"] = 1, },
-				["amount"] = 1,
+				["amount"] = 1, ["job"] = {			
+					["tuners"] = 2,	}
 			},
 			{ ["noscolour"] = { ["plastic"] = 1, },
-				["amount"] = 1,
+				["amount"] = 1, ["job"] = {			
+					["tuners"] = 2,	}
 			},
 			{ ["racingtablet"] = { ["plastic"] = 1, },
 			["amount"] = 1,["job"] = {			
@@ -202,7 +205,7 @@ Crafting = {
 			},
 
 			{ ["harness"] = { ["steel"] = 5, },
-				["amount"] = 1, ["job"] = {["tuners"] = 3,}
+				["amount"] = 1, ["job"] = {["lsc"] = 3,}
 			},
 			{ ["antilag"] = { ["steel"] = 1, },
 				["amount"] = 1,

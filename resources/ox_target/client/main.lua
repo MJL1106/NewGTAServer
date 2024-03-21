@@ -306,7 +306,7 @@ local function startTargeting()
                         DrawMarker(28, endCoords.x, endCoords.y, endCoords.z, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.2, 0.2, 0.2, 255, 42, 24, 100, false, false, 0, true, false, false, false)
                     end
 
-                    drawZoneSprites(dict, texture)
+                    -- drawZoneSprites(dict, texture)
                     DisablePlayerFiring(cache.playerId, true)
                     DisableControlAction(0, 25, true)
                     DisableControlAction(0, 140, true)
