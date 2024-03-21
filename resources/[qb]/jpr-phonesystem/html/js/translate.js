@@ -1614,7 +1614,7 @@ var HTMLTranslations = {
     "translation234": {
         "en": "(Including commission: $0.00)",
         "bg": "(Включително комисионна: $0,00)",
-        "pt": "(Incluindo comissão: $0,00)",
+        "pt": "(Incluindo comissão: €0,00)",
         "ru": "(Включая комиссию: 0,00$)"
     },
     "translation235": {
