@@ -19,7 +19,7 @@ sets sv_projectName "^TestPix ^8| ^1Gangs ^8| ^6Real Estate ^8| ^3Recently Wiped
 sets sv_projectDesc "TestPixel For USA"
 sets locale "en-US"
 load_server_icon myLogo.png
-set sv_enforceGameBuild 2699
+set sv_enforceGameBuild 2944
 sets sv_pureLevel 0
 # Voice config
 setr voice_useNativeAudio true
@@ -68,6 +68,8 @@ ensure TairaRealisticHandling
 ensure wk_wars2x
 ensure carsounds
 ensure JD_logsV3
+ensure rcore_casino_assets
+ensure rcore_casino
 
 
 
