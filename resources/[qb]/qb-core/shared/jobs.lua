@@ -15,6 +15,25 @@ QBShared.Jobs = {
             },
         },
 	},
+    ['casino'] = {
+		label = 'Casino',
+		defaultDuty = true,
+		offDutyPay = false,
+		grades = {
+            ['0'] = {
+                name = 'recruit',
+                payment = 50
+            },
+            ['1'] = {
+                name = 'casino floor',
+                payment = 50
+            },
+            ['2'] = {
+                name = 'boss',
+                payment = 50
+            },
+        },
+	},
     ['edmc'] = {
 		label = 'EDM Dealer',
 		defaultDuty = true,
