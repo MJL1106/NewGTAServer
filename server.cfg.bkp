@@ -4,23 +4,22 @@ endpoint_add_tcp "0.0.0.0:30120"
 endpoint_add_udp "0.0.0.0:30120"
 sv_maxclients 64
 set steam_webApiKey 6504493BA3D8AE6834ECF1373F9147A5
-sets tags "roleplay, rp, economy, gang, realesate, bangladesh, india, police, race, cars, bp, banglapixel"
+sets tags "roleplay, rp, economy, gang, realesate, unitedstate, english, police, race, cars, banks, robbery"
 ## [txAdmin CFG validator]: onesync MUST only be set in the txAdmin settings page.
 # set onesync on
 ## You MAY edit the following:
 set sv_licenseKey "cfxk_1TMyr8Yun60XBY53fILpv_37IVWG"
-sets "Developers" "Matt"
-sets Discord ""
-sets sv_tebexSecret c5958f3e02beffa499522028865ad107bdf05d3b
-sets banner_detail ""
-sets banner_connecting ""
-sv_hostname "^TestPix ^8| ^1Gangs ^8| ^6Real Estate ^8| ^3Recently Wiped ^8| ^1Hidden Drugs ^8| ^6Custom Housing ^8| ^5Businesses ^8| ^4Active Police ^8| ^2Active EMS ^8| ^6Custom Jobs ^8| ^2Low Ping ^8|^2Active Staff ^8| ^2Real-Economy  ^8| ^1Starter Apartment ^8|"
-sets sv_projectName "^TestPix ^8| ^1Gangs ^8| ^6Real Estate ^8| ^3Recently Wiped ^8| ^1Hidden Drugs ^8| ^6Custom Housing ^8| ^5Businesses ^8| ^4Active Police ^8| ^2Active EMS ^8| ^6Custom Jobs ^8| ^2Low Ping ^8|^2Active Staff ^8| ^2Real-Economy  ^8| ^1Starter Apartment ^8|"
-sets sv_projectDesc "TestPixel For USA"
+sets "Developers" "Matt Pep Russian Bumbles"
+sets Discord "https://discord.gg/vaultrp"
+sets banner_detail "https://share.creavite.co/65fdeadfc1fd3ec562e5448d.gif"
+sets banner_connecting "https://share.creavite.co/65fdeadfc1fd3ec562e5448d.gif"
+sv_hostname "^6Vault RP ^8| ^5GRAND OPENING ^8| ^6Realistic Economy ^8| ^3Custom Heists ^8| ^1Hidden Drugs ^8| ^6Custom Housing ^8| ^5Businesses ^8| ^4Active Police ^8| ^2Active EMS ^8| ^6Custom Jobs ^8| ^2Active Staff ^8|"
+sets sv_projectName "^6Vault RP ^8| ^5GRAND OPENING ^8| ^6Realistic Economy ^8| ^3Custom Heists ^8| ^1Hidden Drugs ^8| ^6Custom Housing ^8| ^5Businesses ^8| ^4Active Police ^8| ^2Active EMS ^8| ^6Custom Jobs ^8| ^2Active Staff ^8|"
+sets sv_projectDesc "Vault RP Serious Roleplay Server"
 sets locale "en-US"
 load_server_icon myLogo.png
 set sv_enforceGameBuild 2944
-sets sv_pureLevel 1
+set sv_pureLevel 1
 # Voice config
 setr voice_useNativeAudio true
 setr voice_useSendingRangeOnly true
@@ -34,6 +33,7 @@ setr qb_locale "en"
 setr illenium-appearance:locale "en"
 # QBCore UseTarget
 setr UseTarget true
+set sv_tebexSecret c5958f3e02beffa499522028865ad107bdf05d3b
 
 # These resources will start by default.
 ensure mapmanager
@@ -81,7 +81,6 @@ add_ace group.admin finiac allow
 add_principal identifier.steam:110000115a71fba qbcore.god
 add_principal identifier.steam:110000115ceb248 qbcore.god
 add_principal identifier.steam:11000010e87be4d qbcore.god #--pep
-add_principal identifier.steam:110000154d96125 qbcore.admin #--pig
 add_principal identifier.steam:11000014bb53aeb qbcore.admin #--dizz
 
 add_principal identifier.steam:1100001034ca46b qbcore.admin #rhau rings

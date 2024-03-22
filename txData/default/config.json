@@ -21,7 +21,7 @@
   },
   "playerDatabase": {
     "onJoinCheckBan": true,
-    "whitelistMode": "adminOnly",
+    "whitelistMode": "guildRoles",
     "whitelistedDiscordRoles": [
       "1107431620023156886"
     ],
@@ -44,7 +44,7 @@
     "serverDataPath": "C:/Users/admin/Documents/GitHub/NewGTAServer/",
     "cfgPath": "C:/Users/admin/Documents/GitHub/NewGTAServer/server.cfg",
     "commandLine": "",
-    "onesync": "on",
+    "onesync": "legacy",
     "autostart": true,
     "quiet": false
   }
