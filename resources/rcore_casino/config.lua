@@ -279,7 +279,7 @@ GameStates = {{
 }, {
     activity = "blackjack",
     title = "Blackjack",
-    enabled = false
+    enabled = true
 }, {
     activity = "cashier",
     title = "Cashier",

@@ -824,7 +824,7 @@ LuckyWheelItems["Drinks"] = {
 
 LuckyWheelItems["Money1"] = {
     rotation = 343.0,
-    posibility = 100,
+    posibility = 50,
     soundName = "Win_Cash",
     animName = "win",
     moneyReward = 2500
@@ -848,7 +848,7 @@ LuckyWheelItems["Money3"] = {
 
 LuckyWheelItems["Money4"] = {
     rotation = 127.0,
-    posibility = 70,
+    posibility = 55,
     soundName = "Win_Cash",
     animName = "win",
     moneyReward = 1000
@@ -856,7 +856,7 @@ LuckyWheelItems["Money4"] = {
 
 LuckyWheelItems["Money5"] = {
     rotation = 55.0,
-    posibility = 60,
+    posibility = 55,
     soundName = "Win_Cash",
     animName = "win",
     moneyReward = 1000
@@ -864,7 +864,7 @@ LuckyWheelItems["Money5"] = {
 
 LuckyWheelItems["Money6"] = {
     rotation = 325.0,
-    posibility = 50,
+    posibility = 35,
     soundName = "Win_Cash",
     animName = "win_big",
     moneyReward = 2000
@@ -872,7 +872,7 @@ LuckyWheelItems["Money6"] = {
 
 LuckyWheelItems["Money7"] = {
     rotation = 253.0,
-    posibility = 40,
+    posibility = 20,
     soundName = "Win_Cash",
     animName = "win_big",
     moneyReward = 3000
@@ -880,7 +880,7 @@ LuckyWheelItems["Money7"] = {
 
 LuckyWheelItems["Money8"] = {
     rotation = 109.0,
-    posibility = 30,
+    posibility = 15,
     soundName = "Win_Cash",
     animName = "win_big",
     moneyReward = 4000
@@ -888,7 +888,7 @@ LuckyWheelItems["Money8"] = {
 
 LuckyWheelItems["Money9"] = {
     rotation = 19.0,
-    posibility = 20,
+    posibility = 9,
     soundName = "Win_Cash",
     animName = "win_big",
     moneyReward = 5000
@@ -904,7 +904,7 @@ LuckyWheelItems["Chips1"] = {
 
 LuckyWheelItems["Chips2"] = {
     rotation = 235.0,
-    posibility = 90,
+    posibility = 55,
     soundName = "Win_Chips",
     animName = "win",
     chipsReward = 1500
@@ -912,7 +912,7 @@ LuckyWheelItems["Chips2"] = {
 
 LuckyWheelItems["Chips3"] = {
     rotation = 181.0,
-    posibility = 80,
+    posibility = 45,
     soundName = "Win_Chips",
     animName = "win",
     chipsReward = 2000
@@ -920,7 +920,7 @@ LuckyWheelItems["Chips3"] = {
 
 LuckyWheelItems["Chips4"] = {
     rotation = 91.0,
-    posibility = 70,
+    posibility = 35,
     soundName = "Win_Chips",
     animName = "win_big",
     chipsReward = 2500
@@ -935,14 +935,14 @@ LuckyWheelItems["Vehicle"] = {
 
 LuckyWheelItems["Nothing"] = {
     rotation = 289.0,
-    posibility = 100,
+    posibility = 50,
     soundName = nil,
     animName = "Nothing"
 }
 
 LuckyWheelItems["Random"] = {
     rotation = 163.0,
-    posibility = 100,
+    posibility = 50,
     soundName = "Win_Mystery",
     animName = "win_big"
 }
@@ -1198,7 +1198,7 @@ BlackjackTableDatas[0] = {
     Banner = "casinoui_cards_blackjack",
     Title = "Blackjack",
     PlaceBetsTime = 40,
-    MinimumBet = 10,
+    MinimumBet = 100,
     MaximumBet = 5000
 }
 
@@ -1207,15 +1207,15 @@ BlackjackTableDatas[3] = {
     Title = "Blackjack High Stakes",
     PlaceBetsTime = 40,
     MinimumBet = 1000,
-    MaximumBet = 50000,
+    MaximumBet = 1000,
     VIP = true
 }
 
 BlackjackTableDatas[2] = {
     Banner = "casinoui_cards_blackjack_junior",
     Title = "Blackjack Junior",
-    PlaceBetsTime = 15,
-    MinimumBet = 2,
+    PlaceBetsTime = 40,
+    MinimumBet = 20,
     MaximumBet = 200
 }
 
