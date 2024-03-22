@@ -122,7 +122,7 @@ Config = {
         DeleteVehicle(vehicleId)
     end,
 
-    CASINO_BLIPS_SHORT_RANGE = true, -- true: blips are visible only to players near casino, false: blips are always visible
+    CASINO_BLIPS_SHORT_RANGE = false, -- true: blips are visible only to players near casino, false: blips are always visible
     CASINO_BLIP_ID = 679, -- 679 is the diamond icon [https://docs.fivem.net/docs/game-references/blips/]
     --
     AMBIENT_SOUNDS = true, -- enable casino background interior sound
@@ -334,7 +334,7 @@ function SetCasinoBlip(coords, blipIcon, blipName, exterior)
     --------------
     SetBlipSprite(blip, blipIcon)
     SetBlipDisplay(blip, 4)
-    SetBlipScale(blip, 1.2)
+    SetBlipScale(blip, 0.8)
     SetBlipColour(blip, 0)
     SetBlipAsShortRange(blip, exterior and Config.CASINO_BLIPS_SHORT_RANGE or false)
     --------------
