@@ -151,3 +151,41 @@
 [17:57:52][mjl1106] logged in via in-game ui
 [22:00:54][SCHEDULER] Restarting server (scheduled restart at 22:00).
 [06:00:06][SCHEDULER] Restarting server (scheduled restart at 06:00).
+[11:09:28][mjl1106] executed "RESTART SERVER"
+[12:53:06][mjl1106] logged in via in-game ui
+[14:00:17][SCHEDULER] Restarting server (scheduled restart at 14:00).
+[16:06:32][mjl1106] logged in via in-game ui
+[17:43:46][mjl1106] logged in from 127.0.0.1 via citizenfx
+[18:04:56][mjl1106] executed "RESTART SERVER"
+[18:55:20][mjl1106] executed "RESTART SERVER"
+[22:00:28][SCHEDULER] Restarting server (scheduled restart at 22:00).
+[06:00:40][SCHEDULER] Restarting server (scheduled restart at 06:00).
+[08:03:09][mjl1106] executed "/revive 2"
+[08:03:13][mjl1106] executed "revive 2"
+[08:14:18][mjl1106] logged in via in-game ui
+[08:35:22][mjl1106] logged in via in-game ui
+[09:03:46][mjl1106] executed "revive 2"
+[09:19:59][mjl1106] executed "revive 2"
+[09:36:35][mjl1106] logged in via in-game ui
+[14:00:50][SCHEDULER] Restarting server (scheduled restart at 14:00).
+[22:00:00][SCHEDULER] Restarting server (scheduled restart at 22:00).
+[06:00:11][SCHEDULER] Restarting server (scheduled restart at 06:00).
+[08:56:42][mjl1106] logged in from 127.0.0.1 via citizenfx
+[08:56:57][mjl1106] executed "RESTART SERVER"
+[09:06:39][mjl1106] executed "RESTART SERVER"
+[09:21:46][mjl1106] executed "ensure s1n_banking"
+[09:26:26][mjl1106] executed "RESTART SERVER"
+[09:34:40][mjl1106] executed "admin 2"
+[09:43:09][mjl1106] executed "RESTART SERVER"
+[09:45:01][mjl1106] logged in via in-game ui
+[09:51:10][mjl1106] executed "RESTART SERVER"
+[09:53:12][mjl1106] logged in via in-game ui
+[09:58:46][mjl1106] executed "ensure s1n_banking"
+[10:19:55][mjl1106] executed "setjob 2 ambulance 6"
+[10:21:10][mjl1106] executed "ensure qb-logs"
+[10:21:21][mjl1106] executed "RESTART SERVER"
+[10:26:14][mjl1106] executed "ensure qb-logs"
+[10:37:04][mjl1106] executed "ensure qb-logs"
+[10:57:54][mjl1106] logged in via in-game ui
+[11:13:12][mjl1106] executed "RESTART SERVER"
+[11:21:41][mjl1106] Changing Player Manager settings.
