@@ -39,7 +39,7 @@ Config.ServerSidedClockMessages = true
 Config.UploadSystem = {
     UseDiscordSystem = false, -- not recommended due to discord rules
     UseFiveManageSystem = true, -- recommended
-    FiveManageSystemTokenKey = "", -- your fivemanage TOKEN Key, follow: https://joaos-organization-3.gitbook.io/jpresources-documentation/installation/phone-system/installation-page/qbcore#using-fivemanage
+    FiveManageSystemTokenKey = "nbtPRRW1EphiqCuxb0JPddR72nayPCFu", -- your fivemanage TOKEN Key, follow: https://joaos-organization-3.gitbook.io/jpresources-documentation/installation/phone-system/installation-page/qbcore#using-fivemanage
     PhotoWebhook = "https://discord.com/api/webhooks/1013060271574622278/-i1aqLpOPUtvF5gLmCY6Exaki1jKSgVZKBP_BaP25QkxSnEPRUSHxklRjK2sUGMUyGMm"
 }
 

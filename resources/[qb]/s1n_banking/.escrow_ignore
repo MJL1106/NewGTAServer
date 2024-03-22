@@ -1,0 +1,4 @@
+"languages/**.lua",
+"shared/config.lua",
+"server/config.lua",
+"server/modules/commands.lua"

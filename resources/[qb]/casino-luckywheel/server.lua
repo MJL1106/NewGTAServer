@@ -31,7 +31,7 @@ RegisterNetEvent('luckywheel:getwheel', function()
 			TriggerEvent("luckywheel:startwheel", Player, src)
 		else
 			-- return TriggerClientEvent('QBCore:Notify', src, "You have enough in the bank to spin", "error")
-			TriggerClientEvent('QBCore:Notify', src, "You have enough in the bank to spin", "error")
+			TriggerClientEvent('QBCore:Notify', src, "You don't have enough in the bank to spin", "error")
 		end
 	end
 end)
