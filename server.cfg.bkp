@@ -20,7 +20,7 @@ sets sv_projectDesc "TestPixel For USA"
 sets locale "en-US"
 load_server_icon myLogo.png
 set sv_enforceGameBuild 2944
-sets sv_pureLevel 0
+sets sv_pureLevel 1
 # Voice config
 setr voice_useNativeAudio true
 setr voice_useSendingRangeOnly true
@@ -83,6 +83,9 @@ add_principal identifier.steam:110000115ceb248 qbcore.god
 add_principal identifier.steam:11000010e87be4d qbcore.god #--pep
 add_principal identifier.steam:110000154d96125 qbcore.admin #--pig
 add_principal identifier.steam:11000014bb53aeb qbcore.admin #--dizz
+
+add_principal identifier.steam:1100001034ca46b qbcore.admin #rhau rings
+add_principal identifier.license:c9406a6779a8ac642378c9074e7b3b0746920558 qbcore.admin #scakle
 # Resources
 add_ace resource.qb-core command allow # Allow qb-core to execute commands
 

@@ -21,7 +21,7 @@
   },
   "playerDatabase": {
     "onJoinCheckBan": true,
-    "whitelistMode": "guildRoles",
+    "whitelistMode": "adminOnly",
     "whitelistedDiscordRoles": [
       "1107431620023156886"
     ],
