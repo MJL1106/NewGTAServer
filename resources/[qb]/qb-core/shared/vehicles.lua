@@ -4539,24 +4539,24 @@ QBShared.Vehicles = {
         ['shop'] = '',
     },
     --------------------custom cars---------------
-    ['17mansorypnmr'] = { --<---- NEEDS TO MATCH FILE NAME, 'MODEL' AND 'HASH' NEED TO BE SAME NAME AS THIS, ONLY CHANGE 'NAME' AND 'BRAND' 
+    ['17mansorypnmr'] = { --<---- NEEDS TO MATCH FILE NAME, 'MODEL' AND 'HASH' NEED TO BE SAME NAME AS THIS, ONLY CHANGE 'NAME' AND 'BRAND' -- DOESNT LET YOU BUY
         ['name'] = 'Mansory 17',
         ['brand'] = 'Pfister',
         ['model'] = '17mansorypnmr',
         ['price'] = 99999999999,
         ['category'] = 'tier3', --Keep in this format
         ['categoryLabel'] = 'Tier 3', --Keep in this format
-        ['hash'] = '17mansorypnmr', 
+        ['hash'] = `17mansorypnmr`, 
         ['shop'] = 'luxury',
     },
     ['brz13varis'] = {
         ['name'] = 'KRZ',
         ['brand'] = 'Karin',
         ['model'] = 'brz13varis',
-        ['price'] = 99999999999,
+        ['price'] = 9999999999,
         ['category'] = 'tier1',
         ['categoryLabel'] = 'Tier 1',
-        ['hash'] = 'brz13varis',
+        ['hash'] = `brz13varis`,
         ['shop'] = 'luxury',
     },
     ['c8'] = {
@@ -4753,11 +4753,11 @@ QBShared.Vehicles = {
         ['name'] = 'Tauron Stretched',
         ['brand'] = 'Pegassi',
         ['model'] = 'Urus_Stretch_6',
-        ['price'] = 999999999999,
+        ['price'] = 99999999999,
         ['category'] = 'tier2',
         ['categoryLabel'] = 'Tier 2',
-        ['hash'] = 'Urus_Stretch_6', -- Replace backticks (`) with single or double quotes
-        ['shop'] = '',    
+        ['hash'] = `Urus_Stretch_6`,
+        ['shop'] = '',
     },
     ['rx7veilside'] = {
         ['name'] = 'Cloak',
@@ -4766,9 +4766,10 @@ QBShared.Vehicles = {
         ['price'] = 999999999999,
         ['category'] = 'tier2',
         ['categoryLabel'] = 'Tier 2',
-        ['hash'] = 'rx7veilside', -- Replace backticks (`) with single or double quotes
+        ['hash'] = `rx7veilside`,
         ['shop'] = '',    
     },
+
     ['2022jeep'] = {
         ['name'] = 'Roadster',
         ['brand'] = 'Canis',
@@ -4776,9 +4777,10 @@ QBShared.Vehicles = {
         ['price'] = 999999999999,
         ['category'] = 'tier1',
         ['categoryLabel'] = 'Tier 1',
-        ['hash'] = '2022jeep', -- Replace backticks (`) with single or double quotes
+        ['hash'] = `2022jeep`,
         ['shop'] = 'luxury',    
     },
+
     ['abhawk'] = {
         ['name'] = 'Eagle',
         ['brand'] = 'Canis',
@@ -4786,9 +4788,11 @@ QBShared.Vehicles = {
         ['price'] = 999999999999,
         ['category'] = 'tier4',
         ['categoryLabel'] = 'Tier 4',
-        ['hash'] = 'abhawk', -- Replace backticks (`) with single or double quotes
+        ['hash'] = `abhawk`,
         ['shop'] = '',    
     },
+    
+
     ['m140iss'] = {
         ['name'] = 'U410',
         ['brand'] = 'Ubermacht',
@@ -4796,7 +4800,7 @@ QBShared.Vehicles = {
         ['price'] = 999999999999,
         ['category'] = 'tier2',
         ['categoryLabel'] = 'Tier 2',
-        ['hash'] = 'm140iss', -- Replace backticks (`) with single or double quotes
+        ['hash'] = `m140iss`, -- Corrected to use backticks without quotes
         ['shop'] = '',    
     },
     ['civic2020'] = {
@@ -4806,7 +4810,7 @@ QBShared.Vehicles = {
         ['price'] = 999999999999,
         ['category'] = 'tier1',
         ['categoryLabel'] = 'Tier 1',
-        ['hash'] = 'civic2020', -- Replace backticks (`) with single or double quotes
+        ['hash'] = `civic2020`, -- Corrected to use backticks without quotes
         ['shop'] = '',    
     },
     ['19gv80'] = {
@@ -4816,7 +4820,7 @@ QBShared.Vehicles = {
         ['price'] = 999999999999,
         ['category'] = 'tier1',
         ['categoryLabel'] = 'Tier 1',
-        ['hash'] = '19gv80', -- Replace backticks (`) with single or double quotes
+        ['hash'] = `19gv80`, -- Corrected to use backticks without quotes
         ['shop'] = '',    
     },
     ['sultanrsv8'] = {
@@ -4826,7 +4830,18 @@ QBShared.Vehicles = {
         ['price'] = 999999999999,
         ['category'] = 'tier4',
         ['categoryLabel'] = 'Tier 4',
-        ['hash'] = 'sultanrsv8', -- Replace backticks (`) with single or double quotes
+        ['hash'] = `sultanrsv8`, -- Corrected to use backticks without quotes
+        ['shop'] = '',    
+    },
+
+    ['eskors6r'] = {
+        ['name'] = 'eskors6r',
+        ['brand'] = 'eskors6r',
+        ['model'] = 'eskors6r',
+        ['price'] = 999999999999,
+        ['category'] = 'tier4',
+        ['categoryLabel'] = 'Tier 4',
+        ['hash'] = `eskors6r`, -- Corrected to use backticks
         ['shop'] = '',    
     },
 }
