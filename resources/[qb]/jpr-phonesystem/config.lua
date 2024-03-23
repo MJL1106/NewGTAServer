@@ -371,7 +371,7 @@ Config.DoCarDamageValet = false
 Config.ValetPrice = 400
 Config.ImpoundState = 2
 
-Config.ShopToRepairAndHack = true
+Config.ShopToRepairAndHack = false
 Config.TargetScript = "qb-target"
 Config.TargetIcon = 'fa-solid fa-battery-full'
 Config.TargetIcon2 = 'fa-solid fa-unlock'
