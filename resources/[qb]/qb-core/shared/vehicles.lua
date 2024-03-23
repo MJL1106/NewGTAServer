@@ -4839,9 +4839,19 @@ QBShared.Vehicles = {
         ['brand'] = 'eskors6r',
         ['model'] = 'eskors6r',
         ['price'] = 999999999999,
-        ['category'] = 'tier4',
-        ['categoryLabel'] = 'Tier 4',
+        ['category'] = 'one of one',
+        ['categoryLabel'] = 'one of one',
         ['hash'] = `eskors6r`, -- Corrected to use backticks
+        ['shop'] = '',    
+    },
+    ['gtr'] = {
+        ['name'] = 'gtr',
+        ['brand'] = 'gtr',
+        ['model'] = 'gtr',
+        ['price'] = 999999999999,
+        ['category'] = 'one of one',
+        ['categoryLabel'] = 'one of one',
+        ['hash'] = `gtr`, -- Corrected to use backticks
         ['shop'] = '',    
     },
 }
