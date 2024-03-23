@@ -44,7 +44,7 @@
     "serverDataPath": "C:/Users/admin/Documents/GitHub/NewGTAServer/",
     "cfgPath": "C:/Users/admin/Documents/GitHub/NewGTAServer/server.cfg",
     "commandLine": "",
-    "onesync": "legacy",
+    "onesync": "on",
     "autostart": true,
     "quiet": false
   }
