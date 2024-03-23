@@ -45,23 +45,23 @@ Config.EnableWantedLevel = false
 
 -- To Set This Up visit https://forum.cfx.re/t/how-to-updated-discord-rich-presence-custom-image/157686
 Config.Discord = {
-    ["IsEnabled"] = false, -- If set to true, then discord rich presence will be enabled
-    ["ApplicationId"] = '1114183078307446925', -- The discord application id
-    ["IconLarge"] = 'logo', -- The name of the large icon
-    ["IconLargeHoverText"] = 'BanglaPixel', -- The hover text of the large icon
-    ["IconSmall"] = 'logo', -- The name of the small icon
-    ["IconSmallHoverText"] = 'BanglaPixel', -- The hover text of the small icon
+    ["IsEnabled"] = true, -- If set to true, then discord rich presence will be enabled
+    ["ApplicationId"] = '1221111019733127339', -- The discord application id
+    ["IconLarge"] = 'logod', -- The name of the large icon
+    ["IconLargeHoverText"] = 'Vault RP', -- The hover text of the large icon
+    ["IconSmall"] = 'logod', -- The name of the small icon
+    ["IconSmallHoverText"] = 'Vault RP', -- The hover text of the small icon
     ["UpdateRate"] = 60000, -- How often the player count should be updated
     ["ShowPlayerCount"] = true, -- If set to true the player count will be displayed in the rich presence
     ["MaxPlayers"] = 100, -- Maximum amount of players
     ["Buttons"] = {
         {
             text = 'Fivem',
-            url = 'fivem://connect/15.235.181.32:3646'
+            url = 'https://cfx.re/join/avyr53'
         },
         {
             text = 'Discord',
-            url = 'https://discord.gg/XAfAs4dY9j'
+            url = 'https://discord.gg/vaultrp'
         }
     }
 }
