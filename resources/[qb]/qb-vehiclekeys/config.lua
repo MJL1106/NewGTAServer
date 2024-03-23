@@ -15,7 +15,11 @@ Config.LockPickDoorEvent = function() -- This function is called when a player a
 		if success then
 			LockpickFinishCallback(success)
 		else
-			exports['ps-dispatch']:CarJacking(vehicle)
+            local callCopsChance = math.random(1,100)
+            if callCopsChance <= 35 then
+                exports['ps-dispatch']:CarJacking(vehicle)
+            end
+			
            -- AttemptPoliceAlert("carjack")
 			TriggerServerEvent('hud:server:GainStress', math.random(1, 4))
 			TriggerEvent("QBCore:Notify", "You failed to lockpick.", "error")
