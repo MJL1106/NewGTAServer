@@ -938,7 +938,8 @@ if not config.DisableStress then
                             stressSpeed = seatbeltOn and config.MinimumSpeed or config.MinimumSpeedUnbuckled
                         end
                         if speed >= stressSpeed then
-                            TriggerServerEvent('hud:server:GainStress', math.random(1, 3))
+                            local stressGain = math.random() * (0.5 - 0.1) + 0.1
+                            TriggerServerEvent('hud:server:GainStress', stressGain)
                         end
                     end
                 end
@@ -955,7 +956,7 @@ if not config.DisableStress then
                 if weapon ~= `WEAPON_UNARMED` then
                     if IsPedShooting(ped) and not config.WhitelistedWeaponStress[weapon] then
                         if math.random() < config.StressChance then
-                            TriggerServerEvent('hud:server:GainStress', math.random(1, 3))
+                            TriggerServerEvent('hud:server:GainStress', math.random(1, 1))
                         end
                     end
                 else
