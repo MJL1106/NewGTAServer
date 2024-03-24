@@ -212,7 +212,6 @@ RegisterNetEvent('keep-hunting:client:useBait', function()
         disableMouse = false,
         disableCombat = true
     }, {}, {}, {}, function()
-        TriggerServerEvent('keep-hunting:server:removeBaitFromPlayerInventory')        
         ClearPedTasks(plyPed)
         local indicator = nil
         if Config.BaitIndicator.active == true then
@@ -243,7 +242,7 @@ RegisterNetEvent('keep-hunting:client:spawnAnimal', function(coord, outPosition,
         return
     end
 
-    --TriggerServerEvent('keep-hunting:server:removeBaitFromPlayerInventory')
+    TriggerServerEvent('keep-hunting:server:removeBaitFromPlayerInventory')
     createThreadAnimalTraveledDistanceToBaitTracker(coord, baitAnimal, indicator)
     createDespawnThread(baitAnimal, was_llegal, coord, indicator)
     putQbTargetOnEntity(baitAnimal)

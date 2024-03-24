@@ -415,7 +415,7 @@ Config.Products = {
         },
         [2] = {
             name = 'shotgun_ammo',
-            price = 10,
+            price = 100,
             amount = 50,
             info = {},
             type = 'item',
@@ -424,7 +424,7 @@ Config.Products = {
         },
         [3] = {
             name = 'huntingbait',
-            price = 5,
+            price = 150,
             amount = 150,
             info = {},
             type = 'item',
@@ -432,7 +432,7 @@ Config.Products = {
         },
         [4] = {
             name = 'weapon_knife',
-            price = 250,
+            price = 500,
             amount = 50,
             info = {},
             type = 'item',
