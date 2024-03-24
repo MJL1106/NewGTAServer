@@ -181,51 +181,6 @@ function StartCasinoDrunkScene()
     end)
 end
 
--- get player casino inventory item count (chips, snacks...)
-function GetPlayerCasinoItemCount(item)
-    DebugStart("GetPlayerCasinoItemCount")
-    local pData = RefreshPlayerData()
-    if not pData or not pData.inventory then
-        return 0
-    end
-    local count = 0
-    for k, v in pairs(pData.inventory) do
-        if v and v.name == item then
-            count = count + (v.count or v.amount or 0)
-        end
-    end
-    return count
-end
-
-function GetPlayerMoney()
-    DebugStart("GetPlayerMoney")
-    if Config.MoneyInventoryItemName then
-        return GetPlayerCasinoItemCount(Config.MoneyInventoryItemName)
-    end
-    local pData = RefreshPlayerData()
-    local balance = -1
-    local accounts = {}
-
-    if pData and pData.accounts then
-        for k, v in pairs(pData.accounts) do
-            accounts[v.name] = v.money
-        end
-    end
-
-    if pData then
-        if Config.UseBankMoney then
-            balance = accounts["bank"] or 0
-        else
-            balance = accounts["cash"] or accounts["money"] or 0
-        end
-    end
-    if type(balance) == 'table' and balance["money"] then
-        balance = balance["money"]
-    end
-
-    return balance
-end
-
 local function GetDrunkPercentage()
     -- get drunk level
     if Config.DrunkSystem == 2 then -- esx_status
@@ -565,7 +520,7 @@ function InfoPanel_UpdateNotification(newNotification)
             exports['okokNotify']:Alert("", removePlaceholderText(newNotification), 3000, 'info', true)
             return
         elseif Config.NotifySystem == 3 and newNotification and newNotification ~= "" then
-            exports['esx_notify']:Notify("info", 3000, removePlaceholderText(newNotification))
+            ESX.ShowNotification(removePlaceholderText(newNotification), "info", 3000)
             return
         elseif Config.NotifySystem == 4 and newNotification and newNotification ~= "" then
             QBCore.Functions.Notify(removePlaceholderText(newNotification), "primary", 3000)
@@ -810,11 +765,7 @@ local function SlowTimer()
             Cleaner_SpawnDirtAroundPlayerArea()
         end
     end
-    
-    PLAYER_MONEY = GetPlayerMoney()
-    PLAYER_CHIPS = GetPlayerCasinoItemCount(Config.ChipsInventoryItem)
-    Casino_AnimateBalance()
-
+    TriggerServerEvent("Casino:GetBalance")
     GetDrunkPercentage()
 end
 
@@ -2038,6 +1989,14 @@ AddEventHandler("Casino:Progress", function(balance, sTime, sDate, cache, gameSt
     if Framework.Active == 3 then
         PlayerData = UpdatePlayerDataForStandalone()
     end
+end)
+
+-- casino balance received
+RegisterNetEvent("Casino:GetBalance")
+AddEventHandler("Casino:GetBalance", function(playerMoney, playerChips)
+    PLAYER_CHIPS = playerChips
+    PLAYER_MONEY = playerMoney
+    Casino_AnimateBalance()
 end)
 
 -- casino garage callback

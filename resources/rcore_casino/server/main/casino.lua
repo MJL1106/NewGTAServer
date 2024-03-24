@@ -792,6 +792,14 @@ AddEventHandler("Casino:GetMoney", function()
     SendPlayerMoneyBalance(playerId, playerMoney)
 end)
 
+RegisterNetEvent("Casino:GetBalance")
+AddEventHandler("Casino:GetBalance", function()
+    local playerId = source
+    local playerMoney = GetPlayerMoney(playerId)
+    local playerChips = GetPlayerChips(playerId)
+    TriggerClientEvent("Casino:GetBalance", playerId, playerMoney, playerChips)
+end)
+
 -- player wants to refresh his balance
 RegisterNetEvent("Casino:GetItems")
 AddEventHandler("Casino:GetItems", function()
