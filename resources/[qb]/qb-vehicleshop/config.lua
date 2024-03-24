@@ -91,53 +91,58 @@ Config.Shops = {
         ['Type'] = 'free-use', -- meaning a real player has to sell the car
         ['Zone'] = {
             ['Shape'] = {
-                vector2(92.8, -152.14),
-                vector2(146.37, -172.99),
-                vector2(165.27, -126.88),
-                vector2(92.8, -104.13)
+                vector2(-1260.6973876953, -349.21334838867),
+                vector2(-1268.6248779297, -352.87365722656),
+                vector2(-1274.1533203125, -358.29794311523),
+                vector2(-1273.8425292969, -362.73715209961),
+                vector2(-1270.5701904297, -368.6716003418),
+                vector2(-1266.0561523438, -375.14080810547),
+                vector2(-1244.3684082031, -362.70278930664),
+                vector2(-1249.8704833984, -352.03326416016),
+                vector2(-1252.9503173828, -345.85726928711)
             },
-            ['minZ'] = 54,
-            ['maxZ'] = 54.6,
+            ['minZ'] = 36.646457672119,
+            ['maxZ'] = 37.516143798828,
             ['size'] = 2.75 -- size of the vehicles zones
         },
         ['Job'] = 'none', -- Name of job or none
-        ['ShopLabel'] = 'Luxury Import Dealership',
+        ['ShopLabel'] = 'Luxury Vehicle Dealership',
         ['showBlip'] = true, -- true or false
         ['blipSprite'] = 523, -- Blip sprite
         ['blipColor'] = 66, -- Blip color
         ['TestDriveTimeLimit'] = 0.5,
-        ['Location'] = vector3(136.39, -144.89, 54.8),
-        ['ReturnLocation'] = vector3(126.48, -143.84, 54.81),
-        ['VehicleSpawn'] = vector4(126.47, -118.97, 54.84, 68.1),
-        ['TestDriveSpawn'] = vector4(126.47, -118.97, 54.84, 68.1), -- Spawn location for test drive
+        ['Location'] = vector3(-1255.6, -361.16, 36.91),
+        ['ReturnLocation'] = vector3(-1231.46, -349.86, 37.33),
+        ['VehicleSpawn'] = vector4(-1231.46, -349.86, 37.33, 26.61),
+        ['TestDriveSpawn'] = vector4(-1232.81, -347.99, 37.33, 23.28), -- Spawn location for test drive
         ['ShowroomVehicles'] = {
             [1] = {
-                coords = vector4(120.72, -156.67, 53.88, 24.43),
+                coords = vector4(-1265.31, -354.44, 35.91, 205.08),
                 defaultVehicle = 's15',
                 chosenVehicle = 's15'
             },
             [2] = {
-                coords = vector4(126.29, -158.6, 53.88, 26.15),
+                coords = vector4(-1270.06, -358.55, 35.91, 247.08),
                 defaultVehicle = 'GODzDRIFTCAT',
                 chosenVehicle = 'GODzDRIFTCAT'
             },
             [3] = {
-                coords = vector4(132.04, -160.75, 53.88, 19.52),
+                coords = vector4(-1269.21, -365.03, 35.91, 297.12),
                 defaultVehicle = 'brz13varis',
                 chosenVehicle = 'brz13varis'
             },
             [4] = {
-                coords = vector4(137.75, -162.81, 53.88, 22.81),
+                coords = vector4(-1252.07, -364.2, 35.91, 56.44),
                 defaultVehicle = '17mansorypnmr',
                 chosenVehicle = '17mansorypnmr'
             },
             [5] = {
-                coords = vector4(143.37, -165.09, 53.88, 22.89),
+                coords = vector4(-1255.49, -365.91, 35.91, 55.63),
                 defaultVehicle = 'scubieblob',
                 chosenVehicle = 'scubieblob'
             },
             [6] = {
-                coords = vector4(138.54, -149.89, 54.08, 55.78),
+                coords = vector4(-1249.21, -362.97, 35.91, 53.24),
                 defaultVehicle = 'GODzVIPS63AMG',
                 chosenVehicle = 'GODzVIPS63AMG'
             },
@@ -145,27 +150,27 @@ Config.Shops = {
         ['InteractionPanel'] = {
             -- Example coordinates for the interaction panel
            [1] = {
-               coords = vector3(119.21, -153.66, 53.4), -- where the vehicle will spawn on display
+               coords = vector3(-1253.58, -348.3, 36.83), -- where the vehicle will spawn on display
        
            },
-           [2] = {
-               coords = vector3(124.78, -155.49, 53.4),
+        --    [2] = {
+        --        coords = vector3(124.78, -155.49, 53.4),
            
-           },
-           [3] = {
-               coords = vector3(130.49, -157.46, 53.4),
+        --    },
+        --    [3] = {
+        --        coords = vector3(130.49, -157.46, 53.4),
                
-           },
-           [4] = {
-               coords = vector3(136.34, -159.47, 53.4),
+        --    },
+        --    [4] = {
+        --        coords = vector3(136.34, -159.47, 53.4),
                
-           },
-           [5] = {
-               coords = vector3(141.63, -161.61, 53.4),
-           },
-           [6] = {
-                coords = vector3(134.42, -149.53, 53.4)
-           },
+        --    },
+        --    [5] = {
+        --        coords = vector3(141.63, -161.61, 53.4),
+        --    },
+        --    [6] = {
+        --         coords = vector3(134.42, -149.53, 53.4)
+        --    },
            
        },
     }, -- Add your next table under this comma
