@@ -51,7 +51,7 @@ Config.DoorList['MRPD--CellEntrance'] = {
     fixText = false,
     objYaw = 270.13998413086,
     doorRate = 1.0,
-    distance = 2,
+    distance = 1.0,
     doorLabel = 'Cells Entrance',
     locked = true,
 }
@@ -471,7 +471,7 @@ Config.DoorList['MRPD--CellDoor1'] = {
     authorizedJobs = { ['police'] = 0 },
     objCoords = vec3(477.912598, -1012.188660, 26.480055),
     objYaw = 0.0,
-    distance = 2,
+    distance = 1.0,
     doorRate = 1.0,
     doorLabel = 'CellDoor1',
 }
@@ -480,7 +480,7 @@ Config.DoorList['MRPD--CellDoor1'] = {
 Config.DoorList['MRPD--CellDoor2'] = {
     doorType = 'door',
     locked = true,
-    distance = 2,
+    distance = 1.0,
     doorLabel = 'CellDoor2',
     doorRate = 1.0,
     fixText = false,
@@ -493,7 +493,7 @@ Config.DoorList['MRPD--CellDoor2'] = {
 -- -53345114 created by MJL
 Config.DoorList['MRPD--CellDoor3'] = {
     locked = true,
-    distance = 2,
+    distance = 1.0,
     fixText = false,
     doorRate = 1.0,
     doorType = 'door',
@@ -508,7 +508,7 @@ Config.DoorList['MRPD--CellDoor3'] = {
 Config.DoorList['MRPD--CellDoor4'] = {
     doorLabel = 'CellDoor4',
     fixText = false,
-    distance = 2,
+    distance = 1.0,
     objName = -53345114,
     locked = true,
     authorizedJobs = { ['police'] = 0 },
@@ -525,7 +525,7 @@ Config.DoorList['MRPD--CellDoor5'] = {
     objYaw = 180.00001525879,
     fixText = false,
     objCoords = vec3(484.176422, -1007.734375, 26.480055),
-    distance = 2,
+    distance = 1.0,
     locked = true,
     authorizedJobs = { ['police'] = 0 },
     doorLabel = 'CellDoor5',
@@ -541,7 +541,7 @@ Config.DoorList['MRPD--CellExit'] = {
     doorLabel = 'CellExit',
     doorType = 'door',
     objCoords = vec3(481.008362, -1004.117981, 26.480055),
-    distance = 2,
+    distance = 1.0,
     locked = true,
     doorRate = 1.0,
 }
