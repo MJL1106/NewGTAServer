@@ -283,7 +283,7 @@ GameStates = {{
 }, {
     activity = "cashier",
     title = "Cashier",
-    enabled = false
+    enabled = true
 }, {
     activity = "seating",
     title = "Seating",
