@@ -4854,6 +4854,136 @@ QBShared.Vehicles = {
         ['hash'] = `gtr`, -- Corrected to use backticks
         ['shop'] = '',    
     },
+    ['huracanpriorbeast'] = {
+        ['name'] = 'Beast',
+        ['brand'] = 'Peggasi',
+        ['model'] = 'huracanpriorbeast',
+        ['price'] = 999999999999,
+        ['category'] = 'tier4',
+        ['categoryLabel'] = 'Tier 4',
+        ['hash'] = `huracanpriorbeast`, -- Corrected to use backticks
+        ['shop'] = '',    
+    },
+    ['taycanani'] = {
+        ['name'] = 'Elctro',
+        ['brand'] = 'Pfister',
+        ['model'] = 'taycanani',
+        ['price'] = 999999999999,
+        ['category'] = 'tier4',
+        ['categoryLabel'] = 'Tier 4',
+        ['hash'] = `taycanani`, -- Corrected to use backticks
+        ['shop'] = '',    
+    },
+    ['GCMobTahoeV2'] = {
+        ['name'] = 'MOB',
+        ['brand'] = 'Declasse',
+        ['model'] = 'GCMobTahoeV2',
+        ['price'] = 999999999999,
+        ['category'] = 'tier3',
+        ['categoryLabel'] = 'Tier 3',
+        ['hash'] = `GCMobTahoeV2`, -- Corrected to use backticks
+        ['shop'] = '',    
+    },
+    ['2019chiron'] = {
+        ['name'] = 'truffade',
+        ['brand'] = 'Clarity',
+        ['model'] = '2019chiron',
+        ['price'] = 999999999999,
+        ['category'] = 'tier4',
+        ['categoryLabel'] = 'Tier 4',
+        ['hash'] = `2019chiron`, -- Corrected to use backticks
+        ['shop'] = '',    
+    },
+    ['rmodbentley1'] = {
+        ['name'] = 'Enus Mod',
+        ['brand'] = 'Enus',
+        ['model'] = 'rmodbentley1',
+        ['price'] = 999999999999,
+        ['category'] = 'tier4',
+        ['categoryLabel'] = 'Tier 4',
+        ['hash'] = `rmodbentley1`, -- Corrected to use backticks
+        ['shop'] = '',    
+    },
+    ['bentaygam'] = {
+        ['name'] = 'Gam',
+        ['brand'] = 'Enus',
+        ['model'] = 'bentaygam',
+        ['price'] = 999999999999,
+        ['category'] = 'tier4',
+        ['categoryLabel'] = 'Tier 4',
+        ['hash'] = `bentaygam`, -- Corrected to use backticks
+        ['shop'] = '',    
+    },
+    ['senna'] = {
+        ['name'] = 'Sella',
+        ['brand'] = 'Progen',
+        ['model'] = 'senna',
+        ['price'] = 999999999999,
+        ['category'] = 'tier4',
+        ['categoryLabel'] = 'Tier 4',
+        ['hash'] = `senna`, -- Corrected to use backticks
+        ['shop'] = '',    
+    },
+    ['maybach'] = {
+        ['name'] = 'ClayBack',
+        ['brand'] = 'Benefactor',
+        ['model'] = 'maybach',
+        ['price'] = 999999999999,
+        ['category'] = 'tier4',
+        ['categoryLabel'] = 'Tier 4',
+        ['hash'] = `maybach`, -- Corrected to use backticks
+        ['shop'] = '',    
+    },
+    ['dawnonyx'] = {
+        ['name'] = 'Onyx',
+        ['brand'] = 'Enus',
+        ['model'] = 'dawnonyx',
+        ['price'] = 999999999999,
+        ['category'] = 'tier4',
+        ['categoryLabel'] = 'Tier 4',
+        ['hash'] = `dawnonyx`, -- Corrected to use backticks
+        ['shop'] = '',    
+    },
+    ['rrphantom'] = {
+        ['name'] = 'Phanto',
+        ['brand'] = 'Enus',
+        ['model'] = 'rrphantom',
+        ['price'] = 999999999999,
+        ['category'] = 'tier4',
+        ['categoryLabel'] = 'Tier 4',
+        ['hash'] = `rrphantom`, -- Corrected to use backticks
+        ['shop'] = '',    
+    },
+    ['911turbos'] = {
+        ['name'] = 'Turbski',
+        ['brand'] = 'Pfister',
+        ['model'] = '911turbos',
+        ['price'] = 999999999999,
+        ['category'] = 'tier4',
+        ['categoryLabel'] = 'Tier 4',
+        ['hash'] = `911turbos`, -- Corrected to use backticks
+        ['shop'] = '',    
+    },
+    ['flhxs_streetglide_special18'] = {
+        ['name'] = 'Cruiser',
+        ['brand'] = 'Dinka',
+        ['model'] = 'flhxs_streetglide_special18',
+        ['price'] = 999999999999,
+        ['category'] = 'tier2',
+        ['categoryLabel'] = 'Tier 2',
+        ['hash'] = `flhxs_streetglide_special18`, -- Corrected to use backticks
+        ['shop'] = '',    
+    },
+    ['cb650r'] = {
+        ['name'] = 'Speedster',
+        ['brand'] = 'Dinka',
+        ['model'] = 'cb650r',
+        ['price'] = 999999999999,
+        ['category'] = 'tier3',
+        ['categoryLabel'] = 'Tier 3',
+        ['hash'] = `cb650r`, -- Corrected to use backticks
+        ['shop'] = '',    
+    },
 }
 
 -- Populate VehicleHashes table
