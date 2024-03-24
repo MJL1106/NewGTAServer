@@ -28,19 +28,19 @@ Config.Uniforms ={
     ['male'] = {
         outfitData ={
             ['t-shirt'] = {item = 15, texture = 0},
-            ['torso2'] = {item = 113, texture = 0},
+            ['torso2'] = {item = 602, texture = 0},
 			['arms'] = {item = 19, texture = 0},
-			['pants'] = {item = 40, texture = 4},
-			['shoes'] = {item = 5, texture = 0},
+			['pants'] = {item = 306, texture = 0},
+			['shoes'] = {item = 1, texture = 0},
         }
     },
     ['female'] = {
         outfitData ={
-            ['t-shirt'] = {item = 19, texture = 0},
+            ['t-shirt'] = {item = 14, texture = 0},
 			['torso2'] = {item = 370, texture = 0},
-			['arms'] = {item = 4, texture = 0},
-			['pants'] = {item = 2, texture = 12},
-			['shoes'] = {item = 5, texture = 0},
+			['arms'] = {item = 3, texture = 0},
+			['pants'] = {item = 2, texture = 1},
+			['shoes'] = {item = 3, texture = 0},
         }
     },
 }
