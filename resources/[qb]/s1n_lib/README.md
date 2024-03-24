@@ -7,3 +7,4 @@
 - ✅ Event Manager
 - ✅ Framework handler
 - ✅ ORM with oxmysql
+- ✅ Lock System (block multiple request spamming)

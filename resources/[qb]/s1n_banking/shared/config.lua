@@ -45,11 +45,11 @@ Config.CreditCardGive = {
 Config.CreditCardItem = 'creditcard'
 
 -- List of the ATM models that will be used to open the bank menu
-Config.AtmModels = { 'prop_atm_02', 'prop_atm_03', 'prop_fleeca_atm', 'prop_atm_01' }
+Config.AtmModels = { 'prop_atm_02', 'prop_atm_03', 'prop_fleeca_atm' }
 
 -- List of the bank locations that will be used to open the bank menu
 Config.BankLocations = {
-    -- First bank LIFE INVADER
+    -- First bank
     {
         -- The position of the blip and marker (where you interact)
         Position = vector3(-1212.685669, -330.764832, 37.772217),
@@ -678,10 +678,13 @@ Config.Credit = {
 -- Configuration to access a society account
 Config.SocietyRanks = {
     -- Job name (Needs to be the EXACT (including uppercase, lowercase) name of the job)
-    ['weedshop'] = {
+    ['police'] = {
         -- Job grades (Needs to be the EXACT (including uppercase, lowercase) name of the job grade)
-        ['3']       = { Create = true, Login = true },
-        ['2'] = { Create = false, Login = true },
-        ['1']   = { Create = false, Login = true }
+        ['boss']       = { Create = true, Login = true },
+        ['lieutenant'] = { Create = false, Login = true },
+        ['sergeant']   = { Create = false, Login = true }
     }
 }
+
+-- IBAN prefix added to the IBAN when creating a new account
+Config.IbanPrefix = "US0"
