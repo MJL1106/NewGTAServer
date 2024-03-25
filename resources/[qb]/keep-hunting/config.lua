@@ -9,7 +9,7 @@ Config.SlughterEveryAnimal = true
 
 -- protection system againts players
 -- if hunters have this weapons they can't shoot players with it!
-Config.ShootingProtection = false
+Config.ShootingProtection = true
 Config.ProtectedWeapons = { 'weapon_musket' }
 -- End
 
@@ -28,7 +28,7 @@ Config.BaitIndicator = {
     model = 'prop_peanut_bowl_01'
 }
 
-Config.BaitCooldown = 1000 * 30 -- 1000 per sec
+Config.BaitCooldown = 1000 * 120 -- 1000 per sec
 Config.SpawningTimer = 1000 * 10 -- script will wait until "SpawningTimer" time out then it will spwan animal
 
 Config.AnimalsEatingSpeed = 1000 * 15 -- how much animals will wait in baits location
@@ -84,7 +84,7 @@ Config.boneHitMultiplier = {
 Config.Animals = { {
     model = "a_c_deer",
     -- {legal area spawn chance , illegal area spawn chance}
-    spwanRarity = { 20, 25 },
+    spwanRarity = { 40, 10 },
     hash = -664053099,
     -- HOW to use "Loots" element:
     -- { {"ITEMNAME" , Chance , Sell Price} , {"ITEMNAME" , Chance , Sell Price} ,  ....}
@@ -92,47 +92,47 @@ Config.Animals = { {
     -- IMPORTANT: script will skip duplicate loots and only use one of them (first one)
     -- script will skip other prices and only uses the first seen value.
     -- IMPORTANT: if you leave the price with nil value players can't sell those items to Vendor.
-    Loots = { { "meatdeer", 100, 150 } }
+    Loots = { { "meatdeer", 100, 65 } }
 }, {
     model = "a_c_pig",
-    spwanRarity = { 20, 0 },
+    spwanRarity = { 30, 0 },
     hash = -1323586730,
-    Loots = { { "meatpig", 100, 150 } }
+    Loots = { { "meatpig", 100, 75 } }
 }, {
     model = "a_c_boar",
-    spwanRarity = { 30, 25 },
+    spwanRarity = { 10, 35 },
     hash = -832573324,
-    Loots = { { "meatpig", 100 }}
+    Loots = { { "meatpig", 100, 80 }}
 }, {
     model = "a_c_mtlion",
-    spwanRarity = { 25, 50 },
+    spwanRarity = { 0, 10 },
     hash = 307287994,
-    Loots = { { "meatlion", 100, 150 }}
+    Loots = { { "meatlion", 100, 130 }}
 }, {
     model = "a_c_cow",
-    spwanRarity = { 0, 0 },
+    spwanRarity = { 45, 0 },
     hash = -50684386,
-    Loots = { { "meatcow", 100, 150 }}
+    Loots = { { "meatcow", 100, 55 }}
 }, {
     model = "a_c_coyote",
-    spwanRarity = { 0, 0 },
+    spwanRarity = { 0, 20 },
     hash = 1682622302,
     Loots = { { "meatcoyote", 100, 150 }}
 }, {
     model = "a_c_rabbit_01",
-    spwanRarity = { 0, 0 },
+    spwanRarity = { 0, 10 },
     hash = -541762431,
-    Loots = { { "meatrabbit", 100, 150 }}
+    Loots = { { "meatrabbit", 100, 135 }}
 }, {
     model = "a_c_pigeon",
-    spwanRarity = { 0, 0 },
+    spwanRarity = { 0, 20 },
     hash = 111281960,
-    Loots = { { "meatbird", 100, 150 } }
+    Loots = { { "meatbird", 100, 180 } }
 }, {
     model = "a_c_seagull",
-    spwanRarity = { 0, 0 },
+    spwanRarity = { 10, 0 },
     hash = -745300483,
-    Loots = { { "meatbird", 100 }}
+    Loots = { { "meatbird", 100, 90 }}
 } }
 
 Config.HuntingArea = {
@@ -145,8 +145,15 @@ Config.HuntingArea = {
     },
     {
         name = "illegal hunting Area",
-        coord = vector3(870.01, 5158.01, 452.54),
-        radius = 500.0,
+        coord = vector3(689.83, 4753.64, 136.16),
+        radius = 250.0,
+        llegal = false,
+        showBlip = true
+    },
+    {
+        name = "illegal hunting Area",
+        coord = vector3(1860.47, 5522.35, 170.63),
+        radius = 250.0,
         llegal = false,
         showBlip = true
     }
