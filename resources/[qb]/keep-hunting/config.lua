@@ -9,7 +9,7 @@ Config.SlughterEveryAnimal = true
 
 -- protection system againts players
 -- if hunters have this weapons they can't shoot players with it!
-Config.ShootingProtection = false
+Config.ShootingProtection = true
 Config.ProtectedWeapons = { 'weapon_musket' }
 -- End
 
@@ -84,7 +84,7 @@ Config.boneHitMultiplier = {
 Config.Animals = { {
     model = "a_c_deer",
     -- {legal area spawn chance , illegal area spawn chance}
-    spwanRarity = { 20, 25 },
+    spwanRarity = { 40, 10 },
     hash = -664053099,
     -- HOW to use "Loots" element:
     -- { {"ITEMNAME" , Chance , Sell Price} , {"ITEMNAME" , Chance , Sell Price} ,  ....}
@@ -92,47 +92,47 @@ Config.Animals = { {
     -- IMPORTANT: script will skip duplicate loots and only use one of them (first one)
     -- script will skip other prices and only uses the first seen value.
     -- IMPORTANT: if you leave the price with nil value players can't sell those items to Vendor.
-    Loots = { { "meatdeer", 100, 150 } }
+    Loots = { { "meatdeer", 100, 65 } }
 }, {
     model = "a_c_pig",
-    spwanRarity = { 20, 0 },
+    spwanRarity = { 30, 0 },
     hash = -1323586730,
-    Loots = { { "meatpig", 100, 150 } }
+    Loots = { { "meatpig", 100, 75 } }
 }, {
     model = "a_c_boar",
-    spwanRarity = { 30, 25 },
+    spwanRarity = { 10, 35 },
     hash = -832573324,
-    Loots = { { "meatpig", 100 }}
+    Loots = { { "meatpig", 100, 80 }}
 }, {
     model = "a_c_mtlion",
-    spwanRarity = { 25, 50 },
+    spwanRarity = { 0, 10 },
     hash = 307287994,
-    Loots = { { "meatlion", 100, 150 }}
+    Loots = { { "meatlion", 100, 130 }}
 }, {
     model = "a_c_cow",
-    spwanRarity = { 0, 0 },
+    spwanRarity = { 45, 0 },
     hash = -50684386,
-    Loots = { { "meatcow", 100, 150 }}
+    Loots = { { "meatcow", 100, 55 }}
 }, {
     model = "a_c_coyote",
-    spwanRarity = { 0, 0 },
+    spwanRarity = { 0, 20 },
     hash = 1682622302,
     Loots = { { "meatcoyote", 100, 150 }}
 }, {
     model = "a_c_rabbit_01",
-    spwanRarity = { 0, 0 },
+    spwanRarity = { 0, 10 },
     hash = -541762431,
-    Loots = { { "meatrabbit", 100, 150 }}
+    Loots = { { "meatrabbit", 100, 135 }}
 }, {
     model = "a_c_pigeon",
-    spwanRarity = { 0, 0 },
+    spwanRarity = { 0, 20 },
     hash = 111281960,
-    Loots = { { "meatbird", 100, 150 } }
+    Loots = { { "meatbird", 100, 180 } }
 }, {
     model = "a_c_seagull",
-    spwanRarity = { 0, 0 },
+    spwanRarity = { 10, 0 },
     hash = -745300483,
-    Loots = { { "meatbird", 100 }}
+    Loots = { { "meatbird", 100, 90 }}
 } }
 
 Config.HuntingArea = {

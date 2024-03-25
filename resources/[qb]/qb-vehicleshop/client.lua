@@ -3,6 +3,7 @@ local QBCore = exports['qb-core']:GetCoreObject()
 local PlayerData = QBCore.Functions.GetPlayerData()
 local testDriveZone = nil
 local vehicleMenu = {}
+local AcitveZone = {}
 local Initialized = false
 local testDriveVeh, inTestDrive = 0, false
 local ClosestVehicle = 1
@@ -911,5 +912,40 @@ CreateThread(function()
             AddTextComponentSubstringPlayerName(Config.Shops[k]["ShopLabel"])
             EndTextCommandSetBlipName(Dealer)
         end
+    end
+end)
+
+local function CreateZones()
+    local SellSpot = PolyZone:Create(Config.Shops['pdm']['Zone']['Shape'], {
+        name = "pdm_sellspot",
+        minZ = Config.Shops['pdm']['Zone']['minZ'],
+        maxZ = Config.Shops['pdm']['Zone']['maxZ'],
+        debugPoly = false
+    })
+
+    SellSpot:onPlayerInOut(function(isPointInside)
+        local pData = QBCore.Functions.GetPlayerData()
+        local playerJob = pData.job.name
+        local onDuty = pData.job.onduty
+
+        if playerJob == "cardealer" then -- Ensure this matches your job identifier for car sales
+            if isPointInside and not onDuty then
+                TriggerServerEvent('QBCore:ToggleDuty')
+            elseif not isPointInside and onDuty then
+                TriggerServerEvent('QBCore:ToggleDuty')
+            end
+        end
+    end)
+    AcitveZone["pdm_sellspot"] = SellSpot
+end
+
+RegisterNetEvent('QBCore:Client:OnPlayerLoaded', function()
+    CreateZones()
+end)
+
+
+AddEventHandler('onResourceStart', function(resourceName)
+    if GetCurrentResourceName() == resourceName then
+        CreateZones()
     end
 end)

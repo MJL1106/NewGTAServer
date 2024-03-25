@@ -13,17 +13,14 @@ Config.Shops = {
         ['Type'] = 'managed', -- no player interaction is required to purchase a car
         ['Zone'] = {
             ['Shape'] = {--polygon that surrounds the shop
-                vector2(-56.727394104004, -1086.2325439453),
-                vector2(-60.612808227539, -1096.7795410156),
-                vector2(-58.26834487915, -1100.572265625),
-                vector2(-35.927803039551, -1109.0034179688),
-                vector2(-34.427627563477, -1108.5111083984),
-                vector2(-32.02657699585, -1101.5877685547),
-                vector2(-33.342102050781, -1101.0377197266),
-                vector2(-31.292987823486, -1095.3717041016)
+                vector2(-14.72, -1119.99),
+                vector2(-64.06, -1122.93),
+                vector2(-70.29, -1117.93),
+                vector2(-53.3, -1069.64),
+                vector2(-3.56, -1087.82)
             },
-            ['minZ'] = 25.0, -- min height of the shop zone
-            ['maxZ'] = 28.0, -- max height of the shop zone
+            ['minZ'] = 22.0, -- min height of the shop zone
+            ['maxZ'] = 30.0, -- max height of the shop zone
             ['size'] = 2.75 -- size of the vehicles zones
         },
         ['Job'] = 'cardealer', -- Name of job or none
