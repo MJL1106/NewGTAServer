@@ -28,7 +28,7 @@ Config.BaitIndicator = {
     model = 'prop_peanut_bowl_01'
 }
 
-Config.BaitCooldown = 1000 * 30 -- 1000 per sec
+Config.BaitCooldown = 1000 * 120 -- 1000 per sec
 Config.SpawningTimer = 1000 * 10 -- script will wait until "SpawningTimer" time out then it will spwan animal
 
 Config.AnimalsEatingSpeed = 1000 * 15 -- how much animals will wait in baits location
@@ -145,8 +145,15 @@ Config.HuntingArea = {
     },
     {
         name = "illegal hunting Area",
-        coord = vector3(870.01, 5158.01, 452.54),
-        radius = 500.0,
+        coord = vector3(689.83, 4753.64, 136.16),
+        radius = 250.0,
+        llegal = false,
+        showBlip = true
+    },
+    {
+        name = "illegal hunting Area",
+        coord = vector3(1860.47, 5522.35, 170.63),
+        radius = 250.0,
         llegal = false,
         showBlip = true
     }
