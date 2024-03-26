@@ -136,15 +136,17 @@ var shadedText = document.querySelector('.shaded-text');
 var texts = ["JOINING SERVER", "PREPARING ASSETS", "ESTABLISHING CONNECTION"];
 var currentText = 0;
 
-setInterval(function () {
-    currentText = (currentText + 1) % texts.length;
-    shadedText.classList.remove('fade-out');
-    void shadedText.offsetWidth;
-    shadedText.classList.add('fade-out');
-    setTimeout(function () {
-        shadedText.textContent = texts[currentText];
-    }, 1000);
-}, 4000);
+if (shadedText) {
+    setInterval(function () {
+        currentText = (currentText + 1) % texts.length;
+        shadedText.classList.remove('fade-out');
+        void shadedText.offsetWidth; // trigger reflow
+        shadedText.classList.add('fade-out');
+        setTimeout(function () {
+            shadedText.textContent = texts[currentText];
+        }, 1000);
+    }, 4000);
+}
 //SHADED-TEXT - Function for switching words in loading animation
 
 //PLACEHOLDER - Function for getting handoverdata from lua script
