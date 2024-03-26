@@ -6,10 +6,10 @@ Config.PedLocation = vector4(69.02, -1570.03, 29.6, 55.24)
 --- END OF STARTER PED STUFF
 
 Config.Dispatch = 'ps-dispatch'  -- ps-dispatch / cd-dispatch  (type of dispatch you use)
-Config.AlertChance = 75 --25% chance
+Config.AlertChance = 15 --15% chance
 Config.CoolDown = 0 -- Cooldown to do deliveries
 Config.Notifications = 'phone' -- phone/qbcore (type of notifications to use on the job)
-Config.CopsNeeded = 0
+Config.CopsNeeded = 0 -- TODO
 Config.BuyerTimer = 1000 * 8 -- Timer till the buyer spawns default 1-3 minutes
 
 Config.PedDrivingStyle = 786603 -- suggest not changing this tbh
@@ -22,7 +22,7 @@ Config.OxyStartPayment = 100 -- amount to pay to start if the config is set to t
 Config.OxyPackageName = 'oxypackage' -- name of the box package in your shared
 Config.CashPay = math.random(180,280) -- amount you recieve on each handoff
 Config.ItemName = 'oxy' -- oxy item name in your shared
-Config.OxyAmount = math.random(1,3) -- amount of oxy you get if the chance is hit
+Config.OxyAmount = 1 -- amount of oxy you get if the chance is hit
 Config.ItemChance = 75 -- chance to get oxy
 Config.RareItem = {
     'advancedlockpick',

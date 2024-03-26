@@ -208,7 +208,10 @@ function SpawnBuyers()
     elseif Config.Notifications == 'qbcore' then
         QBCore.Functions.Notify('Buyers have been notified...now you wait.', 'primary')
     end
-    exports['ps-dispatch']:DrugSale()
+    local chance = math.random(1,100)
+    if chance <= Config.AlertChance then
+        exports['ps-dispatch']:DrugSale()
+    end
     Wait(18000)
     local VehicleHash =  data.Vehicles[math.random(#data.Vehicles)]
     QBCore.Functions.LoadModel(VehicleHash)
