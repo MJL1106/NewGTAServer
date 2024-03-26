@@ -1,26 +1,26 @@
 local QBCore = exports['qb-core']:GetCoreObject()
 
--- local CoolDown = false
+local CoolDown = false
 
--- RegisterServerEvent('kevin-oxyruns:coolout', function()
---     CoolDown = true
---     local timer = Config.CoolDown
---     while timer > 0 do
---         Wait(1000)
---         timer = timer - 1000
---         if timer == 0 then
---             CoolDown = false
---         end
---     end
--- end)
+RegisterServerEvent('kevin-oxyruns:coolout', function()
+    CoolDown = true
+    local timer = Config.CoolDown
+    while timer > 0 do
+        Wait(1000)
+        timer = timer - 1000
+        if timer == 0 then
+            CoolDown = false
+        end
+    end
+end)
 
--- QBCore.Functions.CreateCallback("kevin-oxyruns:coolc",function(source, cb)
---     if CoolDown then
---         cb(true)
---     else
---         cb(false)
---     end
--- end)
+QBCore.Functions.CreateCallback("kevin-oxyruns:coolc",function(source, cb)
+    if CoolDown then
+        cb(true)
+    else
+        cb(false)
+    end
+end)
 
 QBCore.Functions.CreateCallback('kevin-oxyruns:Haspayment',function(source, cb)
 	local src = source

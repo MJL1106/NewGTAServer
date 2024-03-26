@@ -1,5 +1,5 @@
 author 'S1nScripts'
-version '1.8.0'
+version '1.9.0'
 repository 'https://github.com/S1nScripts/s1n_lib'
 
 fx_version 'cerulean'
