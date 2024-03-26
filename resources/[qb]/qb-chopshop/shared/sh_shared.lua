@@ -30,7 +30,7 @@ Shared.DropoffZoneRadius = 4.0
 Shared.LaptopChance = 0 -- % Chance to ge a laptop in glovebox, requires ox_inventory
 Shared.RewardDrops = 5 -- How many reward drops are done after chopping a vehicle
 Shared.RewardAmount = { min = 6, max = 10} -- min and max amount of items from RewardTable that are given per drop
-Shared.CashReward = { min = 75, max = 150} -- Cash reward for completing a chop contract
+Shared.CashReward = { min = 125, max = 190} -- Cash reward for completing a chop contract
 
 Shared.RewardTable = {
     'metalscrap',
@@ -227,7 +227,7 @@ Shared.DropOffLocations = { -- You can always add more vector3 coordinates
     vector3(480.43, -1317.77, 28.5), -- Hayes
     vector3(936.63, -1516.45, 30.27), -- Industry
     vector3(1135.47, -794.44, 56.89), -- mirror park
-    vector3(-323.78, -132.35, 38.26), -- vinewood
+    vector3(-377.05, 184.66, 79.88), -- vinewood
     vector3(2055.92, 3179.69, 44.46), -- small sandy
     vector3(2053.63, 3193.05, 44.48), -- small sandy
     vector3(2351.43, 3133.49, 47.5), -- big sandy
