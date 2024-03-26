@@ -390,6 +390,19 @@ QBShared.Items = {
 	['10kgoldchain'] 				 = {['name'] = '10kgoldchain', 			  	  	['label'] = '10k Gold Chain', 			['weight'] = 200, 		['type'] = 'item', 		['image'] = '10kgoldchain.png', 		['unique'] = false, 	['useable'] = false, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = '10 carat golden chain'},
 	['goldbar'] 			 	 	 = {['name'] = 'goldbar', 			  			['label'] = 'Gold Bar', 				['weight'] = 10, 	    ['type'] = 'item', 		['image'] = 'goldbar.png', 				['unique'] = false, 	['useable'] = false, 	['shouldClose'] = true,    ['combinable'] = nil,   ['description'] = 'Looks pretty expensive to me'},
 
+
+	-- IMPORT COINS
+	['tier1'] 				 	 	 = {['name'] = 'tier1', 			  	  		['label'] = 'Tier 1 Car Coin', 			['weight'] = 100, 		['type'] = 'item', 		['image'] = 'tier1.png', 			    ['unique'] = false, 	['useable'] = false, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'Used for purchasing a Tier 1 Car'},
+	['tier2'] 				 	 	 = {['name'] = 'tier2', 			  	  		['label'] = 'Tier 2 Car Coin', 			['weight'] = 100, 		['type'] = 'item', 		['image'] = 'tier2.png', 			    ['unique'] = false, 	['useable'] = false, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'Used for purchasing a Tier 2 Car'},
+	['tier3'] 				 	 	 = {['name'] = 'tier3', 			  	  		['label'] = 'Tier 3 Car Coin', 			['weight'] = 100, 		['type'] = 'item', 		['image'] = 'tier3.png', 			    ['unique'] = false, 	['useable'] = false, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'Used for purchasing a Tier 3 Car'},
+	['tier4'] 				 	 	 = {['name'] = 'tier4', 			  	  		['label'] = 'Tier 4 Car Coin', 			['weight'] = 100, 		['type'] = 'item', 		['image'] = 'tier4.png', 			    ['unique'] = false, 	['useable'] = false, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'Used for purchasing a Tier 4 Car'},
+
+	['businesscoin'] 				 	 	 = {['name'] = 'businesscoin', 			  	  		['label'] = 'Business Coin', 			['weight'] = 100, 		['type'] = 'item', 		['image'] = 'businesscoin.png', 			    ['unique'] = false, 	['useable'] = false, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'Used for purchasing a Business'},
+	['ottoscoin'] 				 	 	 = {['name'] = 'ottoscoin', 			  	  		['label'] = 'Ottos Coin', 			['weight'] = 100, 		['type'] = 'item', 		['image'] = 'ottoscoin.png', 			    ['unique'] = false, 	['useable'] = false, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'Given for purchasing Ottos Autos'},
+	['whitewidowcoin'] 				 	 	 = {['name'] = 'whitewidowcoin', 			  	  		['label'] = 'White Widow Coin', 			['weight'] = 100, 		['type'] = 'item', 		['image'] = 'businesscoin.png', 			    ['unique'] = false, 	['useable'] = false, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'Given for purchasing White Widow'},
+
+	
+
 	-- Cops Tools
 	['armor'] 		 				 = {['name'] = 'armor', 						['label'] = 'Armor', 					['weight'] = 5000, 	    ['type'] = 'item', 		['image'] = 'armor.png', 				['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'Some protection won\'t hurt... right?'},
 	['heavyarmor'] 		 			 = {['name'] = 'heavyarmor', 					['label'] = 'Heavy Armor', 				['weight'] = 5000, 	    ['type'] = 'item', 		['image'] = 'armor.png', 				['unique'] = false, 	['useable'] = true, 	['shouldClose'] = true,	   ['combinable'] = nil,   ['description'] = 'Some protection won\'t hurt... right?'},
