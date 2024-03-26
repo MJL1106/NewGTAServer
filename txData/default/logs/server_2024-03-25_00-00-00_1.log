@@ -1,0 +1,754 @@
+
+================================================================
+======== Log Rotated - 3/25/2024, 12:00:00 AM                   
+================================================================
+[2:52:34 AM] [VtTiJ#1] RigssRP: said "/hideHUD"
+[2:52:37 AM] [VtTiJ#1] RigssRP: disconnected (Exiting)
+[2:54:14 AM] [VtTiJ#2] RigssRP: joined with identifiers [steam:11000014abdebcf; license:0503ca95eab75210d3475b9e63fd6aa6028e6a91; xbl:2535446394392876; live:1055518940555852; discord:1103467626300199044; fivem:8351340; license2:2a20c64a2a1abb3e1653a5c89e5ac281f69f1eb9]
+[2:57:05 AM] [VtTiJ#3] φοῖνιξ: joined with identifiers [steam:11000010ee88c01; license:ee681c08d9d45c48bf5af06870d7d23d75db16dc; xbl:2535430200613003; live:985158121988759; discord:305372052683096065; fivem:10488223; license2:ee681c08d9d45c48bf5af06870d7d23d75db16dc]
+[3:03:04 AM] [VtTiJ#3] φοῖνιξ: said "/create scene"
+[3:20:11 AM] [VtTiJ#4] missberrymedley: joined with identifiers [steam:11000010cab8d07; license:7a3a5bfb5af789cb5f02843e29cc4ee338b0a294; xbl:2535413783067581; live:1688853905214434; discord:461174423903535107; fivem:1697557; license2:ec1926a90f33d1955abd2276f36a7c3ed4c51a23]
+[3:43:29 AM] [VtTiJ#2] RigssRP: said "/hideHUD"
+[4:40:11 AM] [VtTiJ#5] MJL: joined with identifiers [steam:1100001324fa523; license:ec6c328d6d02f816bf13e4a9d09768c02d6e3125; xbl:2535415531070562; live:1055522508602522; discord:213410953641852928; fivem:2586828]
+[5:25:05 AM] [VtTiJ#6] JOSH: joined with identifiers [steam:1100001438fe567; license:b6284c20b4ad2c41c48d4a31859b65ae2a417ec8; discord:405075418769522708; fivem:12124231; license2:b6284c20b4ad2c41c48d4a31859b65ae2a417ec8]
+[5:30:32 AM] txAdmin: ((Broadcast) txAdmin): said "This server is scheduled to restart in 30 minutes."
+[5:35:01 AM] [VtTiJ#7] Doc Johnson: joined with identifiers [license:b4fc6bd4824a48a52d9d13e0465914bc593bae1a; xbl:2535410156961594; live:1055521933202735; discord:340245944220254210; fivem:11532384; license2:b4fc6bd4824a48a52d9d13e0465914bc593bae1a]
+[5:45:32 AM] txAdmin: ((Broadcast) txAdmin): said "This server is scheduled to restart in 15 minutes."
+[5:46:28 AM] [VtTiJ#5] MJL: said "/hideHUD"
+[5:46:50 AM] [VtTiJ#2] RigssRP: said "/hideHUD"
+[5:50:32 AM] txAdmin: ((Broadcast) txAdmin): said "This server is scheduled to restart in 10 minutes."
+[5:53:13 AM] [VtTiJ#7] Doc Johnson: died from suicide (Falling)
+[5:55:33 AM] txAdmin: ((Broadcast) txAdmin): said "This server is scheduled to restart in 5 minutes."
+[5:56:32 AM] txAdmin: ((Broadcast) txAdmin): said "This server is scheduled to restart in 4 minutes."
+[5:57:32 AM] txAdmin: ((Broadcast) txAdmin): said "This server is scheduled to restart in 3 minutes."
+[5:58:08 AM] [VtTiJ#5] MJL: said "/exithouse"
+[5:58:08 AM] [VtTiJ#5] MJL: said "/enterhouse"
+[5:58:32 AM] txAdmin: ((Broadcast) txAdmin): said "This server is scheduled to restart in 2 minutes."
+[5:59:32 AM] txAdmin: ((Broadcast) txAdmin): said "This server is scheduled to restart in 1 minute. Please disconnect now."
+[6:00:32 AM] [VtTiJ#7] Doc Johnson: disconnected ([txAdmin] Server restarting (scheduled restart at 06:00).)
+[6:00:32 AM] [VtTiJ#2] RigssRP: disconnected ([txAdmin] Server restarting (scheduled restart at 06:00).)
+[6:00:32 AM] [VtTiJ#3] φοῖνιξ: disconnected ([txAdmin] Server restarting (scheduled restart at 06:00).)
+[6:00:32 AM] [VtTiJ#5] MJL: disconnected ([txAdmin] Server restarting (scheduled restart at 06:00).)
+[6:00:32 AM] [VtTiJ#4] missberrymedley: disconnected ([txAdmin] Server restarting (scheduled restart at 06:00).)
+[6:00:32 AM] [VtTiJ#6] JOSH: disconnected ([txAdmin] Server restarting (scheduled restart at 06:00).)
+[6:01:11 AM] txAdmin: Logger started
+[6:02:02 AM] [pgPhG#1] JOSH: joined with identifiers [steam:1100001438fe567; license:b6284c20b4ad2c41c48d4a31859b65ae2a417ec8; discord:405075418769522708; fivem:12124231; license2:b6284c20b4ad2c41c48d4a31859b65ae2a417ec8]
+[6:02:02 AM] [pgPhG#2] φοῖνιξ: joined with identifiers [steam:11000010ee88c01; license:ee681c08d9d45c48bf5af06870d7d23d75db16dc; xbl:2535430200613003; live:985158121988759; discord:305372052683096065; fivem:10488223; license2:ee681c08d9d45c48bf5af06870d7d23d75db16dc]
+[6:04:25 AM] [pgPhG#3] missberrymedley: joined with identifiers [steam:11000010cab8d07; license:7a3a5bfb5af789cb5f02843e29cc4ee338b0a294; xbl:2535413783067581; live:1688853905214434; discord:461174423903535107; fivem:1697557; license2:ec1926a90f33d1955abd2276f36a7c3ed4c51a23]
+[6:13:29 AM] [pgPhG#4] Doc Johnson: joined with identifiers [license:b4fc6bd4824a48a52d9d13e0465914bc593bae1a; xbl:2535410156961594; live:1055521933202735; discord:340245944220254210; fivem:11532384; license2:b4fc6bd4824a48a52d9d13e0465914bc593bae1a]
+[6:31:44 AM] [pgPhG#5] marcusblackwell7: joined with identifiers [steam:110000154d96125; license:b90a0574761cd349c5a4e1d6372c3ba96f26a074; discord:667904617446768652; fivem:7859917; license2:b90a0574761cd349c5a4e1d6372c3ba96f26a074]
+[6:35:11 AM] [pgPhG#4] Doc Johnson: died from suicide (Falling)
+[6:36:30 AM] [pgPhG#4] Doc Johnson: disconnected (Exiting)
+[6:37:10 AM] [pgPhG#6] Doc Johnson: joined with identifiers [license:b4fc6bd4824a48a52d9d13e0465914bc593bae1a; xbl:2535410156961594; live:1055521933202735; discord:340245944220254210; fivem:11532384; license2:b4fc6bd4824a48a52d9d13e0465914bc593bae1a]
+[6:37:55 AM] [pgPhG#7] BotOnMnK: joined with identifiers [steam:11000014df460ff; license:06a61b4c40fc28c0a6e0a709ba99ffb637152b33; xbl:2535406023679221; live:1055518462074046; discord:1043623556015194112; fivem:9907274; license2:06a61b4c40fc28c0a6e0a709ba99ffb637152b33]
+[6:38:02 AM] [pgPhG#7] BotOnMnK: disconnected (Exiting)
+[6:38:44 AM] [pgPhG#8] BotOnMnK: joined with identifiers [steam:11000014df460ff; license:06a61b4c40fc28c0a6e0a709ba99ffb637152b33; xbl:2535406023679221; live:1055518462074046; discord:1043623556015194112; fivem:9907274; license2:06a61b4c40fc28c0a6e0a709ba99ffb637152b33]
+[6:41:30 AM] [pgPhG#6] Doc Johnson: said "/-gearUp"
+[6:41:31 AM] [pgPhG#6] Doc Johnson: said "/-gearUp"
+[6:41:38 AM] [pgPhG#6] Doc Johnson: said "/-gearUp"
+[6:41:48 AM] [pgPhG#6] Doc Johnson: said "/-gearUp"
+[6:41:54 AM] [pgPhG#6] Doc Johnson: said "/-gearUp"
+[6:42:05 AM] [pgPhG#6] Doc Johnson: said "/-gearUp"
+[6:42:11 AM] [pgPhG#6] Doc Johnson: said "/-gearUp"
+[6:43:12 AM] [pgPhG#6] Doc Johnson: said "/-gearUp"
+[6:43:19 AM] [pgPhG#6] Doc Johnson: said "/-gearUp"
+[6:45:48 AM] [pgPhG#6] Doc Johnson: said "/depo"
+[6:45:55 AM] [pgPhG#6] Doc Johnson: said "/-gearUp"
+[6:45:58 AM] [pgPhG#6] Doc Johnson: said "/-gearUp"
+[6:50:35 AM] [pgPhG#3] missberrymedley: disconnected (Exiting)
+[6:52:05 AM] [pgPhG#9] missberrymedley: joined with identifiers [steam:11000010cab8d07; license:7a3a5bfb5af789cb5f02843e29cc4ee338b0a294; xbl:2535413783067581; live:1688853905214434; discord:461174423903535107; fivem:1697557; license2:ec1926a90f33d1955abd2276f36a7c3ed4c51a23]
+[7:02:52 AM] [pgPhG#6] Doc Johnson: said "/-gearUp"
+[7:02:54 AM] [pgPhG#6] Doc Johnson: said "/-gearUp"
+[7:03:22 AM] [pgPhG#6] Doc Johnson: said "/-gearDown"
+[7:03:22 AM] [pgPhG#6] Doc Johnson: said "/-gearUp"
+[7:03:57 AM] [pgPhG#6] Doc Johnson: said "/-gearDown"
+[7:07:49 AM] [pgPhG#6] Doc Johnson: said "/-gearUp"
+[7:07:50 AM] [pgPhG#6] Doc Johnson: said "/-gearUp"
+[7:08:55 AM] [pgPhG#6] Doc Johnson: said "/-gearUp"
+[7:08:58 AM] [pgPhG#6] Doc Johnson: said "/-gearUp"
+[7:13:34 AM] [pgPhG#6] Doc Johnson: said "/-gearUp"
+[7:13:34 AM] [pgPhG#6] Doc Johnson: said "/-gearUp"
+[7:14:28 AM] [pgPhG#6] Doc Johnson: said "/-gearUp"
+[7:15:43 AM] [pgPhG#9] missberrymedley: said "/crossarms5"
+[7:16:10 AM] [pgPhG#6] Doc Johnson: said "/-gearUp"
+[7:16:11 AM] [pgPhG#6] Doc Johnson: said "/-gearUp"
+[7:21:59 AM] [pgPhG#9] missberrymedley: said "/crossarms5"
+[7:43:24 AM] [pgPhG#6] Doc Johnson: said "/-gearUp"
+[7:43:41 AM] [pgPhG#6] Doc Johnson: said "/-gearDown"
+[7:43:41 AM] [pgPhG#6] Doc Johnson: said "/-gearUp"
+[7:44:00 AM] [pgPhG#9] missberrymedley: said "/clear "
+[7:44:45 AM] [pgPhG#6] Doc Johnson: said "/-gearUp"
+[7:44:58 AM] [pgPhG#6] Doc Johnson: said "/-gearUp"
+[7:58:55 AM] [pgPhG#6] Doc Johnson: said "/-gearUp"
+[8:22:42 AM] [pgPhG#6] Doc Johnson: said "/-gearUp"
+[8:22:48 AM] [pgPhG#6] Doc Johnson: said "/-gearUp"
+[8:22:51 AM] [pgPhG#6] Doc Johnson: said "/-gearUp"
+[8:22:54 AM] [pgPhG#6] Doc Johnson: said "/-gearUp"
+[8:23:00 AM] [pgPhG#6] Doc Johnson: said "/-gearUp"
+[8:24:36 AM] [pgPhG#5] marcusblackwell7: disconnected (Game crashed: RAGE error: ERR_STR_INFO_2)
+[8:24:48 AM] [pgPhG#1] JOSH: disconnected (Exiting)
+[8:25:09 AM] [pgPhG#10] marcusblackwell7: joined with identifiers [steam:110000154d96125; license:b90a0574761cd349c5a4e1d6372c3ba96f26a074; discord:667904617446768652; fivem:7859917; license2:b90a0574761cd349c5a4e1d6372c3ba96f26a074]
+[8:30:52 AM] [pgPhG#9] missberrymedley: said "/crossarms5"
+[8:32:22 AM] [pgPhG#9] missberrymedley: said "/crossarms5"
+[8:32:52 AM] [pgPhG#6] Doc Johnson: said "/-gearDown"
+[8:36:05 AM] [pgPhG#6] Doc Johnson: died from suicide (Falling)
+[8:37:26 AM] [pgPhG#6] Doc Johnson: said "/-gearUp"
+[8:37:26 AM] [pgPhG#6] Doc Johnson: said "/-gearUp"
+[8:42:01 AM] [pgPhG#6] Doc Johnson: said "/-gearUp"
+[8:42:01 AM] [pgPhG#6] Doc Johnson: said "/-gearUp"
+[8:54:54 AM] [pgPhG#10] marcusblackwell7: disconnected (Exiting)
+[8:55:55 AM] [pgPhG#6] Doc Johnson: disconnected (Exiting)
+[8:56:30 AM] [pgPhG#8] BotOnMnK: said "/hideHUD"
+[8:56:55 AM] [pgPhG#8] BotOnMnK: said "/hideHUD"
+[8:57:24 AM] [pgPhG#8] BotOnMnK: disconnected (Exiting)
+[8:58:40 AM] [pgPhG#11] MJL: joined with identifiers [steam:1100001324fa523; license:ec6c328d6d02f816bf13e4a9d09768c02d6e3125; xbl:2535415531070562; live:1055522508602522; discord:213410953641852928; fivem:2586828]
+[9:11:45 AM] [pgPhG#12] JOSH: joined with identifiers [steam:1100001438fe567; license:b6284c20b4ad2c41c48d4a31859b65ae2a417ec8; discord:405075418769522708; fivem:12124231; license2:b6284c20b4ad2c41c48d4a31859b65ae2a417ec8]
+[9:19:56 AM] [pgPhG#13] Sipi: joined with identifiers [steam:11000010c1904c0; license:c611e33c58bb28b7d49645c8a2590e343e50afe3; xbl:2533274884191418; live:2111055889880348; discord:340298276387553283; fivem:9561979; license2:8729137e6c1ddb8f875e8adbf57a3c5a9ac82e98]
+[9:45:49 AM] [pgPhG#14] Anne Flank: joined with identifiers [steam:1100001097e125b; license:a938a74170975c01e88f463aea01684a16f28545; xbl:2535409246266710; live:1899947325711585; discord:293157047682465793; license2:9eb41e0279fe15e33ff86440bafc2105d3b78f01]
+[9:45:58 AM] [pgPhG#13] Sipi: said "/carry"
+[9:46:11 AM] [pgPhG#13] Sipi: said "/carry"
+[9:46:17 AM] [pgPhG#13] Sipi: said "/carry"
+[9:46:29 AM] [pgPhG#15] DaddyDizzle: joined with identifiers [steam:11000014bb53aeb; license:e0893217ab0d40d6a510bcbfe1c9441b4a208a2b; discord:584024523989581834; fivem:8961289; license2:e0893217ab0d40d6a510bcbfe1c9441b4a208a2b]
+[9:46:41 AM] [pgPhG#13] Sipi: said "/carry"
+[9:48:34 AM] [pgPhG#11] MJL: said "/hideHUD"
+[10:10:33 AM] [pgPhG#16] BotOnMnK: joined with identifiers [steam:11000014df460ff; license:06a61b4c40fc28c0a6e0a709ba99ffb637152b33; xbl:2535406023679221; live:1055518462074046; discord:1043623556015194112; fivem:9907274; license2:06a61b4c40fc28c0a6e0a709ba99ffb637152b33]
+[10:16:16 AM] [pgPhG#12] JOSH: disconnected (Exiting)
+[10:18:50 AM] [pgPhG#17] Kody Pepperfield: joined with identifiers [steam:11000010c770c55; license:3219d00ad3af143df0db5d2bed38fe7460729e68; xbl:2535451109437060; live:1055521765014399; discord:152991330048540672; fivem:12674089; license2:3e576e238fb0360dab034daae9fc7459afbacb59]
+[10:23:06 AM] [pgPhG#17] Kody Pepperfield: said "/hideHUD"
+[10:23:21 AM] [pgPhG#17] Kody Pepperfield: said "/hideHUD"
+[10:27:32 AM] [pgPhG#11] MJL: said "/hideHUD"
+[10:27:37 AM] [pgPhG#11] MJL: said "/hideHUD"
+[10:27:44 AM] [pgPhG#11] MJL: said "/hideHUD"
+[10:28:00 AM] [pgPhG#11] MJL: said "/hideHUD"
+[10:28:18 AM] [pgPhG#11] MJL: said "/hideHUD"
+[10:28:39 AM] [pgPhG#11] MJL: said "/exithouse"
+[10:28:39 AM] [pgPhG#11] MJL: said "/enterhouse"
+[10:28:40 AM] [pgPhG#11] MJL: said "/exithouse"
+[10:28:40 AM] [pgPhG#11] MJL: said "/enterhouse"
+[10:31:35 AM] [pgPhG#13] Sipi: disconnected (Game crashed: d3d11.dll!??$TID3D11DeviceContext_SetShaderResources_@$00$03@CContext@@SAXPEAUID3D11DeviceContext5@@IIPEBQEAUID3D11ShaderResourceView@@@Z (0x13e))
+[10:32:19 AM] [pgPhG#15] DaddyDizzle: said "/vehiclesell 15 1"
+[10:32:27 AM] [pgPhG#18] Sipi: joined with identifiers [steam:11000010c1904c0; license:c611e33c58bb28b7d49645c8a2590e343e50afe3; xbl:2533274884191418; live:2111055889880348; discord:340298276387553283; fivem:9561979; license2:8729137e6c1ddb8f875e8adbf57a3c5a9ac82e98]
+[10:32:39 AM] [pgPhG#15] DaddyDizzle: said "/givevehicle 15 1"
+[10:33:49 AM] [pgPhG#15] DaddyDizzle: said "/vehiclegive 15"
+[10:34:03 AM] [pgPhG#9] missberrymedley: said "/crossarms5"
+[10:34:06 AM] [pgPhG#9] missberrymedley: said "/crossarms5"
+[10:36:06 AM] [pgPhG#15] DaddyDizzle: said "/sellvehicle 15 1"
+[10:39:44 AM] [pgPhG#15] DaddyDizzle: said "/givevehicle 15 1"
+[10:40:06 AM] [pgPhG#19] JOSH: joined with identifiers [steam:1100001438fe567; license:b6284c20b4ad2c41c48d4a31859b65ae2a417ec8; discord:405075418769522708; fivem:12124231; license2:b6284c20b4ad2c41c48d4a31859b65ae2a417ec8]
+[10:44:42 AM] [pgPhG#18] Sipi: said "/carry"
+[10:44:47 AM] [pgPhG#18] Sipi: said "/carry"
+[10:44:50 AM] [pgPhG#19] JOSH: said "/th"
+[10:44:52 AM] [pgPhG#15] DaddyDizzle: said "/vehiclesell 15 MOB 1"
+[10:44:54 AM] [pgPhG#18] Sipi: said "/carry"
+[10:44:59 AM] [pgPhG#18] Sipi: said "/carry"
+[10:45:01 AM] [pgPhG#11] MJL: said "/reporttoggl"
+[10:45:05 AM] [pgPhG#18] Sipi: said "/carry"
+[10:45:12 AM] [pgPhG#18] Sipi: said "/carry"
+[10:45:18 AM] [pgPhG#18] Sipi: said "/carry"
+[10:45:24 AM] [pgPhG#18] Sipi: said "/carry"
+[10:46:51 AM] [pgPhG#17] Kody Pepperfield: said "/radar"
+[10:47:00 AM] [pgPhG#17] Kody Pepperfield: said "/RADAR"
+[10:50:21 AM] [pgPhG#16] BotOnMnK: died from suicide (Falling)
+[10:50:50 AM] [pgPhG#9] missberrymedley: said "/crossarms5"
+[10:50:50 AM] [pgPhG#9] missberrymedley: said "/ecrossarms5"
+[10:51:24 AM] [pgPhG#16] BotOnMnK: died from Pistol by DaddyDizzle
+[10:52:48 AM] [pgPhG#16] BotOnMnK: said "id"
+[10:52:53 AM] [pgPhG#20] TwilightLegend: joined with identifiers [steam:110000134cd45d6; license:17b4e625ae7b654e44eb3e5c8f0e9c477a533e1e; xbl:2535411115235991; live:844425230562785; discord:396531932374237184; fivem:3179013; license2:17b4e625ae7b654e44eb3e5c8f0e9c477a533e1e]
+[10:52:58 AM] [pgPhG#20] TwilightLegend: disconnected (Exiting)
+[10:54:38 AM] [pgPhG#17] Kody Pepperfield: died from Pistol by DaddyDizzle
+[10:54:56 AM] [pgPhG#17] Kody Pepperfield: died from Pump Shotgun by DaddyDizzle
+[10:55:55 AM] [pgPhG#9] missberrymedley: said "/crossarms5"
+[10:55:55 AM] [pgPhG#9] missberrymedley: said "/ecrossarms5"
+[10:58:21 AM] [pgPhG#9] missberrymedley: said "/crossarms5"
+[10:58:21 AM] [pgPhG#9] missberrymedley: said "/ecrossarms5"
+[10:58:32 AM] [pgPhG#9] missberrymedley: said "/crossarms5"
+[10:58:32 AM] [pgPhG#9] missberrymedley: said "/ecrossarms5"
+[10:59:36 AM] [pgPhG#17] Kody Pepperfield: disconnected (Exiting)
+[10:59:51 AM] [pgPhG#16] BotOnMnK: said "/hideHUD"
+[11:00:12 AM] [pgPhG#16] BotOnMnK: said "/hideHUD"
+[11:00:38 AM] [pgPhG#16] BotOnMnK: said "/hideHUD"
+[11:00:53 AM] [pgPhG#16] BotOnMnK: said "/hideHUD"
+[11:01:08 AM] [pgPhG#15] DaddyDizzle: said "/hideHUD"
+[11:01:15 AM] [pgPhG#16] BotOnMnK: said "/hideHUD"
+[11:02:07 AM] [pgPhG#16] BotOnMnK: said "/hideHUD"
+[11:02:23 AM] [pgPhG#18] Sipi: said "/carry"
+[11:06:58 AM] [pgPhG#16] BotOnMnK: said "/hideHUD"
+[11:09:39 AM] [pgPhG#16] BotOnMnK: disconnected (Exiting)
+[11:10:55 AM] [pgPhG#19] JOSH: disconnected (Exiting)
+[11:12:23 AM] [pgPhG#15] DaddyDizzle: said "/buyvehicle"
+[11:12:30 AM] [pgPhG#15] DaddyDizzle: said "/vehiclesell 15"
+[11:12:57 AM] [pgPhG#15] DaddyDizzle: said "/vehicle sell 15 1"
+[11:13:04 AM] [pgPhG#15] DaddyDizzle: said "/give vehicle 15 1"
+[11:13:11 AM] [pgPhG#15] DaddyDizzle: said "/givevehicle 15"
+[11:13:21 AM] [pgPhG#15] DaddyDizzle: said "/vehiclesell 15 1"
+[11:13:31 AM] [pgPhG#15] DaddyDizzle: said "/sellvehivle 15 1"
+[11:13:43 AM] [pgPhG#15] DaddyDizzle: said "/givevehicle 15 1"
+[11:13:54 AM] [pgPhG#15] DaddyDizzle: said "/vehiclesell 15 1"
+[11:18:05 AM] [pgPhG#21] Esky: joined with identifiers [steam:110000131c93706; license:8dfbcb6dabf76f1c81aa91d421dc6c2ab1407ba6; xbl:2535436019694875; live:914798270695886; discord:350771731708772354; fivem:11993654; license2:8dfbcb6dabf76f1c81aa91d421dc6c2ab1407ba6]
+[11:19:46 AM] [pgPhG#15] DaddyDizzle: said "/hideHUD"
+[11:23:54 AM] [pgPhG#22] TwilightLegend: joined with identifiers [steam:110000134cd45d6; license:17b4e625ae7b654e44eb3e5c8f0e9c477a533e1e; xbl:2535411115235991; live:844425230562785; discord:396531932374237184; fivem:3179013; license2:17b4e625ae7b654e44eb3e5c8f0e9c477a533e1e]
+[11:28:20 AM] [pgPhG#2] φοῖνιξ: died from Bat by missberrymedley
+[11:28:53 AM] [pgPhG#9] missberrymedley: died from Bat by Anne Flank
+[11:29:50 AM] [pgPhG#21] Esky: disconnected (Exiting)
+[11:30:30 AM] [pgPhG#23] Esky: joined with identifiers [steam:110000131c93706; license:8dfbcb6dabf76f1c81aa91d421dc6c2ab1407ba6; xbl:2535436019694875; live:914798270695886; discord:350771731708772354; fivem:11993654; license2:8dfbcb6dabf76f1c81aa91d421dc6c2ab1407ba6]
+[11:36:24 AM] [pgPhG#24] Mr.Green: joined with identifiers [steam:110000117f12b1a; license:8cb9f8548eb4c7764c77849cfa2ff397ec016f08; xbl:2535433922801834; live:985153858977618; discord:322443072233537556; fivem:10498222; license2:6dd94f8afb9d56223c4c530061c5ab1316c72c1c]
+[11:37:51 AM] [pgPhG#15] DaddyDizzle: said "/hideHUD"
+[11:37:54 AM] [pgPhG#15] DaddyDizzle: said "/hideHUD"
+[11:37:55 AM] [pgPhG#15] DaddyDizzle: said "/hideHUD"
+[11:37:57 AM] [pgPhG#15] DaddyDizzle: said "/hideHUD"
+[11:37:59 AM] [pgPhG#15] DaddyDizzle: said "/hideHUD"
+[11:38:01 AM] [pgPhG#15] DaddyDizzle: said "/hideHUD"
+[11:38:02 AM] [pgPhG#15] DaddyDizzle: said "/hideHUD"
+[11:38:05 AM] [pgPhG#15] DaddyDizzle: said "/hideHUD"
+[11:38:13 AM] [pgPhG#15] DaddyDizzle: said "/hideHUD"
+[11:38:16 AM] [pgPhG#15] DaddyDizzle: said "dv"
+[11:38:19 AM] [pgPhG#15] DaddyDizzle: said "/hideHUD"
+[11:38:19 AM] [pgPhG#15] DaddyDizzle: said "/hideHUD"
+[11:38:45 AM] [pgPhG#15] DaddyDizzle: said "/hideHUD"
+[11:38:49 AM] [pgPhG#15] DaddyDizzle: said "/hideHUD"
+[11:38:51 AM] [pgPhG#15] DaddyDizzle: said "/hideHUD"
+[11:38:54 AM] [pgPhG#15] DaddyDizzle: said "/hideHUD"
+[11:38:56 AM] [pgPhG#15] DaddyDizzle: said "/hideHUD"
+[11:40:11 AM] [pgPhG#23] Esky: disconnected (Exiting)
+[11:40:34 AM] [pgPhG#15] DaddyDizzle: said "/hideHUD"
+[11:40:39 AM] [pgPhG#15] DaddyDizzle: said "/hideHUD"
+[11:40:55 AM] [pgPhG#15] DaddyDizzle: said "/hideHUD"
+[11:41:00 AM] [pgPhG#15] DaddyDizzle: said "/hideHUD"
+[11:41:09 AM] [pgPhG#18] Sipi: said "/carry"
+[11:41:09 AM] [pgPhG#15] DaddyDizzle: said "/hideHUD"
+[11:41:11 AM] [pgPhG#15] DaddyDizzle: said "/hideHUD"
+[11:41:13 AM] [pgPhG#15] DaddyDizzle: said "/hideHUD"
+[11:41:15 AM] [pgPhG#15] DaddyDizzle: said "/hideHUD"
+[11:41:17 AM] [pgPhG#15] DaddyDizzle: said "/hideHUD"
+[11:41:20 AM] [pgPhG#15] DaddyDizzle: said "/v"
+[11:41:23 AM] [pgPhG#15] DaddyDizzle: said "/d"
+[11:41:26 AM] [pgPhG#15] DaddyDizzle: said "/hideHUD"
+[11:57:12 AM] [pgPhG#18] Sipi: said "/carry"
+[12:12:34 PM] [pgPhG#14] Anne Flank: died from unknown by DaddyDizzle
+[12:15:05 PM] [pgPhG#18] Sipi: said "/carry"
+[12:19:08 PM] [pgPhG#14] Anne Flank: said "/givekey"
+[12:19:11 PM] [pgPhG#14] Anne Flank: said "/givekey"
+[12:19:38 PM] [pgPhG#14] Anne Flank: said "/givekey 24"
+[12:19:44 PM] [pgPhG#14] Anne Flank: said "/givekey 24"
+[12:20:57 PM] [pgPhG#25] Kody Pepperfield: joined with identifiers [steam:11000010c770c55; license:3219d00ad3af143df0db5d2bed38fe7460729e68; xbl:2535451109437060; live:1055521765014399; discord:152991330048540672; fivem:12674089; license2:3e576e238fb0360dab034daae9fc7459afbacb59]
+[12:27:34 PM] [pgPhG#15] DaddyDizzle: said "/uncuff 15"
+[12:28:10 PM] [pgPhG#15] DaddyDizzle: said "/hideHUD"
+[12:29:53 PM] [pgPhG#15] DaddyDizzle: said "/uncuff"
+[12:30:04 PM] [pgPhG#15] DaddyDizzle: said "/uncuff 15"
+[12:32:50 PM] [pgPhG#15] DaddyDizzle: died from unknown by Kody Pepperfield
+[12:34:23 PM] [pgPhG#25] Kody Pepperfield: died from Pistol by DaddyDizzle
+[12:34:32 PM] [pgPhG#24] Mr.Green: died from Pistol by DaddyDizzle
+[12:34:37 PM] [pgPhG#25] Kody Pepperfield: died from Pistol by DaddyDizzle
+[12:35:20 PM] [pgPhG#15] DaddyDizzle: died from Special Carbine by MJL
+[12:35:29 PM] [pgPhG#15] DaddyDizzle: said "rvive"
+[12:36:49 PM] [pgPhG#26] JOSH: joined with identifiers [steam:1100001438fe567; license:b6284c20b4ad2c41c48d4a31859b65ae2a417ec8; discord:405075418769522708; fivem:12124231; license2:b6284c20b4ad2c41c48d4a31859b65ae2a417ec8]
+[12:38:14 PM] [pgPhG#15] DaddyDizzle: said "/refreshskin]"
+[12:44:02 PM] [pgPhG#27] Esky: joined with identifiers [steam:110000131c93706; license:8dfbcb6dabf76f1c81aa91d421dc6c2ab1407ba6; xbl:2535436019694875; live:914798270695886; discord:350771731708772354; fivem:11993654; license2:8dfbcb6dabf76f1c81aa91d421dc6c2ab1407ba6]
+[12:46:40 PM] [pgPhG#25] Kody Pepperfield: died from Bat by JOSH
+[12:46:58 PM] [pgPhG#24] Mr.Green: died from Bat by Anne Flank
+[12:47:41 PM] [pgPhG#15] DaddyDizzle: said "/refershskin"
+[12:53:23 PM] [pgPhG#25] Kody Pepperfield: said "/hideHUD"
+[12:54:13 PM] [pgPhG#27] Esky: disconnected (Exiting)
+[12:54:14 PM] [pgPhG#18] Sipi: said "/carry"
+[12:54:52 PM] [pgPhG#28] Esky: joined with identifiers [steam:110000131c93706; license:8dfbcb6dabf76f1c81aa91d421dc6c2ab1407ba6; xbl:2535436019694875; live:914798270695886; discord:350771731708772354; fivem:11993654; license2:8dfbcb6dabf76f1c81aa91d421dc6c2ab1407ba6]
+[12:58:40 PM] [pgPhG#28] Esky: disconnected (Exiting)
+[12:58:52 PM] [pgPhG#25] Kody Pepperfield: said "/quitr"
+[12:58:52 PM] [pgPhG#25] Kody Pepperfield: disconnected (Exiting)
+[1:00:03 PM] [pgPhG#24] Mr.Green: died from Ranover by Vehicle by Anne Flank
+[1:02:51 PM] [pgPhG#29] Esky: joined with identifiers [steam:110000131c93706; license:8dfbcb6dabf76f1c81aa91d421dc6c2ab1407ba6; xbl:2535436019694875; live:914798270695886; discord:350771731708772354; fivem:11993654; license2:8dfbcb6dabf76f1c81aa91d421dc6c2ab1407ba6]
+[1:08:19 PM] [pgPhG#29] Esky: said "/money"
+[1:08:44 PM] [pgPhG#15] DaddyDizzle: said "/neon"
+[1:08:48 PM] [pgPhG#15] DaddyDizzle: said "/lights"
+[1:08:56 PM] [pgPhG#15] DaddyDizzle: said "/underglow"
+[1:14:51 PM] [pgPhG#18] Sipi: said "/carry"
+[1:14:51 PM] [pgPhG#18] Sipi: said "/carry"
+[1:16:05 PM] [pgPhG#22] TwilightLegend: disconnected (Exiting)
+[1:18:39 PM] [pgPhG#26] JOSH: said "/th"
+[1:18:40 PM] [pgPhG#26] JOSH: said "/th"
+[1:28:55 PM] [pgPhG#15] DaddyDizzle: said "/hideHUD"
+[1:29:01 PM] [pgPhG#14] Anne Flank: said "/hideHUD"
+[1:29:26 PM] [pgPhG#15] DaddyDizzle: said "/hideHUD"
+[1:30:41 PM] txAdmin: ((Broadcast) txAdmin): said "This server is scheduled to restart in 30 minutes."
+[1:33:54 PM] [pgPhG#15] DaddyDizzle: said "/hideHUD"
+[1:34:13 PM] [pgPhG#15] DaddyDizzle: said "/t[m"
+[1:34:56 PM] [pgPhG#15] DaddyDizzle: said "/hideHUD"
+[1:35:53 PM] [pgPhG#24] Mr.Green: said "/hideHUD"
+[1:37:38 PM] [pgPhG#18] Sipi: disconnected (Exiting)
+[1:40:48 PM] [pgPhG#15] DaddyDizzle: said "/hideHUD"
+[1:40:52 PM] [pgPhG#15] DaddyDizzle: said "/hideHUD"
+[1:40:56 PM] [pgPhG#15] DaddyDizzle: said "/hideHUD"
+[1:41:18 PM] [pgPhG#15] DaddyDizzle: said "/hideHUD"
+[1:42:20 PM] [pgPhG#26] JOSH: said "/th"
+[1:42:57 PM] [pgPhG#26] JOSH: said "/hideHUD"
+[1:42:59 PM] [pgPhG#26] JOSH: disconnected (Exiting)
+[1:44:35 PM] [pgPhG#24] Mr.Green: said "/hideHUD"
+[1:45:00 PM] [pgPhG#14] Anne Flank: said "/givekey 24"
+[1:45:06 PM] [pgPhG#14] Anne Flank: said "/givekey 24"
+[1:45:17 PM] [pgPhG#14] Anne Flank: said "/givekey24"
+[1:45:41 PM] txAdmin: ((Broadcast) txAdmin): said "This server is scheduled to restart in 15 minutes."
+[1:45:44 PM] [pgPhG#2] φοῖνιξ: disconnected (Game crashed: d3d11.dll!CContext::TID3D11DeviceContext_SetShaderResources_<1,4> (0x161))
+[1:47:42 PM] [pgPhG#30] φοῖνιξ: joined with identifiers [steam:11000010ee88c01; license:ee681c08d9d45c48bf5af06870d7d23d75db16dc; xbl:2535430200613003; live:985158121988759; discord:305372052683096065; fivem:10488223; license2:ee681c08d9d45c48bf5af06870d7d23d75db16dc]
+[1:50:41 PM] txAdmin: ((Broadcast) txAdmin): said "This server is scheduled to restart in 10 minutes."
+[1:55:41 PM] txAdmin: ((Broadcast) txAdmin): said "This server is scheduled to restart in 5 minutes."
+[1:56:41 PM] txAdmin: ((Broadcast) txAdmin): said "This server is scheduled to restart in 4 minutes."
+[1:57:41 PM] txAdmin: ((Broadcast) txAdmin): said "This server is scheduled to restart in 3 minutes."
+[1:58:41 PM] txAdmin: ((Broadcast) txAdmin): said "This server is scheduled to restart in 2 minutes."
+[1:59:22 PM] [pgPhG#15] DaddyDizzle: said "/hideHUD"
+[1:59:42 PM] txAdmin: ((Broadcast) txAdmin): said "This server is scheduled to restart in 1 minute. Please disconnect now."
+[1:59:47 PM] [pgPhG#9] missberrymedley: disconnected (Exiting)
+[1:59:57 PM] [pgPhG#15] DaddyDizzle: disconnected (Exiting)
+[2:00:14 PM] [pgPhG#14] Anne Flank: disconnected (Exiting)
+[2:00:41 PM] [pgPhG#11] MJL: disconnected ([txAdmin] Server restarting (scheduled restart at 14:00).)
+[2:00:41 PM] [pgPhG#24] Mr.Green: disconnected ([txAdmin] Server restarting (scheduled restart at 14:00).)
+[2:00:41 PM] [pgPhG#29] Esky: disconnected ([txAdmin] Server restarting (scheduled restart at 14:00).)
+[2:00:41 PM] [pgPhG#30] φοῖνιξ: disconnected ([txAdmin] Server restarting (scheduled restart at 14:00).)
+[2:03:31 PM] txAdmin: Logger started
+[2:04:18 PM] [JzEYn#1] BotOnMnK: joined with identifiers [steam:11000014df460ff; license:06a61b4c40fc28c0a6e0a709ba99ffb637152b33; xbl:2535406023679221; live:1055518462074046; discord:1043623556015194112; fivem:9907274; license2:06a61b4c40fc28c0a6e0a709ba99ffb637152b33]
+[2:05:37 PM] [JzEYn#2] DaddyDizzle: joined with identifiers [steam:11000014bb53aeb; license:e0893217ab0d40d6a510bcbfe1c9441b4a208a2b; discord:584024523989581834; fivem:8961289; license2:e0893217ab0d40d6a510bcbfe1c9441b4a208a2b]
+[2:06:02 PM] [JzEYn#3] Anne Flank: joined with identifiers [steam:1100001097e125b; license:a938a74170975c01e88f463aea01684a16f28545; xbl:2535409246266710; live:1899947325711585; discord:293157047682465793; license2:9eb41e0279fe15e33ff86440bafc2105d3b78f01]
+[2:06:26 PM] [JzEYn#4] JOSH: joined with identifiers [steam:1100001438fe567; license:b6284c20b4ad2c41c48d4a31859b65ae2a417ec8; discord:405075418769522708; fivem:12124231; license2:b6284c20b4ad2c41c48d4a31859b65ae2a417ec8]
+[2:07:03 PM] [JzEYn#5] missberrymedley: joined with identifiers [steam:11000010cab8d07; license:7a3a5bfb5af789cb5f02843e29cc4ee338b0a294; xbl:2535413783067581; live:1688853905214434; discord:461174423903535107; fivem:1697557; license2:ec1926a90f33d1955abd2276f36a7c3ed4c51a23]
+[2:07:07 PM] [JzEYn#6] φοῖνιξ: joined with identifiers [steam:11000010ee88c01; license:ee681c08d9d45c48bf5af06870d7d23d75db16dc; xbl:2535430200613003; live:985158121988759; discord:305372052683096065; fivem:10488223; license2:ee681c08d9d45c48bf5af06870d7d23d75db16dc]
+[2:08:14 PM] [JzEYn#7] Mr.Green: joined with identifiers [steam:110000117f12b1a; license:8cb9f8548eb4c7764c77849cfa2ff397ec016f08; xbl:2535433922801834; live:985153858977618; discord:322443072233537556; fivem:10498222; license2:6dd94f8afb9d56223c4c530061c5ab1316c72c1c]
+[2:10:32 PM] [JzEYn#3] Anne Flank: said "/hideHUD"
+[2:16:00 PM] [JzEYn#8] RigssRP: joined with identifiers [steam:11000014abdebcf; license:0503ca95eab75210d3475b9e63fd6aa6028e6a91; xbl:2535446394392876; live:1055518940555852; discord:1103467626300199044; fivem:8351340; license2:2a20c64a2a1abb3e1653a5c89e5ac281f69f1eb9]
+[2:26:00 PM] [JzEYn#9] MJL: joined with identifiers [steam:1100001324fa523; license:ec6c328d6d02f816bf13e4a9d09768c02d6e3125; xbl:2535415531070562; live:1055522508602522; discord:213410953641852928; fivem:2586828]
+[2:30:03 PM] [JzEYn#4] JOSH: died from Special Carbine by MJL
+[2:37:27 PM] [JzEYn#7] Mr.Green: disconnected (Server->client connection timed out. Last seen 5098 msec ago.)
+[2:39:37 PM] [JzEYn#10] Mr.Green: joined with identifiers [steam:110000117f12b1a; license:8cb9f8548eb4c7764c77849cfa2ff397ec016f08; xbl:2535433922801834; live:985153858977618; discord:322443072233537556; fivem:10498222; license2:6dd94f8afb9d56223c4c530061c5ab1316c72c1c]
+[2:41:13 PM] [JzEYn#3] Anne Flank: said "/mechanic 3"
+[2:44:50 PM] [JzEYn#2] DaddyDizzle: said "/hideHUD"
+[2:49:38 PM] [JzEYn#5] missberrymedley: said "/crossarms5"
+[2:50:37 PM] [JzEYn#10] Mr.Green: died from Knife by BotOnMnK
+[2:59:03 PM] [JzEYn#9] MJL: said "/exithouse"
+[2:59:03 PM] [JzEYn#9] MJL: said "/enterhouse"
+[2:59:03 PM] [JzEYn#9] MJL: said "/exithouse"
+[2:59:03 PM] [JzEYn#9] MJL: said "/enterhouse"
+[3:06:55 PM] [JzEYn#1] BotOnMnK: said "/hideHUD"
+[3:10:58 PM] [JzEYn#4] JOSH: said "/th"
+[3:11:11 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[3:11:15 PM] [JzEYn#9] MJL: said "/-gearUp"
+[3:11:18 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[3:11:18 PM] [JzEYn#4] JOSH: said "/-gearDown"
+[3:11:19 PM] [JzEYn#4] JOSH: said "/-gearDown"
+[3:11:19 PM] [JzEYn#4] JOSH: said "/-gearDown"
+[3:11:21 PM] [JzEYn#9] MJL: said "/-gearUp"
+[3:11:23 PM] [JzEYn#9] MJL: said "/-gearUp"
+[3:11:28 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[3:11:28 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[3:12:17 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[3:12:19 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[3:12:25 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[3:12:31 PM] [JzEYn#4] JOSH: said "/-gearDown"
+[3:12:32 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[3:12:32 PM] [JzEYn#4] JOSH: said "/-gearDown"
+[3:12:32 PM] [JzEYn#4] JOSH: said "/-gearDown"
+[3:12:33 PM] [JzEYn#4] JOSH: said "/-gearDown"
+[3:12:33 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[3:12:37 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[3:12:37 PM] [JzEYn#4] JOSH: said "/-gearDown"
+[3:12:38 PM] [JzEYn#4] JOSH: said "/-gearDown"
+[3:12:38 PM] [JzEYn#4] JOSH: said "/-gearDown"
+[3:12:42 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[3:12:44 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[3:12:44 PM] [JzEYn#4] JOSH: said "/-gearDown"
+[3:12:45 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[3:12:50 PM] [JzEYn#4] JOSH: said "/-gearDown"
+[3:12:54 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[3:12:54 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[3:12:55 PM] [JzEYn#4] JOSH: said "/-gearDown"
+[3:12:55 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[3:12:58 PM] [JzEYn#4] JOSH: said "/-gearDown"
+[3:12:58 PM] [JzEYn#4] JOSH: said "/-gearDown"
+[3:13:13 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[3:13:13 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[3:13:13 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[3:13:13 PM] [JzEYn#4] JOSH: said "/-gearDown"
+[3:13:13 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[3:13:18 PM] [JzEYn#4] JOSH: said "/-gearDown"
+[3:13:19 PM] [JzEYn#4] JOSH: said "/-gearDown"
+[3:13:20 PM] [JzEYn#4] JOSH: said "/-gearDown"
+[3:13:30 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[3:13:30 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[3:13:30 PM] [JzEYn#4] JOSH: said "/-gearDown"
+[3:13:31 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[3:13:33 PM] [JzEYn#4] JOSH: said "/-gearDown"
+[3:13:35 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[3:13:35 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[3:13:35 PM] [JzEYn#4] JOSH: said "/-gearDown"
+[3:14:26 PM] [JzEYn#4] JOSH: said "/-gearDown"
+[3:14:27 PM] [JzEYn#4] JOSH: said "/-gearDown"
+[3:14:38 PM] [JzEYn#9] MJL: said "/-gearUp"
+[3:14:43 PM] [JzEYn#1] BotOnMnK: said "refreshskin"
+[3:14:52 PM] [JzEYn#9] MJL: said "/-gearUp"
+[3:15:02 PM] [JzEYn#9] MJL: said "/-gearUp"
+[3:15:24 PM] [JzEYn#9] MJL: said "/-gearUp"
+[3:15:28 PM] [JzEYn#9] MJL: said "/-gearUp"
+[3:18:04 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[3:18:21 PM] [JzEYn#9] MJL: said "/-gearUp"
+[3:18:22 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[3:18:24 PM] [JzEYn#9] MJL: said "/-gearUp"
+[3:18:54 PM] [JzEYn#2] DaddyDizzle: died from suicide (Falling)
+[3:19:43 PM] [JzEYn#1] BotOnMnK: said "/hideHUD"
+[3:19:43 PM] [JzEYn#2] DaddyDizzle: said "/hideHUD"
+[3:20:30 PM] [JzEYn#1] BotOnMnK: disconnected (Game crashed: GTA5_b2699.exe!_setSamplersForPixelShader (0x89))
+[3:20:34 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[3:20:35 PM] [JzEYn#9] MJL: said "/-gearUp"
+[3:20:38 PM] [JzEYn#9] MJL: said "/-gearUp"
+[3:20:43 PM] [JzEYn#4] JOSH: said "/-gearDown"
+[3:20:43 PM] [JzEYn#4] JOSH: said "/-gearDown"
+[3:20:47 PM] [JzEYn#4] JOSH: said "/-gearDown"
+[3:20:47 PM] [JzEYn#4] JOSH: said "/-gearDown"
+[3:20:47 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[3:20:47 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[3:20:56 PM] [JzEYn#10] Mr.Green: caused an explosion (GAS_TANK)
+[3:20:56 PM] [JzEYn#5] missberrymedley: caused an explosion (GAS_TANK)
+[3:20:56 PM] [JzEYn#6] φοῖνιξ: caused an explosion (GAS_TANK)
+[3:20:56 PM] [JzEYn#10] Mr.Green: caused an explosion (CAR)
+[3:20:56 PM] [JzEYn#3] Anne Flank: caused an explosion (CAR)
+[3:20:56 PM] [JzEYn#3] Anne Flank: caused an explosion (GAS_TANK)
+[3:20:56 PM] [JzEYn#3] Anne Flank: died from suicide
+[3:20:56 PM] [JzEYn#10] Mr.Green: died from Explosion by Anne Flank
+[3:20:56 PM] [JzEYn#4] JOSH: said "/-gearDown"
+[3:20:56 PM] [JzEYn#4] JOSH: said "/-gearDown"
+[3:20:59 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[3:20:59 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[3:21:02 PM] [JzEYn#4] JOSH: said "/-gearDown"
+[3:21:02 PM] [JzEYn#4] JOSH: said "/-gearDown"
+[3:21:06 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[3:21:06 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[3:21:10 PM] [JzEYn#4] JOSH: said "/-gearDown"
+[3:21:10 PM] [JzEYn#4] JOSH: said "/-gearDown"
+[3:21:14 PM] [JzEYn#4] JOSH: said "/-gearDown"
+[3:21:31 PM] [JzEYn#2] DaddyDizzle: said "/hideHUD"
+[3:21:48 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[3:21:50 PM] [JzEYn#4] JOSH: said "/-gearDown"
+[3:21:50 PM] [JzEYn#4] JOSH: said "/-gearDown"
+[3:21:56 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[3:21:57 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[3:22:09 PM] [JzEYn#9] MJL: said "/-gearUp"
+[3:22:10 PM] [JzEYn#4] JOSH: said "/-gearDown"
+[3:22:11 PM] [JzEYn#9] MJL: said "/-gearUp"
+[3:22:45 PM] [JzEYn#9] MJL: said "/-gearUp"
+[3:22:47 PM] [JzEYn#9] MJL: said "/-gearUp"
+[3:22:50 PM] [JzEYn#9] MJL: said "/-gearUp"
+[3:23:21 PM] [JzEYn#2] DaddyDizzle: said "/hideHUD"
+[3:23:22 PM] [JzEYn#2] DaddyDizzle: said "/hideHUD"
+[3:23:24 PM] [JzEYn#2] DaddyDizzle: said "/hideHUD"
+[3:23:26 PM] [JzEYn#2] DaddyDizzle: said "/hideHUD"
+[3:24:13 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[3:24:25 PM] [JzEYn#9] MJL: said "/-gearUp"
+[3:24:27 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[3:24:27 PM] [JzEYn#9] MJL: said "/-gearUp"
+[3:24:29 PM] [JzEYn#9] MJL: said "/-gearUp"
+[3:24:32 PM] [JzEYn#9] MJL: said "/-gearUp"
+[3:25:14 PM] [JzEYn#10] Mr.Green: disconnected (Exiting)
+[3:26:31 PM] [JzEYn#2] DaddyDizzle: disconnected (Exiting)
+[3:26:34 PM] [JzEYn#9] MJL: said "/-gearUp"
+[3:26:40 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[3:26:41 PM] [JzEYn#9] MJL: said "/-gearUp"
+[3:26:41 PM] [JzEYn#9] MJL: said "/-gearUp"
+[3:27:09 PM] [JzEYn#11] BotOnMnK: joined with identifiers [steam:11000014df460ff; license:06a61b4c40fc28c0a6e0a709ba99ffb637152b33; xbl:2535406023679221; live:1055518462074046; discord:1043623556015194112; fivem:9907274; license2:06a61b4c40fc28c0a6e0a709ba99ffb637152b33]
+[3:27:48 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[3:27:52 PM] [JzEYn#9] MJL: said "/-gearUp"
+[3:30:47 PM] [JzEYn#3] Anne Flank: disconnected (Exiting)
+[3:32:54 PM] [JzEYn#11] BotOnMnK: disconnected (Exiting)
+[3:33:33 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[3:33:40 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[3:40:11 PM] [JzEYn#9] MJL: said "/exithouse"
+[3:40:11 PM] [JzEYn#9] MJL: said "/enterhouse"
+[3:40:12 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[3:40:13 PM] [JzEYn#9] MJL: said "/-gearUp"
+[3:40:59 PM] [JzEYn#9] MJL: said "/-gearUp"
+[3:43:39 PM] [JzEYn#12] Anne Flank: joined with identifiers [steam:1100001097e125b; license:a938a74170975c01e88f463aea01684a16f28545; xbl:2535409246266710; live:1899947325711585; discord:293157047682465793; license2:9eb41e0279fe15e33ff86440bafc2105d3b78f01]
+[3:49:08 PM] [JzEYn#5] missberrymedley: said "/crossarms5"
+[3:49:08 PM] [JzEYn#5] missberrymedley: said "/ecrossarms5"
+[3:49:42 PM] [JzEYn#5] missberrymedley: said "/crossarms5"
+[3:49:42 PM] [JzEYn#5] missberrymedley: said "/ecrossarms5"
+[3:56:19 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[3:56:22 PM] [JzEYn#9] MJL: said "/-gearUp"
+[3:56:24 PM] [JzEYn#9] MJL: said "/-gearUp"
+[3:56:26 PM] [JzEYn#9] MJL: said "/-gearUp"
+[3:56:42 PM] [JzEYn#9] MJL: said "/-gearUp"
+[3:56:45 PM] [JzEYn#9] MJL: said "/-gearUp"
+[3:56:50 PM] [JzEYn#9] MJL: said "/-gearUp"
+[3:58:19 PM] [JzEYn#9] MJL: said "/-gearDown"
+[3:58:20 PM] [JzEYn#9] MJL: said "/-gearDown"
+[3:58:20 PM] [JzEYn#9] MJL: said "/-gearDown"
+[4:07:19 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[4:07:23 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[4:07:37 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[4:14:21 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[4:14:32 PM] [JzEYn#4] JOSH: said "/-gearDown"
+[4:14:51 PM] [JzEYn#4] JOSH: said "/-gearDown"
+[4:14:52 PM] [JzEYn#4] JOSH: said "/-gearDown"
+[4:16:30 PM] [JzEYn#12] Anne Flank: died from Bat by RigssRP
+[4:19:08 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[4:19:20 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:20:53 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[4:20:54 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:20:57 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[4:21:10 PM] [JzEYn#9] MJL: said "/exithouse"
+[4:21:10 PM] [JzEYn#9] MJL: said "/enterhouse"
+[4:21:24 PM] [JzEYn#12] Anne Flank: said "/hideHUD"
+[4:21:25 PM] [JzEYn#12] Anne Flank: disconnected (Exiting)
+[4:22:26 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:22:29 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[4:22:50 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[4:24:35 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:25:05 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:26:01 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:28:22 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:28:24 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:28:27 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:28:32 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:28:49 PM] [JzEYn#6] φοῖνιξ: said "/refeshskin"
+[4:28:53 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:28:53 PM] [JzEYn#6] φοῖνιξ: said "/refeshskin"
+[4:29:06 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:30:51 PM] [JzEYn#6] φοῖνιξ: disconnected (Exiting)
+[4:33:10 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[4:33:10 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:33:15 PM] [JzEYn#9] MJL: said "/exithouse"
+[4:33:15 PM] [JzEYn#9] MJL: said "/enterhouse"
+[4:33:15 PM] [JzEYn#9] MJL: said "/exithouse"
+[4:33:15 PM] [JzEYn#9] MJL: said "/enterhouse"
+[4:33:16 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[4:33:50 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:33:50 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[4:34:07 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:34:08 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[4:34:13 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[4:37:02 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[4:37:19 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[4:37:21 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:37:42 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:37:42 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:37:47 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:37:47 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:37:53 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[4:37:56 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:37:57 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:37:58 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:38:04 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:38:12 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:38:12 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:38:13 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[4:38:21 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:38:25 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:38:30 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[4:38:30 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:38:37 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:38:57 PM] [JzEYn#9] MJL: said "/exithouse"
+[4:38:57 PM] [JzEYn#9] MJL: said "/enterhouse"
+[4:38:57 PM] [JzEYn#9] MJL: said "/exithouse"
+[4:38:57 PM] [JzEYn#9] MJL: said "/enterhouse"
+[4:38:59 PM] [JzEYn#9] MJL: said "/exithouse"
+[4:38:59 PM] [JzEYn#9] MJL: said "/enterhouse"
+[4:38:59 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:40:14 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:40:29 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[4:40:34 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:40:42 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[4:40:43 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:40:48 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:40:50 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[4:40:50 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:40:51 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[4:40:53 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:40:56 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:40:58 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[4:40:59 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:41:07 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:41:08 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:41:23 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[4:41:23 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:41:32 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:41:33 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:41:36 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:41:39 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:41:40 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[4:41:41 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:41:46 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:41:47 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[4:42:02 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[4:42:03 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:42:14 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[4:42:15 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:42:20 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:42:30 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:42:31 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[4:42:32 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:42:41 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[4:42:42 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:42:44 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:42:58 PM] [JzEYn#9] MJL: said "/exithouse"
+[4:42:58 PM] [JzEYn#9] MJL: said "/enterhouse"
+[4:42:59 PM] [JzEYn#9] MJL: said "/exithouse"
+[4:42:59 PM] [JzEYn#9] MJL: said "/enterhouse"
+[4:42:59 PM] [JzEYn#9] MJL: said "/exithouse"
+[4:42:59 PM] [JzEYn#9] MJL: said "/enterhouse"
+[4:43:00 PM] [JzEYn#9] MJL: said "/exithouse"
+[4:43:00 PM] [JzEYn#9] MJL: said "/enterhouse"
+[4:43:02 PM] [JzEYn#9] MJL: said "/exithouse"
+[4:43:02 PM] [JzEYn#9] MJL: said "/enterhouse"
+[4:43:13 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[4:43:18 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[4:43:23 PM] [JzEYn#9] MJL: said "/exithouse"
+[4:43:23 PM] [JzEYn#9] MJL: said "/enterhouse"
+[4:43:24 PM] [JzEYn#9] MJL: said "/exithouse"
+[4:43:24 PM] [JzEYn#9] MJL: said "/enterhouse"
+[4:43:25 PM] [JzEYn#9] MJL: said "/exithouse"
+[4:43:25 PM] [JzEYn#9] MJL: said "/enterhouse"
+[4:43:28 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[4:43:48 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[4:44:28 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:44:29 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[4:44:31 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:44:32 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[4:44:33 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:44:34 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:44:46 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[4:44:57 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[4:44:58 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:45:04 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:45:09 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:45:13 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:45:20 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[4:45:21 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:47:57 PM] [JzEYn#9] MJL: said "/-gearDown"
+[4:48:02 PM] [JzEYn#9] MJL: said "/-gearDown"
+[4:48:02 PM] [JzEYn#9] MJL: said "/-gearDown"
+[4:48:05 PM] [JzEYn#9] MJL: said "/-gearDown"
+[4:48:14 PM] [JzEYn#9] MJL: said "/-gearDown"
+[4:49:45 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:49:46 PM] [JzEYn#9] MJL: said "/-gearDown"
+[4:49:47 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[4:49:48 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:49:49 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[4:50:20 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:50:21 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[4:50:31 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[4:51:19 PM] [JzEYn#9] MJL: said "/hideHUD"
+[4:51:19 PM] [JzEYn#4] JOSH: said "/hideHUD"
+[4:51:22 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[4:51:23 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:51:23 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:51:24 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[4:51:25 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:51:59 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:53:27 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:53:30 PM] [JzEYn#9] MJL: said "/-gearUp"
+[4:55:47 PM] [JzEYn#4] JOSH: said "/-gearUp"
+[4:58:28 PM] [JzEYn#5] missberrymedley: disconnected (Anti-cheat resource stopped, please restart your game.)
+[5:00:02 PM] [JzEYn#13] missberrymedley: joined with identifiers [steam:11000010cab8d07; license:7a3a5bfb5af789cb5f02843e29cc4ee338b0a294; xbl:2535413783067581; live:1688853905214434; discord:461174423903535107; fivem:1697557; license2:ec1926a90f33d1955abd2276f36a7c3ed4c51a23]
+[5:03:37 PM] [JzEYn#4] JOSH: said "/-gearDown"
+[5:04:46 PM] [JzEYn#4] JOSH: said "/-gearDown"
+[5:21:01 PM] [JzEYn#4] JOSH: said "/-gearDown"
+[5:22:16 PM] [JzEYn#4] JOSH: said "/-gearDown"
+[5:22:20 PM] [JzEYn#9] MJL: said "/-gearUp"
+[5:22:23 PM] [JzEYn#9] MJL: said "/-gearUp"
+[5:27:40 PM] [JzEYn#8] RigssRP: said "/lapdance5"
+[5:27:40 PM] [JzEYn#8] RigssRP: said "/type2"
+[5:27:41 PM] [JzEYn#8] RigssRP: said "/lapdance5"
+[5:27:41 PM] [JzEYn#8] RigssRP: said "/type2"
+[5:27:42 PM] [JzEYn#8] RigssRP: said "/lapdance5"
+[5:27:42 PM] [JzEYn#8] RigssRP: said "/type2"
+[5:27:42 PM] [JzEYn#8] RigssRP: said "/lapdance5"
+[5:27:42 PM] [JzEYn#8] RigssRP: said "/type2"
+[5:28:15 PM] [JzEYn#9] MJL: said "/quit]"
+[5:28:16 PM] [JzEYn#9] MJL: disconnected (Exiting)
+[5:28:21 PM] [JzEYn#8] RigssRP: said "/Type2"
+[5:28:22 PM] [JzEYn#8] RigssRP: said "/Type2"
+[5:28:22 PM] [JzEYn#8] RigssRP: said "/Type2"
+[5:28:22 PM] [JzEYn#8] RigssRP: said "/Type2"
+[5:28:22 PM] [JzEYn#8] RigssRP: said "/Type2"
+[5:28:23 PM] [JzEYn#8] RigssRP: said "/Type2"
+[5:28:23 PM] [JzEYn#8] RigssRP: said "/Type2"
+[5:28:23 PM] [JzEYn#8] RigssRP: said "/Type2"
+[5:28:23 PM] [JzEYn#8] RigssRP: said "/Type2"
+[5:28:23 PM] [JzEYn#8] RigssRP: said "/Type2"
+[5:28:28 PM] [JzEYn#8] RigssRP: said "/lapdance5"
+[5:28:28 PM] [JzEYn#8] RigssRP: said "/type2"
+[5:28:28 PM] [JzEYn#8] RigssRP: said "/lapdance5"
+[5:28:28 PM] [JzEYn#8] RigssRP: said "/type2"
+[5:28:57 PM] [JzEYn#14] MJL: joined with identifiers [steam:1100001324fa523; license:ec6c328d6d02f816bf13e4a9d09768c02d6e3125; xbl:2535415531070562; live:1055522508602522; discord:213410953641852928; fivem:2586828]
+[5:33:42 PM] [JzEYn#8] RigssRP: disconnected (Exiting)
+[5:34:40 PM] [JzEYn#14] MJL: disconnected (Exiting)
+[5:36:37 PM] [JzEYn#4] JOSH: said "/hideHUD"
+[5:36:38 PM] [JzEYn#4] JOSH: disconnected (Exiting)
+[5:42:47 PM] [JzEYn#13] missberrymedley: disconnected (Exiting)
+[5:47:52 PM] [JzEYn#15] Anne Flank: joined with identifiers [steam:1100001097e125b; license:a938a74170975c01e88f463aea01684a16f28545; xbl:2535409246266710; live:1899947325711585; discord:293157047682465793; license2:9eb41e0279fe15e33ff86440bafc2105d3b78f01]
+[6:58:56 PM] [JzEYn#15] Anne Flank: disconnected (Exiting)
+[7:00:14 PM] [JzEYn#16] Anne Flank: joined with identifiers [steam:1100001097e125b; license:a938a74170975c01e88f463aea01684a16f28545; xbl:2535409246266710; live:1899947325711585; discord:293157047682465793; license2:9eb41e0279fe15e33ff86440bafc2105d3b78f01]
+[7:49:41 PM] [JzEYn#16] Anne Flank: disconnected (Exiting)
+[8:19:29 PM] [JzEYn#17] MaRioo: joined with identifiers [steam:1100001583448c0; license:4a1330c97de0872e23ebb026c0175f587a2b254f; xbl:2535413153278333; live:985154744642819; discord:953783796447187014; fivem:11680364; license2:4a1330c97de0872e23ebb026c0175f587a2b254f]
+[8:23:58 PM] [JzEYn#18] Kamakazi Gamdom: joined with identifiers [steam:11000010e87be4d; license:b27179133e8df658895ecd5f756db2a4a4c8cd08; xbl:2533275003431282; live:1829581607460581; discord:242888314108116992; fivem:11442758; license2:e1e3866f24a1a081ffd211b7c1805c667b695651]
+[8:25:32 PM] [JzEYn#18] Kamakazi Gamdom: said "/hideHUD"
+[8:25:34 PM] [JzEYn#18] Kamakazi Gamdom: said "/hideHUD"
+[8:25:34 PM] [JzEYn#18] Kamakazi Gamdom: said "/hideHUD"
+[8:25:37 PM] [JzEYn#18] Kamakazi Gamdom: said "/hideHUD"
+[8:25:40 PM] [JzEYn#18] Kamakazi Gamdom: said "/hideHUD"
+[8:25:42 PM] [JzEYn#18] Kamakazi Gamdom: said "/hideHUD"
+[8:26:15 PM] [JzEYn#18] Kamakazi Gamdom: said "/hideHUD"
+[8:26:17 PM] [JzEYn#18] Kamakazi Gamdom: said "/hideHUD"
+[8:31:50 PM] [JzEYn#18] Kamakazi Gamdom: said "/hideHUD"
+[8:31:51 PM] [JzEYn#18] Kamakazi Gamdom: said "/hideHUD"
+[8:31:56 PM] [JzEYn#18] Kamakazi Gamdom: said "/hideHUD"
+[8:31:56 PM] [JzEYn#18] Kamakazi Gamdom: said "/hideHUD"
+[8:31:59 PM] [JzEYn#18] Kamakazi Gamdom: said "/hideHUD"
+[8:32:01 PM] [JzEYn#18] Kamakazi Gamdom: said "/hideHUD"
+[8:32:32 PM] [JzEYn#18] Kamakazi Gamdom: said "tpm"
+[8:33:05 PM] [JzEYn#17] MaRioo: said "//steal"
+[8:33:21 PM] [JzEYn#18] Kamakazi Gamdom: said "/hideHUD"
+[8:33:29 PM] [JzEYn#18] Kamakazi Gamdom: said "/hideHUD"
+[8:33:30 PM] [JzEYn#18] Kamakazi Gamdom: said "/hideHUD"
+[8:33:31 PM] [JzEYn#18] Kamakazi Gamdom: said "/hideHUD"
+[8:33:32 PM] [JzEYn#18] Kamakazi Gamdom: said "/hideHUD"
+[8:35:10 PM] [JzEYn#17] MaRioo: said "/sleep"
+[8:35:10 PM] [JzEYn#17] MaRioo: said "//e sleep"
+[8:35:10 PM] [JzEYn#17] MaRioo: said "/sunbathe3"
+[8:35:10 PM] [JzEYn#17] MaRioo: said "/sunbathe 3"
+[8:35:10 PM] [JzEYn#17] MaRioo: said "/passout 3"
+[8:35:23 PM] [JzEYn#17] MaRioo: said "/hideHUD"
+[8:36:56 PM] [JzEYn#18] Kamakazi Gamdom: said "/givekeys'"
+[8:37:05 PM] [JzEYn#17] MaRioo: said "/pb"
+[8:37:19 PM] [JzEYn#18] Kamakazi Gamdom: disconnected (Exiting)
+[8:41:39 PM] [JzEYn#17] MaRioo: said "//steal"
+[8:41:41 PM] [JzEYn#17] MaRioo: said "//steal"
+[8:46:10 PM] [JzEYn#17] MaRioo: said "/steal"
+[8:46:10 PM] [JzEYn#17] MaRioo: said "//steal"
+[8:46:37 PM] [JzEYn#17] MaRioo: said "/steal"
+[8:46:37 PM] [JzEYn#17] MaRioo: said "//steal"
+[8:49:48 PM] [JzEYn#17] MaRioo: said "/pb"
+[8:49:52 PM] [JzEYn#17] MaRioo: said "/pb"
+[8:49:54 PM] [JzEYn#17] MaRioo: said "/pb"
+[8:50:23 PM] [JzEYn#19] RigssRP: joined with identifiers [steam:11000014abdebcf; license:0503ca95eab75210d3475b9e63fd6aa6028e6a91; xbl:2535446394392876; live:1055518940555852; discord:1103467626300199044; fivem:8351340; license2:2a20c64a2a1abb3e1653a5c89e5ac281f69f1eb9]
+[8:50:53 PM] [JzEYn#17] MaRioo: said "//steal"
+[8:56:57 PM] [JzEYn#17] MaRioo: said "/steal"
+[9:01:02 PM] [JzEYn#17] MaRioo: said "//steal"
+[9:01:03 PM] [JzEYn#17] MaRioo: said "//steal"
+[9:01:03 PM] [JzEYn#17] MaRioo: said "//steal"
+[9:01:03 PM] [JzEYn#17] MaRioo: said "//steal"
+[9:01:03 PM] [JzEYn#17] MaRioo: said "//steal"
+[9:01:04 PM] [JzEYn#17] MaRioo: said "//steal"
+[9:01:04 PM] [JzEYn#17] MaRioo: said "//steal"
+[9:01:04 PM] [JzEYn#17] MaRioo: said "//steal"
+[9:02:54 PM] [JzEYn#19] RigssRP: died from suicide (Falling)
+[9:04:32 PM] [JzEYn#17] MaRioo: said "/pb"
+[9:04:45 PM] [JzEYn#17] MaRioo: said "/pb"
+[9:05:43 PM] [JzEYn#17] MaRioo: disconnected (Exiting)
+[9:30:50 PM] txAdmin: ((Broadcast) txAdmin): said "This server is scheduled to restart in 30 minutes."
+[9:45:51 PM] txAdmin: ((Broadcast) txAdmin): said "This server is scheduled to restart in 15 minutes."
+[9:50:15 PM] [JzEYn#20] OGPickelRick: joined with identifiers [steam:11000015536a75e; license:e218b9506a9a239ad4dbf8fb5d095dba310668f5; xbl:2535411678658837; live:985157489391644; discord:553480387813179404; fivem:11096680; license2:abd052779a3e519a2efe4bb3d9de60abc86b7cfe]
+[9:50:51 PM] txAdmin: ((Broadcast) txAdmin): said "This server is scheduled to restart in 10 minutes."
+[9:55:51 PM] txAdmin: ((Broadcast) txAdmin): said "This server is scheduled to restart in 5 minutes."
+[9:56:51 PM] txAdmin: ((Broadcast) txAdmin): said "This server is scheduled to restart in 4 minutes."
+[9:57:51 PM] txAdmin: ((Broadcast) txAdmin): said "This server is scheduled to restart in 3 minutes."
+[9:58:51 PM] txAdmin: ((Broadcast) txAdmin): said "This server is scheduled to restart in 2 minutes."
+[9:59:51 PM] txAdmin: ((Broadcast) txAdmin): said "This server is scheduled to restart in 1 minute. Please disconnect now."
+[10:00:51 PM] [JzEYn#19] RigssRP: disconnected ([txAdmin] Server restarting (scheduled restart at 22:00).)
+[10:00:51 PM] [JzEYn#20] OGPickelRick: disconnected ([txAdmin] Server restarting (scheduled restart at 22:00).)
+[10:02:00 PM] txAdmin: Logger started
+[10:02:42 PM] [GpYFF#1] RigssRP: joined with identifiers [steam:11000014abdebcf; license:0503ca95eab75210d3475b9e63fd6aa6028e6a91; xbl:2535446394392876; live:1055518940555852; discord:1103467626300199044; fivem:8351340; license2:2a20c64a2a1abb3e1653a5c89e5ac281f69f1eb9]
+[11:33:11 PM] [GpYFF#1] RigssRP: disconnected (Exiting)
