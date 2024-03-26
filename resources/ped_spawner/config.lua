@@ -266,7 +266,7 @@ Config.PedList = {
 	----------------------------------------
 	
 	{
-		model = "mp_m_shopkeep_01",
+		model = "s_m_y_dockwork_01",
 		coords = vector3(729.50396728516,-1961.6475830078,29.287824630737), --PALOMINO AVE
 		heading = -90.0, 
 		gender = "male", 
@@ -275,7 +275,7 @@ Config.PedList = {
     },
 
 	{
-		model = "mp_m_shopkeep_01",
+		model = "s_m_y_dockwork_01",
 		coords = vector3(729.4091796875,-1974.2263183594,29.292043685913), --PALOMINO AVE
 		heading = -90.0, 
 		gender = "male", 
