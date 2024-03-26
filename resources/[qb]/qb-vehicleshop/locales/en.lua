@@ -5,6 +5,7 @@ local Translations = {
         Invalid_ID = "Invalid Player Id Supplied",
         playertoofar = "This player is not close enough",
         notenoughmoney = "Not enough money",
+        notenoughcategoryitems = "Missing correct token",
         minimumallowed = "Minimum payment allowed is $",
         overpaid = "You overpaid",
         alreadypaid = "Vehicle is already paid off",

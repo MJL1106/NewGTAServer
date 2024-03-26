@@ -195,8 +195,38 @@ RegisterNetEvent('qb-vehicleshop:server:buyShowroomVehicle', function(vehicle)
     local cid = pData.PlayerData.citizenid
     local cash = pData.PlayerData.money['cash']
     local bank = pData.PlayerData.money['bank']
-    local vehiclePrice = QBCore.Shared.Vehicles[vehicle]['price']
+    local vehicleInfo = QBCore.Shared.Vehicles[vehicle]
+    local vehiclePrice = vehicleInfo['price']
     local plate = GeneratePlate()
+    local vehicleCategory = vehicleInfo['category']
+    local shopType = vehicleInfo['shop']
+
+    if shopType == 'luxury' and vehicleCategory then
+        -- Check if the player has the required category item for luxury vehicles
+        local hasCategoryItem = pData.Functions.GetItemByName(vehicleCategory) and pData.Functions.GetItemByName(vehicleCategory).amount >= 1
+        if hasCategoryItem then
+            -- Remove one category item from player inventory
+            pData.Functions.RemoveItem(vehicleCategory, 1, 'vehicle-bought-in-showroom-category-item')
+            -- Proceed to give the vehicle to the player
+            MySQL.insert('INSERT INTO player_vehicles (license, citizenid, vehicle, hash, mods, plate, garage, state) VALUES (?, ?, ?, ?, ?, ?, ?, ?)', {
+                pData.PlayerData.license,
+                cid,
+                vehicle,
+                GetHashKey(vehicle),
+                '{}',
+                plate,
+                'pillboxgarage',
+                0
+            })
+            TriggerClientEvent('QBCore:Notify', src, "Lang:t('success.purchased')", 'success')
+            TriggerClientEvent('qb-vehicleshop:client:buyShowroomVehicle', src, vehicle, plate)
+            return -- Exit the function to prevent cash or bank check
+        else
+            TriggerClientEvent('QBCore:Notify', src, Lang:t('error.notenoughcategoryitems'), 'error')
+            return -- Exit the function since the player does not have enough category items
+        end
+    end
+
     if cash > tonumber(vehiclePrice) then
         MySQL.insert('INSERT INTO player_vehicles (license, citizenid, vehicle, hash, mods, plate, garage, state) VALUES (?, ?, ?, ?, ?, ?, ?, ?)', {
             pData.PlayerData.license,
