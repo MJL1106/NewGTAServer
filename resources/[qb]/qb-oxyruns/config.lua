@@ -9,7 +9,7 @@ Config.Dispatch = 'ps-dispatch'  -- ps-dispatch / cd-dispatch  (type of dispatch
 Config.AlertChance = 15 --15% chance
 Config.CoolDown = 0 -- Cooldown to do deliveries
 Config.Notifications = 'phone' -- phone/qbcore (type of notifications to use on the job)
-Config.CopsNeeded = 0 -- TODO
+Config.CopsNeeded = 1
 Config.BuyerTimer = 1000 * 8 -- Timer till the buyer spawns default 1-3 minutes
 
 Config.PedDrivingStyle = 786603 -- suggest not changing this tbh
