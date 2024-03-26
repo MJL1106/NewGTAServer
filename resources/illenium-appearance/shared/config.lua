@@ -194,7 +194,7 @@ Config.Stores = {
     },
     {
         type = "clothing",
-        coords = vector4(-705.5, -149.22, 37.42, 122),
+        coords = vector4(-709.4, -153.95, 37.42, 124.38),
         size = vector3(4, 4, 4),
         rotation = 45,
         usePoly = false,
@@ -233,7 +233,7 @@ Config.Stores = {
     },
     {
         type = "clothing",
-        coords = vector4(-168.73, -301.41, 39.73, 238.67),
+        coords = vector4(-163.03, -301.8, 39.73, 254.08),
         size = vector3(4, 4, 4),
         rotation = 45,
         usePoly = false,
@@ -361,19 +361,6 @@ Config.Stores = {
             vector3(-1128.4727783203, -1439.8254394531, 5.23)
         }
     },
-    {
-        type = "clothing",
-        coords = vector4(124.82, -224.36, 54.56, 335.41),
-        size = vector3(6, 6, 6),
-        rotation = 45,
-        usePoly = false,
-        points = {
-            vector3(133.60948181152, -210.31390380859, 54.56),
-            vector3(125.8349609375, -228.48097229004, 54.56),
-            vector3(116.3140335083, -225.02020263672, 54.56),
-            vector3(122.56930541992, -207.83396911621, 54.56)
-        }
-    },
     { --PD Store inside MRPD lockers
         type = "clothing",
         coords = vector4(462.12, -999.72, 30.69, 359.07),
@@ -458,7 +445,7 @@ Config.Stores = {
     },
     {
         type = "barber",
-        coords = vector4(1212.8, -472.9, 65.2, 60.94),
+        coords = vector4(1212.29, -472.66, 66.21, 70.33),
         size = vector3(4, 4, 4),
         rotation = 45,
         usePoly = false,
@@ -471,7 +458,7 @@ Config.Stores = {
     },
     {
         type = "barber",
-        coords = vector4(-32.9, -152.3, 56.1, 335.22),
+        coords = vector4(-32.7, -151.74, 57.08, 336.48),
         size = vector3(4, 4, 4),
         rotation = 45,
         usePoly = false,
@@ -484,7 +471,7 @@ Config.Stores = {
     },
     {
         type = "barber",
-        coords = vector4(-278.1, 6228.5, 30.7, 49.32),
+        coords = vector4(-278.24, 6228.69, 31.7, 59.99),
         size = vector3(4, 4, 4),
         rotation = 45,
         usePoly = false,
@@ -497,7 +484,7 @@ Config.Stores = {
     },
     {
         type = "tattoo",
-        coords = vector4(1322.6, -1651.9, 51.2, 42.47),
+        coords = vector4(1322.94, -1652.36, 52.28, 35.61),
         size = vector3(4, 4, 4),
         rotation = 45,
         usePoly = false,

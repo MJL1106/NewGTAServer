@@ -4984,6 +4984,106 @@ QBShared.Vehicles = {
         ['hash'] = `cb650r`, -- Corrected to use backticks
         ['shop'] = '',    
     },
+    ['rmodmustang'] = {
+        ['name'] = 'Horse',
+        ['brand'] = 'Vapid',
+        ['model'] = 'rmodmustang',
+        ['price'] = 999999999999,
+        ['category'] = 'tier2',
+        ['categoryLabel'] = 'Tier 2',
+        ['hash'] = `rmodmustang`, -- Corrected to use backticks
+        ['shop'] = '',    
+    },
+    ['fxxk'] = {
+        ['name'] = 'fxxk',
+        ['brand'] = 'Grotti',
+        ['model'] = 'fxxk',
+        ['price'] = 999999999999,
+        ['category'] = 'tier4',
+        ['categoryLabel'] = 'Tier 4',
+        ['hash'] = `fxxk`, -- Corrected to use backticks
+        ['shop'] = '',    
+    },
+    ['21sierra'] = {
+        ['name'] = 'Large Cab',
+        ['brand'] = 'Brute',
+        ['model'] = '21sierra',
+        ['price'] = 999999999999,
+        ['category'] = 'tier1',
+        ['categoryLabel'] = 'Tier 1',
+        ['hash'] = `21sierra`, -- Corrected to use backticks
+        ['shop'] = '',    
+    },
+    ['hellcatlb'] = {
+        ['name'] = 'Kitty',
+        ['brand'] = 'Bravado',
+        ['model'] = 'hellcatlb',
+        ['price'] = 999999999999,
+        ['category'] = 'tier1',
+        ['categoryLabel'] = 'Tier 1',
+        ['hash'] = `hellcatlb`, -- Corrected to use backticks
+        ['shop'] = '',    
+    },
+    ['manssupersnake'] = {
+        ['name'] = 'SnakeEyes',
+        ['brand'] = 'Vapid',
+        ['model'] = 'manssupersnake',
+        ['price'] = 999999999999,
+        ['category'] = 'tier2',
+        ['categoryLabel'] = 'Tier 2',
+        ['hash'] = `manssupersnake`, -- Corrected to use backticks
+        ['shop'] = '',    
+    },
+    ['trx'] = {
+        ['name'] = 'TeRex',
+        ['brand'] = 'Bravado',
+        ['model'] = 'trx',
+        ['price'] = 999999999999,
+        ['category'] = 'tier1',
+        ['categoryLabel'] = 'Tier 1',
+        ['hash'] = `trx`, -- Corrected to use backticks
+        ['shop'] = '',    
+    },
+    ['812mnsry'] = {
+        ['name'] = 'Quickie',
+        ['brand'] = 'Grotti',
+        ['model'] = '812mnsry',
+        ['price'] = 999999999999,
+        ['category'] = 'tier3',
+        ['categoryLabel'] = 'Tier 3',
+        ['hash'] = `812mnsry`, -- Corrected to use backticks
+        ['shop'] = '',    
+    },
+    ['rmodf40'] = {
+        ['name'] = 'L40',
+        ['brand'] = 'Grotti',
+        ['model'] = 'rmodf40',
+        ['price'] = 999999999999,
+        ['category'] = 'tier4',
+        ['categoryLabel'] = 'Tier 4',
+        ['hash'] = `rmodf40`, -- Corrected to use backticks
+        ['shop'] = '',    
+    },
+    ['nissantitan17'] = {
+        ['name'] = 'Titanic',
+        ['brand'] = 'Annis',
+        ['model'] = 'nissantitan17',
+        ['price'] = 999999999999,
+        ['category'] = 'one of one',
+        ['categoryLabel'] = 'one of one',
+        ['hash'] = `nissantitan17`, -- Corrected to use backticks
+        ['shop'] = '',    
+    },
+    ['350z'] = {
+        ['name'] = '390F',
+        ['brand'] = 'Annis',
+        ['model'] = '350z',
+        ['price'] = 999999999999,
+        ['category'] = 'tier2',
+        ['categoryLabel'] = 'Tier 2',
+        ['hash'] = `350z`, -- Corrected to use backticks
+        ['shop'] = '',    
+    },
 }
 
 -- Populate VehicleHashes table
