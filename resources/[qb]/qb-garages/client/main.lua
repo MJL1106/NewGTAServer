@@ -300,7 +300,6 @@ local function CanParkVehicle(veh, garageName, vehLocation)
     local parkingDistance = garage.ParkingDistance and garage.ParkingDistance or Config.ParkingDistance
     local vehClass = GetVehicleClass(veh)
     local vehCategories = GetVehicleCategoriesFromClass(vehClass)
-
     if garage and garage.vehicleCategories and not TableContains(garage.vehicleCategories, vehCategories) then
         QBCore.Functions.Notify(Lang:t("error.not_correct_type"), "error", 4500)
         return false
