@@ -1199,15 +1199,15 @@ BlackjackTableDatas[0] = {
     Title = "Blackjack",
     PlaceBetsTime = 40,
     MinimumBet = 100,
-    MaximumBet = 5000
+    MaximumBet = 500
 }
 
 BlackjackTableDatas[3] = {
     Banner = "casinoui_cards_blackjack_high",
     Title = "Blackjack High Stakes",
     PlaceBetsTime = 40,
-    MinimumBet = 1000,
-    MaximumBet = 1000,
+    MinimumBet = 300,
+    MaximumBet = 750,
     VIP = true
 }
 
@@ -1235,7 +1235,7 @@ RouletteTableDatas[0] = {
     PlaceBetsTime = 40,
     SpinDelayMin = 5,
     SpinDelayMax = 12,
-    UnluckyRound = 4, -- each 4th round spins to the unluckiest number and costs casino the least
+    UnluckyRound = 3, -- each 3rd round spins to the unluckiest number and costs casino the least
     TriggerUnluckyRoundFrom = 10000 -- always switch to unluckiest number if the spun number costs casino more than this
 }
 
@@ -1250,7 +1250,7 @@ RouletteTableDatas[2] = {
     PlaceBetsTime = 15,
     SpinDelayMin = 1,
     SpinDelayMax = 1,
-    UnluckyRound = 6, -- each 6th round spins to the unluckiest number and costs casino the least
+    UnluckyRound = 4, -- each 4th round spins to the unluckiest number and costs casino the least
     TriggerUnluckyRoundFrom = 5000 -- always switch to unluckiest number if the spun number costs casino more than this
 }
 
