@@ -74,6 +74,7 @@ RegisterNetEvent('qb-storerobbery:server:setRegisterStatus', function(register)
     TriggerClientEvent('qb-storerobbery:client:setRegisterStatus', -1, register, Config.Registers[register])
 end)
 
+
 RegisterNetEvent('qb-storerobbery:server:setSafeStatus', function(safe)
     Config.Safes[safe].robbed = true
     TriggerClientEvent('qb-storerobbery:client:setSafeStatus', -1, safe, true)

@@ -165,7 +165,6 @@ RegisterNetEvent('lockpicks:UseLockpick', function(isAdvanced)
                         if street2 ~= nil then
                             streetLabel = streetLabel .. ' ' .. street2
                         end
-                        print("UseLockPick:About to call server:callCops")
                         TriggerServerEvent('qb-storerobbery:server:callCops', 'cashier', currentRegister, streetLabel, pos)
                         copsCalled = true
                     end
@@ -418,7 +417,6 @@ end)
 
 RegisterNetEvent('qb-storerobbery:client:robberyCall', function(type, key, streetLabel, coords)
     if (PlayerJob.name == 'police' or PlayerJob.type == 'leo') then
-        print("Robbery getting ready to alert")
         local cameraId = 4
         if type == "safe" then
             cameraId = Config.Safes[key].camId
@@ -427,28 +425,31 @@ RegisterNetEvent('qb-storerobbery:client:robberyCall', function(type, key, stree
         end
         PlaySound(-1, 'Lose_1st', 'GTAO_FM_Events_Soundset', 0, 0, 1)
         -- TriggerServerEvent('police:server:policeAlert', Lang:t('email.storerobbery_progress'))
-
-        exports['ps-dispatch']:StoreRobbery(cameraId,coords)
-        print("Should have dispatched pd")
-        local transG = 250
-        local blip = AddBlipForCoord(coords.x, coords.y, coords.z)
-        SetBlipSprite(blip, 458)
-        SetBlipColour(blip, 1)
-        SetBlipDisplay(blip, 4)
-        SetBlipAlpha(blip, transG)
-        SetBlipScale(blip, 1.0)
-        BeginTextCommandSetBlipName('STRING')
-        AddTextComponentSubstringPlayerName(Lang:t('email.shop_robbery'))
-        EndTextCommandSetBlipName(blip)
-        while transG ~= 0 do
-            Wait(180 * 4)
-            transG = transG - 1
-            SetBlipAlpha(blip, transG)
-            if transG == 0 then
-                SetBlipSprite(blip, 2)
-                RemoveBlip(blip)
-                return
-            end
+        
+        if copsCalled then
+            exports['ps-dispatch']:StoreRobbery(cameraId,coords)
+            copsCalled = false
         end
+        
+        -- local transG = 250
+        -- local blip = AddBlipForCoord(coords.x, coords.y, coords.z)
+        -- SetBlipSprite(blip, 458)
+        -- SetBlipColour(blip, 1)
+        -- SetBlipDisplay(blip, 4)
+        -- SetBlipAlpha(blip, transG)
+        -- SetBlipScale(blip, 1.0)
+        -- BeginTextCommandSetBlipName('STRING')
+        -- AddTextComponentSubstringPlayerName(Lang:t('email.shop_robbery'))
+        -- EndTextCommandSetBlipName(blip)
+        -- while transG ~= 0 do
+        --     Wait(180 * 4)
+        --     transG = transG - 1
+        --     SetBlipAlpha(blip, transG)
+        --     if transG == 0 then
+        --         SetBlipSprite(blip, 2)
+        --         RemoveBlip(blip)
+        --         return
+        --     end
+        -- end
     end
 end)
