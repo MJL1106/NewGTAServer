@@ -37,7 +37,7 @@ local function HealOxy()
     while count > 0 do
         Wait(1000)
         count -= 1
-        SetEntityHealth(PlayerPedId(), GetEntityHealth(PlayerPedId()) + 6)
+        SetEntityHealth(PlayerPedId(), GetEntityHealth(PlayerPedId()) + 2)
     end
     healing = false
 end
