@@ -1734,7 +1734,7 @@ Config.Garages = {
     --     job = "police",
     --     --useVehicleSpawner = false,
     --     --jobGarageIdentifier = 'someRandomIdentifier',
-    --     vehicleCategories = {'emergency'},
+    --     vehicleCategories = {'police'},
     --     drawText = 'Parking',
     --     ["ParkingSpots"] = {
     --         vector4(445.67, -997.0, 24.81, 269.98),
@@ -1758,6 +1758,51 @@ Config.Garages = {
     --     },
     --     debug = false
     -- },
+
+    ['pdgarage'] = {
+        ['Zone'] = {
+            ['Shape'] = { --polygon that surrounds the parking area
+               	vector2(448.33670043945, -998.80895996094),
+                vector2(423.15826416016, -998.98077392578),
+                vector2(423.48205566406, -973.94946289063),
+                vector2(428.74041748047, -974.35272216797),
+                vector2(428.564453125, -984.02642822266),
+                vector2(448.21347045898, -983.94213867188),
+            },
+            ['minZ'] = 24.0,  -- min height of the parking zone
+            ['maxZ'] = 27.0,  -- max height of the parking zone
+        },
+        label = "Garage",
+        showBlip = false,
+        blipcoords = vector3(-3135.14, 1096.15, 20.59),
+        blipName = "Public Parking",
+        blipNumber = 357,
+        type = 'job',
+        job = 'police',               --public, job, gang, depot
+        vehicleCategories = {'car', 'motorcycle', 'emergency', 'other'},
+        drawText = 'Parking',                 --car, air, sea
+        debug = true,
+        ['ParkingSpots'] = {
+            vector4(445.67, -997.0, 24.81, 269.98),
+            vector4(445.83, -994.31, 25.21, 267.42),
+            vector4(445.53, -991.53, 25.21, 269.55),
+            vector4(445.51, -988.84, 25.21, 269.43),
+            vector4(445.55, -986.12, 25.21, 270.71),
+            vector4(437.35, -986.1, 25.21, 89.31),
+            vector4(437.27, -988.86, 25.21, 90.05),
+            vector4(437.32, -991.57, 25.21, 90.47),
+            vector4(437.3, -994.26, 25.21, 90.38),
+            vector4(437.31, -996.97, 25.21, 90.1),
+            vector4(425.76, -997.07, 25.21, 270.57),
+            vector4(425.72, -994.41, 25.21, 269.31),
+            vector4(425.72, -991.68, 25.21, 269.53),
+            vector4(425.69, -989.03, 25.21, 270.22),
+            vector4(425.69, -984.26, 25.21, 269.65),
+            vector4(425.67, -981.55, 25.21, 269.33),
+            vector4(425.68, -978.88, 25.21, 269.76),
+            vector4(425.68, -976.24, 25.21, 270.49),
+        }
+    },
     -- ['helipad'] = {
     --     ['Zone'] = {
     --         ['Shape'] = { --polygon that surrounds the parking area
