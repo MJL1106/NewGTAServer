@@ -270,18 +270,18 @@ svConfig = {
                 [1] = 'usb_green'
             }
         },
-        ['safecracker'] = {
-            cashRequired = 5000,
-            cryptoRequired = 40,
-            availablePerRestart = 2,
-            isSoldOut = false,
-            title = "Safe Cracking Tool",
-            description = "You can use this to break into safes.",
-            iconFile = 'drill.png',
-            receiveItemIds = {
-                [1] = 'safecracker'
-            }
-        },
+        -- ['safecracker'] = {
+        --     cashRequired = 5000,
+        --     cryptoRequired = 40,
+        --     availablePerRestart = 2,
+        --     isSoldOut = false,
+        --     title = "Safe Cracking Tool",
+        --     description = "You can use this to break into safes.",
+        --     iconFile = 'drill.png',
+        --     receiveItemIds = {
+        --         [1] = 'safecracker'
+        --     }
+        -- },
         ['repairkit'] = {
             cashRequired = 100,
             cryptoRequired = 5,
