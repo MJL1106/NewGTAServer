@@ -56,6 +56,15 @@ Config.Packages = {
 			},
 		},
 	},
+	["Fresh Car"] = { -- Exact package name from tebex
+		Items = {
+			{
+				name = "freshcar", -- Item or account name depending on type specified below
+				amount = 1, -- Amount of item or money
+				type = "item" -- Four types: account, item, or weapon and car
+			},
+		},
+	},
 	["Business Coin"] = { -- Exact package name from tebex
 		Items = {
 			{
