@@ -1781,7 +1781,7 @@ Config.Garages = {
         job = 'police',               --public, job, gang, depot
         vehicleCategories = {'car', 'motorcycle', 'emergency', 'other'},
         drawText = 'Parking',                 --car, air, sea
-        debug = true,
+        debug = false,
         ['ParkingSpots'] = {
             vector4(445.67, -997.0, 24.81, 269.98),
             vector4(445.83, -994.31, 25.21, 267.42),
