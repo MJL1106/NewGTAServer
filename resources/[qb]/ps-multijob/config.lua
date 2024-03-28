@@ -12,12 +12,15 @@ Config.DenyDuty = {
 	["ambulance"] = false,
 	["police"] = false,
 	["mechanic"] = true,
-	["tuners"] = true,
 	["lsc"] = true,
 	["burgershot"] = true,
+	["tuners"] = true,
 	["uwu"] = true,
-	["weedshop"] = true,
+	["judge"] = false,
+	["lawyer"] = false,
 	["carsales"] = true,
+	["weedshop"] = true,
+	["cardealer"] = true,
 }
 
 Config.WhitelistJobs = {
@@ -32,6 +35,7 @@ Config.WhitelistJobs = {
 	["lawyer"] = true,
 	["carsales"] = true,
 	["weedshop"] = true,
+	["cardealer"] = true,
 }
 
 Config.Descriptions = {
