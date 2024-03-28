@@ -37,10 +37,6 @@ RegisterNetEvent('qb-storerobbery:server:takeMoney', function(register, isDone)
 
     local playerPed = GetPlayerPed(src)
     local playerCoords = GetEntityCoords(playerPed)
-    if #(playerCoords - Config.Registers[register][1].xyz) > 3.0 or (not Config.Registers[register].robbed and not isDone) or (Config.Registers[register].time <= 0 and not isDone) then
-        return DropPlayer(src, 'Attempted exploit abuse')
-    end
-
     -- Add any additional code you want above this comment to do whilst robbing a register, everything above the if statement under this will be triggered every 2 seconds when a register is getting robbed.
 
     if isDone then
