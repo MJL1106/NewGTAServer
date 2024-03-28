@@ -4,7 +4,7 @@ Config.DiscordLogs = true -- Set webhook in server.lua Line 1
 Config.VehicleDisplays = { --Simple vehicle spawner that allows you to display cars that are on sale in your webstore
 	{
 		blips = {
-			enabled = true,
+			enabled = false,
 			pos = vector3(44.5147, -873.9191, 28.7612),
 			sprite = 272,
 			color = 2,

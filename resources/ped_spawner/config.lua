@@ -252,14 +252,26 @@ Config.PedList = {
 
 
 
+	-- {
+	-- 	model = "a_m_y_business_02",
+	-- 	coords = vector3(-753.04, -1048.1, 12.44), --WEST MIRROR DR
+	-- 	heading = 303.87, 
+	-- 	gender = "male", 
+	--     isRendered = false,
+    --     ped = nil,
+    -- },
+
 	{
 		model = "a_m_y_business_02",
-		coords = vector3(-753.04, -1048.1, 12.44), --WEST MIRROR DR
-		heading = 303.87, 
+		coords = vector3(110.84, -1090.87, 29.3), --WEST MIRROR DR
+		heading = 30.16, 
 		gender = "male", 
 	    isRendered = false,
         ped = nil,
     },
+
+
+	
 
 			----------------------------------------
 	---     Electrical Peds     ---
