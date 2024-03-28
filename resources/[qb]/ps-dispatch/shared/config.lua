@@ -37,7 +37,9 @@ Config.EnableHuntingBlip = false
 
 Config.Locations = {
     ["HuntingZones"] = {
-        [1] = {label = "Hunting Zone", radius = 650.0, coords = vector3(-938.61, 4823.99, 313.92)},
+        [1] = {label = "Hunting Zone", radius = 1000.0, coords = vector3(-840.6, 4183.3, 215.29)},
+        [1] = {label = "Illegal Hunting Zone", radius = 250.0, coords = vector3(689.83, 4753.64, 136.16)},
+        [1] = {label = "Illegal Hunting Zone Mountain", radius = 250.0, coords = vector3(1860.47, 5522.35, 170.63)},
     },
     ["NoDispatchZones"] = {
         [1] = {label = "Ammunation 1", coords = vector3(13.53, -1097.92, 29.8), length = 14.0, width = 5.0, heading = 70, minZ = 28.8, maxZ = 32.8},
