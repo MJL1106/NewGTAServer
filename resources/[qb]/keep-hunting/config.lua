@@ -28,7 +28,7 @@ Config.BaitIndicator = {
     model = 'prop_peanut_bowl_01'
 }
 
-Config.BaitCooldown = 1000 * 120 -- 1000 per sec
+Config.BaitCooldown = 1000 * 30 -- 1000 per sec
 Config.SpawningTimer = 1000 * 10 -- script will wait until "SpawningTimer" time out then it will spwan animal
 
 Config.AnimalsEatingSpeed = 1000 * 15 -- how much animals will wait in baits location
@@ -92,47 +92,47 @@ Config.Animals = { {
     -- IMPORTANT: script will skip duplicate loots and only use one of them (first one)
     -- script will skip other prices and only uses the first seen value.
     -- IMPORTANT: if you leave the price with nil value players can't sell those items to Vendor.
-    Loots = { { "meatdeer", 100, 65 } }
+    Loots = { { "meatdeer", 100, 55 } }
 }, {
     model = "a_c_pig",
     spwanRarity = { 30, 0 },
     hash = -1323586730,
-    Loots = { { "meatpig", 100, 75 } }
+    Loots = { { "meatpig", 100, 65 } }
 }, {
     model = "a_c_boar",
     spwanRarity = { 10, 35 },
     hash = -832573324,
-    Loots = { { "meatpig", 100, 80 }}
+    Loots = { { "meatpig", 100, 75 }}
 }, {
     model = "a_c_mtlion",
     spwanRarity = { 0, 10 },
     hash = 307287994,
-    Loots = { { "meatlion", 100, 130 }}
+    Loots = { { "meatlion", 100, 120 }}
 }, {
     model = "a_c_cow",
     spwanRarity = { 45, 0 },
     hash = -50684386,
-    Loots = { { "meatcow", 100, 55 }}
+    Loots = { { "meatcow", 100, 50 }}
 }, {
     model = "a_c_coyote",
     spwanRarity = { 0, 20 },
     hash = 1682622302,
-    Loots = { { "meatcoyote", 100, 150 }}
+    Loots = { { "meatcoyote", 100, 140 }}
 }, {
     model = "a_c_rabbit_01",
     spwanRarity = { 0, 10 },
     hash = -541762431,
-    Loots = { { "meatrabbit", 100, 135 }}
+    Loots = { { "meatrabbit", 100, 130 }}
 }, {
     model = "a_c_pigeon",
     spwanRarity = { 0, 20 },
     hash = 111281960,
-    Loots = { { "meatbird", 100, 180 } }
+    Loots = { { "meatbird", 100, 175 } }
 }, {
     model = "a_c_seagull",
     spwanRarity = { 10, 0 },
     hash = -745300483,
-    Loots = { { "meatbird", 100, 90 }}
+    Loots = { { "meatbird", 100, 80 }}
 } }
 
 Config.HuntingArea = {
