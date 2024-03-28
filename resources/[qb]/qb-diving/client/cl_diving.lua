@@ -62,7 +62,7 @@ Citizen.CreateThread(function()
                     TriggerServerEvent("cad-diving:collected", "normal", normal[math.random(1,#normal)].item, math.random(1, 4))                
                 elseif random >= 61 and random <= 81 then
                     TriggerServerEvent("cad-diving:collected", "rare", rare[math.random(1,#rare)].item, 1)
-                elseif random >=97 and random <=100 then
+                elseif random >=99 and random <=100 then
                     TriggerServerEvent("cad-diving:collected", "ultrarare", ultrarare[math.random(1,#ultrarare)].item, 1)
                 else
                     TriggerServerEvent("cad-diving:collected", "none", nil)
