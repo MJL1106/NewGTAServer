@@ -103,7 +103,7 @@ end
 -- notify police functions
 function PoliceAlert()
     -- put your own dispatch here and comment the below event
-    Wait(140000)
+    Wait(240000)
     exports['ps-dispatch']:SuspiciousActivity()
     --TriggerServerEvent('police:server:policeAlert', 'Suspicious activity')
 end
