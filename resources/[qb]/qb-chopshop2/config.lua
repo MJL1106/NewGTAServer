@@ -82,6 +82,7 @@ Config.ItemDrops = {
         [2] = {name = "WEAPON_COMBATPISTOL", amount = 1},
         [3] = {name = "WEAPON_SNSPISTOL", amount = 1},
         [4] = {name = "WEAPON_HEAVYPISTOL", amount = 1},
+        [5] = {name = "WEAPON_VINTAGEPISTOL", amount = 1},
     },
 }
 
