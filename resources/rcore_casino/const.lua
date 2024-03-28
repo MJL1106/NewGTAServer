@@ -1729,7 +1729,7 @@ CashierDatas = {{
     model = "a_f_y_bevhills_02",
     enabled = false
 }, {
-    coords = vector3(950.305969, 33.064224, 71.838608),
+    coords = vector3(999.05, 26.21, 71.47),
     heading = 62.3299,
     model = "a_f_y_business_04",
     enabled = true
