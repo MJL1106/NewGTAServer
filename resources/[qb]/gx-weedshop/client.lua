@@ -1,5 +1,6 @@
 local QBCore = exports['qb-core']:GetCoreObject()
 local spawned = false
+local AcitveZone = {}
 
 RegisterNetEvent('QBCore:Client:OnPlayerLoaded', function()
     QBCore.Functions.GetPlayerData(function(PlayerData)
@@ -794,3 +795,38 @@ end)
 --         TriggerServerEvent("gx-weedshop:server:BillPlayer", dialog.id, dialog.amount)
 --     end
 -- end)
+
+local function CreateZones()
+    local SellSpot = PolyZone:Create(Config.Shops['legion']['Zone']['Shape'], {
+        name = "weed_sellspot",
+        minZ = Config.Shops['legion']['Zone']['minZ'],
+        maxZ = Config.Shops['legion']['Zone']['maxZ'],
+        debugPoly = false
+    })
+
+    SellSpot:onPlayerInOut(function(isPointInside)
+        local pData = QBCore.Functions.GetPlayerData()
+        local playerJob = pData.job.name
+        local onDuty = pData.job.onduty
+
+        if playerJob == "weedshop" then -- Ensure this matches your job identifier for car sales
+            if isPointInside and not onDuty then
+                TriggerServerEvent('QBCore:ToggleDuty')
+            elseif not isPointInside and onDuty then
+                TriggerServerEvent('QBCore:ToggleDuty')
+            end
+        end
+    end)
+    AcitveZone["weed_sellspot"] = SellSpot
+end
+
+RegisterNetEvent('QBCore:Client:OnPlayerLoaded', function()
+    CreateZones()
+end)
+
+
+AddEventHandler('onResourceStart', function(resourceName)
+    if GetCurrentResourceName() == resourceName then
+        CreateZones()
+    end
+end)
