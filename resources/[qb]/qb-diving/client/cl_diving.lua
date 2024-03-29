@@ -15,7 +15,7 @@ local normal = {
     [1] = {item = 'steel'},    
     [2] = {item = 'iron'},
     [3] = {item = 'rubber'},    
-    [4] = {item = 'redsnapper'},
+    [4] = {item = 'codfish'},
     [5] = {item = 'mackerel'},
     [6] = {item = 'joint'},
     [7] = {item = 'pistol_ammo'},
