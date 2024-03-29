@@ -19,7 +19,7 @@ Config.VehicleDisplays = { --Simple vehicle spawner that allows you to display c
 }
 
 Config.Packages = {
-	["Tier 1 Car Coin"] = { -- Exact package name from tebex
+	["Tier 1 Coin"] = { -- Exact package name from tebex
 		Items = {
 			{
 				name = "tier1", -- Item or account name depending on type specified below
@@ -29,7 +29,7 @@ Config.Packages = {
 		},
 	},
 	
-	["Tier 2 Car Coin"] = { -- Exact package name from tebex
+	["Tier 2 Coin"] = { -- Exact package name from tebex
 		Items = {
 			{
 				name = "tier2", -- Item or account name depending on type specified below
@@ -38,7 +38,7 @@ Config.Packages = {
 			},
 		},
 	},
-	["Tier 3 Car Coin"] = { -- Exact package name from tebex
+	["Tier 3 Coin"] = { -- Exact package name from tebex
 		Items = {
 			{
 				name = "tier3", -- Item or account name depending on type specified below
@@ -47,7 +47,7 @@ Config.Packages = {
 			},
 		},
 	},
-	["Tier 4 Car Coin"] = { -- Exact package name from tebex
+	["Tier 4 Coin"] = { -- Exact package name from tebex
 		Items = {
 			{
 				name = "tier4", -- Item or account name depending on type specified below
