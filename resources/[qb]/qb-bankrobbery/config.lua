@@ -3,7 +3,7 @@ Config = {}
 ----- ** TIMER CONFIG ** ----
 Config.BlackoutTimer = 15 -- How many minutes are the city blackedout when powerplant is hit? 
 Config.BankTimer = {
-    fleeca = 0, -- Time in minutes for cooldown
+    fleeca = 45, -- Time in minutes for cooldown
     paleto = 60, -- Time in minutes for cooldown
     pacific = 700, -- Time in minutes for cooldown
 } 
