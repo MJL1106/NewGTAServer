@@ -6,6 +6,7 @@ local CurrentCops = 0
 local PlayerJob = {}
 local onDuty = false
 local usingAdvanced = false
+alertPD = false
 
 CreateThread(function()
     Wait(1000)
@@ -165,6 +166,7 @@ RegisterNetEvent('lockpicks:UseLockpick', function(isAdvanced)
                         if street2 ~= nil then
                             streetLabel = streetLabel .. ' ' .. street2
                         end
+                        alertPD = true
                         TriggerServerEvent('qb-storerobbery:server:callCops', 'cashier', currentRegister, streetLabel, pos)
                         copsCalled = true
                     end
@@ -425,12 +427,10 @@ RegisterNetEvent('qb-storerobbery:client:robberyCall', function(type, key, stree
         end
         PlaySound(-1, 'Lose_1st', 'GTAO_FM_Events_Soundset', 0, 0, 1)
         -- TriggerServerEvent('police:server:policeAlert', Lang:t('email.storerobbery_progress'))
-        
-        if copsCalled then
+        if alertPD then
             exports['ps-dispatch']:StoreRobbery(cameraId,coords)
-            copsCalled = false
         end
-        
+        alertPD = false
         -- local transG = 250
         -- local blip = AddBlipForCoord(coords.x, coords.y, coords.z)
         -- SetBlipSprite(blip, 458)

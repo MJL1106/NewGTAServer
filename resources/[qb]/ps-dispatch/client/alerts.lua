@@ -263,8 +263,8 @@ local function VangelicoRobbery(camId,jewCoords)
 end
 exports('VangelicoRobbery', VangelicoRobbery)
 
-local function HouseRobbery()
-    local coords = GetEntityCoords(cache.ped)
+local function HouseRobbery(houseCoords)
+    local coords = houseCoords
 
     local dispatchData = {
         message = locale('houserobbery'),

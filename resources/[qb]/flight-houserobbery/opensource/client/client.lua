@@ -198,7 +198,7 @@ function Dispatch()
     elseif Config.Dispatch == "qs" then
         exports['qs-dispatch']:HouseRobbery()
     elseif Config.Dispatch == "ps" then
-        exports['ps-dispatch']:HouseRobbery()
+        exports['ps-dispatch']:HouseRobbery(data.coords)
     else
         if Config.Framework == "esx" then
             TriggerServerEvent('flight-houserobbery:server:PdNotify')
