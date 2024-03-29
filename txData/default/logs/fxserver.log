@@ -1,63 +1,42 @@
 
 ================================================================
-======== Log Rotated - 3/28/2024, 12:00:00 AM                   
+======== Log Rotated - 3/29/2024, 12:00:00 AM                   
 ================================================================
 [38;5;89m[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
 [script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
 [38;5;89m[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
 [script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
 [38;5;89m[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[38;5;75m[      script:s1n_lib] 2024-03-28 01:01:58  [INFO]
-[      script:s1n_lib] 2024-03-28 01:01:58  [INFO] s1n_lib: You are using the latest version, enjoy :D
-[      script:s1n_lib] 2024-03-28 01:01:58  [INFO]
-[38;5;75m[      script:s1n_lib] 2024-03-28 01:01:58  [INFO]
-[      script:s1n_lib] 2024-03-28 01:01:58  [INFO] s1n_banking: You are using the latest version, enjoy :D
-[      script:s1n_lib] 2024-03-28 01:01:58  [INFO]
-[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[38;5;89m[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
 [script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
 [38;5;89m[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
 [script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
 [38;5;89m[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
 [script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
+[      script:s1n_lib] 2024-03-29 01:00:55  [INFO]
+[      script:s1n_lib] 2024-03-29 01:00:55  [INFO] s1n_lib: You are using the latest version, enjoy :D
+[      script:s1n_lib] 2024-03-29 01:00:55  [INFO]
+[      script:s1n_lib] 2024-03-29 01:00:55  [INFO]
+[      script:s1n_lib] 2024-03-29 01:00:55  [INFO] s1n_banking: You are using the latest version, enjoy :D
+[      script:s1n_lib] 2024-03-29 01:00:55  [INFO]
+[38;5;89m[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
 [script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
 [38;5;89m[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
 [script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[    script:qb-scenes] Deleted 16 expired scenes from the database.
 [38;5;89m[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
 [script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[    script:qb-scenes] Deleted 2 expired scenes from the database.
-[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-> txaEvent "adminsUpdated" "[]"
-> txaEvent "playerBanned" "{＂author＂:＂mjl1106＂,＂reason＂:＂Duping money at the casino＂,＂actionId＂:＂B851-MGZQ＂,＂expiration＂:false,＂durationInput＂:＂permanent＂,＂durationTranslated＂:null,＂targetNetId＂:null,＂targetIds＂:[＂steam:1100001459e413e＂,＂license:2f45efc6fc5236b2edf98268ec669c60ecd4b984＂,＂discord:797538341758566441＂,＂fivem:10306690＂,＂license2:e28cdd42b265b48561576dcfc5b5f6141a05a949＂],＂targetHwids＂:[＂5:8ebae5593539ed0fc0c0f50e571fdb93dea79951d814645b49cc8d1f13c592e6＂,＂3:8dbda3111046bf9160382b40bfeef378f16684a3f12ffb23a4e09dbf68fbf2a6＂,＂2:fb9b214f7986cb3cad92991d4f612fa292cd49b4b653d8120c3526b805f2dadc＂,＂4:ee8ea0300f6613b79d960bc9f6327207a1b5b3d3bddc9e1454bc3da2b112e6ea＂,＂4:950ec6f857d2f9d8e662f98a9fb291ebc8813dac2837c8efa959152f9cfca175＂,＂4:a1a8d7f367472d53cf56f9b9e4280a76f9185bd52b7fd620f6d7ee0eded71616＂],＂targetName＂:＂waterBuffalo22＂,＂kickMessage＂:＂(mjl1106) You have been permanently banned from this server for \＂Duping money at the casino\＂.＂}"
-[38;5;84m[      script:monitor] [txAdmin] handleBanEvent: No players found to kick
-[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[38;5;75m[      script:s1n_lib] 2024-03-28 04:01:58  [INFO]
-[      script:s1n_lib] 2024-03-28 04:01:58  [INFO] s1n_lib: You are using the latest version, enjoy :D
-[      script:s1n_lib] 2024-03-28 04:01:58  [INFO]
-[38;5;75m[      script:s1n_lib] 2024-03-28 04:01:58  [INFO]
-[      script:s1n_lib] 2024-03-28 04:01:58  [INFO] s1n_banking: You are using the latest version, enjoy :D
-[      script:s1n_lib] 2024-03-28 04:01:58  [INFO]
-> ensure qb-garages
-[38;5;83m[           resources] Stopping resource qb-garages
-[38;5;161m[    c-scripting-core] Creating script environments for qb-garages
-[           resources] Started resource qb-garages
 [38;5;89m[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
 [script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
+[38;5;89m[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
+[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
+[38;5;89m[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
+[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
+[38;5;89m[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
+[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
+[38;5;89m[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
+[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
+[38;5;89m[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
+[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
+[38;5;89m[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
+[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
+[38;5;89m[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
 [script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
