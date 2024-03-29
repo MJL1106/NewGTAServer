@@ -100,23 +100,23 @@ AddEventHandler('CEventExplosionHeard', function(witnesses, ped)
     end)
 end)
 
--- AddEventHandler('gameEventTriggered', function(name, args)
---     if name ~= 'CEventNetworkEntityDamage' then return end
---     local victim = args[1]
---     local isDead = args[6] == 1
---     WaitTimer('PlayerDowned', function()
---         if not victim or victim ~= cache.ped then return end
---         if not isDead then return end
+AddEventHandler('gameEventTriggered', function(name, args)
+    if name ~= 'CEventNetworkEntityDamage' then return end
+    local victim = args[1]
+    local isDead = args[6] == 1
+    WaitTimer('PlayerDowned', function()
+        if not victim or victim ~= cache.ped then return end
+        if not isDead then return end
 
---         if PlayerData.job.type == 'leo' then
---             exports['ps-dispatch']:OfficerDown()
---         elseif PlayerData.job.type == 'ems' then
---             exports['ps-dispatch']:EmsDown()
---         else
---             exports['ps-dispatch']:InjuriedPerson()
---         end
---     end)
--- end)
+        if PlayerData.job.type == 'leo' then
+            exports['ps-dispatch']:OfficerDown()
+        elseif PlayerData.job.type == 'ems' then
+            exports['ps-dispatch']:EmsDown()
+        else
+            exports['ps-dispatch']:InjuriedPerson()
+        end
+    end)
+end)
 
 local SpeedingEvents = {
     'CEventShockingCarChase',
