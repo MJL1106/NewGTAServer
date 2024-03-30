@@ -360,7 +360,7 @@ function createDespawnThread(baitAnimal, was_llegal, baitcoord, indicator)
                 StopGameplayCamShaking(true)
                 local callPoliceChance = callPoliceChance()
                 if was_llegal == false and callPoliceChance == 1 then
-                    Config.llegalHuntingNotification(animalCoord)
+                    exports['ps-dispatch']:Hunting(animalCoord)
                 end
                 finished = true
             end
