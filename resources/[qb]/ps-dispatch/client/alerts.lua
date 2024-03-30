@@ -45,8 +45,8 @@ local function Shooting()
 end
 exports('Shooting', Shooting)
 
-local function Hunting()
-    local coords = GetEntityCoords(cache.ped)
+local function Hunting(animalCoords)
+    local coords = animalCoords
 
     local dispatchData = {
         message = locale('hunting'),
