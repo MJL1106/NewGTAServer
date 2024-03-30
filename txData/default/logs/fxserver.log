@@ -1,42 +1,253 @@
 
 ================================================================
-======== Log Rotated - 3/29/2024, 12:00:00 AM                   
+======== Log Rotated - 3/30/2024, 12:00:00 AM                   
 ================================================================
+[      script:qb-core] [qb-core:LOG] Mr.Green PLAYER SAVED!
 [38;5;89m[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
+[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
+[38;5;134m[      script:qb-core] [qb-core:LOG] Mr.Green PLAYER SAVED!
+[      script:qb-core] [qb-core:LOG] Mr.Green PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] Mr.Green PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] Mr.Green PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] Mr.Green PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] Mr.Green PLAYER SAVED!
+[script:qb-smallresou] id:1
+[script:qb-smallresou] X: 467.18243408203, Y: -983.05053710938, Z: 30.678344726562
+[script:qb-smallresou] identifier:steam:110000117f12b1a
+[script:qb-smallresou] reason:Exiting
+[38;5;134m[      script:qb-core] [qb-core:LOG] Mr.Green PLAYER SAVED!
+[38;5;173m[ script:connectqueue] QUEUE: Mr.Green[steam:110000117f12b1a] was placed 1/1 in queue
+[ script:connectqueue] QUEUE: Mr.Green[steam:110000117f12b1a] is loading into the server
+[38;5;42m[script:qb-smallresou] id:2
+[script:qb-smallresou] X: 311.63076782227, Y: -1460.5186767578, Z: 47.494506835938
+[script:qb-smallresou] identifier:steam:110000117f12b1a
+[script:qb-smallresou] reason:Exiting
+[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
+[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
+[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
+[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
+[38;5;89m[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
+[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
+[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
+[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
+[      script:s1n_lib] 2024-03-30 01:01:18  [INFO]
+[      script:s1n_lib] 2024-03-30 01:01:18  [INFO] s1n_banking: You are using the latest version, enjoy :D
+[      script:s1n_lib] 2024-03-30 01:01:18  [INFO]
+[      script:s1n_lib] 2024-03-30 01:01:18  [INFO]
+[      script:s1n_lib] 2024-03-30 01:01:18  [INFO] s1n_lib: You are using the latest version, enjoy :D
+[      script:s1n_lib] 2024-03-30 01:01:18  [INFO]
+[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
+[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
+[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
+[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
+[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
 [script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
 [38;5;89m[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
 [script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
 [38;5;89m[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
 [script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[38;5;89m[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
+[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
 [script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[38;5;89m[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
+[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
 [script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[      script:s1n_lib] 2024-03-29 01:00:55  [INFO]
-[      script:s1n_lib] 2024-03-29 01:00:55  [INFO] s1n_lib: You are using the latest version, enjoy :D
-[      script:s1n_lib] 2024-03-29 01:00:55  [INFO]
-[      script:s1n_lib] 2024-03-29 01:00:55  [INFO]
-[      script:s1n_lib] 2024-03-29 01:00:55  [INFO] s1n_banking: You are using the latest version, enjoy :D
-[      script:s1n_lib] 2024-03-29 01:00:55  [INFO]
-[38;5;89m[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
+[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
 [script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
 [38;5;89m[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
 [script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
 [38;5;89m[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
 [script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[38;5;89m[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
+[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
 [script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
 [38;5;89m[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
 [script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
+[38;5;75m[      script:s1n_lib] 2024-03-30 04:01:18  [INFO]
+[      script:s1n_lib] 2024-03-30 04:01:18  [INFO] s1n_lib: You are using the latest version, enjoy :D
+[      script:s1n_lib] 2024-03-30 04:01:18  [INFO]
+[      script:s1n_lib] 2024-03-30 04:01:18  [INFO]
+[      script:s1n_lib] 2024-03-30 04:01:18  [INFO] s1n_banking: You are using the latest version, enjoy :D
+[      script:s1n_lib] 2024-03-30 04:01:18  [INFO]
+[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
+[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
+[38;5;173m[ script:connectqueue] QUEUE: missberrymedley[steam:11000010cab8d07] was placed 1/1 in queue
+[38;5;173m[ script:connectqueue] QUEUE: missberrymedley[steam:11000010cab8d07] is loading into the server
+[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
 [38;5;89m[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
 [script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
+[38;5;134m[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
+[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
+[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[      script:qb-core] [0m[qb-core:LOG] missberrymedley PLAYER SAVED!
+[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[38;5;173m[ script:connectqueue] QUEUE: φοῖνιξ[steam:11000010ee88c01] was placed 1/1 in queue
+[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
+[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
+[ script:connectqueue] QUEUE: φοῖνιξ[steam:11000010ee88c01] is loading into the server
+[38;5;134m[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] φοῖνιξ PLAYER SAVED!
+[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] φοῖνιξ PLAYER SAVED!
+[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] φοῖνιξ PLAYER SAVED!
+[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[      script:qb-core] [qb-core:LOG] φοῖνιξ PLAYER SAVED!
+[      script:qb-core] [32m[qb-core:LOG] missberrymedley PLAYER SAVED!
+[      script:qb-core] [qb-core:LOG] φοῖνιξ PLAYER SAVED!
+[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] φοῖνιξ PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[      script:qb-core] [qb-core:LOG] φοῖνιξ PLAYER SAVED!
+[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] φοῖνιξ PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] φοῖνιξ PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] φοῖνιξ PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] φοῖνιξ PLAYER SAVED!
+[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
+[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
+[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[      script:qb-core] [qb-core:LOG] φοῖνιξ PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[      script:qb-core] [qb-core:LOG] φοῖνιξ PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] φοῖνιξ PLAYER SAVED!
+[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[      script:qb-core] [qb-core:LOG] φοῖνιξ PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] φοῖνιξ PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] φοῖνιξ PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] φοῖνιξ PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[      script:qb-core] [qb-core:LOG] φοῖνιξ PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] φοῖνιξ PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] φοῖνιξ PLAYER SAVED!
+[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] φοῖνιξ PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] φοῖνιξ PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[      script:qb-core] [qb-core:LOG] φοῖνιξ PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[      script:qb-core] [qb-core:LOG] φοῖνιξ PLAYER SAVED!
+[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] φοῖνιξ PLAYER SAVED!
+> txaEvent "scheduledRestart" "{＂secondsRemaining＂:1800,＂translatedMessage＂:＂This server is scheduled to restart in 30 minutes.＂}"
 [38;5;89m[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
 [script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
+[38;5;134m[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] φοῖνιξ PLAYER SAVED!
+[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[      script:qb-core] [qb-core:LOG] φοῖνιξ PLAYER SAVED!
+[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[      script:qb-core] [qb-core:LOG] φοῖνιξ PLAYER SAVED!
+[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] φοῖνιξ PLAYER SAVED!
+[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[      script:qb-core] [qb-core:LOG] φοῖνιξ PLAYER SAVED!
+[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[      script:qb-core] [qb-core:LOG] φοῖνιξ PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] φοῖνιξ PLAYER SAVED!
+[ script:connectqueue] QUEUE: DaddyDizzle[steam:11000014bb53aeb] was placed 1/1 in queue
+[ script:connectqueue] QUEUE: DaddyDizzle[steam:11000014bb53aeb] is loading into the server
+[38;5;173m[ script:connectqueue] QUEUE: DaddyDizzle[steam:11000014bb53aeb] was placed 1/1 in queue
+[38;5;134m[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] φοῖνιξ PLAYER SAVED!
+[38;5;173m[ script:connectqueue] QUEUE: DaddyDizzle[steam:11000014bb53aeb] was placed 1/1 in queue
+[38;5;134m[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] φοῖνιξ PLAYER SAVED!
+[ script:connectqueue] QUEUE: DaddyDizzle[steam:11000014bb53aeb] was placed 1/1 in queue
+[ script:connectqueue] QUEUE: DaddyDizzle[steam:11000014bb53aeb] was placed 1/1 in queue
+[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] φοῖνιξ PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] φοῖνιξ PLAYER SAVED!
+[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[      script:qb-core] [qb-core:LOG] φοῖνιξ PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[      script:qb-core] [qb-core:LOG] φοῖνιξ PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] φοῖνιξ PLAYER SAVED!
+[38;5;173m[ script:connectqueue] QUEUE: DaddyDizzle[steam:11000014bb53aeb] was removed from the connecting queue because they timed out
+[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] φοῖνιξ PLAYER SAVED!
+> txaEvent "scheduledRestart" "{＂secondsRemaining＂:900,＂translatedMessage＂:＂This server is scheduled to restart in 15 minutes.＂}"
 [38;5;89m[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
 [script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[38;5;89m[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[38;5;89m[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
-[38;5;89m[script:rahe-boosting] [info] Starting the contract generator (automatic trigger). There are currently 0 police online (3 is required for isImportant classes to generate).
-[script:rahe-boosting] [info] The contract generator stopped as there are no players in the queue.
+[38;5;134m[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] φοῖνιξ PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] φοῖνιξ PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] φοῖνιξ PLAYER SAVED!
+[38;5;173m[ script:connectqueue] QUEUE: DaddyDizzle[steam:11000014bb53aeb] was placed 1/1 in queue
+[ script:connectqueue] QUEUE: DaddyDizzle[steam:11000014bb53aeb] is loading into the server
+[38;5;173m[ script:connectqueue] QUEUE: DaddyDizzle[steam:11000014bb53aeb] was placed 1/1 in queue
+[38;5;134m[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] φοῖνιξ PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[      script:qb-core] [qb-core:LOG] φοῖνιξ PLAYER SAVED!
+> txaEvent "scheduledRestart" "{＂secondsRemaining＂:600,＂translatedMessage＂:＂This server is scheduled to restart in 10 minutes.＂}"
+[38;5;173m[ script:connectqueue] QUEUE: DaddyDizzle[steam:11000014bb53aeb] was placed 1/1 in queue
+[38;5;134m[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] φοῖνιξ PLAYER SAVED!
+[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] φοῖνιξ PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] φοῖνιξ PLAYER SAVED!
+[38;5;173m[ script:connectqueue] QUEUE: DaddyDizzle[steam:11000014bb53aeb] was placed 1/1 in queue
+[38;5;134m[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] φοῖνιξ PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] φοῖνιξ PLAYER SAVED!
+> txaEvent "scheduledRestart" "{＂secondsRemaining＂:300,＂translatedMessage＂:＂This server is scheduled to restart in 5 minutes.＂}"
+[38;5;134m[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] φοῖνιξ PLAYER SAVED!
+> txaEvent "scheduledRestart" "{＂secondsRemaining＂:240,＂translatedMessage＂:＂This server is scheduled to restart in 4 minutes.＂}"
+[38;5;134m[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] φοῖνιξ PLAYER SAVED!
+> txaEvent "scheduledRestart" "{＂secondsRemaining＂:180,＂translatedMessage＂:＂This server is scheduled to restart in 3 minutes.＂}"
+[38;5;134m[      script:qb-core] [qb-core:LOG] missberrymedley PLAYER SAVED!
+[38;5;134m[      script:qb-core] [qb-core:LOG] φοῖνιξ PLAYER SAVED!
+[ script:connectqueue] QUEUE: DaddyDizzle[steam:11000014bb53aeb] was removed from the connecting queue because they timed out
+[38;5;173m[ script:connectqueue] QUEUE: DaddyDizzle[steam:11000014bb53aeb] was placed 1/1 in queue
+[38;5;173m[ script:connectqueue] QUEUE: DaddyDizzle[steam:11000014bb53aeb] is loading into the server
+> txaEvent "scheduledRestart" "{＂secondsRemaining＂:120,＂translatedMessage＂:＂This server is scheduled to restart in 2 minutes.＂}"
