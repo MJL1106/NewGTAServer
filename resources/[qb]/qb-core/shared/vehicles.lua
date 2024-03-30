@@ -4733,7 +4733,7 @@ QBShared.Vehicles = {
     },
     --------------------custom cars---------------
     ['17mansorypnmr'] = { --<---- NEEDS TO MATCH FILE NAME, 'MODEL' AND 'HASH' NEED TO BE SAME NAME AS THIS, ONLY CHANGE 'NAME' AND 'BRAND' -- DOESNT LET YOU BUY
-        ['name'] = 'Mansory 17',
+        ['name'] = 'Lans 17',
         ['brand'] = 'Pfister',
         ['model'] = '17mansorypnmr',
         ['price'] = 99999999999,
@@ -4763,7 +4763,7 @@ QBShared.Vehicles = {
         ['shop'] = '',
     },
     ['GODzDRIFTCAT'] = {
-        ['name'] = 'Drift',
+        ['name'] = 'Kitty',
         ['brand'] = 'Bravado',
         ['model'] = 'GODzDRIFTCAT',
         ['price'] = 9999999999,
@@ -4800,7 +4800,7 @@ QBShared.Vehicles = {
         ['category'] = 'tier1',
         ['categoryLabel'] = 'Tier 1',
         ['hash'] = `rmodmk7`,
-        ['shop'] = '',
+        ['shop'] = 'luxury',
     },
 	['GODzVIPS63AMG'] = {
         ['name'] = '69 BMG',
@@ -4850,7 +4850,7 @@ QBShared.Vehicles = {
         ['category'] = 'tier4',
         ['categoryLabel'] = 'Tier 4',
         ['hash'] = `911gtrs`,
-        ['shop'] = '',
+        ['shop'] = 'luxury',
     },
 	['lbwk35'] = {
         ['name'] = 'Freedom Stroll',
@@ -4994,7 +4994,7 @@ QBShared.Vehicles = {
         ['category'] = 'tier2',
         ['categoryLabel'] = 'Tier 2',
         ['hash'] = `m140iss`, -- Corrected to use backticks without quotes
-        ['shop'] = '',    
+        ['shop'] = 'luxury',    
     },
     ['civic2020'] = {
         ['name'] = 'Commune',
@@ -5004,7 +5004,7 @@ QBShared.Vehicles = {
         ['category'] = 'tier1',
         ['categoryLabel'] = 'Tier 1',
         ['hash'] = `civic2020`, -- Corrected to use backticks without quotes
-        ['shop'] = '',    
+        ['shop'] = 'luxury',    
     },
     ['19gv80'] = {
         ['name'] = 'Vg70',
@@ -5075,7 +5075,7 @@ QBShared.Vehicles = {
         ['category'] = 'tier3',
         ['categoryLabel'] = 'Tier 3',
         ['hash'] = `GCMobTahoeV2`, -- Corrected to use backticks
-        ['shop'] = '',    
+        ['shop'] = 'luxury',    
     },
     ['2019chiron'] = {
         ['name'] = 'truffade',
@@ -5115,7 +5115,7 @@ QBShared.Vehicles = {
         ['category'] = 'tier4',
         ['categoryLabel'] = 'Tier 4',
         ['hash'] = `senna`, -- Corrected to use backticks
-        ['shop'] = '',    
+        ['shop'] = 'luxury',    
     },
     ['maybach'] = {
         ['name'] = 'ClayBack',
@@ -5245,7 +5245,7 @@ QBShared.Vehicles = {
         ['category'] = 'tier3',
         ['categoryLabel'] = 'Tier 3',
         ['hash'] = `812mnsry`, -- Corrected to use backticks
-        ['shop'] = '',    
+        ['shop'] = 'luxury',    
     },
     ['rmodf40'] = {
         ['name'] = 'L40',
@@ -5275,6 +5275,46 @@ QBShared.Vehicles = {
         ['category'] = 'tier2',
         ['categoryLabel'] = 'Tier 2',
         ['hash'] = `350z`, -- Corrected to use backticks
+        ['shop'] = 'luxury',    
+    },
+    ['22gscrb'] = {
+        ['name'] = 'Gsc',
+        ['brand'] = 'Ubermacht',
+        ['model'] = '22gscrb',
+        ['price'] = 999999999999,
+        ['category'] = 'one of one',
+        ['categoryLabel'] = 'one of one',
+        ['hash'] = `22gscrb`, -- Corrected to use backticks
+        ['shop'] = '',    
+    },
+    ['GODzHYCADER34'] = {
+        ['name'] = 'Piggly',
+        ['brand'] = 'Annis',
+        ['model'] = 'GODzHYCADER34',
+        ['price'] = 999999999999,
+        ['category'] = 'one of one',
+        ['categoryLabel'] = 'one of one',
+        ['hash'] = `GODzHYCADER34`, -- Corrected to use backticks
+        ['shop'] = '',    
+    },
+    ['cat745c'] = {
+        ['name'] = 'Dumper',
+        ['brand'] = 'Schyster',
+        ['model'] = 'cat745c',
+        ['price'] = 999999999999,
+        ['category'] = 'one of one',
+        ['categoryLabel'] = 'one of one',
+        ['hash'] = `cat745c`, -- Corrected to use backticks
+        ['shop'] = '',    
+    },
+    ['r8hycade'] = {
+        ['name'] = 'Horsepoop',
+        ['brand'] = 'Obey',
+        ['model'] = 'r8hycade',
+        ['price'] = 999999999999,
+        ['category'] = 'one of one',
+        ['categoryLabel'] = 'one of one',
+        ['hash'] = `r8hycade`, -- Corrected to use backticks
         ['shop'] = '',    
     },
 }
