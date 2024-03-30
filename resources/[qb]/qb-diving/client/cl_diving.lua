@@ -57,12 +57,12 @@ Citizen.CreateThread(function()
             else          
                 lastpick = pickup      
                 pickup = math.random(1, #locations)
-                local random = math.random(1, 100)                                                
-                if random > 0 and random <= 60 then
+                local random = math.random(1, 1000)                                                
+                if random > 0 and random <= 600 then
                     TriggerServerEvent("cad-diving:collected", "normal", normal[math.random(1,#normal)].item, math.random(1, 4))                
-                elseif random >= 61 and random <= 81 then
+                elseif random >= 610 and random <= 810 then
                     TriggerServerEvent("cad-diving:collected", "rare", rare[math.random(1,#rare)].item, 1)
-                elseif random ==100 then
+                elseif random >= 997 and random <= 1000 then
                     TriggerServerEvent("cad-diving:collected", "ultrarare", ultrarare[math.random(1,#ultrarare)].item, 1)
                 else
                     TriggerServerEvent("cad-diving:collected", "none", nil)
