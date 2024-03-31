@@ -117,11 +117,11 @@ Config = {
 		['rubber'] = 10,
 		['aluminum'] = 10,
 		['bottle'] = 5,
-		['can'] = 5,
+		-- ['can'] = 5,
 	},
 	BottleBankTable = {
 		"bottle",
-		"can",
+		-- "can",
 	},
 	TradeTable = {
 		"copper",
@@ -133,11 +133,11 @@ Config = {
 		"rubber",
 		"aluminum",
 		"bottle",
-		"can",
+		-- "can",
 	},
 	DumpItems = {
 		"bottle",
-		"can",
+		-- "can",
 		"sandwich",
         "bakingsoda",
         "plastic",
@@ -150,7 +150,7 @@ Config = {
 		"iron",
 		"glass",
 		"bottle",
-		"can",
+		-- "can",
         "metalscrap",
         "rubber",
 	},
@@ -161,9 +161,9 @@ Config = {
 		},
 		["Trade"] = {
 			{ amount = 1, itemGive = 1, Min = 1, Max = 1, },
-			{ amount = 10, itemGive = 1, Min = 2, Max = 5, },
-			{ amount = 100, itemGive = 6, Min = 5, Max = 14, },
-			{ amount = 1000, itemGive = 8, Min = 10, Max = 28, },
+			{ amount = 10, itemGive = 1, Min = 5, Max = 10, },
+			{ amount = 100, itemGive = 6, Min = 10, Max = 14, },
+			{ amount = 1000, itemGive = 8, Min = 20, Max = 38, },
 		},
 	}
 }
