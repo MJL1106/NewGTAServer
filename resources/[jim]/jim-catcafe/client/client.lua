@@ -1,5 +1,9 @@
 local inJacuzzi, makeLocs = false, false
 
+onPlayerLoaded(function()
+	toggleDuty()
+end)
+
 function makeLoc()
 	if makeLocs then return end
 	for k, loc in pairs(Locations) do
