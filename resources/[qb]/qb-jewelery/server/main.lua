@@ -68,10 +68,10 @@ RegisterNetEvent('qb-jewellery:server:vitrineReward', function(vitrineIndex)
     local odd = math.random(1, 4)
     local cheating = false
 
-    if Config.Locations[vitrineIndex] == nil or Config.Locations[vitrineIndex].isOpened ~= false then
-        exploitBan(src, "Trying to trigger an exploitable event \"qb-jewellery:server:vitrineReward\"")
-        return
-    end
+    -- if Config.Locations[vitrineIndex] == nil or Config.Locations[vitrineIndex].isOpened ~= false then
+    --     exploitBan(src, "Trying to trigger an exploitable event \"qb-jewellery:server:vitrineReward\"")
+    --     return
+    -- end
     if cachedPoliceAmount[source] == nil then
         DropPlayer(src, "Exploiting")
         return
