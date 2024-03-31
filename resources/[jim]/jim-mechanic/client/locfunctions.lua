@@ -7,7 +7,9 @@ onPlayerLoaded(function()
 			for _, v in pairs(Config.Main.JobRoles) do
 				if hasJob(v) then
 					havejob = true
+					toggleDuty()
 					onDuty = PlayerData.job.onduty
+					
 				end
 			end
 		end)

@@ -5,11 +5,12 @@ local AcitveZone = {}
 RegisterNetEvent('QBCore:Client:OnPlayerLoaded', function()
     QBCore.Functions.GetPlayerData(function(PlayerData)
         PlayerJob = PlayerData.job
-		if PlayerData.job.onduty then
-			if PlayerData.job.name == "weedshop" then
-				TriggerServerEvent("QBCore:ToggleDuty")
-			end
-		end
+        -- ToggleDuty()
+		-- if PlayerData.job.onduty then
+		-- 	if PlayerData.job.name == "weedshop" then
+		-- 		TriggerServerEvent("QBCore:ToggleDuty")
+		-- 	end
+		-- end
 	end)
 end)
 
