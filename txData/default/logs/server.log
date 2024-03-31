@@ -1,15 +1,172 @@
 
 ================================================================
-======== Log Rotated - 3/30/2024, 12:00:00 AM                   
+======== Log Rotated - 3/31/2024, 12:00:00 AM                   
 ================================================================
-[12:07:00 AM] [rLEtk#1] Mr.Green: disconnected (Exiting)
-[12:11:10 AM] [rLEtk#2] Mr.Green: joined with identifiers [steam:110000117f12b1a; license:8cb9f8548eb4c7764c77849cfa2ff397ec016f08; xbl:2535433922801834; live:985153858977618; discord:322443072233537556; fivem:10498222; license2:6dd94f8afb9d56223c4c530061c5ab1316c72c1c]
-[12:12:54 AM] [rLEtk#2] Mr.Green: disconnected (Exiting)
-[4:27:44 AM] [rLEtk#3] missberrymedley: joined with identifiers [steam:11000010cab8d07; license:7a3a5bfb5af789cb5f02843e29cc4ee338b0a294; xbl:2535413783067581; live:1688853905214434; discord:461174423903535107; fivem:1697557; license2:ec1926a90f33d1955abd2276f36a7c3ed4c51a23]
-[5:01:38 AM] [rLEtk#4] φοῖνιξ: joined with identifiers [steam:11000010ee88c01; license:ee681c08d9d45c48bf5af06870d7d23d75db16dc; xbl:2535430200613003; live:985158121988759; discord:305372052683096065; fivem:10488223; license2:ee681c08d9d45c48bf5af06870d7d23d75db16dc]
-[5:30:59 AM] txAdmin: ((Broadcast) txAdmin): said "This server is scheduled to restart in 30 minutes."
-[5:45:59 AM] txAdmin: ((Broadcast) txAdmin): said "This server is scheduled to restart in 15 minutes."
-[5:50:59 AM] txAdmin: ((Broadcast) txAdmin): said "This server is scheduled to restart in 10 minutes."
-[5:55:58 AM] txAdmin: ((Broadcast) txAdmin): said "This server is scheduled to restart in 5 minutes."
-[5:56:59 AM] txAdmin: ((Broadcast) txAdmin): said "This server is scheduled to restart in 4 minutes."
-[5:57:59 AM] txAdmin: ((Broadcast) txAdmin): said "This server is scheduled to restart in 3 minutes."
+[4:31:53 AM] [MQeN8#2] φοῖνιξ: joined with identifiers [steam:11000010ee88c01; license:ee681c08d9d45c48bf5af06870d7d23d75db16dc; xbl:2535430200613003; live:985158121988759; discord:305372052683096065; fivem:10488223; license2:ee681c08d9d45c48bf5af06870d7d23d75db16dc]
+[5:08:02 AM] [MQeN8#3] PISSFLAPS: joined with identifiers [steam:11000014bb53aeb; license:e0893217ab0d40d6a510bcbfe1c9441b4a208a2b; discord:584024523989581834; fivem:8961289; license2:e0893217ab0d40d6a510bcbfe1c9441b4a208a2b]
+[5:30:28 AM] txAdmin: ((Broadcast) txAdmin): said "This server is scheduled to restart in 30 minutes."
+[5:34:15 AM] [MQeN8#3] PISSFLAPS: said "/hideHUD"
+[5:40:53 AM] [MQeN8#3] PISSFLAPS: said "/max"
+[5:45:28 AM] txAdmin: ((Broadcast) txAdmin): said "This server is scheduled to restart in 15 minutes."
+[5:50:28 AM] txAdmin: ((Broadcast) txAdmin): said "This server is scheduled to restart in 10 minutes."
+[5:55:29 AM] txAdmin: ((Broadcast) txAdmin): said "This server is scheduled to restart in 5 minutes."
+[5:56:29 AM] txAdmin: ((Broadcast) txAdmin): said "This server is scheduled to restart in 4 minutes."
+[5:57:29 AM] txAdmin: ((Broadcast) txAdmin): said "This server is scheduled to restart in 3 minutes."
+[5:57:34 AM] [MQeN8#3] PISSFLAPS: disconnected (Exiting)
+[5:57:47 AM] [MQeN8#2] φοῖνιξ: disconnected (Exiting)
+[5:58:29 AM] txAdmin: ((Broadcast) txAdmin): said "This server is scheduled to restart in 2 minutes."
+[5:59:28 AM] txAdmin: ((Broadcast) txAdmin): said "This server is scheduled to restart in 1 minute. Please disconnect now."
+[6:01:00 AM] txAdmin: Logger started
+[6:05:06 AM] [prAqx#1] PISSFLAPS: joined with identifiers [steam:11000014bb53aeb; license:e0893217ab0d40d6a510bcbfe1c9441b4a208a2b; discord:584024523989581834; fivem:8961289; license2:e0893217ab0d40d6a510bcbfe1c9441b4a208a2b]
+[6:07:46 AM] [prAqx#2] φοῖνιξ: joined with identifiers [steam:11000010ee88c01; license:ee681c08d9d45c48bf5af06870d7d23d75db16dc; xbl:2535430200613003; live:985158121988759; discord:305372052683096065; fivem:10488223; license2:ee681c08d9d45c48bf5af06870d7d23d75db16dc]
+[6:24:21 AM] [prAqx#3] Kody Pepperfield: joined with identifiers [steam:11000010c770c55; license:3219d00ad3af143df0db5d2bed38fe7460729e68; xbl:2535451109437060; live:1055521765014399; discord:152991330048540672; fivem:12674089; license2:3e576e238fb0360dab034daae9fc7459afbacb59]
+[6:24:58 AM] [prAqx#3] Kody Pepperfield: disconnected (Game crashed: ntdll.dll!RtlReportFatalFailure (0x9))
+[6:25:53 AM] [prAqx#4] Kody Pepperfield: joined with identifiers [steam:11000010c770c55; license:3219d00ad3af143df0db5d2bed38fe7460729e68; xbl:2535451109437060; live:1055521765014399; discord:152991330048540672; fivem:12674089; license2:3e576e238fb0360dab034daae9fc7459afbacb59]
+[6:58:48 AM] [prAqx#1] PISSFLAPS: disconnected (Exiting)
+[7:12:01 AM] [prAqx#4] Kody Pepperfield: disconnected (Exiting)
+[7:48:37 AM] [prAqx#5] BotOnMnK: joined with identifiers [steam:11000014df460ff; license:06a61b4c40fc28c0a6e0a709ba99ffb637152b33; xbl:2535406023679221; live:1055518462074046; discord:1043623556015194112; fivem:9907274; license2:06a61b4c40fc28c0a6e0a709ba99ffb637152b33]
+[7:54:51 AM] [prAqx#5] BotOnMnK: said "/hideHUD"
+[7:58:07 AM] [prAqx#6] Esky: joined with identifiers [steam:110000131c93706; license:8dfbcb6dabf76f1c81aa91d421dc6c2ab1407ba6; xbl:2535436019694875; live:914798270695886; discord:350771731708772354; fivem:11993654; license2:8dfbcb6dabf76f1c81aa91d421dc6c2ab1407ba6]
+[8:06:06 AM] [prAqx#7] Anne Flank: joined with identifiers [steam:1100001097e125b; license:a938a74170975c01e88f463aea01684a16f28545; xbl:2535409246266710; live:1899947325711585; discord:293157047682465793; license2:9eb41e0279fe15e33ff86440bafc2105d3b78f01]
+[8:25:34 AM] [prAqx#8] MJL: joined with identifiers [steam:1100001324fa523; license:ec6c328d6d02f816bf13e4a9d09768c02d6e3125; xbl:2535415531070562; live:1055522508602522; discord:213410953641852928; fivem:2586828]
+[8:31:19 AM] [prAqx#2] φοῖνιξ: disconnected (Exiting)
+[8:40:36 AM] [prAqx#9] JOSH: joined with identifiers [steam:1100001438fe567; license:b6284c20b4ad2c41c48d4a31859b65ae2a417ec8; discord:405075418769522708; fivem:12124231; license2:b6284c20b4ad2c41c48d4a31859b65ae2a417ec8]
+[9:20:35 AM] [prAqx#10] φοῖνιξ: joined with identifiers [steam:11000010ee88c01; license:ee681c08d9d45c48bf5af06870d7d23d75db16dc; xbl:2535430200613003; live:985158121988759; discord:305372052683096065; fivem:10488223; license2:ee681c08d9d45c48bf5af06870d7d23d75db16dc]
+[9:27:18 AM] [prAqx#9] JOSH: disconnected (Exiting)
+[9:28:06 AM] [prAqx#7] Anne Flank: disconnected (Game crashed: d3d11.dll!??$TID3D11DeviceContext_SetShaderResources_@$00$03@CContext@@SAXPEAUID3D11DeviceContext5@@IIPEBQEAUID3D11ShaderResourceView@@@Z (0x13e))
+[9:28:50 AM] [prAqx#11] Anne Flank: joined with identifiers [steam:1100001097e125b; license:a938a74170975c01e88f463aea01684a16f28545; xbl:2535409246266710; live:1899947325711585; discord:293157047682465793; license2:9eb41e0279fe15e33ff86440bafc2105d3b78f01]
+[9:29:52 AM] [prAqx#11] Anne Flank: disconnected (Exiting)
+[9:30:15 AM] [prAqx#12] Anne Flank: joined with identifiers [steam:1100001097e125b; license:a938a74170975c01e88f463aea01684a16f28545; xbl:2535409246266710; live:1899947325711585; discord:293157047682465793; license2:9eb41e0279fe15e33ff86440bafc2105d3b78f01]
+[9:31:42 AM] [prAqx#13] JOSH: joined with identifiers [steam:1100001438fe567; license:b6284c20b4ad2c41c48d4a31859b65ae2a417ec8; discord:405075418769522708; fivem:12124231; license2:b6284c20b4ad2c41c48d4a31859b65ae2a417ec8]
+[9:43:56 AM] [prAqx#5] BotOnMnK: disconnected (Exiting)
+[9:46:57 AM] [prAqx#13] JOSH: disconnected (Exiting)
+[9:48:56 AM] [prAqx#14] JOSH: joined with identifiers [steam:1100001438fe567; license:b6284c20b4ad2c41c48d4a31859b65ae2a417ec8; discord:405075418769522708; fivem:12124231; license2:b6284c20b4ad2c41c48d4a31859b65ae2a417ec8]
+[9:50:42 AM] [prAqx#14] JOSH: disconnected (Exiting)
+[9:56:21 AM] [prAqx#15] JOSH: joined with identifiers [steam:1100001438fe567; license:b6284c20b4ad2c41c48d4a31859b65ae2a417ec8; discord:405075418769522708; fivem:12124231; license2:b6284c20b4ad2c41c48d4a31859b65ae2a417ec8]
+[10:02:50 AM] [prAqx#8] MJL: disconnected (Exiting)
+[10:03:20 AM] [prAqx#16] MJL: joined with identifiers [steam:1100001324fa523; license:ec6c328d6d02f816bf13e4a9d09768c02d6e3125; xbl:2535415531070562; live:1055522508602522; discord:213410953641852928; fivem:2586828]
+[10:05:56 AM] [prAqx#12] Anne Flank: died from suicide (Falling)
+[10:07:49 AM] [prAqx#17] Kody Pepperfield: joined with identifiers [steam:11000010c770c55; license:3219d00ad3af143df0db5d2bed38fe7460729e68; xbl:2535451109437060; live:1055521765014399; discord:152991330048540672; fivem:12674089; license2:3e576e238fb0360dab034daae9fc7459afbacb59]
+[10:08:40 AM] [prAqx#18] PISSFLAPS: joined with identifiers [steam:11000014bb53aeb; license:e0893217ab0d40d6a510bcbfe1c9441b4a208a2b; discord:584024523989581834; fivem:8961289; license2:e0893217ab0d40d6a510bcbfe1c9441b4a208a2b]
+[10:08:47 AM] [prAqx#16] MJL: disconnected (Exiting)
+[10:09:33 AM] [prAqx#19] MJL: joined with identifiers [steam:1100001324fa523; license:ec6c328d6d02f816bf13e4a9d09768c02d6e3125; xbl:2535415531070562; live:1055522508602522; discord:213410953641852928; fivem:2586828]
+[10:11:28 AM] [prAqx#19] MJL: died from Heavy Pistol by JOSH
+[10:11:47 AM] [prAqx#19] MJL: said "/hideHUD"
+[10:11:57 AM] [prAqx#19] MJL: said "/hideHUD"
+[10:11:57 AM] [prAqx#19] MJL: said "/hideHUD"
+[10:12:16 AM] [prAqx#19] MJL: said "/hideHUD"
+[10:12:28 AM] [prAqx#19] MJL: said "/hideHUD"
+[10:12:48 AM] [prAqx#20] Kamakazi Gamdom: joined with identifiers [steam:11000010e87be4d; license:b27179133e8df658895ecd5f756db2a4a4c8cd08; xbl:2533275003431282; live:1829581607460581; discord:242888314108116992; fivem:11442758; license2:e1e3866f24a1a081ffd211b7c1805c667b695651]
+[10:13:53 AM] [prAqx#20] Kamakazi Gamdom: died from suicide (Falling)
+[10:14:28 AM] [prAqx#20] Kamakazi Gamdom: said "/hideHUD"
+[10:15:01 AM] [prAqx#21] PenisArms: joined with identifiers [steam:110000106663fee; license:75e8fff053fc2515d532d832f72b89caf96b5dba; live:844428493592648; discord:397099226359660555; license2:a0ef5f5967f43def5862fa6b71986903d18c3003]
+[10:17:48 AM] [prAqx#15] JOSH: died from unknown by Kamakazi Gamdom
+[10:18:17 AM] [prAqx#15] JOSH: died from Knife by Kamakazi Gamdom
+[10:18:37 AM] [prAqx#17] Kody Pepperfield: died from Revolver by Kamakazi Gamdom
+[10:21:14 AM] [prAqx#6] Esky: disconnected (Game crashed: GTA5_b2699.exe!_setSamplersForPixelShader (0x89))
+[10:21:21 AM] [prAqx#15] JOSH: died from Revolver by Kamakazi Gamdom
+[10:21:25 AM] [prAqx#21] PenisArms: disconnected (Server->client connection timed out. Pending commands: 158.	Command list:	QBCore:Client:TriggerCallback (34286 B, 17154 msec ago)	prospecting:setTargetPool (11138 B, 17154 msec ago)	__ox_cb_flight-houserobbery (11090 B, 17154 msec ago)	QBCore:Player:SetPlayerData (2653 B, 17154 msec ago)	QBCore:Client:TriggerCallback (2444 B, 17154 msec ago)	QBCore:Client:TriggerCallback (2262 B, 17154 msec ago)	QBCore:Client:TriggerCallback (900 B, 17154 msec ago)	)
+[10:21:51 AM] [prAqx#15] JOSH: died from Pistol by Kody Pepperfield
+[10:22:04 AM] [prAqx#15] JOSH: died from Pistol by Kamakazi Gamdom
+[10:22:33 AM] [prAqx#22] Esky: joined with identifiers [steam:110000131c93706; license:8dfbcb6dabf76f1c81aa91d421dc6c2ab1407ba6; xbl:2535436019694875; live:914798270695886; discord:350771731708772354; fivem:11993654; license2:8dfbcb6dabf76f1c81aa91d421dc6c2ab1407ba6]
+[10:23:21 AM] [prAqx#15] JOSH: died from Pistol by Kody Pepperfield
+[10:23:34 AM] [prAqx#23] PenisArms: joined with identifiers [steam:110000106663fee; license:75e8fff053fc2515d532d832f72b89caf96b5dba; live:844428493592648; discord:397099226359660555; license2:a0ef5f5967f43def5862fa6b71986903d18c3003]
+[10:24:51 AM] [prAqx#20] Kamakazi Gamdom: said "/hideHUD"
+[10:25:03 AM] [prAqx#15] JOSH: died from Ranover by Vehicle by PISSFLAPS
+[10:25:12 AM] [prAqx#15] JOSH: died from Ranover by Vehicle by PISSFLAPS
+[10:26:24 AM] [prAqx#20] Kamakazi Gamdom: said "/hideHUD"
+[10:27:16 AM] [prAqx#20] Kamakazi Gamdom: said "/S"
+[10:28:00 AM] [prAqx#24] BotOnMnK: joined with identifiers [steam:11000014df460ff; license:06a61b4c40fc28c0a6e0a709ba99ffb637152b33; xbl:2535406023679221; live:1055518462074046; discord:1043623556015194112; fivem:9907274; license2:06a61b4c40fc28c0a6e0a709ba99ffb637152b33]
+[10:29:46 AM] [prAqx#24] BotOnMnK: died from Ranover by Vehicle by PISSFLAPS
+[10:30:21 AM] [prAqx#24] BotOnMnK: died from suicide
+[10:34:06 AM] [prAqx#25] zoom: joined with identifiers [steam:1100001445f3d8b; license:9ad75b0b7e9938320646cd632f026a1ded621e36; xbl:2535447518451339; live:985154767554358; discord:1055973336842248403; fivem:10164198; license2:9ad75b0b7e9938320646cd632f026a1ded621e36]
+[10:35:58 AM] [prAqx#20] Kamakazi Gamdom: said "/admin\"
+[10:37:58 AM] [prAqx#18] PISSFLAPS: said "/fixa"
+[10:39:41 AM] [prAqx#19] MJL: disconnected (Exiting)
+[10:40:16 AM] [prAqx#20] Kamakazi Gamdom: said "/adminb"
+[10:44:23 AM] [prAqx#24] BotOnMnK: said "/hideHUD"
+[10:46:10 AM] [prAqx#20] Kamakazi Gamdom: said "/dcv"
+[10:46:12 AM] [prAqx#20] Kamakazi Gamdom: said "/hideHUD"
+[10:48:06 AM] [prAqx#22] Esky: disconnected (Exiting)
+[10:50:39 AM] [prAqx#26] Esky: joined with identifiers [steam:110000131c93706; license:8dfbcb6dabf76f1c81aa91d421dc6c2ab1407ba6; xbl:2535436019694875; live:914798270695886; discord:350771731708772354; fivem:11993654; license2:8dfbcb6dabf76f1c81aa91d421dc6c2ab1407ba6]
+[10:52:13 AM] [prAqx#23] PenisArms: said "/sit"
+[10:58:04 AM] [prAqx#25] zoom: said "/hideHUD"
+[10:59:51 AM] [prAqx#15] JOSH: died from suicide (Falling)
+[11:02:57 AM] [prAqx#25] zoom: died from suicide (Falling)
+[11:05:15 AM] [prAqx#18] PISSFLAPS: said "/ficx"
+[11:10:15 AM] [prAqx#23] PenisArms: died from suicide (Falling)
+[11:10:57 AM] [prAqx#27] MJL: joined with identifiers [steam:1100001324fa523; license:ec6c328d6d02f816bf13e4a9d09768c02d6e3125; xbl:2535415531070562; live:1055522508602522; discord:213410953641852928; fivem:2586828]
+[11:11:10 AM] [prAqx#20] Kamakazi Gamdom: said "/hideHUD"
+[11:12:04 AM] [prAqx#17] Kody Pepperfield: said "/hideHUD"
+[11:19:34 AM] [prAqx#23] PenisArms: disconnected (Exiting)
+[11:24:27 AM] [prAqx#10] φοῖνιξ: disconnected (Exiting)
+[11:34:06 AM] [prAqx#20] Kamakazi Gamdom: caused an explosion (GRENADE)
+[11:36:41 AM] [prAqx#28] φοῖνιξ: joined with identifiers [steam:11000010ee88c01; license:ee681c08d9d45c48bf5af06870d7d23d75db16dc; xbl:2535430200613003; live:985158121988759; discord:305372052683096065; fivem:10488223; license2:ee681c08d9d45c48bf5af06870d7d23d75db16dc]
+[11:37:01 AM] [prAqx#25] zoom: died from suicide (Falling)
+[11:38:54 AM] [prAqx#15] JOSH: died from suicide (Ranover by Vehicle)
+[11:39:19 AM] [prAqx#25] zoom: said "/hideHUD"
+[11:47:19 AM] [prAqx#18] PISSFLAPS: died from Night Stick by Kody Pepperfield
+[11:51:08 AM] [prAqx#18] PISSFLAPS: died from unknown by Kody Pepperfield
+[11:51:37 AM] [prAqx#18] PISSFLAPS: died from Pump Shotgun by Kamakazi Gamdom
+[11:51:47 AM] [prAqx#18] PISSFLAPS: died from Pump Shotgun by Kamakazi Gamdom
+[11:52:09 AM] [prAqx#25] zoom: died from Revolver by Kamakazi Gamdom
+[11:55:32 AM] [prAqx#15] JOSH: disconnected (Exiting)
+[11:57:32 AM] [prAqx#26] Esky: disconnected (Exiting)
+[11:58:52 AM] [prAqx#29] dont get salty: joined with identifiers [steam:11000011c2c6619; license:5840e2356d57b9dbc96bdcd214ce4824582e6e0c; discord:364167998279516161; fivem:10728615; license2:5840e2356d57b9dbc96bdcd214ce4824582e6e0c]
+[11:59:12 AM] [prAqx#20] Kamakazi Gamdom: said "FIX"
+[12:00:15 PM] [prAqx#18] PISSFLAPS: died from Revolver by Kamakazi Gamdom
+[12:00:35 PM] [prAqx#18] PISSFLAPS: died from Pistol by zoom
+[12:00:47 PM] [prAqx#25] zoom: died from suicide (Falling)
+[12:01:02 PM] [prAqx#25] zoom: died from suicide (Falling)
+[12:03:58 PM] [prAqx#25] zoom: disconnected (Game crashed: GTA5_b2699.exe!_setSamplersForPixelShader (0x89))
+[12:05:18 PM] [prAqx#18] PISSFLAPS: said "fix"
+[12:08:35 PM] [prAqx#17] Kody Pepperfield: died from unknown by PISSFLAPS
+[12:09:05 PM] [prAqx#30] zoom: joined with identifiers [steam:1100001445f3d8b; license:9ad75b0b7e9938320646cd632f026a1ded621e36; xbl:2535447518451339; live:985154767554358; discord:1055973336842248403; fivem:10164198; license2:9ad75b0b7e9938320646cd632f026a1ded621e36]
+[12:12:52 PM] [prAqx#12] Anne Flank: disconnected (Exiting)
+[12:20:16 PM] [prAqx#30] zoom: said "/carry"
+[12:27:47 PM] [prAqx#30] zoom: died from unknown by Kody Pepperfield
+[12:27:50 PM] [prAqx#20] Kamakazi Gamdom: died from unknown by Kody Pepperfield
+[12:28:15 PM] [prAqx#17] Kody Pepperfield: died from Pistol by Kamakazi Gamdom
+[12:29:14 PM] [prAqx#30] zoom: died from Revolver by Kamakazi Gamdom
+[12:31:56 PM] [prAqx#30] zoom: died from Pump Shotgun by Kamakazi Gamdom
+[12:31:56 PM] [prAqx#28] φοῖνιξ: said "/refreshskim"
+[12:31:58 PM] [prAqx#17] Kody Pepperfield: died from Pump Shotgun by Kamakazi Gamdom
+[12:32:32 PM] [prAqx#30] zoom: died from Pistol by Kody Pepperfield
+[12:32:34 PM] [prAqx#17] Kody Pepperfield: died from Pump Shotgun by Kamakazi Gamdom
+[12:33:15 PM] [prAqx#28] φοῖνιξ: disconnected (Exiting)
+[12:34:02 PM] [prAqx#31] φοῖνιξ: joined with identifiers [steam:11000010ee88c01; license:ee681c08d9d45c48bf5af06870d7d23d75db16dc; xbl:2535430200613003; live:985158121988759; discord:305372052683096065; fivem:10488223; license2:ee681c08d9d45c48bf5af06870d7d23d75db16dc]
+[12:38:10 PM] [prAqx#18] PISSFLAPS: said "fix"
+[12:39:15 PM] [prAqx#18] PISSFLAPS: said "fix"
+[12:39:38 PM] [prAqx#24] BotOnMnK: died from suicide
+[12:39:49 PM] [prAqx#30] zoom: died from Revolver by Kamakazi Gamdom
+[12:40:23 PM] [prAqx#17] Kody Pepperfield: died from suicide
+[12:40:29 PM] [prAqx#20] Kamakazi Gamdom: said "/hideHUD"
+[12:40:50 PM] [prAqx#30] zoom: disconnected (Exiting)
+[12:42:19 PM] [prAqx#24] BotOnMnK: died from suicide (Falling)
+[12:46:06 PM] [prAqx#20] Kamakazi Gamdom: said "/hideHUD"
+[12:47:17 PM] [prAqx#18] PISSFLAPS: said "/noclup"
+[12:54:11 PM] [prAqx#24] BotOnMnK: died from suicide (Falling)
+[12:56:21 PM] [prAqx#31] φοῖνιξ: died from suicide (Falling)
+[1:01:17 PM] [prAqx#32] JOSH: joined with identifiers [steam:1100001438fe567; license:b6284c20b4ad2c41c48d4a31859b65ae2a417ec8; discord:405075418769522708; fivem:12124231; license2:b6284c20b4ad2c41c48d4a31859b65ae2a417ec8]
+[1:02:02 PM] [prAqx#18] PISSFLAPS: said "fix"
+[1:06:37 PM] [prAqx#18] PISSFLAPS: said "tpm"
+[1:07:41 PM] [prAqx#18] PISSFLAPS: said "tpm"
+[1:08:26 PM] [prAqx#18] PISSFLAPS: said "fix"
+[1:16:09 PM] [prAqx#32] JOSH: died from unknown by PISSFLAPS
+[1:16:42 PM] [prAqx#31] φοῖνιξ: died from Knife by BotOnMnK
+[1:19:05 PM] [prAqx#32] JOSH: died from Knife by BotOnMnK
+[1:19:58 PM] [prAqx#20] Kamakazi Gamdom: died from unknown by PISSFLAPS
+[1:20:42 PM] [prAqx#20] Kamakazi Gamdom: caused an explosion (GRENADE)
+[1:20:55 PM] [prAqx#20] Kamakazi Gamdom: died from Heavy Pistol by JOSH
+[1:21:28 PM] [prAqx#32] JOSH: died from Pump Shotgun by Kamakazi Gamdom
+[1:22:04 PM] [prAqx#32] JOSH: died from Pump Shotgun by Kamakazi Gamdom
+[1:23:29 PM] [prAqx#17] Kody Pepperfield: died from unknown by PISSFLAPS
+[1:28:19 PM] [prAqx#18] PISSFLAPS: said "fix"
+[1:30:09 PM] [prAqx#20] Kamakazi Gamdom: died from Combat Pistol by BotOnMnK
+[1:30:38 PM] txAdmin: ((Broadcast) txAdmin): said "This server is scheduled to restart in 30 minutes."
+[1:31:23 PM] [prAqx#17] Kody Pepperfield: died from Combat Pistol by BotOnMnK
+[1:31:30 PM] [prAqx#20] Kamakazi Gamdom: died from unknown by PISSFLAPS
+[1:31:50 PM] [prAqx#29] dont get salty: died from unknown by PISSFLAPS
+[1:31:58 PM] [prAqx#18] PISSFLAPS: said "/steal"
+[1:32:16 PM] [prAqx#32] JOSH: died from suicide (Falling)
+[1:32:53 PM] [prAqx#24] BotOnMnK: said "/secort"
