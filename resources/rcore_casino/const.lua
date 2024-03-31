@@ -899,7 +899,7 @@ LuckyWheelItems["Chips1"] = {
     posibility = 100,
     soundName = "Win_Chips",
     animName = "win",
-    chipsReward = 1000
+    moneyReward = 1000
 }
 
 LuckyWheelItems["Chips2"] = {
@@ -907,7 +907,7 @@ LuckyWheelItems["Chips2"] = {
     posibility = 55,
     soundName = "Win_Chips",
     animName = "win",
-    chipsReward = 1500
+    moneyReward = 1500
 }
 
 LuckyWheelItems["Chips3"] = {
@@ -915,7 +915,7 @@ LuckyWheelItems["Chips3"] = {
     posibility = 45,
     soundName = "Win_Chips",
     animName = "win",
-    chipsReward = 2000
+    moneyReward = 2000
 }
 
 LuckyWheelItems["Chips4"] = {
@@ -923,7 +923,7 @@ LuckyWheelItems["Chips4"] = {
     posibility = 35,
     soundName = "Win_Chips",
     animName = "win_big",
-    chipsReward = 2500
+    moneyReward = 2500
 }
 
 LuckyWheelItems["Vehicle"] = {
