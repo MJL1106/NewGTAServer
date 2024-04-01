@@ -26,7 +26,7 @@ end)
 
 -- Blips
 Citizen.CreateThread(function()
-    local blip = AddBlipForCoord(377.3783, -829.9859, 29.3027)
+    local blip = AddBlipForCoord(-937.16, -1181.78, 4.98)
     
     SetBlipSprite (blip, 140)
     SetBlipDisplay(blip, 4)
