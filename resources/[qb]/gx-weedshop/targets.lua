@@ -1,10 +1,10 @@
 Citizen.CreateThread(function()
-    exports['qb-target']:AddBoxZone("weedshop-service", vector3(374.4030, -829.8217, 29.1206), 1, 1.2, {
+    exports['qb-target']:AddBoxZone("weedshop-service", vector3(-940.28, -1186.72, 4.17), 1, 1.2, {
         name = "weedshop-service",
-        heading = 91,
+        heading = 307.63,
         debugPoly = false,
-        minZ=26.1206,
-        maxZ=30.1206,
+        minZ=2,
+        maxZ=4,
     }, {
         options = {
             {  
@@ -17,9 +17,9 @@ Citizen.CreateThread(function()
         distance = 1.5
     })
 
-    exports['qb-target']:AddBoxZone("counterweedshop", vector3(378.7853, -826.6912, 29.1022), 1.6, 3.6, {
+    exports['qb-target']:AddBoxZone("counterweedshop", vector3(-933.24, -1177.52, 4.0), 1.6, 3.5, {
         name="counterweedshop",
-        heading=89,
+        heading=301.81,
         debugPoly = false,
     }, {
         options = {
@@ -32,9 +32,9 @@ Citizen.CreateThread(function()
         distance = 3.5
     })
 
-    exports['qb-target']:AddBoxZone("weedshopboard1", vector3(375.5658, -828.8251, 29.15014), 0.5, 0.7, {
+    exports['qb-target']:AddBoxZone("weedshopboard1", vector3(-931.66, -1175.65, 4.04), 0.5, 0.7, {
         name = "weedshopboard1",
-        heading = 87.8,
+        heading = 309.44,
         debugPoly = false,
     }, {
         options = {
@@ -47,9 +47,9 @@ Citizen.CreateThread(function()
         distance = 1.5
     })
 
-    exports['qb-target']:AddBoxZone("weedshopstorage", vector3(379.8752, -819.1209, 29.3026), 1.2, 2, {
+    exports['qb-target']:AddBoxZone("weedshopstorage", vector3(-930.11, -1181.53, 4.02), 1.2, 2, {
         name="weedshopstorage",
-        heading=87.61,
+        heading=216.1,
         debugPoly = false,
     }, {
             options = {
@@ -63,9 +63,9 @@ Citizen.CreateThread(function()
             distance = 1.0
         })
 
-    exports['qb-target']:AddBoxZone("weedshop-weed", vector3(377.1346, -827.4330, 29.2374), 0.7, 1.5, {
+    exports['qb-target']:AddBoxZone("weedshop-weed", vector3(-929.7, -1178.52, 4.16), 0.7, 4.0, {
         name="weedshop-weed",
-        heading=97.15,
+        heading=304.56,
         debugPoly=false,
 
     }, {
@@ -80,9 +80,9 @@ Citizen.CreateThread(function()
             distance = 1.5
     })
 
-    exports['qb-target']:AddBoxZone("weedshop-weedplant", vector3(383.2165, -813.3147, 29.3042), 0.7, 1.5, {
+    exports['qb-target']:AddBoxZone("weedshop-weedplant", vector3(-927.57, -1186.81, -1.84), 0.7, 3, {
         name="weedshop-weedplant",
-        heading=97.15,
+        heading=121.29,
         debugPoly=false,
 
     }, {
@@ -97,9 +97,9 @@ Citizen.CreateThread(function()
             distance = 1.5
     })
 
-    exports['qb-target']:AddBoxZone("weedshop-weedplant2", vector3(382.2165, -813.3147, 29.3042), 0.7, 1.5, {
+    exports['qb-target']:AddBoxZone("weedshop-weedplant2", vector3(-921.69, -1186.51, -1.84), 0.7, 3, {
         name="weedshop-weedplant2",
-        heading=97.15,
+        heading=216.07,
         debugPoly=false,
 
     }, {
@@ -114,9 +114,9 @@ Citizen.CreateThread(function()
             distance = 1.5
     })
 
-    exports['qb-target']:AddBoxZone("weedshop-weedplant3", vector3(380.6, -811.47, 28.41), 0.7, 1.5, {
+    exports['qb-target']:AddBoxZone("weedshop-weedplant3", vector3(-929.5, -1188.69, -1.84), 0.7, 3, {
         name="weedshop-weedplant3",
-        heading=3.78,
+        heading=120.62,
         debugPoly=false,
 
     }, {
@@ -131,9 +131,9 @@ Citizen.CreateThread(function()
             distance = 1.5
     })
 
-    exports['qb-target']:AddBoxZone("weedshop-seeds", vector3(380.4, -813.34, 28.43), 0.7, 1.5, {
+    exports['qb-target']:AddBoxZone("weedshop-seeds", vector3(-927.99, -1180.62, -1.89), 1.5, 1.5, {
         name="weedshop-seeds",
-        heading=97.15,
+        heading=120,
         debugPoly=false,
 
     }, {
@@ -148,9 +148,9 @@ Citizen.CreateThread(function()
             distance = 1.5
     })
 
-    exports['qb-target']:AddBoxZone("weedshop-seeds2", vector3(379.4, -813.34, 28.43), 0.7, 1.5, {
+    exports['qb-target']:AddBoxZone("weedshop-seeds2", vector3(-927.86, -1190.65, -1.89), 1.5, 1.5, {
         name="weedshop-seeds2",
-        heading=97.15,
+        heading=30,
         debugPoly=false,
 
     }, {
@@ -165,27 +165,9 @@ Citizen.CreateThread(function()
             distance = 1.5
     })
 
-    exports['qb-target']:AddBoxZone("weedshop-seeds3", vector3(378.3, -813.34, 28.43), 0.7, 1.5, {
-        name="weedshop-seeds3",
-        heading=97.15,
-        debugPoly=false,
-
-    }, {
-            options = {
-                {
-                    event = "gx-weedshop:client:SeedMenu",
-                    icon = "fas fa-rocket",
-                    label = "Harvest Seeds",
-                    job = "weedshop",
-                },
-            },
-            distance = 1.5
-    })
-
-
-    exports['qb-target']:AddBoxZone("weedshop-bagweed", vector3(382.49, -817.43, 28.3), 0.7, 1.5, {
+    exports['qb-target']:AddBoxZone("weedshop-bagweed", vector3(-929.08, -1171.4, -1.2), 0.7, 3.5, {
         name="weedshop-bagweedt",
-        heading=97.15,
+        heading=31.2,
         debugPoly=false,
 
     }, {
@@ -201,10 +183,10 @@ Citizen.CreateThread(function()
     })
     
     
-    exports['qb-target']:AddBoxZone("weedshop-menu1", vector3(380.1550, -827.4106, 29.3022), 0.5, 0.4, {
+    exports['qb-target']:AddBoxZone("weedshop-menu1", vector3(-931.6, -1179.89, 4.0), 1.5, 1.4, {
         name="weedshop-menu1",
         debugPoly = false,
-        heading=270,
+        heading=301.23,
     }, {
             options = {
                 {
@@ -222,7 +204,7 @@ Citizen.CreateThread(function()
             distance = 1.5
     })
 
-    exports['qb-target']:AddBoxZone("weedshop-menu2", vector3(375.4087, -827.3607, 28.3088), 0.6, 0.5, {
+    exports['qb-target']:AddBoxZone("weedshop-menu2", vector3(-942.42, -1181.24, 3.91), 1.6, 1.5, {
         name="weedshop-menu2",
         debugPoly = false,
         heading=270,
@@ -243,9 +225,9 @@ Citizen.CreateThread(function()
                 distance = 1.5
             })
 
-    exports['qb-target']:AddBoxZone("weedshop-clothes", vector3(373.6913, -824.5279, 29.3030), 1.5, 1, {
+    exports['qb-target']:AddBoxZone("weedshop-clothes", vector3(-931.35, -1168.81, 3.88), 1.5, 1, {
         name="weedshop-clothes",
-        heading=0,
+        heading=304.9,
         debugPoly = false,
     }, {
         options = {

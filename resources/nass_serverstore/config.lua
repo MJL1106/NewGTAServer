@@ -8,12 +8,12 @@ Config.VehicleDisplays = { --Simple vehicle spawner that allows you to display c
 			pos = vector3(44.5147, -873.9191, 28.7612),
 			sprite = 272,
 			color = 2,
-			scale = 0.85,
+			scale = 0.0,
 			shortRange = true,
 			name = "Paid Vehicle Displays",
 		},
 		vehicles = {
-			{model = "zentorno", pos = vector4(44.5147, -873.9191, 29.7612, 350.9439)}
+			{model = "zentorno", pos = vector4(-891.86, -1016.87, -7.75, 39.26)}
 		}
 	},
 }
