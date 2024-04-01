@@ -204,7 +204,7 @@ Config.Products = {
             amount = 150,
             info = {},
             type = "item",
-            slot = 14,
+            slot = 9,
         },
         [10] = {
             name = "advancedrepairkit",
@@ -212,7 +212,7 @@ Config.Products = {
             amount = 50,
             info = {},
             type = "item",
-            slot = 15,
+            slot = 10,
         },
         [11] = {
             name = "bakingsoda",
@@ -220,7 +220,7 @@ Config.Products = {
             amount = 25,
             info = { quality = 100, },
             type = "item",
-            slot = 16,
+            slot = 11,
         },
         [12] = {
             name = "detector",
@@ -228,7 +228,15 @@ Config.Products = {
             amount = 25,
             info = { quality = 100, },
             type = "item",
-            slot = 17,
+            slot = 12,
+        },
+        [13] = {
+            name = "weapon_crowbar",
+            price = 1000,
+            amount = 25,
+            info = { quality = 100, },
+            type = "item",
+            slot = 13,
         },
 
     },
