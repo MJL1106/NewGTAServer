@@ -668,8 +668,11 @@ function Hotwire(vehicle, plate)
                 IsHotwiring = false
             end)
         else
-            exports['ps-dispatch']:CarJacking(vehicle)
-            AttemptPoliceAlert("carjack")
+            local chance = math.random(1,100)
+            if chance <= 75 then 
+                exports['ps-dispatch']:CarJacking(vehicle)
+            end
+            -- AttemptPoliceAlert("carjack")
             TriggerServerEvent('hud:server:GainStress', math.random(1, 4))
             TriggerEvent("QBCore:Notify", "You failed to Hotwire the car.", "error")
         end
