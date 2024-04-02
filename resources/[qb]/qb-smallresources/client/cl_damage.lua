@@ -18,7 +18,7 @@ CreateThread(function()
 	-- Pistols
 	SetWeaponDamageModifier(`WEAPON_TASER`, 0.0) -- new taser shit
 	SetWeaponDamageModifier(`WEAPON_SNSPISTOL`, 0.6) 
-	SetWeaponDamageModifier(`WEAPON_PISTOL`, 0.9) -- Colt 1911
+	SetWeaponDamageModifier(`WEAPON_PISTOL`, 1.2) -- Colt 1911
 	SetWeaponDamageModifier(`WEAPON_PISTOL_MK2`, 0.8) -- Beretta M9
 	SetWeaponDamageModifier(`WEAPON_COMBATPISTOL`, 0.8) -- FN FNX-45
 	SetWeaponDamageModifier(`WEAPON_APPISTOL`, 0.6) 
