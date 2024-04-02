@@ -1,6 +1,6 @@
 local recoils = {
     -- Handguns
-    [`weapon_pistol`] = 0.8,
+    [`weapon_pistol`] = 0.6,
     [`weapon_pistol_mk2`] = 0.8,
     [`weapon_combatpistol`] = 0.8,
     [`weapon_appistol`] = 1.1,
@@ -37,7 +37,7 @@ local recoils = {
     [`weapon_sawnoffshotgun`] = 0.7,
     [`weapon_assaultshotgun`] = 0.5,
     [`weapon_bullpupshotgun`] = 0.6,
-    [`weapon_musket`] = 0.7,
+    [`weapon_musket`] = 0.0,
     [`weapon_heavyshotgun`] = 0.5,
     [`weapon_dbshotgun`] = 0.7,
     [`weapon_autoshotgun`] = 0.5,
