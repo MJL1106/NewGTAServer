@@ -88,31 +88,31 @@ RegisterNetEvent('qb-pawnshop:client:openMenu', function()
                     }
                 }
             }
-            if not isMelting then
-                pawnShop[#pawnShop + 1] = {
-                    header = Lang:t('info.melt'),
-                    txt = Lang:t('info.melt_pawn'),
-                    params = {
-                        event = 'qb-pawnshop:client:openMelt',
-                        args = {
-                            items = Config.MeltingItems
-                        }
-                    }
-                }
-            end
-            if canTake then
-                pawnShop[#pawnShop + 1] = {
-                    header = Lang:t('info.melt_pickup'),
-                    txt = '',
-                    params = {
-                        isServer = true,
-                        event = 'qb-pawnshop:server:pickupMelted',
-                        args = {
-                            items = meltedItem
-                        }
-                    }
-                }
-            end
+            -- if not isMelting then
+            --     pawnShop[#pawnShop + 1] = {
+            --         header = Lang:t('info.melt'),
+            --         txt = Lang:t('info.melt_pawn'),
+            --         params = {
+            --             event = 'qb-pawnshop:client:openMelt',
+            --             args = {
+            --                 items = Config.MeltingItems
+            --             }
+            --         }
+            --     }
+            -- end
+            -- if canTake then
+            --     pawnShop[#pawnShop + 1] = {
+            --         header = Lang:t('info.melt_pickup'),
+            --         txt = '',
+            --         params = {
+            --             isServer = true,
+            --             event = 'qb-pawnshop:server:pickupMelted',
+            --             args = {
+            --                 items = meltedItem
+            --             }
+            --         }
+            --     }
+            -- end
             exports['qb-menu']:openMenu(pawnShop)
         else
             QBCore.Functions.Notify(Lang:t('info.pawn_closed', { value = Config.TimeOpen, value2 = Config.TimeClosed }))
@@ -134,31 +134,31 @@ RegisterNetEvent('qb-pawnshop:client:openMenu', function()
                 }
             }
         }
-        if not isMelting then
-            pawnShop[#pawnShop + 1] = {
-                header = Lang:t('info.melt'),
-                txt = Lang:t('info.melt_pawn'),
-                params = {
-                    event = 'qb-pawnshop:client:openMelt',
-                    args = {
-                        items = Config.MeltingItems
-                    }
-                }
-            }
-        end
-        if canTake then
-            pawnShop[#pawnShop + 1] = {
-                header = Lang:t('info.melt_pickup'),
-                txt = '',
-                params = {
-                    isServer = true,
-                    event = 'qb-pawnshop:server:pickupMelted',
-                    args = {
-                        items = meltedItem
-                    }
-                }
-            }
-        end
+        -- if not isMelting then
+        --     pawnShop[#pawnShop + 1] = {
+        --         header = Lang:t('info.melt'),
+        --         txt = Lang:t('info.melt_pawn'),
+        --         params = {
+        --             event = 'qb-pawnshop:client:openMelt',
+        --             args = {
+        --                 items = Config.MeltingItems
+        --             }
+        --         }
+        --     }
+        -- end
+        -- if canTake then
+        --     pawnShop[#pawnShop + 1] = {
+        --         header = Lang:t('info.melt_pickup'),
+        --         txt = '',
+        --         params = {
+        --             isServer = true,
+        --             event = 'qb-pawnshop:server:pickupMelted',
+        --             args = {
+        --                 items = meltedItem
+        --             }
+        --         }
+        --     }
+        -- end
         exports['qb-menu']:openMenu(pawnShop)
     end
 end)
