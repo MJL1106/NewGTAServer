@@ -485,7 +485,7 @@ Config.Locations[#Config.Locations+1] = { --[[ POPULAR STREET LS CUSTOMS ]]--
 }
 
 Config.Locations[#Config.Locations+1] = { --[[ OTTOS AUTOS ]]--
-	Enabled = true,
+	Enabled = false,
 	job = "mechanic",
 	zones = {
 		vector2(794.2, -769.3),
