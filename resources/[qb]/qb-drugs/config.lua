@@ -133,8 +133,8 @@ Config = {
             max = 65,
         },
         ["coke_brick"] = {
-            min = 130,
-            max = 170,
+            min = 210,
+            max = 245,
         },
         ["heroin"] = {
             min = 50,
