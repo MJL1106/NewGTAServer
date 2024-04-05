@@ -25,8 +25,6 @@ RegisterNetEvent('qb-taxi:server:NpcPay', function(Payment)
                 Player.Functions.AddItem("cryptostick", 1, false)
                 TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items["cryptostick"], "add")
             end
-        else
-            DropPlayer(src, 'Attempting To Exploit')
         end
     else
         DropPlayer(src, 'Attempting To Exploit')

@@ -111,3 +111,45 @@ Config.DoorList['pillbox-854291622'] = {
     doorRate = 1.0,
     distance = 2,
 }
+
+-- -1421582160 created by MJL
+Config.DoorList['pillbox--1421582160'] = {
+    locked = true,
+    distance = 2,
+    doorLabel = 'LowerSideDoor',
+    authorizedJobs = { ['ambulance'] = 0 },
+    doors = {
+        {objName = -1421582160, objYaw = 25.005989074707, objCoords = vec3(321.014832, -559.912720, 28.947239)},
+        {objName = 1248599813, objYaw = 205.0061340332, objCoords = vec3(318.665619, -561.008606, 28.947239)}
+    },
+    doorRate = 1.0,
+    doorType = 'double',
+}
+
+-- -820650556 created by MJL
+Config.DoorList['pillbox-LowerSlide1'] = {
+    locked = true,
+    distance = 3,
+    objYaw = 160.00605773926,
+    authorizedJobs = { ['ambulance'] = 0 },
+    fixText = false,
+    objCoords = vec3(330.134918, -561.833130, 29.775291),
+    doorLabel = 'LowerSlide1',
+    doorRate = 1.0,
+    objName = -820650556,
+    doorType = 'sliding',
+}
+
+-- -820650556 created by MJL
+Config.DoorList['pillbox--820650556'] = {
+    doorLabel = 'LowerSlide2',
+    locked = true,
+    doorType = 'sliding',
+    objName = -820650556,
+    fixText = false,
+    objCoords = vec3(337.277679, -564.432007, 29.775291),
+    authorizedJobs = { ['ambulance'] = 0 },
+    distance = 3,
+    doorRate = 1.0,
+    objYaw = 160.00607299805,
+}
