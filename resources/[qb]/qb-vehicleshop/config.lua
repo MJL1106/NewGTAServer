@@ -115,33 +115,33 @@ Config.Shops = {
         ['ShowroomVehicles'] = {
             [1] = {
                 coords = vector4(-1265.31, -354.44, 35.91, 205.08),
-                defaultVehicle = 's15',
-                chosenVehicle = 's15'
+                defaultVehicle = 's8nm8',
+                chosenVehicle = 's8nm8'
             },
             [2] = {
                 coords = vector4(-1270.06, -358.55, 35.91, 247.08),
-                defaultVehicle = 'GODzDRIFTCAT',
-                chosenVehicle = 'GODzDRIFTCAT'
+                defaultVehicle = 'CCViper',
+                chosenVehicle = 'CCViper'
             },
             [3] = {
                 coords = vector4(-1269.21, -365.03, 35.91, 297.12),
-                defaultVehicle = 'brz13varis',
-                chosenVehicle = 'brz13varis'
+                defaultVehicle = 'evo9',
+                chosenVehicle = 'evo9'
             },
             [4] = {
                 coords = vector4(-1252.07, -364.2, 35.91, 56.44),
-                defaultVehicle = '17mansorypnmr',
-                chosenVehicle = '17mansorypnmr'
+                defaultVehicle = 'suprapandem',
+                chosenVehicle = 'suprapandem'
             },
             [5] = {
                 coords = vector4(-1255.49, -365.91, 35.91, 55.63),
-                defaultVehicle = 'scubieblob',
-                chosenVehicle = 'scubieblob'
+                defaultVehicle = 'manssupersnake',
+                chosenVehicle = 'manssupersnake'
             },
             [6] = {
                 coords = vector4(-1249.21, -362.97, 35.91, 53.24),
-                defaultVehicle = 'GODzVIPS63AMG',
-                chosenVehicle = 'GODzVIPS63AMG'
+                defaultVehicle = 'rmodpagani',
+                chosenVehicle = 'rmodpagani'
             },
         },
         ['InteractionPanel'] = {

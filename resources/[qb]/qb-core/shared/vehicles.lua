@@ -4780,7 +4780,7 @@ QBShared.Vehicles = {
         ['category'] = 'tier2',
         ['categoryLabel'] = 'Tier 2',
         ['hash'] = `evo9`,
-        ['shop'] = '',
+        ['shop'] = 'luxury',
     },
     ['escaladeprime'] = {
         ['name'] = 'Primal',
@@ -4820,7 +4820,7 @@ QBShared.Vehicles = {
         ['category'] = 'tier3',
         ['categoryLabel'] = 'Tier 3',
         ['hash'] = `suprapandem`,
-        ['shop'] = '',
+        ['shop'] = 'luxury',
     },
 	['Hycaders6'] = {
         ['name'] = 'Rycade 7',
@@ -4880,7 +4880,7 @@ QBShared.Vehicles = {
         ['category'] = 'tier3',
         ['categoryLabel'] = 'Tier 3',
         ['hash'] = `rmodpagani`,
-        ['shop'] = '',
+        ['shop'] = 'luxury',
     },
     ['GODzRAMTRX6x6'] = {
         ['name'] = 'BisonXL',
@@ -5205,7 +5205,7 @@ QBShared.Vehicles = {
         ['category'] = 'tier1',
         ['categoryLabel'] = 'Tier 1',
         ['hash'] = `21sierra`, -- Corrected to use backticks
-        ['shop'] = '',    
+        ['shop'] = 'luxury',    
     },
     ['hellcatlb'] = {
         ['name'] = 'Kitty',
@@ -5225,7 +5225,7 @@ QBShared.Vehicles = {
         ['category'] = 'tier2',
         ['categoryLabel'] = 'Tier 2',
         ['hash'] = `manssupersnake`, -- Corrected to use backticks
-        ['shop'] = '',    
+        ['shop'] = 'luxury',    
     },
     ['trx'] = {
         ['name'] = 'TeRex',
@@ -5235,7 +5235,7 @@ QBShared.Vehicles = {
         ['category'] = 'tier1',
         ['categoryLabel'] = 'Tier 1',
         ['hash'] = `trx`, -- Corrected to use backticks
-        ['shop'] = '',    
+        ['shop'] = 'luxury',    
     },
     ['812mnsry'] = {
         ['name'] = 'Quickie',
@@ -5257,15 +5257,15 @@ QBShared.Vehicles = {
         ['hash'] = `rmodf40`, -- Corrected to use backticks
         ['shop'] = '',    
     },
-    ['nissantitan17'] = {
-        ['name'] = 'Titanic',
-        ['brand'] = 'Annis',
-        ['model'] = 'nissantitan17',
+    ['s8nm8'] = {
+        ['name'] = 'Mate',
+        ['brand'] = 'Ubermacht',
+        ['model'] = 's8nm8',
         ['price'] = 999999999999,
-        ['category'] = 'one of one',
-        ['categoryLabel'] = 'one of one',
-        ['hash'] = `nissantitan17`, -- Corrected to use backticks
-        ['shop'] = '',    
+        ['category'] = 'tier4',
+        ['categoryLabel'] = 'Tier 4',
+        ['hash'] = `s8nm8`, -- Corrected to use backticks
+        ['shop'] = 'luxury',    
     },
     ['350z'] = {
         ['name'] = '390F',
@@ -5316,6 +5316,16 @@ QBShared.Vehicles = {
         ['categoryLabel'] = 'one of one',
         ['hash'] = `r8hycade`, -- Corrected to use backticks
         ['shop'] = '',    
+    },
+    ['CCViper'] = {
+        ['name'] = 'Slither',
+        ['brand'] = 'Bravado',
+        ['model'] = 'CCViper',
+        ['price'] = 999999999999,
+        ['category'] = 'tier4',
+        ['categoryLabel'] = 'Tier 4',
+        ['hash'] = `CCViper`, -- Corrected to use backticks
+        ['shop'] = 'luxury',    
     },
 }
 
