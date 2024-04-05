@@ -377,20 +377,35 @@ Config.Stores = {
         }
     },
     { --PD Store inside MRPD lockers
-    type = "clothing",
-    coords = vector4(1842.17, 3680.56, 34.19, 114.62),
-    size = vector3(5, 5, 5),
-    rotation = 45,
-    usePoly = false,
-    showBlip = false,
-    targetModel = "ig_karen_daniels",
-    points = {
-        vector3(1841.83, 3680.85, 34.19),
-        vector3(1842.57, 3679.57, 34.19),
-        vector3(1841.27, 3678.86, 34.19),
-        vector3(1840.51, 3680.23, 34.19)
-    }
-},
+        type = "clothing",
+        coords = vector4(1842.17, 3680.56, 34.19, 114.62),
+        size = vector3(5, 5, 5),
+        rotation = 45,
+        usePoly = false,
+        showBlip = false,
+        targetModel = "ig_karen_daniels",
+        points = {
+            vector3(1841.83, 3680.85, 34.19),
+            vector3(1842.57, 3679.57, 34.19),
+            vector3(1841.27, 3678.86, 34.19),
+            vector3(1840.51, 3680.23, 34.19)
+        }
+    },
+    { --Store for Pillbox
+        type = "clothing",
+        coords = vector4(300.41, -595.8, 43.28, 249.05),
+        size = vector3(5, 5, 5),
+        rotation = 45,
+        usePoly = false,
+        showBlip = false,
+        targetModel = "s_m_m_doctor_01",
+        points = {
+            vector3(300.68, -595.57, 43.28),
+            vector3(300.45, -596.06, 43.28),
+            vector3(300.0, -595.9, 43.28),
+            vector3(300.22, -595.36, 43.28)
+        }
+    },
     {
         type = "barber",
         coords = vector4(-814.22, -183.7, 37.57, 116.91),
