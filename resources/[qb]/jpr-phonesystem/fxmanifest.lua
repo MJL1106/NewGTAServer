@@ -7,6 +7,7 @@ ui_page 'html/index.html'
 client_scripts {
     'config.lua',
     'client.lua',
+    'lapRaces.lua',
     'videoCallclient.lua',
     "JPRvideoCallcamera.lua",
     'client_config.lua',
@@ -59,6 +60,7 @@ files {
     'html/img/*.png',
     'html/img/*.jpg',
     'html/img/ubereats/*.png',
+    'html/img/mdt/*.png',
     'html/img/frames/*.png',
     'html/img/whatsapp/*.png',
     'html/img/ubereats/*.jpg',
@@ -105,6 +107,7 @@ lua54 'yes'
 
 escrow_ignore {
 	'config.lua',
+    'lapRaces.lua',
     'server_config.lua',
     'client_config.lua',
 }
@@ -124,6 +127,7 @@ preloads {
     'html/img/apps/*.png',
     'html/img/olx/*.png',
     'html/img/definicoes/*.jpg',
+    'html/img/mdt/*.png',
     'html/img/definicoes/*.png',
     'html/img/camera/*.png',
     'html/img/apps/*.jpg',

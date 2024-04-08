@@ -25,6 +25,7 @@ Config.AddVerifiedTiktokCommand = "verifiedTiktok" -- account id, true or false
 Config.PhoneModel = `prop_amb_phone`
 Config.BillingCommand = "sendbill"
 Config.AllowKeyMapping = true
+Config.PreLoadPhone = true
 Config.DefaultKey = 'M' -- you need to have phone item on first slot
 Config.CloseAndOpenPhoneWithSameKey = true
 Config.Inventory = "qb-inventory" 
@@ -81,7 +82,7 @@ Config.AlarmSounds = {
     {"iphone_alarm", "Bomb"},
 }
 
-Config.StartingSettings = '{"modovoo":false,"airdrop":true,"dadosmoveis":true,"notificacoes":true,"anonimo":false,"wallpaper":"'..Config.StartingWallPaper..'","wallpaperantigo":[],"faceid":[true,true,true],"codigo":[true,true,true], "volume":50, "semsom":false, "somtoque":"'..Config.StartingRingtone..'", "somnotif": "'..Config.StartingNotify..'", "somalarme":"'..Config.StartingAlarm..'", "percentagem":false, "baixoconsumo":false, "estadobateria":100, "optimizado":true, "brilho": 100, "wifi":true, "widgets":[], "perfil":["",""], "tipoletra":"ProBold", "tipocor":"rgb(241, 240, 240)", "imagemwpp":"https://i.imgur.com/8UaNhbE.png", "zoom":100}' 
+Config.StartingSettings = '{"modovoo":false,"airdrop":true,"dadosmoveis":true,"notificacoes":true,"anonimo":false,"wallpaper":"'..Config.StartingWallPaper..'","wallpaperantigo":[],"faceid":[true,true,true],"codigo":[true,true,true], "volume":50, "semsom":false, "somtoque":"'..Config.StartingRingtone..'", "somnotif": "'..Config.StartingNotify..'", "somalarme":"'..Config.StartingAlarm..'", "percentagem":false, "baixoconsumo":false, "estadobateria":100, "optimizado":true, "brilho": 100, "wifi":true, "widgets":[], "perfil":["",""], "tipoletra":"ProBold", "tipocor":"rgb(241, 240, 240)", "imagemwpp":"https://r2.fivemanage.com/PztPJI1MS4DPN1q0LBqaP/8UaNhbE.png", "zoom":100}' 
 
 Config.CityContacts = {
     {
@@ -277,9 +278,12 @@ Config.AppStoreApps = {
     {name = "tinder", label = "FlirtDate", backColor = "rgba(238, 8, 8, 0.178)", time = 4500, rate = 3.7, age = 18, image = "./img/apps/tinder.png", category = "Dating", description = "With 70+ billion matches to date, FlirtDate is the top free dating app, and the best place to meet new people. Are you looking for true love? An open relationship? Are you looking to get out there and find a date, or do you just want to make friends and chat? With FlirtDate, you can meet local people everywhere and get the best out of your dating experience.", banner = "./img/appstore/tinder.jpg"},
     {name = "tombrunner", label = "Tomb Runner", backColor = "rgba(226, 238, 8, 0.178)", time = 3500, rate = 3.6, age = 6, image = "./img/apps/tombrunner.png", category = "Games", isGame = true, description = "Dash through the temple, collect as many coins as possible and then make sure to avoid all of the deadly objects and gaps.", banner = "./img/appstore/tombrunner.jpg"},
     {name = "zombieshooter", label = "Zombie Shooter", backColor = "rgba(19, 71, 9, 0.178)", time = 4500, rate = 4.5, age = 7, image = "./img/apps/zombieshooter.png", category = "Games", isGame = true, description = "The legendary game that won over the hearts of many PC users is back to phone with a new look!The world is in danger.Make your way to the evacuation center, take part in the great battle for survival, and discover the cause of the invade!", banner = "./img/appstore/zombieshooter.jpg"},
-    {name = "duckshooter", label = "Duck Shooter", backColor = "rgba(133, 116, 79, 0.178)", time = 5500, rate = 4.1, age = 8, image = "./img/apps/duckshooter.png", category = "Games", isGame = true, description = "Come along for the hunt and experience the adventure of fat ducks flying into your sights. Up to 25 free games can be won and the more hunters shoot at the ducks the higher your winnings are.", banner = "./img/appstore/duckshooter.jpg"},
+    {name = "duckshooter", label = "Duck Shooter", backColor = "rgba(133, 116, 79, 0.178)", time = 5500, rate = 4.1, age = 8, image = "./img/apps/duckshooter.png", category = "Games", isGame = true, description = "Come along for the hunt and experience the adventure of fat ducks flying into your sights. Up to 25 free games can be won and the more hunters shoot at the ducks the higher your winnings are.", banner = "./img/appstore/mdt.jpg"},
     {name = "reporter", label = "GlobalNews", backColor = "rgba(128, 0, 128, 0.178)", time = 3750, rate = 4.5, age = 15, image = "./img/apps/reporter.png", category = "News", description = "The best news app you can find, check for your favorite news!", banner = "./img/appstore/reporter.jpg"},
     {name = "cinema", label = "CineNews", backColor = "rgba(253, 169, 12, 0.178)", time = 3250, rate = 4.6, age = 10, image = "./img/apps/cinema.png", category = "News", description = "The best news app you can find, check for your favorite cinema news!", banner = "./img/appstore/cinema.jpg"},
+    -- {name = "mdt", label = "MDT", backColor = "rgba(135, 34, 35, 0.178)", time = 3250, rate = 4.6, age = 18, image = "./img/apps/mdt.png", category = "Management", description = "This app is a game changer, you will be able to check civilian, houses and vehicle infos!", banner = "./img/appstore/mdt.jpg"},
+    {name = "darknet", label = "DarkNet", backColor = "rgba(153, 3, 153, 0.178)", time = 4250, rate = 1.6, age = 18, image = "./img/apps/darknet.png", category = "Market", description = "You really now what you are doing here, this is no joke, you can end with your life here! Take attention!", banner = "./img/appstore/darknet.jpg"},
+    -- {name = "racing", label = "Racing", backColor = "rgba(255, 0, 0, 0.178)", time = 4250, rate = 4.0, age = 18, image = "./img/apps/racing.png", category = "Racing", description = "See what races exists, leaderboards, create new races and enjoy with your car guys friends.", banner = "./img/appstore/racing.jpg"},
 }
 
 Config.DefaultApps = '{"appstore":8,"phone":1,"imessage":2,"contactos":3,"camara":4,"definicoes":5,"galeria":7,"dicas":6}'
@@ -319,6 +323,9 @@ Config.AppLabels = {
     ["duckshooter"] = "Duck Shooter",
     ["reporter"] = "GlobalNews",
     ["cinema"] = "CineNews",
+    -- ["mdt"] = "MDT",
+    ["darknet"] = "DarkNet",
+    -- ["racing"] = "Racing",
 }
 
 Config.AppSizes = { -- in MBs
@@ -357,19 +364,25 @@ Config.AppSizes = { -- in MBs
     ["duckshooter"] = 345,
     ["reporter"] = 645,
     ["cinema"] = 512,
+    ["mdt"] = 645,
+    ["darknet"] = 712,
+    ["racing"] = 312,
 }
 
 Config.DeleteInstagramStoryAfter24Hrs = true
 
 Config.NewsJob = "police"
 Config.CinemaJob = "police"
+Config.MDTJob = "police"
 
 Config.GarageNPCModel = "s_m_y_valet_01"
-Config.GarageMaxSpawnRange = 200
+Config.GarageMaxSpawnRange = 150
 Config.FuelScript = "LegacyFuel" --- script name
-Config.DoCarDamageValet = false
+Config.DoCarDamageValet = true
 Config.ValetPrice = 400
 Config.ImpoundState = 2
+Config.StoredState = 1
+Config.OutState = 0
 
 Config.ShopToRepairAndHack = false
 Config.TargetScript = "qb-target"
@@ -472,4 +485,5 @@ Config.Locales = {
     ["77"] = "Call taken",
     ["78"] = "Cant call to yourself",
     ["79"] = "Message sent to available units!",
+    ["80"] = "You\'re too far away from the race. GPS has been set to the race.",
 }

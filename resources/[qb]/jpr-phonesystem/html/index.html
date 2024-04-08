@@ -26,7 +26,7 @@
     <script src="https://code.jquery.com/color/jquery.color-2.2.0.min.js"
         integrity="sha256-aSe2ZC5QeunlL/w/7PsVKmV+fa0eDbmybn/ptsKHR6I=" crossorigin="anonymous"></script>
     <!-- Color CDN -->
-    <script src="https://kit.fontawesome.com/53f6eeab63.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/fa0c2c076a.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
@@ -34,8 +34,11 @@
         integrity="sha256-xH4q8N0pEzrZMaRmd7gQVcTZiFei+HfRTBPJ1OGXC0k=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.js"></script>
     <script src="./js/phonesystem.js" rel="preload"></script>
-    <script src="./js/linksupdate.js" rel="preload"></script>
-    <script src="./js/newapps.js" rel="preload"></script>
+    <script src="./js/update1.js" rel="preload"></script>
+    <script src="./js/update2.js" rel="preload"></script>
+    <script src="./js/update3.js" rel="preload"></script>
+    <script src="./js/update4.js" rel="preload"></script>
+    <script src="./js/openFunctions.js" rel="preload"></script>
     <script src="./js/translate.js" rel="preload"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
@@ -1028,7 +1031,7 @@
                 </div>
 
                 <div class="teclado" style="display: none;" id="telemovel-teclado">
-                    <div class="textoteclado"></div>
+                    <input type="number" class="textoteclado" style="border: none;">
                     <div class="espacoteclado">
                         <div class="botaoteclado" data-tecla="1">
                             <h1>1</h1>
@@ -1714,10 +1717,10 @@
                         <h1 data-translation-key="translation88">Available Balance</h1>
                         <h2>0€</h2>
                     </div>
-                    <!-- <div class="informações2">
+                    <div class="informações2">
                         <h1>iBan</h1>
                         <h2>PT50123123</h2>
-                    </div> -->
+                    </div>
                     <div class="informações3">
                         <h1 data-translation-key="translation89">Pay all bills</h1>
                         <h2 data-translation-key="translation90">Total: 2000€</h2>
@@ -1737,7 +1740,7 @@
                 <div class="carteira-menu2" style="display: none;" id="carteira-transferencias">
                     <h1 data-translation-key="translation94">Transfer</h1>
                     <div class="informações">
-                        <h1>ID:</h1>
+                        <h1>ID / iBan:</h1>
                         <h2 data-translation-key="translation95">Amount to transfer:</h2>
 
                         <input type="text" class="caixadoplayer" placeholder="ID"
@@ -4600,6 +4603,294 @@
                     </div>
                     <div class="tinder-app-footer-button" data-interacao="perfil">
                         <i class="fa-regular fa-user"></i><br>
+                    </div>
+                </div>
+            </div>
+
+            <div class="app-mdt" style="display: none;">
+                <h1>MDT</h1>
+
+                <div class="interactionBoxes">
+                    <div class="interactBox" data-interaction="citizen">
+                        <i class="fa-solid fa-users"></i>
+                        <br>
+                        <h1 data-translation-key="translation426">Citizens</h1>
+                    </div>
+                    <div class="interactBox" data-interaction="vehicles">
+                        <i class="fa-solid fa-car"></i>
+                        <br>
+                        <h1 data-translation-key="translation427">Vehicles</h1>
+                    </div>
+                    <div class="interactBox" data-interaction="houses">
+                        <i class="fa-solid fa-house"></i>
+                        <br>
+                        <h1 data-translation-key="translation428">Houses</h1>
+                    </div>
+                </div>
+
+                <div class="infosMDTPanel">
+                    <h1 data-translation-key="translation424">Information Panel</h1>
+                    <i id="sairmenuMDT"
+                        style="position: absolute; font-size: 1.1vh; color: #3478f5;left: 5%;top: 1%;cursor: pointer; font-style: normal; z-index: 1;"><i
+                            class="fa-solid fa-chevron-left" style="margin-top: 5%;"></i> <i
+                            style="font-size: 1.2vh; color: #3478f5;left: 5%;top: 8%;cursor: pointer; font-style: normal; z-index: 1;"
+                            data-translation-key="translation15">Return</i></i>
+                    <img id="semcondicoesmdt" src="./img/sistema/spinner.gif" alt="spinner" style="display: none;">
+                    <div class="pesquisa">
+                        <i class="fa-solid fa-magnifying-glass"
+                            style="position: absolute; font-size: 1vh; color: #848484;left: 3%;top: 35%;top: 30"></i>
+                        <input type="text" id="mdtInput" data-translation-placeholder-key="translation425"
+                            placeholder="Keyword" oninput="SearchRowsMDT()">
+                    </div><br><br>
+
+                    <div class="infoBoxMDT">
+                        <!-- auto -->
+                    </div>
+
+                    <span style="display: none;" data-translation-key="translation297">No Results</span>
+                </div>
+
+                <h2 data-translation-key="translation423">With this app you will be able to search vehicles, houses and
+                    citizens!</h2>
+            </div>
+
+            <div class="app-racing">
+                <div class="racing-overview">
+                    <div class="app-racing-header">
+                        Racing - Overview
+                    </div>
+
+                    <div class="racing-races">
+                    </div>
+
+                    <div class="racing-buttons">
+                        <div class="racing-button" id="setup-race">
+                            <i class="fas fa-flag-checkered"></i> Setup
+                        </div>
+                        <div class="racing-button" id="leaderboards-race">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="racing-button" id="create-race">
+                            <i class="fas fa-plus"></i> Create
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="racing-setup">
+                    <div class="app-racing-header">
+                        Racing - Setup
+                    </div>
+
+                    <span id="racing-setup-trackheader">Race Track</span>
+                    <select class="dropdown" style="border: none;" oninput="CheckTrackInfos()">
+                        <option selected>Select a Track</option>
+                    </select>
+
+                    <span id="racing-setup-lapsheader">Laps</span>
+                    <input type="number" min="0" oninput="this.value = Math.abs(this.value)" class="racing-setup-laps"
+                        required spellcheck="false" placeholder="Number of laps (0 is Sprint)">
+
+                    <span id="racing-setup-informationheader">Race Information</span>
+                    <div class="racing-setup-information-distance">Select a Track</div>
+                    <div class="racing-setup-information-creator">Select a Track</div>
+                    <div class="racing-setup-information-wr">Select a Track</div>
+
+                    <div class="racing-setup-buttons">
+                        <div class="racing-setup-button" id="setup-race-accept" data-toggle="race-setup"
+                            data-placement="bottom" title="Accept">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="racing-setup-button" id="setup-race-cancel" data-toggle="race-setup"
+                            data-placement="bottom" title="Cancel">
+                            <i class="fas fa-times-circle"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="racing-create">
+                    <div class="racing-create-block">
+                        <span id="racing-create-tracknameheader">Track Name</span>
+                        <input type="text" class="racing-create-trackname" required spellcheck="false"
+                            placeholder="Name of your track">
+
+                        <div class="racing-create-buttons">
+                            <div class="racing-create-button" id="racing-create-accept">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="racing-create-button" id="racing-create-cancel">
+                                <i class="fas fa-times-circle"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="racing-leaderboard">
+                    <div class="app-racing-header">
+                        Racing - Leaderboards
+                    </div>
+
+                    <span id="racing-leaderboards-header">Last Tracks</span>
+                    <div class="racing-leaderboards">
+                    </div>
+
+                    <div class="racing-leaderboard-details">
+                        <div class="racing-leaderboard-details-block">
+                            <div class="racing-leaderboard-details-back"><i class="fas fa-times-circle"></i></div>
+                            <div class="racing-leaderboard-details-block-trackname"><i
+                                    class="fas fa-flag-checkered"></i> Prison</div>
+                            <span id="leaderboard-list-header"><span
+                                    style="float: left; color: var(--modocoratual);">Racer</span><span
+                                    style="margin-left: 5.55vh; color: var(--modocoratual);"><i
+                                        class="fas fa-stopwatch"></i></span><span
+                                    style="float: right; margin-right: 2vh; color: var(--modocoratual);">#</span></span>
+                            <div class="racing-leaderboard-details-block-list">
+                                <!-- <div class="row"> <div class="name">Jay Nandes</div><div class="time">00:04:55</div><div class="score">1</div> </div> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="racing-leaderboards-button">
+                        <i class="fas fa-times-circle"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="app-darknet" style="display: none;">
+
+                <i id="editarmensagensDarkNet"
+                    style="position: absolute; font-size: 1.2vh; color: #990399;left: 5%;top: 8%;cursor: pointer; font-style: normal; z-index: 5;"
+                    data-translation-key="translation59">Edit</i>
+                <i id="novamensagemDarkNet" class="fa-solid fa-plus"
+                    style="position: absolute; font-size: 1.2vh; color: #990399;right: 5%;top: 8.6%;cursor: pointer;"></i>
+                <h1>DarkNet</h1>
+                <div class="pesquisa">
+                    <i class="fa-solid fa-magnifying-glass"
+                        style="position: absolute; font-size: 1vh; color: #848484;left: 3%;top: 30%;padding-top: 0.2%;"></i>
+                    <input type="text" placeholder="Search" data-translation-placeholder-key="translation331"
+                        id="procurarmensagemdarknet">
+                </div><br>
+                <span id="nenhumdarknet" data-translation-key="translation51">No chats</span>
+                <img id="semcondicoesdarknet" src="./img/sistema/spinner.gif" alt="spinner" style="display: none;">
+                <div class="listamensagens" id="listamensagensdarknet">
+                    <!-- auto -->
+                </div>
+
+                <div class="darknetGroupConfig" style="display: none;" id="groupDarknetJoin">
+                    <div class="corDesfoque"></div>
+
+                    <div class="boxDarkNetConfig" style="left: 105%;">
+                        <h1 data-translation-key="translation429">Join group</h1>
+
+                        <br>
+                        <input type="text" id="inputBoxGroupName" placeholder="Group name"
+                            style="height: 17%; font-family: ProLight; font-size: 1.2vh; outline: none; transition: 0.5s ease;">
+
+                        <i class="fa-solid fa-circle-xmark"
+                            style="color: #8c2323; font-size: 1.8vh; right: 14%; position: absolute; bottom: 5%;"
+                            id="returnDarkNetChanges"></i>
+                        <i class="fa-solid fa-circle-check"
+                            style="color: #990399; font-size: 1.8vh; right: 4%; position: absolute; bottom: 5%;"
+                            id="confirmDarkNetChanges"></i>
+                    </div>
+
+                    <div class="boxDarkNetConfigPassword" style="left: -105%;">
+                        <h1 data-translation-key="translation437">Write Password</h1>
+
+                        <br>
+                        <input type="password" id="inputBoxGroupPasswordField"
+                            data-translation-placeholder-key="translation197" placeholder="Group name"
+                            style="height: 17%; font-family: ProLight; font-size: 1.2vh; outline: none; transition: 0.5s ease;">
+
+                        <i class="fa-solid fa-circle-xmark"
+                            style="color: #8c2323; font-size: 1.8vh; right: 14%; position: absolute; bottom: 5%;"
+                            id="returnDarkNetChangesPassword"></i>
+                        <i class="fa-solid fa-circle-check"
+                            style="color: #990399; font-size: 1.8vh; right: 4%; position: absolute; bottom: 5%;"
+                            id="confirmDarkNetChangesPassword"></i>
+                    </div>
+                </div>
+
+                <div class="chataberto" id="darknet-chat" style="display: none;">
+                    <i id="voltaraoiniciodarknet" class="fa-solid fa-chevron-left"
+                        style="position: absolute; font-size: 1.2vh; color: #990399;left: 5%;top: 12%;cursor: pointer; font-style: normal; z-index: 5;"></i>
+                    <h1 id="nomecontactodarknet">Teste</h1>
+                    <i class="fa-solid fa-triangle-exclamation"
+                        style="position: absolute; font-size: 1.1vh; color: #990399;right: 7%;top: 9.4%;cursor: pointer; font-style: normal; z-index: 5;"></i>
+                    <h2 data-translation-key="translation430">All your actions from now on are your responsibility.</h2>
+
+                    <div class="caixatexto">
+                        <div class="mensagens">
+                            <!-- auto -->
+                        </div>
+
+                        <div class="parteinteracoes">
+                            <div class="parte1">
+                                <i class="fa-solid fa-plus" id="maisopcoesdarknets" style="color: #990399;"></i>
+                                <input type="text" id="darknetnovamensagem" class="darknetnovamensagem"
+                                    data-translation-placeholder-key="translation338" placeholder="SMS"
+                                    oninput="AtualizarIconeDarknet()">
+                                <i class="fa-solid fa-microphone" id="falarmicrodarknet" style="color: #990399"></i>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="darknetGroupConfig" style="display: none" id="groupPasswordSetup">
+                        <div class="corDesfoque"></div>
+
+                        <div class="boxDarkNetConfig" style="left: 105%;">
+                            <h1 data-translation-key="translation431">Group Setup</h1>
+
+                            <br>
+                            <div
+                                style="position: relative; left: 5%; font-family: ProLight; font-size: 1.2vh; top: 5%;">
+                                <i style="text-decoration: none; color: var(--modocoratual);"
+                                    data-translation-key="translation434">Use Password?</i>
+                                <select name="usePassword" id="usePasswordDarkNet"
+                                    style="border-radius: 0.6vh; background-color: var(--modoatualfundo2);color: var(--modocoratual);">
+                                    <option value="no" selected data-translation-key="translation432">No</option>
+                                    <option value="yes" data-translation-key="translation433">Yes</option>
+                                </select>
+                            </div>
+
+                            <input type="text" data-translation-placeholder-key="translation350" placeholder="Password"
+                                id="passwordInput" disabled
+                                style="font-family: ProLight; font-size: 1.2vh; outline: none;transition: 0.5s ease; height: 17%;">
+                            <br><br>
+                            <i class="fa-solid fa-circle-check"
+                                style="color: #990399; font-size: 1.8vh; right: 3%; position: absolute; bottom: 5%;"
+                                id="confirmDarkNetChangesPassword"></i>
+                        </div>
+                    </div>
+                    <div class="maisOpcoesdarknetsIOS17" style="display: none;">
+                        <div class="corDesfoque"></div>
+
+                        <div class="caixaInteracoes">
+                            <div class="opcaoInteracao" data-icon="camara">
+                                <img src="./img/apps/camara.png" alt="camera">
+                                <h1 data-translation-key="translation54">Camera</h1>
+                            </div>
+                            <div class="opcaoInteracao" data-icon="galeria">
+                                <img src="./img/apps/galeria.png" alt="galeria">
+                                <h1 data-translation-key="translation55">Gallery</h1>
+                            </div>
+                            <div class="opcaoInteracao" data-icon="mapas">
+                                <img src="./img/apps/mapas.png" alt="maps">
+                                <h1 data-translation-key="translation332">Maps</h1>
+                            </div>
+                            <div class="opcaoInteracao" data-icon="cash">
+                                <img src="./img/apps/carteira.png" alt="dinheiro">
+                                <h1 data-translation-key="translation367">Request</h1>
+                            </div>
+                            <div class="opcaoInteracao" data-icon="emojis">
+                                <img src="./img/apps/emoji.png" alt="Emoji">
+                                <h1 data-translation-key="translation396">Emoji Panel</h1>
+                            </div>
+                            <div class="opcaoInteracao" id="closeInteracaoIOS17Darknet">
+                                <h1 style="left: 0;" data-translation-key="translation56">Fechar</h1>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

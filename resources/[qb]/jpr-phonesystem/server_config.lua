@@ -13,7 +13,7 @@ function PayToSociety(society, amount, senderCitizenid)
                         TriggerClientEvent("jpr-phonesystem:client:customnotification", v.PlayerData.source, {
                             app = "Custom", -- dont change
                             title = Config.Locales["69"],
-                            img = "https://i.imgur.com/ey4BGlT.png",
+                            img = "https://r2.fivemanage.com/PztPJI1MS4DPN1q0LBqaP/ey4BGlT.png",
                             text = Config.Locales["70"]..amount..Config.Locales["3"],
                             time = 2600,
                         })
@@ -27,7 +27,7 @@ function PayToSociety(society, amount, senderCitizenid)
                         TriggerClientEvent("jpr-phonesystem:client:customnotification", v.PlayerData.source, {
                             app = "Custom", -- dont change
                             title = Config.Locales["69"],
-                            img = "https://i.imgur.com/ey4BGlT.png",
+                            img = "https://r2.fivemanage.com/PztPJI1MS4DPN1q0LBqaP/ey4BGlT.png",
                             text = Config.Locales["70"]..amount..Config.Locales["3"],
                             time = 2600,
                         })
@@ -53,7 +53,7 @@ function SendWebhookSocial(app, webhook, message, photo, title, image, color, pe
     
     if perfil ~= nil and mostraravatar then
         if perfil == '' or perfil == nil or perfil == 'default' then
-            perfil = 'https://i.imgur.com/F6C40Ij.png'
+            perfil = 'https://r2.fivemanage.com/PztPJI1MS4DPN1q0LBqaP/8UaNhbE.png'
         end
 
         data = {
@@ -178,6 +178,36 @@ QBCore.Functions.CreateCallback('jpr-phonesystem:server:getServerTimeInfos', fun
         date = date,
         time = time
     }
+    cb(data)
+end)
+
+QBCore.Functions.CreateCallback('jpr-phonesystem:server:GetInfosForMDT', function(source, cb)
+    local vehicles = MySQL.Sync.fetchAll('SELECT * FROM player_vehicles', {})
+    local players = MySQL.Sync.fetchAll('SELECT * FROM players', {})
+    local houses = MySQL.Sync.fetchAll('SELECT * FROM player_houses', {})
+
+    for k,v in pairs(houses) do
+        if v then
+            local houseInfo = MySQL.Sync.fetchAll('SELECT * FROM houselocations WHERE name = ?', {v.house})
+
+            if (#houseInfo > 0) then
+                v.label = houseInfo[1].label
+                v.tier = houseInfo[1].tier
+
+                houseInfo[1].coords = json.decode(houseInfo[1].coords)
+                houseInfo[1].coords = json.encode(houseInfo[1].coords.enter)
+                
+                v.coords = houseInfo[1].coords
+            end
+        end
+    end
+
+    local data = {
+        vehicles,
+        players,
+        houses
+    }
+
     cb(data)
 end)
 

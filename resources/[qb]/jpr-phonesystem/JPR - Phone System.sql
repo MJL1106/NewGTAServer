@@ -223,6 +223,21 @@ CREATE TABLE IF NOT EXISTS `jpr_phonesystem_mensagens` (
   KEY `idtelemovel` (`idtelemovel`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2985 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
+-- A despejar estrutura para tabela qbcoreframework_988086.jpr_phonesystem_darknet
+CREATE TABLE IF NOT EXISTS `jpr_phonesystem_darknet` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `dono` varchar(350) DEFAULT NULL,
+  `participantes` text DEFAULT '{}',
+  `nome` varchar(250) DEFAULT NULL,
+  `messages` text CHARACTER SET utf8mb4 COLLATE utf8mb4_bin DEFAULT NULL,
+  `password` varchar(350) DEFAULT NULL,
+  `idgrupo` varchar(250) DEFAULT NULL,
+  `date` timestamp NULL DEFAULT current_timestamp(),
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `idgrupo` (`idgrupo`),
+  KEY `dono` (`dono`)
+) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8 COLLATE=UTF8_GENERAL_CI;
+
 -- Exportação de dados não seleccionada.
 
 -- A despejar estrutura para tabela qbcoreframework_988086.jpr_phonesystem_news
