@@ -4930,7 +4930,7 @@ QBShared.Vehicles = {
         ['category'] = 'tier2',
         ['categoryLabel'] = 'Tier 2',
         ['hash'] = `s15lunar`,
-        ['shop'] = '',
+        ['shop'] = 'luxury',
     },
     ['scubieblob'] = {
         ['name'] = 'Inspria',
@@ -5145,7 +5145,7 @@ QBShared.Vehicles = {
         ['category'] = 'tier4',
         ['categoryLabel'] = 'Tier 4',
         ['hash'] = `rrphantom`, -- Corrected to use backticks
-        ['shop'] = '',    
+        ['shop'] = 'luxury',    
     },
     ['911turbos'] = {
         ['name'] = 'Turbski',
@@ -5165,7 +5165,7 @@ QBShared.Vehicles = {
         ['category'] = 'tier2',
         ['categoryLabel'] = 'Tier 2',
         ['hash'] = `flhxs_streetglide_special18`, -- Corrected to use backticks
-        ['shop'] = '',    
+        ['shop'] = 'luxury',    
     },
     ['cb650r'] = {
         ['name'] = 'Speedster',
@@ -5175,7 +5175,7 @@ QBShared.Vehicles = {
         ['category'] = 'tier3',
         ['categoryLabel'] = 'Tier 3',
         ['hash'] = `cb650r`, -- Corrected to use backticks
-        ['shop'] = '',    
+        ['shop'] = 'luxury',    
     },
     ['rmodmustang'] = {
         ['name'] = 'Horse',
@@ -5255,7 +5255,7 @@ QBShared.Vehicles = {
         ['category'] = 'tier4',
         ['categoryLabel'] = 'Tier 4',
         ['hash'] = `rmodf40`, -- Corrected to use backticks
-        ['shop'] = '',    
+        ['shop'] = 'luxury',    
     },
     ['s8nm8'] = {
         ['name'] = 'Mate',
@@ -5326,6 +5326,46 @@ QBShared.Vehicles = {
         ['categoryLabel'] = 'Tier 4',
         ['hash'] = `CCViper`, -- Corrected to use backticks
         ['shop'] = 'luxury',    
+    },
+    ['model3'] = {
+        ['name'] = 'Made3',
+        ['brand'] = 'Coil',
+        ['model'] = 'model3',
+        ['price'] = 999999999999,
+        ['category'] = 'tier1',
+        ['categoryLabel'] = 'Tier 1',
+        ['hash'] = `model3`, -- Corrected to use backticks
+        ['shop'] = 'luxury',    
+    },
+    ['polo2018'] = {
+        ['name'] = 'Wolo',
+        ['brand'] = 'BF',
+        ['model'] = 'polo2018',
+        ['price'] = 999999999999,
+        ['category'] = 'tier1',
+        ['categoryLabel'] = 'Tier 1',
+        ['hash'] = `polo2018`, -- Corrected to use backticks
+        ['shop'] = 'luxury',    
+    },
+    ['mkcr33'] = {
+        ['name'] = 'P33',
+        ['brand'] = 'Annis',
+        ['model'] = 'mkcr33',
+        ['price'] = 999999999999,
+        ['category'] = 'tier3',
+        ['categoryLabel'] = 'Tier 3',
+        ['hash'] = `mkcr33`, -- Corrected to use backticks
+        ['shop'] = 'luxury',    
+    },
+    ['hyundaiveloster'] = {
+        ['name'] = 'Slither',
+        ['brand'] = 'Bravado',
+        ['model'] = 'hyundaiveloster',
+        ['price'] = 999999999999,
+        ['category'] = 'tier4',
+        ['categoryLabel'] = 'Tier 4',
+        ['hash'] = `hyundaiveloster`, -- Corrected to use backticks
+        ['shop'] = '',    
     },
 }
 
