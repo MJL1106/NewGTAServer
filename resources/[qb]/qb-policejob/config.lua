@@ -329,8 +329,8 @@ Config.AuthorizedVehicles = {
 		["nktenf"] = "10F Marked",
         ["nkjester4um"] = "Jester Unmarked",
         ["nktenfum"] = "TenF Unmarked",
-        --["code318tahoe"] = "Police Tahoe 2018",
-        --["code318tahoek9"] = "Police K9 Tahoe 2018",
+        ["rr70bosswidepd"] = "Boss Pd Mustard",
+        ["pitbullbb"] = "Big Dawg",
         --["code320exp"] = "Police Ford Explorer 2020",
 	}
 }
