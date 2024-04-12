@@ -65,9 +65,9 @@
 			<HDTextureDist value="5.000000"/>
 			<lodDistances content="float_array">
 				500.000000
-				500.000000
-				500.000000
 				500.000000	
+				500.000000	
+				500.000000
 				500.000000	
 				500.000000
 			</lodDistances>

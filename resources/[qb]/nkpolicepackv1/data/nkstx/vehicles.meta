@@ -15,7 +15,7 @@
 			<animConvRoofDictName>null</animConvRoofDictName>
 			<animConvRoofName>null</animConvRoofName>
 			<animConvRoofWindowsAffected/>
-			<ptfxAssetName>weap_ba_vehicle_weapons</ptfxAssetName>
+			<ptfxAssetName></ptfxAssetName>
 			<audioNameHash>buffalo4</audioNameHash>
 			<layout>LAYOUT_STANDARD_BUFFALO4</layout>
 			<coverBoundOffsets>BUFFALO4_COVER_OFFSET_INFO</coverBoundOffsets>

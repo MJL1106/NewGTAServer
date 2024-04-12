@@ -6,7 +6,7 @@
 		<Item>
 			<modelName>nkdominator3</modelName>
 			<txdName>nkdominator3</txdName>
-			<handlingId>NKDOMINATOR3</handlingId>
+			<handlingId>NKDOM3</handlingId>
 			<gameName>nkdominator3</gameName>
 			<vehicleMakeName>VAPID</vehicleMakeName>
 			<expressionDictName>null</expressionDictName>
@@ -76,7 +76,7 @@
 			<frequency value="100" />
 			<swankness>SWANKNESS_5</swankness>
 			<maxNum value="999" />
-			<flags>FLAG_SPORTS FLAG_EXTRAS_STRONG FLAG_HAS_LIVERY FLAG_NO_BROKEN_DOWN_SCENARIO FLAG_RECESSED_TAILLIGHT_CORONAS</flags>
+			<flags>FLAG_EXTRAS_STRONG FLAG_HAS_LIVERY FLAG_NO_BROKEN_DOWN_SCENARIO FLAG_RECESSED_TAILLIGHT_CORONAS</flags>
 			<type>VEHICLE_TYPE_CAR</type>
 			<plateType>VPT_BACK_PLATES</plateType>
 			<dashboardType>VDT_RACE</dashboardType>

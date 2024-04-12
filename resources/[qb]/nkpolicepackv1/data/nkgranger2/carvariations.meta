@@ -26,7 +26,7 @@
         </Item>
       </colors>
       <kits>
-        <Item>5021_nkgranger2_modkit</Item>
+        <Item>2008_nkgranger2_modkit</Item>
       </kits>
       <windowsWithExposedEdges/>
       <plateProbabilities>
@@ -38,7 +38,7 @@
         </Probabilities>
       </plateProbabilities>
       <lightSettings value="1"/>
-      <sirenSettings value="5021"/>
+      <sirenSettings value="2008"/>
     </Item>
   </variationData>
 </CVehicleModelInfoVariation>

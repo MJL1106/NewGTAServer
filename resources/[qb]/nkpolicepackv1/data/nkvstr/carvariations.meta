@@ -26,7 +26,7 @@
         </Item>
       </colors>
       <kits>
-        <Item>5010_nkvstr_modkit</Item>
+        <Item>2004_nkvstr_modkit</Item>
       </kits>
       <windowsWithExposedEdges/>
       <plateProbabilities>
@@ -38,7 +38,7 @@
         </Probabilities>
       </plateProbabilities>
       <lightSettings value="151"/>
-      <sirenSettings value="5010"/>
+      <sirenSettings value="2004"/>
     </Item>
   </variationData>
 </CVehicleModelInfoVariation>

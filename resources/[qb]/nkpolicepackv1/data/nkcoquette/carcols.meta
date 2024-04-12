@@ -2,8 +2,8 @@
 <CVehicleModelInfoVarGlobal>
 	<Kits>
 		<Item>
-			<kitName>5014_nkcoquette_modkit</kitName>
-			<id value="5014"/>
+			<kitName>2020_nkcoquette_modkit</kitName>
+			<id value="2020"/>
 			<kitType>MKT_SPORT</kitType>
 			<visibleMods>
 				<Item>
@@ -226,8 +226,307 @@
 					<disableDrivebySeat value="-1"/>
 					<disableDrivebySeatSecondary value="-1"/>
 				</Item>
+
+				<!-- ANTA -->
+				<Item>
+					<modelName>nkcoquette_anta</modelName>
+					<modShopLabel>NKCOQ_ANTA</modShopLabel>
+					<linkedModels />
+					<turnOffBones />
+					<type>VMT_CHASSIS3</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<!-- ANTB -->
+				<Item>
+					<modelName>nkcoquette_antb</modelName>
+					<modShopLabel>NKCOQ_ANTB</modShopLabel>
+					<linkedModels />
+					<turnOffBones />
+					<type>VMT_CHASSIS3</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<!-- ANTC -->
+				<Item>
+					<modelName>nkcoquette_antc</modelName>
+					<modShopLabel>NKCOQ_ANTC</modShopLabel>
+					<linkedModels />
+					<turnOffBones />
+					<type>VMT_CHASSIS3</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<!-- ANTD -->
+				<Item>
+					<modelName>nkcoquette_antd</modelName>
+					<modShopLabel>NKCOQ_ANTD</modShopLabel>
+					<linkedModels />
+					<turnOffBones />
+					<type>VMT_CHASSIS3</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<!-- ANTA -->
+				<Item>
+					<modelName>nkcoquette_anta</modelName>
+					<modShopLabel>NKCOQ_ANTA</modShopLabel>
+					<linkedModels>
+						<Item>nkcoquette_antb</Item>
+					</linkedModels>
+					<turnOffBones />
+					<type>VMT_CHASSIS3</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<!-- ANTC -->
+				<Item>
+					<modelName>nkcoquette_antc</modelName>
+					<modShopLabel>NKCOQ_ANTC</modShopLabel>
+					<linkedModels>
+						<Item>nkcoquette_antb</Item>
+					</linkedModels>
+					<turnOffBones />
+					<type>VMT_CHASSIS3</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<!-- ANTD -->
+				<Item>
+					<modelName>nkcoquette_antd</modelName>
+					<modShopLabel>NKCOQ_ANTD</modShopLabel>
+					<linkedModels>
+						<Item>nkcoquette_antb</Item>
+					</linkedModels>
+					<turnOffBones />
+					<type>VMT_CHASSIS3</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<!-- ALPR1 SOLO-->
+				<Item>
+					<modelName>nkcoquette_alpr1</modelName>
+					<modShopLabel>NKCOQ_ALPR1</modShopLabel>
+					<linkedModels />
+					<turnOffBones />
+					<type>VMT_CHASSIS4</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<!-- ALPR2 SOLO -->
+				<Item>
+					<modelName>nkcoquette_alpr2</modelName>
+					<modShopLabel>NKCOQ_ALPR2</modShopLabel>
+					<linkedModels/>
+					<turnOffBones />
+					<type>VMT_CHASSIS4</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<!-- ALPR1/2 TOGETHER-->
+				<Item>
+					<modelName>nkcoquette_alpr2</modelName>
+					<modShopLabel>NKCOQ_ALPR2</modShopLabel>
+					<linkedModels>
+						<Item>nkcoquette_alpr1</Item>
+					</linkedModels>
+					<turnOffBones />
+					<type>VMT_CHASSIS4</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<!-- interior -->
+				<Item>
+					<modelName>nkcoquette_laptop</modelName>
+					<modShopLabel>NKCOQ_LAPT</modShopLabel>
+					<linkedModels/>
+					<turnOffBones />
+					<type>VMT_INTERIOR1</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<Item>
+					<modelName>nkcoquette_radar</modelName>
+					<modShopLabel>NKCOQ_RADA</modShopLabel>
+					<linkedModels/>
+					<turnOffBones />
+					<type>VMT_INTERIOR1</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<Item>
+					<modelName>nkcoquette_radar</modelName>
+					<modShopLabel>NKCOQ_RADA</modShopLabel>
+					<linkedModels>
+						<Item>nkcoquette_laptop</Item>
+					</linkedModels>
+					<turnOffBones />
+					<type>VMT_INTERIOR1</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<Item>
+					<modelName>nkcoquette_sirencon</modelName>
+					<modShopLabel>NKCOQ_SCON</modShopLabel>
+					<linkedModels/>
+					<turnOffBones />
+					<type>VMT_INTERIOR3</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<Item>
+					<modelName>nkcoquette_guns</modelName>
+					<modShopLabel>NKCOQ_GUNS</modShopLabel>
+					<linkedModels/>
+					<turnOffBones />
+					<type>VMT_INTERIOR3</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<Item>
+					<modelName>nkcoquette_guns</modelName>
+					<modShopLabel>NKCOQ_GUNS</modShopLabel>
+					<linkedModels>
+						<Item>nkcoquette_sirencon</Item>
+					</linkedModels>
+					<turnOffBones />
+					<type>VMT_INTERIOR3</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<Item>
+					<modelName>nkcoquette_cam</modelName>
+					<modShopLabel>NKCOQ_cam</modShopLabel>
+					<linkedModels/>
+					<turnOffBones />
+					<type>VMT_INTERIOR4</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
 			</visibleMods>
 			<linkMods>
+				<Item>
+					<modelName>nkcoquette_laptop</modelName>
+					<bone>chassis</bone>
+					<turnOffExtra value="false"/>
+				</Item>
+				<Item>
+					<modelName>nkcoquette_sirencon</modelName>
+					<bone>chassis</bone>
+					<turnOffExtra value="false"/>
+				</Item>
+				<Item>
+					<modelName>nkcoquette_antb</modelName>
+					<bone>chassis</bone>
+					<turnOffExtra value="false"/>
+				</Item>
+				<Item>
+					<modelName>nkcoquette_alpr1</modelName>
+					<bone>chassis</bone>
+					<turnOffExtra value="false"/>
+				</Item>
 			</linkMods>
 			<statMods>
 				<Item>
@@ -781,7 +1080,7 @@
 	<Sirens>
 		<!-- nkcoquette -->
 		<Item>
-			<id value="5014"/>
+			<id value="2020"/>
 			<name>nkcoquette</name>
 			<timeMultiplier value="1.00000000"/>
 			<lightFalloffMax value="100.00000000"/>

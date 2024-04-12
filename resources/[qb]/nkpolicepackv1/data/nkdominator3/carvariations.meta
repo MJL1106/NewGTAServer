@@ -15,7 +15,7 @@
 				</Item>
 			</colors>
 			<kits>
-				<Item>5000_nkdominator3_modkit</Item>
+				<Item>2012_nkdominator3_modkit</Item>
 			</kits>
 			<windowsWithExposedEdges/>
 			<plateProbabilities>
@@ -27,7 +27,7 @@
 				</Probabilities>
 			</plateProbabilities>
 			<lightSettings value="1"/>
-			<sirenSettings value="5000"/>
+			<sirenSettings value="2012"/>
 		</Item>
 	</variationData>
 </CVehicleModelInfoVariation>

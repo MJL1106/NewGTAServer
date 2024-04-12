@@ -1,213 +1,503 @@
-<?xml version="1.0" encoding="UTF-8"?>  
+<?xml version="1.0" encoding="UTF-8"?>
 <CVehicleModelInfoVarGlobal>
-    <Kits>
-      <Item>
-        <kitName>5016_nkcruiser_modkit</kitName>
-        <id value="5016" />
-        <kitType>MKT_SPECIAL</kitType>
-        <visibleMods>
-          <!-- nkcage -->
-          <Item>
-            <modelName>nkk9_cage_1c</modelName>
-            <modShopLabel>NK_CAGE1C</modShopLabel>
-            <linkedModels>
-              <Item>nkk9_cage_1a</Item>
-              <Item>nkk9_cage_1b</Item>
-            </linkedModels>
-            <turnOffBones>
-              <Item>misc_i</Item>            
-              <Item>misc_k</Item>
-              <Item>misc_h</Item>              
-            </turnOffBones>
-            <type>VMT_SEATS</type>
-            <bone>chassis</bone>
-            <collisionBone>chassis</collisionBone>
-            <cameraPos>VMCP_DEFAULT</cameraPos>
-            <audioApply value="1.000000" />
-            <weight value="20" />
-            <turnOffExtra value="false" />
-            <disableBonnetCamera value="false" />
-            <allowBonnetSlide value="true" />
-          </Item>
-          <!-- Plate 1 -->
-          <Item>
-            <modelName>nkcruiser_plate_1</modelName>
-            <modShopLabel>NK_PLATE_1</modShopLabel>
-            <linkedModels />
-            <turnOffBones />
-            <type>VMT_PLTHOLDER</type>
-            <bone>bumper_f</bone>
-            <collisionBone>bumper_f</collisionBone>
-            <cameraPos>VMCP_DEFAULT</cameraPos>
-            <audioApply value="1.000000" />
-            <weight value="20" />
-            <turnOffExtra value="false" />
-            <disableBonnetCamera value="false" />
-            <allowBonnetSlide value="true" />
-          </Item>
-        </visibleMods>
-        <linkMods>
-          <Item>
-            <modelName>nkk9_cage_1a</modelName>
-            <bone>door_dside_r</bone>
-            <turnOffExtra value="false" />
-          </Item>
-          <Item>
-            <modelName>nkk9_cage_1b</modelName>
-            <bone>door_pside_r</bone>
-            <turnOffExtra value="false" />
-          </Item>
-        </linkMods>
-        <statMods>
-          <Item>
-            <identifier />
-            <modifier value="25" />
-            <audioApply value="1.000000" />
-            <weight value="20" />
-            <type>VMT_ENGINE</type>
-          </Item>
-          <Item>
-            <identifier />
-            <modifier value="50" />
-            <audioApply value="1.000000" />
-            <weight value="20" />
-            <type>VMT_ENGINE</type>
-          </Item>
-          <Item>
-            <identifier />
-            <modifier value="75" />
-            <audioApply value="1.000000" />
-            <weight value="20" />
-            <type>VMT_ENGINE</type>
-          </Item>
-          <Item>
-            <identifier />
-            <modifier value="100" />
-            <audioApply value="1.000000" />
-            <weight value="20" />
-            <type>VMT_ENGINE</type>
-          </Item>
-          <Item>
-            <identifier />
-            <modifier value="25" />
-            <audioApply value="1.000000" />
-            <weight value="5" />
-            <type>VMT_BRAKES</type>
-          </Item>
-          <Item>
-            <identifier />
-            <modifier value="50" />
-            <audioApply value="1.000000" />
-            <weight value="5" />
-            <type>VMT_BRAKES</type>
-          </Item>
-          <Item>
-            <identifier />
-            <modifier value="100" />
-            <audioApply value="1.000000" />
-            <weight value="5" />
-            <type>VMT_BRAKES</type>
-          </Item>
-          <Item>
-            <identifier />
-            <modifier value="25" />
-            <audioApply value="1.000000" />
-            <weight value="5" />
-            <type>VMT_GEARBOX</type>
-          </Item>
-          <Item>
-            <identifier />
-            <modifier value="50" />
-            <audioApply value="1.000000" />
-            <weight value="5" />
-            <type>VMT_GEARBOX</type>
-          </Item>
-          <Item>
-            <identifier />
-            <modifier value="100" />
-            <audioApply value="1.000000" />
-            <weight value="5" />
-            <type>VMT_GEARBOX</type>
-          </Item>
-          <Item>
-            <identifier />
-            <modifier value="150" />
-            <audioApply value="1.000000" />
-            <weight value="5" />
-            <type>VMT_GEARBOX</type>
-          </Item>
-          <Item>
-            <identifier />
-            <modifier value="20" />
-            <audioApply value="1.000000" />
-            <weight value="0" />
-            <type>VMT_ARMOUR</type>
-          </Item>
-          <Item>
-            <identifier />
-            <modifier value="40" />
-            <audioApply value="1.000000" />
-            <weight value="10" />
-            <type>VMT_ARMOUR</type>
-          </Item>
-          <Item>
-            <identifier />
-            <modifier value="60" />
-            <audioApply value="1.000000" />
-            <weight value="20" />
-            <type>VMT_ARMOUR</type>
-          </Item>
-          <Item>
-            <identifier />
-            <modifier value="80" />
-            <audioApply value="1.000000" />
-            <weight value="30" />
-            <type>VMT_ARMOUR</type>
-          </Item>
-          <Item>
-            <identifier />
-            <modifier value="100" />
-            <audioApply value="1.000000" />
-            <weight value="40" />
-            <type>VMT_ARMOUR</type>
-          </Item>
-          <Item>
-            <identifier />
-            <modifier value="4" />
-            <audioApply value="1.000000" />
-            <weight value="0" />
-            <type>VMT_SUSPENSION</type>
-          </Item>
-          <Item>
-            <identifier />
-            <modifier value="8" />
-            <audioApply value="1.000000" />
-            <weight value="0" />
-            <type>VMT_SUSPENSION</type>
-          </Item>
-          <Item>
-            <identifier />
-            <modifier value="12" />
-            <audioApply value="1.000000" />
-            <weight value="0" />
-            <type>VMT_SUSPENSION</type>
-          </Item>
-          <Item>
-            <identifier />
-            <modifier value="16" />
-            <audioApply value="1.000000" />
-            <weight value="0" />
-            <type>VMT_SUSPENSION</type>
-          </Item>
-        </statMods>
-      </Item>
-    </Kits>
-  <Lights>
-  </Lights>
+	<Kits>
+		<Item>
+			<kitName>2016_nkcruiser_modkit</kitName>
+			<id value="2016" />
+			<kitType>MKT_SPECIAL</kitType>
+			<visibleMods>
+				<!-- nkcage -->
+				<Item>
+					<modelName>nkk9_cage_1c</modelName>
+					<modShopLabel>NKCRU_CAGE1C</modShopLabel>
+					<linkedModels>
+						<Item>nkk9_cage_1a</Item>
+						<Item>nkk9_cage_1b</Item>
+					</linkedModels>
+					<turnOffBones>
+						<Item>misc_i</Item>
+						<Item>misc_k</Item>
+						<Item>misc_h</Item>
+					</turnOffBones>
+					<type>VMT_SEATS</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<!-- Plate 1 -->
+				<Item>
+					<modelName>nkcruiser_plate_1</modelName>
+					<modShopLabel>NKCRU_PLATE_1</modShopLabel>
+					<linkedModels />
+					<turnOffBones />
+					<type>VMT_PLTHOLDER</type>
+					<bone>bumper_f</bone>
+					<collisionBone>bumper_f</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<!-- ANTA -->
+				<Item>
+					<modelName>nkcruiser_anta</modelName>
+					<modShopLabel>NKCRU_ANTA</modShopLabel>
+					<linkedModels />
+					<turnOffBones />
+					<type>VMT_CHASSIS3</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<!-- ANTB -->
+				<Item>
+					<modelName>nkcruiser_antb</modelName>
+					<modShopLabel>NKCRU_ANTB</modShopLabel>
+					<linkedModels />
+					<turnOffBones />
+					<type>VMT_CHASSIS3</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<!-- ANTC -->
+				<Item>
+					<modelName>nkcruiser_antc</modelName>
+					<modShopLabel>NKCRU_ANTC</modShopLabel>
+					<linkedModels />
+					<turnOffBones />
+					<type>VMT_CHASSIS3</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<!-- ANTD -->
+				<Item>
+					<modelName>nkcruiser_antd</modelName>
+					<modShopLabel>NKCRU_ANTD</modShopLabel>
+					<linkedModels />
+					<turnOffBones />
+					<type>VMT_CHASSIS3</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<!-- ANTA -->
+				<Item>
+					<modelName>nkcruiser_anta</modelName>
+					<modShopLabel>NKCRU_ANTA</modShopLabel>
+					<linkedModels>
+						<Item>nkcruiser_antb</Item>
+					</linkedModels>
+					<turnOffBones />
+					<type>VMT_CHASSIS3</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<!-- ANTC -->
+				<Item>
+					<modelName>nkcruiser_antc</modelName>
+					<modShopLabel>NKCRU_ANTC</modShopLabel>
+					<linkedModels>
+						<Item>nkcruiser_antb</Item>
+					</linkedModels>
+					<turnOffBones />
+					<type>VMT_CHASSIS3</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<!-- ANTD -->
+				<Item>
+					<modelName>nkcruiser_antd</modelName>
+					<modShopLabel>NKCRU_ANTD</modShopLabel>
+					<linkedModels>
+						<Item>nkcruiser_antb</Item>
+					</linkedModels>
+					<turnOffBones />
+					<type>VMT_CHASSIS3</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<!-- ALPR1 SOLO-->
+				<Item>
+					<modelName>nkcruiser_alpr1</modelName>
+					<modShopLabel>NKCRU_ALPR1</modShopLabel>
+					<linkedModels />
+					<turnOffBones />
+					<type>VMT_CHASSIS4</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<!-- ALPR2 SOLO -->
+				<Item>
+					<modelName>nkcruiser_alpr2</modelName>
+					<modShopLabel>NKCRU_ALPR2</modShopLabel>
+					<linkedModels/>
+					<turnOffBones />
+					<type>VMT_CHASSIS4</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<!-- ALPR1/2 TOGETHER-->
+				<Item>
+					<modelName>nkcruiser_alpr2</modelName>
+					<modShopLabel>NKCRU_ALPR2</modShopLabel>
+					<linkedModels>
+						<Item>nkcruiser_alpr1</Item>
+					</linkedModels>
+					<turnOffBones />
+					<type>VMT_CHASSIS4</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<!-- interior -->
+				<Item>
+					<modelName>nkcruiser_laptop</modelName>
+					<modShopLabel>NKCRU_LAPT</modShopLabel>
+					<linkedModels/>
+					<turnOffBones />
+					<type>VMT_INTERIOR1</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<Item>
+					<modelName>nkcruiser_radar</modelName>
+					<modShopLabel>NKCRU_RADA</modShopLabel>
+					<linkedModels/>
+					<turnOffBones />
+					<type>VMT_INTERIOR1</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<Item>
+					<modelName>nkcruiser_radar</modelName>
+					<modShopLabel>NKCRU_RADA</modShopLabel>
+					<linkedModels>
+						<Item>nkcruiser_laptop</Item>
+					</linkedModels>
+					<turnOffBones />
+					<type>VMT_INTERIOR1</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<Item>
+					<modelName>nkcruiser_guns</modelName>
+					<modShopLabel>NKCRU_GUNS</modShopLabel>
+					<linkedModels/>
+					<turnOffBones />
+					<type>VMT_INTERIOR3</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<Item>
+					<modelName>nkcruiser_guns</modelName>
+					<modShopLabel>NKCRU_GUNS</modShopLabel>
+					<linkedModels></linkedModels>
+					<turnOffBones />
+					<type>VMT_INTERIOR3</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<Item>
+					<modelName>nkcruiser_cam</modelName>
+					<modShopLabel>NKCRU_CAM</modShopLabel>
+					<linkedModels/>
+					<turnOffBones />
+					<type>VMT_INTERIOR4</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<Item>
+					<modelName>nkcruiser_trunksupplies</modelName>
+					<modShopLabel>NKCRU_TSUPPL</modShopLabel>
+					<linkedModels/>
+					<turnOffBones />
+					<type>VMT_TRUNK</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+			</visibleMods>
+			<linkMods>
+				<Item>
+					<modelName>nkcruiser_laptop</modelName>
+					<bone>chassis</bone>
+					<turnOffExtra value="false"/>
+				</Item>
+				<Item>
+					<modelName>nkcruiser_antb</modelName>
+					<bone>chassis</bone>
+					<turnOffExtra value="false"/>
+				</Item>
+				<Item>
+					<modelName>nkcruiser_alpr1</modelName>
+					<bone>chassis</bone>
+					<turnOffExtra value="false"/>
+				</Item>
+				<Item>
+					<modelName>nkk9_cage_1a</modelName>
+					<bone>door_dside_r</bone>
+					<turnOffExtra value="false" />
+				</Item>
+				<Item>
+					<modelName>nkk9_cage_1b</modelName>
+					<bone>door_pside_r</bone>
+					<turnOffExtra value="false" />
+				</Item>
+			</linkMods>
+			<statMods>
+				<Item>
+					<identifier />
+					<modifier value="25" />
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<type>VMT_ENGINE</type>
+				</Item>
+				<Item>
+					<identifier />
+					<modifier value="50" />
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<type>VMT_ENGINE</type>
+				</Item>
+				<Item>
+					<identifier />
+					<modifier value="75" />
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<type>VMT_ENGINE</type>
+				</Item>
+				<Item>
+					<identifier />
+					<modifier value="100" />
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<type>VMT_ENGINE</type>
+				</Item>
+				<Item>
+					<identifier />
+					<modifier value="25" />
+					<audioApply value="1.000000" />
+					<weight value="5" />
+					<type>VMT_BRAKES</type>
+				</Item>
+				<Item>
+					<identifier />
+					<modifier value="50" />
+					<audioApply value="1.000000" />
+					<weight value="5" />
+					<type>VMT_BRAKES</type>
+				</Item>
+				<Item>
+					<identifier />
+					<modifier value="100" />
+					<audioApply value="1.000000" />
+					<weight value="5" />
+					<type>VMT_BRAKES</type>
+				</Item>
+				<Item>
+					<identifier />
+					<modifier value="25" />
+					<audioApply value="1.000000" />
+					<weight value="5" />
+					<type>VMT_GEARBOX</type>
+				</Item>
+				<Item>
+					<identifier />
+					<modifier value="50" />
+					<audioApply value="1.000000" />
+					<weight value="5" />
+					<type>VMT_GEARBOX</type>
+				</Item>
+				<Item>
+					<identifier />
+					<modifier value="100" />
+					<audioApply value="1.000000" />
+					<weight value="5" />
+					<type>VMT_GEARBOX</type>
+				</Item>
+				<Item>
+					<identifier />
+					<modifier value="150" />
+					<audioApply value="1.000000" />
+					<weight value="5" />
+					<type>VMT_GEARBOX</type>
+				</Item>
+				<Item>
+					<identifier />
+					<modifier value="20" />
+					<audioApply value="1.000000" />
+					<weight value="0" />
+					<type>VMT_ARMOUR</type>
+				</Item>
+				<Item>
+					<identifier />
+					<modifier value="40" />
+					<audioApply value="1.000000" />
+					<weight value="10" />
+					<type>VMT_ARMOUR</type>
+				</Item>
+				<Item>
+					<identifier />
+					<modifier value="60" />
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<type>VMT_ARMOUR</type>
+				</Item>
+				<Item>
+					<identifier />
+					<modifier value="80" />
+					<audioApply value="1.000000" />
+					<weight value="30" />
+					<type>VMT_ARMOUR</type>
+				</Item>
+				<Item>
+					<identifier />
+					<modifier value="100" />
+					<audioApply value="1.000000" />
+					<weight value="40" />
+					<type>VMT_ARMOUR</type>
+				</Item>
+				<Item>
+					<identifier />
+					<modifier value="4" />
+					<audioApply value="1.000000" />
+					<weight value="0" />
+					<type>VMT_SUSPENSION</type>
+				</Item>
+				<Item>
+					<identifier />
+					<modifier value="8" />
+					<audioApply value="1.000000" />
+					<weight value="0" />
+					<type>VMT_SUSPENSION</type>
+				</Item>
+				<Item>
+					<identifier />
+					<modifier value="12" />
+					<audioApply value="1.000000" />
+					<weight value="0" />
+					<type>VMT_SUSPENSION</type>
+				</Item>
+				<Item>
+					<identifier />
+					<modifier value="16" />
+					<audioApply value="1.000000" />
+					<weight value="0" />
+					<type>VMT_SUSPENSION</type>
+				</Item>
+			</statMods>
+		</Item>
+	</Kits>
+	<Lights></Lights>
 	<Sirens>
 		<!-- nkcruiser -->
 		<Item>
-			<id value="5016"/>
+			<id value="2016"/>
 			<name>nkcruiser</name>
 			<timeMultiplier value="1.00000000"/>
 			<lightFalloffMax value="100.00000000"/>

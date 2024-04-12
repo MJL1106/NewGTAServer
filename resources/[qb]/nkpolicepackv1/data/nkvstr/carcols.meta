@@ -2,10 +2,304 @@
 <CVehicleModelInfoVarGlobal>
   <Kits>
     <Item>
-      <kitName>5010_nkvstr_modkit</kitName>
-      <id value="5010"/>
+      <kitName>2004_nkvstr_modkit</kitName>
+      <id value="2004"/>
       <kitType>MKT_SPECIAL</kitType>
       <visibleMods>
+				<!-- ANTA -->
+				<Item>
+					<modelName>nkvstr_anta</modelName>
+					<modShopLabel>NKVSTR_ANTA</modShopLabel>
+					<linkedModels />
+					<turnOffBones />
+					<type>VMT_CHASSIS3</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<!-- ANTB -->
+				<Item>
+					<modelName>nkvstr_antb</modelName>
+					<modShopLabel>NKVSTR_ANTB</modShopLabel>
+					<linkedModels />
+					<turnOffBones />
+					<type>VMT_CHASSIS3</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<!-- ANTC -->
+				<Item>
+					<modelName>nkvstr_antc</modelName>
+					<modShopLabel>NKVSTR_ANTC</modShopLabel>
+					<linkedModels />
+					<turnOffBones />
+					<type>VMT_CHASSIS3</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<!-- ANTD -->
+				<Item>
+					<modelName>nkvstr_antd</modelName>
+					<modShopLabel>NKVSTR_ANTD</modShopLabel>
+					<linkedModels />
+					<turnOffBones />
+					<type>VMT_CHASSIS3</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<!-- ANTA -->
+				<Item>
+					<modelName>nkvstr_anta</modelName>
+					<modShopLabel>NKVSTR_ANTA</modShopLabel>
+					<linkedModels>
+						<Item>nkvstr_antb</Item>
+					</linkedModels>
+					<turnOffBones />
+					<type>VMT_CHASSIS3</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<!-- ANTC -->
+				<Item>
+					<modelName>nkvstr_antc</modelName>
+					<modShopLabel>NKVSTR_ANTC</modShopLabel>
+					<linkedModels>
+						<Item>nkvstr_antb</Item>
+					</linkedModels>
+					<turnOffBones />
+					<type>VMT_CHASSIS3</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<!-- ANTD -->
+				<Item>
+					<modelName>nkvstr_antd</modelName>
+					<modShopLabel>NKVSTR_ANTD</modShopLabel>
+					<linkedModels>
+						<Item>nkvstr_antb</Item>
+					</linkedModels>
+					<turnOffBones />
+					<type>VMT_CHASSIS3</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<!-- ALPR1 SOLO-->
+				<Item>
+					<modelName>nkvstr_alpr1</modelName>
+					<modShopLabel>NKVSTR_ALPR1</modShopLabel>
+					<linkedModels />
+					<turnOffBones />
+					<type>VMT_CHASSIS4</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<!-- ALPR2 SOLO -->
+				<Item>
+					<modelName>nkvstr_alpr2</modelName>
+					<modShopLabel>NKVSTR_ALPR2</modShopLabel>
+					<linkedModels/>
+					<turnOffBones />
+					<type>VMT_CHASSIS4</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<!-- ALPR1/2 TOGETHER-->
+				<Item>
+					<modelName>nkvstr_alpr2</modelName>
+					<modShopLabel>NKVSTR_ALPR2</modShopLabel>
+					<linkedModels>
+						<Item>nkvstr_alpr1</Item>
+					</linkedModels>
+					<turnOffBones />
+					<type>VMT_CHASSIS4</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<!-- interior -->
+				<Item>
+					<modelName>nkvstr_laptop</modelName>
+					<modShopLabel>NKVSTR_LAPT</modShopLabel>
+					<linkedModels/>
+					<turnOffBones />
+					<type>VMT_INTERIOR1</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<Item>
+					<modelName>nkvstr_radar</modelName>
+					<modShopLabel>NKVSTR_RADA</modShopLabel>
+					<linkedModels/>
+					<turnOffBones />
+					<type>VMT_INTERIOR1</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<Item>
+					<modelName>nkvstr_radar</modelName>
+					<modShopLabel>NKVSTR_RADA</modShopLabel>
+					<linkedModels>
+						<Item>nkvstr_laptop</Item>
+					</linkedModels>
+					<turnOffBones />
+					<type>VMT_INTERIOR1</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<Item>
+					<modelName>nkvstr_sirencon</modelName>
+					<modShopLabel>NKVSTR_SCON</modShopLabel>
+					<linkedModels/>
+					<turnOffBones />
+					<type>VMT_INTERIOR3</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<Item>
+					<modelName>nkvstr_guns</modelName>
+					<modShopLabel>NKVSTR_GUNS</modShopLabel>
+					<linkedModels/>
+					<turnOffBones />
+					<type>VMT_INTERIOR3</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<Item>
+					<modelName>nkvstr_guns</modelName>
+					<modShopLabel>NKVSTR_GUNS</modShopLabel>
+					<linkedModels>
+						<Item>nkvstr_sirencon</Item>
+					</linkedModels>
+					<turnOffBones />
+					<type>VMT_INTERIOR3</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<Item>
+					<modelName>nkvstr_cam</modelName>
+					<modShopLabel>NKVSTR_cam</modShopLabel>
+					<linkedModels/>
+					<turnOffBones />
+					<type>VMT_INTERIOR4</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<Item>
+					<modelName>nkvstr_trunksupplies</modelName>
+					<modShopLabel>NKVSTR_TSUPPL</modShopLabel>
+					<linkedModels/>
+					<turnOffBones />
+					<type>VMT_TRUNK</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+
         <Item>
           <modelName>vstr_split_a</modelName>
           <modShopLabel>VSTR_SPLIT_A</modShopLabel>
@@ -984,6 +1278,28 @@
         </Item>
       </visibleMods>
       <linkMods>
+
+				<Item>
+					<modelName>nkvstr_laptop</modelName>
+					<bone>chassis</bone>
+					<turnOffExtra value="false"/>
+				</Item>
+				<Item>
+					<modelName>nkvstr_sirencon</modelName>
+					<bone>chassis</bone>
+					<turnOffExtra value="false"/>
+				</Item>
+				<Item>
+					<modelName>nkvstr_antb</modelName>
+					<bone>chassis</bone>
+					<turnOffExtra value="false"/>
+				</Item>
+				<Item>
+					<modelName>nkvstr_alpr1</modelName>
+					<bone>chassis</bone>
+					<turnOffExtra value="false"/>
+				</Item>
+
         <Item>
           <modelName>vstr_mir_r_a2</modelName>
           <bone>door_pside_f</bone>
@@ -1635,10 +1951,6 @@
         </Item>
       </statMods>
       <slotNames>
-        <Item>
-          <slot>VMT_CHASSIS</slot>
-          <name>CMOD_VORT_M</name>
-        </Item>
 			</slotNames>
 			<liveryNames/>
 		</Item>
@@ -1647,7 +1959,7 @@
 	<Sirens>
 		<!-- nkvstr -->
 		<Item>
-			<id value="5010"/>
+			<id value="2004"/>
 			<name>nkvstr</name>
 			<timeMultiplier value="1.00000000"/>
 			<lightFalloffMax value="100.00000000"/>

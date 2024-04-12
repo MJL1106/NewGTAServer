@@ -48,7 +48,7 @@
 				</Item>
 			</colors>
 			<kits>
-				<Item>5014_nkcoquette_modkit</Item>
+				<Item>2020_nkcoquette_modkit</Item>
 			</kits>
 			<windowsWithExposedEdges/>
 			<plateProbabilities>
@@ -60,7 +60,7 @@
 				</Probabilities>
 			</plateProbabilities>
 			<lightSettings value="16"/>
-			<sirenSettings value="5014"/>
+			<sirenSettings value="2020"/>
 		</Item>
 	</variationData>
 </CVehicleModelInfoVariation>

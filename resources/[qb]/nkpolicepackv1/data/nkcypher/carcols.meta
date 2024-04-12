@@ -2,10 +2,289 @@
 <CVehicleModelInfoVarGlobal>
   <Kits>
     <Item>
-      <kitName>5004_nkcypher_modkit</kitName>
-      <id value="5004"/>
+      <kitName>2014_nkcypher_modkit</kitName>
+      <id value="2014"/>
       <kitType>MKT_SPECIAL</kitType>
       <visibleMods>
+				<!-- ANTA -->
+				<Item>
+					<modelName>nkcypher_anta</modelName>
+					<modShopLabel>NKCYPH_ANTA</modShopLabel>
+					<linkedModels />
+					<turnOffBones />
+					<type>VMT_CHASSIS3</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<!-- ANTB -->
+				<Item>
+					<modelName>nkcypher_antb</modelName>
+					<modShopLabel>NKCYPH_ANTB</modShopLabel>
+					<linkedModels />
+					<turnOffBones />
+					<type>VMT_CHASSIS3</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<!-- ANTC -->
+				<Item>
+					<modelName>nkcypher_antc</modelName>
+					<modShopLabel>NKCYPH_ANTC</modShopLabel>
+					<linkedModels />
+					<turnOffBones />
+					<type>VMT_CHASSIS3</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<!-- ANTD -->
+				<Item>
+					<modelName>nkcypher_antd</modelName>
+					<modShopLabel>NKCYPH_ANTD</modShopLabel>
+					<linkedModels />
+					<turnOffBones />
+					<type>VMT_CHASSIS3</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<!-- ANTA -->
+				<Item>
+					<modelName>nkcypher_anta</modelName>
+					<modShopLabel>NKCYPH_ANTA</modShopLabel>
+					<linkedModels>
+						<Item>nkcypher_antb</Item>
+					</linkedModels>
+					<turnOffBones />
+					<type>VMT_CHASSIS3</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<!-- ANTC -->
+				<Item>
+					<modelName>nkcypher_antc</modelName>
+					<modShopLabel>NKCYPH_ANTC</modShopLabel>
+					<linkedModels>
+						<Item>nkcypher_antb</Item>
+					</linkedModels>
+					<turnOffBones />
+					<type>VMT_CHASSIS3</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<!-- ANTD -->
+				<Item>
+					<modelName>nkcypher_antd</modelName>
+					<modShopLabel>NKCYPH_ANTD</modShopLabel>
+					<linkedModels>
+						<Item>nkcypher_antb</Item>
+					</linkedModels>
+					<turnOffBones />
+					<type>VMT_CHASSIS3</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<!-- ALPR1 SOLO-->
+				<Item>
+					<modelName>nkcypher_alpr1</modelName>
+					<modShopLabel>NKCYPH_ALPR1</modShopLabel>
+					<linkedModels />
+					<turnOffBones />
+					<type>VMT_CHASSIS4</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<!-- ALPR2 SOLO -->
+				<Item>
+					<modelName>nkcypher_alpr2</modelName>
+					<modShopLabel>NKCYPH_ALPR2</modShopLabel>
+					<linkedModels/>
+					<turnOffBones />
+					<type>VMT_CHASSIS4</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<!-- ALPR1/2 TOGETHER-->
+				<Item>
+					<modelName>nkcypher_alpr2</modelName>
+					<modShopLabel>NKCYPH_ALPR2</modShopLabel>
+					<linkedModels>
+						<Item>nkcypher_alpr1</Item>
+					</linkedModels>
+					<turnOffBones />
+					<type>VMT_CHASSIS4</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<!-- interior -->
+				<Item>
+					<modelName>nkcypher_laptop</modelName>
+					<modShopLabel>NKCYPH_LAPT</modShopLabel>
+					<linkedModels/>
+					<turnOffBones />
+					<type>VMT_INTERIOR1</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<Item>
+					<modelName>nkcypher_radar</modelName>
+					<modShopLabel>NKCYPH_RADA</modShopLabel>
+					<linkedModels/>
+					<turnOffBones />
+					<type>VMT_INTERIOR1</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<Item>
+					<modelName>nkcypher_radar</modelName>
+					<modShopLabel>NKCYPH_RADA</modShopLabel>
+					<linkedModels>
+						<Item>nkcypher_laptop</Item>
+					</linkedModels>
+					<turnOffBones />
+					<type>VMT_INTERIOR1</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<Item>
+					<modelName>nkcypher_guns</modelName>
+					<modShopLabel>NKCYPH_GUNS</modShopLabel>
+					<linkedModels/>
+					<turnOffBones />
+					<type>VMT_INTERIOR3</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<Item>
+					<modelName>nkcypher_guns</modelName>
+					<modShopLabel>NKCYPH_GUNS</modShopLabel>
+					<linkedModels>
+					</linkedModels>
+					<turnOffBones />
+					<type>VMT_INTERIOR3</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<Item>
+					<modelName>nkcypher_cam</modelName>
+					<modShopLabel>NKCYPH_cam</modShopLabel>
+					<linkedModels/>
+					<turnOffBones />
+					<type>VMT_INTERIOR4</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<Item>
+					<modelName>nkcypher_trunksupplies</modelName>
+					<modShopLabel>NKCYPH_TSUPPL</modShopLabel>
+					<linkedModels/>
+					<turnOffBones />
+					<type>VMT_TRUNK</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+
+
         <Item>
           <modelName>cyph_exh_ab</modelName>
           <modShopLabel>CYPH_EXH_AB</modShopLabel>
@@ -151,260 +430,6 @@
             <Item>misc_e</Item>
           </turnOffBones>
           <type>VMT_EXHAUST</type>
-          <bone>chassis</bone>
-          <collisionBone>chassis</collisionBone>
-          <cameraPos>VMCP_DEFAULT</cameraPos>
-          <audioApply value="1.000000"/>
-          <weight value="20"/>
-          <turnOffExtra value="false"/>
-          <disableBonnetCamera value="false"/>
-          <allowBonnetSlide value="true"/>
-        </Item>
-        <Item>
-          <modelName>cyph_fin_ac</modelName>
-          <modShopLabel>CYPH_FIN_AC</modShopLabel>
-          <linkedModels/>
-          <turnOffBones>
-            <Item>misc_h</Item>
-          </turnOffBones>
-          <type>VMT_CHASSIS4</type>
-          <bone>chassis</bone>
-          <collisionBone>chassis</collisionBone>
-          <cameraPos>VMCP_DEFAULT</cameraPos>
-          <audioApply value="1.000000"/>
-          <weight value="20"/>
-          <turnOffExtra value="false"/>
-          <disableBonnetCamera value="false"/>
-          <allowBonnetSlide value="true"/>
-        </Item>
-        <Item>
-          <modelName>cyph_fin_b</modelName>
-          <modShopLabel>CYPH_FIN_B</modShopLabel>
-          <linkedModels/>
-          <turnOffBones>
-            <Item>misc_h</Item>
-          </turnOffBones>
-          <type>VMT_CHASSIS4</type>
-          <bone>chassis</bone>
-          <collisionBone>chassis</collisionBone>
-          <cameraPos>VMCP_DEFAULT</cameraPos>
-          <audioApply value="1.000000"/>
-          <weight value="20"/>
-          <turnOffExtra value="false"/>
-          <disableBonnetCamera value="false"/>
-          <allowBonnetSlide value="true"/>
-        </Item>
-        <Item>
-          <modelName>cyph_fin_bc</modelName>
-          <modShopLabel>CYPH_FIN_BC</modShopLabel>
-          <linkedModels/>
-          <turnOffBones>
-            <Item>misc_h</Item>
-          </turnOffBones>
-          <type>VMT_CHASSIS4</type>
-          <bone>chassis</bone>
-          <collisionBone>chassis</collisionBone>
-          <cameraPos>VMCP_DEFAULT</cameraPos>
-          <audioApply value="1.000000"/>
-          <weight value="20"/>
-          <turnOffExtra value="false"/>
-          <disableBonnetCamera value="false"/>
-          <allowBonnetSlide value="true"/>
-        </Item>
-        <Item>
-          <modelName>cyph_fin_c</modelName>
-          <modShopLabel>CYPH_FIN_C</modShopLabel>
-          <linkedModels/>
-          <turnOffBones>
-            <Item>misc_h</Item>
-          </turnOffBones>
-          <type>VMT_CHASSIS4</type>
-          <bone>chassis</bone>
-          <collisionBone>chassis</collisionBone>
-          <cameraPos>VMCP_DEFAULT</cameraPos>
-          <audioApply value="1.000000"/>
-          <weight value="20"/>
-          <turnOffExtra value="false"/>
-          <disableBonnetCamera value="false"/>
-          <allowBonnetSlide value="true"/>
-        </Item>
-        <Item>
-          <modelName>cyph_fin_cc</modelName>
-          <modShopLabel>CYPH_FIN_CC</modShopLabel>
-          <linkedModels/>
-          <turnOffBones>
-            <Item>misc_h</Item>
-          </turnOffBones>
-          <type>VMT_CHASSIS4</type>
-          <bone>chassis</bone>
-          <collisionBone>chassis</collisionBone>
-          <cameraPos>VMCP_DEFAULT</cameraPos>
-          <audioApply value="1.000000"/>
-          <weight value="20"/>
-          <turnOffExtra value="false"/>
-          <disableBonnetCamera value="false"/>
-          <allowBonnetSlide value="true"/>
-        </Item>
-        <Item>
-          <modelName>cyph_fin_d</modelName>
-          <modShopLabel>CYPH_FIN_D</modShopLabel>
-          <linkedModels/>
-          <turnOffBones>
-            <Item>misc_h</Item>
-          </turnOffBones>
-          <type>VMT_CHASSIS4</type>
-          <bone>chassis</bone>
-          <collisionBone>chassis</collisionBone>
-          <cameraPos>VMCP_DEFAULT</cameraPos>
-          <audioApply value="1.000000"/>
-          <weight value="20"/>
-          <turnOffExtra value="false"/>
-          <disableBonnetCamera value="false"/>
-          <allowBonnetSlide value="true"/>
-        </Item>
-        <Item>
-          <modelName>cyph_fin_dc</modelName>
-          <modShopLabel>CYPH_FIN_DC</modShopLabel>
-          <linkedModels/>
-          <turnOffBones>
-            <Item>misc_h</Item>
-          </turnOffBones>
-          <type>VMT_CHASSIS4</type>
-          <bone>chassis</bone>
-          <collisionBone>chassis</collisionBone>
-          <cameraPos>VMCP_DEFAULT</cameraPos>
-          <audioApply value="1.000000"/>
-          <weight value="20"/>
-          <turnOffExtra value="false"/>
-          <disableBonnetCamera value="false"/>
-          <allowBonnetSlide value="true"/>
-        </Item>
-        <Item>
-          <modelName>cyph_suns_a</modelName>
-          <modShopLabel>CYPH_SUNS_A</modShopLabel>
-          <linkedModels/>
-          <turnOffBones/>
-          <type>VMT_INTERIOR1</type>
-          <bone>chassis</bone>
-          <collisionBone>chassis</collisionBone>
-          <cameraPos>VMCP_DEFAULT</cameraPos>
-          <audioApply value="1.000000"/>
-          <weight value="20"/>
-          <turnOffExtra value="false"/>
-          <disableBonnetCamera value="false"/>
-          <allowBonnetSlide value="true"/>
-        </Item>
-        <Item>
-          <modelName>cyph_suns_a1</modelName>
-          <modShopLabel>CYPH_SUNS_A1</modShopLabel>
-          <linkedModels/>
-          <turnOffBones/>
-          <type>VMT_INTERIOR1</type>
-          <bone>chassis</bone>
-          <collisionBone>chassis</collisionBone>
-          <cameraPos>VMCP_DEFAULT</cameraPos>
-          <audioApply value="1.000000"/>
-          <weight value="20"/>
-          <turnOffExtra value="false"/>
-          <disableBonnetCamera value="false"/>
-          <allowBonnetSlide value="true"/>
-        </Item>
-        <Item>
-          <modelName>cyph_suns_a2</modelName>
-          <modShopLabel>CYPH_SUNS_A2</modShopLabel>
-          <linkedModels/>
-          <turnOffBones/>
-          <type>VMT_INTERIOR1</type>
-          <bone>chassis</bone>
-          <collisionBone>chassis</collisionBone>
-          <cameraPos>VMCP_DEFAULT</cameraPos>
-          <audioApply value="1.000000"/>
-          <weight value="20"/>
-          <turnOffExtra value="false"/>
-          <disableBonnetCamera value="false"/>
-          <allowBonnetSlide value="true"/>
-        </Item>
-        <Item>
-          <modelName>cyph_suns_b</modelName>
-          <modShopLabel>CYPH_SUNS_B</modShopLabel>
-          <linkedModels/>
-          <turnOffBones/>
-          <type>VMT_INTERIOR1</type>
-          <bone>chassis</bone>
-          <collisionBone>chassis</collisionBone>
-          <cameraPos>VMCP_DEFAULT</cameraPos>
-          <audioApply value="1.000000"/>
-          <weight value="20"/>
-          <turnOffExtra value="false"/>
-          <disableBonnetCamera value="false"/>
-          <allowBonnetSlide value="true"/>
-        </Item>
-        <Item>
-          <modelName>cyph_suns_b2</modelName>
-          <modShopLabel>CYPH_SUNS_B2</modShopLabel>
-          <linkedModels/>
-          <turnOffBones/>
-          <type>VMT_INTERIOR1</type>
-          <bone>chassis</bone>
-          <collisionBone>chassis</collisionBone>
-          <cameraPos>VMCP_DEFAULT</cameraPos>
-          <audioApply value="1.000000"/>
-          <weight value="20"/>
-          <turnOffExtra value="false"/>
-          <disableBonnetCamera value="false"/>
-          <allowBonnetSlide value="true"/>
-        </Item>
-        <Item>
-          <modelName>cyph_suns_c</modelName>
-          <modShopLabel>CYPH_SUNS_C</modShopLabel>
-          <linkedModels/>
-          <turnOffBones/>
-          <type>VMT_INTERIOR1</type>
-          <bone>chassis</bone>
-          <collisionBone>chassis</collisionBone>
-          <cameraPos>VMCP_DEFAULT</cameraPos>
-          <audioApply value="1.000000"/>
-          <weight value="20"/>
-          <turnOffExtra value="false"/>
-          <disableBonnetCamera value="false"/>
-          <allowBonnetSlide value="true"/>
-        </Item>
-        <Item>
-          <modelName>cyph_suns_c2</modelName>
-          <modShopLabel>CYPH_SUNS_C2</modShopLabel>
-          <linkedModels/>
-          <turnOffBones/>
-          <type>VMT_INTERIOR1</type>
-          <bone>chassis</bone>
-          <collisionBone>chassis</collisionBone>
-          <cameraPos>VMCP_DEFAULT</cameraPos>
-          <audioApply value="1.000000"/>
-          <weight value="20"/>
-          <turnOffExtra value="false"/>
-          <disableBonnetCamera value="false"/>
-          <allowBonnetSlide value="true"/>
-        </Item>
-        <Item>
-          <modelName>cyph_suns_d</modelName>
-          <modShopLabel>CYPH_SUNS_D</modShopLabel>
-          <linkedModels/>
-          <turnOffBones/>
-          <type>VMT_INTERIOR1</type>
-          <bone>chassis</bone>
-          <collisionBone>chassis</collisionBone>
-          <cameraPos>VMCP_DEFAULT</cameraPos>
-          <audioApply value="1.000000"/>
-          <weight value="20"/>
-          <turnOffExtra value="false"/>
-          <disableBonnetCamera value="false"/>
-          <allowBonnetSlide value="true"/>
-        </Item>
-        <Item>
-          <modelName>cyph_suns_d2</modelName>
-          <modShopLabel>CYPH_SUNS_D2</modShopLabel>
-          <linkedModels/>
-          <turnOffBones/>
-          <type>VMT_INTERIOR1</type>
           <bone>chassis</bone>
           <collisionBone>chassis</collisionBone>
           <cameraPos>VMCP_DEFAULT</cameraPos>
@@ -950,126 +975,6 @@
           <type>VMT_BUMPER_F</type>
           <bone>bumper_f</bone>
           <collisionBone>chassis</collisionBone>
-          <cameraPos>VMCP_DEFAULT</cameraPos>
-          <audioApply value="1.000000"/>
-          <weight value="20"/>
-          <turnOffExtra value="false"/>
-          <disableBonnetCamera value="false"/>
-          <allowBonnetSlide value="true"/>
-        </Item>
-        <Item>
-          <modelName>cyph_hcatch_c1</modelName>
-          <modShopLabel>CYPH_HCATCH_C1</modShopLabel>
-          <linkedModels/>
-          <turnOffBones/>
-          <type>VMT_CHASSIS3</type>
-          <bone>bonnet</bone>
-          <collisionBone>bonnet</collisionBone>
-          <cameraPos>VMCP_DEFAULT</cameraPos>
-          <audioApply value="1.000000"/>
-          <weight value="20"/>
-          <turnOffExtra value="false"/>
-          <disableBonnetCamera value="false"/>
-          <allowBonnetSlide value="true"/>
-        </Item>
-        <Item>
-          <modelName>cyph_hcatch_c2</modelName>
-          <modShopLabel>CYPH_HCATCH_C2</modShopLabel>
-          <linkedModels/>
-          <turnOffBones/>
-          <type>VMT_CHASSIS3</type>
-          <bone>bonnet</bone>
-          <collisionBone>bonnet</collisionBone>
-          <cameraPos>VMCP_DEFAULT</cameraPos>
-          <audioApply value="1.000000"/>
-          <weight value="20"/>
-          <turnOffExtra value="false"/>
-          <disableBonnetCamera value="false"/>
-          <allowBonnetSlide value="true"/>
-        </Item>
-        <Item>
-          <modelName>cyph_hcatch_a</modelName>
-          <modShopLabel>CYPH_HCATCH_A</modShopLabel>
-          <linkedModels/>
-          <turnOffBones/>
-          <type>VMT_CHASSIS3</type>
-          <bone>bonnet</bone>
-          <collisionBone>bonnet</collisionBone>
-          <cameraPos>VMCP_DEFAULT</cameraPos>
-          <audioApply value="1.000000"/>
-          <weight value="20"/>
-          <turnOffExtra value="false"/>
-          <disableBonnetCamera value="false"/>
-          <allowBonnetSlide value="true"/>
-        </Item>
-        <Item>
-          <modelName>cyph_hcatch_b</modelName>
-          <modShopLabel>CYPH_HCATCH_B</modShopLabel>
-          <linkedModels/>
-          <turnOffBones/>
-          <type>VMT_CHASSIS3</type>
-          <bone>bonnet</bone>
-          <collisionBone>bonnet</collisionBone>
-          <cameraPos>VMCP_DEFAULT</cameraPos>
-          <audioApply value="1.000000"/>
-          <weight value="20"/>
-          <turnOffExtra value="false"/>
-          <disableBonnetCamera value="false"/>
-          <allowBonnetSlide value="true"/>
-        </Item>
-        <Item>
-          <modelName>cyph_hudpin_3</modelName>
-          <modShopLabel>VTC_HACC_3</modShopLabel>
-          <linkedModels/>
-          <turnOffBones/>
-          <type>VMT_CHASSIS3</type>
-          <bone>bonnet</bone>
-          <collisionBone>bonnet</collisionBone>
-          <cameraPos>VMCP_DEFAULT</cameraPos>
-          <audioApply value="1.000000"/>
-          <weight value="20"/>
-          <turnOffExtra value="false"/>
-          <disableBonnetCamera value="false"/>
-          <allowBonnetSlide value="true"/>
-        </Item>
-        <Item>
-          <modelName>cyph_hudpin_3a</modelName>
-          <modShopLabel>VTC_HACC_4</modShopLabel>
-          <linkedModels/>
-          <turnOffBones/>
-          <type>VMT_CHASSIS3</type>
-          <bone>bonnet</bone>
-          <collisionBone>bonnet</collisionBone>
-          <cameraPos>VMCP_DEFAULT</cameraPos>
-          <audioApply value="1.000000"/>
-          <weight value="20"/>
-          <turnOffExtra value="false"/>
-          <disableBonnetCamera value="false"/>
-          <allowBonnetSlide value="true"/>
-        </Item>
-        <Item>
-          <modelName>cyph_hudpin_3b</modelName>
-          <modShopLabel>VTC_HACC_5</modShopLabel>
-          <linkedModels/>
-          <turnOffBones/>
-          <type>VMT_CHASSIS3</type>
-          <bone>bonnet</bone>
-          <collisionBone>bonnet</collisionBone>
-          <cameraPos>VMCP_DEFAULT</cameraPos>
-          <audioApply value="1.000000"/>
-          <weight value="20"/>
-          <turnOffExtra value="false"/>
-          <disableBonnetCamera value="false"/>
-          <allowBonnetSlide value="true"/>
-        </Item>
-        <Item>
-          <modelName>cyph_hudpin_3c</modelName>
-          <modShopLabel>VTC_HACC_6</modShopLabel>
-          <linkedModels/>
-          <turnOffBones/>
-          <type>VMT_CHASSIS3</type>
-          <bone>bonnet</bone>
-          <collisionBone>bonnet</collisionBone>
           <cameraPos>VMCP_DEFAULT</cameraPos>
           <audioApply value="1.000000"/>
           <weight value="20"/>
@@ -1684,40 +1589,6 @@
           <allowBonnetSlide value="true"/>
         </Item>
         <Item>
-          <modelName>cyph_int1</modelName>
-          <modShopLabel>CYPH_INT1</modShopLabel>
-          <linkedModels/>
-          <turnOffBones>
-            <Item>misc_j</Item>
-          </turnOffBones>
-          <type>VMT_INTERIOR2</type>
-          <bone>chassis</bone>
-          <collisionBone>chassis</collisionBone>
-          <cameraPos>VMCP_DEFAULT</cameraPos>
-          <audioApply value="1.000000"/>
-          <weight value="20"/>
-          <turnOffExtra value="false"/>
-          <disableBonnetCamera value="false"/>
-          <allowBonnetSlide value="true"/>
-        </Item>
-        <Item>
-          <modelName>cyph_int2</modelName>
-          <modShopLabel>CYPH_INT2</modShopLabel>
-          <linkedModels/>
-          <turnOffBones>
-            <Item>misc_j</Item>
-          </turnOffBones>
-          <type>VMT_INTERIOR2</type>
-          <bone>chassis</bone>
-          <collisionBone>chassis</collisionBone>
-          <cameraPos>VMCP_DEFAULT</cameraPos>
-          <audioApply value="1.000000"/>
-          <weight value="20"/>
-          <turnOffExtra value="false"/>
-          <disableBonnetCamera value="false"/>
-          <allowBonnetSlide value="true"/>
-        </Item>
-        <Item>
           <modelName>cyph_arch_a1</modelName>
           <modShopLabel>CYPH_ARCH_A1</modShopLabel>
           <linkedModels>
@@ -2000,74 +1871,6 @@
           <linkedModels/>
           <turnOffBones/>
           <type>VMT_CHASSIS2</type>
-          <bone>chassis</bone>
-          <collisionBone>chassis</collisionBone>
-          <cameraPos>VMCP_DEFAULT</cameraPos>
-          <audioApply value="1.000000"/>
-          <weight value="20"/>
-          <turnOffExtra value="false"/>
-          <disableBonnetCamera value="false"/>
-          <allowBonnetSlide value="true"/>
-        </Item>
-        <Item>
-          <modelName>cyph_dash_ac</modelName>
-          <modShopLabel>CYPH_DASH_AC</modShopLabel>
-          <linkedModels/>
-          <turnOffBones>
-            <Item>misc_l</Item>
-          </turnOffBones>
-          <type>VMT_INTERIOR3</type>
-          <bone>chassis</bone>
-          <collisionBone>chassis</collisionBone>
-          <cameraPos>VMCP_DEFAULT</cameraPos>
-          <audioApply value="1.000000"/>
-          <weight value="20"/>
-          <turnOffExtra value="false"/>
-          <disableBonnetCamera value="false"/>
-          <allowBonnetSlide value="true"/>
-        </Item>
-        <Item>
-          <modelName>cyph_dash_aw</modelName>
-          <modShopLabel>CYPH_DASH_AW</modShopLabel>
-          <linkedModels/>
-          <turnOffBones>
-            <Item>misc_l</Item>
-          </turnOffBones>
-          <type>VMT_INTERIOR3</type>
-          <bone>chassis</bone>
-          <collisionBone>chassis</collisionBone>
-          <cameraPos>VMCP_DEFAULT</cameraPos>
-          <audioApply value="1.000000"/>
-          <weight value="20"/>
-          <turnOffExtra value="false"/>
-          <disableBonnetCamera value="false"/>
-          <allowBonnetSlide value="true"/>
-        </Item>
-        <Item>
-          <modelName>cyph_dash_ak</modelName>
-          <modShopLabel>CYPH_DASH_AK</modShopLabel>
-          <linkedModels/>
-          <turnOffBones>
-            <Item>misc_l</Item>
-          </turnOffBones>
-          <type>VMT_INTERIOR3</type>
-          <bone>chassis</bone>
-          <collisionBone>chassis</collisionBone>
-          <cameraPos>VMCP_DEFAULT</cameraPos>
-          <audioApply value="1.000000"/>
-          <weight value="20"/>
-          <turnOffExtra value="false"/>
-          <disableBonnetCamera value="false"/>
-          <allowBonnetSlide value="true"/>
-        </Item>
-        <Item>
-          <modelName>cyph_dash_af</modelName>
-          <modShopLabel>CYPH_DASH_AF</modShopLabel>
-          <linkedModels/>
-          <turnOffBones>
-            <Item>misc_l</Item>
-          </turnOffBones>
-          <type>VMT_INTERIOR3</type>
           <bone>chassis</bone>
           <collisionBone>chassis</collisionBone>
           <cameraPos>VMCP_DEFAULT</cameraPos>
@@ -2417,21 +2220,6 @@
           <type>VMT_INTERIOR5</type>
           <bone>door_dside_f</bone>
           <collisionBone>door_dside_f</collisionBone>
-          <cameraPos>VMCP_DEFAULT</cameraPos>
-          <audioApply value="1.000000"/>
-          <weight value="20"/>
-          <turnOffExtra value="false"/>
-          <disableBonnetCamera value="false"/>
-          <allowBonnetSlide value="true"/>
-        </Item>
-        <Item>
-          <modelName>cyph_dials</modelName>
-          <modShopLabel>CYPH_DIALS</modShopLabel>
-          <linkedModels/>
-          <turnOffBones/>
-          <type>VMT_INTERIOR4</type>
-          <bone>chassis</bone>
-          <collisionBone>chassis</collisionBone>
           <cameraPos>VMCP_DEFAULT</cameraPos>
           <audioApply value="1.000000"/>
           <weight value="20"/>
@@ -3206,6 +2994,29 @@
         </Item>
       </visibleMods>
       <linkMods>
+
+
+				<Item>
+					<modelName>nkcypher_laptop</modelName>
+					<bone>chassis</bone>
+					<turnOffExtra value="false"/>
+				</Item>
+				<Item>
+					<modelName>nkcypher_sirencon</modelName>
+					<bone>chassis</bone>
+					<turnOffExtra value="false"/>
+				</Item>
+				<Item>
+					<modelName>nkcypher_antb</modelName>
+					<bone>chassis</bone>
+					<turnOffExtra value="false"/>
+				</Item>
+				<Item>
+					<modelName>nkcypher_alpr1</modelName>
+					<bone>chassis</bone>
+					<turnOffExtra value="false"/>
+				</Item>
+
         <Item>
           <modelName>cyph_mir_r_a1</modelName>
           <bone>door_pside_f</bone>
@@ -3887,18 +3698,6 @@
           <slot>VMT_PLTVANITY</slot>
           <name>TOP_VENT</name>
         </Item>
-        <Item>
-          <slot>VMT_CHASSIS3</slot>
-          <name>TOP_CATCH</name>
-        </Item>
-        <Item>
-          <slot>VMT_INTERIOR1</slot>
-          <name>TOP_SUNST</name>
-        </Item>
-        <Item>
-          <slot>VMT_INTERIOR2</slot>
-          <name>TOP_INTERTYPE</name>
-        </Item>
       </slotNames>
 			<liveryNames/>
 			<livery2Names/>
@@ -3908,7 +3707,7 @@
 	<Sirens>
 		<!-- nkcypher -->
 		<Item>
-			<id value="5004"/>
+			<id value="2014"/>
 			<name>nkcypher</name>
 			<timeMultiplier value="1.00000000"/>
 			<lightFalloffMax value="100.00000000"/>

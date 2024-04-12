@@ -2,8 +2,8 @@
 <CVehicleModelInfoVarGlobal>
 	<Kits>
 		<Item>
-      <kitName>5008_nkballer7_modkit</kitName>
-      <id value="5008"/>
+      <kitName>2022_nkballer7_modkit</kitName>
+      <id value="2022"/>
       <kitType>MKT_SPECIAL</kitType>
       <visibleMods>
         <Item>
@@ -596,8 +596,247 @@
           <disableBonnetCamera value="false"/>
           <allowBonnetSlide value="true"/>
         </Item>
+
+				<!-- ANTA -->
+				<Item>
+					<modelName>nkballer7_anta</modelName>
+					<modShopLabel>NKBALL7_ANTA</modShopLabel>
+					<linkedModels />
+					<turnOffBones />
+					<type>VMT_CHASSIS3</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<!-- ANTC -->
+				<Item>
+					<modelName>nkballer7_antc</modelName>
+					<modShopLabel>NKBALL7_ANTC</modShopLabel>
+					<linkedModels />
+					<turnOffBones />
+					<type>VMT_CHASSIS3</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<!-- ANTD -->
+				<Item>
+					<modelName>nkballer7_antd</modelName>
+					<modShopLabel>NKBALL7_ANTD</modShopLabel>
+					<linkedModels />
+					<turnOffBones />
+					<type>VMT_CHASSIS3</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<!-- ALPR1 SOLO-->
+				<Item>
+					<modelName>nkballer7_alpr1</modelName>
+					<modShopLabel>NKBALL7_ALPR1</modShopLabel>
+					<linkedModels />
+					<turnOffBones />
+					<type>VMT_CHASSIS4</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<!-- ALPR2 SOLO -->
+				<Item>
+					<modelName>nkballer7_alpr2</modelName>
+					<modShopLabel>NKBALL7_ALPR2</modShopLabel>
+					<linkedModels/>
+					<turnOffBones />
+					<type>VMT_CHASSIS4</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<!-- ALPR1/2 TOGETHER-->
+				<Item>
+					<modelName>nkballer7_alpr2</modelName>
+					<modShopLabel>NKBALL7_ALPR2</modShopLabel>
+					<linkedModels>
+						<Item>nkballer7_alpr1</Item>
+					</linkedModels>
+					<turnOffBones />
+					<type>VMT_CHASSIS4</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<!-- interior -->
+				<Item>
+					<modelName>nkballer7_laptop</modelName>
+					<modShopLabel>NKBALL7_LAPT</modShopLabel>
+					<linkedModels/>
+					<turnOffBones />
+					<type>VMT_INTERIOR1</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<Item>
+					<modelName>nkballer7_radar</modelName>
+					<modShopLabel>NKBALL7_RADA</modShopLabel>
+					<linkedModels/>
+					<turnOffBones />
+					<type>VMT_INTERIOR1</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<Item>
+					<modelName>nkballer7_radar</modelName>
+					<modShopLabel>NKBALL7_RADA</modShopLabel>
+					<linkedModels>
+						<Item>nkballer7_laptop</Item>
+					</linkedModels>
+					<turnOffBones />
+					<type>VMT_INTERIOR1</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<Item>
+					<modelName>nkballer7_sirencon</modelName>
+					<modShopLabel>NKBALL7_SCON</modShopLabel>
+					<linkedModels/>
+					<turnOffBones />
+					<type>VMT_INTERIOR3</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<Item>
+					<modelName>nkballer7_guns</modelName>
+					<modShopLabel>NKBALL7_GUNS</modShopLabel>
+					<linkedModels/>
+					<turnOffBones />
+					<type>VMT_INTERIOR3</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<Item>
+					<modelName>nkballer7_guns</modelName>
+					<modShopLabel>NKBALL7_GUNS</modShopLabel>
+					<linkedModels>
+						<Item>nkballer7_sirencon</Item>
+					</linkedModels>
+					<turnOffBones />
+					<type>VMT_INTERIOR3</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<Item>
+					<modelName>nkballer7_cam</modelName>
+					<modShopLabel>NKBALL7_cam</modShopLabel>
+					<linkedModels/>
+					<turnOffBones />
+					<type>VMT_INTERIOR4</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<Item>
+					<modelName>nkballer7_trunksupplies</modelName>
+					<modShopLabel>NKBALL7_TSUPPL</modShopLabel>
+					<linkedModels/>
+					<turnOffBones />
+					<type>VMT_TRUNK</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
       </visibleMods>
       <linkMods>
+			<Item>
+			<modelName>nkballer7_laptop</modelName>
+			<bone>chassis</bone>
+			<turnOffExtra value="false"/>
+		</Item>
+		<Item>
+			<modelName>nkballer7_sirencon</modelName>
+			<bone>chassis</bone>
+			<turnOffExtra value="false"/>
+		</Item>
+		<Item>
+			<modelName>nkballer7_alpr1</modelName>
+			<bone>chassis</bone>
+			<turnOffExtra value="false"/>
+		</Item>
         <Item>
           <modelName>baller7_mirrr_1</modelName>
           <bone>door_pside_f</bone>
@@ -1158,7 +1397,7 @@
 	<Sirens>
 		<!-- nkballer7 -->
 		<Item>
-			<id value="5008"/>
+			<id value="2022"/>
 			<name>nkballer7</name>
 			<timeMultiplier value="1.00000000"/>
 			<lightFalloffMax value="100.00000000"/>

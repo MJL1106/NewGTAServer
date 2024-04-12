@@ -124,9 +124,9 @@
         <Item>STD_VSTR_REAR_RIGHT</Item>
       </firstPersonDrivebyData>
     </Item>
-</InitDatas>
-<txdRelationships>
-        <Item>
+  </InitDatas>
+  <txdRelationships>
+    <Item>
       <parent>vehicles_sup1_interior</parent>
       <child>nkvstr</child>
     </Item>

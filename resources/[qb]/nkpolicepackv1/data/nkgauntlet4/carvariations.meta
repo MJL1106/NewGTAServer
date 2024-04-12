@@ -26,7 +26,7 @@
         </Item>		
       </colors>
       <kits>
-        <Item>5012_nkgauntlet4_modkit</Item>
+        <Item>2010_nkgauntlet4_modkit</Item>
       </kits>
       <windowsWithExposedEdges />
       <plateProbabilities>
@@ -38,7 +38,7 @@
         </Probabilities>
       </plateProbabilities>
       <lightSettings value="144" />
-      <sirenSettings value="5012" />
+      <sirenSettings value="2010" />
     </Item>
   </variationData>
 </CVehicleModelInfoVariation>

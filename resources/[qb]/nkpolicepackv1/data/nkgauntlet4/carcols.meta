@@ -2,8 +2,8 @@
 <CVehicleModelInfoVarGlobal>
 	<Kits>
 		<Item>
-			<kitName>5012_nkgauntlet4_modkit</kitName>
-			<id value="5012" />
+			<kitName>2010_nkgauntlet4_modkit</kitName>
+			<id value="2010" />
 			<kitType>MKT_SPECIAL</kitType>
 			<visibleMods>
 				<Item>
@@ -129,56 +129,321 @@
 					<disableBonnetCamera value="false"/>
 					<allowBonnetSlide value="true"/>
 				</Item>
+				<!-- ANTA -->
 				<Item>
-					<modelName>nkcan_ecola</modelName>
-					<modShopLabel>NKCAN_ECOLA</modShopLabel>
-					<linkedModels/>
-					<turnOffBones>
-					</turnOffBones>
-					<type>VMT_INTERIOR5</type>
+					<modelName>nkgauntlet4_anta</modelName>
+					<modShopLabel>NKG_ANTA</modShopLabel>
+					<linkedModels />
+					<turnOffBones />
+					<type>VMT_CHASSIS3</type>
 					<bone>chassis</bone>
 					<collisionBone>chassis</collisionBone>
 					<cameraPos>VMCP_DEFAULT</cameraPos>
-					<audioApply value="1.000000"/>
-					<weight value="20"/>
-					<turnOffExtra value="false"/>
-					<disableBonnetCamera value="false"/>
-					<allowBonnetSlide value="true"/>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
 				</Item>
+				<!-- ANTB -->
 				<Item>
-					<modelName>nkcan_ecola_2</modelName>
-					<modShopLabel>NKCAN_ECOLA2</modShopLabel>
-					<linkedModels/>
-					<turnOffBones>
-					</turnOffBones>
-					<type>VMT_INTERIOR5</type>
+					<modelName>nkgauntlet4_antb</modelName>
+					<modShopLabel>NKG_ANTB</modShopLabel>
+					<linkedModels />
+					<turnOffBones />
+					<type>VMT_CHASSIS3</type>
 					<bone>chassis</bone>
 					<collisionBone>chassis</collisionBone>
 					<cameraPos>VMCP_DEFAULT</cameraPos>
-					<audioApply value="1.000000"/>
-					<weight value="20"/>
-					<turnOffExtra value="false"/>
-					<disableBonnetCamera value="false"/>
-					<allowBonnetSlide value="true"/>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
 				</Item>
+				<!-- ANTC -->
 				<Item>
-					<modelName>nkgauntlet4_dashcam</modelName>
-					<modShopLabel>NKGAUNT4_DCAM</modShopLabel>
+					<modelName>nkgauntlet4_antc</modelName>
+					<modShopLabel>NKG_ANTC</modShopLabel>
+					<linkedModels />
+					<turnOffBones />
+					<type>VMT_CHASSIS3</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<!-- ANTD -->
+				<Item>
+					<modelName>nkgauntlet4_antd</modelName>
+					<modShopLabel>NKG_ANTD</modShopLabel>
+					<linkedModels />
+					<turnOffBones />
+					<type>VMT_CHASSIS3</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<!-- ANTA -->
+				<Item>
+					<modelName>nkgauntlet4_anta</modelName>
+					<modShopLabel>NKG_ANTA</modShopLabel>
+					<linkedModels>
+						<Item>nkgauntlet4_antb</Item>
+					</linkedModels>
+					<turnOffBones />
+					<type>VMT_CHASSIS3</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<!-- ANTC -->
+				<Item>
+					<modelName>nkgauntlet4_antc</modelName>
+					<modShopLabel>NKG_ANTC</modShopLabel>
+					<linkedModels>
+						<Item>nkgauntlet4_antb</Item>
+					</linkedModels>
+					<turnOffBones />
+					<type>VMT_CHASSIS3</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<!-- ANTD -->
+				<Item>
+					<modelName>nkgauntlet4_antd</modelName>
+					<modShopLabel>NKG_ANTD</modShopLabel>
+					<linkedModels>
+						<Item>nkgauntlet4_antb</Item>
+					</linkedModels>
+					<turnOffBones />
+					<type>VMT_CHASSIS3</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<!-- ALPR1 SOLO-->
+				<Item>
+					<modelName>nkgauntlet4_alpr1</modelName>
+					<modShopLabel>NKG_ALPR1</modShopLabel>
+					<linkedModels />
+					<turnOffBones />
+					<type>VMT_CHASSIS4</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<!-- ALPR2 SOLO -->
+				<Item>
+					<modelName>nkgauntlet4_alpr2</modelName>
+					<modShopLabel>NKG_ALPR2</modShopLabel>
 					<linkedModels/>
-					<turnOffBones>
-					</turnOffBones>
+					<turnOffBones />
+					<type>VMT_CHASSIS4</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<!-- ALPR1/2 TOGETHER-->
+				<Item>
+					<modelName>nkgauntlet4_alpr2</modelName>
+					<modShopLabel>NKG_ALPR2</modShopLabel>
+					<linkedModels>
+						<Item>nkgauntlet4_alpr1</Item>
+					</linkedModels>
+					<turnOffBones />
+					<type>VMT_CHASSIS4</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<!-- interior -->
+				<Item>
+					<modelName>nkgauntlet4_laptop</modelName>
+					<modShopLabel>NKG_LAPT</modShopLabel>
+					<linkedModels/>
+					<turnOffBones />
 					<type>VMT_INTERIOR1</type>
 					<bone>chassis</bone>
 					<collisionBone>chassis</collisionBone>
 					<cameraPos>VMCP_DEFAULT</cameraPos>
-					<audioApply value="1.000000"/>
-					<weight value="20"/>
-					<turnOffExtra value="false"/>
-					<disableBonnetCamera value="false"/>
-					<allowBonnetSlide value="true"/>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<Item>
+					<modelName>nkgauntlet4_radar</modelName>
+					<modShopLabel>NKG_RADA</modShopLabel>
+					<linkedModels/>
+					<turnOffBones />
+					<type>VMT_INTERIOR1</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<Item>
+					<modelName>nkgauntlet4_radar</modelName>
+					<modShopLabel>NKG_RADA</modShopLabel>
+					<linkedModels>
+						<Item>nkgauntlet4_laptop</Item>
+					</linkedModels>
+					<turnOffBones />
+					<type>VMT_INTERIOR1</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<Item>
+					<modelName>nkgauntlet4_sirencon</modelName>
+					<modShopLabel>NKG_SCON</modShopLabel>
+					<linkedModels/>
+					<turnOffBones />
+					<type>VMT_INTERIOR3</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<Item>
+					<modelName>nkgauntlet4_guns</modelName>
+					<modShopLabel>NKG_GUNS</modShopLabel>
+					<linkedModels/>
+					<turnOffBones />
+					<type>VMT_INTERIOR3</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<Item>
+					<modelName>nkgauntlet4_guns</modelName>
+					<modShopLabel>NKG_GUNS</modShopLabel>
+					<linkedModels>
+						<Item>nkgauntlet4_sirencon</Item>
+					</linkedModels>
+					<turnOffBones />
+					<type>VMT_INTERIOR3</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<Item>
+					<modelName>nkgauntlet4_cam</modelName>
+					<modShopLabel>NKG_cam</modShopLabel>
+					<linkedModels/>
+					<turnOffBones />
+					<type>VMT_INTERIOR4</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
+				</Item>
+				<Item>
+					<modelName>nkgauntlet4_trunksupplies</modelName>
+					<modShopLabel>NKG_TSUPPL</modShopLabel>
+					<linkedModels/>
+					<turnOffBones />
+					<type>VMT_TRUNK</type>
+					<bone>chassis</bone>
+					<collisionBone>chassis</collisionBone>
+					<cameraPos>VMCP_DEFAULT</cameraPos>
+					<audioApply value="1.000000" />
+					<weight value="20" />
+					<turnOffExtra value="false" />
+					<disableBonnetCamera value="false" />
+					<allowBonnetSlide value="true" />
 				</Item>
 			</visibleMods>
 			<linkMods>
+				<Item>
+					<modelName>nkgauntlet4_laptop</modelName>
+					<bone>chassis</bone>
+					<turnOffExtra value="false"/>
+				</Item>
+				<Item>
+					<modelName>nkgauntlet4_sirencon</modelName>
+					<bone>chassis</bone>
+					<turnOffExtra value="false"/>
+				</Item>
+				<Item>
+					<modelName>nkgauntlet4_antb</modelName>
+					<bone>chassis</bone>
+					<turnOffExtra value="false"/>
+				</Item>
+				<Item>
+					<modelName>nkgauntlet4_alpr1</modelName>
+					<bone>chassis</bone>
+					<turnOffExtra value="false"/>
+				</Item>
 			</linkMods>
 			<statMods>
 				<Item>
@@ -744,7 +1009,7 @@
 	<Sirens>
 		<!-- nkgauntlet4 -->
 		<Item>
-			<id value="5012"/>
+			<id value="2010"/>
 			<name>nkgauntlet4</name>
 			<timeMultiplier value="1.00000000"/>
 			<lightFalloffMax value="100.00000000"/>

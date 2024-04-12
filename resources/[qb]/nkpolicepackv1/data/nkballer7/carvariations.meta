@@ -26,7 +26,7 @@
         </Item>
       </colors>
       <kits>
-        <Item>5008_nkballer7_modkit</Item>
+        <Item>2022_nkballer7_modkit</Item>
       </kits>
       <windowsWithExposedEdges/>
       <plateProbabilities>
@@ -38,7 +38,7 @@
         </Probabilities>
       </plateProbabilities>
       <lightSettings value="1"/>
-      <sirenSettings value="5008"/>
+      <sirenSettings value="2022"/>
     </Item>
   </variationData>
 </CVehicleModelInfoVariation>

@@ -3,13 +3,12 @@
     <residentTxd>vehshare</residentTxd>
     <residentAnims />
     <InitDatas>
-        <!-- NK Police Cruiser  -->
         <Item>
             <modelName>nkcruiser</modelName>
             <txdName>nkcruiser</txdName>
             <handlingId>NKCRUISER</handlingId>
             <gameName>nkcruiser</gameName>
-            <vehicleMakeName>nkcruiser </vehicleMakeName>
+            <vehicleMakeName>nkcruiser</vehicleMakeName>
             <expressionDictName>null</expressionDictName>
             <expressionName>null</expressionName>
             <animConvRoofDictName>null</animConvRoofDictName>

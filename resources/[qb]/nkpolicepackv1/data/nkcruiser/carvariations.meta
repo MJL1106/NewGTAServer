@@ -2,7 +2,6 @@
 
 <CVehicleModelInfoVariation>
   <variationData>
-    <!-- NKCRUISER -->
     <Item> 
       <modelName>nkcruiser</modelName>
       <colors>
@@ -45,7 +44,7 @@
         </Item>
       </colors>
       <kits>
-        <Item>5016_nkcruiser_modkit</Item>
+        <Item>2016_nkcruiser_modkit</Item>
       </kits>
       <windowsWithExposedEdges/>
       <plateProbabilities>
@@ -57,7 +56,7 @@
         </Probabilities>
       </plateProbabilities>
       <lightSettings value="1"/>
-      <sirenSettings value="5016"/>
+      <sirenSettings value="2016"/>
     </Item>
   </variationData>
 </CVehicleModelInfoVariation>
