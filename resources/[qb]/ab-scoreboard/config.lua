@@ -1,6 +1,6 @@
 Config = {}
 
-Config.ServerName = 'Vault RP'     -- Example
+Config.ServerName = 'Custom Server'     -- Example
 
 Config.Keylist = 303              -- 'U'
 

@@ -4,7 +4,7 @@ games { 'gta5' }
 lua54 "yes"
 
 author 'Bebik(digitalranger)'
-description 'Discord : https://discord.gg/vaultrp'
+description 'Discord : '
 version '1.1.0'
 
 loadscreen 'index.html'

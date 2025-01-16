@@ -8,10 +8,29 @@ Config.Framework = {
     -- Or, if you're using ESX, you need to set this to "es_extended" (if you haven't changed the name of the script)
     resourceName = "",
 
-    esx = {
+    -- List of events that will be triggered from s1n_lib
+    -- Modify ONLY if you have changed them. They are the default ones.
+    esx          = {
         events = {
-            -- This is the event that will be triggered to get the ESX object if you are using one of the old ESX versions
             getSharedObject = "esx:getSharedObject",
+            addonAccount    = {
+                getSharedAccount = "esx_addonaccount:getSharedAccount",
+            },
+            playerLoaded    = "esx:playerLoaded",
+            setJob          = "esx:setJob",
+            onPlayerSpawn   = "esx:onPlayerSpawn",
+        }
+    },
+    qbCore       = {
+        events = {
+            onPlayerLoaded = "QBCore:Client:OnPlayerLoaded",
+            onJobUpdate    = "QBCore:Client:OnJobUpdate",
+            qbVehicleKeys = {
+                acquireVehicleKeys = "qb-vehiclekeys:server:GiveVehicleKeys",
+            },
+            qbSpawn = {
+                setupSpawns = "qb-spawn:client:setupSpawns",
+            },
         }
     }
 }

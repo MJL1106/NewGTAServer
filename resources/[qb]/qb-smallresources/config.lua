@@ -48,9 +48,9 @@ Config.Discord = {
     ["IsEnabled"] = true, -- If set to true, then discord rich presence will be enabled
     ["ApplicationId"] = '1221111019733127339', -- The discord application id
     ["IconLarge"] = 'logod', -- The name of the large icon
-    ["IconLargeHoverText"] = 'Vault RP', -- The hover text of the large icon
+    ["IconLargeHoverText"] = 'Custom Server', -- The hover text of the large icon
     ["IconSmall"] = 'logod', -- The name of the small icon
-    ["IconSmallHoverText"] = 'Vault RP', -- The hover text of the small icon
+    ["IconSmallHoverText"] = 'Custom Server', -- The hover text of the small icon
     ["UpdateRate"] = 60000, -- How often the player count should be updated
     ["ShowPlayerCount"] = true, -- If set to true the player count will be displayed in the rich presence
     ["MaxPlayers"] = 64, -- Maximum amount of players
@@ -61,7 +61,7 @@ Config.Discord = {
         },
         {
             text = 'Discord',
-            url = 'https://discord.gg/vaultrp'
+            url = ''
         }
     }
 }
@@ -87,7 +87,7 @@ Config.DisableAmbience = false -- Disabled distance sirens, distance car alarms,
 Config.HarnessUses = 20
 Config.DamageNeeded = 100.0 -- vehiclepush 0-1000
 Config.EnableProne = false -- prone isnt recomended at this time
-Config.MapText = "~y~Vault RP" -- This is the name / text shown above the map
+Config.MapText = "~y~Custom Server" -- This is the name / text shown above the map
 
 Config.Disable = {
     disableHudComponents = {1, 2, 3, 4, 7, 9, 13, 14, 19, 20, 21, 22}, -- Hud Components: https://docs.fivem.net/natives/?_0x6806C51AD12B83B8
