@@ -1,1 +1,8 @@
-"configuration/**/*"
+"configuration/**/*",
+
+"src/modules/inventory/**/*",
+"src/modules/framework/client/*",
+"src/modules/framework/server/*",
+"src/modules/entities/**/*",
+"src/modules/target/**/*",
+"src/modules/utils/**/*",

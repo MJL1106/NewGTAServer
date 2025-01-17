@@ -1,6 +1,5 @@
 author 'S1nScripts'
-version '1.9.1'
-repository 'https://github.com/S1nScripts/s1n_lib'
+version '1.46.1'
 
 fx_version 'cerulean'
 game 'gta5'
@@ -17,23 +16,28 @@ dependencies {
 server_scripts {
     "@oxmysql/lib/MySQL.lua",
     "src/modules/**/server/*.lua",
-    --"tests/modules/**/server/*.lua",
-    "src/init.lua",
+
+    -- "tests/modules/**/server/*.lua",
+
+    "src/init.lua"
 }
 
 shared_scripts {
     "configuration/shared/*.lua",
-    "src/modules/**/shared/*.lua",
-    --"tests/modules/**/shared/*.lua",
+    "src/modules/**/shared/*.lua"
+
+    -- "tests/modules/**/shared/*.lua",
 }
 
 client_scripts {
     "src/modules/**/client/*.lua",
-    --"tests/modules/**/client/*.lua",
+    "src/cl_init.lua"
+
+    -- "tests/modules/**/client/*.lua",
 }
 
 escrow_ignore {
-"configuration/**/*"
+    "configuration/**/*","src/modules/inventory/**/*","src/modules/framework/client/*","src/modules/framework/server/*","src/modules/entities/**/*","src/modules/target/**/*","src/modules/utils/**/*"
 }
 
 dependency '/assetpacks'
