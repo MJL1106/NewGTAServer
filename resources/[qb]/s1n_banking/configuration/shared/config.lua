@@ -69,7 +69,8 @@ Config.BankLocations = {
             -- The scale of the blip
             Scale  = 0.7,
             -- The name of the blip
-            Label  = 'Bank'
+            Label  = 'Bank',
+            ShortRange = false
         },
         -- Managing the bank marker
         Marker   = {
@@ -110,7 +111,8 @@ Config.BankLocations = {
             -- The scale of the blip
             Scale  = 0.7,
             -- The name of the blip
-            Label  = 'Bank'
+            Label  = 'Bank',
+            ShortRange = false
         },
         -- Managing the bank marker
         Marker   = {
@@ -150,7 +152,8 @@ Config.BankLocations = {
             -- The scale of the blip
             Scale  = 0.7,
             -- The name of the blip
-            Label  = 'Bank'
+            Label  = 'Bank',
+            ShortRange = false
         },
         -- Managing the bank marker
         Marker   = {
@@ -191,7 +194,8 @@ Config.BankLocations = {
             -- The scale of the blip
             Scale  = 0.7,
             -- The name of the blip
-            Label  = 'Bank'
+            Label  = 'Bank',
+            ShortRange = false
         },
         -- Managing the bank marker
         Marker   = {
@@ -232,7 +236,8 @@ Config.BankLocations = {
             -- The scale of the blip
             Scale  = 0.7,
             -- The name of the blip
-            Label  = 'Bank'
+            Label  = 'Bank',
+            ShortRange = false
         },
         -- Managing the bank marker
         Marker   = {
@@ -272,7 +277,8 @@ Config.BankLocations = {
             -- The scale of the blip
             Scale  = 0.7,
             -- The name of the blip
-            Label  = 'Bank'
+            Label  = 'Bank',
+            ShortRange = false
         },
         -- Managing the bank marker
         Marker   = {
@@ -313,7 +319,8 @@ Config.BankLocations = {
             -- The scale of the blip
             Scale  = 0.8,
             -- The name of the blip
-            Label  = 'Blaine County Savings'
+            Label  = 'Blaine County Savings',
+            ShortRange = false
         },
         -- Managing the bank marker
         Marker   = {
@@ -354,7 +361,8 @@ Config.BankLocations = {
             -- The scale of the blip
             Scale  = 0.7,
             -- The name of the blip
-            Label  = 'Bank'
+            Label  = 'Bank',
+            ShortRange = false
         },
         -- Managing the bank marker
         Marker   = {
@@ -395,7 +403,8 @@ Config.BankLocations = {
             -- The scale of the blip
             Scale  = 0.7,
             -- The name of the blip
-            Label  = 'Bank'
+            Label  = 'Bank',
+            ShortRange = false
         },
         -- Managing the bank marker
         Marker   = {
@@ -435,7 +444,8 @@ Config.BankLocations = {
             -- The scale of the blip
             Scale  = 0.7,
             -- The name of the blip
-            Label  = 'Bank'
+            Label  = 'Bank',
+            ShortRange = false
         },
         -- Managing the bank marker
         Marker   = {
@@ -475,7 +485,8 @@ Config.BankLocations = {
             -- The scale of the blip
             Scale  = 0.7,
             -- The name of the blip
-            Label  = 'Bank'
+            Label  = 'Bank',
+            ShortRange = false
         },
         -- Managing the bank marker
         Marker   = {
@@ -515,7 +526,8 @@ Config.BankLocations = {
             -- The scale of the blip
             Scale  = 0.7,
             -- The name of the blip
-            Label  = 'Bank'
+            Label  = 'Bank',
+            ShortRange = false
         },
         -- Managing the bank marker
         Marker   = {
@@ -555,7 +567,8 @@ Config.BankLocations = {
             -- The scale of the blip
             Scale  = 0.7,
             -- The name of the blip
-            Label  = 'Bank'
+            Label  = 'Bank',
+            ShortRange = false
         },
         -- Managing the bank marker
         Marker   = {
@@ -595,7 +608,8 @@ Config.BankLocations = {
             -- The scale of the blip
             Scale  = 0.7,
             -- The name of the blip
-            Label  = 'Bank'
+            Label  = 'Bank',
+            ShortRange = false
         },
         -- Managing the bank marker
         Marker   = {
@@ -635,7 +649,8 @@ Config.BankLocations = {
             -- The scale of the blip
             Scale  = 0.7,
             -- The name of the blip
-            Label  = 'Bank'
+            Label  = 'Bank',
+            ShortRange = false
         },
         -- Managing the bank marker
         Marker   = {
