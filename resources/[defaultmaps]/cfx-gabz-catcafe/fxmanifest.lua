@@ -1,22 +1,8 @@
 fx_version 'cerulean'
-game 'gta5'
-author 'Gabz'
+games { 'gta5' }
+
+author 'Glunkus#2785 LEAKED THIS :)'
 description 'CatCafe'
-version '1.0.1'
-lua54 'yes'
+version '5.0.0'
+
 this_is_a_map 'yes'
-
-dependencies { 
-    '/server:4960',     -- ⚠️PLEASE READ⚠️; Requires at least SERVER build 4960.
-    '/gameBuild:2545',  -- ⚠️PLEASE READ⚠️; Requires at least GAME build 2545.
-    'cfx-gabz-mapdata', -- ⚠️PLEASE READ⚠️; Requires [cfx-gabz-mapdata] to work properly.
-}
-
-server_scripts {
-    'version_check.lua',
-}
-
-escrow_ignore {
-    'stream/**/*.ytd',
-}
-dependency '/assetpacks'
