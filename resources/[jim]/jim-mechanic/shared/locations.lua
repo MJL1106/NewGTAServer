@@ -1,7 +1,7 @@
 Config.Locations = Config.Locations or {}
 
 Config.Locations[#Config.Locations+1] = { --[[ GABZ ALTA STREET BENNYS ]]--
-	Enabled = false,
+	Enabled = true,
 	job = "mechanic",
 	zones = {
 		vec2(-263.99075317382, -1349.6701660156),
@@ -68,7 +68,7 @@ Config.Locations[#Config.Locations+1] = { --[[ GABZ ALTA STREET BENNYS ]]--
 
 Config.Locations[#Config.Locations+1] = { --[[ LS CUSTOMS IN CITY ]]--
 	Enabled = false,
-	job = "mechanic",
+	job = "lsc",
 	zones = {
 		vec2(-356.63, -137.9),
 		vec2(-347.32, -111.48),
@@ -602,7 +602,7 @@ Config.Locations[#Config.Locations+1] = { --[[ HAYES AUTOS ]]--
 }
 
 Config.Locations[#Config.Locations+1] = { --[[ BENNYS NEXT TO PDM ]]--
-	Enabled = false,
+	Enabled = true,
 	job = "mechanic",
 	zones = {
 		vec2(-39.657638549805, -1026.12890625),
@@ -936,7 +936,7 @@ Config.Locations[#Config.Locations+1] = { --[[ FLYWHEELS ]]--
 }
 
 Config.Locations[#Config.Locations+1] = { --[[ RFC LS CUSTOMS ]]--
-    Enabled = true,
+    Enabled = false,
     job = "lsc",
     zones = {
 		vector2(-361.76, -182.71),
