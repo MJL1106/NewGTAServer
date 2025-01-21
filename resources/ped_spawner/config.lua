@@ -151,23 +151,6 @@ Config.PedList = {
         ped = nil,
     },
 
-	{
-		model = "ig_trafficwarden",
-		coords = vector3(1810.42, 3683.63, 33.97), --BARBARENO RD
-		heading = 301.17, 
-		gender = "male", 
-	    isRendered = false,
-        ped = nil,
-    },
-	{
-		model = "ig_trafficwarden",
-		coords = vector3(1865.9, 3697.55, 33.97), --BARBARENO RD
-		heading = 112.19, 
-		gender = "male", 
-	    isRendered = false,
-        ped = nil,
-    },
-
 
 
 
