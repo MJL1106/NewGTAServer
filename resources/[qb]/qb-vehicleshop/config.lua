@@ -13,14 +13,14 @@ Config.Shops = {
         ['Type'] = 'managed', -- no player interaction is required to purchase a car
         ['Zone'] = {
             ['Shape'] = {--polygon that surrounds the shop
-                vector2(-14.72, -1119.99),
-                vector2(-64.06, -1122.93),
-                vector2(-70.29, -1117.93),
-                vector2(-53.3, -1069.64),
-                vector2(-3.56, -1087.82)
+                vector2(-814.05, -204.9),
+                vector2(-787.85, -249.81),
+                vector2(-759.08, -238.3),
+                vector2(-792.43, -183.29),
+                vector2(-819.45, -197.92)
             },
-            ['minZ'] = 22.0, -- min height of the shop zone
-            ['maxZ'] = 30.0, -- max height of the shop zone
+            ['minZ'] = 34.0, -- min height of the shop zone
+            ['maxZ'] = 42.0, -- max height of the shop zone
             ['size'] = 2.75 -- size of the vehicles zones
         },
         ['Job'] = 'cardealer', -- Name of job or none
@@ -29,33 +29,33 @@ Config.Shops = {
         ['blipSprite'] = 326, -- Blip sprite
         ['blipColor'] = 3, -- Blip color
         ['TestDriveTimeLimit'] = 0.5, -- Time in minutes until the vehicle gets deleted
-        ['Location'] = vector3(-45.67, -1098.34, 26.42), -- Blip Location
-        ['ReturnLocation'] = vector3(-44.74, -1082.58, 26.68), -- Location to return vehicle, only enables if the vehicleshop has a job owned
-        ['VehicleSpawn'] = vector4(-53.81, -1110.84, 26.67, 66.53), -- Spawn location when vehicle is bought
-        ['TestDriveSpawn'] = vector4(-23.6, -1094.8, 27.31, 339.12), -- Spawn location for test drive
+        ['Location'] = vector3(-796.87, -220.59, 37.25), -- Blip Location
+        ['ReturnLocation'] = vector3(-788.78, -197.35, 37.28), -- Location to return vehicle, only enables if the vehicleshop has a job owned
+        ['VehicleSpawn'] = vector4(-784.65, -188.93, 37.28, 30.28), -- Spawn location when vehicle is bought
+        ['TestDriveSpawn'] = vector4(-758.51, -235.26, 37.28, 208.98), -- Spawn location for test drive
         ['ShowroomVehicles'] = {
             [1] = {
-                coords = vector4(-49.94, -1084.09, 26.23, 182.87), -- where the vehicle will spawn on display
+                coords = vector4(-796.21, -206.71, 36.45, 32.82), -- where the vehicle will spawn on display
                 defaultVehicle = 'champion', -- Default display vehicle
                 chosenVehicle = 'champion', -- Same as default but is dynamically changed when swapping vehicles
             },
             [2] = {
-                coords = vector4(-47.6, -1091.75, 26.23, 105.58),
+                coords = vector4(-805.36, -212.92, 36.25, 297.54),
                 defaultVehicle = 'schafter2',
                 chosenVehicle = 'schafter2'
             },
             [3] = {
-                coords = vector4(-55.46, -1097.01, 26.23, 267.78),
+                coords = vector4(-803.44, -216.74, 36.25, 304.46),
                 defaultVehicle = 'comet2',
                 chosenVehicle = 'comet2'
             },
             [4] = {
-                coords = vector4(-43.14, -1101.78, 26.23, 320.62),
+                coords = vector4(-790.14, -222.23, 36.6, 120.31),
                 defaultVehicle = 'vigero',
                 chosenVehicle = 'vigero'
             },
             [5] = {
-                coords = vector4(-36.42, -1093.44, 26.23, 46.09),
+                coords = vector4(-785.81, -243.57, 36.53, 26.44),
                 defaultVehicle = 't20',
                 chosenVehicle = 't20'
             },
@@ -63,23 +63,23 @@ Config.Shops = {
         ['InteractionPanel'] = {
              -- Example coordinates for the interaction panel
             [1] = {
-                coords = vector3(-38.89, -1100.1, 26.97), -- where the vehicle will spawn on display
+                coords = vector3(-796.64, -206.98, 36.45), -- where the vehicle will spawn on display
         
             },
             [2] = {
-                coords = vector3(-40.71, -1094.76, 27.27),
+                coords = vector3(-805.36, -212.92, 36.25),
             
             },
             [3] = {
-                coords = vector3(-46.85, -1095.91, 27.27),
+                coords = vector3(-803.44, -216.74, 36.25),
                 
             },
             [4] = {
-                coords = vector3(-51.31, -1094.84, 27.27),
+                coords = vector3(-790.14, -222.23, 36.6),
                 
             },
             [5] = {
-                coords = vector3(-51.28, -1087.4, 27.27),
+                coords = vector3(-785.81, -243.57, 36.53),
                
             },
         },
