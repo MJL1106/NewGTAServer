@@ -139,6 +139,12 @@ function QBCore.Player.CheckPlayerData(source, PlayerData)
         SerialNumber = QBCore.Player.CreateSerialNumber(),
         InstalledApps = {},
     }
+    PlayerData.metadata['crypto'] = PlayerData.metadata['crypto'] or {
+        ["shung"] = 0,
+        ["gne"] = 0,
+        ["xcoin"] = 0,
+        ["lme"] = 0
+    }
     -- Job
     if PlayerData.job and PlayerData.job.name and not QBCore.Shared.Jobs[PlayerData.job.name] then PlayerData.job = nil end
     PlayerData.job = PlayerData.job or {}
