@@ -4,7 +4,7 @@
 Config.DoorList['UWUDOORSEmployees1'] = {
     distance = 2,
     doorRate = 1.0,
-    authorizedJobs = { ['uwu'] = 0 },
+    authorizedJobs = { ['catcafe'] = 0 },
     doorType = 'door',
     fixText = false,
     objCoords = vec3(-587.340027, -1051.899414, 22.413006),
@@ -19,7 +19,7 @@ Config.DoorList['UWUDOORSkitchen'] = {
     objYaw = 179.99998474121,
     doorType = 'door',
     doorRate = 1.0,
-    authorizedJobs = { ['uwu'] = 0 },
+    authorizedJobs = { ['catcafe'] = 0 },
     doorLabel = 'kitchen',
     locked = true,
     fixText = false,
@@ -31,7 +31,7 @@ Config.DoorList['UWUDOORSkitchen'] = {
 -- 2089009131 created by carma
 Config.DoorList['UWUDOORS-uwu Manager'] = {
     objYaw = 89.999977111816,
-    authorizedJobs = { ['uwu'] = 0 },
+    authorizedJobs = { ['catcafe'] = 0 },
     objName = 2089009131,
     distance = 2,
     locked = true,
@@ -45,7 +45,7 @@ Config.DoorList['UWUDOORS-uwu Manager'] = {
 -- 2089009131 created by carma
 Config.DoorList['UWUDOORS-office'] = {
     doorLabel = 'office',
-    authorizedJobs = { ['uwu'] = 0 },
+    authorizedJobs = { ['catcafe'] = 0 },
     objYaw = 89.999977111816,
     doorType = 'door',
     objCoords = vec3(-575.012817, -1063.783325, 26.767965),
@@ -65,7 +65,7 @@ Config.DoorList['UWUDOORS-2089009131'] = {
     fixText = false,
     locked = true,
     objCoords = vec3(-575.010864, -1062.380737, 26.767965),
-    authorizedJobs = { ['uwu'] = 0 },
+    authorizedJobs = { ['catcafe'] = 0 },
     doorLabel = 'office2',
     objName = 2089009131,
 }

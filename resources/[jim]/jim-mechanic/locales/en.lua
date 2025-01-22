@@ -1,46 +1,108 @@
-Loc = Loc or {}
-
 Loc["en"] = {
-	common = { --commonly used strings
+		["common"] = { --commonly used strings
 		owned = "Vehicle isn't owned, cannot modify",
 		close = "Close",
 		ret = "Return",
 		stock = "Stock", -- Default, Original, whatever word you use for this
 		current = "Currently Installed",
 		noOptions = "No options available for this item",
-		notinstall = "Not Installed",
 		installing = "Installing ",
-		installed = "Installed!",
-		instfail = " install failed!",
-		removed = "Removed!",
-		removing = "Removing ",
-		remfail = " removal failed!",
-		cant = "Can't be installed on this vehicle",
 		amountoption = "Amount of Options: ",
 		already = " already installed", -- eg. "Stock Bumper already Installed"
 		menuinstalled = " Options] Installed: ", --eg "[4 Options] Installed: Grille 1"
 		nearwheel = "You need to move closer to a wheel",
-		nearengine = "You need to move closer to the engine",
-		closer = "Move closer to the headlights",
-		harness = "Attaching Racing Harness..",
+		nearengine = "You need to move closer to the engine"
 	},
-    progressbar = {
-        progress_washing = "Washing hands",
-        progress_mix = "Mixing a ",
-        progress_pour = "Pouring a ",
-        progress_drink = "Drinking a ",
-        progress_eat = "Eating a ",
-        progress_make = "Making a ",
-    },
-	error = {
-		not_clockedin = "Not On Duty",
-		cancelled = "Cancelled",
+	--Performance Items
+	["armour"] = { --armour.lua
+		cant = "Armor can't be installed on this vehicle",
+		already = "Armour already installed",
+		install = "Installing Armour..",
+		installed = "Success! Armour Installed..",
+		failed = "Armour installation failed!",
+		removed = "Success! Armour Removed",
+		removing = "Removing Armour..",
+		remfail = "Armour removal failed!",
 	},
-	tires = {
+	["brakes"] = { --brakes.lua
+		cant = "Brakes can't be installed on this vehicle",
+		already = "Brakes already installed",
+		install = "Installing Brakes Level: ",
+		installed = "Success! Brakes Installed..",
+		failed = "Brakes installation failed!",
+		remove = "Success! Brakes Removed",
+		removing = "Removing Brakes..",
+		remfail = "Brakes removal failed!",
+	},
+	["engines"] = { --engines.lua
+		cant = "Engines can't be installed on this vehicle",
+		already = "Engine already installed",
+		install = "Installing Engine Level: ",
+		installed = "Success! Engine Installed..",
+		failed = "Engine installation failed!",
+		remove = "Success! Engine Removed",
+		removing = "Removing Engine..",
+		remfail = "Engine removal failed!",
+	},
+	["suspension"] = { --suspension.lua
+		cant = "Suspension can't be installed on this vehicle",
+		already = "Suspension already installed",
+		install = "Installing Suspension Level: ",
+		installed = "Success! Suspension Installed..",
+		failed = "Suspension installation failed!",
+		removed = "Success! Suspension Removed",
+		removing = "Removing Suspension..",
+		remfail = "Suspension removal failed!",
+	},
+	["transmission"] = { --transmission.lua
+		cant = "Transmission can't be installed on this vehicle",
+		already = "Transmission already installed",
+		install = "Installing Transmission Level: ",
+		installed = "Success! Transmission Installed..",
+		failed = "Transmission installation failed!",
+		remove = "Success! Transmission Removed",
+		removing = "Removing Transmission..",
+		remfail = "Transmission removal failed!",
+	},
+	["tires"] = { --tires.lua
+		--Drift
+		already = "Drift Tires already installed",
+		install = "Installing Drift Tires..",
+		installed = "Success! Drift Tires Installed",
+		failed = "Drift Tires installation failed!",
+		remove = "Success! Drift Tires Removed",
+		removing = "Removing Drift Tires..",
+		remfail = "Drift Tire removal failed!",
 		swap = "BulletProof Tires removed!",
+		--BProof
+		already2 = "Bulletproof Tires already installed",
+		install2 = "Installing Bulletproof Tires..",
+		installed2 = "Success! Bulletproof Tires Installed",
+		failed2 = "Bulletproof Tires installation failed!",
+		remove2 = "Success! Bulletproof Tires Removed",
+		removing2 = "Removing BulletProof Tires",
+		remfail2 = "Bulletproof Tire removal failed!",
 		swap2 = "Drift Tires removed!",
 	},
-	xenons = {
+	["turbo"] = { --turbo.lua
+		already = "Turbo already installed",
+		install = "Installing Turbo..",
+		installed = "Success! Turbo Installed..",
+		failed = "Turbo installation failed!",
+		remove = "Success! Turbo Removed",
+		removing = "Removing Turbo..",
+		remfail = "Turbo removal failed!",
+	},
+	["xenons"] = { --xenons.lua
+		already = "Xenon Headlights already installed",
+		install = "Installing Xenons..",
+		installed = "Success! Xenon Headlights Installed",
+		failed = "Xenon Headlight installation failed!",
+		remove = "Success! Xenon Removed",
+		removing = "Removing Xenon..",
+		remfail = "Xenon removal failed!",
+		closer = "Move closer to the headlights",
+
 		notinstall = "Xenons Headlights Not Installed",
 		--Menus
 		neonheader1 = "Lighting Controls",
@@ -59,17 +121,29 @@ Loc["en"] = {
 		xenonheader = "Xenon Controls",
 		xenontxt = "Adjust vehicle headlight color",
 	},
+
 	--Cosmetic Items
-	bumpers = {
+	["bumpers"] = { --bumpers.lua
+		stockMod = "Stock Bumpers..",
+		installed = "Success! Bumpers Installed",
+		failed = "Bumpers installation failed!",
+		menuheader = " Grille and Bumper Cosmetics", --eg "Sultan RS Grille and Bumper Cosmetics"
 		menugrille = "Grille",
 		menuFBumper = "Front Bumper",
 		menuBBumper = "Back Bumper",
 	},
-	exhaust = {
-		menuheader = " Exhaust Modification",
+	["exhaust"] = { --exhaust.lua
+		stockMod = "Stock Exhaust..",
+		already = " already installed", -- eg. "Stock Bumper already Installed"
+		installed = "Success! Exhaust Installed",
+		failed = "Exhaust installation failed!",
+		menuheader = " Exhaust Modification", --eg "Sultan RS Grille and Bumper Cosmetics"
 	},
-	exterior = {
+	["exterior"] = { --exterior.lua
 		stockMod = "Stock Exterior Mod..",
+		installed = "Success! Exterior Mod Installed",
+		failed = "Exterior Mod installation failed!",
+		menuheader = " Exterior Modification", --eg "Sultan RS Grille and Bumper Cosmetics"
 
 		label1 = "Trim A",
 		label2 = "Trim B",
@@ -82,13 +156,23 @@ Loc["en"] = {
 		label9 = "Fuel Tanks",
 		label10 = "Aerials",
 	},
-	hood = {
-		menuheader = " Hood Modification",
+	["hood"] = { --hood.lua
+		stockMod = "Stock Hood..",
+		installed = "Success! Hood Installed",
+		failed = "Hood installation failed!",
+		menuheader = " Hood Modification", --eg "Sultan RS Grille and Bumper Cosmetics"
 	},
-	horns = {
-		menuheader = " Horn Modification",
+	["horns"] = { --horns.lua
+		installed = "Success! Horn Installed",
+		failed = "Horn installation failed!",
+		menuheader = " Horn Modification", --eg "Sultan RS Grille and Bumper Cosmetics"
 	},
-	interior = {
+	["interior"] = { --interior.lua
+		stockMod = "Stock Interior Mod..",
+		installed = "Success! Interior Mod Installed",
+		failed = "Interior Mod installation failed!",
+		menuheader = " Interior Modification", --eg "Sultan RS Grille and Bumper Cosmetics"
+
 		label1 = "Roll Cages",
 		label2 = "Ornaments",
 		label3 = "Dashboards",
@@ -99,21 +183,28 @@ Loc["en"] = {
 		label8 = "Plaques",
 		label9 = "Speakers",
 	},
-	livery = {
+	["livery"] = { --exhaust.lua
 		oldMod = "old",
-		menuheader = " Livery Modification",
-		menuoldheader = " Roof Livery Modification",
+		already = " already installed", -- eg. "Stock Bumper already Installed"
+		installed = "Success! Livery Installed",
+		failed = "Livery installation failed!",
+		menuheader = " Livery Modification", --eg "Sultan RS Grille and Bumper Cosmetics"
 	},
-	nos = {
+	["nos"] = { --exhaust.lua
 		notinstalled = "Turbo isn't installed",
-
+		installing = "Success! Installing NOS",
+		installed = "Success! NOS Installed",
+		failed = "NOS installation failed!",
+		removing = "Removing NOS Bottle",
+		removed = "NOS Bottle Removed",
+		remfail = "Failed to remove NOS bottle",
 		nosColour = "NOS Purge Colour",
 		boostmode = "Boost Mode",
 		purgemode = "Purge Mode",
 		boost = "Boost Power: ",
 		spray = "Spray Strength: ",
 	},
-	paint = {
+	["paint"] = { --paints.lua
 		primary = "Primary",
 		secondary = "Secondary",
 		pearl = "Pearlescent",
@@ -127,23 +218,35 @@ Loc["en"] = {
 		metals = "Metals",
 		chameleon = "Chameleon",
 
+		installing = "Success! Installing Paint",
+		installed = "Success! Paint Installed",
+		failed = "Paint installation failed!",
 		menuheader = " Respray",
 	},
-	paintrgb = {
+	["paintrgb"] = {
 		select = "Selection:",
 		finish = "Finish Select:",
 		error = "Hex Code input needs to be 6 characters",
 		customheader = "Custom HEX and RGB",
 		chrome = "Chrome",
-		hexP = "HEX Picker",
-		rgbP = "RGB Picker",
+		hex = "HEX Picker",
+		rgb = "RGB Picker",
 	},
-	plates = { --paints.lua
+	["plates"] = { --paints.lua
+		already = "Plate Already Installed!",
+		installing = "Installing Plates..",
+		installed = "Success! Plates Installed",
+		failed = "Plates installation failed!",
+		menuheader = " Plates Modification",
 		label1 = "Plate Holder",
 		label2 = "Vanity Plates",
 		label3 = "Custom Plates",
+		menuheader2 = " Custom Plate Styles",
 	},
-	rims = {
+	["rims"] = {
+		installing = "Installing Rims..",
+		installed = "Success! Rims Installed",
+		failed = "Rims installation failed!",
 		menuheader = "Rims Modification",
 
 		label1 = "Sport",
@@ -164,25 +267,39 @@ Loc["en"] = {
 
 		labelcustom = "Custom Rims",
 	},
-	rollcage = {
+	["rollcage"] = { --rollcage.lua
+		installed = "Success! Roll Cage Installed",
+		failed = "Roll Cage installation failed!",
 		menuheader = " Roll Cage Modification",
 	},
-	roof = {
+	["roof"] = { --roof.lua
+		installed = "Success! Roof Installed",
+		failed = "Roof installation failed!",
 		menuheader = " Roof Modification",
 	},
-	seat = {
+	["seat"] = { --seat.lua
+		installed = "Success! Seat Installed",
+		failed = "Seat installation failed!",
 		menuheader = " Seat Modification",
 	},
-	skirts = {
+	["skirts"] = { --skirts.lua
+		installed = "Success! Skirt Installed",
+		failed = "Skirt installation failed!",
+		menuheader = " Skirt and Fender Cosmetics",
 		menuskirt = "Skirts",
 		menuRF = "Right Fender",
 		menuLF = "Left Fender",
 	},
-	spoilers = {
+	["spoilers"] = { --spoilers.lua
+		installed = "Success! Spoiler Installed",
+		failed = "Spoiler installation failed!",
 		menuheader = " Spoiler Modification",
 	},
-	smoke = {
+	["smoke"] = { --tiresmoke.lua
 		already = "This colour is currently applied!",
+		installing = "Installing Tire Smoke..",
+		installed = "Success! Smoke Installed",
+		failed = "Smoke installation failed!",
 		menuheader = " Tire Smoke Modification",
 
 		remove = "Remove Smoke",
@@ -201,34 +318,46 @@ Loc["en"] = {
 		hpink = "Hot Pink",
 		purple = "Purple",
 		blacklight = "Blacklight",
+
+		submit = "Submit",
 	},
-	windows = {
+	["windows"] = { --windows.lua
+		installed = "Success! Tint Installed",
+		failed = "Tint installation failed!",
 		menuheader = " Window Tints",
+
+		label1 = "Tint Removal",
+		label2 = "Limo",
+		label3 = "Green",
+		label4 = "Light Smoke",
+		label5 = "Dark Smoke",
+		label6 = "Pure Black",
 	},
-	stores = {
+	["stores"] = {
 		browse = "Browse Store",
 		tools = "Mechanic Tools",
 		perform = "Performance Items",
 		cosmetic = "Cosmetic Items",
-		repairs = "Repair Items",
-		nos = "NOS Items",
 	},
-	crafting = {
+	["crafting"] = { --crafting.lua
 		menuheader = "Mechanic Crafting",
 		toolheader = "Mechanics Tools",
-		repairheader = "Repair Items",
 		performheader = "Performance Items",
 		cosmetheader = "Cosmetic Items",
-		nosheader = "NOS Items",
 		numitems = " items", --for menu. eg. "11 items"
+		ingredients = "You don't have the correct ingredients",
 	},
-	payments = {
+	["payments"] = { --payments.lua
 		charge = "Charge Customer",
 	},
-	check = {
-		plate = "Plate:",
-		value = "Value: $",
+	["check"] = { --check_tunes.lua
+		plate = "Plate: [",
+		value = "]<br>Value: $",
 		unavail = "❌ Unavailable",
+		notinstall = "Not Installed",
+		reinforced = "Reinforced Body",
+		xenoninst = "Xenon Installed",
+		tireinst = "Installed",
 
 		label1 = "Engines:",
 		label2 = "Brakes:",
@@ -242,9 +371,9 @@ Loc["en"] = {
 		label10 = "List of Possible Cosmetics",
 		label11 = "Vehicle: ",
 
-		label12 = "options",
-		label13 = "External Cosmetics -",
-		label14 = "Internal Cosmetics - ",
+		label12 = " options ]",
+		label13 = "- External Cosmetics -",
+		label14 = "- Internal Cosmetics - ",
 		label15 = "Spoilers - [ ",
 		label16 = "Front Bumpers - [ ",
 		label17 = "Rear Bumpers - [ ",
@@ -280,13 +409,18 @@ Loc["en"] = {
 		label46 = "Fuel Tanks - [ ",
 		label47 = "Yes",
 		label48 = "No",
-		label49 = "Do you want to remove ",
-		label50 = "Antilag:",
-		label51 = "Harness:",
-		label53 = "Livery - [ ",
+		label49 = "Do you want to remove the Brakes?",
+		label50 = "Do you want to remove the Engine?",
+		label51 = "Do you want to remove the Suspension?",
+		label52 = "Do you want to remove the transmission?",
+		label53 = "Do you want to remove the Armor?",
+		label54 = "Do you want to remove the Turbo?",
+		label55 = "Do you want to remove the Xenon?",
+		label56 = "Do you want to remove the Tires?",
+		label57 = "Do you want to unload the Nitrous?",
 		label58 = "Nitrous:",
 	},
-	repair = {
+	["repair"] = {
 		browse = "Browse Stash",
 		materials = "You don't have enough materials",
 		checkeng = "Checking the Engine damage..",
@@ -294,10 +428,10 @@ Loc["en"] = {
 
 		engine = "Engine",
 		body = "Body",
-		oil = "Oil Level",
+		radiator = "Oil Level",
 		driveshaft = "Axle Shaft",
-		spark = "Spark Plugs",
-		battery = "Car Battery",
+		brakes = "Spark Plugs",
+		clutch = "Car Battery",
 		tank = "Fuel Tank",
 		replacetire = "Replace Tires",
 		tire = "Wheels",
@@ -307,8 +441,9 @@ Loc["en"] = {
 		repaired = " fully repaired",
 		cancel = " Repair cancelled!",
 		nomaterials = "There Are Not Enough Materials In The Safe",
+		failinfo = "Failed to retreive car info, try using the tools again",
 
-		cost = "Cost: ",
+		cost = "<br>Cost: ",
 		status = "Status: ",
 		doyou = "Do you want to repair the ",
 
@@ -316,9 +451,8 @@ Loc["en"] = {
 		ductfull = "You can't use any more Duct Tape on this car",
 		nocar = "There is no vehicle nearby",
 	},
-	police = {
-		header = "Modification Station",
-		userepair = "Use Modification Station",
+	["police"] = {
+		userepair = "Use Repair Station",
 		repair = "Repair",
 		extras = "Extras",
 		plates = "Plates",
@@ -328,20 +462,19 @@ Loc["en"] = {
 		engine = "Repairing Engine...",
 		body = "Repairing Body...",
 		complete = "Repair Complete",
-		restrict = "Only for Emergency Vehicles",
 	},
-	manual = {
+	["manual"] = {
 		tyres = "Replacing Damaged Tyres",
 		window = "Removing Damaged Windows",
 		doors = "Repairing Doors",
 	},
-	carwax = {
+	["carwax"] = {
 		head1 = "Clean Vehicle",
 		head2 = "Clean and Wax",
 		head3 = "Clean and Premium Wax",
 		head4 = "Clean and Ultimate Wax",
 	},
-	extras = {
+	["extras"] = {
 		clean = "Vehicle Clean",
 		doorerr = "Door Error",
 		locked = "Vehicle Doors Locked",
@@ -354,7 +487,7 @@ Loc["en"] = {
 		notseat = "This seat isn't available..",
 		harness = "You have a race harness on you cant switch..",
 	},
-	functions = {
+	["functions"] = {
 		distance = "Distance: ",
 		inCar = "Cannot do this from inside the vehicle",
 		outCar = "Cannot do this from outside the vehicle",
@@ -362,9 +495,8 @@ Loc["en"] = {
 		nearby = "There is no vehicle nearby",
 		shop = "Can't work outside of a shop",
 		mechanic = "Only a mechanic knows how to do this",
-		checking = "Checking Stash.."
 	},
-	servfunction = {
+	["servfunction"] = {
 		checkdamage = "Check vehicle for damage",
 		checkmods = "Check mods available on a vehicle",
 		flipvehicle = "Flip nearest vehicle",
@@ -376,37 +508,18 @@ Loc["en"] = {
 		door = "Open/Close Door [0-3]",
 		seat = "Move to another seat [-1 to 10]",
 	},
-	previews = {
-		changes = "Changes: ",
-		previewing = "Can't do this while previewing",
+	["previews"] = {
+		changes = "Amount of changes: ",
 	},
-	stancer = {
-		wheel_lf = "Left Front Wheel",
-		wheel_rf = "Right Front Wheel",
-		wheel_lr = "Left Rear Wheel",
-		wheel_rr = "Right Rear Wheel",
-		wheel_lm1 = "Left Middle (1) Wheel",
-		wheel_rm1 = "Right Middle (1) Wheel",
-		wheel_lm2 = "Left Middle (2) Wheel",
-		wheel_rm2 = "Right Middle (2) Wheel",
-		wheel_lm3 = "Left Middle (3) Wheel",
-		wheel_rm3 = "Right Middle (3) Wheel",
-		spacer = "Spacer",
-		camber = "Camber",
-		width = "Width",
-		size = "Size",
-		suspens = "Suspension Adjust",
-		stance = "Stance",
-		reset = "Reset Wheel",
+	["garage"] = {
+		jobgarage = "Job Garage",
+		vehout = "Vehicle out of Garage",
+		remveh = "Remove Vehicle",
+		cantspawn = " in the way",
+		marker = "Job Vehicle Marked on Map",
+		markername = "Job Vehicle",
 	},
 	--Below are names of items/mods that can't be reteived natively
-	vehicleWindowOptions = {
-		{ name = "Limo", id = 4 },
-		{ name = "Green", id = 5 },
-		{ name = "Light Smoke", id = 3 },
-		{ name = "Dark Smoke", id = 2 },
-		{ name = "Pure Black", id = 1 }
-	},
 	vehiclePlateOptions = {
 		{ name = "Blue on White #1", id = 0 },
 		{ name = "Blue on White #2", id = 3 },
@@ -414,13 +527,6 @@ Loc["en"] = {
 		{ name = "Yellow on Blue", id = 2 },
 		{ name = "Yellow on Black", id = 1 },
 		{ name = "North Yankton", id = 5 },
-        --[[(GetGameBuildNumber() >= 3095 and { name = "eCola", id = 6 } or nil),
-        (GetGameBuildNumber() >= 3095 and { name = "Las Venturas", id = 7 } or nil),
-        (GetGameBuildNumber() >= 3095 and { name = "Liberty City", id = 8 } or nil),
-        (GetGameBuildNumber() >= 3095 and { name = "LS Car Meet", id = 9 } or nil),
-        (GetGameBuildNumber() >= 3095 and { name = "Panic", id = 10 } or nil),
-        (GetGameBuildNumber() >= 3095 and { name = "Pounders", id = 11 } or nil),
-        (GetGameBuildNumber() >= 3095 and { name = "Sprunk", id = 12 } or nil),]]
 	},
 	vehicleNeonOptions = {
 		{ name = "White", R = 255, G = 255, B = 255 },
@@ -605,87 +711,21 @@ Loc["en"] = {
 		{ name = "Chrome", id = 120 },
 	},
 	vehicleResprayOptionsChameleon = {
-		{ name = "Anodized Red", id = 161 },
-		{ name = "Anodized Wine", id = 162 },
-		{ name = "Anodized Purple", id = 163 },
-		{ name = "Anodized Blue", id = 164 },
-		{ name = "Anodized Green", id = 165 },
-		{ name = "Anodized Lime", id = 166 },
-		{ name = "Anodized Copper", id = 167 },
-		{ name = "Anodized Bronze", id = 168 },
-		{ name = "Anodized Champagne", id = 169 },
-		{ name = "Anodized Gold", id = 170 },
-		{ name = "Green/Blue Flip", id = 171 },
-		{ name = "Green/Red Flip", id = 172 },
-		{ name = "Green/Brown Flip", id = 173 },
-		{ name = "Green/Turqoise Flip", id = 174 },
-		{ name = "Green/Purple Flip", id = 175 },
-		{ name = "Teal/Purple Flip", id = 176 },
-		{ name = "Turqoise/Red Flip", id = 177 },
-		{ name = "Turqoise/Purple Flip", id = 178 },
-		{ name = "Cyan/Purple Flip", id = 179 },
-		{ name = "Blue/Pink Flip", id = 180 },
-		{ name = "Blue/Green Flip", id = 181 },
-		{ name = "Purple/Red Flip", id = 182 },
-		{ name = "Pruple/Green Flip", id = 183 },
-		{ name = "Magenta/Green Flip", id = 184 },
-		{ name = "Magenta/Yellow Flip", id = 185 },
-		{ name = "Burgundy/Green Flip", id = 186 },
-		{ name = "Magenta/Cyan Flip", id = 187 },
-		{ name = "Copper/Purple Flip", id = 188 },
-		{ name = "Magenta/Orange Flip", id = 189 },
-		{ name = "Red/Orange Flip", id = 190 },
-		{ name = "Orange/Purple Flip", id = 191 },
-		{ name = "Orange/Blue Flip", id = 192 },
-		{ name = "White/Purple Flip", id = 193 },
-		{ name = "Red/Rainbow Flip", id = 194 },
-		{ name = "Blue/Rainbow Flip", id = 195 },
-		{ name = "Dark Green Pearl", id = 196 },
-		{ name = "Dark Teal Pearl", id = 197 },
-		{ name = "Dark Blue Pearl", id = 198 },
-		{ name = "Dark Purple Pearl", id = 199 },
-		{ name = "Oil Slick Pearl", id = 200 },
-		{ name = "Light Green Pearl", id = 201 },
-		{ name = "Light Blue Pearl", id = 202 },
-		{ name = "Light Purple Pearl", id = 203 },
-		{ name = "Light Pink Pearl", id = 204 },
-		{ name = "Off White Pearl", id = 205 },
-		{ name = "Pink Pearl", id = 206 },
-		{ name = "Yellow Pearl", id = 207 },
-		{ name = "Green Pearl", id = 208 },
-		{ name = "Blue Pearl", id = 209 },
-		{ name = "Cream Pearl", id = 210 },
-		{ name = "White Prismatic", id = 211 },
-		{ name = "Graphite Prismatic", id = 212 },
-		{ name = "Dark Blue Prismatic", id = 213 },
-		{ name = "Dark Purple Prismatic", id = 214 },
-		{ name = "Hot Pink Prismatic", id = 215 },
-		{ name = "Dark Red Prismatic", id = 216 },
-		{ name = "Dark Green Prismatic", id = 217 },
-		{ name = "Black Prismatic", id = 218 },
-		{ name = "Black Oil Spill", id = 219 },
-		{ name = "Black Rainbow", id = 220 },
-		{ name = "Black Holographic", id = 221 },
-		{ name = "White Holographic", id = 222 },
 		{ name = "Monochrome", id = 223 },
-		{ name = "Night / Day", id = 224 },
-		{ name = "Verlierer 2", id = 225 },
+		{ name = "Chromatic Aberration", id = 236 },
+		{ name = "Night & Day", id = 224 },
+		{ name = "The Verlierer", id = 225 },
 		{ name = "Sprunk Extreme", id = 226 },
 		{ name = "Vice City", id = 227 },
-		{ name = "Synthwave", id = 228 },
+		{ name = "Sunset", id = 233 },
+		{ name = "Temperature", id = 238 },
+		{ name = "Synthwave Nights", id = 228 },
 		{ name = "Four Seasons", id = 229 },
+		{ name = "The Seven", id = 234 },
 		{ name = "Maisonette 9 Throwback", id = 230 },
 		{ name = "Bubblegum", id = 231 },
 		{ name = "Full Rainbow", id = 232 },
-		{ name = "Sunsets", id = 233 },
-		{ name = "The Seven", id = 234 },
 		{ name = "Kamen Rider", id = 235 },
-		{ name = "Chrome Abberation", id = 236 },
-		{ name = "Its Christmas", id = 237 },
-		{ name = "Temperature", id = 238 },
-		{ name = "Haos Special Works", id = 239 },
-		{ name = "Electro", id = 240 },
-		{ name = "Monika", id = 241 },
-		{ name = "Fubuki", id = 242 }
+		{ name = "It's Christmas", id = 237 },
 	},
 }

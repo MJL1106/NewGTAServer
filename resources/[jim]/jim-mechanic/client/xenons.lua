@@ -1,281 +1,203 @@
-onPlayerLoaded(function() GetXenonColour() end)
+local QBCore = exports['qb-core']:GetCoreObject()
+RegisterNetEvent('QBCore:Client:UpdateObject', function() QBCore = exports['qb-core']:GetCoreObject() end)
+
+RegisterNetEvent('QBCore:Client:OnPlayerLoaded', function() GetXenonColour() end)
+
+local xenonColour = {}
 
 function GetXenonColour()
-    local newxenonColour = triggerCallback('jim-mechanic:GetXenonColour')
+    local p = promise.new()
+    QBCore.Functions.TriggerCallback('jim-mechanic:GetXenonColour', function(cb) p:resolve(cb) end)
+    newxenonColour = Citizen.Await(p)
     for k, v in pairs(newxenonColour) do xenonColour[k] = v end
     for k, v in pairs(xenonColour) do
-		local entity = ensureNetToVeh(k)
-        if entity then
+        if NetworkDoesEntityExistWithNetworkId(k) then
             if IsEntityAVehicle(k) then
-                if k ~= 0 or DoesEntityExist(k) then
-					SetVehicleXenonLightsCustomColor(k, v[1], v[2], v[3])
-				end
+                if k ~= 0 or DoesEntityExist(k) then SetVehicleXenonLightsCustomColor(k, v[1], v[2], v[3]) end
             end
         end
     end
 end
 --========================================================== Headlights
-RegisterNetEvent('jim-mechanic:client:applyXenons', function() local Ped = PlayerPedId() local item = Items["headlights"]
-	if not Checks() then return end
-    if GetInPreview() then triggerNotify(nil, Loc[Config.Lan]["previews"].previewing, "error") return end
-	local vehicle = vehChecks() local above = isVehicleLift(vehicle)
-	local emote = { anim = above and "idle_b" or "machinic_loop_mechandplayer", dict = above and "amb@prop_human_movie_bulb@idle_a" or "anim@amb@clubhouse@tutorial@bkr_tut_ig3@", flag = above and 1 or 8 }
-	local cam = CreateCamWithParams("DEFAULT_SCRIPTED_CAMERA", GetOffsetFromEntityInWorldCoords(vehicle, 0.0, 0.5, 1.0), 0.0, 0.0, 0.0, 60.00, false, 0) PointCamAtCoord(cam, GetOffsetFromEntityInWorldCoords(vehicle, 0.0, 3.0, 0.5))
+RegisterNetEvent('jim-mechanic:client:applyXenons', function()
+	if not jobChecks() then return end
+	if not locationChecks() then return end
+	if not inCar() then return end
+	if not nearPoint(GetEntityCoords(PlayerPedId())) then return end
+	if not IsPedInAnyVehicle(PlayerPedId(), false) then	vehicle = getClosest(GetEntityCoords(PlayerPedId())) pushVehicle(vehicle) lookVeh(vehicle)
+		distanceToL = #(GetEntityCoords(PlayerPedId()) - GetWorldPositionOfEntityBone(vehicle, GetEntityBoneIndexByName(vehicle, "headlight_l")))
+		distanceToR = #(GetEntityCoords(PlayerPedId()) - GetWorldPositionOfEntityBone(vehicle, GetEntityBoneIndexByName(vehicle, "headlight_r")))
+	end
+	if lockedCar(vehicle) then return end
+	if Config.isVehicleOwned and not IsVehicleOwned(trim(GetVehicleNumberPlateText(vehicle))) then triggerNotify(nil, Loc[Config.Lan]["common"].owned, "error") return end
 	if DoesEntityExist(vehicle) then
-		local distanceToL = #(GetEntityCoords(Ped) - GetWorldPositionOfEntityBone(vehicle, GetEntityBoneIndexByName(vehicle, "headlight_l")))
-		local distanceToR = #(GetEntityCoords(Ped) - GetWorldPositionOfEntityBone(vehicle, GetEntityBoneIndexByName(vehicle, "headlight_r")))
 		local currentEngine = GetVehicleMod(vehicle, 11)
 		if GetNumVehicleMods(vehicle,11) == 0 then triggerNotify(nil, Loc[Config.Lan]["common"].noOptions, "error") return end
-		if above or (distanceToL <= 1 or distanceToR <= 1) then
+		if distanceToL <= 1 or distanceToR <= 1 then
 			if IsToggleModOn(vehicle, 22) then triggerNotify(nil, Loc[Config.Lan]["common"].already, "error")
 			else
-				lookEnt(vehicle)
-				if progressBar({label = Loc[Config.Lan]["common"].installing..item.label, time = math.random(3000,7000), cancel = true, anim = emote.anim, dict = emote.dict, flag = emote.flag, icon = "headlights", cam = cam }) then SetVehicleModKit(vehicle, 0)
-					if IsToggleModOn(vehicle, 22) then TriggerServerEvent("jim-mechanic:server:DupeWarn", "headlights") emptyHands(Ped) return end
-					if checkToggleVehicleMod(vehicle, 22, true) then
-						qblog("`"..item.label.." - headlights` installed [**"..trim(GetVehicleNumberPlateText(vehicle)).."**]")
-						checkSetVehicleMod(vehicle, 11, currentEngine) -- Attempt to keep the engine as its current level after adding xenons, weird fucking gta game engine
-						CreateThread(function()
-							SetVehicleLights(vehicle, 2)
-							Wait(1000)
-							SetVehicleLights(vehicle, 1)
-							Wait(200)
-							SetVehicleLights(vehicle, 0)
-						end)
-						updateCar(vehicle)
-						removeItem("headlights", 1)
-						triggerNotify(nil, Loc[Config.Lan]["common"].installing.." "..item.label, "success")
-					end
-				else
-					triggerNotify(nil, item.label..Loc[Config.Lan]["common"].instfail, "error")
-				end
-				emptyHands(Ped)
-			end
-		else triggerNotify(nil, Loc[Config.Lan]["common"].closer, "error") end
-	end
-end)
-
-RegisterNetEvent('jim-mechanic:client:giveXenon', function() local Ped = PlayerPedId()  local item = Items["headlights"]
-	if not Checks() then return end
-	local vehicle = vehChecks() above = isVehicleLift(vehicle)
-	local emote = { anim = above and "idle_b" or "machinic_loop_mechandplayer", dict = above and "amb@prop_human_movie_bulb@idle_a" or "anim@amb@clubhouse@tutorial@bkr_tut_ig3@", flag = above and 1 or 8 }
-	if DoesEntityExist(vehicle) then
-		local distanceToL = #(GetEntityCoords(Ped) - GetWorldPositionOfEntityBone(vehicle, GetEntityBoneIndexByName(vehicle, "headlight_l")))
-		local distanceToR = #(GetEntityCoords(Ped) - GetWorldPositionOfEntityBone(vehicle, GetEntityBoneIndexByName(vehicle, "headlight_r")))
-		if above or (distanceToR <= 1 or distanceToL <= 1) then
-			lookEnt(vehicle)
-			if progressBar({label = Loc[Config.Lan]["common"].removing..item.label, time = math.random(3000,7000), cancel = true, anim = emote.anim, dict = emote.dict, flag = emote.flag, icon = "headlights"}) then SetVehicleModKit(vehicle, 0)
-				if not IsToggleModOn(vehicle, 22) then TriggerServerEvent("jim-mechanic:server:DupeWarn", "headlights") emptyHands(playerPed) return end
-				if checkToggleVehicleMod(vehicle, 22, false) then
-					qblog("`"..item.label.." - headlights` removed [**"..trim(GetVehicleNumberPlateText(vehicle)).."**]")
-					SetVehicleXenonLightsColor(vehicle, 0)
+				QBCore.Functions.Progressbar("accepted_key", Loc[Config.Lan]["xenons"].install, math.random(3000,7000), false, true, { disableMovement = true, disableCarMovement = true,	disableMouse = false, disableCombat = false, },
+				{ animDict = "anim@amb@clubhouse@tutorial@bkr_tut_ig3@", anim = "machinic_loop_mechandplayer", flags = 8, }, {}, {}, function() SetVehicleModKit(vehicle, 0)
+					if IsToggleModOn(vehicle, 22) then TriggerServerEvent("jim-mechanic:server:DupeWarn", "headlights") emptyHands(playerPed) return end
+					qblog("`"..QBCore.Shared.Items["headlights"].label.." - headlights` installed [**"..trim(GetVehicleNumberPlateText(vehicle)).."**]")
+					ToggleVehicleMod(vehicle, 22, true)
+					SetVehicleMod(vehicle, 11, currentEngine) -- Attempt to keep the engine as its current level after adding xenons
 					updateCar(vehicle)
-					addItem("headlights", 1)
-					triggerNotify(nil, item.label.." "..Loc[Config.Lan]["common"].removed, "success")
-				end
-			else
-				triggerNotify(nil, item.label..Loc[Config.Lan]["common"].remfail, "error")
+					toggleItem(false, "headlights")
+					triggerNotify(nil, Loc[Config.Lan]["xenons"].installed, "success")
+					emptyHands(PlayerPedId())
+				end, function() -- Cancel
+					triggerNotify(nil, Loc[Config.Lan]["xenons"].failed, "error")
+					emptyHands(PlayerPedId())
+				end, "headlights")
 			end
-			emptyHands(Ped)
-		else
-			triggerNotify(nil, Loc[Config.Lan]["common"].closer, "error")
-		end
+		else triggerNotify(nil, Loc[Config.Lan]["xenons"].closer, "error") end
 	end
 end)
 
-RegisterNetEvent('jim-mechanic:client:neonMenu', function() local NeonMenu, bike, Ped = {}, false, PlayerPedId() -- Start
-	if not outCar() then return end
-    if GetInPreview() then triggerNotify(nil, Loc[Config.Lan]["previews"].previewing, "error") return end
-	local vehicle = GetVehiclePedIsIn(Ped) pushVehicle(vehicle)
+RegisterNetEvent('jim-mechanic:client:giveXenon', function()
+	if not jobChecks() then return end
+	if not locationChecks() then return end
+	local vehicle = getClosest(GetEntityCoords(PlayerPedId())) pushVehicle(vehicle) lookVeh(vehicle)
 	if lockedCar(vehicle) then return end
-	if Config.Main.isVehicleOwned and not IsVehicleOwned(trim(GetVehicleNumberPlateText(vehicle))) then triggerNotify(nil, Loc[Config.Lan]["common"].owned, "error") return end
-	GetVehicleStatus(VehToNet(vehicle))
-	if IsThisModelABike(GetEntityModel(vehicle)) or IsThisModelAQuadbike(GetEntityModel(vehicle)) then bike = true end
-	if (bike or VehicleStatus[trim(GetVehicleNumberPlateText(vehicle))].underglow == 0) and not IsToggleModOn(vehicle, 22) then triggerNotify(nil, Loc[Config.Lan]["common"].noOptions, "error") return end
-
-	if not bike and VehicleStatus[trim(GetVehicleNumberPlateText(vehicle))].underglow == 1 then
-		NeonMenu[#NeonMenu + 1] = { arrow = true, header = Loc[Config.Lan]["xenons"].neonheader2,
-			onSelect = function() TriggerEvent("jim-mechanic:client:neonLightsMenu", {bike = bike, vehicle = vehicle}) end,
-		}
+	if Config.isVehicleOwned and not IsVehicleOwned(trim(GetVehicleNumberPlateText(vehicle))) then triggerNotify(nil, Loc[Config.Lan]["common"].owned, "error") return end
+	local headlightl = GetWorldPositionOfEntityBone(vehicle, GetEntityBoneIndexByName(vehicle, "headlight_l"))
+	local headlightr = GetWorldPositionOfEntityBone(vehicle, GetEntityBoneIndexByName(vehicle, "headlight_r"))
+	local playerpos = GetEntityCoords(PlayerPedId(), 1)
+	distanceToL = #(playerpos - headlightl)
+	distanceToR = #(playerpos - headlightr)
+	if distanceToR <= 1 or distanceToL <= 1 then
+		QBCore.Functions.Progressbar("accepted_key", Loc[Config.Lan]["xenons"].removing, math.random(3000,7000), false, true, { disableMovement = true, disableCarMovement = true, disableMouse = false, disableCombat = false,	},
+		{ animDict = "anim@amb@clubhouse@tutorial@bkr_tut_ig3@", anim = "machinic_loop_mechandplayer", flags = 8, }, {}, {}, function() SetVehicleModKit(vehicle, 0)
+		if not IsToggleModOn(vehicle, 22) then TriggerServerEvent("jim-mechanic:server:DupeWarn", "headlights") emptyHands(playerPed) return end
+			qblog("`"..QBCore.Shared.Items["headlights"].label.." - headlights` removed [**"..trim(GetVehicleNumberPlateText(vehicle)).."**]")
+			ToggleVehicleMod(vehicle, 22, false)
+			SetVehicleXenonLightsColor(vehicle, 0)
+			emptyHands(PlayerPedId())
+			updateCar(vehicle)
+			toggleItem(true, "headlights")
+			triggerNotify(nil, Loc[Config.Lan]["xenons"].remove, "success")
+		end, function() -- Cancel
+			triggerNotify(nil, Loc[Config.Lan]["xenons"].remfail, "error")
+			emptyHands(PlayerPedId())
+		end, "headlights")
+	else
+		triggerNotify(nil, Loc[Config.Lan]["xenons"].closer, "error")
 	end
-	if IsToggleModOn(vehicle, 22) then
-		NeonMenu[#NeonMenu + 1] = { arrow = true, header = Loc[Config.Lan]["xenons"].neonheader4,
-			onSelect = function() TriggerEvent("jim-mechanic:client:xenonMenu", {bike = bike, vehicle = vehicle}) end,
-		}
-	end
-	openMenu(NeonMenu, {
-		header = Loc[Config.Lan]["xenons"].neonheader1,
-		canClose = true,
-		onExit = function() end,
-	})
 end)
 
-RegisterNetEvent('jim-mechanic:client:neonLightsMenu', function(data) local NeonMenu = {} -- Neon or Xenon
+RegisterNetEvent('jim-mechanic:client:neonMenu', function()
+	local bike = false
 	if not outCar() then return end
-    if GetInPreview() then triggerNotify(nil, Loc[Config.Lan]["previews"].previewing, "error") return end
-	if not data.bike then
-		NeonMenu[#NeonMenu + 1] = { arrow = true, header = Loc[Config.Lan]["xenons"].neonheader2, txt = "",
-			onSelect = function() TriggerEvent("jim-mechanic:client:neonToggleMenu", { bike = data.bike, vehicle = data.vehicle }) end,
-		}
-		NeonMenu[#NeonMenu + 1] = { arrow = true, header = Loc[Config.Lan]["xenons"].neonheader3, txt = "",
-			onSelect = function() TriggerEvent("jim-mechanic:client:neonColorMenu", { bike = data.bike, vehicle = data.vehicle }) end,
-		}
-	end
-	openMenu(NeonMenu, {
-		header = Loc[Config.Lan]["xenons"].neonheader2,
-		onBack = function() TriggerEvent("jim-mechanic:client:neonMenu") end,
-	})
+	local vehicle = GetVehiclePedIsIn(PlayerPedId()) pushVehicle(vehicle)
+	if lockedCar(vehicle) then return end
+	if Config.isVehicleOwned and not IsVehicleOwned(trim(GetVehicleNumberPlateText(vehicle))) then triggerNotify(nil, Loc[Config.Lan]["common"].owned, "error") return end
+	if IsThisModelABike(GetEntityModel(vehicle)) or IsThisModelAQuadbike(GetEntityModel(vehicle)) then bike = true end
+	if bike and not IsToggleModOn(vehicle, 22) then triggerNotify(nil, Loc[Config.Lan]["common"].noOptions, "error") return end
+	local NeonMenu = {
+			{ icon = "underglow_controller", isMenuHeader = true, header = Loc[Config.Lan]["xenons"].neonheader1, },
+			{ icon = "fas fa-circle-xmark", header = "", txt = Loc[Config.Lan]["common"].close, params = { event = "jim-mechanic:Menu:Close" } } }
+	if not bike then NeonMenu[#NeonMenu + 1] = { header = Loc[Config.Lan]["xenons"].neonheader2, txt = "", params = { event = "jim-mechanic:client:neonLightsMenu", } } end
+
+	if IsToggleModOn(vehicle, 22) then NeonMenu[#NeonMenu + 1] = { header = Loc[Config.Lan]["xenons"].neonheader4, txt = "", params = { event = "jim-mechanic:client:xenonMenu", } } end
+	exports['qb-menu']:openMenu(NeonMenu)
 end)
 
-RegisterNetEvent('jim-mechanic:client:neonToggleMenu', function(data) -- Underglow Toggles
-	local NeonMenu = {}
-	local buttons = {
-		{ id = -1, head = Loc[Config.Lan]["xenons"].toggle },
-		{ id = 2, head = Loc[Config.Lan]["xenons"].front },
-		{ id = 1, head = Loc[Config.Lan]["xenons"].right },
-		{ id = 3, head = Loc[Config.Lan]["xenons"].back },
-		{ id = 0, head = Loc[Config.Lan]["xenons"].left }
-	}
-	for i = 1, #buttons do
-		NeonMenu[#NeonMenu+1] = { icon = buttons[i].id ~= -1 and (IsVehicleNeonLightEnabled(data.vehicle, buttons[i].id) ~= false and "fas fa-check" or "fas fa-x") or nil,
-			header = buttons[i].head,
-			onSelect = function() TriggerEvent("jim-mechanic:client:applyNeonPostion", { vehicle = data.vehicle, bike = data.bike, id = buttons[i].id, }) end,
-		}
+RegisterNetEvent('jim-mechanic:client:neonLightsMenu', function()
+	local bike = false
+	if not outCar() then return end
+	local vehicle = GetVehiclePedIsIn(PlayerPedId()) pushVehicle(vehicle)
+	if lockedCar(vehicle) then return end
+	if Config.isVehicleOwned and not IsVehicleOwned(trim(GetVehicleNumberPlateText(vehicle))) then triggerNotify(nil, Loc[Config.Lan]["common"].owned, "error") return end
+	if IsThisModelABike(GetEntityModel(vehicle)) or IsThisModelAQuadbike(GetEntityModel(vehicle)) then bike = true end
+	if bike and not IsToggleModOn(vehicle, 22) then triggerNotify(nil, Loc[Config.Lan]["common"].noOptions, "error") return end
+	local NeonMenu = {
+			{ icon = "underglow_controller", isMenuHeader = true, header = Loc[Config.Lan]["xenons"].neonheader2, },
+			{ icon = "fas fa-circle-arrow-left", header = "", txt = string.gsub(Loc[Config.Lan]["common"].ret, "⬅️ ", ""), params = { event = "jim-mechanic:client:neonMenu", } }}
+	if not bike then NeonMenu[#NeonMenu + 1] = { header = Loc[Config.Lan]["xenons"].neonheader2, txt = "", params = { event = "jim-mechanic:client:neonToggleMenu", } } end
+	if not bike then NeonMenu[#NeonMenu + 1] = { header = Loc[Config.Lan]["xenons"].neonheader3, txt = "", params = { event = "jim-mechanic:client:neonColorMenu", } } end
+	exports['qb-menu']:openMenu(NeonMenu)
+end)
+
+RegisterNetEvent('jim-mechanic:client:applyNeonPostion', function(args)
+    local args = tonumber(args)
+    local vehicle = GetVehiclePedIsIn(PlayerPedId())
+	SetVehicleEngineOn(vehicle, true, true)
+	animActive = false
+	if args == -1 then
+		if not IsVehicleNeonLightEnabled(vehicle, 2) or not IsVehicleNeonLightEnabled(vehicle, 1) or not IsVehicleNeonLightEnabled(vehicle, 3) or not IsVehicleNeonLightEnabled(vehicle, 0) then
+			for i = 0, 4 do	SetVehicleNeonLightEnabled(vehicle, i, true) Wait(50) end
+		else
+			for i = 0, 4 do SetVehicleNeonLightEnabled(vehicle, i, false) Wait(50) end
+		end
+	else if IsVehicleNeonLightEnabled(vehicle, args) then SetVehicleNeonLightEnabled(vehicle, args, false) else SetVehicleNeonLightEnabled(vehicle, args, true) end
     end
-	openMenu(NeonMenu, {
-		header = Loc[Config.Lan]["xenons"].neonheader3,
-		headertxt = Loc[Config.Lan]["xenons"].neontxt1,
-		onBack = function() TriggerEvent("jim-mechanic:client:neonLightsMenu", data) end,
-	})
-
+	updateCar(vehicle)
+    TriggerEvent("jim-mechanic:client:neonToggleMenu")
 end)
 
-RegisterNetEvent('jim-mechanic:client:RGBMenu', function(data) -- Custom Underglow RGB
-	local dialog = {}
-	local r,g,b = GetVehicleNeonLightsColour(data.vehicle)
-	local custom = nil
-	if data.xenon then custom, r,g,b = GetVehicleXenonLightsCustomColor(data.vehicle) end
-	if Config.System.Menu == "ox" then
-		dialog = exports.ox_lib:inputDialog(Loc[Config.Lan]["xenons"].customheader, {
-			{ type = 'color', label = "RGB:", format = "rgb", default = "rgb("..r..", "..g..", "..b..")" },
-		})
-		if dialog then
-			dialog[1] = convertOxRGB(dialog[1])
-			r, g, b = tonumber(dialog[1][1]) or r, tonumber(dialog[1][2]) or g, tonumber(dialog[1][3]) or b
-		end
-	else
-		dialog = exports['qb-input']:ShowInput({
-		header = Loc[Config.Lan]["xenons"].customheader,
-		submitText = Loc[Config.Lan]["xenons"].customconfirm,
-		inputs = {
-			{ type = 'number', name = 'Red', text = 'R' },
-			{ type = 'number', name = 'Green', text = 'G' },
-			{ type = 'number', name = 'Blue', text = 'B' } } })
-		if dialog then
-			r, g, b = tonumber(dialog.Red or r), tonumber(dialog.Green or g), tonumber(dialog.Blue or b)
-		end
-	end
-	if r > 255 then r = 255 end
-	if g > 255 then g = 255 end
-	if b > 255 then b = 255 end
-	if data.xenon then
-		TriggerServerEvent('jim-mechanic:server:ChangeXenonColour', VehToNet(data.vehicle), {r, g, b})
-		SetVehicleXenonLightsColor(data.vehicle, -1)
-		updateCar(data.vehicle)
-		Wait(100)
-		TriggerEvent('jim-mechanic:client:xenonMenu', data)
-	else
-		TriggerEvent('jim-mechanic:client:applyNeonColor', { vehicle = data.vehicle, bike = data.bike, r = r, g = g , b = b })
-	end
+RegisterNetEvent('jim-mechanic:client:applyNeonColor', function(data)
+    local vehicle = GetVehiclePedIsIn(PlayerPedId())
+	SetVehicleEngineOn(vehicle, true, false)
+	SetVehicleNeonLightsColour(vehicle, data[1], data[2], data[3])
+	updateCar(vehicle)
+	TriggerEvent("jim-mechanic:client:neonColorMenu")
 end)
 
-RegisterNetEvent('jim-mechanic:client:neonColorMenu', function(data) -- Neon Colour Picker
-	local r, g, b = GetVehicleNeonLightsColour(data.vehicle)
-	local NeonMenu = {}
-	local desc = Loc[Config.Lan]["xenons"].neontxt2..br.."R:"..r.." G:"..g.." B:"..b.."<span style='color:#"..rgbToHex(GetVehicleNeonLightsColour(data.vehicle)):upper().."; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black, 0em 0em 0.5em white, 0em 0em 0.5em white'> ⯀ </span>"
-	if Config.System.Menu == "ox" then
-		desc = Loc[Config.Lan]["xenons"].neontxt2..br.."R:"..r.." G:"..g.." B:"..b
-	end
-	NeonMenu[#NeonMenu + 1] = { arrow = true, header = Loc[Config.Lan]["xenons"].customheader,
-		onSelect = function() TriggerEvent("jim-mechanic:client:RGBMenu", data) end,
-	}
+RegisterNetEvent('jim-mechanic:client:neonCustomMenu', function()
+    local dialog = exports['qb-input']:ShowInput({
+        header = Loc[Config.Lan]["xenons"].customheader,
+        submitText = Loc[Config.Lan]["xenons"].customconfirm,
+        inputs = {
+            { type = 'number', name = 'Red', text = 'R' },
+            { type = 'number', name = 'Green', text = 'G' },
+            { type = 'number', name = 'Blue', text = 'B' } } })
+    if dialog then
+		local r, g, b = table.unpack({(tonumber(dialog.Red) or 0), (tonumber(dialog.Green) or 0), (tonumber(dialog.Blue) or 0)})
+		if r > 255 then r = 255 end
+		if g > 255 then g = 255 end
+		if b > 255 then b = 255 end
+        if not dialog.Red or not dialog.Green or not dialog.Blue then return end
+        TriggerEvent('jim-mechanic:client:applyNeonColor', { r, g, b })
+    end
+end)
+
+RegisterNetEvent('jim-mechanic:client:neonToggleMenu', function()
+    local vehicle = GetVehiclePedIsIn(PlayerPedId())
+	if IsVehicleNeonLightEnabled(vehicle, 2) then fHead = "fas fa-check" else fHead = "fas fa-x" end
+	if IsVehicleNeonLightEnabled(vehicle, 1) then rHead = "fas fa-check" else rHead = "fas fa-x" end
+	if IsVehicleNeonLightEnabled(vehicle, 3) then bHead = "fas fa-check" else bHead = "fas fa-x" end
+	if IsVehicleNeonLightEnabled(vehicle, 0) then lHead = "fas fa-check" else lHead = "fas fa-x" end
+    exports['qb-menu']:openMenu({
+		{ icon = "underglow_controller", header = Loc[Config.Lan]["xenons"].neonheader3, txt = Loc[Config.Lan]["xenons"].neontxt1, isMenuHeader = true },
+        { icon = "fas fa-circle-arrow-left", header = "", txt = string.gsub(Loc[Config.Lan]["common"].ret, "⬅️ ", ""), params = { event = "jim-mechanic:client:neonLightsMenu", } },
+        { header = Loc[Config.Lan]["xenons"].toggle, txt = "", params = { event = "jim-mechanic:client:applyNeonPostion", args = -1 } },
+        { icon = fHead, header = Loc[Config.Lan]["xenons"].front, txt = "", params = { event = "jim-mechanic:client:applyNeonPostion", args = 2 } },
+        { icon = rHead, header = Loc[Config.Lan]["xenons"].right, txt = "", params = { event = "jim-mechanic:client:applyNeonPostion", args = 1 } },
+        { icon = bHead, header = Loc[Config.Lan]["xenons"].back, txt = "", params = { event = "jim-mechanic:client:applyNeonPostion", args = 3 } },
+        { icon = lHead, header = Loc[Config.Lan]["xenons"].left, txt = "", params = { event = "jim-mechanic:client:applyNeonPostion", args = 0 } },
+    })
+end)
+
+RegisterNetEvent('jim-mechanic:client:neonColorMenu', function()
+	local vehicle = GetVehiclePedIsIn(PlayerPedId(), false) pushVehicle(vehicle) vehProps = QBCore.Functions.GetVehicleProperties(vehicle)
+	local validMods = {}
+	local r, g, b = GetVehicleNeonLightsColour(vehicle)
+	local XenonMenu = {}
+	XenonMenu[#XenonMenu + 1] = { icon = "underglow_controller", header = Loc[Config.Lan]["xenons"].neonheader3,
+	txt = Loc[Config.Lan]["xenons"].neontxt2.."<br>R:"..r.." G:"..g.." B:"..b.."<span style='color:#"..rgbToHex(GetVehicleNeonLightsColour(vehicle)):upper().."; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black, 0em 0em 0.5em white, 0em 0em 0.5em white'> ⯀ </span>", isMenuHeader = true }
+		XenonMenu[#XenonMenu + 1] = { icon = "fas fa-circle-arrow-left", header = "", txt = string.gsub(Loc[Config.Lan]["common"].ret, "⬅️ ", ""), params = { event = "jim-mechanic:client:neonLightsMenu", } }
+		XenonMenu[#XenonMenu + 1] = { header = Loc[Config.Lan]["xenons"].customheader, txt = "", params = { event = "jim-mechanic:client:neonCustomMenu", } }
 	for k, v in pairs(Loc[Config.Lan].vehicleNeonOptions) do
 		local icon = "" local disabled = false
 		if r == v.R and g == v.G and b == v.B then installed = Loc[Config.Lan]["common"].current icon = "fas fa-check" disabled = true else installed = "" end
-		NeonMenu[#NeonMenu + 1] = {  icon = icon,  isMenuHeader = disabled, header = v.name, txt = installed,
-			onSelect = function() TriggerEvent("jim-mechanic:client:applyNeonColor", { vehicle = data.vehicle, bike = data.bike, r = v.R, g = v.G, b = v.B }) end,
-		}
+		XenonMenu[#XenonMenu + 1] = { icon = icon, isMenuHeader = disabled, header = v.name, txt = installed, params = { event = 'jim-mechanic:client:applyNeonColor', args = { v.R, v.G, v.B }  } }
 	end
-
-	openMenu(NeonMenu, {
-		header = Loc[Config.Lan]["xenons"].neonheader3,
-		headertxt = desc,
-		onBack = function() TriggerEvent("jim-mechanic:client:neonLightsMenu", data) end,
-	})
+	exports['qb-menu']:openMenu(XenonMenu)
 end)
 
-RegisterNetEvent('jim-mechanic:client:xenonMenu', function(data) -- Xenon Colour Selection
-	local stockinstall, stockicon = ""
-	local XenonMenu = {}
-	local custom, r, g, b = GetVehicleXenonLightsCustomColor(data.vehicle)
-	local desc = ""
-	data.xenon = true
-	if custom then
-		desc = Loc[Config.Lan]["xenons"].xenontxt..br.."R:"..r.." G:"..g.." B:"..b.."<span style='color:#"..rgbToHex(r, g, b):upper().."; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black, 0em 0em 0.5em white, 0em 0em 0.5em white'> ⯀ </span>"
-		if Config.System.Menu == "ox" then
-			desc = Loc[Config.Lan]["xenons"].xenontxt..br.."R:"..r.." G:"..g.." B:"..b
-		end
-	else stockinstall = Loc[Config.Lan]["common"].current stockicon = "fas fa-check" end
-	if not IsToggleModOn(data.vehicle, 22) then triggerNotify(nil, Loc[Config.Lan]["xenons"].notinstall, "error") else
-		XenonMenu[#XenonMenu + 1] = { arrow = true, header = Loc[Config.Lan]["xenons"].customheader,
-			onSelect = function() TriggerEvent("jim-mechanic:client:RGBMenu", data) end,
-		}
-		for k, v in pairs(Loc[Config.Lan].vehicleNeonOptions) do
-			local icon = "" local disabled = false
-			if r == v.R and g == v.G and b == v.B then  installed = Loc[Config.Lan]["common"].current icon = "fas fa-check" disabled = true
-			else installed = ""  end
-		XenonMenu[#XenonMenu + 1] = { icon = icon, isMenuHeader = disabled,
-				header = v.name, txt = installed,
-				onSelect = function() TriggerEvent("jim-mechanic:client:applyXenonColor", { vehicle = data.vehicle, bike = data.bike, R = v.R, G = v.G, B = v.B }) end,
-			}
-		end
-		openMenu(XenonMenu, {
-			header = Loc[Config.Lan]["xenons"].neonheader3,
-			headertxt = desc,
-			onBack = function() TriggerEvent("jim-mechanic:client:neonMenu", data) end,
-		})
-	end
-end)
-
-RegisterNetEvent('jim-mechanic:client:applyNeonPostion', function(data) -- Toggle Underglow Lights
-	if GetIsVehicleEngineRunning(data.vehicle) then
-		SetVehicleEngineOn(data.vehicle, true, true, true)
-	end
-	if data.id == -1 then
-		if not IsVehicleNeonLightEnabled(data.vehicle, 2) or not IsVehicleNeonLightEnabled(data.vehicle, 1) or not IsVehicleNeonLightEnabled(data.vehicle, 3) or not IsVehicleNeonLightEnabled(data.vehicle, 0) then
-			for i = 0, 4 do	SetVehicleNeonLightEnabled(data.vehicle, i, true) Wait(40) end
-		else
-			for i = 0, 4 do SetVehicleNeonLightEnabled(data.vehicle, i, false) Wait(40) end
-		end
-	else if IsVehicleNeonLightEnabled(data.vehicle, data.id) then SetVehicleNeonLightEnabled(data.vehicle, data.id, false) else SetVehicleNeonLightEnabled(data.vehicle, data.id, true) end
-    end
-	updateCar(data.vehicle)
-    TriggerEvent("jim-mechanic:client:neonToggleMenu", data)
-end)
-
-RegisterNetEvent('jim-mechanic:client:applyNeonColor', function(data) -- Apple Underglow Colours
-	if GetIsVehicleEngineRunning(data.vehicle) then
-		SetVehicleEngineOn(data.vehicle, true, true, true)
-	end
-	SetVehicleNeonLightsColour(data.vehicle, data.r, data.g, data.b)
-	updateCar(data.vehicle)
-	TriggerEvent("jim-mechanic:client:neonColorMenu", data)
-end)
-
-RegisterNetEvent('jim-mechanic:client:applyXenonColor', function(data) -- Apple Xenon Colours
-	if GetIsVehicleEngineRunning(data.vehicle) then
-		SetVehicleEngineOn(data.vehicle, true, true, true)
-	end
+RegisterNetEvent('jim-mechanic:client:applyXenonColor', function(data)
+	SetVehicleEngineOn(data.vehicle, true, false)
 	if data.stock then
 		ClearVehicleXenonLightsCustomColor(data.vehicle)
 		SetVehicleXenonLightsColor(data.vehicle, -1)
@@ -285,32 +207,79 @@ RegisterNetEvent('jim-mechanic:client:applyXenonColor', function(data) -- Apple 
 		SetVehicleXenonLightsCustomColor(data.vehicle, data.R, data.G, data.B)
 		TriggerServerEvent('jim-mechanic:server:ChangeXenonColour', VehToNet(data.vehicle), { data.R, data.G, data.B })
 	end
+	Wait(200)
 	updateCar(data.vehicle)
 	Wait(100)
-    TriggerEvent("jim-mechanic:client:xenonMenu", data)
+    TriggerEvent("jim-mechanic:client:xenonMenu")
+end)
+
+RegisterNetEvent('jim-mechanic:client:xenonMenu', function()
+	local vehicle = GetVehiclePedIsIn(PlayerPedId(), false) pushVehicle(vehicle)
+	local validMods = {}
+	local stockinstall, stockicon = ""
+	local custom, r, g, b = GetVehicleXenonLightsCustomColor(vehicle)
+	if not IsToggleModOn(vehicle, 22) then triggerNotify(nil, Loc[Config.Lan]["xenons"].notinstall, "error") else
+		local headtxt = ""
+		if custom then headtxt = "<br>R:"..r.." G:"..g.." B:"..b.." <span style='color:#"..rgbToHex(r, g, b):upper().."; text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black, 0em 0em 0.5em white, 0em 0em 0.5em white'> ⯀ </span>"
+		else stockinstall = Loc[Config.Lan]["common"].current stockicon = "fas fa-check" end
+		local XenonMenu = {
+			{ icon = "underglow_controller", header = Loc[Config.Lan]["xenons"].xenonheader, txt = Loc[Config.Lan]["xenons"].xenontxt..headtxt, isMenuHeader = true },
+			{ icon = "fas fa-circle-arrow-left", header = "", txt = string.gsub(Loc[Config.Lan]["common"].ret, "⬅️ ", ""), params = { event = "jim-mechanic:client:neonMenu" } },
+			{ header = Loc[Config.Lan]["xenons"].customheader, txt = "", params = { event = "jim-mechanic:client:xenonCustomMenu", args = { vehicle = vehicle } } },
+			{ header = Loc[Config.Lan]["common"].stock, txt = stockinstall, params = { event = "jim-mechanic:client:applyXenonColor", args = { vehicle = vehicle, stock = true } } }}
+		for k, v in pairs(Loc[Config.Lan].vehicleNeonOptions) do
+			local icon = "" local disabled = false
+			if r == v.R and g == v.G and b == v.B then installed = Loc[Config.Lan]["common"].current icon = "fas fa-check" disabled = true else installed = "" end
+			XenonMenu[#XenonMenu + 1] = { icon = icon, isMenuHeader = disabled, header = v.name, txt = installed, params = { event = 'jim-mechanic:client:applyXenonColor', args = { vehicle = vehicle, R = v.R, G = v.G, B = v.B }  } }
+		end
+		exports['qb-menu']:openMenu(XenonMenu)
+	end
+end)
+
+RegisterNetEvent('jim-mechanic:client:xenonCustomMenu', function(data)
+    local dialog = exports['qb-input']:ShowInput({
+        header = Loc[Config.Lan]["xenons"].customheader,
+        submitText = Loc[Config.Lan]["xenons"].customconfirm,
+        inputs = {
+            { type = 'number', name = 'Red', text = 'R' },
+            { type = 'number', name = 'Green', text = 'G' },
+            { type = 'number', name = 'Blue', text = 'B' } } } )
+    if dialog then
+		local r, g, b = table.unpack({(tonumber(dialog.Red) or 0), (tonumber(dialog.Green) or 0), (tonumber(dialog.Blue) or 0)})
+		if r > 255 then r = 255 end
+		if g > 255 then g = 255 end
+		if b > 255 then b = 255 end
+        if not dialog.Red or not dialog.Green or not dialog.Blue then return end
+		pushVehicle(data.vehicle)
+        TriggerServerEvent('jim-mechanic:server:ChangeXenonColour', VehToNet(data.vehicle), {r, g, b})
+		SetVehicleXenonLightsColor(data.vehicle, -1)
+		updateCar(data.vehicle)
+		Wait(100)
+		TriggerEvent('jim-mechanic:client:xenonMenu')
+    end
 end)
 
 RegisterNetEvent('jim-mechanic:client:ChangeXenonColour', function(netId, newColour)
+    if not LocalPlayer.state.isLoggedIn then return end
     xenonColour[netId] = newColour
     for k, v in pairs(xenonColour) do
-		local netId = ensureNetToVeh(k)
-		if not netId or netId == 0 then return end
-		SetVehicleXenonLightsCustomColor(netId, v[1], v[2], v[3])
-		if Config.System.Debug then
-			print("^5Debug^7: ^2Recieving new ^3Xenon Colour ^7[^6"..tostring(netId).."^7] = { ^2RBG ^7= ^6"..v[1].."^7, ^6"..v[2].."^7, ^6"..v[3].." ^7}")
-		end
+        if NetworkDoesEntityExistWithNetworkId(k) then
+            if k ~= 0 and DoesEntityExist(NetToVeh(k)) then
+                SetVehicleXenonLightsCustomColor(NetToVeh(k), v[1], v[2], v[3])
+                if Config.Debug then print("^5Debug^7: ^2Recieving new ^3Xenon Colour ^7[^6"..tostring(NetToVeh(k)).."^7] = { ^2RBG ^7= ^6"..v[1].."^7, ^6"..v[2].."^7, ^6"..v[3].." ^7}") end
+            end
+        end
     end
 end)
 
 RegisterNetEvent('jim-mechanic:client:ChangeXenonStock', function(netId)
-	local netVeh = ensureNetToVeh(netId)
-	if not netVeh or netVeh == false then return end
+	if not LocalPlayer.state.isLoggedIn then return end
+	if not NetworkDoesEntityExistWithNetworkId(netid) then return end
 	xenonColour[netId] = nil
-	if not netVeh then return end
-	if DoesEntityExist(netVeh) and IsEntityAVehicle(netVeh) then
-		ClearVehicleXenonLightsCustomColor(netVeh)
-		SetVehicleXenonLightsColor(netVeh, -1)
-		if Config.System.Debug then print("^5Debug^7: ^2Clearing ^3Xenon Colour for vehicle ^7[^6"..tostring(netVeh).."^7]") end
+	if DoesEntityExist(NetToVeh(netId)) then
+		ClearVehicleXenonLightsCustomColor(NetToVeh(netId))
+		SetVehicleXenonLightsColor(NetToVeh(netId), -1)
+		if Config.Debug then print("^5Debug^7: ^2Clearing ^3Xenon Colour for vehicle ^7[^6"..tostring(NetToVeh(netId)).."^7]") end
 		xenonColour[netId] = nil
 	end
 end)
@@ -318,60 +287,13 @@ end)
 CreateThread(function()
     while true do
         for netId, v in pairs(xenonColour) do
-			local veh = ensureNetToVeh(netId)
-			if veh and veh ~= 0 then
-                if veh ~= 0 and DoesEntityExist(veh) and IsEntityAVehicle(veh) then
-                    if Config.System.Debug then print("^5Debug^7: ^2Ensuring ^3Xenon Colour^7[^6"..tostring(veh).."^7] = { ^2RBG ^7= ^6"..v[1].."^7, ^6"..v[2].."^7, ^6"..v[3].." ^7}") end
-                    SetVehicleXenonLightsCustomColor(veh, v[1], v[2], v[3])
-				end
+            if NetworkDoesEntityExistWithNetworkId(netId) then
+                if NetToVeh(netId) ~= 0 and DoesEntityExist(NetToVeh(netId)) and IsEntityAVehicle(NetToVeh(netId)) then
+                    SetVehicleXenonLightsCustomColor(NetToVeh(netId), v[1], v[2], v[3])
+                    if Config.Debug then print("^5Debug^7: ^2Ensuring ^3Xenon Colour^7[^6"..tostring(NetToVeh(netId)).."^7] = { ^2RBG ^7= ^6"..v[1].."^7, ^6"..v[2].."^7, ^6"..v[3].." ^7}") end
+                end
             end
         end
         Wait(20000)
     end
-end)
-
---=== UNDERGLOW ===--
-RegisterNetEvent('jim-mechanic:client:applyUnderglow', function(data) local canEffect = true local Ped = PlayerPedId() local item = Items["underglow"]
-	local remove = false
-	if data.client.remove == nil then print("You need to update your ox_inv items") return else remove = data.client.remove end
-	if not enforceRestriction("perform") then return end
-	local vehicle = vehChecks() local above = isVehicleLift(vehicle)
-	if DoesEntityExist(vehicle) then
-		local cam = createTempCam(Ped, GetEntityCoords(vehicle))
-		local emote = { anim = above and "idle_b" or "fixing_a_ped", dict = above and "amb@prop_human_movie_bulb@idle_a" or "mini@repair", flag = above and 1 or 16 }
-		if not enforceClassRestriction(searchCar(vehicle).class) then return end
-		local plate = trim(GetVehicleNumberPlateText(vehicle))
-		GetVehicleStatus(VehToNet(vehicle))
-		if remove and  VehicleStatus[plate]["underglow"] ~= 1 then return end
-		if not remove and VehicleStatus[plate]["underglow"] == 1 then triggerNotify(nil, item.label.." "..Loc[Config.Lan]["common"].already, "error") return end
-		for _, class in pairs({"Vans", "Cycles", "Boats", "Helicopters", "Commercial", "Trains"}) do
-			if searchCar(vehicle).class == class then canEffect = false end
-		end
-		if not canEffect then return end
-		if lockedCar(vehicle) then return end
-		lookEnt(vehicle)
-		propHoldCoolDown("screwdriver") Wait(10)
-		if remove == false then
-			if progressBar({label = Loc[Config.Lan]["common"].installing..item.label, time = math.random(5000,7000), cancel = true, anim = emote.anim, dict = emote.dict, flag = emote.flag, icon = "manual", cam = cam }) then
-				if VehicleStatus[plate]["underglow"] == 1 then TriggerServerEvent("jim-mechanic:server:DupeWarn", "underglow") return end
-				SetVehicleStatus(vehicle, "underglow", 1, true)
-				qblog("`"..item.label.." - underglow` removed [**"..trim(GetVehicleNumberPlateText(vehicle)).."**]")
-				updateCar(vehicle)
-				removeItem("underglow", 1)
-				triggerNotify(nil, item.label.." "..Loc[Config.Lan]["common"].installed, "success")
-			end
-		else
-			if progressBar({label = Loc[Config.Lan]["common"].removing..item.label, time = math.random(5000, 7000), cancel = true, anim = emote.anim, dict = emote.dict, flag = emote.flag, icon = "harness", cam = cam }) then
-				if VehicleStatus[plate].underglow == 0 then TriggerServerEvent("jim-mechanic:server:DupeWarn", "underglow") return end
-				SetVehicleStatus(vehicle, "underglow", 0, true)
-				SetVehicleNeonLightsColour(vehicle, 255, 255, 255)
-				for i = 0, 4 do SetVehicleNeonLightEnabled(vehicle, i, false) Wait(0) end
-				qblog("`"..item.label.." - underglow` removed [**"..trim(GetVehicleNumberPlateText(vehicle)).."**]")
-				updateCar(vehicle)
-				addItem("underglow", 1)
-				triggerNotify(nil, item.label.." "..Loc[Config.Lan]["common"].removed, "success")
-			end
-		end
-	end
-	emptyHands(Ped)
 end)
