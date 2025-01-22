@@ -515,4 +515,15 @@ QBShared.Jobs = {
 			},
 		},
 	},
+    ['catcafe'] = {
+		label = 'Cat Cafe',
+		defaultDuty = true,
+		grades = {
+            ['0'] = { name = 'Recruit', payment = 750 },
+			['1'] = { name = 'Crew Member', payment = 1000 },
+			['2'] = { name = 'Shift Manager', payment = 1325 },
+			['3'] = { name = 'Manager', payment = 1500 },
+			['4'] = { name = 'Owner', isboss = true, payment = 1875 },
+        },
+	},
 }
