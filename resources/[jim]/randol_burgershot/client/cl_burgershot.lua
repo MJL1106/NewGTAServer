@@ -52,7 +52,7 @@ function BurgerZones()
     for k, v in pairs(Config.Zones) do
         exports['qb-target']:AddCircleZone("burgershot"..k, v.coords, v.radius, {
             name = "burgershot"..k,
-            debugPoly = true,
+            debugPoly = false,
             useZ=true,
         }, {
             options = {
