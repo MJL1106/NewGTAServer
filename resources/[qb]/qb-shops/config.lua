@@ -167,9 +167,9 @@ Config.Products = {
             slot = 4,
         },
         [5] = {
-            name = "screwdriverset",
-            price = 350,
-            amount = 50,
+            name = "hak_kit",
+            price = 17500,
+            amount = 2,
             info = {},
             type = "item",
             slot = 5,

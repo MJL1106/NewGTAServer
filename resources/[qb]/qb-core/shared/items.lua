@@ -1189,4 +1189,6 @@ QBShared.Items = {
     ["pogo"] 		 	 	 	 = {["name"] = "pogo",           			["label"] = "Art Piece",	 		["weight"] = 155, 		["type"] = "item", 		["image"] = "pogo.png", 			["unique"] = false, 	["useable"] = false, 	["shouldClose"] = false,   ["combinable"] = nil, ["description"] = "Pogo Statue"},
     ["pogo"] 		 	 	 	 = {["name"] = "pogo",           			["label"] = "Art Piece",	 		["weight"] = 155, 		["type"] = "item", 		["image"] = "pogo.png", 			["unique"] = false, 	["useable"] = false, 	["shouldClose"] = false,   ["combinable"] = nil, ["description"] = "Pogo Statue"},
 
+	['hak_kit'] = {['name'] = 'hak_kit', ['label'] = 'hak_kit', ['weight'] = 2000, ['type'] = 'item', ['image'] = 'tunerchip.png', ['unique'] = true, ['useable'] = true,  ['shouldClose'] = true, ['combinable'] = nil, ['description'] = 'Boosting Laptop'}, 
+	['disabler'] = {['name'] = 'disabler', ['label'] = 'disabler', ['weight'] = 500, ['type'] = 'item', ['image'] = 'tablet.png', ['unique'] = false, ['useable'] = true, ['shouldClose'] = true, ['combinable'] = nil, ['description'] = 'for the boosting contracts'},
 }
