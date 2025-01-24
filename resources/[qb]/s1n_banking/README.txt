@@ -1,1 +1,0 @@
-Check https://docs.s1nscripts.com to know how to install the script.
