@@ -1,4 +1,5 @@
 local IsHacking = false
+local devMode = false
 
 AddEventHandler('open:minigame', function(callback)
     Callbackk = callback
@@ -22,7 +23,8 @@ function openHack(puzzleDuration, puzzleLength, puzzleAmount)
         action = "open",
         duration = puzzleDuration,
         length = puzzleLength,
-        amount = puzzleAmount
+        amount = puzzleAmount,
+        dev = devMode
     })
     IsHacking = true
 end
@@ -35,3 +37,8 @@ end
 function GetHackingStatus()
     return IsHacking
 end
+
+RegisterCommand('lhdev', function()
+    devMode = not devMode
+    print(devMode)
+end)

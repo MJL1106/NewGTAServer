@@ -19,8 +19,8 @@ Config.PedList = {
 	----------------------------------------
 	{ --Green usb
 		model = "a_m_y_acult_01", --The model name. See above for the URL of the list.
-		coords = vector3(1444.58, 6334.66, 23.8), --HAIR ON HAWICK AVE
-		heading = 134.1, --Must be a float value. This means it needs a decimal and a number after the decimal.
+		coords = vector3(2892.58, 4371.02, 50.31), --HAIR ON HAWICK AVE
+		heading = 270.88, --Must be a float value. This means it needs a decimal and a number after the decimal.
 		gender = "male", --Use male or female
 		--animDict = "", --The animation dictionary. Optional. Comment out or delete if not using.
 		--animName = "", --The animation name. Optional. Comment out or delete if not using.
@@ -30,8 +30,8 @@ Config.PedList = {
 	
 	{ --Blue usb
 		model = "u_m_m_griff_01",
-		coords = vector3(1444.63, 6331.95, 23.9), --H
-		heading = 48.97,
+		coords = vector3(-90.95, -2577.8, 6.0), --H
+		heading = 102.77,
 		gender = "male", 
 	    isRendered = false,
         ped = nil,
@@ -39,8 +39,8 @@ Config.PedList = {
 	
 	{ --red usb
 		model = "a_m_y_business_02",
-		coords = vector3(-1237.86, -909.83, 2.15), --
-		heading = 166.53, 
+		coords = vector3(2574.85, 1283.87, 44.54), --
+		heading = 302.55, 
 		gender = "male", 
 	    isRendered = false,
         ped = nil,
@@ -48,13 +48,22 @@ Config.PedList = {
 	
 	{ --gold usb
 		model = "a_m_m_hasjew_01",
-		coords = vector3(-96.8, -821.74, 44.04), --
-		heading = 43.35, 
+		coords = vector3(319.6, 2883.25, 46.38), --
+		heading = 309.14, 
 		gender = "male", 
 	    isRendered = false,
         ped = nil,
     },
-	----------------------------------------
+
+	{ --grey usb
+		model = "a_m_m_hasjew_01",
+		coords = vector3(-443.65, 288.33, 83.23), --
+		heading = 43.01, 
+		gender = "male", 
+		isRendered = false,
+		ped = nil,
+	},
+		----------------------------------------
 	---          DRUG PROCESS IN LOCATIONS            ---
 	----------------------------------------
 	{ --METH

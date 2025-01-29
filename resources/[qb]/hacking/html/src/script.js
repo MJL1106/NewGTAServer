@@ -4,7 +4,7 @@ import { $, delay, playSound } from './helpers.js'
 import { doPuzzle } from './puzzle-handler.js'
 
 // runs on site load and handles entire  flow
-async function start(duration,puzzlelength,amount){
+async function start(duration,puzzlelength,amount,dev){
 
     // reset from previous
     $('.try-again').classList.add('hidden')
@@ -31,7 +31,7 @@ async function start(duration,puzzlelength,amount){
     let result = true
 
     for (let i = 0; i < amount && result; i++) {
-        [submitted, answer] = await doPuzzle(duration,puzzlelength)
+        [submitted, answer] = await doPuzzle(duration,puzzlelength,dev)
         result = (submitted?.toLowerCase() == answer)
     }
 
@@ -81,7 +81,7 @@ gtag('config', 'G-7E64QM2WXT');
 
 window.addEventListener('message', function(event){
     if (event.data.action == "open") {
-        start(event.data.duration, event.data.length,event.data.amount)
+        start(event.data.duration, event.data.length,event.data.amount, event.data.dev)
         $(".bg").classList.remove('hidden');
     }
 })

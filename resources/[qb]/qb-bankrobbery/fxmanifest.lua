@@ -1,38 +1,34 @@
 fx_version 'cerulean'
 game 'gta5'
-
 lua54 'yes'
 
-shared_script { 
-	'config.lua',
-	--'@qb-core/import.lua', -- If you use a old core then use this and set config to "old" in versions
+author 'Lionh34rt#4305'
+description 'Reworked bank robbery script for QBCore'
+version '3.1'
+
+dependencies {
+    'PolyZone',
+    'qb-target',
+    'mka-lasers'
 }
 
+shared_script 'shared/sh_config.lua'
+
 client_scripts {
-	'client/cl_fleeca.lua',
-	'client/cl_paleto.lua',
-	'client/cl_pacific.lua',
-	'client/cl_lowervault.lua',
-	'client/drilling.lua',
-	'client/doorlocks.lua',
-	'client/cl_target.lua',
-	'client/cl_powerplants.lua',
-	'client/open.lua',
-	'client/cl_paletosecond.lua'
+    '@PolyZone/client.lua',
+    '@PolyZone/BoxZone.lua',
+    '@mka-lasers/client/client.lua',
+    'client/cl_main.lua',
+    'client/cl_doors.lua',
+    'client/cl_laptops.lua',
+    'client/cl_fleeca.lua',
+    'client/cl_paleto.lua',
+    'client/cl_pacific.lua',
+    'client/cl_vault.lua'
 }
 
 server_scripts {
-	'@oxmysql/lib/MySQL.lua',
-    'server/main.lua',
-	'server/secret.lua',
-	'server/open.lua',
-} 
-
-escrow_ignore {
-	'config.lua',
-	'server/*.lua',
-	'client/*.lua'
+    'server/sv_main.lua',
+    'server/sv_laptops.lua',
+    'server/sv_vault.lua'
 }
-
-
-dependency '/assetpacks'
