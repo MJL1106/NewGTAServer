@@ -3,28 +3,28 @@ local Laptops = {
         name = 'Ph03nix',
         item = 'usb_green',
         laptop = 'laptop_green',
-        price = 1,
+        price = 5,
         coords = Config.GreenLaptop
     },
     [2] = {
         name = 'Ramsay',
         item = 'usb_blue',
         laptop = 'laptop_blue',
-        price = 1,
+        price = 5,
         coords = Config.BlueLaptop
     },
     [3] = {
         name = 'Plague',
         item = 'usb_red',
         laptop = 'laptop_red',
-        price = 1,
+        price = 5,
         coords = Config.RedLaptop
     },
     [4] = {
         name = 'Trinity',
         item = 'usb_gold',
         laptop = 'laptop_gold',
-        price = 1,
+        price = 5,
         coords = Config.GoldLaptop
     }
 }
@@ -45,13 +45,13 @@ RegisterNetEvent('qb-bankrobbery:server:BuyLaptop', function(data)
 
     local item = Laptops[index].item
     if Player.Functions.GetItemByName(item) then
-        if (Player.PlayerData.money.crypto - Laptops[index].price) >= 0 then
+        if (Player.PlayerData.money.cash - Laptops[index].price) >= 0 then
             -- Remove USB
             Player.Functions.RemoveItem(item, 1, false)
             TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[item], "remove", 1)
 
-            -- Remove Crypto
-            Player.Functions.RemoveMoney('crypto', Laptops[index].price)
+            -- Remove Cash
+            Player.Functions.RemoveMoney('cash', Laptops[index].price)
 
             -- Add Laptop
             local laptop = Laptops[index].laptop
@@ -61,12 +61,12 @@ RegisterNetEvent('qb-bankrobbery:server:BuyLaptop', function(data)
 
             -- Log, debug print and notify client
             if debug then
-                print('^3[qb-bankrobbery] ^5'..Player.PlayerData.name..'(citizenid: '..Player.PlayerData.citizenid..' | id: '..src..') Purchased '..laptop..' for '..Laptops[index].price..' crypto^7')
+                print('^3[qb-bankrobbery] ^5'..Player.PlayerData.name..'(citizenid: '..Player.PlayerData.citizenid..' | id: '..src..') Purchased '..laptop..' for $'..Laptops[index].price..'^7')
             end
-            TriggerEvent("qb-log:server:CreateLog", "bankrobbery", "Purchased "..laptop, "white", "**".. Player.PlayerData.name .. "** (citizenid: *"..Player.PlayerData.citizenid.."* | id: *"..src.."*) purchased one "..laptop.." from "..Laptops[index].name.." for "..Laptops[index].price.." crypto")
-            TriggerClientEvent('QBCore:Notify', src, "You purchased a laptop from "..Laptops[index].name.." for "..Laptops[index].price.." crypto", "success", 2500)
+            TriggerEvent("qb-log:server:CreateLog", "bankrobbery", "Purchased "..laptop, "white", "**".. Player.PlayerData.name .. "** (citizenid: *"..Player.PlayerData.citizenid.."* | id: *"..src.."*) purchased one "..laptop.." from "..Laptops[index].name.." for $"..Laptops[index].price)
+            TriggerClientEvent('QBCore:Notify', src, "You purchased a laptop from "..Laptops[index].name.." for $"..Laptops[index].price, "success", 2500)
         else
-            TriggerClientEvent('QBCore:Notify', src, "You don't have enough crypto", "error", 2500)
+            TriggerClientEvent('QBCore:Notify', src, "You don't have enough cash", "error", 2500)
         end
     else
         TriggerClientEvent('QBCore:Notify', src, "You don't have anything to offer", "error", 2500)
@@ -84,20 +84,20 @@ RegisterNetEvent('qb-bankrobbery:server:BuyGreyUsb', function()
         return 
     end
 
-    if (Player.PlayerData.money.crypto - greyUSBPrice) >= 0 then
-        Player.Functions.RemoveMoney('crypto', greyUSBPrice)
+    if (Player.PlayerData.money.cash - greyUSBPrice) >= 0 then
+        Player.Functions.RemoveMoney('cash', greyUSBPrice)
 
         local info = {uses = 3}
         Player.Functions.AddItem("usb_grey", 1, false, info)
         TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items["usb_grey"], "add", 1)
         
         if debug then
-            print('^3[qb-bankrobbery] ^5'..Player.PlayerData.name..'(citizenid: '..Player.PlayerData.citizenid..' | id: '..src..') Purchased Grey USB for '..greyUSBPrice..' crypto^7')
+            print('^3[qb-bankrobbery] ^5'..Player.PlayerData.name..'(citizenid: '..Player.PlayerData.citizenid..' | id: '..src..') Purchased Grey USB for $'..greyUSBPrice..'^7')
         end
-        TriggerEvent("qb-log:server:CreateLog", "bankrobbery", "Purchased Grey USB", "white", "**".. Player.PlayerData.name .. "** (citizenid: *"..Player.PlayerData.citizenid.."* | id: *"..src.."*) purchased one usb_grey from Daut for "..greyUSBPrice.." crypto")
-        TriggerClientEvent('QBCore:Notify', src, "You purchased a laptop from Daut for "..greyUSBPrice.." crypto", "success", 2500)
+        TriggerEvent("qb-log:server:CreateLog", "bankrobbery", "Purchased Grey USB", "white", "**".. Player.PlayerData.name .. "** (citizenid: *"..Player.PlayerData.citizenid.."* | id: *"..src.."*) purchased one usb_grey from Daut for $"..greyUSBPrice)
+        TriggerClientEvent('QBCore:Notify', src, "You purchased a laptop from Daut for $"..greyUSBPrice, "success", 2500)
     else
-        TriggerClientEvent('QBCore:Notify', src, "You don't have enough crypto", "error", 2500)
+        TriggerClientEvent('QBCore:Notify', src, "You don't have enough cash", "error", 2500)
     end
 end)
 

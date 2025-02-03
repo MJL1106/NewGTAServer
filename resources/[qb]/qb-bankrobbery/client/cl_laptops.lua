@@ -1,93 +1,67 @@
 CreateThread(function()
-    -- Add box zones for each laptop location
-    exports.ox_target:addBoxZone({
-        coords = Config.GreenLaptop,
-        size = vec3(1, 1, 2),
-        rotation = 0,
-        debug = true, -- Add debug flag
-        options = {
+    local laptopConfigs = {
+        {coords = Config.GreenLaptop, item = 'usb_green', id = 1},
+        {coords = Config.BlueLaptop, item = 'usb_blue', id = 2},
+        {coords = Config.RedLaptop, item = 'usb_red', id = 3},
+        {coords = Config.GoldLaptop, item = 'usb_gold', id = 4}
+    }
+
+    for i, config in ipairs(laptopConfigs) do
+        exports['qb-target']:AddBoxZone(
+            "LaptopInteraction_" .. i,
+            config.coords,
+            1.0,
+            1.0,
             {
-                label = 'Offer Item',
-                icon = 'fas fa-hand-holding', 
-                items = 'usb_green',
-                onSelect = function()
-                    TriggerServerEvent("qb-bankrobbery:server:BuyLaptop", 1)
-                end
-            }
-        }
-    })
- 
-    exports.ox_target:addBoxZone({
-        coords = Config.BlueLaptop,
-        size = vec3(1, 1, 2),
-        rotation = 0,
-        debug = true, -- Add debug flag
-        options = {
+                name = "LaptopInteraction_" .. i,
+                heading = 0,
+                debugPoly = false,
+                minZ = config.coords.z - 1,
+                maxZ = config.coords.z + 1
+            },
             {
-                label = 'Offer Item',
-                icon = 'fas fa-hand-holding',
-                items = 'usb_blue',
-                onSelect = function()
-                    TriggerServerEvent("qb-bankrobbery:server:BuyLaptop", 2)
-                end
+                options = {
+                    {
+                        num = 1,
+                        type = "client",
+                        icon = "fas fa-hand-holding",
+                        label = "Offer Item",
+                        item = config.item,
+                        action = function()
+                            TriggerServerEvent("qb-bankrobbery:server:BuyLaptop", {index = config.id})
+                        end
+                    }
+                },
+                distance = 2.0
             }
+        )
+    end
+
+    exports['qb-target']:AddBoxZone(
+        "GreyUsbInteraction",
+        Config.GreyUsb,
+        1.0,
+        1.0,
+        {
+            name = "GreyUsbInteraction",
+            heading = 0,
+            debugPoly = false,
+            minZ = Config.GreyUsb.z - 1,
+            maxZ = Config.GreyUsb.z + 1
+        },
+        {
+            options = {
+                {
+                    num = 1,
+                    type = "client",
+                    icon = "fas fa-hand-holding",
+                    label = "Purchase USB",
+                    action = function()
+                        TriggerEvent("qb-bankrobbery:client:BuyGreyUsb")
+                    end
+                }
+            },
+            distance = 2.0
         }
-    })
- 
-    exports.ox_target:addBoxZone({
-        coords = Config.RedLaptop,
-        size = vec3(1, 1, 2),
-        rotation = 0,
-        debug = true, -- Add debug flag
-        options = {
-            {
-                label = 'Offer Item',
-                icon = 'fas fa-hand-holding',
-                items = 'usb_red',
-                onSelect = function()
-                    TriggerServerEvent("qb-bankrobbery:server:BuyLaptop", 3)
-                end
-            }
-        }
-    })
- 
-    exports.ox_target:addBoxZone({
-        coords = Config.GoldLaptop,
-        size = vec3(1, 1, 2),
-        rotation = 0,
-        debug = true, -- Add debug flag
-        options = {
-            {
-                label = 'Offer Item',
-                icon = 'fas fa-hand-holding',
-                items = 'usb_gold',
-                onSelect = function()
-                    TriggerServerEvent("qb-bankrobbery:server:BuyLaptop", 4)
-                end
-            }
-        }
-    })
- 
-    exports.ox_target:addBoxZone({
-        coords = Config.GreyUsb,
-        size = vec3(1, 1, 2),
-        rotation = 0,
-        debug = true, -- Add debug flag
-        options = {
-            {
-                label = 'Purchase USB',
-                icon = 'fas fa-hand-holding',
-                onSelect = function()
-                    TriggerServerEvent("qb-bankrobbery:server:BuyGreyUsb")
-                end
-            }
-        }
-    })
- 
-    -- Add debug prints
-    print('Green Laptop Zone Added at:', json.encode(Config.GreenLaptop))
-    print('Blue Laptop Zone Added at:', json.encode(Config.BlueLaptop))
-    print('Red Laptop Zone Added at:', json.encode(Config.RedLaptop))
-    print('Gold Laptop Zone Added at:', json.encode(Config.GoldLaptop))
-    print('Grey USB Zone Added at:', json.encode(Config.GreyUsb))
- end)
+    )
+end)
