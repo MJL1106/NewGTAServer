@@ -4,7 +4,7 @@ local HackSettings = {
     ['fleeca'] = {
         time = 8, -- time = time in seconds per puzzle
         blocks = 4, -- blocks = amount of blocks per puzzle
-        amount = 4 -- amount = amount of puzzles the player has to solve consecutively
+        amount = 1 -- amount = amount of puzzles the player has to solve consecutively
     },
     ['paleto'] = {
         time = 9,
@@ -62,13 +62,13 @@ CallCops = function() -- Globally used
 
     if GetResourceState('ps-dispatch') ~= 'started' then return end
     if Config.Banks[closestBank].type == 'fleeca' then
-        exports['ps-dispatch']:FleecaBankRobbery()
+        exports['ps-dispatch']:FleecaBankRobbery(Config.Banks[closestBank].camId,Config.Banks[closestBank].coords)
     elseif Config.Banks[closestBank].type == 'paleto' then
-        exports['ps-dispatch']:PaletoBankRobbery()
+        exports['ps-dispatch']:PaletoBankRobbery(Config.Banks[closestBank].camId,Config.Banks[closestBank].coords)
     elseif Config.Banks[closestBank].type == 'pacific' then
-        exports['ps-dispatch']:PacificBankRobbery()
+        exports['ps-dispatch']:PacificBankRobbery(Config.Banks[closestBank].camId,Config.Banks[closestBank].coords)
     elseif Config.Banks[closestBank].type == 'vault' then
-        exports['ps-dispatch']:PacificBankRobbery()
+        exports['ps-dispatch']:PacificBankRobbery(Config.Banks[closestBank].camId,Config.Banks[closestBank].coords)
     end
 
     CreateThread(function()
@@ -1232,7 +1232,7 @@ CreateThread(function()
             exports['qb-target']:AddBoxZone("Locker"..k..i, v.lockers[i].coords.xyz, 0.5, 2.0, {
                 name = "Locker"..k..i,
                 heading = v.lockers[i].coords.w,
-                debugPoly = false,
+                debugPoly = true,
                 minZ = Config.Banks[k].lockers[i].coords.z-1.2,
                 maxZ = Config.Banks[k].lockers[i].coords.z+1.0
                 }, {
@@ -1256,16 +1256,28 @@ CreateThread(function()
         end
     end
 
-    -- Trollys
-    for k, v in pairs(Config.Banks) do
-        for i=1, #v.trolly do
-            exports['qb-target']:AddBoxZone("Trolly"..k..i, v.trolly[i].coords.xyz, 0.5, 1.0, {
+-- Trollys
+for k, v in pairs(Config.Banks) do
+    for i=1, #v.trolly do
+        local coords = vector3(
+            v.trolly[i].coords.x,
+            v.trolly[i].coords.y,
+            v.trolly[i].coords.z - 0.5  -- Offset the base position down by 2 units
+        )
+        
+        exports['qb-target']:AddBoxZone(
+            "Trolly"..k..i, 
+            coords,  -- Use our modified coords
+            1.0,    -- Made width bigger
+            1.5,    -- Made length bigger
+            {
                 name = "Trolly"..k..i,
                 heading = v.trolly[i].coords.w,
-                debugPoly = false,
-                minZ = Config.Banks[k].trolly[i].coords.z-1.2,
-                maxZ = Config.Banks[k].trolly[i].coords.z+0.2
-                }, {
+                debugPoly = true,
+                minZ = coords.z - 0.5,
+                maxZ = coords.z + 1.0
+            }, 
+            {
                 options = { 
                     {
                         action = function()
@@ -1281,10 +1293,11 @@ CreateThread(function()
                         end,
                     }
                 },
-                distance = 1.5,
-            })
-        end
+                distance = 2.0  -- Increased interaction distance
+            }
+        )
     end
+end
 
     -- Stacks
     for k, v in pairs(Config.Banks['Vault'].stacks) do
